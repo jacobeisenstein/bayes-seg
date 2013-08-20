@@ -1,0 +1,2 @@
+#!/bin/csh
+java edu.mit.util.ling.Stemmer $1

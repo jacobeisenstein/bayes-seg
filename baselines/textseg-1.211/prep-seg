@@ -1,0 +1,57 @@
+#!/usr/bin/perl -w
+
+# Usage:
+#
+#	prep-seg < INPUT > OUTPUT
+#
+# INPUT FORMAT:
+#
+#	One sentence (paragraph) per line.
+#	Each sentence (paragraph) has words separated by spaces.
+#	Each line end is a candidate segment-break-point.
+#
+# OUTPUT FORMAT:
+#
+#	Outputs conform to the input fomrat of `seg', `vseg', and `rseg.'
+#	You don't have to know the details of the format.
+
+use strict;
+
+# temporary file
+my $tmpfile = defined $ENV{TMPDIR} ? "$ENV{TMPDIR}/prep-seg.$$" : "/tmp/prep-seg.$$";
+open(TMP, ">$tmpfile") or die "$tmpfile:$!";
+
+# read the input
+my %id;
+my $numLines=0;
+my $numTypes=0;
+while(<>){
+    $numLines++;
+    
+    my @words = split;
+    
+    my @ids;
+    for my $word (@words){
+	unless(defined $id{$word}){
+	    $id{$word} = $numTypes;
+	    $numTypes++;
+	}
+	push(@ids, $id{$word});
+    }
+    printf TMP "%d @ids\n", int(@words);
+}
+
+print "$numTypes $numLines\n";
+open(TMP, $tmpfile) or die "$tmpfile:$!";
+while(<TMP>){
+    print;
+}
+
+unlink $tmpfile;
+
+__END__
+# Copyright (c) 2000 UTIYAMA Masao. All rights reserved.
+# This program is free software; you can redistribute it and/or
+# modify it under the same terms as Perl itself.
+# 
+# mutiyama@crl.go.jp

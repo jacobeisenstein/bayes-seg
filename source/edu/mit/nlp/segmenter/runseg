@@ -1,0 +1,2 @@
+CLASSPATH="classes:lib/colt.jar:lib/lingpipe-3.4.0.jar:lib/MinCutSeg.jar:lib/mtj.jar:lib/options.jar:lib/log4j-1.2.14.jar"
+java -cp ${CLASSPATH} edu.mit.nlp.segmenter.SegTester -config $1 -debug -num-segs 1

@@ -1,0 +1,61 @@
+#!/usr/bin/perl -w
+#
+# seg-comb [-n NUMBER -N -q]
+#
+#	-n NUMBER	the number of segments. If this is not set, then the
+#			minimum cost segmentation is selected.
+#	-N		do numbering in displaying text
+#	-q		omit segment numbers
+#
+
+# options
+use Getopt::Std;
+getopts('n:Nq');
+$numSeg = defined $opt_n ? $opt_n : 0;
+$numbering = defined $opt_N ? $opt_N : 0;
+$quiet = defined $opt_q ? $opt_q : 0;
+
+# read boundaries
+my $seg = shift;
+open(S, $seg) or die "$seg:$!";
+while(<S>){
+    my($cost, @seg) = split;
+    $Cost{$#seg-1} = $cost;
+    $Seg{$#seg-1} = \@seg;
+}
+
+if($numSeg > 0 && defined $Cost{$numSeg}){
+    $index = $numSeg-1;
+}else{
+    ($index) = sort {$Cost{$a}<=>$Cost{$b}} keys %Cost;
+}
+@seg = @{$Seg{$index}};
+shift @seg;
+
+# read text
+my $text = shift;
+open(T, $text) or die "$text:$!";
+$segNum=1;
+if($quiet){
+    print "==========\n";
+}else{
+    print "================[$segNum]================\n";
+}
+$id=0;
+while(<T>){
+    $id++;
+    if($numbering){
+	printf "%-5d $_",$id;
+    }else{
+	print;
+    }
+    if($id >= $seg[0]){
+	$segNum++;
+	if($quiet){
+	    print "==========\n";
+	}else{
+	    print "================[$segNum]================\n" if $#seg;
+	}
+	shift @seg;
+    }
+}

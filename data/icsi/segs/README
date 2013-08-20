@@ -1,0 +1,74 @@
+   ________________________________________________________________________
+
+Introduction
+
+   This archive contains an annotation of the structure of 25 meetings
+   taken from the ICSI Meeting corpus.
+   
+   ________________________________________________________________________
+
+Corpus Description
+
+   Each meeting transcription was segmented by at least three labelers.
+   From their annotation, we built a reference segmentation (the procedure
+   is described in the next section). It consists of the following files:
+
+       3 "even deeper understanding" meetings meetings:
+       Bed003.ref  Bed004.ref  Bed011.ref
+
+       19 "meeting recorder" meetings:
+       Bmr001.ref  Bmr002.ref  Bmr005.ref  Bmr007.ref  Bmr008.ref  
+       Bmr009.ref  Bmr010.ref  Bmr011.ref  Bmr012.ref  Bmr013.ref  
+       Bmr014.ref  Bmr018.ref  Bmr021.ref  Bmr022.ref  Bmr024.ref  
+       Bmr025.ref  Bmr026.ref  Bmr027.ref  Bmr029.ref
+
+       3 "robustness" meetings:
+       Bro004.ref  Bro007.ref  Bro015.ref
+
+   In these files, each line corresponds to a segment, characterized by a 
+   start time and, optionally, by a tag representing special segments.
+   The optional tag is one of the following:
+
+   - cut    : pre-meeting discussion; this speech that isn't really part of
+              the meeting and is identified as such.
+   - agenda : agenda of the meeting.
+   - digits
+
+   There is no gap between segments, so the end time of a segment is
+   determined by the start time of the following one (for the last 
+   segment, by the end time of the meeting).
+
+   ________________________________________________________________________
+
+Reference Segmentation
+
+   We had to be careful in order to determine a reference segmentation based
+   on the segmentation of 3+ labelers. The main issue is that annotators
+   rarely mark boundaries at the exact same position (assigning a specific 
+	time to a topic shift is generally quite subjective). Our idea was the
+   following: two boundaries found by two different annotators are considered
+   equivalent if they are separated by no more than 20 seconds. This
+	defines sets of equivalent boundaries (no speaker can contribute more than 
+	one boundary per set), and for each set, labelers had to determine if there 
+	is majority opinion (i.e. the number of boundaries in a set is more than 
+	half the number of speakers). If there is a majority, we add the median in 
+	the set to the reference segmentation. We had two labeleres to take a 
+	decision in difficult cases (e.g. when there are several boundaries in a 
+	span longer than 20 seconds.)
+
+   ________________________________________________________________________
+
+Reference
+
+   Michel Galley, Kathleen McKeown, Eric Fosler-Lussier, Hongyan Jing. 
+   Discourse Segmentation of Multi-party Conversation. 2003. 
+   In the proceedings of the 41st Annual Meeting of the Association for 
+   Computational Linguistics (ACL 03). Sapporo, Japan. 
+
+   ________________________________________________________________________
+
+Contact Information
+
+   Michel Galley
+   galley@cs.columbia.edu
+   http://www.cs.columbia.edu/~galley

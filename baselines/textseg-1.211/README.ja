@@ -1,0 +1,240 @@
+
+
+textseg --- テキスト分割のためのいくつかのプログラム
+
+						内山 将夫
+                                                mutiyama@crl.go.jp
+
+* 概要
+
+このパッケージには，与えられたテキストの分割確率を最大にするよ
+うな分割を得るためのプログラムが含まれています．入力テキストの
+各行末が可能な分割位置の候補となるため，もし，一文単位で分割し
+たいのなら一行一文，パラグラフ単位で分割したいなら，一行一パラ
+グラフとして下さい．
+
+
+* インストール
+
+このパッケージを
+
+    http://www.crl.go.jp/jt/a132/members/mutiyama/software.html
+
+からとってきたあとで，
+
+	make
+	make test
+        make install
+
+`make test' のときには，'.' を $PATH に含めるようにして下さい．
+
+
+* 主要なファイル
+
+README		このファイル
+Experiments	テキスト分割の実験概要
+		cf.
+                Masao Utiyama and Hitoshi Isahara. (2001)
+                A Statistical Model for Domain-Independent Text
+                Segmentation. ACL-2001, to appear.
+Seg		テキスト分割のためのシェルスクリプト
+ESeg		英語の stemmer つきの分割スクリプト
+JSeg		ChaSen による形態素解析を利用した分割スクリプト
+prep-seg	`seg', `vseg', `rseg', 'nseg'のためのフロントエンド
+seg.c		分割プログラム  (1 から n までの分割を出力)
+vseg.c		分割プログラム  (プログラムにとっての最適分割を出力)
+rseg.c		再帰的分割
+nseg.c		区間長を考慮した分割
+seg-comb	分割結果を元テキストと組合せる．
+PStemmer.java	C99-1.2-release.tgz にあるクラスを利用した stemmer 
+pstemmer	java PStemmer
+
+
+* 使い方1. (入力テキストは適切に stemming されているとする)
+
+	Seg < data/org/stargazers.mwn.words 
+
+
+* 使い方2. (入力テキストは英語のテキスト)
+
+	ESeg < data/org/stargazers.txt
+	Seg -n 7 -N -p pstemmer < data/org/stargazers.txt
+
+  上記を実行するには，以下のサイトの C99-1.2-release.tgz が必要です．
+
+    http://www.cs.man.ac.uk/~choif/frame.html
+
+それに加えて，環境変数 CLASSPATH を適切に設定して，java が
+PStemmer.class を見えるようにして下さい．その後で，`make testE' 
+を実行して下さい．
+
+  Seg と ESeg は，色々なコマンドを実行するためのシェルスクリプ
+トです．これら，および，Makefile を見れば，各コマンドの使い方な
+どが分かるのではないかと思います．
+
+
+* 使い方3. (入力テキストは日本語EUCテキスト)
+
+	JSeg < data/org/gijiroku.txt
+
+  これを実行するには，ChaSen (http://chasen.aist-nara.ac.jp/) 
+が必要です．特に，version 2.2.5 を想定しています．version 2.2.5
+の場合には，make testJ として，結果が一致するかを調べて下さい．
+
+  gijiroku.txtの元テキストは，data/org/000115020000921001.txt 
+で，それは，
+
+    http://www.shugiin.go.jp/itdb_main.nsf/html/kaigiroku/0001_f.htm 
+
+よりダウンロードしました．
+
+
+* 別の例
+
+    prep-seg < data/org/stargazers.mwnp.words | vseg > data/t/stargazers.seg1
+    seg-comb -N data/t/stargazers.seg1 data/org/stargazers.txt
+
+	この分割結果は，Hearst の実験と非常に良く一致しています．
+        被験者の過半数が選んだ分割位置を正解とすると，
+	recall = 4/6 = 0.67, precision = 4/4 = 1.00, F = 0.8
+
+    prep-seg data/org/stargazers.mwnp.words | seg -maxNumSegs 7 | tail -1 > data/t/stargazers.seg1
+    seg-comb -N data/t/stargazers.seg1 data/org/stargazers.txt
+
+	recall = 5/6 = 0.83, precision = 5/6 = 0.83, and F = 0.83
+
+
+* オプション
+
+** Seg
+
+	-n 数字		分割数  (デフォルト = 自動決定)
+        -p コマンド	stemmerを指定 (デフォルト = cat)
+        -N		行番号も出力する．
+
+** ESeg
+
+	-n 数字		分割数  (デフォルト = 自動決定)
+
+** seg
+
+	-maxNumSegs 数字	可能な分割数の最大値
+
+** seg, vseg, rseg, and nseg
+
+	-minSpan 数字		一つの区間に含まれる行数の最小値
+        -maxSpan 数字		一つの区間に含まれる行数の最大値
+
+** nseg 
+
+	-ndist ALPHA BETA GAMMA MEAN SIGMA
+
+	    edge_cost = ALPHA * data_cost +  BETA * model_cost +
+	                GAMMA * log (1/Norm(length | MEAN,SIGMA))
+
+		length, MEAN, SIGMA は単語数でカウントします．
+		詳しくは，nseg.c の cost()を参照のこと．
+                    -ndist 1.0 0.0 1.0 MEAN SIGMA
+                が上手くいくようです．ただし，入力テキストは短くもなく
+                長くもないものである必要があります．MEAN*15 程度の入力
+		長のときが良いかもしれません．
+
+	   e.g.,
+  	   prep-seg < data/org/stargazers.mwn.words | nseg -ndist 1 0 1 60 10
+
+** seg-comb
+
+	-n 数字		区間数の指定
+        -N		行番号の印刷
+
+
+* その他のファイル
+
+Makefile
+
+data/org
+  stargazers.txt    cf. M. A. Hearst. Multi-paragraph segmentation of 
+                    expository texts. ACL-94. (1994)
+                    このファイルは以下からダウンロードしました．
+                       http://www.cs.columbia.edu/~min/research/segmenter/segment.cgi
+		    cf.
+                       Judith L. Klavans, Kathleen R. McKeown, Min-Yen Kan, 
+                       and Susan Lee (1998) Resources for the Evaluation of 
+                       Summarization Techniques. Proceedings of the 1st 
+                       International Conference on Language Resources and
+                       Evaluation, Grenada, Spain: May. 1998. 
+
+  data/org/stargazers.mwn.words
+		    品詞のタグ付けは
+                        moz (http://cl.aist-nara.ac.jp/~tatuo-y/ma/)
+		    でやり，名詞の基本形は
+			wordnet-1.6 (http://www.cogsci.princeton.edu/~wn/)
+                        のライブラリを利用して求め，
+		    以下に含まれているストップワード
+			Nice Stemmer (http://topaz.ils.unc.edu/iris/nstem.htm)
+		    を除去しました．
+
+  data/org/stargazers.mwnp.words
+		    `pstemmer < data/org/stargazers.mwn.words'で作られました．
+
+
+* seg の性質
+
+** 一般的に言って，プログラムが決定する分割数は，入力テキストの
+長さに，それほど，影響されません．もし，プログラムが決定する分
+割よりも，細かすぎる分割を指定すると seg は，一行や二行からなる
+ような区間を含むような分割をします．
+
+  もし，プログラムが決定する分割数よりも細かい分割をしなければ
+ならないときには，まず，
+
+    テキストを vseg で分割し，
+    それぞれの区間を seg で(区間数を指定して)分割
+
+するのが良いです．rseg は，これをやりますが，区間数は指定できま
+せん．rseg2 は区間数を指定できます．たとえば，以下のようにしま
+す．
+
+    cat data/org/stargazers.mwnp.words | rseg2 -n 9 > data/t/stargazers.rseg2
+    seg-comb -N data/t/stargazers.rseg2 data/org/stargazers.txt
+
+このとき，2回目の分割における各区間の分割数は，各区間の行数に比
+例します．
+
+  作者は，vseg が良いと思います．vseg は，長いテキストでも短い
+テキストでも適当な区間数に分割するので，扱いやすいと思います．
+このことは，要約のためにテキストを分割したいときには，特に言え
+ると思います．
+
+** これらのプログラム (seg,vseg,rseg,nseg) の実行速度は遅いです．
+-maxSpan を指定すると，ずいぶんと速くなるでしょう．*.c にある
+cost() を上手く実装すると，ずっと速いプログラムとなると思います．
+
+計算の複雑さ：
+
+    seg		O(maxSpan * numLines * maxNumSegs * numWordTypes)
+    vseg	O(maxSpan * numLines * numWordTypes)
+
+cost()を上手く実装すると，実質的には numWordTypes を計算量から
+除外して考えることができるようになると思います．
+
+================================================================
+Copyright (C) 2000 UTIYAMA Masao <mutiyama@crl.go.jp>
+All rights reserved.
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation; either version 2 of
+the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public
+License along with this program; if not, write to the Free
+Software Foundation, Inc., 59 Temple Place - Suite 330, Boston,
+MA 02111-1307, USA.
+================================================================
+Comments are welcome.

@@ -1,0 +1,69 @@
+
+## Testing the Accuracy
+
+#
+# Assume that C99-1.2-release.tgz is expanded in the current directory
+# and CLASSPATH is set appropriately, the code at the bottom of this file will 
+# produce the results of applying `ESeg' and `ESeg -n 10' to the data-sets 
+# available in C99-1.2-release.tgz.
+#
+# The data are used in
+#
+#    Freddy Choi. (2000) Advances in domain independent linear text
+#    segmentation. In Proc. of NAACL'00, Seattle, USA.
+# 
+# to compare various segmentation systems.
+# 
+
+#
+# The results of my experiments are stored in data/comp/TestLog100.txt.org and
+# data/comp/TestLog110.txt.org, where
+#
+#	Code	Command		Sysmtem description
+#	100	ESeg		Best guess without the number of segments.
+#	110	ESeg -n 10	Best guess with the number of segments.
+#
+# `perl stat.pl < data/comp/TestLog100.txt.org' will produce:
+#
+#	100
+#                Pk         CPU Sec.
+#	range snt  mean   std    mean    std
+#	 3-11 400 0.1082 0.0753 1.3289 0.2108
+#	  3-5 100 0.1295 0.0762 0.7564 0.0620
+#	  6-8 100 0.0638 0.0586 1.3117 0.1070
+#	 9-11 100 0.0570 0.0549 2.1377 0.1931
+#	total 700 0.0976 0.0747 1.3602 0.4152
+#
+#  And `perl stat.pl < data/comp/TestLog110.txt.org' will produce:
+#
+#	110
+#                Pk         CPU Sec.
+#	range snt  mean   std    mean    std
+#	 3-11 400 0.1031 0.0767 1.3431 0.2144
+#	  3-5 100 0.0863 0.0859 0.7651 0.0689
+#	  6-8 100 0.0664 0.0704 1.3217 0.1165
+#	 9-11 100 0.0485 0.0682 2.1447 0.1875
+#	total 700 0.0877 0.0786 1.3720 0.4157
+#
+#
+# The experiments are conducted on an Intel Pentium III 750MHz PC with 384Mb
+# RAM running RedHat Linux 6.2.
+#
+# If you execute the following code, then you can check if the accuracies are
+# the same as mine.
+#
+#	perl diff.pl data/comp/TestLog100.txt.org data/comp/TestLog100.txt
+#	perl diff.pl data/comp/TestLog110.txt.org data/comp/TestLog110.txt
+#
+
+setenv PATH naacl00Exp/ebin/:naacl00Exp/bin/:${PATH}
+
+rm -f data/comp/TestLog100.txt
+foreach i (naacl00Exp/data/{1,2,3}/{3-11,3-5,6-8,9-11}/*)
+    naacl00Exp/ebin/private.testOneCase 100 ESeg $i data/comp/TestLog100.txt
+end
+
+rm -f data/comp/TestLog110.txt
+foreach i (naacl00Exp/data/{1,2,3}/{3-11,3-5,6-8,9-11}/*)
+    naacl00Exp/ebin/private.testOneCase 110 'ESeg -n 10' $i data/comp/TestLog110.txt
+end

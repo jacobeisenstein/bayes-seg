@@ -1,0 +1,15 @@
+Fri Apr 27 08:55:48 JST 2001 UTIYAMA Masao mutiyama@crl.go.jp
+	* Add doc/eng/acl2001.pdf
+	
+Wed Apr 25 17:22:53 JST 2001 UTIYAMA Masao mutiyama@crl.go.jp
+	* Change prior from exp(- 0.5 m log n) to exp(- m log n).
+	
+Mon Apr 16 09:54:01 JST 2001 UTIYAMA Masao mutiyama@crl.go.jp
+	* Add URL
+	http://www.crl.go.jp/jt/a132/members/mutiyama/softwares.html
+	
+Thu Apr 12 08:14:13 JST 2001 UTIYAMA Masao <mutiyama@crl.go.jp>
+	* Rename comb to seg-comb because comb is used by SCCS
+	
+Tue Feb 27 08:05:00 JST 2001 UTIYAMA Masao <mutiyama@crl.go.jp>
+	* Add JSeg

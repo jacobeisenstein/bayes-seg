@@ -1,0 +1,125 @@
+#!/usr/bin/perl -w
+#
+# rseg2 -n NUMBER_OF_SEGMENTS -t TOLERANCE
+#
+#   recursive segmentation is performed when
+#	NUMBER_OF_SEGMENTS > number-of-the-best-guess-segments + TOLERANCE
+#
+
+# options
+use Getopt::Std;
+getopts('n:t:');
+my $numSegs = defined $opt_n ? $opt_n : undef;
+my $tolerance = defined $opt_t ? $opt_t : 0;
+use strict;
+
+if(not defined $numSegs && $numSegs>0){
+    open(VSEG, "|prep-seg | vseg") or die;
+    while(<>){
+	print VSEG;
+    }
+    close VSEG;
+}
+else{
+    my $tmpdir = defined $ENV{ENV} ? $ENV{ENV} : "/tmp";
+    my $orgfile = "$tmpdir/rseg-org-$$";
+    my $segfile = "$tmpdir/rseg-vseg-$$";
+
+    # first, get the best segmentation.
+    open(ORG, "> $orgfile") or die;
+    open(VSEG,"|prep-seg | vseg > $segfile") or die;
+    while(<>){
+	print VSEG;
+	print ORG;
+    }
+    close ORG;
+    close VSEG;
+    my ($cost, @boundaries) = split(' ', `cat $segfile`);
+    my $numBestSegs = $#boundaries;
+    
+    # no further processing is ncessary.
+    if($numBestSegs == $numSegs){
+	print "$cost @boundaries\n";
+    }
+    # `seg' works fine for this task.
+    elsif($numSegs <= $numBestSegs + $tolerance){
+	open(ORG, "$orgfile") or die;
+	open(SEG,"|prep-seg | seg -maxNumSegs $numSegs|tail -1") or die;
+	while(<ORG>){
+	    print SEG;
+	}
+	close ORG;
+	close SEG;
+    }
+    # recursive segmentation
+    else{
+	
+	# get the size of each segment
+	open(ORG, "$orgfile") or die;
+	my ($numLines, $segNum, @numLines, @sizes) = (0,0);
+	my @gaps = @boundaries; shift @gaps;
+	while(<ORG>){
+	    chomp;
+	    $numLines++;
+	    $numLines[$segNum]++;
+	    $sizes[$segNum]+=length;
+	    if($numLines >= $gaps[0]){
+		$segNum++;
+		shift @gaps;
+	    }
+	}
+	
+	# sort indexes in according to size
+	my @segIds = sort {$numLines[$b]+$sizes[$b]*0.000001
+			       <=>$numLines[$a]+$sizes[$a]*0.000001} (0..$#numLines);
+	
+	# get the number of segments for each segment.
+	# The amount of addition is proportional to the size of each segment.
+	my $totalAdd = $numSegs - $numBestSegs;
+	my (@numSegs,$cumAdd);
+	for my $segId (@segIds){
+	    $numSegs[$segId] = int($totalAdd*$numLines[$segId]/$numLines);
+	    $cumAdd+=$numSegs[$segId];
+	}
+	for my $segId (@segIds){
+	    last if $cumAdd >= $totalAdd;
+	    $numSegs[$segId]++;
+	    $cumAdd++;
+	}
+	for my $segId (@segIds){
+	    $numSegs[$segId]++;
+	}
+	
+	# split each segment.
+	my @fineBoundaries;
+	my $segId=0;
+	while(@boundaries>1){
+	    open(SEG, "| prep-seg | seg -maxNumSegs $numSegs[$segId] | tail -1 > $segfile") or die;
+	    open(ORG, "$orgfile") or die;
+	    my ($begin, $end) = @boundaries;
+	    my $lineNum=0;
+	    while(<ORG>){
+		$lineNum++;
+		next if $lineNum <= $begin;
+		if($begin < $lineNum && $lineNum <= $end){
+		    print SEG;
+		}else{
+		    last;
+		}
+	    }
+	    close ORG;
+	    close SEG;
+	    my ($cost, @newBoundaries) = split(' ', `cat $segfile`);
+	    for(my $i=0; $i<$#newBoundaries; $i++){
+		my $offset = $newBoundaries[$i];
+		push(@fineBoundaries,$begin+$offset);
+	    }
+	    shift @boundaries;
+	    $segId++;
+	}
+	push(@fineBoundaries,$boundaries[0]);
+	print "dummy @fineBoundaries\n";
+    }
+    unlink $orgfile;
+    unlink $segfile;
+}

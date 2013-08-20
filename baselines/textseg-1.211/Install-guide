@@ -1,0 +1,25 @@
+The package (textseg-1.21.tar.gz) is available from
+http://www.crl.go.jp/jt/a132/members/mutiyama/software.html
+
+Before using this package, if you want to segment English texts, 
+you need C99-1.2-release.tgz, which is available from
+    http://www.cs.man.ac.uk/~choif/software/C99-1.2-release.tgz
+To run the software, you need java. java is available from
+    http://www.blackdown.org/java-linux.html
+Next, set CLASSPATH appropriately. For example, suppose that
+C99-1.2-release.tgz and seg-1.21.tar.gz are expanded in
+/home/tools, then add 
+    setenv CLASSPATH /home/tools/naacl00Exp/bin/:/home/tools/seg-1.21
+to ~/.cshrc and execute
+    source ~/.cshrc
+Then, you can run ESeg.
+To run /home/tools/seg-1.21/Experiments, 
+    cd /home/tools/seg-1.21
+    ln -s /home/tools/naacl00Exp .
+    csh Experiments
+It should reproduce our experimental results in
+/home/tools/seg-1.21/data/comp/*
+
+The algorithm I wrote in my ACL/EACL-2001 paper is implemented
+in vseg.c and seg.c. `Experiments' has the information from
+which you can trace the programs I used for the experiments.

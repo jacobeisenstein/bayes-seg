@@ -1,0 +1,235 @@
+
+
+textseg --- collection of text segmentation programs
+
+							UTIYAMA Masao
+							mutiyama@crl.go.jp
+
+* Description
+
+This package contains programs which find the
+maximum-probability segmentation given a text. Each line end in
+the text is a candidate of a segment boundary. So, lines should
+be sentences (or paragraphs) if you want to segment the text at
+sentence (or paragraph) boundaries.
+
+
+* Installation
+
+Get this package from
+
+    http://www.crl.go.jp/jt/a132/members/mutiyama/software.html
+
+then
+
+	make
+	make test
+	make install
+
+Be sure to include '.' in $PATH for testing.
+
+
+* Main Files
+
+README		This file.
+Experiments	Description of my experiments.
+		cf.
+                Masao Utiyama and Hitoshi Isahara. (2001)
+                A Statistical Model for Domain-Independent Text
+                Segmentation. ACL-2001, to appear.
+Seg		segmentation shell-script
+ESeg		segmentation shell-script with a default stemmer.
+prep-seg	front-end for `seg', `vseg', `rseg', and 'nseg'
+seg.c		segmentation program  (produces 1 to n segmentations)
+vseg.c		segmentation program  (produces the best-guess segmentation)
+rseg.c		recursively segments text with vseg.
+nseg.c		incorporate segment-length into vseg.
+seg-comb	combines a segmentation result with its corresponding text
+PStemmer.java	stemmer which uses classes provided by C99-1.2-release.tgz
+pstemmer	invokes java PStemmer
+
+
+* Usage 1. (Input is assumed to be stemmed)
+
+	Seg < data/org/stargazers.mwn.words 
+
+
+* Usage 2. (Input is an English text.)
+
+	ESeg < data/org/stargazers.txt
+	Seg -n 7 -N -p pstemmer < data/org/stargazers.txt
+
+ You need C99-1.2-release.tgz, which is available from
+
+	http://www.cs.man.ac.uk/~choif/frame.html
+
+to invoke ESeg and pstemmer. You also have to set CLASSPATH
+appropriately so that java can find PStemmer.class, which are
+called from ESeg.  You may want to execute `make testE'.
+
+  Seg and ESeg are shell-scripts which invoke various
+commands. Examples of the usage of those miscellaneous commands
+are found in Makefile.
+
+
+* Usage 3. (Input is a Japanese EUC text)
+
+    JSeg < data/org/gijiroku.txt
+
+  You need ChaSen (version 2.2.5)
+(http://chasen.aist-nara.ac.jp/) to execute this shell-script.
+
+
+* Another example
+
+    prep-seg < data/org/stargazers.mwnp.words | vseg > data/t/stargazers.seg1
+    seg-comb -N data/t/stargazers.seg1 data/org/stargazers.txt
+
+	This segmentation simulates Hearst's experiment very
+	well. If we regard gaps segmented by the majority of
+        subjects as the correct segment boundaries, then its
+        recall = 4/6 = 0.67, precision = 4/4 = 1.00, and F = 0.8
+
+    prep-seg data/org/stargazers.mwnp.words | seg -maxNumSegs 7 | tail -1 > data/t/stargazers.seg1
+    seg-comb -N data/t/stargazers.seg1 data/org/stargazers.txt
+
+        recall = 5/6 = 0.83, precision = 5/6 = 0.83, and F = 0.83
+
+
+* Options
+
+** Seg
+
+	-n NUMBER	number of segments  (default = determined by Seg)
+        -p COMMAND	stemmer (default = cat)
+        -N		prints line numbers
+
+** ESeg
+
+	-n NUMBER	number of segments  (default = determined by Eseg)
+
+** seg
+
+	-maxNumSegs NUMBER	maximum number of segmentations
+
+** seg, vseg, rseg, and nseg
+
+	-minSpan NUMBER		minimum number of lines in a segment
+        -maxSpan NUMBER		maximum number of lines in a segment
+
+** nseg 
+
+	-ndist ALPHA BETA GAMMA MEAN SIGMA
+
+	    edge_cost = ALPHA * data_cost +  BETA * model_cost +
+	                GAMMA * log (1/Norm(length | MEAN,SIGMA))
+
+		where (edge/segment/topic) length, MEAN and SIGMA are counted 
+                in words. See cost() in nseg.c for details. It seems that
+                    -ndist 1.0 0.0 1.0 MEAN SIGMA
+                produces a reasonable segmentation when the length of
+                an input text is long enough (but not too long :-).
+                A text whose length is MEAN*15 may work well.
+
+	   e.g.,
+  	   prep-seg < data/org/stargazers.mwn.words | nseg -ndist 1 0 1 60 10
+
+** seg-comb
+
+	-n NUMBER	specifies the number of segments
+        -N		prints line numbers
+
+
+* Other Files
+
+Makefile
+
+data/org
+  stargazers.txt    cf. M. A. Hearst. Multi-paragraph segmentation of 
+                    expository texts. ACL-94. (1994)
+                    I downloaded this text from
+                       http://www.cs.columbia.edu/~min/research/segmenter/segment.cgi
+		    cf.
+                       Judith L. Klavans, Kathleen R. McKeown, Min-Yen Kan, 
+                       and Susan Lee (1998) Resources for the Evaluation of 
+                       Summarization Techniques. Proceedings of the 1st 
+                       International Conference on Language Resources and
+                       Evaluation, Grenada, Spain: May. 1998. 
+
+  data/org/stargazers.mwn.words
+		    POS tagged by 
+                        moz (http://cl.aist-nara.ac.jp/~tatuo-y/ma/)
+		    then nouns are lemmatized by
+			a lemmatizer, which uses wordnet-1.6
+                        (http://www.cogsci.princeton.edu/~wn/) libraries
+		    and stop words, which are defined in
+			Nice Stemmer (http://topaz.ils.unc.edu/iris/nstem.htm)
+		    are removed.
+
+  data/org/stargazers.mwnp.words
+		    produced by `pstemmer < data/org/stargazers.mwn.words'
+
+
+* Properties of seg
+
+** Roughly speaking, the number of segments of the best-guess
+segmentation is not sensitive to the length of the input text.
+When seg is forced to segment a text into too many segments
+(compared with the best segmentation), the resulting
+segmentation often contains too short segments.  
+
+  If you need much smaller segments than the best-guess
+segments, first,
+
+    segment the text into the best segmentation by vseg, and then
+    segment each block by seg (specifying the number of segments if necessary)
+
+This might produce much better segments. rseg performs this
+procedure but it can not accept the number of segments. rseg2
+performs it:
+
+    cat data/org/stargazers.mwnp.words | rseg2 -n 9 > data/t/stargazers.rseg2
+    seg-comb -N data/t/stargazers.rseg2 data/org/stargazers.txt
+
+The number of segments of each block is proportional to its
+size (in terms of the number of lines).
+
+  Personally, I prefer vseg because it segments texts into
+moderately-sized segments compared with the size of original
+documents. I think it works fine for summarizing long
+documents. Too many (small) segments are not useful for
+summarization, I think.
+
+** The programs (seg,vseg,rseg, and nseg) provided in this
+package are slow. Setting -maxSpan is good to improve
+efficiency. A proper implementation of cost() in *.c will
+greatly speed up the programs.
+
+Computational complexity:
+
+    seg		O(maxSpan * numLines * maxNumSegs * numWordTypes)
+    vseg	O(maxSpan * numLines * numWordTypes)
+    
+A proper implementation of cost() may (virtually) exclude
+numWordTypes from the complexities.
+
+================================================================
+Copyright (C) 2000 UTIYAMA Masao <mutiyama@crl.go.jp>
+All rights reserved.
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation; either version 2 of
+the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public
+License along with this program; if not, write to the Free
+Software Foundation, Inc., 59 Temple Place - Suite 330, Boston,
+MA 02111-1307, USA.
+================================================================
+Comments are welcome.

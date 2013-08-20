@@ -1,0 +1,35 @@
+#!/bin/csh
+#
+# ESeg [-n NUMBER-OF-SEGMENTS] < text > segmented-text
+#
+#
+
+onintr cleanUP
+
+set n = -1
+while($#argv > 0)
+    set arg = $1; shift;
+    switch ($arg)
+    case -n:
+        set n = $1; shift;
+        breaksw;
+    default
+	breaksw
+    endsw
+end
+
+set tmpfile = /tmp/Seg.`whoami`.`uname -n`.$$
+set segfile  = $tmpfile.seg
+set textfile = $tmpfile.txt
+
+cat > $textfile
+if ( $n == -1 ) then
+    cat $textfile | pstemmer | prep-seg | vseg > $segfile
+else
+    cat $textfile | pstemmer | prep-seg | seg -maxNumSegs $n | tail -1 > $segfile
+endif
+
+seg-comb -q $segfile $textfile
+
+cleanUP:
+/bin/rm -f $segfile $textfile
