@@ -26,52 +26,43 @@ The directory contents of this distribution are as follows:
 
 ./
 
-eval    	   - A unix script for evaluating a segmenter.
-segment            - A unix script for segmenting text
-build.xml          - An ant script for building the source
-log.config         - A configuration file for java logging used by MinCutSeg.
-                     Must remain in the base directory.
-README             - This documentation
-
-./baselines   	   - A directory containing alternative segmenters that can
-                     be evaluated with this code.  due to licensing restrictions,
-                     this contains only Utiyama and Isahara's TextSeg-1.211, which
-                     they kindly provide on their website.
-
-./classes          - The compiled java class files
-./config           - Configuration files for running various experiments
-
-dp.config          - Runs the dynamic programming lexical cohesion system described in the paper
-cue.config         - Runs the cue-phrase MCMC implementation of our system,
-                     initializing from the results of the dynamic programming                
-                     implementation
-mcsopt.ai.config   - Evaluates the MinCutSeg segmenter (Malioutov & Barzilay 2006)
-lcseg.config       - Evaluates the LCSeg segmenter.  This segmenter is not included
-                     in this distribution, but may be obtained from Columbia University
-                     (http://www1.cs.columbia.edu/nlp/licenses/LCSegLicenseDownload.html)
-ui.config          - Evaluates Utiyama & Isahara's segmenter
-perfect.config     - Runs a "perfect" segmenter that reproduces the ground truth.  For debugging.
-STOPWORD.list      - List of stop words used.  From Malioutov's MinCutSeg package.
-CUEPHRASES.hl      - List of possible cue phrases.  Based on (Hirschberg and Litman 1993)
-
-./data             - The medical textbook dataset.  Each file is a chapter from the book,
-                     and the chapters are divided into segments using the "Choi" 
-                     notation, with segment boundaries indicated by a row of =======
-                     Other punctuation is stripped out.
-
-./doc              - The Javadoc API
-
-./lib              - Library dependencies
-
-colt.jar
-lingpipe-3.4.0.jar
-log4j-1.2.14.jar
-MinCutSeg.jar
-mtj.jar
-options.jar
-
-./source           - The java source files
-./results          - The result output
+- **eval** A unix script for evaluating a segmenter.
+- **segment** unix script for segmenting text
+- **build.xml** An ant script for building the source
+- **log.config** A configuration file for java logging used by MinCutSeg. Must remain in the base directory.
+- **README.md** This documentation
+- **./baselines** A directory containing alternative segmenters that can
+  be evaluated with this code.  due to licensing restrictions,
+  this contains only Utiyama and Isahara's TextSeg-1.211, which
+  they kindly provide on their website.
+- **./classes** The compiled java class files
+- **./config** Configuration files for running various experiments
+  + *dp.config* Runs the dynamic programming lexical cohesion system described in the paper
+  + *cue.config* Runs the cue-phrase MCMC implementation of our system,
+	initializing from the results of the dynamic programming                
+	implementation
+  + *mcsopt.ai.config* Evaluates the MinCutSeg segmenter (Malioutov & Barzilay 2006)
+  + *lcseg.config* Evaluates the LCSeg segmenter.  This segmenter is not included
+	  in this distribution, but may be obtained from Columbia University using
+	  this [license](http://www1.cs.columbia.edu/nlp/licenses/LCSegLicenseDownload.html).
+  + *ui.config* Evaluates Utiyama & Isahara's segmenter
+  + *perfect.config* Runs a "perfect" segmenter that reproduces the ground truth.  For debugging.
+  + *STOPWORD.list* List of stop words used.  From Malioutov's MinCutSeg package.
+  + *CUEPHRASES.hl* List of possible cue phrases.  Based on (Hirschberg and Litman 1993)
+- **./data** The medical textbook dataset.  Each file is a chapter from the book,
+  and the chapters are divided into segments using the "Choi" 
+  notation, with segment boundaries indicated by a row of equal signs.
+  Other punctuation is stripped out.
+- **./doc** The Javadoc API
+- **./lib** Library dependencies
+  + colt.jar
+  + lingpipe-3.4.0.jar
+  + log4j-1.2.14.jar
+  + MinCutSeg.jar
+  + mtj.jar
+  + options.jar
+- **./source** The java source files
+- **./results** The result output
 
 This is a java-based, platform-independent implementation.  The class files
 provided here require Java Runtime Environment (JRE) 6.0 or higher.  If you
