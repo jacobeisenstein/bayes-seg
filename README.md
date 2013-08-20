@@ -24,8 +24,6 @@ Contents
 
 The directory contents of this distribution are as follows:
 
-./
-
 - **eval** A unix script for evaluating a segmenter.
 - **segment** unix script for segmenting text
 - **build.xml** An ant script for building the source
