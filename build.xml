@@ -1,0 +1,71 @@
+<project name="bayesseg" default="build">
+  <description>Build the source for the Bayesian discourse segmentation described in Eisenstein and Barzilay (2008)</description>
+  <property name="src" location="source"/>
+  <property name="build" location="classes"/>
+  <property name="docs" location="doc"/>
+  <property name="JAVA_HOME" location="/usr/lib/jvm/java-7-openjdk-amd64"/>
+  <path id="class.path">
+    <fileset dir="lib">
+      <include name="*.jar"/>
+    </fileset>
+    <pathelement path="${build}"/>
+  </path>
+  <target name="build"> 
+    <!-- Compile the java code -->
+    <javac srcdir="${src}" 
+	   destdir="${build}"
+	   classpathref="class.path"
+           debug = "on"
+           debuglevel="lines,vars,source"
+	   includejavaruntime="true"
+	   includeantruntime="false"
+	   />      
+  </target>
+  <target name="clean">
+    <delete dir="${build}"/>
+    <mkdir dir="${build}"/>
+  </target>
+  <target name="rebuild" depends="clean,build"/>
+    
+  <target name="save">
+    <tar destfile="../bayesseg.tar.gz"
+         compression="gzip">
+      <tarfileset dir = "." prefix="bayesseg">
+        <exclude name="data/icsi/transcripts"/>
+        <exclude name="data/icsi/transcripts/**/*"/>
+        <exclude name="data/icsi/para_experiment"/>
+        <exclude name="data/icsi/para_experiment/**/*"/>
+        <exclude name="data/icsi/choi_segment"/>
+        <exclude name="data/icsi/choi_segment/**/*"/>
+        <exclude name="baselines/lcseg"/>
+        <exclude name="baselines/lcseg/**/*"/>
+      </tarfileset>
+      </tar>
+  </target>
+  <target name="docs" depends="build">
+    <delete dir="${docs}/api" quiet="true"/>
+    <mkdir dir="${docs}/api" />
+    <javadoc
+       packagenames="edu.mit.*"
+       sourcepath="${src}"
+       additionalparam="-breakiterator"
+       destdir="${docs}/api"
+       classpathref="class.path"
+       version="true"
+       author="true"
+       use="true"
+       source="1.5"
+       maxmemory="512M"
+       overview="${docs}/overview.html"
+       windowtitle="Bayesian Discourse Segmentation Specification">
+      <link href="http://java.sun.com/j2se/1.5/docs/api"/>
+      <link href="http://acs.lbl.gov/~hoschek/colt/api"/>
+      <link href="http://people.csail.mit.edu/igorm/acl06/docs/api"/>
+        <!-- maybe put a link to Igor's javadoc??-->
+      <bottom><![CDATA[<i>Copyright &#169; 2008 MIT. All Rights Reserved.</i>]]></bottom>
+      <doctitle>"Bayesian Discourse Segmentation Specification"</doctitle>
+    </javadoc>
+  </target>
+
+    
+</project>
