@@ -1,0 +1,469 @@
+==========
+We ended last time with a story problem and we did the first part of it which was to write out the axioms, right? 
+Turn the story problem into a set of axioms. 
+Now, and I gave you guys our homework problem. 
+I do hope you did it, so that it doesn't take too long. 
+We're going to write this out in clause form. 
+And then we're going to do the resolution proof for it. 
+OK? 
+So I'll write the first three clauses down and you're going to figure it out. 
+What clause comes from that next sentence? 
+Somebody just tell me. 
+A(T) A(S) A(E) Not A(x) or S(x) or M(x) not M(x) or not L(x, R) not S(x) or L(x,S) For everything either Tony doesn't like it or Ellen doesn't like it, not L(T,x) or not L(E,x) and then we get the other one that says for everything either Tony likes it or Ellen likes it. 
+L(T,x) or L(E,x) L(T,R) L(T,S) We're going to negate our conclusion before we turn it into clausal form, right? 
+So let's do that one. 
+not A(x) or not M(x) or S(x) Now, I'm going to show you a trick, too, as we go through and do this. 
+So I'm going to just -- remember, we talked about before, that really the X in this clause is completely different from the X up there. 
+So I'm going to just name this X a different thing, like Z. And we're going to keep track of -- the question was, who is it? 
+Not just is there a person who climbs mountains but doesn't ski. 
+Right? 
+We're not just interested in the existence of such a person. 
+We'd like to know who it is. 
+In order to find out who it is, as we go along into our proofs, we're going to pay attention to the assignments that we make the variables eat, because the assignments that we make the variables eat that causes us to reach an inconsistency, well, that's going to be an example of a person who meets that specification. 
+So that's a way to get an answer out. 
+You could say there exists a Z such that blah, and then you pay attention to the who Z gets bound to, and that tells you the particular individual, or at least one of the individuals that make the negated goal false. 
+OK, so now we can do the proof. 
+How about four and eleven? 
+Like four and eleven, what do we get if we do four and eleven? 
+C: So the Z could mean the (inaudible) as you bind things? 
+Yes, so let's keep Z. And this is not part of the resolution rule, it's just part of a trick to get the answer out. 
+Or, let's see. 
+So then the arrows go away and we keep the S's. 
+So we got that from four and eleven. 
+All right? 
+twelve and six. 
+What happened to twelve and six? 
+That's good. 
+So we do twelve and six. 
+We get not A(z) or L(z) . 
+And then what do we do? 
+What's a good one? 
+Well, we can get L. I did it wrong on my notes. 
+You're going to have to help me out. 
+C: (inaudible) ten and thirteen. 
+Ten and thirteen. 
+OK. 
+Well, that what I was proposing to do in my notes, but that seems like not possible, because one of them has to be negated. 
+C: (inaudible) Well, so the only not L we have, we have is five. 
+No, because five doesn't match. 
+So we have seven, so I guess we'd better use seven, huh. 
+So we get (inaudible), so we're going to bind z to E. Right? 
+And X to S? E to Z, S to X. So we've got not L T S, or not A(E). 
+Better? 
+All right, I think we're cooking now. 
+All right, because now we take fourteen and nine, it's not A(E). 
+And now we get (inaudible), with fifteen. 
+C: Fourteen and ten? 
+So who is our person? 
+C: E. E. Yes. 
+This is tricky, but this is right. 
+So let's look. 
+Because we decided we were going to match this term here with this one there. 
+C: No, it's (inaudible) to do E or C. Oh. 
+All right, OK. 
+Oh, I did this one. 
+Right. 
+We could have done this one. 
+And I don't know where that would have take n us. 
+I think not so far. 
+So -- but right. 
+So if we matched this with this one, then we'd put E in for a Z and we'd put X in for S, and so that means that this X becomes an S. C: Right, but doesn't the Z (inaudible)? 
+It's fifteen and three, yes. 
+Q: (inaudible) What would happen? 
+Anybody know? 
+What would happen? 
+C: (inaudible) you can't get a contradiction. 
+Right, you can't get a contradiction. 
+But even better than not getting being able to get a contradiction, eventually you'll run out of things to try. 
+No, that's not true. 
+So you won't be able to get a contradiction. 
+So let's talk about that. 
+In fact, that was on my agenda to talk about. 
+We might as well do it now. 
+It's a propositional case. 
+Not a first- order case, but a propositional case, where we just have P or Q and so on. 
+In that case, either you'll get a contradiction, or you run out of things to try. 
+One way or the other, you know. 
+==========
+In this case, so there's a theorem, a theorem by Godel that says -- so, Godel says a couple of interesting things, but one of them is that there exists a complete proof system for first-order logic. 
+And then there's a theroem by Robinson, who invented resolution, that says resolution refutation is a complete proof system -- I'll say what complete means in a minute. 
+This was just like those mathematician/theroetician types, right? 
+They prove there is one of these things, but they don't tell you what it is. 
+It's cold comfort. 
+But then Robinson came and showed us a resolution and proved that it's complete in first-order logic. 
+OK, so in this case, what complete means is -- let me just write it the way the book writes it. 
+So if we read this theorem a long time ago, if a sentence was entailed by a knowledge base, so that if this sentence was true in all interpretations of the knowledge base then there's a proof - there's a proof of this sentence from the knowledge. 
+So complete means, if it's entailed, then there's a proof. 
+Now the problem is that -- the way this is -- what happens with this proof procedure is if there is no proof you don't necessarily know that. 
+So it's what's called semi-decidable. 
+All right, so if there's a proof, we'll halt with it. 
+If not, maybe we'll halt, maybe not. 
+So how do you know that something doesn't follow? 
+Well, you don't; you can never really know. 
+So your theorem prover or your complete decision procedure could run and run and run, and no matter how long it runs it might be the case that if you just let it run one more second and it'll get the answer or it might be that it's going to run forever, but you have no way of knowing. 
+So there. 
+So it's like Turing machines. 
+Godel had one more thing to say. 
+He had a variety of other things to say, but one more thing that he cared about. 
+Every has heard about Godel's Completeness Theorem? 
+No, no, no. 
+There's Godel's Incompleteness Theorem, so how is it that he had a Completeness Theorem and then an Incompleteness Theorem? 
+Well, that's very Godel-like, but anyway, so the incompleteness theorem is this, just because you'll hear about it, or you probably have. 
+First-order logic plus arithmetic is incomplete. 
+Well, what I should say is: There is no consistent, complete proof system for FOL + arithmetic. 
+So everything is cool and great for regular first- order logic, but if you add some extra machinery that lets you do basically induction. 
+Once you have addition and multiplication you're in trouble. 
+"What does it mean for it to be incomplete?" 
+So it means that there are things that are true but not provable. 
+Now we're in the realms of a kind of philosophical logic that probably doesn't matter much to the everyday practice of AI. 
+But it's sort of interesting. 
+But it's also interesting because -- and we're going to come back to this in the very last lecture. 
+This theorem gets invoked by some people as an argument that AI can't happen, which I think is completely bogus as arguments go, but we'll talk about that later. 
+Now, this is sort of entertaining, but the example that Godel came up with of a statement that was true but couldn't be proven was essentially, "This statement is true but can't be proven." 
+And arithmetic is what lets you do that little bit of self-reference, that lets you say "this statement", because you assign numbers to all the statements, and then you can say the statement with number blah-diddy-blah is true but can't be proven, and you arrange for blah-diddy- blah to be the number of that statement itself, and that's when things start to go awry. 
+It is sort of fun. 
+==========
+I wanted to talk a bit about equality. 
+So far we've been looking at a language. 
+At least all the proofs and stuff we've done have had predicates in them and functions, but not equality symbols. 
+When we talked about the definition of first-order logic we put equality in our language, so the question is what do you do in resolution, for instance, if you have equality, if you want to talk about things being equal to each other. 
+Well, one solution, which is fine -- equality is not something that's outside of the realm of first-order logic. 
+Equality is just another relation, so you can define equality. 
+You could say axiomatize defines equality. 
+You could say equality is an equivalence relation. 
+As all of you can remember from discrete math I'm sure, you can define equality by saying for all X, x = x and for all X, if X = Y then Y = X. You can only go one way, and for all X, Y, Z, if X = Y and Y = Z then x=Z. 
+So those axioms define the essential properties of equality as being an equivalence relation. 
+But then, so very sadly, you need more than that. 
+You need basically for every predicate you would need to say for all X and Y if X = Y then P or X if and only if P of Y. we all have that as an intuition. 
+I mean, if X and Y are really the same thing then anything that's true of X has got to be true of Y. That doesn't follow from these definitions of equality, and so if you wanted to take just plain old first-order logic resolution and talk about things being equal to one another, which you almost always end up wanting to do, then you could do it by adding these axioms plus one of these for every single predicate you have plus some for function symbols and just to be pretty horrendous. 
+So what typically happens is that people build special inference procedures for equality into the proof procedure, so in resolution there's a rule called paramodulation. 
+I'll show it to you by example. 
+You'll get the idea. 
+The book talks about demodulation. 
+This is a slightly more complicated version, but it's not too much more complicated. 
+Imagine that you have two clauses. 
+You know F(x) = G(x) or not P(x) Q(F(A)) Imagine that you know those things. 
+Because this is like saying, right, this is like an equivalent. 
+This top thing's equivalent to saying "if P(X) then F(X) equals G(X)". 
+If you're a type of creature that reproduces asexually, then your mother is your father. 
+There. 
+And then we would know something about the father of A. You'd like to be able to conclude that thing about the mother of A under certain circumstances. 
+Under which circumstances? 
+Right, P(A). 
+So you'd like to be able to conclude "not P(A) or Q(G(A))". 
+Let s, r, t be terms gamma(r) be a (possibly negated) literal that contains term r as a subexpression. 
+theta = Unify(s,r) alpha and beta be (possibly empty) sets of literals then given alpha or (s = t) beta or gamma(r) ---------------- (alpha or beta or gamma(t))theta Here's another example, N(G(C)) or (F(G(B)) = A) Q(x) or P(H(F(x))) -------------------------- N(G(C)) or Q(G(B)) or P(H(A)) The example in the book is just demodulation. 
+In that case they have alpha equals beta and some Phi of delta, and they conclude, beta is what you get by unifying, say, alpha and delta, and you can conclude phi, but wherever you had delta before you can put in beta with the substitution theta applied to it. 
+In the end it means you can substitute equals for equals but you can also use unification to substitute matching things for matching things, but you have to propagate the matchings through. 
+So this rule is called demodulation. 
+And then the trick is, basically, you can do demodulation, but if your equality came with another thing tagging along with it, you have to bring it along, too. 
+So now, the problem with all this equality stuff is that then you get into issues about which things are equal to which other things, so this equality now tells us how the equality relations work and we can use that in our inference to substitute things in for other things, and now we have really license to imagine that all sorts of things are equal to all sorts of other things. 
+==========
+Now, when we write a theory, like we wrote the theory on the board just a little while ago about Ellen and Tony and Shih-Kuo, and certainly when wrote that theory up on the board we probably all had in mind that they were different people, that Ellen wasn't equal to Tony. 
+Now, we never actually -- well, probably we could have proven that Ellen is not equal to Tony given that action we had about them not liking the same things, but Shih-Kuo could well have been equal to Tony. 
+Maybe this person has two different names. 
+There was nothing in the theory that we run up there to keep us from accepting interpretations in which they are both those symbols, both map to the same individual in the world. 
+Nothing at all, right? 
+So there's this problem -- it's not necessarily a problem. 
+Sometimes you want to consider a case where two different names could map to the same individual. 
+You might want to reason about whether Clark Kent is equal to Superman, and you might have some fact about Clark Kent and some fact about Superman, and maybe you would be able to prove that they're equal, but other times typically when you use different names, you actually happen to intend that they apply to different individuals in the world, so there's this thing you could talk about unique names. 
+So if you have two symbols in your theory and you want them to not be the same, you have to take them, so you would have to say Tony is not equal to Shih-Kuo. 
+If you really want those two names to not refer to the same person, you have to say they're not the same person. 
+Now, it turns out that this is another assumption that is built into some reasoning systems. 
+Again, because it is a real pain to have to assert that everything is not equal to everything else. 
+So in some reasoning systems, they have this thing built in so that if you use two different names then in a sense they're two different people deep down. 
+But if you're using a kind of generic first-order logic reasoning system, and you want these three names to be sure to refer to different people then you have to say that, and then it won't substitute them in or do anything like that. 
+That's another example of -- you can write a theory down, a set of axioms down on the board and we know what it means in some terms, but then often there are a lot of other interpretations that come along that are consistent with that you wrote down but not with what you intended, and this was a case that often messes you up. 
+OK, here is another thing. 
+Another kind of assumption that you might make is the complete knowledge assumption, so let's say -- this is called the closed world assumption. 
+Imagine that you sat down -- you're talking about some institution or something, and so you want to say, well, "Leslie is a professor". 
+And then you talk a lot about students and maybe you talk about other professors and you do some more of that. 
+And now let's say you want to prove some theorem that involves proving that -- I don't know, what if you're interested in the question of not Professor(Joe)? 
+Well, that doesn't follow from our theories, if I don't have any more axioms in there about who's not a professor, right? 
+It's not possible to prove not Professor(Joe) from that theory. 
+There's nothing in there that would imply not Professor(Joe). 
+On the other hand, when you're describing a world, it's in some sense -- especially if your particular muddle-minded thinking about a particular thing -- it is much easier to state the things that you know, or often to state the things that are true, than to state the things that are false. 
+There are an awful lot of things that aren't true in this world, so Joe is not a professor, and neither is Steve Hanks, and neither is -- I mean, a whole bunch of people. 
+Lots and lots and lots of people aren't professors. 
+Lots and lots of people are not students. 
+Lots and lots of things are not whatever, and in some cases you don't want to have to say all that, so sometimes in reasoning systems you can make this complete knowledge of a system or closed-rules assumption or something that's also sometimes called negation by failure, and that says, look, if I can't prove that Joe is a professor, then he must not be a professor. 
+If I didn't say he was a professor, then he must not be one. 
+So anything that I haven't said -- this is sort of Orwellian, right? 
+If it's not definitely true, then it's false. 
+Anything that I can't prove must be false. 
+Now we're -- we're in some regime now that's not really part of regular first-order logic. 
+But it's often handy. 
+It's often useful. 
+It's rebuilding a practical system of reason about things to say, I'm going to write down all these facts and I'm just going to -- anything else that it's either not written down, or that I can't derive from what's written down, I'm going to assume to be false. 
+But we have this problem about, well, what does it mean to not be able to derive something, because of the semi-decidability of first-order logic, right? 
+If we just start running resolution refutation, try to prove that Joe is a professor, it might not return and we don't know whether it's not returning because it just doesn't have enough time, or it's not returning because it's not able to prove that. 
+And so, this is a -- I mean, this sort of negation of failure is typically a -- it's a hack. 
+It's an operational thing that you can build into a particular system and it may even have a thing that says, well, I'm going to try to prove this for ten seconds, or ten minutes, or ten days, and if I can't, then I'm going to assert that it's false. 
+So you could do that in certain kinds of systems. 
+Again, so there's - we looked at general first order logic. 
+We found that it has fairly bad properties both practically and theoretically about getting answers out, and so there's an enterprise in trying to make things more easy and efficient and effective to use, and this is one of them. 
+==========
+OK, so let me just talk for a minute about a programming language called PROLOG. 
+And we'll look at an example of a PROLOG just for fun. 
+So PROLOG is called PROLOG for programming and logic, or something like that, and when you -- it's a kind of a very odd combination of something that's sort of like a theorem proving, and something that's sort of like a programming language, and it turns out that if you treat it as a theorem prover you're in big trouble and in the end you have to treat it as a programming language. 
+That is, you pretty much have to have a mental model of how it runs underneath in order to be able to write a reasonable program. 
+In some sense, well, Mike and I were finding out about Otter too, so otter's this thing that purports to be a theorem prover, that is to say, it purports to not require you to know how it works deep down in order to write a useful set of axioms, but that turned out not to be true either, so you really needed to know how it works. 
+So PROLOG works -- it does -- you can think of it as doing first-order inference, but in a very restricted kind of way. 
+So it requires that you have Horn clauses, named after somebody named Horn, which means that they have at most one positive literal. 
+So its, not this, or not that, or not that, or the other thing. 
+And you get those from having something that looks like A and B and C implies D. If you have rules that look like that, when you turn them into clausal form, you get not A or not B or not C or D. And the reason -- well, there are technical reasons why. 
+You can decide a set of Horn clauses, so this -- Horn clause theories are actually completely decidable. 
+You can tell whether or not there's a proof, and deep down the limitation of PROLOG takes advantage of that. 
+So that's a restriction. 
+There are just some things that you can't write down. 
+You can't, for instance, write down "A or B." That's not allowed. 
+But if you can live within the restrictions of PROLOG, then you can get some pretty efficient proofs of things out. 
+It has built into it negation of failure. 
+It has built into it the unique names assumption. 
+It also has built into it, I'll say computed arithmetic, so this is another thing to talk about for a minute. 
+We mentioned this briefly, probably a couple, three lectures ago, when I wrote something like A is greater than or equal to B on the board. 
+And someone rightly said, wait, what does that mean? 
+Because there's two ways you could go about trying to build this into a system that you're using. 
+It's possible to axiomatize numbers, the natural numbers. 
+It's not so hard. 
+And you could then write axioms that say when one number is less than another, but it would have to do this really most horrendous reasoning by induction. 
+We would essentially have to create a hundred. 
+A hundred in the axiomatic theory of arithmetic is the successor of 99, which is the successor of 98, et cetera, which is all just the 97th successor to zero, and so every time you'd have to -- want to think about 100, you'd have to do all the steps that would take you up to the creation of 100, and so to compare 100 to 102 it would be counting in some really contorted way the number of successor-ofs that you had. 
+Anyway, you just don't want it to do that. 
+It's nice that you can, but you would never want to. 
+And so in any kind of system that is practical, you're still allowed to write things like this but what it means is something very calculational and not so logical. 
+What it means is that when the programming language or a theorem prover or whatever it is runs into this, it had better be by this time that these are not variables. 
+If they're variables, then it just doesn't know how to deal with it, and if they're not variables, then it just evaluates it in the way that you and I always know how to evaluate greater or equal to and it gives you a truth value. 
+So it has kind of arithmetic that's outside of the logical realm in some way, but it does what you want it to do most of the time. 
+So what about PROLOG? 
+It's actually a useful programming language. 
+People have used it to even write operating systems. 
+You can do anything in PROLOG that you can do in any other language. 
+But there are some things that are particularly effectively written in PROLOG, as certain kinds of inference processes are. 
+The other thing that's useful about it is that you can add control knowledge. 
+So you can -- it's not too hard to build in hints about how to try to prove stuff, which branches of the proof chain are probably not going to bear fruit. 
+The guts of that are just kind of unspeakably ugly, but if you -- if you're really good at it, you can make it work very well. 
+==========
+So what I'm going to do for the rest of the time is talk about other kinds of logic at a very pretty high level, just to give you a flavor of what other kinds of things you can do with logical systems. 
+We studied first-order logic because it's the most general language that has a hope of being useful, and that's not too hard to understand. 
+It turns out that if you want to build a system that's really practical you probably have to use still a restriction of first-order logic -- PROLOG is a restriction of first-order logic. 
+There are other languages that are restrictions of first-order logic that have better sort of computability properties and better time efficiency. 
+But then it's going to turn out that first-order logic isn't exactly what -- I mean, there are a bunch of other things that you'd like to be able to say or write down or describe, for which first-order logic isn't really the thing that you would most want, and so there are other languages for describing these other kinds of things. 
+Usually, they have even worse computational properties than first-order logic, so then you might wonder why does anybody pursue them, and it has to do with the idea of separating out -- and I think this is an important thing to do in general in AI -- separating out the thing that you would like to compute if you could from the thing that you could actually compute given your meager resources. 
+So it's worth understanding, I think, what the right answer would be or what the thing that you would most want to do would be, and then with that understanding you can think about ways of approximating or backing off or restricting yourself. 
+So we study these things not because it turns out that we're going to be able to just implement them directly, but because it gives us some insight into what we in the best of all possible worlds, maybe, what we would like to do. 
+Now I'm actually not going to talk about possible worlds, but I'll talk about a few other -- so I'm now going to spend five minutes each on some different kinds of things that you can do in other versions of logic, so let's talk about monotonicity. 
+==========
+So here's a fact. 
+First-order logic is monotonic. 
+What does that mean? 
+It means that if a certain knowledge base entails some conclusion alpha. 
+Then if we add something to the knowledge base it still entail alpha. 
+So it probably now entails more things than it used to, but the idea is that you can add more knowledge and it never makes anything false that used to be true. 
+Never makes anything true that used to be false, and it never makes -- there are things that are not entailed that may become entailed, but it never takes anything that wasn't entailed before and says, no. 
+OK, so that means -- that's a handy property. 
+It just sort of means, well, we just add more information, and whatever we could conclude before we could still conclude, and now we can conclude some more things. 
+But sometimes you don't want that. 
+And a good example is reasoning by default. 
+So let's say I say tweety is a bird. 
+And now I ask you, can Tweety fly? 
+And you'd sort of like to say, yes, or yes, probably. 
+We'll get to the yes, probably. 
+You'd like to say yes. 
+Maybe you'd like to say yes in absence of other information. 
+But the trick is, if you say yes in absence of other information then you're in trouble because later on when you get the other information it may not be true anymore. 
+So people work on non-monotonic logic, so here's an example of something called a default rule. 
+You might write a rule that says if X is a bird, then it would be consistent to conclude that X flies. 
+So here's my example of how this would work. 
+So if I just knew the bird(Tweety) and nothing else, I would be happy to conclude that fly(Tweety). 
+No problem. 
+But let's say that tomorrow I find out that actually Tweety is a penguin, and that penguins can't fly. 
+Now, if I were to conclude that Tweety flies, it would be inconsistent. 
+I would be able to prove false, so I'm not allowed to conclude that Tweety flies. 
+So this is an example of an inference rule that lets you make different inferences in different contexts. 
+And it's non-monotonic because what happens is that I added some information here. 
+I learned something about the world and now I can no longer make the conclusions that I used to be able to make. 
+So it's useful to be non- monotonic but if you have a non-monotonic system then you have to be kind of careful in managing it and not remember some old thing. 
+People get in trouble with this, right? 
+People get into all sorts of trouble with this. 
+You draw a conclusion, you remember the conclusion, you forget why you came to believe it, you learn some more information, ask your system if you hold this conclusion and then you head explosed. 
+Well, maybe your head doesn't explode, but at least you have a problem, right? 
+You have to figure out what's wrong. 
+So the same kind of thing can happen, and there's a whole branch of kind of classical AI which is about keeping a knowledge base consistent. 
+It's sometimes called "truth maintenance," or "belief maintenance", or "belief revision". 
+There's a bunch of names for it, but basically, how do you, in a world where you learn changing information over time keep a consistent picture, a mental state about what's going on in the world. 
+There's another way to talk about non-monotonic logic, but I don't think I'll do it. 
+The thing about the default rules is -- so there's a bunch of other ways to do non-monotonicity and logic. 
+This is just an example that's the most clear. 
+One problem with default rules, though, is you would not find it very hard to make a set of these rules that gets so intertwined that you can't do anything. 
+If you have a whole set of default rules it can be very hard to understand what the actual answer ought to be, so they have to have priority, and then you don't know -- it gets to be a mess. 
+==========
+OK, here's another thing about logic. 
+So the thing about first-order logic is two valued. 
+Things are either true or false. 
+You can have logics with more truth values than true or false. 
+You could make up any logic you wanted to. 
+You can have one with seven truth values. 
+Some people do three-valued logic, and that makes some sense, right? 
+You have true, false, and kind of an unknown value, and you can make kind of a logical calculus with three values. 
+A more common case is real values. 
+And typically we have truth items in the interval zero to one, so who here knows a logic that has truth values in an interval zero to one. 
+You all do. 
+C: Probability. 
+Probability. 
+Probability's an example, and we're going to spend a lot of time talking about probability later on, but let's just for the sake of comparison -- probability, if you say probability of snow tomorrow equals 0.2, you're saying nothing about how much snow there's going to be tomorrow. 
+You're saying something about of all the possible tomorrows, how many of them have snow in them, or something like that. 
+Right? 
+We're talking about -- there's a depends. 
+It's either going to happen or not. 
+Either there is going to be snow or there isn't going to be snow, but you're quantifying your uncertainty or the degree of belief that P will be true. 
+So to what degree do I believe that it's going to snow tomorrow? 
+When we get to probability we'll talk about other ways of interpreting P. There are some philosophical debate about that. 
+There's another common logic that has truth values in the range zero to one. 
+Anybody else know what that is? 
+It might be in your camera or your dryer or your ignition system. 
+Fuzzy logic. 
+So in fuzzy logic, we might just say "snow tomorrow" equals 0.2. 
+Now, but what that means is not my belief that a particular discrete event is 0.2. 
+It's not about my belief that weather, a rigid thing, is going to happen or not, at 0.2. 
+Instead, it's something more like quantifying the amount of snow. 
+So that's not quite -- that's not the best example, because snow isn't usually a thing that you quantify between zero and one. 
+I mean, it would say things like you could say big(Clyde) is 0.8. 
+And that means something like, "Clyde's pretty darn big." 
+In the scale of bigness, between zero and one, Clyde's a 0.8. 
+Not that he's probably big, that he's very big. 
+And there's a calculus. 
+In most cases, there's a calculus for manipulating these numbers, so that if you have a number for A and a number for B, then you could derive a number for A and B or A or B. But the calculi are different. 
+There used to be these kind of very peculiar knock-down drag-out arguments within AI about whether one should use probability or fuzzy statements and we could talk about that over a beer or something, I don't think you want to do here. 
+For various reasons, it turns out that -- I think probability ends up being more useful in most cases, in a lot of broader applications. 
+Let me say it that way. 
+So we're going to spend a lot of time studying probability in the second half of this course. 
+All right. 
+Other kinds of logic. 
+==========
+So let me talk about modal logic. 
+So, in the regular first-order logic there were two quantifiers. 
+There-exists and for-all, and they're very general purpose, right? 
+A sort of, you know, all kinds of situations you can talk about with there exists and for all. 
+It turns out that for some applications it's useful to add other things which are called modal operators which are a lot like quantifiers. 
+They're special in various ways, and by putting them in your language and building them into your proof procedure, something that lets you write down things more elegantly and more succinctly, and that's something that a lot of people put premium on, elegance and succinctness. 
+So there's a basic kind of modal logic that has two operators. 
+In some versions of the logic, this is read as "necessarily" and this operator is read as "possibly", so you might say "necessarily P," right? 
+And that means sort of you're thinking, these things are appropriate when you're thinking about different ways the world could be. 
+Can you imagine, you're thinking about all the different ways that the world could be. 
+It's sort of like thinking about different interpretations. 
+So you might have necessarily P. P is true in all the ways the world could be. 
+Or possibly P, P is true in at least one of the ways the world could be. 
+It's possible that an anvil hits me on the head as I go out the door. 
+Now, again, it's going to turn out that you really, I think, want probability instead of what's necessary and possible, because it's really hard to think of domains in which something is just absolutely flat-out guaranteed to happen or that it's useful to think of something just possibly happening because a possibility is maybe very, very unlikely. 
+But these concepts turn out to be useful and these kinds of logics have been used in computer science and kind of ordinary computer science to prove properties, for instance, of protocols, distributed algorithms, for instance. 
+Necessarily, this program doesn't ever deadlock. 
+Necessarily, there's no deadlock, or possibly, the thing crashes, or something like that. 
+So it's a way to talk about, in this case, to quantify, in some sense, quantify over runs of a program. 
+So that's one case in which these things can be useful. 
+==========
+My favorite application of these kinds of things is in something called epistemic logic, where you can talk about - - epistemic means having to do with knowledge, episteme, or something means knowledge. 
+Well, it means knowledge. 
+So you can talk about who knows what, so in epistemic logic you typically have these modal operators, K for knows, and sometimes there's a subscript here. 
+K-sub-alpha means agent alpha or person alpha knows something. 
+So you can say "agent alpha knows that P". 
+You can say "alpha knows that beta knows that alpha doesn't know that P." I know that you know that I don't know what's going on. 
+That's the thing that you could say. 
+Now, with enough axioms and machinery and stuff, you could formalize this domain in first-order logic. 
+But you would never get something so beautiful written on the board as "K-alpha, K-beta, not K-alpha P." Isn't that beautiful? 
+There's a great -- we're not going to get into this, but there's a great homework assignment that I saw, something else's assignment, involving Cyrano de Bergerac, and this whole thing about how he knows that she doesn't know that he's the one who's writing the poetry and so on, so you can do all that. 
+So while that sort of thing's sort of fun to think about in epistemic logic, there's a whole bunch of different versions, and the different versions of it sort of correspond to different assumptions that you make about the reasoning powers of the agents in your system. 
+So again, this is a kind of logic that's also been applied, a fair amount, actually, in proving distributed protocols correct. 
+So here's some of the standard axioms of epistemic logic, so here's one. 
+What does that mean, informally? 
+Does it apply to you? 
+Say the English words. 
+C: (inaudible) is true. 
+Yes. 
+C: You could be taught incorrectly. 
+Right, so this axiom is called "truth". 
+And it says, well, we're using this K operator to be something called "no", and so there's the question of could it be -- this says everything I know is true, so I defined knowledge to be things that are true. 
+(inaudible) people use a B operator here for "believes" instead of K, and then they don't put the truth axiom into the soup, and then you can take about agents than can possibly believe false things, but if you take this -- if you accept this axiom and you say, in thinking about the agents of my world, everything the know is true, then that takes you down certain defective paths. 
+So there's another one that says... 
+(inaudible). 
+Does that apply to you? 
+Who here does it apply to? 
+I think if it applied to you, then you would know how to play an optimal game of chess, for instance. 
+This says if you know P, and if you know that P implies Q, then you know Q. And that's often called deductive closure. 
+It says you know all the consequences of everything you know. 
+Now, you could say in an information theoretic sense you do, and in an information theoretic sense, if you know the rules of chess, then you know -- in some sense you know what the optimal first move is, but in some other sense, in any kind of an effective or pragmatic sense, you certainly don't know what the optimal first move is. 
+So if you want this "know" operator to describe that kind of theoretically you know how to play the optimal game of chess then you can put this axiom into your knowledge base. 
+But if you want this knowledge to be not closed in this kind of way, so that if I tell you some things you don't necessarily know the consequences, then you don't put it in. 
+I've got two more. 
+"If you know it, you know you know it." 
+That's actually fairly innocuous, both inside of life and also in logic. 
+Usually, you don't gain a whole lot by adding that. 
+Or at least, it doesn't seem too offensive to add that one in. 
+But here's one that's a little more controversial, right? 
+It doesn't apply to people. 
+If you don't know something, then you know you don't know it. 
+You wish. 
+This is like you. 
+I wish it applied to you. 
+So this is an example of taking a domain where there are some interesting relationships between propositions and ways that you can feel about propositions and you can build up a set of axioms and a proof procedure and prove theorems in this logic. 
+So this is a different kind of logic. 
+Not first-order logic; the modal logic of knowledge. 
+One thing that's very interesting about this logic is that it interacts in a funny way with equality. 
+So before we were able to substitute equals -- we said it was -- the part where we talked about equality a while ago, we said, well, if you have equals statements you can substitute things in. 
+But you can't do that here. 
+So we have something called referential opacity. 
+Referential opacity. 
+What does that mean? 
+It means that if I say I know that -- well, here's the classic example. 
+The morning star is equal to Venus. 
+How do I know that? 
+I know the morning star is Venus. 
+Or you do. 
+Or Joe does, right? 
+Joe knows that the morning star is in Venus, but Joe doesn't know everything there is to know about astronomy, so you and I know that the evening star is also equal to Venus. 
+This is true, by the way. 
+This example is due to Frege in eighteen-something. 
+But it's not OK to substitute -- so in regular predicate calculus stuff you would be perfectly licensed to substitute evening star or Venus in wherever you wanted to. 
+Once you know they're equal, you can put them in anywhere you want to. 
+But just because you know the morning star is Venus doesn't mean that you know, for instance, that the morning star is the same as the evening star. 
+So some things that it used to be OK to do are not OK anymore, and so it's an interesting questions, when you can substitute things in and how things refer to other things when you're talking about what somebody knows. 
+I want five volunteers. 
+We have five minutes. 
+We're going to do a parlor trick. 
+Come on up here, five people. 
+Just don't stand up here. 
+It won't hurt. 
+It won't embarrass you. 
+It might embarrass you, but it won't hurt. 
+This is supposed to be k muddy children. 
+They've been out playing, and some of them have gotten mud on their head (or an eraser). 
+I walk into the room and I say at least one of you has mud on their face (or an eraser). 
+So how does that reasoning go? 
+So, in the first round, let's say there were only two people with erasers. 
+Let's say there's only one person with an eraser. 
+If there's only one eraser, then the person who has it on the first round can say, "I know I have the eraser." 
+Because if I said at least one of you has an eraser, and there's somebody who doesn't see any erasers, then he can say, "I know I have the eraser." 
+Because somebody has to have it, and they don't, so I do. 
+So that's the easy case. 
+So now let's consider the two person case. 
+On the first round, everybody looks around and they see at least one other person with an eraser, so they can't be sure, yes? 
+C: (inaudible) So the story is really that you have mud on your forehead. 
+There's another story that involves cheating wives, which presumably we don't have immediate insight into. 
+So in the second round -- in the case where there's two people, there's two muddy children and each of them on the first round looks around and sees one other muddy child, so he can't deduce immediately that he's got mud, so nobody. 
+Now, on the second round, here I am, I'm looking out there. 
+There are only two muddy children. 
+They don't know that there are only two, but there are only two. 
+On the second round, I look at it and I only see one muddy person, and I infer that I must have mud, because if I didn't have mud then the other guy would have said that he had mud on his forehead on the first round. 
+Right? 
+So I know that -- so it turns out that there's a beautiful proof that this thing will work, and it requires all this reasoning that I know that you don't know that you have mud on your forehead from the previous round and that lets me prove the following thing. 
+But it turns out that it's really crucial. 
+The one thing that's kind of interesting about that is when I walked in the room I said that at least one of you has mud on your forehead. 
+Now, in the case where there were at least two with mud, everybody knew that already, but it turns out that for formal reasons that are sort of entertaining, you have to say that, because it has to be common knowledge. 
+It has to be not just that you know that there's at least one person in the room that has mud on their forehead. 
+I have to know that you know, and I have to know that you know that I know. 
+And I have to know that you know that I know that you know that I know, and I have to know that iterated out to however many people there are in the room. 
+And so the idea is that by saying that out loud in a room, I establish that it's common knowledge and I can iterate the I-know-that-you-know-that-he-knows-that-I- know-that-you-know-that-she-knows as deeply as I want to, and it's going to be true because we all heard it together at once. 
+All right, so also this is kind of a random problem but it is entertaining. 
+Next time we'll go back to the pragmatics of the world and talk about planning, and in particular, making planning systems that work. 
+END OF SESSION 
+==========

@@ -1,0 +1,684 @@
+==========
+today i will talk to you about
+elliptical orbits and
+kepler s famous walls i first want to
+review with your briefly what we know about circular orbits
+so i wrote on the blackboard there everything we know about circular orbit is an object mass little m
+going in a circle around capital and this could be the sun that could be the earth has radius r circular
+we know they re equation one how to derive the time that it takes to go around the way we
+found that was biased adding the centripetal force on two little them the same as the gravitational force also the
+velocity in orbit maybe i should say speed in orbit also if follows
+three same kind of reasoning
+then we have the conservation of mechanical energy
+the sum of kinetic energy and potential energy
+is a constant is not changing
+you see there first the component of the kinetic energy which is the one half m v squared
+and then you see the term which is the potential energy
+we have defined potential energy to be zero at infinity
+and that is why all bound orbits have negative total energy
+if the total energy is positive you orbit is not about
+and when you add these two well up
+you have amazing coincidence that we ve discussed before you get here a very simple answer
+the escape velocity you find
+by setting this e total to be zero
+so this part of the equation is zero
+oh tops that speed which which you
+skate the gravitational pull of capital m
+which is square root of two times larger than the speed
+and i
+remind you that for near earth or bits
+the period to go around the earth is about ninety minutes
+and this speed this velocity than that you see equation two is about eight kilometers per second
+and the escape velocity from that orbit would be about eleven
+point two kilometers per second
+and for the earth s going around the sun
+the periods would be about three hundred sixty five days
+and the speed of the earth in orbit is about thirty
+kilometers per second just to
+the trash your memory
+now circular orbits are special in general
+bound orbits are ellipses
+even though i must add to it that
+most orbits of our planet s inner solar system very close to circular but not precisely certain
+but the general solutions call for a elliptical orbit
+and i first
+discuss with you the three famous lost by kepler
+from the seventeenth century
+is a brilliant statements that animate
+the interesting thing is that before you made these brilliant statements he publish more nonsense in anyone else
+but finally here right that to go to three golden eggs
+and the first golden egg then is
+that the orbits are
+and it s is if we talked always about planets and the sun
+this is that one poet s
+that kepler s law number one
+these are from around sixteen eighteen or so the second
+kepler s second law is quite bizarre how we found that out amazing accomplishment
+if you take it out it s
+and you put the sun here at a focus is highly exaggerated was i told you that most or it s look sort of circular
+and the planet goes from here to here in a certain amount of time
+and you compare them with the planet going from here to here
+in a certain amount of time i m then capita find out
+that if this area in here
+is the same as that area here
+that the time to go from here to here is the same as to go from there to there
+an amazing accomplishment to come up with that i d hear
+and this is called equal areas
+equal times
+somehow whole week has the smell of some conservation of angular momenta
+and then this third law also that if you take the orbital period of another it s
+that is proportional to the third power
+of the the distance to the sum
+and he also whole pleased with that results
+that he wrote juvenile and they re about it i will show you here the data that capita had available
+in sixty eighty largely frond the work done by
+of course astronomers of to surface like to go brought and others
+you see here the six planets that were known at the time
+and the mean distance to the sun
+for the worst that is one because we work an astronomical units everything is reference to the distance of the earth
+this is hundred fifty million kilometers
+and it takes your three hundred sixty five days to go around the sun jupiter about twelve years
+and saturn about thirty years
+and then when he takes this number
+to the power or three and this number squared any the fight the two that he gets numbers which are amazingly constant
+and that is the third law is third law
+and each immediately to the inverse square dependence of gravity which he was not aware but newton later put it altogether
+but he s very do and they right i for us believe i was reading
+but it is absolutely certain an exact
+that the ratio which exists
+between a periodic times of any to planets
+is precisely the ratio of the three has power of the mean distance
+and he wrote that in sixteen ninety
+so or it s in general are
+at its is
+and now i want to review with you what i have there on the blackboard about it s it s you see that it s there
+capital and could be the earth could be the sun is at location q
+the ellipse has a semi major axes a
+so the distance p two a perigee to apogee is to a
+if m or the earth capital m then we would call
+the point of closest approach paris g
+and the point farthest away from the earth s we would call that apogee
+if capital m where the sun we would call that act helium and eerie helium
+so you see the
+little and going in or bits you see the position vector r q it has a certain velocity v and so the
+total mechanical energy is conserved the sum of kinetic energy and potential energy doesn t change
+the first term is the kinetic energy one half m v squared and the second term is the potential energy
+no different from equation three for circular orbits
+except that now capital r
+which was a fixed number in a circle is now a little r and little our changes of course with time
+also that velocity v in that equation number five
+will also change with time because it s an elliptical orbit it will not change in time equation number
+two and in equation number three now
+i give you a result which i didn t proof
+and that is that the total mechanical energy
+which has these two terms in it which you do fully understand
+also equals minus the lamp capital m g divided by two way
+and a is the semimajor axis and compare number five which number three then you see
+their brothers and sisters the only change is that was capital r before is now
+little a the semimajor axis
+and if you
+calculate the time to go around to the ellipse
+then you get in equation four t squared
+which is almost identical to number one for the circular orbits except that now
+the radius has to be replaced by a which is a semi major axis
+and the escape velocity you can calculate in exactly the same way that you calculate the escape velocity
+it under the equation number four
+all you do it you make the total energy is zero and then you solve equation three
+and equation five and out pops the speed that you neat
+to make it all the way out to infinity
+and that is in the case of the
+circular orbit square root of two times the
+speed in orbit
+so these are the numbers that we re going to use today the equations and there s one thing which is already quite remarkable and very non intuitive
+very non intuitive to say the least that if you have various orbits
+with have the same
+semimajor axis
+that the periods is the same and the energy is the same and that s by no means obvious
+so this is one over it
+think of it as being addicts and this is another one
+this distance is the same as this distance
+i ve just done in that way
+that means according to equation five and six
+that both orbis have exactly the same mechanical energy
+and both orbits have the same periods
+so to go around the circular orbit will take the same amount of time as to go around this one
+and that is by no means obvious
+==========
+if i now want to start with a very general initial condition
+offer an object little and in orbit
+in an elliptical orbit and
+i want to see how we can get all the information about the ellipse
+that we would like to find out
+somalia giving you the initial conditions so here is that it s here is
+p a and here is a a
+if this is another it s around the earth than this would be very genius food be apogee
+the masses capital n
+this is point q
+get a ruler so that i can draw some nice lines
+so the distance a b
+equals two a a being the semimajor axis and our object happens to be here
+mass little and and this
+distance equals r zero think of it as being time zero
+and that time to zero when it is there it has a velocity
+in that ellipse
+let this be t zero
+and there was an angle between the position vector and v zero i call that phi zero
+so i m giving you and
+i m giving you v zero i m giving your r zero i m giving you phi zero and now
+i m going to ask you can we find out from these initial conditions
+how long a takes for this object ago around can we find out what
+q p e is can we find out what the semimajor axis is can we find out what the velocity is
+at point p
+at closest approach and this angle is ninety degrees
+and can we find out what the velocity is
+when the object and the little m is farthest away apogee
+can we find all these things and the answer is yes
+a s the easiest to find the semimajor axis
+i turn to equation number five
+which is the conservation of mechanical energy
+and the conservation of mechanical energy says that the total energy
+is the kinetic energy plus the potential energy
+equals one half m
+v zero squared if that is when the object is here at location d
+minus little them capital m
+g divided by this r zero at location d this can never change
+this is the same throughout the whole orbit
+so it must also be according to equation five minus m and g divided by
+to a and so you have one equation with one unknown which is a
+you know all the other things m cancels am always cancels when you do with gravity so you only have a as an unknown
+so that s done is the total energy were positive then
+if this to for this to be positive a has to be negative that physical nonsense of course
+so is only holds for bound orbits
+so positive value three total i m not allowed
+once you have eighty
+you use so this is from equation number five
+if you now apply equation number six
+immediately pops out t
+or it ll period because the only thing you didn t know that was a but you know way now
+so we ll some no hum um a takes forty object to go around in orbit
+and i try to be quantitative with you step by step is we analyze these further i will
+apply this to the specific case for is someone going around the earth
+everything i m telling you today
+including all numerical examples i ate a handout which is six pages thick which i wrote specially for you
+is we ll we ll know at were not going to print it here that s a waste of paper its nineteen ninety nine so that s we have the bat for
+so you can decide on your own how many
+how much snow so much time you
+spend all know to to what extent you wanted concentrate and try to follow the steps it s up to you but everything is there
+they truly everything every numerical example we take for capital m
+we take the earth
+and there it is six times ten to the twenty four kilograms
+so that s my them i promise you you will know end
+i will give you are zero
+that is nine thousand kilometers
+that s the location at that point d i give you the conditions
+the speed that point d
+is nine point zero kilometers per second and i ll give you five zero
+is hundred and twenty degrees
+everything else which you be able to calculate now from these numbers
+first of all with equation five you can convince yourself sticking in these numbers that the total energy is indeed negative
+course if i make the total energy positive is not another it s so that is all
+it is negative it is it
+it s
+so with equation number five i then pop out a
+right because that s one equation with one unknown
+and i put in the numbers you can
+confirm them and checked them at home and i find that a is quite large is about
+fifty thousand kilometers that s you which that is almost
+infinity not quite remember it starts off at nine thousand kilometers about
+a is fifty thousand kilometers that means a hundred thousand kilometers
+why is that so large
+well the answer lies in
+evaluating this cave velocity
+this cane velocity
+off this little mass
+when it is at position d
+for which these i d input parameters is the square root
+of two n g
+divided by r zero
+and that is nine point four
+kilometers per second well
+if you need nine point four kilometers per second to make it out to infinity
+and you have nine kilometers per second you pretty close already
+so that s the reason why the semimajor axis is anita tremendous number it s no surprise
+if now i use equation number six that i find the periods
+and i find that it takes about thirty one hours for this object to go around the earth
+so far so good now we want to know
+what the situation is with perigee
+and we is i put you can we calculate the distance q p
+can we calculate the speed
+at location p and at location a and now
+comes r a superior knowledge
+now we re going to apply for the first time in systems like this the conservation of angular momenta
+angular momentum is conserved about this point q
+but oh me about that point q it is not conserved about any other point that s okay
+all i want is that point q that is where capital m is located
+what is the magnitude of that angular momenta
+well let s first take point d
+when the object is sandy
+the magnitude of the angular momentum is m
+times v zero times r zero
+times the sine of by zero
+this is the situation at d
+why do we have a sine phi is zero because we have a cross between our envy
+and with a cross product you have this line of the angle
+so that s the situation at point p
+what is the situation at point p well at point p
+the velocity vector is perpendicular to the line q p
+so the sine of that angle is one
+so now i simply get and
+times v of p
+times the distance q v and you can do the same four point eight
+you can write down n times v of a times q a
+i m not doing that you will see shortly why i m not doing that
+nature is very kind that is going to give me that last part for free
+the slide away is the conservation off
+angular momentum about that points q where the mass is located
+i have you one equation with two unknowns v of p and q p so i can solve
+so any another equation of course there is another one
+we have also the conservation of mechanical energy
+so now we can say that the total energy
+must be conserved
+and a total energy
+this one half i do it at point p
+equals one half and
+the v p squared that is the kinetic energy minus and and gee
+divided by the distance cube p
+this is the potential energy when the distance between capital m and it ll them is q v
+but this number we know because that is minus m g divided by two way
+that s sorry equation number five
+whoops i slipped up here you may have noticed it i drop the little m
+it should be in here
+sorry for that
+and so now we have here
+big moment in our life that we have applied bowl smallest this is the conservation off
+mechanical
+energy
+and now i have two equations with two and owns q p and v of p
+and so i can solve for both
+notice that the second equation is a quadratic equation in v of p
+so you re going to get two solutions
+and the two solutions
+one v of p will give you the distance q p
+the other one will be v a which if you d distance q a a
+how come that we get bowl solutions that whole
+that this is only is to pick equation
+this equation doesn t know that i use the subscript p
+i could ve use disk subscript a here and put in here q a that the term that i left out
+and therefore when i sold the equations i
+get plus v p and v a because those at situations that the velocity vector is perpendicular to the
+position vector and if i use now our numerical results
+and i solve for you that quadratic equation two equations with two and owns
+that i find that q p
+you may want to check that at home
+is about six point six times ten to the third three kilometers
+it means is only two hundred kilometers above the earth s surface
+that that low altitude is or with whom old last very long and the satellite will we enter into the earth atmosphere
+and it leads to a a speed at point p at perigee
+of tenants seven to ten point seven kilometers per second it
+my second solution then
+is that q a
+turns out to be you which
+no surprise because we know that the semimajor axis is fifty thousand kilometers refined nine point three
+times ten to the four kilometers
+and we find from v of a
+this value is fourteen times larger than this one and so the velocity will be fourteen times smaller
+i think it s oh point seven five
+kilometers per second guess that s what it is
+the means results
+the conservation of angular momentum that the product of q p and v p
+must be the same as q a times v a that s immediate consequence of the conservation of
+angular momentum and when i had this up q a a
+plus q p i better find to a which in our case is about
+hundred thousand kilometers because a was fifty thousand kilometers so when you eddies to up
+you must find very close to hundred thousand and each you do
+so now we know everything
+there is to be known about it and that s and that came from
+the initial conditions from the four numbers
+that i gave you we know the periods
+we know but at the jeans we d repair it is we know the orbital period
+anything we want to know
+now i want to
+==========
+get into a subject which is quite difficult
+and that has to do with change of orbits
+burning a lot that s when your are in orbit
+and you re
+or it will change
+and i will do it only for
+some simply fight situations i start off with a circular orbit
+and i will fire the rocket in such a way
+that
+i will only
+fired in such a way that my velocity
+will either increase exactly
+tangentially to the orbit
+so that will increase in this direction or the atoms will decrease in this direction so if i m going in orbit like this
+i either fight them iraq it s like this or if i i my rocket like this hmm
+that is difficult enough what we do now
+so this is r circular orbit of radius r
+and at location x twelve o clock that is where i ve fire my rockets
+the first thing i do i increase the kinetic energy
+so i find my rocket i d blast my rocket we go in this direction i m blast my rockets in this direction
+and so the speed which was a reason only this in orbit
+the speed will now increase i at kinetic energy and now
+i have a new speech which is higher
+if my speed is higher
+then my total energy has increased i increase the kinetic energy the bottom of the rocket so short
+that i can consider after the berlin that the object is still that x to be very brief or
+so the kinetic energy has increased the potential energy is the same so the total energy is up and therefore
+the total energy
+now is larger
+then the total energy e that i had
+in my circular orbit
+but if that s the case then clearly to a
+must be larger than two r
+i now going to elliptical orbits because the new velocity is no longer the right velocity for a circular orbit
+and so what s going to happen i m going to get
+but elliptical orbits
+like so
+whereby to a must be larger
+then two r because my total energy is larger and you see that immediately
+when you go to equation number five
+if you increase the total energy then your eighty will go up
+okay so to a is larger than two r
+that also means that the period t
+must be larger than the periods
+in your circular orbit
+fine so far so good
+my other option is that i m going to fire the rocket
+when i
+you out guess in this direction so i take kinetic energy out
+so after the burn my speech is or
+my speed is now lower
+i have taken kinetic energy out
+when i take kinetic energy
+total energy going to be less than the circular energy
+to a will be less than two r
+and the orbital period will be less than the circular orbital period and therefore my new and it s
+looks like this
+and so these are the three situations that i want you to carefully look at because i m going to neat hmm
+in the next very dramatic story which has to do with romance between peter and mary
+==========
+we re mary are two s months and that they are both in or bit
+in one and the same orbit around the earth
+this is where p r is at this moment at that location x and this is where mary is
+there in exactly the same orbit but different satellites the go around like this
+and they are at a distance from each other which i will expressed in terms off
+a fraction s
+of the total circumference so that this ark equals f
+times two pi r
+that so far to our part
+and that means form erie
+to make it all the way back
+two point x would be one minus f times two pi r
+so far so good
+mere the forgot a lunch
+radios peter and says peter i have no foot peter
+contrary so our former says no sweat
+i will throw you and sent which
+so p of repairs and sent which and want to throw it to mary
+in such a way that mary can make catch
+how can either possibly do these
+well
+the best way the most obvious way to do it is
+to make an orbit for the
+and ascend which
+who s orbital period is exactly the same as this time for me erie to make it back to x
+and i ll be more specific by giving you some numbers then you can digest that better suppose they are in an orbit
+with a radius of seven thousand kilometers
+and suppose f the polls point oh five
+so the separation between here and mary
+is twenty two hundred kilometers so that is f times two pi r
+if you know the radius r
+then of course the velocity of the acid out follows immediately you have all the tools there
+so we are equal seven thousand kilometers the aspen out a now stands for astronaut s is a given non ago sure a ball
+and that is about seven point five five
+kilometers per second
+seven point if i i find
+kilometers per second
+and what is also non ago
+a bowl is the periods to go around
+which is ninety seven minutes
+all of that follows from these are
+okay if it takes ninety seven minutes to go around then phi i ve percent of ninety seven minutes
+is five minutes the fire rounded off
+so this takes five minutes ago
+now ninety five percent of ninety seven minutes is ninety two minutes
+so for mary to go around and go back to point x
+is ninety two minutes
+round it off numbers so if i can give my sense which an orbit
+which has a period of ninety two minutes i go to mate
+because after ninety two minutes descent which will come back to x and here is that x
+this point and that you get that idea if you get that idea and all the rest will follow
+so the period of the sent which after that throws peter maybe has to throw backwards
+if that period is ninety two minutes and there is here she will catch sent which
+and so the necessary condition for this
+first solution which is an obvious one is to make
+the period of this center each s is tense for sent which to make that one minus f
+of the period of the s and out in orbit this is the ninety seven minutes
+this is point nine five for this is ninety two minutes and this is ninety two minutes
+so then do we will be back
+at point x
+what is the orbital periods of the cell and which after the throw well
+that is four pi squared
+you can find that by equation number six times a two thirds
+divided by n g
+to the power one half
+that must be equal one minus f
+times the orbital period of the ass for now to war in circular orbit so i take equation number one
+so that is four pi squared
+are cute divided by g n
+to the power one half
+there s a necessary condition
+look we lose them we ll use gee we use for you to spy what don t we lose
+well what we don t loose is eighty two the or three hass
+e equals one minus f
+times r two the power three house so a a
+equals r times one minus f to the poor two thirds
+and this is an amazingly simple result
+it means if you know the orbits of peter and mary which is r
+and if you know how far to to look what s our part which is expressed in this f
+then you know what the semimajor axis is of the
+sent we tore bit that comes immediately a
+out of this equation but once you know the
+semimajor axes you can immediately calculate with equation five the speed of dissent which
+because if equation number five
+will tell you that minus m n g divided by two a
+a being now the semimajor axis of the sense which orbits
+equals one hot end
+times the velocity of this sense we choose squared this happens at location x after the burn
+after the burn means after peter has flown
+minus m m g e
+divided by capital r because the sense which is still at location capital r
+but peter has changed the speed to v s
+and so once you know a this equation immediately give you v s
+and once you know v s they you know with what speed peter should throw well let us
+work it out in detail an example that we have there
+if we calculate a
+with the numbers that we have there
+which you can easily confirm
+because you can apply this equation for yourself you know what happens know what r is then i find that a
+it s it s six thousand seven hundred and sixty five kilometers
+notice that this is smaller than r it better be
+the because it s clear that after this sent which is thrown that we get agree it s
+we want this time to go around
+to be less time then pia to go around and if
+this time is a less than the time it takes to pia to go around
+he has to throw the sense which backwards and therefore
+you expect that the semimajor axis will be smaller than
+r and this
+the speed of the center which
+which follows then from equation number six which was the conservation of mechanical energy is seven point four two
+kilometers per second
+now what matters is not so much what the speed of this n which is but what matters for peter
+is what is this beat that he will have to give this and which which is v of s minus v of a
+and that s you have to subtract the speed
+v of s is the speed of the center which you ve a is the speed of the acid out in orbit is is minus oh point one three
+kilometers per second and the minus sign show in the case that has to throw the sent which backwards so
+quite amazing he s seeing mary
+all the way the distance and in order to get the sent which to be re he doesn t do this but he does this
+and this n which then will go into this new orbit going still forward
+now any two minutes later it s here
+and eerie pole where we were here so e goes for it s
+ninety two minutes later this n which is here
+ninety two minutes later the area is right at that point and then make the catch
+now point one three kilometers per second is three hundred miles per hour which is a little tough even for peter
+and so we have to look for different solutions this won t work
+this was an easy one but it doesn t work well
+there is no reason to rush
+we can make this and which go around here is two times
+and eerie three times or mere e two times
+and descent which only ones as long as they need at point x there is no problem
+so we have a whole family of solutions
+we could have them erie
+past that point x
+then a times
+and we can have this ends which
+that s that point x and sent which times as long as the saint is yours that s perfectly fine
+then ultimately if they have enough patience they will meet at point x and if you take these
+these new concept into account that you can wait a certain number of plastic you through x
+then the equation that you see there for the relation between a and r change is only slightly
+you know get that a equals r times n of a minus f
+divided by n as to the power two thirds
+and if you substitute in here one and a one
+which is the case that they make the cats right away
+and you see indeed you get our one minus f to apollo three two thirds so that s exactly what you have their not all
+solutions that you try we ll work
+one solution that won t work is n a false one
+and n s equals three has no solutions
+and i leave you with the thought why that is the case at know solution
+==========
+in nineteen ninety when i lecture it s at eight oh one for the first time i s my friend and colleague george clark
+to write a program so that i could show to class this pulse of the center which with the marion peter in orbit
+and a cent which orbit and everything and cats and he did was a wonderful program but that row and no longer works
+because that s called progress the computers have changed and so
+my right hand dave pulley offers
+to re write a program so that works on the thing now
+and we ll going to demonstrate it to you and you can play what s it yourself it available on the home takes so whatever davis going to show you
+you can do yourself
+d the input parameters
+but that we need for this program i the radius r r f and r n of a
+and i and effects in the program will do all the rest see you can specify how many times you want married you go through point x
+how many times you want the sense which to go through point x
+the program will then calculate for you the speed of the center which it will also give you v l s minus v a
+which is really the speed what is p has to throw it but
+very cleverly the program works with a
+dimensionless parameter which is this value
+and this value which is v s
+divided by v a
+minus one is a number that is
+quite unique because you get solutions which turned out to be independent of
+capital z and independent of capital m
+and i ll give you an example suppose you ll find for this
+for this and dimensions number suppose you find minus oh point oh one seven five
+which is the solution for n one
+that a is one and four in essence one
+so you see that the computer will generate that number for us
+is now we take our orbits with seven thousand kilometers
+we know what you of aids
+and so we can calculate now the t v s my minus v a e
+is the v eight times that number between oh what a v a is is seven point five
+so you get minus oh point one seven five
+times seven point five five kilometers and lo and holds that is r minus
+oh point one three kilometers per second of course
+it has to be that number because that s what we calculated for our case
+n equals one their lists
+and so this die mentioned is number is very transparent
+and we will show you some examples this would be the three hundred miles scores with of course is not
+very durable they ve supported you demonstrate the program and then you will see
+what we can do with that program we can substitute in there quite a few
+parameters that you will find no doubt interesting
+you an explanation they ve
+students can do with this oh let me show in an overhead here
+which would help you been following
+what they ve will be telling you you see there the f value
+is always five percent we too
+and you going to see here the numbers for
+the number of times that the wreak passes through point x and a number of times that the senate little path through point
+s point x this is that s very first case that we worked on together
+you see that number minus oh point oh one seven
+and you see indeed that it s a successful catcher let s work at that first
+they ve it s explain how it works
+okay we can see in the middle of the screen
+is planet earth
+and these two triangles represent yeah about the element is married and the redwood is peter and so the sandwich right in the middle
+they start off at
+the radius of
+twenty two thousand kilometers from center of the year it s the default but you can change that
+if you buy and we said and eight and and that s through these
+pulled down menus so some both sort of one and one now
+and we have the program to calculate the value for is of this the men s was parameter and it comes up with it and the monies that about you
+and so we had everything set and and this number i take is minus oh point oh one seven five et cetera yeah try to read them
+edison um hum yes the program to prepare the tossed put this one down here and when it s ready they d green played but will become active
+and when it and that happens again click on that and it ll play the tossed course
+peter always throw as that x in twelve lot of that o clock
+there goes the sent which we see a center it s great sent which
+bake sent which
+to notice that send which makes it around exactly it the same time
+for mary
+to be happy now
+there s no reason why we shouldn t try one too
+so that means myriad
+reaches point x but the senate when twice around the earth
+there s no problem with the solution in principle
+but you have to be quite far away from the earth if you re too close to the earth
+like dave sure or beat which has a radius of only twenty two thousand kilometers something very
+catastrophic will happen and okay so now i
+send in as to to
+my dad called the men and we ask you to prepare the tallest again and goes through
+it s
+numerical calculations of the orbit
+and when it s ready oh what a snow
+and now i can now what s that sauce
+then goes ascends which
+once ago right you re slice but it s the earth
+that s to bet
+if you make this that mentioned is predator minus one
+the enemy of s is zero
+and what doesn t mean that fee of s is zero that this n which then still
+has no speed northern anymore
+and so what happens with the other it s that becomes radio handful they ve
+okay so if the money s our own body if the cement is parameter emitting
+this octave year
+and
+put in whatever remarked to put a minus one
+and we make sure that the programs
+use our about you
+and set it out they buy in this case these these numbers of matter and and and as they re relevant because the program as many years are about you
+we ask you to prepare demise one over right everything else now yes
+by chris calculations and now you can see what happens
+golf clock there goes the center it now peter the sites at one points
+that instead of throwing ascent which backwards
+you can also throw this n which for it because look we have here the red it it s
+there s no reason why mirror
+koreans go
+twice two x one twice and then this end which
+would make a larger and it s
+and meet here when they re e has gun around twice then of course this ends which has to be thrown forward
+and so peter makes a calculation for what we call the two one situation
+the real goes twice through x this and which goes one to x
+but peter made a mistake be to go nervous and he puts in the wrong parameters
+and you will see what happens they will first show you the right parameters
+ugh it so if we would ve that s the program to calculate a pretty decent to one
+it d come up with a bow you for this immense us from very point one six five nine there s something there abouts
+but you know you made is in this calculation and humans use point one six four
+so
+this is will put into the program and will prepare the tossing see what happens
+with the saudis
+that an ounce ready for me relying hungry by now
+there we go now i go forward you can see that you see ghost for that goes a very large ellipse
+and the re will go around twice and eerie is here
+t this end this is only halfway
+and if peter had only done it right
+there is troubles would now soon be ole for
+but peter made this small mistake and
+the every cannot catch it
+if you make this dimensional is parameter plus point four two
+that it s very easy to convince yourself that ascends which must be a plus
+we ll have the escape velocity from the orbits
+maybe he ll angry at one point that marry you never know about the situations and
+he threw it very fast and they will show you what happens then okay
+and it goes to infinity
+and it won t the fresh anymore when it gets there
+okay see you friday
+==========

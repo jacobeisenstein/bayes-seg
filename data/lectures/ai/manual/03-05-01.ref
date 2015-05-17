@@ -1,0 +1,439 @@
+==========
+So, we've been doing first-order logic. 
+We've been thinking about how to do proofs. 
+Last time we looked at how to do resolution in the propositional case, and we looked at how to do unification -- that is, essentially matching of terms, figuring out which variables you have to match up with which other variables or functions or constants in order to get two terms to match up and look the same. 
+That's what unification is about. 
+And so why do unification? 
+Well, because it gives us license to do resolution in the first-order case. 
+==========
+So I'll write us a first-order rule for resolution, and then we'll look to see how to apply it because there's still a few more sticky bits that we have not yet covered. 
+So, here's resolution. 
+If you have alpha -- or let me do it just the way it's in the book. 
+Let me write -- I need a special notation here. 
+It's a rename. 
+They don't write this down in the book, but it's an important thing to understand. 
+So first of all basically it says if you have a formula alpha or phi and another formula not psi or beta, and you can unify these two things with unifier theta, then you're allowed to conclude alpha or beta with that substitution applied. 
+OK, so this is the generalized version of the resolution rule that we saw. 
+OK, so let's look at a an example. 
+So let's say we have P of X or Q of XY, and we also have not P of A or R of B,z. 
+What are we going to be able to resolve here? 
+What's going to play the role of phi? 
+OK, P. P of X is going to be this. 
+P of A is going to be that. 
+So what substitution will let us unify this expression with this expression? 
+__: (inaudible) A for X. Because if put in A for X we can make these two things match up. 
+OK. 
+So, now we're going to take alpha or beta -- so this is the alpha thing and this is the beta thing -- and then substitute A for X in them. 
+So what we're going to be able to conclude is -- I'll do it in steps: Q of XY or R of BZ with theta applied to it, and that's Q of AY (inaudible). 
+Now let's explore what happens if we have X's in the other formula. 
+So what if we had ... 
+When we have a database in clausal form, when we have a list of clauses -- and we'll talk about how in general you can turn any set of sentences into a set of clauses, when a variable occurs twice within a clause that's the same variable, right? 
+There's a sort of -- you will see later on, there's a sort of an implicit universal quantifier out here. 
+There's an implicit hidden for all XY here. 
+Similarly, here, there's an implicit for all X. But the scope of those quantifiers is just the clause. 
+So that means that this X is not really the same as that, because they're in different quantifier scopes. 
+So if we naively applied the resolution rule without my little rename business over there, we would mistakenly turn this X into an A. So that's not good. 
+So this sentence is exactly, in meaning, exactly the same as that one, and this one has the implicit for all Z quantifier out there, but that means this and this are really just the same. 
+So that means that before you try to do a resolution step you won't usually do this that explicitly on your paper, but if you were going to implement this, or if you find yourself with too many X with the same variable in both sentences and it's getting confusing, what you really should do is -- what they say is rename the sentences apart. 
+And really the easiest thing to do is to just go through and give every variable a new name. 
+It's OK to do that. 
+You just have to do it consistently for each clause, right? 
+So you could rename the P of X1 or Q of X1Y1, and you can name this one not P of A or R of BX2. 
+And then you could apply the resolution rule and you don't get into any trouble. 
+I did this so that we can see what we're driving toward, what we're trying to get to. 
+==========
+So the resolution rule is something that take things in disjunctive normal form with apparently no quantifiers, right? 
+The rule doesn't say anything about quantifiers. 
+I told you that clauses have kind of an implicit quantifier in them. 
+But now we've been looking at languages that have quantifiers. 
+So the question is how do we go from sentences with the whole rich set of quantifiers into a form that lets us use resolution? 
+Because it's going to turn out that even in first-order logic, resolution is a useful thing as a singular inference rule. 
+We're not going to need any more inference rules. 
+So what we're going to do is introduce a normal form that's kind of like conjunctive normal form, only it deals with quantifiers, too. 
+So, typically it's called clausal form. 
+And, really, rather than give you a definition, I'm going to teach you a procedure to do it. 
+And we'll do a bunch of examples as we go through the procedure, just so that you know how it goes. 
+==========
+So how do you convert something to normal form? 
+The first step you guys know very well is to eliminate implications. 
+So you know how to do that. 
+Anywhere you see a A right arrow B, you just change it into not A or B. OK. 
+That's the first thing you do. 
+The next thing you do is to drive in negation. 
+And you already basically know how to do that. 
+You know that if you have not alpha or beta you can rewrite that as what? 
+__: (inaudible) Not alpha and not beta. 
+So and and or works symmetrically, (not, not, alpha) -- we never actually talked about that, but you guys probably guessed that would go onto alpha. 
+Not exist X such that P of X turns into what? 
+__: (inaudible) For all X, not P of X. And the same thing. 
+Not for all turns into there exists not. 
+So once you've gotten rid of the arrows, the only things that you can have left are and, or, not, exist, and for all. 
+And so, since Process No. 2 drives in the negation, it just means you just keep propagating the negations in until they're stuck at a predicate symbol, you can't apply these rules anymore. 
+This makes things tidier again. 
+I mean it turns out that you have to do this more than once, but it's good to do it here to -- we're going to rename apart(?). 
+Rename variables. 
+And so the idea here is every single quantifier, no matter what your sentence looks like -- if you have for all X there exists a Y such that P of X implies, for all Z, Q of XY ; no matter what you have -- well, that wasn't such a good example as -- So, well, I mean we never really talked about formulas that look like this, so let's talk about that for a minute. 
+Again, the rules are a lot like the rules of programming languages. 
+Logic came first but -- and so the rule is with this X, when you try to figure out what quantifier has captured a variable, you just look into bigger and bigger for (inaudible) scope. 
+So this X is captured by that quantifier, not this one, so that this X and this X are really different. 
+OK, that can just get you very confused. 
+And so the next thing to do is to just, for every single variable, just give it a different name, right? 
+So call this one X1 and figure out, OK, here's X1; you call this Y2 or something, and OK, that's Y2; and then this X is going to be X3 and so you call that X3. 
+So you just take every single quantifier and be sure that its variable gets its own private name. 
+It'll be helpful later on. 
+Now so far these are all things that, you know, we can assign in a 6001 scheme program that would be pretty easy, pretty short. 
+This whole thing is actually a pretty easy, pretty short, little recursive program. 
+Now, here's the one that people find confusing. 
+I don't know if I should say that, but it's true. 
+The name is already a good one. 
+Step four is to skolomize, named after some logician named Skolem. 
+Imagine that you have a sentence that looks like that. 
+There exists an X such that P of X -- we're going to try to do without -- the goal here is to somehow arrive at a representation that doesn't have any quantifiers in it. 
+Now, if we only had one kind of quantifier, it would be easy because we could just mention variables and all the variables would be implicitly quantified by the kind of quantifier that we have. 
+But because we have two quantifiers, if we just leave all -- if we dropped all the quantifiers off, there's a mess, because you don't know which kind of quantification is supposed to apply to which variable. 
+So, sort of the Skolem insight is that when you have an existential quantification like this, you're saying there is such a thing as a unicorn, let's say that P is a unicorn. 
+There exists a thing such that it's a unicorn. 
+You can just say, all right, well, if there is one, let's call it Fred. 
+That's it. 
+That's what scolomization is. 
+Let us call it Fred. 
+So instead of writing this X such that P of X, you say P of Fred. 
+The trick is -- so you make up a new name. 
+The trick is that it absolutely must be a new name. 
+It can't be any other name of any other thing that you know about. 
+If you're in the process of inferring things about John and Mary, then it's not good to say, oh, there's a unicorn and it's John -- because that's kind of adding some information to the picture. 
+But this is the same rule, if there is a unicorn we could call it Fred. 
+__: Can Fred still be John? 
+Yes. 
+But only some -- I mean can Fred be John. 
+You can't stick it in there and you can't assume Fred is John, but you could prove later on through some other means that Fred had to be John. 
+==========
+So skolemize, in the simple case, means -- it's going to get a little more complicated, but the simple case is substitute brand-new name for each existentially quantified variable. 
+So let's just be clear of some other -- so now, if I have exists XY such that P of XY, then it's going to have to turn into P of X11, Y13. 
+So if you have two different variables here, they have to be given different names. 
+But the names also have to persist so that if you have exists an X such that P of X and Q of X, then if you skolemize that expression you should get P of Blue and Q of Blue. 
+You make up a name and you put it in there, but every occurrence of this variable has to get mapped into that same unique name. 
+There's a school of writing logic books that instead of putting names in there puts doofy little symbols, just so you're sure that you won't get them confused with the other kind of variables that you have floating around. 
+So they might write P of that, just to show that, I mean, it's kind of a -- it's a special thing and it's just not known to be anything else; it's just really the thing that is known to be P. You're giving it a shorthand. 
+We know there's one and this is the thing that it is. 
+All right. 
+If that's all we had to do it wouldn't be too bad. 
+But there's another step. 
+If you're doing proofs in formulae, probably you've -- you know, if you're trying to prove there is a least upper bound of something or another in a math class, well, then you'd feel quite happy saying, all right, there is -- you write if I'm assuming there's a least upper bound called -- you'd say, well, let me call it X. 
+And then you'd prove things about X. That's just about what we're doing here. 
+So when does it get tricky? 
+Remember we had, on the first day we talked about this, we thought about this sentence and we thought about this sentence. 
+Those are two different sentences, right? 
+They mean two different things? 
+What does this one mean? 
+__: (inaudible) There's a particular person that loves everybody. 
+And in this case it means for everybody there is someone that they love. 
+OK, so those are different. 
+You want to be sure that in doing this translation we're not losing information. 
+So somehow we have to be sure that we end up distinguishing between these two things when we translate. 
+So it seems like if I wrote love(Face, y) ... 
+that seems OK. 
+Right? 
+It says, look, there's this guy, Face here, who loves everybody. 
+And that was the force of it. 
+There's somebody that loves everybody. 
+But, obviously, if that's OK for this, it's not going to be OK for this. 
+It's not going to do justice to this sentence. 
+What's your intuition for why that's not going to be OK for this sentence? 
+Could we just put in a particular guy for X here? 
+Or for Y, excuse me. 
+What? 
+__: Not everybody has to love the same person. 
+Right. 
+Not everybody has to love the same person. 
+And so it's not OK to put an individual in there. 
+So what we're going to put in there instead -- yes? 
+__: (inaudible) a function of X. Good; a function of X. So this is going to turn into for all X loves X -- and we could make up a name called, I don't know, lover. 
+So the idea is there's going to be an individual -- we still want to give a name to an individual, but now really there's a whole class of individuals that we're mentioning here, and which particular individual we're talking about depends on which X. So the slightly harder case is that substitute a new function of all universally quantified variables -- I'm saying, you know, x -- in enclosing scope. 
+So here this Y is enclosed in the scope of X. Which Y we pick depends on what X got picked. 
+__: (inaudible) A new function of all universally quantified variables in enclosing scopes -- I see, let me finish the sentence. 
+It's a new function of universally quantified variables in enclosing scopes. 
+Substitute that for each existentially quantified variable. 
+Yes, I should have written that one. 
+You can think of quantifiers written in order as representing a kind of a game between two people. 
+And so there's the for all person and the exist person and it's like, well, you know, I pick this and then you pick that. 
+I just really want to think of there being one person for each quantifier. 
+So I pick this one and then you pick that one, and then someone picks this other one, and then someone picks this other one, and so on. 
+And so they get picked from the outside in, which means that when you get to an inner variable, you get to pick that one based on the choices that got made in the outer scope. 
+We dropped the universal quantifiers because we just replaced all the existential quantifiers with these skolem constants or functions and so now there's only one kind of quantifier left, so we can just drop them. 
+And then we convert to conjunctive normal form. 
+Now, at this point converting to conjunctive normal form would just mean multiplying out the and's and the or's, so that you get this or this or this and that or that or that, because the negations are already there the minute you've gotten rid of the arrows and stuff. 
+==========
+So this is something we know how to do from last time. 
+So, there exists an X such that D of X -- oh, yes, so this is an example from the book but I got tired of typing. 
+So there exists a dog -- there exists an X such that X is a dog and John owns it. 
+That's what that first sentence is meant to say. 
+John owns the dog actually. 
+That's what that sentence was meant to say. 
+John owns a dog. 
+So let's convert that to clauses. 
+We eliminate -- we do step one, that would be step two, that would be the step three, no problem. 
+Step four. 
+What do we do? 
+Yes? 
+How do we skolemize this first sentence? 
+Yes? 
+__: (inaudible) Rename X. What would you like to name the dog? 
+__: Fido. 
+OK. 
+That was my choice, too. 
+So, we have dog(Fido), and John owns dog. 
+All right? 
+So now what else do we have to do to convert this to clauses? 
+It's two clauses all by itself. 
+Clause number one is going to be dog of Fido. 
+Clause number two is going to be owned John. 
+We'll make the list here because after we're done turning this into clauses we're going to use the resolution rule to prove some stuff. 
+How about D? I'll write it up here. 
+Just so you know, the gloss on this one is that anyone who owns a dog is a lover of animals. 
+What shall we do first? 
+We're going to convert this to clauses. 
+__: (inaudible) Right. 
+We're going to negate this much. 
+Right? 
+So we're going to get for all X, not there exists a Y such that D of Y and O of XY ... 
+or L(x). 
+OK, now? 
+__: (inaudible) Drive the negation in. 
+So we can get for all X -- this is going to turn into for all Y, then we have not of this, we'll get not D of Y or not O of XY or L of X. In the examples that we give you, we probably aren't going to have to do step three very often. 
+That is we won't have the same variable mentioned twice in two different quantifiers, but, you know, it's ugly. 
+It's legal but it's ugly. 
+It's like writing programs with bad variable names, so we won't do that. 
+So, we're not going to do that, so now it's time for step four. 
+Oh, but we don't have any existential quantifiers. 
+Yay. 
+So we don't have to do any skolemization. 
+Drop the universal quantifiers. 
+That's not so hard. 
+And convert to conjunctive normal form. 
+Do we have to do any work? 
+No? OK. 
+Then we got a clause. 
+__: (inaudible) Skolemization is just to get rid of existentially quantified variables. 
+It's really, really important to do these in the right order, do the steps in order. 
+So we started out with an existential, so you might think, uh-oh, we're going to have to skolemize. 
+But when we converted this into "or" we got a negation out here, and when we drove the negation in past the existential it turned into a universal. 
+You can try to understand the axiom as it's written. 
+If I said anyone who owns a dog is an animal lover, well, the way it's written here makes pretty good sense. 
+You say, well, if there is a dog such that X owns it, then X is an animal lover. 
+But if you think hard enough you can get that some meaning out of this, which is, it says, well, either X is an animal lover or he doesn't own a Y, or Y is not a dog. 
+He doesn't own any Y, or Y is not a dog. 
+So for everything in the world either he doesn't own it or it's not a dog or is an animal lover. 
+That's another way to read that. 
+It means just the same thing as the top one, only it's sort of less appealing to humans but more appealing to computers. 
+Then we get for all X animal lover -- if X is an animal lover, then for all Y, if Y is an animal, X doesn't kill Y. Animal lovers don't kill animals. 
+So, we work on eliminating the arrows, and we get for all X, not O of X, or that thing. 
+So that thing is for all Y, not A of Y, for that, which is not K. This is going to be an easy one now, too, right? 
+Do we have any more work to do, really? 
+And we drop the quantifiers and we have a clause. 
+__: (inaudible) I did it in two steps. 
+Let me write the intervening step. 
+What goes there is for all X, not L of X, or for all Y, ... 
+The rule is, if you have P implies Q, you turn it into not P or Q, right? 
+So, here's not P or Q. So we negate the second part. 
+And then the same thing again you apply here. 
+So this for all Y, that's OK; it doesn't have any negations in front of it. 
+And then we turn the implied part into not this or that, so we get not Y or not K. __: (inaudible) you did the (inaudible) on (inaudible), you put the negation on the quantifier because it was implied because it's -- Well, because it was on the left of the arrow. 
+You negate the thing that's on the left side of the arrow. 
+But you should -- keep separate in your mind the operation of just converting the arrows, the operation of getting rid of the arrows. 
+You should try to keep that mentally separate from the operation of driving the negations in. 
+So getting rid of arrows doesn't directly interact with quantifiers. 
+But getting rid of arrows may introduce or remove negations and then the negations may interact with the quantifiers. 
+__: (inaudible) Because it's like a all -- a universal quantifier as opposed to (inaudible) It's like how you write an evaluator for a language. 
+So, when -- all we ever did so far -- let me write this one, two, three. 
+These steps, one, two, three, are all step one steps. 
+So, first of all, we just get rid of all the arrows, so that every time we see an arrow we take whatever's on the left side, put not that, or the thing that was on the right side. 
+So we did a couple steps of getting rid of arrows, and now we take a deep breath and we're ready to do these other steps, driving in the negation and skolemization and so on. 
+But we look at what we got when we were done getting rid of the arrows and we find there are no negations that need to be driven in any further, there are no existential quantifiers, there's really no more work for us to do. 
+That doesn't always happen. 
+It just did this time. 
+So, the key to doing this, absolutely the key to doing it, is don't try to be smart. 
+Try to be just stepwise and computer-like. 
+And then you'll do it right. 
+The minute -- I mean, I do it to myself all the time -- the minute you think, oh, I see, I can just turn this existential into a whatever and the negation goes here, you'll do it wrong. 
+__: (inaudible) the existential quantifier can we get out the existential quantifier outside this (inaudible)? 
+So we have for all X ... 
+OK. 
+So we eliminate the arrows. 
+We get for all X, not exist Y, such that... 
+So now the question is can we move this existential? 
+Yes. 
+Once you have all the negations driven in and all the variables renamed apart, you can move all the quantifiers out, keeping them in the same order. 
+But the way they interact with a negation is tricky, and so you have to get rid of the arrows so that you know where the not's will be. 
+And then you get rid of the not's and then it's going to be OK. 
+Just to finish this one more time. 
+We push the not through so we get -- I'll do all the steps -- ... 
+and then we push the negation through one more time -- ... 
+And now we have this lovely universally quantified disjunction. 
+The rest of them are pretty easy. 
+I think we can just write them down directly. 
+So, five. 
+Five is already done. 
+It says so there's a cat named Tuna -- we'll get to that part in a minute. 
+And either Jack kills Tuna or curiosity kills Tuna. 
+All right, and then, let's see. 
+So then we have -- clause six says that Tuna is a cat. 
+Tuna is a cat. 
+And clause seven says all cats are animals. 
+I'll write this down. 
+You tell me if you believe it or not. 
+... 
+I converted that arrow, and then I didn't have to do anything more. 
+Drop the universal. 
+==========
+So now we're going to move on to problem four, which is the next one, which says, "Prove the last sentence from the previous ones using resolution refutation." 
+So, you remember from the propositional case, resolution refutation is you take all the things that you know and convert them to clausal form. 
+Then you negate the thing you're trying to prove and convert it to clausal form. 
+Remember that order. 
+Negate it and then convert it. 
+It is so easy to convert it and then negate it, and that's not OK, because the quantifiers will be all out of whack. 
+So you negate the thing that you're trying to prove, convert it to clausal form, and throw that in the bin, too. 
+So in this case we're going to try to prove that curiosity killed the cat. 
+And so we're going to negate it, convert it to clausal form -- that's not so hard -- and then add it to our database. 
+So we'll get not K(C,T) ... 
+OK. 
+Now, we are going to derive contradiction? 
+And if we can derive a contradiction we will have proved that curiosity killed the cat. 
+Give me two numbers. 
+I will be your resolution proof checker. 
+__: Five and eight. 
+Five and eight. 
+Good. 
+So this is -- we don't have to do any unification or anything, right? 
+This matches directly with that, and it allows us to conclude K(J,T) -- we got that from five and eight. 
+__: (inaudible) So, six and seven. 
+Now, in order to unify six and seven, what's our substitution going to be? 
+__: (inaudible) T for X. OK, good. 
+So we're going to do six, seven, T for X. And so we'll get ... 
+A of T. Tuna is an animal. 
+__: (inaudible) Four and nine. 
+So this is a good one. 
+We're going to substitute J for X and T for Y. So we'll get not L of J or not A of T. __: (inaudible) I vote for ten and eleven. 
+Ten and eleven, we don't have to do any more substitutions, we get not L(J). 
+What can we do with a not L? __: Three and twelve? 
+Three and twelve. 
+Three, twelve, and J for X. And that gives us not D of Y or not O(J,Y). 
+It's clear what's going to happen now, right? 
+But we'll do it. 
+OK, so thirteen and two and Fido for Y, and then we get not dog Fido, and then we do fourteen and one, and we get the answer. 
+There are a zillion ways to go through a proof like this. 
+You know, there's not a right order in which to do the steps. 
+It's pretty much the pain that we've been having, trying to get a theorem prover to do the homework assignments. 
+It can make lots and lots and lots of steps, only a few of which are the ones that you would actually like it to make. 
+We're working on that. 
+__: Proving contradiction will prove that curiosity killed the cat? 
+Yes, that's right. 
+So that's good, because last time we had these simple examples where we always derived -- you know, if P was what we were trying to prove, we'd assert not P, and somehow we got a contradiction with that. 
+But, no. 
+Any contradiction is enough. 
+Yes. 
+So this is a good illustration. 
+So we didn't have to prove not -- we didn't have to prove K of TP. 
+__: I think (inaudible) substitute literally when we're proofing because we have (inaudible) quantifiers, and (inaudible) everything. 
+Yep. 
+Exactly right. 
+So that's what the -- now the unification rules are really about saying if this is universally quantified and this is universally quantified, meaning I could do anything here I want with the variables, what's the least specific thing I can do to the variables so that they'll fit together? 
+Well, so for instance, we could have concluded on this step right here. 
+So what did we do in this step? 
+We took three and twelve. 
+So here was twelve and three. 
+And we said, well, all right, well, we can match twelve and three by -- I don't have the most compelling example, maybe one will come up later on, but anyway, we can match twelve and three by putting J in for X. If we would have been perfectly justified in also putting Rover in for Y, that would have been OK. 
+It would have been true. 
+It would have been a consequence. 
+But it would have been being more specific than we needed to. 
+And being more specific in this case is being weaker because we could -- I mean, this is true for all Y, and so you wouldn't want to instantiate it until you have to. 
+Other questions about this? 
+We'll do a couple more examples. 
+I think that's the best way to get the intuition. 
+==========
+So, if we want to use resolution refutation to prove that something is valid, what would we do? 
+What do we normally do when we do a proof using resolution refutation? 
+We say, well, if I know all these things, I can prove this other thing I want to prove. 
+All right? 
+So these things entail the conclusion. 
+What does it mean for a sentence to be valid, in the language of entailment? 
+What can you say about a valid sentence? 
+__: (inaudible) Right. 
+It's true in all interpretations but what that means really is that should be derivable from nothing. 
+A valid sentence is entailed by the empty set of sentences. 
+The valid sentence is true no matter what. 
+So we're going to prove something with no assumptions. 
+So what do we do with the thing? 
+__: (inaudible) Negate it. 
+We just negate the thing. 
+And somehow from negating the thing we ought to be able to derive the contradiction. 
+So, right, we'll say Phi is valid, that's the same statement as saying that sort of the empty set of assumptions entails Phi, that we can prove Phi from nothing. 
+Right? 
+And if the empty set entails Phi, then we ought to be able to prove Phi -- just so you remember the lingo, right? 
+This was entail, meaning it ought to follow from; and this means prove, meaning we can prove it using, say, this proof system. 
+So if we want to show that Phi is valid, we ought to be able to prove it from nothing. 
+And in resolution refutation when we're trying to prove something we negate it. 
+Well, first of all, we convert all the things that were given to clausal form. 
+That's really easy in this case. 
+We've done that because we're not given anything. 
+And now we negate that and convert it to clausal form. 
+And then we try to see where it contradicts. 
+==========
+So, let's do that. 
+We're going to -- well, maybe we should do the first one. 
+It's a little easier. 
+Convert it to clausal form. 
+So, not ... 
+I don't know about you guys -- it would help if I write it probably -- I wouldn't necessarily believe this thing, just at first glance. 
+Have you tried looking at it and thinking about what it might mean? 
+There's a thing. 
+It says that if P is true of it then it's true of A, and if P is true of that thing it's true of B. I don't know. 
+It doesn't seem obviously valid to me. 
+It seems kind of weird. 
+But intuition is no good here, so let's just go on with the formality. 
+So we negate. 
+Now, what do we do? 
+__: (inaudible) Well, let's start with eliminating the arrows. 
+So, ... 
+we'll have P of X, not P of X, or P of A and not P of X or P of B. OK, now we can drive in the negation. 
+So we push it past the existential and we get for all ... 
+Can we do this one step per line? 
+Yes? 
+All right. 
+... 
+So all I did was push this past there. 
+Now I'm going to do all the rest in all one go, and you guys figure it out. 
+For all X -- this is going to turn into an "or" and we're going to negate this, basically -- oh, no, I'll do it in two steps. 
+I'm tempted to do just the thing that I told you guys not to do. 
+So now we push in some more. 
+For all X, P of X and not P of A, or P of X and not P of B. So now we just have to multiply it out, and we'll get for all X -- well, at this point we can drop our quantifiers -- yay. 
+Now we have to convert to clausal form. 
+So we'll get P of X or P of X and and P of X or not P of B and not P of A or P of X and not P of A or not P of B. So we have four clauses. 
+The first one is P of X. Right? 
+P of X or P or X is P of X. Next, we have P of X or not P of B. P of X or not P of A. The fourth, not P of A or not P of B. What step would you like to take? 
+__: (inaudible) negate number four, or -- Ah, no. 
+You don't always just negate the last clause. 
+Remember, we were trying to prove that nothing entails our expression. 
+That's what we're trying to prove overall. 
+And so we've negated this expression. 
+So all we have is a last sentence. 
+We have one sentence as our last sentence. 
+We negated it, and now it's converted into clausal form. 
+OK, let's do the resolution then. 
+What do you like? 
+__: One and four? 
+One and four? 
+One and four, sure, and we'll unify, say, A with X this time, and we'll get not P of B. __: Four and five. 
+Now we'll do one and five. 
+And we get a contradiction. 
+(inaudible) This is P is true of everything. 
+And this says if P is either true -- either not P of A or P of B, so there's no way. 
+So, I don't know. 
+All that in a very roundabout way proves that this thing we started out with is valid. 
+Now, I remember getting in trouble in a math class when I was an undergraduate because I learned how to do proofs by contradictions, so that was the only kind of proof I ever, ever did; and there was this professor who would not accept any proofs by contradiction because he thought they weren't illuminating. 
+And here's a example. 
+So this method of proof you can do it very mechanically, but it doesn't give you very good intuition I think about why things are true. 
+But, as far as mechanical things go, it's not too bad. 
+Formalization of Alpine Club example... 
+END OF SESSION 
+==========

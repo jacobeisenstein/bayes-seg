@@ -1,0 +1,474 @@
+==========
+The last time we were talking about Bayesian networks and d-separation, and the idea that d-separation is a way to understand how evidence can and cannot propagate through a network, and in particular there was this important result that says that if some nodes are d-separated from some other ones, given some evidence, then these nodes are conditionally independent of the other ones, given the evidence. 
+And that's going to let us develop fairly efficient algorithms for doing computation in Bayesian networks. 
+So our plan for today is basically to do one big thing and then a couple of ancillary issues. 
+It's fairly mathematical, but it will be a derivation of an algorithm for actually doing inference in Bayesian networks, and it's a derivation that in principle you all know how to do. 
+So none of the steps are very complicated, and it'll exercise our understanding of Bayes' Rule and d-separation and conditioning and all those sorts of things. 
+So I think it's worth going through (a) because it gets us at an interesting algorithm in the end, and (b) because it's a good exercise to resolve those conflicts. 
+So, I will ask you to help me and keep me from making mistakes and things like that as we go. 
+==========
+Let me draw a picture of the general situation that we're going to try to think about. 
+So what we're interested in is computing being able to answer some general question like this. 
+So I'm going to just draw kind of a super capital P here. 
+Sometimes people use a boldfaced P or something. 
+Imagine that we have some evidence so the evidence is actually going to be assignments of of values to nodes. 
+So we have, you know, a patient comes into the clinic, and we take some tests and figure out what their age is and so on, and so now we know their age and their weight and their blood pressure and their temperature and a few things like that. 
+And now we want to know the probability distribution over some particular other variable. 
+And I'm writing this kind of big capital P -- we'll use the idea that we want to find the whole distribution over this variable. 
+If it's a binary variable, then it's good enough to know the probability that that variable is true because then the other probability just comes along. 
+But it could conceivably be a variable that has more than one value, in which case we're interested let's say in knowing the whole probability distribution over that variable. 
+So this is the general problem of probabilistic inference in a Bayesian network. 
+You have the network, you've observed some values for some of the nodes, and now you want to ask -- what's the probability distribution over this particular variable. 
+Now, in general, you might want to know more things. 
+You might want to know probability distributions over more than one variable, and there are refinements to the algorithm we're going to talk about today to do that. 
+But we'll just concentrate on this case. 
+Now, -- oh, yes, there's another big old caveat. 
+We're going to start out considering a special case in which our network is singly connected. 
+That means that there is at most one undirected path between any two nodes. 
+Our networks are still directed, so what we mean by an undirected path is that -- so we would say, in this case there's a path between X and B; there's also a path between Z and X, we'd say in this graph, right? 
+Just there's some way to follow links, ignoring the arrows, to get between any two nodes. 
+This is still singly connected. 
+That is still singly connected. 
+That's still singly connected. 
+That's OK. 
+But as soon as I attempted to put in a link like that, then my network is no longer singly connected. 
+Is that basic idea OK? 
+So don't think there's just only one way that evidence can flow, one path between any two variables. 
+At the end we'll talk about what to do in the multiply connected case, but we need to understand this case -- this is really where all the action is. 
+OK, so the singly connected case. 
+Sometimes also this is called a poly tree. 
+Why a poly tree? 
+Well, it's a lot like a tree in the sense that there are never two ways to get there. 
+OK. 
+==========
+So let's assume now X is the variable that we want to infer the probability distribution of. 
+So, in a general network, there's some stuff above X, some stuff below X. So I'm going draw the network on the board with all the arrows pointing down. 
+So, X has some parents, and I'm actually following pretty closely the discussion in the book, so I'm going to reproduce one of the figures in the book. 
+So, you can think of everything that's above X in the network -- in particular there's some set of variables -- U - - U1 through Un -- that are parents of X. So if I show you a Bayesian net and the node X, you can look and say, ah, yes, these are the parents of X. So those will be the U's in our picture. 
+Now, because this is a poly tree -- well, first, U may -- the U's will in general have some parents of their own -- that's fine ... 
+and they may also have some other outgoing connections. 
+That's cool. 
+So there we need variable U's. 
+OK. 
+Down below we have the descendants of X, the things that come out of X. OK, so we have these variables Y that are descendants of X, and these Y's will have their own descendants. 
+These Y's may also have some ancestors that come from somewhere else, so I'm going to draw them in here because we're going to have to consider them as well. 
+And it's going to make this Y part a little bit complicated. 
+I'll call them Z1J. 
+In general, there may be a whole bunch of ancestors of Y1, and similarly we'll call this ZnJ -- there may be some other ancestors of Yn. 
+You know, however, that there's no way that whatever's coming out here for instance can be a parent of Z. Why is that? 
+__: (inaudible) Right. 
+It wouldn't be singly connected anymore. 
+So you know that the parents of Y -- or one of these Y's -- cannot ever be connected, say, to the U's, because if they were connected to the U's somehow then this wouldn't be a poly tree and then we'd have to be doing a different algorithm. 
+So that's going to be important as we go. 
+So, you can take any poly tree, any singly connected Bayes' net -- take a particular node and then twist the network until it's in this picture. 
+Now, we're just naming the parents U, we're naming the children Y, and we're realizing that we're going to have to think about the parents of the children. 
+The Y's are children. 
+The Y's are direct children of X. They have a direct link from X. Right. 
+And then there may be more descendants kind of hanging down here, but the Y's are all we have to think about right at the moment. 
+But then we also have to -- we're also going to have to think about the additional antecedents, the additional parent things of Y, because the evidence that we get could be anywhere in the network. 
+Right? 
+The evidence could be here, right? 
+We could have this variable instantiated, and we could have a parent way up there instantiated; we could have one of these additional children of U instantiated. 
+So any of these nodes could be evidence, plus any of the nodes that are off in these parts of the network that I haven't really drawn on the board. 
+But the idea is going to be that we can figure out how the evidence bears on X by figuring out how the evidence bears on the U's and the Y's, and the transferring that influence to X. That's the general view that we're going to take here. 
+We're going to try to figure out, given this evidence, how do we update the value, the probabilities of X. And the idea is that what we're going to do is take the evidence, try to take into pieces and make simpler problems of figuring out how the evidence changes our belief in U1 and U-, in the U's, and then take those changed beliefs in the U's and propagate them to the X -- and similarly figure out how the evidence bears on the Y's and take those changed beliefs in the Y's and propagate them. 
+And that pattern of inference is going to be useful -- we're going to be able to call it recursively to figure out for instance how the evidence tells us something about the U's. 
+So, we're going to come up with a general kind of recursive strategy for figuring out the probability of the X's based on this evidence, and we're going to be able to use that as a subroutine to do some other parts of the problem. 
+That's the basic idea. 
+Now I have to establish a little more terminology. 
+So we're going to call E+ of X the causal evidence which is above X. 
+So, the evidence of some instantiated variables. 
+Some of these instantiated variables will be above X in this graph, and some will be below. 
+So we'll call E+ the stuff that's above, so instantiated nodes that are either the parents or the parents of parents and so on. 
+And then we'll call evidence that -- the instantiated nodes in this box E- of X. We call that evidential support. 
+==========
+So what we want to compute is the probability distribution of X given E. We're going to assume that X is not in E. If X were an E, what would be the deal? 
+__: (inaudible) We'd know the answer, right? 
+So, OK, so we'll assume that X is not an E. So the probability of X given E is the probability of X given E+ and E-, right? 
+We have the evidence above X and the evidence below X. OK, so now we can do a Bayes' Rule and turn this around and say that this is equal to the probability of E-X given X and E+X. 
+And so I'm swapping -- I'm using Bayes' Rule to swap these two guys, and I'm going to keep this one on the righthand side the whole time. 
+You remember how to do that? 
+What do I have to multiply and divide by? 
+OK, pop quiz. 
+... 
+Figure out what goes in there. 
+P(A | BC) = P(B | AC)= ? 
+The probability of A given C over probability of B given C. Now, this is the sort of thing that I can never remember -- or maybe I've done it enough now, now I remember, but usually I can't remember it. 
+So don't try to memorize stuff like this, but just memorize the definition of conditional probability, and if you do that then you can always work this out. 
+OK, so now you can presumably map -- right? 
+-- X as being A, and E- is B, and this is C. Right? 
+So what's the next term here? 
+__: (inaudible) P(X| E+), right. 
+And we're going to divide by P(E-|E+). 
+This term here can be simplified. 
+Given the picture that we have over there, we can simplify the term. 
+What can we simplify it to? 
+__: (inaudible) Right. 
+E- given X. So this can simplify as the probability of E- of X given X. Somebody else tell me why. 
+__: (inaudible) Good. 
+So you're on the right track but the language is that E- is d-separated from E+ given X. That's what you said, but that's the more concise way to say the same thing. 
+If you know X, there's no way to propagate information between E+ and E-. 
+So that's saying, if you know X, then knowing E+ isn't going to tell you any more about what's going on with E-, so we can just drop that over there. 
+OK? 
+This we can't do anything about ... 
+And then we have this division by P(E- | E+). 
+Now, we talked about this last time, and I talked about a normalizing constant, right? 
+So, for every different value of X that we might want to plug in here, if we're looking for particular different values of X, they're all going to have the same thing in the denominator. 
+Right? 
+If we look at -- if we said X is true, we'll get this in the denominator; if we said X is false, we'll get the same thing in the denominator. 
+So that means that all we have to do is compute this for all the different values of X, add them up, and divide, right? 
+Because this thing has to turn into a probability distribution. 
+So we're just going to call that a normalization constant and not really worry about calculating it. 
+We could calculate it, but it's not going to be one of our major issues here. 
+So we're just going to call it 1 over alpha and ignore it -- because we know that the sum of these over all the different X's is going to have to sum to 1. 
+So we'll just worry about making it all sum to 1 later on. 
+Well, so this is nice, right? 
+We have probability of X given E, and now it came apart into two parts and it looks kind of perfectly symmetric, and so that seems sort of encouraging, right? 
+So now we just have to figure out -- and also these things are going in the right direction, right? 
+The probability of X given the evidence above it, and the probability of the evidence below X given X. So if we can figure out these two things, then we'll know our answer. 
+So that's it. 
+So let's work on this. 
+It's more straightforward. 
+So, what's the probability of X given E+. 
+All right, so we're asking, given that there are some nodes up here that are defined, what's now the probability distribution over the values of this node X? So we're going to ignore all the evidence down below for a moment. 
+All right. 
+Well, when we have an expression like this and we don't really know what to do with it, well, one thing we could try is Bayes' Rule, but we sort of already did that for all it was worth and that's not going to get us any farther. 
+So now another thing we can do is conditioning, right? 
+Remember, the conditioning rule says, well, if you have a probability and you don't know the answer to it whole, maybe you can take it apart into a bunch of separate cases and you'll know the answer in the separate cases. 
+So what we're going to do is consider all the possible assignments ... 
+U ... 
+to the Ui. 
+So U here is going to be vector of assignments, right? 
+So if there are three binary variables here -- if X has three binary parents -- then the U's are going to be all the different assignments of variables to those parents. 
+So there's going to be eight. 
+And now we can condition on U. We can consider essentially what happens -- for each possible assignment of values to parents of X, what happens. 
+So that's what we're going to do. 
+So we can write this as the sum over all possible U's of the probability of X given E+ of X and U ... 
+times something. 
+All right, here's another quiz. 
+Figure that one out and prove it to yourself. 
+==========
+What goes in there? 
+So, what we're imagining is that we have some other variable C which can take on the values in set Ci. 
+They're Boolean, and they can just take on values true and false. 
+But maybe they can take on values 1 through 10. 
+So the question goes like this. 
+What goes in that? 
+_: Is anything needed? 
+So it seems like they should add up to 1. 
+Well, but they're not going to, so roughly here you get probability of A and B over the probability of B. So the question is can you get that to happen over on that side. 
+So let's just take C to be -- let's take C to be Boolean. 
+So if C is Boolean, then we're going to get the probability of A given B and C -- let's say that B and C is true -- times something, plus the probability of A given B and not C times some other thing. 
+So, let's test the hypothesis that we don't need anything in those boxes. 
+Right? 
+So the hypothesis that we don't need anything in those boxes, what we get over here is the probability of A and B and C over the probability of B and C, plus the probability of A and B and not C over the probability of B and not C. And that doesn't really get us anywhere. 
+Those things aren't going to add to 1. 
+So we have to put something in those boxes. 
+__: P of not C. Ok, so let's say we do that. 
+Then what we're going to get is a P of C here and a P of not C here, and I still don't see a way to turn that into this. 
+__: (inaudible) P of B and C over P of B. Good. 
+Or more compactly put, P of C given B, and P of not C given B. Let's try that. 
+All right. 
+So we have this, and so that's going to give us P of B and C over P of B over there. 
+And it's going to give us P of B and not C over P of B over here. 
+And then, oh, cancellation happens, OK. 
+And then so we have P of A and B over P of B, and we've got P of B all over the place over there, so let's can the P of B's. 
+Oh, I'm having so much fun. 
+And then we get P of A and B and C, plus P of A and B and not C, and what's that equal to? 
+P of A and B. So, that's right. 
+So, that's the answer. 
+==========
+So, what does that mean for what we were trying to do in life? 
+So we were trying to understand what's the probability of X given the evidence that's up here. 
+And that question is a little too abstract for us because the connection between the evidence and the X is just not manifest. 
+It's just not clear how the evidence bears on X. But if only we knew what was going on with the U's it seems like everything would be easier. 
+So, the idea is we're going to condition on assignments to those U's, assignments to the parents of X. We're going to imagine all the different ways those things could be, and then we're going to figure out what to do in each of those cases, potentially. 
+So, that's the same rule. 
+In this case -- in the simple example we just did we imagined that B might be true and we imagined that B might be fasle. 
+Now we're going to imagine that all these parent variables together might take on any of the possible assignments that they could possibly take on. 
+So, the probability of X given E+X and U, times -- OK, do the mapping from this case to that case. 
+The probability of something given something. 
+__: (inaudible) P(U|E+x). 
+Now, what about this term? 
+Does this simplify? 
+Oh, let me put my little bar on the U there to remind us that it's a vector. 
+What about this term here? 
+__: (inaudible)? 
+Yes, a vector -- __: (inaudible) Yes, U is -- right. 
+U is something like U1 equals true and U2 equals false ... 
+and this is what a U-bar is like. 
+__: (inaudible) So we're summing over all possible U-bar's. 
+So there's one that goes true-true-true-true-true, and one that goes true- true-true-true-false. 
+So can we simplify in this term, given what we know about the structure of the graph? 
+__: (inaudible) Right. 
+So this is P of X given U. Why is that? 
+__: (inaudible) If you know what U is, then knowing E doesn't tell you any more about X. And so what's the more compact way to say that? 
+They're d-separated, right? 
+So X is d-separated from E+ of X given U-bar. 
+Or you could say that X and E+X, these two things are conditionally independent given U-bar. 
+Probability of X given U-bar. 
+Is that an easy question or a hard question? 
+If you had a Bayes' net in your hand, could you answer that question? 
+__: (inaudible) Right. 
+You know. 
+So this is -- this is exactly the conditional probability table in here, right? 
+The CPT? 
+That says for every possible assignment to U this is true, false, and then here's the probability of X. And then 0.6. 
+And then we say when Un has some other assignment, this is .9. 
+So this is exactly -- the probability of X given U-bar is exactly what's stored in the table at that node in the Bayes' net. 
+So that's an easy question. 
+So let's look at this one. 
+The probability of U-bar given the evidence. 
+OK. 
+We can take that apart. 
+So the idea here is that -- so now we want to know what's the probability of a particular assignment to all of these variables, given the evidence above it. 
+OK? 
+Now, we know that these variables can't be connected -- these variables are connected to each other through X, OK? 
+So there can't be any other connections between them because otherwise this thing wouldn't be a poly tree. 
+So that each of these boxes -- right? 
+I drew kind of boxes around these U's -- those boxes have to not have any links between them because if they did then this would not be a poly tree. 
+So, therefore, these questions are independent questions. 
+We can turn this into a product over the different variables in U. 
+So, the probability of Ui given - - and now we're going to make up a new piece of notation. 
+So EUi\X. 
+So this is: all evidence connected to Ui except via X. So Ui may have evidence connected to it down here, and it may have evidence connected to it up here, or going up as far as you want ancestrally. 
+And so what we want to do then is think about what's the probability of Ui via the evidence that bears on Ui but that doesn't come through X -- because we're going to deal with that. 
+And because these boxes don't connect to one another -- they're independent -- so we can consider these questions independent. 
+And that's it for that because this question now -- what's the probability here given the evidence surrounding it? 
+-- is exactly of the same form as the question that we're trying to solve here. 
+Right? 
+It's exactly what's the probability of X given E. So you could call our subroutine recursively and get an answer. 
+So this is an easy question. 
+We look it up in the table. 
+These are a set of subroutine calls, one for each parent node. 
+__: (inaudible) So that's exactly the question to ask is what are the base cases? 
+When do you not need to call your recursive call going upward? 
+__: (inaudible) Right. 
+When there are no parents. 
+So, when you reach a root node, there's no more question to answer. 
+Right. 
+There will be no E essentially. 
+When you reach a root node, it'll just be what's the probability of this value being there, and that'll be what's stored in the table for that node. 
+Well, nodes don't even have a table by themselves, they just have a probability. 
+So the recursion bottoms out when you hit -- well, so, and we've only done half. 
+This is only half of our problem, right? 
+==========
+There's the downward problem, and the downward problem is going to bottom out at leaf nodes. 
+The upward problem bottoms out at root nodes. 
+__: So, E+X, is it really like the nodes that are above X? 
+Or could it include nodes that are below but not (inaudible). 
+Right. 
+E+X can include descendants of the U's -- They're above in the sense that they only affect X via its parents. 
+Right. 
+But you can have a kind of arbitrarily lined chain of things up there. 
+Yes. 
+So, below and above are kind of funny terms. 
+It really means, you know, those things that can only affect via the parents, and these are things that can -- and, again, with these you could have a whole chain of ancestors, and I guess I didn't really draw all the arrows. 
+You could have a whole chain of ancestors of the Z's that go up. 
+But what's really important is there is no way that these guys can ever connect to those guys, so they're separated from one another. 
+I think in the name of eliminating all of our agony, I'm not going to do this part. 
+But it's a lot like what we just did, only it's sort of more complicated because you have to consider not just the Y's but the parents of the Y's. 
+So there's more indices and products and sums and stuff. 
+And you can read about it in the book, and I would encourage you to do that. 
+But not just read it but convince yourself that, in an absolute pinch, you could reproduce it alone. 
+I won't make you do that, but still it's a good thing to be able to do. 
+What you end up with though is a formula for P of E-X given X that has the same character as this. 
+It has some terms in it that are the conditional probabilities out of the tables in the network, and has some terms in it that involve the effect of Y's children -- of the evidence that's down here below Y on Y; and some terms that involve the effect of the evidence that's up here above Z on Y. So you get evidence coming up to here, evidence coming down to here, and the connection between X and Y. That's sort of the three things that go into this. 
+==========
+And so what you get is this nice recursive algorithm that visits -- and sometimes visits each node once, and so you get a computation time that's very reasonable in the size of the net, and nothing terrible happens. 
+So that's why people like Bayes' nets in some sense -- because you can get a really kind of simple, elegant inference algorithm that lets you answer these complicated questions. 
+So for any assignment of values to nodes, you can just kind of turn this algorithmic crank and get out a probability distribution on any other node you want. 
+For poly trees. 
+So now let me talk about what happens when you don't have poly trees. 
+Things get considerably worse. 
+So let's try an example. 
+So if you have a network that was like this ... 
+that's multiply connected because there's two different paths between A and B. And it means that all the arguments that we made about X separating the things upstairs from the things downstairs don't necessarily hold true anymore. 
+So we can't take that algorithm that we just developed and apply it to this case. 
+And in fact you can show that there's no way to address this case exactly, to compute the exact answers, that doesn't involve considering the variables B and C together. 
+So it turns out that the real win that we had in the formula that we wrote up here and all the other -- the formula for doing the computation in the other direction, is that you only ever have to consider one variable, and it depends on its parents, depends on its children, but you don't have to take two variables and consider their joint assignments all together. 
+And for a minute it was like we were considering the joint assignments to U but then -- but if you have this kind of a connection there's nothing you can do but to consider the joint assignments of B and C together. 
+And so one standard strategy -- we're not going to go through this in detail, but since I want you give you the idea -- it's called clustering. 
+And what you do is some graph analysis to figure out which nodes are just unavoidably kind of have to be considered together at once, and you put those together into a mega node. 
+So you get something that looks like -- you get a new network that looks like this ... 
+And now it's as if you have this variable BC that takes on all the possible values in the cross product of the domains of B and C, and then after this graph you can apply the algorithm we just did. 
+So there's basically a strategy of taking a multiply connected network, gluing some of the nodes together, and reducing it to a singly connected network. 
+Now, the price that you pay is potentially an exponential blowup because as you stick these variables together the domains get bigger faster. 
+So, if you stick three binary variables together, suddenly you get something with a domain of eight. 
+Four gives you sixteen, and so on. 
+So you can get an exponential blowup in the domains of the mega variables. 
+But there is a proof that says, that's too bad. 
+I mean, you can't hope to avoid this. 
+So, in general, inference in Bayes' nets is NP-hard. 
+In general you may have to consider -- in the worst case you might have to consider all the variables together. 
+There may just be nothing you can do. 
+It may be that the independences just don't help you. 
+Normally in most cases it turns out you can get a lot of leverage from the independence. 
+So this is exactly the kind of thing that we like to try to find in AI in some sense. 
+We try to solve these problems that are theoretically intractable, but what we then try to do is say, well, OK, but let's try to understand when it's easy, when sometimes you might get a case that's not as hard as the worst case, and do a good job of taking advantage of the properties that might make it an easy case to do. 
+So, singly connected networks are very easy. 
+Networks that have a little bit of non-single connection you can make into singly connected networks without too much trouble. 
+And then you reduce yourself to having a fairly simple inference procedure. 
+Another strategy, which is a theme that comes up also more and more in AI actually, is to say, well, we didn't really want the right answer anyway. 
+==========
+Let's try to do an approximation. 
+And you can also show that it's computationally hard to get an approximation that's within epsilon of the answer that you want, but again that doesn't keep us from trying. 
+So, the other thing that we can do is the stochastic simulation or sampling. 
+And so, in sampling, what we do is we look at the root nodes of our graph, and attached to this root node is some probability that A is going to be true, right? 
+Maybe it's .4. 
+So we flip a .4- 
+ish coin and see if we get true or false. 
+Say, OK, we start out a case ... 
+a case is going to be an assignment to A, B, C, and D. So we flip our coin, let's say, and we get true for A -- this time. 
+And now, given the assignment of true to A, we have a table in here that says what's the probability that B is true, given that A is true. 
+So we flip that coin. 
+And we get, let's say, a false for B. Similarly, we have a table here that says what's the probability that C is true, given that A is true. 
+We flip that coin. 
+Let's say we get a true. 
+Now, we have a table here that says what's the probability that D is true given all the possible assignments of B and C (false, true). 
+Well, here we have a particular assignment of B and C -- false, true. 
+That solves this probability. 
+We flip one of those coins, and we get an answer like true. 
+OK. 
+So, there's one sample from the joint distribution of these four variables. 
+And you can just keep doing this, all day and all night, and generate a whole big pile of samples, using that algorithm. 
+And now you can ask various questions. 
+So let's say you want to know the probability of D given A. How would you answer -- given all the examples -- what would you do to compute the probability of D given A? You'd count? 
+OK, what would you count? 
+__: (inaudible) Right. 
+I'm going to restrict my attention to the cases where A is true. 
+So you could look at all the cases where A is true, and say of those, when was D true? 
+And that ratio is your probability. 
+Another way to write an estimate of this -- we tend to write hat or something like that for an estimate -- an estimate of this is the number of times that D and A were true, divided by the number of times that A is true. 
+So, given this table, you can estimate any conditional probability you want to. 
+==========
+It's going to turn out that some probabilities are going to be easier than other ones to estimate. 
+So do you have any intuition for what kind of things could get you into trouble? 
+In general, when you're simulating this process, you're simulating this distribution, what kind of cases are you going to get? 
+Yes? 
+__: (inaudible) The typical cases. 
+Exactly right. 
+Oh, it's someone with a cold, someone with a cold, someone with a cold, someone with a cold, someone with a cold, someone with malaria, someone with a cold, someone with a cold. 
+So the odd results are not going to come up very often. 
+And so doing this sampling naively can make it really hard to estimate the probability of a rare event. 
+If it's something that happens one in ten thousand times, well, you know for sure you're going to need, some number of tens of thousands of samples to get even a reasonable estimate of that probability. 
+There's something called importance sampling that lets you do a better job of homing in on the set of samples that's important to your question. 
+So, here's another case -- so let's imagine that you want to estimate the probability of some disease given -- oh, I don't know -- spots on your tongue and a sore toe. 
+Or something like that, right? 
+So somebody walks in and they have this really peculiar set of symptoms, and you want to know what's the probability that they have some disease. 
+Well, if these things are root nodes, it's easy. 
+Right? 
+If these things were root nodes, you could just assign the root nodes to have those values and then simulate the rest of the nodes. 
+Right? 
+So you could just assign those and figure out the values of the other things. 
+But if those aren't root nodes then it's less clear how you would get a sample of this, and if you do the naive thing, you would generate this giant table of diseases and symptoms and so on, and you'd have to go and look and say, gosh, how many cases do I have where somebody has spots on their tongue and a sore toe; and the answer would be, well, maybe zero or not very many. 
+And so importance sampling is a way to say I'm trying to answer this particular question of, you know, some question given some evidence; and it lets you kind of really drive the evidence into your sampling process so that you do a better job of answering this question where the evidence is rare. 
+It still doesn't help you address the problem though of what happens when the outcome is rare. 
+And people are really still working on that. 
+I'm going to talk a little bit about how you might construct these networks and some sort of tricks. 
+==========
+So the high-level picture is the following. 
+Bayesian network inference is easy in the singly connected case. 
+In the multiply connected case it can turn exponential on you, in general, if the complexity is exponential in the size of the largest clique. 
+It's not a clique in this graph structure, it's a clique in a different graph structure but it's essentially the size of the largest knot of variables that you have to consider all as one. 
+To get away from that, you can do sampling, which is also potentially intractable but sometimes gives -- in general, it's the method of choice for really big networks. 
+And you can modify the sampling methods to be sensitive to the particular question you're answering, and it all works reasonably well unless the answer that you're seeking is a really, really small value, in which case it's just a, it's a really, it's a hard problem. 
+ So that's the summary of the Bayes' net inference. 
+==========
+Let me talk a little bit about some special forms that a Bayes' net can take -- in particular, talk about noisy "or" because it's a cool trick. 
+So there's this question of where would you get a network like this? 
+And the first answer is -- so this, all this Bayes' net technology in some sense got developed in the context of expert systems. 
+So the idea was that you had some human who was an expert in doing some job, and you would try to kind of suck out of their brain their knowledge about the domain and instantiate it in a computer program and then you would run the computer program and it would do the job of the human. 
+So that was the scheme. 
+And in fact a lot of this Bayes' net stuff really got first worked out in the context of a medical diagnosis program. 
+First they tried to do it just kind of writing deterministic diagnostic rules. 
+And that didn't work very well. 
+And then they made up some kind of ad hoc numbers that were attached to the rules, called certainty factors, and they made a calculus for manipulating these certainty factors; and that worked better but it turned out that it didn't really have a sound basis at least in probability. 
+And so eventually then they moved to general probabilistic reasoning. 
+So what they did then, you know, -- so there's a nice story actually about this system called Pathfinder, which is a medical expert system. 
+The pun here is that path is for pathology, right? 
+So it's diagnosing diseases. 
+So, in one of the later versions of the Pathfinder system they talk about how -- so, you know, the Bayes' net guys sat down with the expert in lymphatic diseases or something and they spent, you know, eight hours figuring out what the variables were and maybe another eight hours figuring out what the causal structure of the graph out to be like, and then something like another forty hours figuring out what the conditional probability tables ought to be. 
+And they made this big network, and they tested it, and they compared its diagnoses to the previous versions of the system, but then eventually also to the diagnoses of other doctors. 
+And in the last test they compared the system's diagnoses to those of the guy that they interviewed to build the system, and judged by some other panel the computer system's diagnoses were somewhat better than the doctors's. 
+So this was kind of interesting, right? 
+Well, you might imagine that at least they would be consistent in the sense that we talked about before, right? 
+If they're doing Bayesian reasoning, then at least it's going to be as consistent; and maybe one of the doctor's problems was variability of some sort. 
+I actually don't know what the issues were there. 
+OK. 
+But the problem of sitting someone down and getting them to tell you what's going on in the world in a way that lets you build a system is pretty tricky. 
+And you have to be careful that you don't try to -- you don't want to try and extract too many numbers from this person. 
+There's a whole industry involved in kind of ways of interviewing people and getting them to give you probability. 
+Knowledge elicitation. 
+And one of the examples, they'll often have a wheel -- you know, like a spinner for a kids' game -- but you can adjust it so that different proportions of it are red and blue. 
+And you say to the person, for a particular setting of it, "Now, would you rather spin this dial, or make this judgment about the probability of a certain thing happening?" 
+And someone will say, "Oh, no, red on the dial is more likely than this thing." 
+So then you move it so that there's somewhat less red and somewhat more blue, and then you ask them, "OK, how does this match?" 
+And you do stuff like that, and maybe you get out reasonable answers, maybe you don't. 
+But one thing is that you can try to think about dependencies of nodes on other nodes that have a specific kind of form. 
+So one form which is handy is sometimes the dependencies are deterministic. 
+So you might for instance have a node for age and that might have, oh, say, age to a legal drinker, and that may go on to affect other things. 
+So, you know, certainly that's a kind of dependency that's pretty handy, but it doesn't necessarily come up all that often. 
+==========
+Another kind of stylized dependency that actually comes up pretty frequently -- and again was motivated in the medical domain, and it comes up in other diagnostic kinds of domains -- is something called a noisy "or." 
+And the idea is that there are many causes, many potential causes, of a particular symptom; and it's sufficient for just one of these causes to be true in order for the symptom to be true. 
+So the canonical example is that you might have the flu ... 
+you might have a cold; you might have malaria ... 
+and all of these things may cause a fever ... 
+but they have the structure that any one of them is sufficient to cause a fever. 
+You know, if you do have the flu, that's all you need to have a fever in some sense; but it's not true that you always have a fever when you have the flu. 
+So you can say, well, you can satisfy these individual conditional probabilities ... 
+The probability of fever given flu, let's say, is .6. 
+You might say, well, the probability of fever given a cold is .4; 
+the probability of a fever given malaria is .9. 
+It might be easy to describe those probabilities independently. 
+But if you do the usual Bayes' network thing, that's not nearly enough, right? 
+What do you have to say in order to specify the probability table that goes in this node? 
+In general? 
+What's the table like that goes in this node? 
+__: (inaudible) It's going to be a table; it's going to enumerate flu, colds, malaria; it's going to give us the probability of fever, and it's going to go, you know, true-true-true, true-true-false, etc., all the way down to false-false-false. 
+So you're going to have to specify eight numbers there, or in general two to the number of antecedent nodes, right? 
+So you're going to have to say how likely is it that you have a fever when you have malaria and the flu but you don't have a cold. 
+Well, that's just the kind of thing that nobody wants to get into talking about, right? 
+Because that's just -- the combinatories are too awful. 
+And there's a sense in which you sort of feel like, well, gosh, this sums it up well enough. 
+So the idea of a noisy "or" is this. 
+So, instead of thinking of it in the forward direction, let's think about it in the negative direction. 
+So an "or" says any one of these is enough to make that true. 
+Right? 
+That would be a real "or." 
+So this is going to be kind of a probabilistic version of an "or." 
+So let's think about when this is false. 
+Well, you would say this is false when all of these are false. 
+That's how an "or" works. 
+If the result is false, then all of the inputs are false. 
+And let's assume that these things are false independently of one another, so that we can just multiply the probabilities. 
+We're just going to look at the causes that are true. 
+All right. 
+The question that we're trying to answer is, let's say, the probability of fever given flu and not cold and malaria. 
+And we're going to somehow take that apart into the dependence of fever on flu, the dependence of fever on malaria, and we're going to ignore the cold part. 
+We're going to assume that the absence of a cold doesn't really affect it. 
+OK. 
+So now we're going to say that the probability of not fever given flu and malaria is the product of the noise parameters -- that is the product of the 1-'s. 
+So that's the product of not fever given flu times the product of not fever, times the probability of not fever given malaria. 
+So the probability of not fever given flu is .6; 
+the probability of not fever given malaria is .1; 
+so that gives us .06. 
+So we say the probability of not fever given flu and malaria is .06, 
+so the probability of fever given flu and not cold and not malaria is going to be 0.96. 
+So what did we do here? 
+We sort of assumed that once we got to this stage we could take it apart, right? 
+That not having a fever given the flu is sort of the thing that keeps you from having the usual consequence, was independent of not having a fever given malaria. 
+It turns out that to do this now instead of requiring 2n parameters to specify the whole table, you only need on the order of n parameters, one to specify in some sense the strength of each of these links into the "or." 
+And so if you have a case where you have a lot of potential causes but they feel like they're essentially independent, which can happen, right? 
+What is it that causes your car to break down, or your car not to go? 
+Well, if you don't want to get into the details of inference about how all these things are related to each other, you could say, well, it doesn't go if the starter's broken and it doesn't go if the battery's broken and it doesn't go if this is broken and so on, and you could just quantify the relationship between each of those things individually and whether or not the car goes. 
+Then it doesn't give you necessarily the most true and accurate possible view of what's going on, but it sure saves you on parameters and often it's a very nice approximation. 
+==========
+So, what we're going to do in Homework 4, and what I think is really the most pragmatic to using Bayes' nets, is learning. 
+So, rather than trying to interview people and show them little wheels with red and blue pie shapes and so on, you actually look at cases. 
+Instead of asking them how likely it is that you have fever given you have the flu, you look at lots of the records of people that you've seen before and try to quantify how likely it is that they have fever given the flu. 
+So we're going to look at how we can use learning techniques to figure out these numbers, and then we're going to go beyond that and see how we can also use learning techniques to figure out how to put the arcs into one of these diagrams, too. 
+OK, the next two lectures though are going to be about decision making under uncertainty -- so how do you do something like planning when you're not exactly sure about what's going on, or about the outcomes of your actions. 
+END OF TAPE 
+==========

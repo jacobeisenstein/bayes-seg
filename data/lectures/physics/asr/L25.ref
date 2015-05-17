@@ -1,0 +1,670 @@
+==========
+really it during the past for lectures we ve dealt with angular momentum torques
+and loading objects and rotations
+and many of you than think oh my goodness now we have to remember a whole zoo of equations but that s not true
+if you simply know how to make a conversion farm
+the near symbols to
+rotation which is immediately trivial course position becomes angle the velocity becomes angular velocity
+acceleration becomes angular acceleration and so while
+then you can make the conversions very easily
+if you remember that the kinetic energy is one half m v squared
+then the kinetic energy of rotation then becomes one half i omega square
+the on the web and review graft that i show you in lectures is always on the web you should look under
+lecture supplements and then you can make yourself
+a hard copy so i thought this might be useful for you
+to remember
+==========
+today i want to discuss in detail what it takes for an object to be in complete static equilibrium
+for object to be in static equilibrium
+it is not enough that the sum of all forces is zero
+but what is also require it that the sun
+of the torques relative to
+any points that you choose but it s also zero
+and that ll be the topic today
+if this is an object into three in space
+and let s say the center of mass is here
+and i have a force on this object in this direction
+and other force on this object
+in opposite direction but equal in the toot
+then the sum of all forces is zero
+which you better believe it that is no week or we ve
+there s a to work
+and if this distance
+equals b
+then the torque on that object relative to any point that you choose as a matter which one you take the magnitude of that
+will be b times f
+and if there s a torque that going to be an angular acceleration toward is not all fire
+and so it s going to rotate in this case it will rotate it about the center of mass so it s not
+static equilibrium
+the torque in this case would be out in the blackboard so it s going to rotate like this
+so you re lucky because i on torques
+as much as we have to on the forces themselves
+so today i have chosen a letter as might subject off
+static equilibrium
+i put a letter against the wall
+here s a well
+and this is the matter
+at point p where the wall is there is almost that say there is no friction u p is zero
+at point q here wedge resting on the floor there is friction
+the static friction at point q will simply call them at you
+the latter has a mass m and it has a length l
+so here s the center of mass of that letter right in the middle
+and this angle because if i
+we know from experience that if this angle is too small that the latter will slide
+and so i went to make the topic today a white shirt that angle be so that it does not slide
+well we have here a force and g
+that s gravity
+then we have a normal force here
+i call that and q
+we have friction in this direction
+because clearly though that wants to slight like this
+so the frictional force will try to prevent that will be in this direction at point p there is no
+friction so they can only be the normal force
+and i call that and of p so these are the only forces that act on this object
+and now we can start our exercise and rican sale right the sun
+of life forces in the x direction have to be zero
+so that means that and off p must be in magnitude the same as the frictional force
+now the sum of all forces in the y direction have to be zero
+so that means that energy must be and of q and of q
+bust be and g but now
+we need that the sum of all torques have to be zero
+doesn t matter which point you choose you can take any points
+you can pick a point here or here or there or there
+you can pick see you can pick p
+i choose q the reason why i choose q is because then i d lose both this force n that force
+and i only have to deal with this one and that one
+and so i m going to take
+the torque relative to point q
+so we have n p we have the cross product of the position vector to this point times the force
+since the length is l and the angle is on fire
+this is l sine phi
+so i m going to get and p
+times l o sign all to five
+and i call a torque that is in the blackboards
+i call that mike positive direction and the torque it is
+the blackboards i give that the negative direction
+so this one is in the blackboard so i call that positive
+the next one m g
+is
+be negative torque
+and so now i need the cross product between the position vector and n g so that is the lengths here
+which is one half l course side in all five times n g and g
+one half l cosine all fine and that now must be zero
+so i find then that end of the
+that is the normal force at point p
+i lose my l
+equals m
+divided by two
+times the co tent and of off ah and that must be the frictional force
+so i don t the frictional force is
+given by this result now
+i don t want this latter to slight
+so now i have a requirement that the
+frictional force must be less or equal to the maximum
+frictional force possible
+and the maximum frictional force at this point q is b times the normal force
+so my requirement not we is that n over to
+times the co tangent of our fire must be less or a crawl to
+energy times mu
+you times n t
+did i lose a
+d here yes i did i have here the g and i have here
+eighteen correct because if i have this force here in this position vector then absentee
+so there is a t v and so there is a t here
+and so i lose y n g
+and so you find that the coat engines of off on
+is smaller equal then to you or
+the tangent of alpha is larger we call then one
+over two mu and so that is the condition for a letter to be stable
+and when you look at this results it tells you that
+the larger middle east
+the larger you is this small that angle and that s very crazy gets exactly what you expect an even use very low
+than the situation is very unstable their little slide
+almost that any angle
+you we take some of numerical
+examples for instance i take you
+equals four point five then i ll far would be forty five
+degrees and if the angle is any less than it will slide if you take mu is
+oh point ooh phi
+then the critical angle
+where it will start to slight i think is somewhere you sixty three degrees it you can check that for yourself
+so yeah there has to be larger than that number for the latter to be stable
+this result is
+very into it if name lake that is the angle is too small
+that the motor starts to slide i have a letter here
+against this wall
+we have tried to make these here as smooth as we possibly can is not perfect
+so it s only a
+poor man s version of all i discussed there
+but as in any case the friction coefficient with the forty substantially larger than the friction coefficient here
+and what is no surprise to you that if the angle are place too small
+than there is no equilibrium
+that overall phi has to be larger than a certain value that you see there and that is stable
+that s all i want you to see now but now
+we re going to make the situation more interesting
+and in the way i d like to test your intuition
+suppose i set the angle of the latter
+exactly at the critical points
+another it s i m going to set it so that the coat engine of all far is exactly to you
+so it is hanging in there and it s fun it s just about to start sliding
+and now i m going to ask one of you to walk up that letter to spite here
+and slaughter walk about lever
+do you think that stepping on that letter starting off
+is super dangers that the letter immediately will start to slight
+what do you think that actually your meeting at the bottom will make it more stable
+put things that it will immediately start to slight
+a few people with things that it will not start to slide we use that on the lowest all right
+we ll see what happens later on
+now this person is going to climb the letter
+and then there comes a tie into the passes point c and reaches point p
+when it now we save to do that
+what if thing that now it s going to be very dangerous but you think who think that at
+you shouldn t get too hot up on the letter
+who things and makes no difference you can go all the way up to the end
+the always a few very courageous people
+okay but this is what i m going to analyze with you
+and most of you have the right intuition
+but we re going to look at this in a
+a quantitative way as i know to
+so we re going to put a person with my has the little and on that letter
+and and we put a person here
+so this force here is little l n g
+and and let s make this distance d
+and now we re going to redo all these calculations we start completely from scratch
+the sum of all force is in e x direction has to be zero
+no change and of p must be f of f
+now the sum of all four seasons
+in the y direction has to be zero now to is a change so now we have that end to end of q
+must become larger must be equal to capital m
+plus little m times d
+so the maximum
+the fraction which is mu times and q not becomes mu times m
+plus and times g so the maxima friction goes up
+now how we need that the torque and i pick my point q relative to point q equals zero
+well the first two terms haven t aids so i have n o p
+times l o
+so i ll find
+minus and g
+times one half l times the cosine all fine but now we have a third term
+they might even this position vector and this force
+and so now we re going to get this distance which is d cosine all five times this force
+so we have here minus and g times the cosine all fine
+and that now equals zero
+so i m going to take and of the out of here
+i can take g cosine i ll find out
+so if i take t cosine all followed i have m l divided by two left over
+plus little handy
+and then i have to divide by l sine theta
+not theta but all truck
+and so now i can
+right for cosine all fun divided by sine all phi can write coat engined all fine and now bring d l inside here
+so i have a g coat engine all fun
+times and over two plus
+little n d divided by l
+and that now must be
+the frictional force becomes n p is still the frictional force
+let me make sure that i have this right
+yes i do g
+coat tense and i ll find them over to little and the oh well that is the frictional force
+notice that the frictional force
+is going up because this term is at it and we didn t have that term before before we only have this term
+which you see here so your first thought maybe e that the situation has become more dangerous because if there is more friction
+well that was sent exactly at the critical points is hanging one thereby comes so if the friction
+goes up you may say my goodness it will probably start to slide however
+what you overlook then is that the maximum friction has also grown up
+and so we have to evaluate this now in comparison with the maximum friction
+and the best way to do is is to think of this first
+as making d equals zero
+so we set the person starts at the bottom of the latter
+and then we have this person to gradually climb up
+now and notice wendy equals zero
+that the frictional force is exactly the same what it was before
+there is no difference that frictional force has not changed bundy equals zero
+but what has changed is the maximum friction
+the maximum friction has this little ended it and that s independent of the there is no key anyway here
+so if the maximum friction goes up
+and the friction itself remains the same clearly the latter has become more stable and so you can
+step on the lowest rat and
+nothing will happen on the country the situation will become more stable
+as the person s starts to move up the frictional force
+gradually increase is because the store and goes up
+but the maximum fraction remains the same it s independent of v and so another because the time
+that this force becomes larger than the maximum friction and and the latter will start to slight and that of course is
+what we want to find out now i ll
+so now the situation is only save as long as the frictional force
+is smaller or equal to the maximum value possible and that s the case when g
+coat engine i ll find
+but remember we set it at the critical angle so the coat engine all of phi is to you
+so i can replace this by two mu
+good that s the way instead of my experiment ice but that way
+i don t start with a random angle eyesore exactly at the angle so the level is sort of just hanging in there
+so called time since our eyes to
+and divided by two plus n times d divided by l
+this now has to be less or equal to this value you
+times n
+plus n times t notice i lose my gee i lose my view
+i have here two times them over to which is and and i have one and here so i lose my capital n
+and so i find that two n d over l has to be less or equal
+to them i lose my hand and i find that d has to be smaller equal
+two l over two and that is not unlike most of your intuition
+namely as one has the person who steps on the letter state on the site
+the situation will become more stable
+silly when the person start here
+the stability has enormous increase as you gradually post of approach that point here the center of mass
+where d is exactly l over to
+then of course the situation becomes again stream the critical here but when your over this point it s no longer critical
+and the latter will start to slight
+so in a nutshell then we set the latter at a critical situation it s
+about to start sliding we put a person on here
+it becomes more stable the person walks up slowly the frictional force
+will increase because of the stir
+the maximum friction will not change has already going up because the person is on a ladder
+and as the person approaches this point the situation becomes less and less stable all the time
+right at this point we re back to where we were
+situation is about this critical as it was before to person steps on it
+and when the person proceeds than the letter will slip
+and i can show that to you at least i can make an attempt
+i have here that same i have
+and and now our what i will do is i will set the angle f on
+not exactly at the critical points but a little lower
+so that well that d go
+we ll see that it will slide
+so it s past the critical angle the angle is smaller but now i have four kilograms here
+i wasn t
+ask anyone a few to walk up this letter believe me
+and i was going to it my shelf in there
+so you see it is unstable
+and now i put a four kilograms on you
+and i can that go in the letter has become stable but take it off that goes
+so the person standing very low made it more stable
+exactly consistent bit was we just all
+now i make the angle i ll find
+larger than critical
+so the letters happy
+it happened but now the person is going to do something dangerous this going to walk and stand here
+and you shouldn t that
+as you see that s exactly what you ve seen there
+so the friction plate is an essential role for us too
+get static equilibrium and that is often the case
+there are many examples in our daily life where friction can be use to our advantage and
+very special case which i will discuss with you now is often use
+so by say less bye
+==========
+holding controlling a very massive
+object a very large force controlling it with a very small one
+and you do that at by making use of friction
+you ready to throw around
+the ball or about around a rod
+and you use the friction between the rope and that dropped to your advantage
+and that works as follows here is this rod doesn t have to be horizontal is this one
+and i hang on the site over broad i hang with a string
+and very massive object
+capital m
+so the tension here t two
+would be n g assuming that it is not accelerated that it is at rest
+i wrecked this rope around here several times and here
+i hang an object
+which is substantial bit less a mass which is and it ll them in the tent
+equals m g
+if there is no friction at all in this bar
+then and them and
+the rope is knee massless than t one will be the same as t two
+so the situation will start to accelerate
+however if we make use of the friction
+then we can have is a bow situation we can has done it equilibrium
+so that this one is not moving in this one is not moving and then we can have t two
+to be way way larger
+and t one by using friction two are the topics
+let s blood that center portion
+and radius r
+at them and let us have this
+rope here i ll give the rope color
+doesn t have to come all vertically of course
+could be of any angle
+there is and so here is my t one
+and here is my t two
+and we take the situation that
+the pull on the site is way larger than on but site so low that this rope want to strip in this direction
+that s what it would like to do
+if you look
+at these small little sections of the rope
+it is immediately obvious if the rope wants to slight in this direction wants to start stripping
+that the frictional force is in the little pieces here are all in this direction
+all around
+and therefore
+if however the one so to speak and so because of the friction
+which is opposing t two t two can now become much larger then t one
+what you have to do to calculate is analytically
+you have to evaluate these individual
+frictional force is for these very small slices so that becomes an integral and then you have to
+integrate it over an angle which i will call theta zero
+and i remember when i last lecture it s
+eight oh one that was in nineteen ninety three
+by the rights that e class
+the relation between t two and t one as a function of this angle theta
+and that to me about five minutes and after five minute off the students were sorry
+now i m not sure whether you want to see five minutes but i don t think frankly it you deserve it so i decided to not do the derivation
+but to refer you to the book which is space three hundred and sixty one
+and you will find then that in the situation that the rope once to start sleeping in this direction that t two
+divided by t one is e to the power you times theta zero
+if the friction coefficient here is you would be the static friction coefficients
+so that as a result and know isn t it is independent off
+the radius of this bar which is not so obvious funny strangely enough
+well of a bar is the small would the small makes no different it only depends on this angle is angle could be
+very hard you could record around ten times
+as we will do very shortly so there s no restriction on theta
+if there were no friction of all noticed than at the moment that it starts to sell it
+e to the powers zero is one that s when t two equals t one that s obvious so you can plate is game into is zero
+you restriction that is at the heart
+of this whole problem
+and so now let s put in some numbers certainly get idea of what we get
+so let us take a situation that we
+take let s say is three turns we run erect a rope around three times
+so three turns
+that means theta zero oh
+equal six pi
+and and that the friction coefficient you be one fixed oh point two
+so he to the power you times theta zero is now how
+about forty so what that means is that with a force on this side
+which is forty times smaller than a force on that site
+i have a balance situation
+i can hold this in my hands
+and counter if you
+think of it that way force on the site which is forty times larger
+but if i take six turns
+then heater core mu theta zero will be about
+two thousand
+thousands so now i can really control and how different
+imagine now that i have here an object capital m
+which would be five thousand kilograms they could ten thousand kilograms
+that s what i m hanging here
+i can hang here now a mass which is two thousand times less massive
+that means i could hang there five kilograms
+of intensity here would be two thousand times less than the tension there the system would be about to start stripping
+but it s not slipping there is complete balance
+so imagine i hold this part in my hand here is is ten thousand kilograms weight
+and l is in my hand all i need is a force of about
+fifty newton i m i m standing there and and the other side
+is this then thousand kilograms weight and now
+i just make my force a little less than fifteen newtons
+and what will happen now it will start to shape remember because
+we work we calculated here the requirement for just not slipping so now i let it go all
+and then the ten thousand kilogram on the other side will slowly go down
+i can just control it and i can stop it and i can control it with a very very small
+force now comes the question for you
+suppose i wanted to range that ten thousand kilogram could end now
+pulled with a little bit more than fifty newtons just a teeny wee little bit more
+would then etched ten thousand kilogram come up
+i see people shake their heads who thinks it would come up
+or things no way
+put on think it ll
+most of the people all right
+so i i didn t beat u mass and
+there is now eight if you could put it up because if you want to pull this out
+the situation company theory versus
+those frictional force is it for this rope to go in this direction will flip over
+in other words what is now t one in our calculations will become p two
+so if you want the site
+to go down if you
+have a trip in this direction you re going to have that t one divided by t two
+is now e to the power you theta zero
+and so now if you have ten thousand kilograms here
+and if you had six tones
+then the force what you eat here is
+two thousand times larger than ten
+thousand kilograms and so you would need twenty
+million kilograms so would be the dumbest thing to do to lift it you don t know if it you use this device only
+to balance have very strong force that s the way to use
+by sitters and even to control it because you can slowly release it and then
+the force on the other side will start to move
+but you cannot use it to lift some okay
+i have here
+a plastic bin
+and in this plus the been our
+for all of these fifteen pounds lab brakes
+would you do me a favor and come up here and convince yourself that three are ready in there
+in water put them all for in so i decided i m only
+put the last one and
+you see those three thank you very much and i m
+put the last one and it s very happy you want is
+check is by the way
+this it but careful it s very very happy
+yeah okay
+oh i fifteen pound to kids
+sixty pounds we have up there
+and now i m going to practice around
+this bar which issue board a radius doesn t matter
+and of i don t we start with
+six rotations one
+two three
+oh my goodness
+for
+five
+six
+okay and now i m going to lower this
+but form that we have that is hauling it up i can lower it
+and this will shortly be
+paying now all all my role there it is
+i can remove this now
+we don t need this anymore
+and we don t need this anymore
+f plus
+thirty kilograms p p p
+hardly any force
+very gentle now let me a loaded a little there it goes
+this lowered
+would be nice if i have to do even less does put a few more turns on one
+two three and only can do
+we put so many turns on that the weight of the rope it s is and now
+to balance it that s right
+but yet put a few more on one too
+for the floor we have twelve winding is now
+and the rope the weight of the rope is now sufficient
+to balance the thirty kilograms so you see this in action out is remarkable
+i m going to let me put a few more on the because i don t want it to come down to in the lecture
+i
+be sure that it stays there
+and they re going to secure it here
+so you see how you can use friction to your fun teach
+i got an enormous gain by factors of thousands and more and this is use
+quite frequently
+so use on a striking example of where friction helped us to balance
+==========
+and now i want to discuss an object that is hanging and that can freely swing to to gravity
+i want you to appreciate the situation of static equilibrium
+that the sum of all forces and the sum of all the works have to be zero
+so here is is object which i m going to hand
+maybe on the wall
+and here is a point p
+and there s a let s say a frictionless pin that i put in the wall so the object can freely swing around
+that the center of mass be here
+and so there is a force if this object has a mass little them there is a force n g
+and here is the position vector r
+of p and so it s clear that there is a torque relative to point p
+and if there is a torque relative to point p
+it would be r p cross and g
+i put a vector sign over here because you have to take the cross product between the two so you take the
+sine of this angle has to be taken into account
+this object is going to rotate is clearly going to rotate about that point p
+the torque equals i about that point p times i ll find i ll fly is the angular
+acceleration
+how can we ever get this table situation nature
+is now going to think heart
+and is going to say a t i can only have stable equilibrium
+if the sum of all forces equals zero
+and if the sum of all torques relative to any point
+equals zero
+and a chore knows how to do that
+that always what happened
+if p
+and the center of mass
+our along a vertical y
+because you that s the case then there will be here
+the force m g
+and in here there will be a force n g up works
+this object is hanging on that did
+so that in action equals minus reaction will push up what s
+so the sum of all forces is zero
+and there is no torque take any point you want to this point or that point would list pointer that point where that point
+there is no torque anymore and so now there is complete aquarium
+so if you had an object for instance that look like this thin rod
+a very massive object here s sort of the center of mass is almost there
+then in the situation
+would be stable
+or are you my i d say the situation
+because now we have the center of mass and the vertical line
+so also here
+we have now and d down
+so we have at the pin anti up
+sum of all forces is zero sum of all torques is zero
+but there s a big difference between the situation and this iteration
+which you immediately fuel your spark of course
+and that is it is is highly unstable if you
+just below on this the little it will swing over it will
+start to rotate whereas this is stable
+if i move this to the site it will come back to that position
+but the basic idea is then that the center of mass
+will always in stable configuration line itself up below the point of suspension
+i have here the triangle
+and i have no clue where the center of mass is
+it may be somewhere here it may even be in open space i don t now
+what i can do now i can suspend it like this
+and i know that the center of mass
+must be below my finger
+is you notice it actually rotate it
+so the the center of mass lines itself a precise to be load my finger so i i can now take
+and so when draw a line here or can have a little
+string and now i can change my finger to here
+and i can again draw this line
+and whether to intersects is the center of mass
+so the center of mass will always find itself below the point of suspension
+if now i take a piece of funny
+and i put these of putty here
+then clearly i change the location of the center of mass quite substantially
+it must have shifted enormously in this direction whereas the center of mass i have no clue
+but look i bell is it here center of mass was now be
+somewhere here
+i balance it here
+center of mass must be somewhere here
+and whether two lines in the sect could be
+in this opening that s where the center of mass is located
+so it s easy experimentally to find the center of mass early in the course we calculate it
+where the center of mass walls perhaps you remember that when we have some very special geometrical configurations i mentioned to you then already
+that there are ways that you can experimentally determine it and that can be done very easily you do a i just showed you
+now our
+i
+show you some examples of static equilibrium
+which are not so intuitive
+you may have seen some of them you actually have
+plate with some of them
+if i take a pencil
+and i think mike pocket now i ve
+so here is a pencil
+i will show this to you shortly
+just a regular pencil and and i
+take my pocket knife and i put a knife i jam i knife in here
+so this is the night
+and this is now my pocket and i like so
+this arrangement can easily be make such that the center of mass is below this point
+and so if now i
+put my finger here i can balance this
+the water strange object
+and it ll be completely stable
+if we ll arrange itself so its center of mass will fall below my finger and it ll be completely happy
+and i want you to see that i have here my pocket now i ve and i have here the pencil
+and you can see it there were the ones those of you or clothes can see it here i ll give you better light condition
+for that there are
+so he is my pocket knife
+i open it now
+and here s the pencil
+and i m
+generate in here
+when you do that the more careful then i was this morning because
+and i ve cut into my finger that s why have this ben they d here
+can easily
+beliefs to and nasty cut
+so the night is now
+in his pencil but now oh
+i have to get that center of mass under
+under the pencil
+now i put my finger here
+and a stable
+so the center of mass of rearrange is it self
+so that it goes under the point of suspension
+and is completely stable can regulate as much as you want to
+that s not so intuitive
+i have here a a
+very thin bar wire very stiff
+and i can put my hammer
+he only end of this wire
+look at is
+center of mass is way below my suspension point
+this is stable like l it s also worse like held by the way
+you can even swing it center of mass way here alone suspension point
+sum of all torques is zero it is like this
+sum of all forces is zero center of mass below the suspension moines
+they have to be exactly vertical it lined up if there not vertically aligned up like now
+then there is the net torque relative to that point if there s a net torque there will be the angular acceleration and that s what you see
+it exactly lined up there is no longer any torque and
+==========
+let s now turn to wire rope walker we have a rope walker
+here s a rope offer
+and the rope walker standing on the rope
+uh make the rope walk walk it ll little smaller you see shortly why i make the little small
+is that the rope walk
+this is the rope
+and that the center of mass of the rope walker be right here somewhere here
+and and the distance between the center of mass and the rope
+but that distance be one either
+and let the mass of the rope walker
+be seventy kilograms
+i built but light structure could be built of word which the rope walker
+is going to carry in her hands or it his hands just like this and
+it goes down quite a distance
+and i put here a mass of five kilograms
+and i put here a mass five kilograms and let s assume that the structure is very lightweight
+so that we can ignore that
+and that this distance
+be ten meters
+where is the center of mass of this system
+seventy kilograms is about the rope
+one meter
+ten kilograms is ten meters be load a rope
+so clearly the center of mass of the system as a whole will be below the rope
+and so that person is a stable it anything just as stable as my hand offs with one problem
+that f the person could silo of the rope to the site that would be on fortune of course
+and therefore you would require then
+that if this is the rope the cross section of the rope the end you would make yourself salsa on you shoes
+which are a little bit like this
+so that s only to prevent your from sliding off in this direction and falling
+but the center of mass is below the rope and so there s really no danger
+you can balance yourself and walk on the row and nothing would happen
+you could even do this go back and force on the rope
+no problem we always come back like this
+what we have a very special a rope all for this is our role walker
+and this rope walker
+has indeed very special shoes in fact the shoes of the rope walker
+is a little wheel
+and this is what to be looks like
+and here s where the rope will be in this is the role that you see here the electrical
+and so the only reason why we need this groove in the wheel
+is to prevent it from sliding to the side as we needed for this person
+but the center of mass
+you see where ballot that all my finger
+is way below oh the suspension point because of these waits on both sides the center of mass is somewhere here
+so it is completely stable you can even go like this no problem
+is what the rope walker can do provided it does in slide off
+that s why we have this
+okay let s ask this rope walker to give as a demonstration let s make
+for a walk we don t need that television anymore
+would be nice if one of the student which you do me a favor and will come the rope walker
+as he arrives here because we don t honor to crash dedicate issue
+so when she comes down the gentle and they re all the honest that she deserves
+and then you just make sure that q doesn t fall because that
+you would be dead in stride we don t want that
+okay so you see already house table the situation is
+and there she goes
+you ready for that
+what we can all become rope or purse
+thank you very much see you friday
+==========

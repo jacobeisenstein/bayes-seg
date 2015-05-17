@@ -1,0 +1,451 @@
+==========
+(inaudible) that's what we're talking about. 
+Probably not. 
+OK, so let's just talk about the plans for the rest of the term. 
+So today I'm going to spend the rest of the time talking about some more machine learning algorithms. 
+I'm going to shift a little bit into survey mode, just to kind of give you an idea what's out there. 
+Then on Wednesday, we'll have our last class. 
+I'll try to hit the high points of what we talked about just to tie things together a little bit, and then we'll spend some time maybe talking about artificial intelligence for real and a little bit about philosophical background. 
+Next time, we will hand out practice problems that should essentially cover the scope of what we expect to be on the exact. 
+That isn't to say that if there's -- that all the exam problems will be isomorphic to problems on the practice set, but they should kind of give you a pretty good sense of what's going on. 
+And we'll hand out solutions to the practice problems also. 
+We'll try to get them for Wednesday, though I can't quite promise that. 
+Let's see. 
+Anything else that we should talk about? 
+The exam itself is on, then, the following Wednesday at 9 AM. 
+Nine to noon in some location in this building. 
+I don't remember, but you can look it up. 
+OK, and questions about the endgame here? 
+OK. 
+We should probably also set up some special office hours for people who are studying for the exam. 
+What would be the most opportune time from your perspective? 
+How about midnight on Tuesday, or something? 
+No? So let's say -- so here are some options. 
+There's Friday, there's Monday, and there's Tuesday. 
+We're talking -- this would be the 18th, right? 
+Because this is the exam. 
+Now, do you have time available on any of these days? 
+C: Uh, yes. 
+(inaudible). 
+L: (multiple conversations; inaudible) time on Thursdays. 
+So convenient. 
+So just give me a rough show of hands. 
+If there were going to be one day of special help on the practice problems, would you like -- how many people would like it to be on the 18th? 
+How many of you would like it to be on the 21st? 
+Uh-huh. 
+And the 22nd? 
+Looking kind of like the 21st, so we'll maybe send a message around. 
+M: In that case, I'm going to cancel (inaudible) on the 18th because no one wants it. 
+L: OK. 
+So we'll do -- we'll set up some (inaudible) on the 21st. 
+And we promised to have the solutions to you at least by Friday, so that you'll have some time to stare at them and think about them and so on. 
+Don't just read the solutions, though. 
+We go to all this work making problems. 
+You should at least try to do them without (inaudible). 
+Here we go. 
+C: (inaudible) L: Yes, the final will be open notes as before. 
+All right. 
+==========
+So, last time we were talking about supervised learning, and in particular about neural networks, and in particular about these networks of perceptron-like units but with a sigmoid in them so that we would have a differentiable non-linearity. 
+OK, so somebody tell me why we need two layers in our network. 
+C: (inaudible) L: Right. 
+If you have just one unit, whether it's at a threshold function or no threshold -- or kind of a sigmoidal output or something, it's at best going to give you a linear division in your input space between the X's and the O's, or the pluses and the minuses, and so if you want to get a non-linear separation, then you need to have -- typically you have a multi-layer network. 
+One way to think about -- so let's say you have, right, you've got some pluses here and some minuses here and some pluses here, and some minuses over there. 
+And let's say you really do want to be able to model that, right? 
+The idea is that we're still going to -- you can think of the output of our total network, just to give you some intuition for what's going on, right? 
+We have our input dimension like this. 
+Right? 
+Say the inputs are X and Y. They go -- the hidden units, (inaudible) the hidden units come here and they go to an output unit. 
+Here comes something, and we still say that that output, if it's higher than 0.5, we're going to call it a plus, and if it's lower than 0.5 we're going to call it a minus. 
+So one way to think about what this network is computing is a surface, which I can't conceivably draw, but it's -- think of a -- it's growing onto the blackboard, and it sticks out where the pluses are and it sticks in where the negatives are. 
+So you can imagine a kind of contour map where these are positive contours and these are valleys. 
+So this -- what this network is doing is it's trying to come up with a surface such that if you cut it off at the Z = 0.5 plane, the things that are above that and the things that are below are negative, and that slice through at the 0.5 gives you some particular decision surface. 
+I mean, it might be that --- something like that. 
+So that's the sort of game that we're trying to play. 
+OK, so let's talk a little bit -- so we just last time managed to get through the derivation of the algorithm in a kind of a simple case, and so the message that I wanted you to get at the end of that was for any architecture like this, for any kind of conceivable thing that you could think up and write down that involves taking the inputs and squishing them through various kinds of non-linear functions in various combinations, as long as the non- linearities are differentiable, then you can derive one of these gradient descent training rules, and that means that you can try to learn the set of internal parameters or weights in that network so that you can apply it and take (inaudible) and put it through the output and see what answer you get. 
+OK, so you can always do that. 
+It's just a matter of remembering freshman year calculus. 
+So what are some of the issues -- so then what happens is, right, usually the experience of someone in a machine learning class or some class where you have to actually implement a neural network and do stuff with it is you think you know what's going on, you implement it and it doesn't work. 
+It's pretty much a kind of universal experience. 
+Like, they just mostly don't work, and then you have to wonder why, and there's a whole bunch of things that you have to be sensitive to when you're trying to actually make one of these things work. 
+So one thing that you need to worry about -- I'll make a listing. 
+We'll call these issues. 
+One thing that you have to worry about is local action. 
+All right? 
+Now, we're thinking of a lot of different spaces. 
+I don't mean that local (inaudible) in that space, in the space of a function that you're trying to learn, but rather in the function that error is some function of the weight, right? 
+So we're doing gradient descent in the error, which is a function of the weights, and this function may have multiple local minima and gradient descent algorithm is only guaranteed to get us to one particular one. 
+So sometimes you have to restart. 
+Sometimes you may -- your algorithm may just converge but not give you a very good answer. 
+Of course, you don't know whether the answer's very good or not just by looking at it, because usually this is a learning problem, and so you don't know what the right answer is, or you'd have just written it out. 
+So what people typically do to address this problem is to random restart, which gets back to some ideas that we sort of saw through at the beginning of the class, when we talked about search. 
+So it may be that what you want to do is set the weight to a different additional configuration and try doing the gradient descent again, see if you get to a better answer. 
+So that's one way to address problems of local optima. 
+It turns out also, remember when we talked about different training methods we talked about batch training and online training and a kind of sampled training, where rather than computing the gradient over the whole file of data at once, we said "Let me just pick and choose data items from the file." 
+It turns out that that kind of training is actually better with respect to local optima than kind of computing the true gradient, because by picking things out of the file kind of at random, you eject a little bit of noise into your hill- climbing process or your descent process, and that little bit of noise can sometimes bounce you out of local optima. 
+I mean, sometimes, you end up with this very bad situation where -- something like that -- where you do hill climbing and you sit right there and it's just so sad to be stuck in this local optimum so (inaudible), and if you had just a little bit of noise in your descent process, sometimes you can bounce out of this. 
+OK, so local optima are an issue. 
+Another serious issue is learning rate. 
+So there's this parameter -- I think I actually called it step size. 
+Right? 
+So we derived this rule from the gradients, and we derived a way to computer the gradient, and then we said, well, the learning algorithm is just going to keep adjusting the weights by taking a step down the gradient each time. 
+But there's this question of how big a step. 
+And that matters because you could end up with a situation where if you take little bitty steps it can take you forever to go down the hill. 
+Or, you could also end up in a situation where if you're taking really big steps, you start to do bad oscillations and all your weights go infinite and the whole thing comes apart. 
+So there's always a tension between wanting your linear to be big enough to get to where you need to go, but not so big that your algorithm becomes unstable. 
+There are a variety of different techniques for dealing with this, but the most important one is at least to understand that it's an issue. 
+So you might do experiments with different learning rates, or at least do something in your code to detect that things are going nuts, and stop and restart it with different menu rates. 
+There's also a whole literature on, for instance, adapting the learning rates so that you can try to tell -- for instance, you might look and see if the sign of the change that you're making is the same for a long time, then that might be a sign to you to increase the learning rate, that you could be taking bigger steps. 
+If on the other hand, the sign seems to be changing, then that might tell you that you need to decrease your learning rate because you're doing some kind of oscillation. 
+So there are things you can do about adapting your learning rate, but anyway, it's important to be sensitive to that. 
+Now we'll talk about the number of hidden units. 
+OK, so let's say I'm trying to map XY, right? 
+I'm working on this problem here. 
+I'm trying to map X and Y into positive and negative classes, and I don't know very much about my problem. 
+How can I even think about how many hidden weights (inaudible) units to put in there? 
+What do you think would happen if I put a whole bunch in there, like, say, a hundred? 
+Any intuitions about what might happen with a hundred? 
+C: (inaudible) L: Right, so overextending is a serious danger. 
+So that's good. 
+That's one important lesson, is with a hundred hidden units, my goodness, I might be able to just put a little peak on top of each datapoint and just absolutely get it perfect or something. 
+So there's a danger with the more and more hidden units you have that the more hidden units you have the richer of class of hypotheses you can express, right? 
+The more complicated the separator that you can describe, and the more complicated the separator the more danger there is of being too close to the data that you actually have and to not generalizing well over data that you might get in the future, so that's a big problem. 
+There's another thing, though, about having a lot of hidden units which is sort of interesting. 
+Maybe not a hundred hidden units, but maybe more than you minimally need, which is that empirically, at least, people see that you actually have fewer problems with local optima when you have more hidden units than you really need. 
+It's as if you make the space in which you're trying to find the solution richer, so that there are more solutions. 
+There are more configurations of the weights. 
+Let's say you're just trying to learn (inaudible). 
+You just want to be able to put a plus here, a plus here, a minus there, a minus there. 
+So to do that, you really only need one hidden unit. 
+I think that was the example that Mike showed you. 
+But it can be often the case that you get more robust learning with a couple of hidden units because although now the space that you're learning in is bigger, it's more forgiving in some sense. 
+There are more different configurations that will give you the behavior that you want, and they seem to be connected together in some way that works better. 
+So, you know, it turns out that people tend to use -- think about how complicated your answer might be, think about how many hidden units you might need to articulate that answer, and then maybe throw in a few extras to add a little redundancy to the space, because it turns out that a little bit of redundancy is often useful. 
+OK, let's see, what else do you want to talk about? 
+==========
+So, overfitting. 
+So let's continue on the question of overfitting. 
+So, there are a bunch of different ways to try to keep a neural network from overfitting a network of these kinds of units. 
+One is to just be sure that you don't put too many hidden units in. 
+There are other ways to avoid overfitting. 
+I'll sketch some of them out for you, because they're kind of interesting. 
+So one is just to have a simple network. 
+Here's another thing that you can do. 
+Add noise to your training data. 
+Can anybody explain to me why that might make any sense at all? 
+Why would you want to add noise to your training data? 
+OK? 
+C: (inaudible) L: Yes. 
+Right. 
+But there's an -- in the end, there's sort of a philosophical question about how you think this might resemble future data, but remember back when we first talked about overfitting, at least? 
+I did this example where I have this data that looks sort of like it might be parabolic, and we talked about whether it fit a second-order or, say, a fourth-order model to that, and we said, well, there might be some really goofy fourth-order model that happens to fit those points exactly. 
+But now you think, well, if I add random noise to these training points, then it's going to turn out today that even the best fourth-order fit to those training points isn't going to be this funky curve anymore, and you're going to be more likely to get something that kind of goes like that. 
+C: Are you talking about increasing the number of (inaudible) by adding the (inaudible)? 
+L: Yes, or if you present them individually you can just change them a little bit as you present them. 
+Just add kind of normal lines. 
+So there's some nice theoretical work that shows this is equivalent to some other methods of avoiding them. 
+It's interesting, because people have done this kind of on an intuitive and ad hoc basis for a while. 
+But then, it can actually be proven to be equivalent to a thing -- another method that attempts to keep the magnitudes of the weights small. 
+So it's interesting, because this thing that seems intuitively nice turns out to have it pretty good theoretically, also. 
+(inaudible)? 
+C: (inaudible). 
+L: Well, we're not adding more -- we're not adding more capacity. 
+We're not adding more representational ability to our learning machine. 
+So if we're still fitting a fourth-order polynomial by adding more points, we're still going to try to fit a fourth-order polynomial. 
+We're not going to go up to a 27th order polynomial (inaudible). 
+So now it's just a question of kind of changing the data that we actually asked the algorithm to fit, and by adding noise -- by kind of putting a cloud of fuzz around the points that we do have, it just sort of reduces the option to do a pathological thing. 
+It kind of forces -- the idea behind -- this idea that makes us want the parabola sort of solution to this problem in the first point is the intuition that says for the data that we get next time, it's going to be kind of like the data we just got, but moved around a little, and we want to do a good job on the future. 
+Well, if you want to do a good job on that data, then take the data that you have now and move it around a little and try to make sure that you do a good job on it. 
+That should be intuition. 
+C: (inaudible) L: Well, right, because -- the very act of adding noise is in some sense saying that you have some idea about what the variability in the world really is, right? 
+So for instance, you might add noise in some dimensions but not others, or something like that, and that is the knowledge that you come to the problem with. 
+If you come to the problem with no knowledge at all, then you can just put Gaussian noise of some mean and standard deviation around all your measurements, but even then you're saying -- just the act of doing that is sort of -- you have to pick a variance, so picking the variance is saying something about how variable you think the world is. 
+We come back again, and again, and again in machine learning, so there's no free lunch there, so if you don't know anything at all about your world, you might as well not try to do learning. 
+You just can't do induction without some assumptions about how the world is going to work. 
+So they have to come in somewhere, and it's better that they come in sort of explicitly than implicitly. 
+At least you know what assumptions you're making and you can question them and go back and change them. 
+Yes, so another strategy -- just another couple strategies. 
+Stop early. 
+(inaudible). 
+So what's the advantage behind stop early? 
+Now, here's a kind of -- if you were to implement one of these algorithms, you could make something called a learning curve. 
+Learning people love graphs like this. 
+So you plot something like error versus -- in this case, saying training steps. 
+==========
+OK, first let's talk about the error -- this error, the error that you actually get on the data that you're training on. 
+This is called training errors. 
+And if you're doing gradient descent, especially in batch mode, it goes down. 
+Well, you don't get instabilities having to do with step size troubles and stuff. 
+You usually get a curve, only sort of like that. 
+Now, it starts out kind of high and it comes down and it asymptotes somewhere and you're not going to do any better than that. 
+So what would it mean to have an asymptotic training error of say, 0.1? 
+What could that means? 
+So what does it -- what would make it be not zero? 
+C: (inaudible) L: Right, it could be that there are some oscillations. 
+What else could it be? 
+C: (inaudible) L: Yes. 
+C: (inaudible) L: Right, it could. 
+OK. 
+Good. 
+So some explanations are that the (inaudible) is oscillating. 
+Another one is that I just can't represent -- the thing I need to represent is the class of model that I pick, so let's say I pick (inaudible) that lets me articulate four lumps in my data but I needed five. 
+Well, there's no way I'm going to be able to drive the training error down to zero. 
+So one second -- where does error come from? 
+(inaudible) most of these. 
+OK, so training error can come from -- and there's this word that gets used over and over for different things. 
+It can come from bias, meaning that the model just doesn't fit the data very well so that even if we have the best possible model that we could find in the class of models that we picked, it just doesn't do a good job saying what we need for it to say, so that's a possible problem. 
+Another problem could be that the algorithm was oscillating somehow. 
+Of course, it is oscillating -- usually, you don't see anything so tidy as this. 
+Usually, if it's oscillating it just goes nuts. 
+I mean, it usually goes back up again. 
+What else could be a problem? 
+I can think of two others, two other reasons why this goes to 0.1, say, and not zero. 
+C: (inaudible) L: Right, there might just be noise in the data. 
+This is sometimes called variance. 
+That is to say -- it may be that for one particular, even for one particular point here, we've examined a few times in our dataset and sometimes (inaudible) and sometimes with the (inaudible). 
+No matter what you do, you're not going to be able to get all those datapoints right, but real data often has that property. 
+One more. 
+Local optima. 
+So this is a little bit different. 
+It might be that in fact you've picked a network structure or a hypothesis class that's capable of getting your data exactly right or doing a very good job, but you just haven't managed in the gradient descent process to latch onto the various set of (inaudible). 
+So there's a bunch of reasons why this training error might not go all the way down (inaudible). 
+But it goes down, typically, and usually it goes down and it stays down unless you start to have oscillation troubles, in which case it usually starts to go back up again. 
+OK, now let's think about another kind of error which often does something like this. 
+(inaudible) error. 
+OK, so now let's imagine that I take a separate chunk of my data. 
+I don't use it to compute the (inaudible) on the weight. 
+I just hold it out. 
+I hold it aside, but every so often I pick the current set of weights that I have on the network and I take my testing data and I run my testing data through the network and I check to see what the error on average is on the testing points. 
+And it's quite typical to see something that looks like this. 
+And so this is a kind of an overfitting curve that you see for a lot of different things on this X axis, but this is a particular one you can see. 
+OK, and so what could this be? 
+Well, first of all, the testing error is almost always higher than the training error, right? 
+Because this is how (inaudible) that data that you didn't get to use when you were building a particular weight in your average, so usually you don't do such a good job on the data that you've never seen before. 
+But the thing that's always sort of interesting and surprising is that there's usually a point where after a while you just start doing worse. 
+And this is another case of overfitting. 
+This is a case of we're just working on the fourth decimal point of our weight and we're getting just really particular to this data that we have for training, but then it doesn't generalize very well. 
+It's kind of trying too hard to model the particular data that we have. 
+So there's a whole, again, theory and kind of interesting practice related to stopping training early. 
+One way that people do deal with early stopping that's complete empirical but can work is that you just keep part of your data out and the set data, and you keep doing this as you go along, and whenever this curve starts going up you stop and you give this out as your answer, because training anymore doesn't seem like it's going to help you. 
+Adding -- so if we just change the axis here, from training steps to number of hidden units, we often get a similar kind of curve. 
+It's the same basic idea. 
+If you have hidden units, right, over in this part you're in trouble because there's too much bias. 
+If you don't have very many hidden units, maybe you have high error just because you can't articulate the thing that you need to articulate within your model. 
+But as you come over here, you get more and more end units, it can be that now you're spending the richness of your model the vagaries of the particular data that you have and this just doesn't generalize very well. 
+So you get basically the same-shaped curve. 
+C: If you don't have (inaudible) L: Right, you don't get -- if you don't have enough hidden units even to do the job that you need to do, you don't get overfitted. 
+You get error, but the error is now usually described because of bias. 
+Right, so in my example that I erased, with the quadratic sort of data, let's say I try to fit a line to that. 
+With a line -- it's actually be fairly stable usually. 
+That is to say if you change around your data points you'd probably get the same line, which means that it's not -- it's not subject to variance too much. 
+It's not really too sensitive to the particular data points you have. 
+It has high error, but it has high error because the model doesn't fit the data very well, and there's nothing really much you can do about that except increase the richness of your model. 
+Questions about this stuff? 
+So really, the take-home message about machine learning is really that there's this trade-off, and in fact people talk in their papers and books and stuff about the bias variance trade-off, that there's this strong tension between having enough richness in your model to do the job but not so much that you're modeling the noise in your data, not so much that you're just getting too attached to the sort of random properties of the data set that you're trying to learn from, and that therefore you don't generalize effectively to new data. 
+That's the big deal. 
+OK. 
+(inaudible) I'd like to talk about machine learning for a couple of weeks. 
+We don't have a couple more weeks, so -- let me talk about one more thing in the vein of neural networks, and then I'll talk about a couple of very different learning algorithms, and then we'll be done. 
+By the way, I'm skipping reinforcement learning, so according to the syllabus we're supposed to be talking about reinforcement learning today, but I want to just do some more classification things so that we can kind of tidy that up rather than add a whole new subject area. 
+OK, so I don't know. 
+==========
+Those of you who read the machine learning news or something might have heard something, heard about something called support vector machines. 
+I just want to talk about this for a moment. 
+So there's a new set of algorithms that people are fairly excited about, certainly theoretically, and also practically, and they grow out of the same tradition of perceptrons on these kind of multilayer networks that we've been talking about, so I want to talk about (inaudible). 
+So let's go back and think about the perceptron for a minute. 
+So imagine that I have a problem like that. 
+Remember that the perceptron theorem says that if the data is linearly separable, the perceptron training algorithm is guaranteed to find the separator. 
+So if you can draw a line between these points, the perceptron algorithm will find it. 
+So that's the perceptron theorem. 
+Now, one thing the perceptron theorem doesn't tell us anything about is what happens in a non-separable case. 
+So we did this thing where we said all right, for the non-separable case, let's look at the mean-squared error criterion instead, because at least that's going to let us not freak out when we can't get the thing exactly right, gives us a kind of gradation of getting the points right or wrong. 
+The thing about the mean-squared error criterion, which I didn't really tell you guys about, is that in the separable case, it doesn't necessarily find the separate. 
+So there are some situations where the minimum -- so it's possible that the minimum and mean- squared error hyperplane doesn't separate separable data. 
+So that seems sort of too bad. 
+So we're going to look at some other criteria that involves separation and distance together, and see if we can eventually end up -- we're going to end up with two different things. 
+One is a way to kind of deal with errors and separation in a better way, and the other is a different way from the kind of multilayer neural network way to think about getting a non-linear separator, so that's by looking at support vector machines those are the (inaudible). 
+OK, so the support vector machine idea is that you look at this data and you say, "I would like to find the linear separator." 
+Now, I'm going to draw a couple, and you can tell me which ones you like better. 
+(inaudible) the question just a little. 
+So how many of you like one of those blue lines best? 
+Most people have an intuition that the white separator there is better than the blue one. 
+Why? 
+It doesn't touch any of the points. 
+So why do we not want it to touch the points? 
+Well, because you think, well, we move those points around a little bit, we might start getting them wrong, right? 
+So intuition tells us if the pluses kind of live over here, there might really be some more pluses that start kind of creeping into this zone, and the O's might kind of creep into this zone, and so really our safest bet is to somehow stay as far as we can from the datapoints that we have, and still do the separation. 
+So that's an intuition. 
+So we can think about a separator, and we could define something called the margin, so the margin is the minimum over the points of the -- I'll just write it on the board -- the perpendicular division between a point and the separator. 
+So this is the margin, and one of the intuitions -- there are sort of two important points about support vector machines, but what we'd like to find is not just any old separator, because if the data are separable, then there's an infinity of separators, because you always have this kind of rotational and some translational freedom in where you put the separator, so perceptron algorithm doesn't tell you which one is going to get used. 
+It promises to give you one, and that's all. 
+But our intuition from kind of robustness tells us that we'd like to have the separator that maximizes the margin, so here's one point. 
+Try to find the maximum margin separator. 
+It turns out that there's some beautiful mathematics that tells you that the intuition that you want to be far away from the data points is a really powerful one, and theoretically, it's good to find the maximum margin separator. 
+I'm not going to really go too far into that, but in some sense being willing to take a separator that's very close to the points is theoretically equivalent to looking for too high-order a polynomial. 
+It's like giving yourself too much freedom. 
+There's a sense in which finding this thing that goes as far away from the other points is finding the simplest hypothesis that'll do the job for you. 
+So there's good reason for wanting to do this. 
+OK, so I -- so given some data, you can then -- there are algorithms for finding this maximum margin separator. 
+And they're not too (inaudible). 
+There are some gradient set-type algorithms and there are some analytic algorithms that use the quadratic part(?). 
+So one thing that's interesting, a little bit, about this is that -- it's hard to see in two dimensions, but it's harder to draw in higher dimensions -- that (inaudible) only two support vectors. 
+The points for which -- so there's going to be at least, in two dimensions, there's going to be at least two points for which the margin is the smallest. 
+That is to say, at least two points that are closest to the separator. 
+In higher dimensions, there are more, and they're called the support vectors. 
+For these guys, the closest points are called the support vectors. 
+And one thing that's interesting about the support vectors idea is that then you take -- imagine that you have all these actions over here and all these others over there. 
+They're not really contributing, right? 
+They're far away. 
+We know that if we get the support vectors right, we don't have to get them right. 
+The support vectors are the guys who are kind of really constraining the answer. 
+And then you can actually write down this hyperplane as the weighted sum of the support vectors. 
+So you can write down hyperplane. 
+OK, so all right. 
+So far, what do we have? 
+We have a nice argument that says of all the linear separators in the world, which one would you most want to have? 
+So that's useful. 
+What happens if you have -- so you have two things. 
+One is, what do we do if we have noise, and the really more interesting thing is what do we do if we want a more complicated separator. 
+So first of all, what do we do if we have noise? 
+Well, if we have noise -- so let's say that we really do have a circle out there. 
+There's no denying it. 
+And what we need when we say we have noise is that we really don't think -- again, this is what we think about the problem. 
+This isn't anything that you really can say to be true or false. 
+We really don't think that the world is so complicated that we want to make a separator that separates this point out from everybody else. 
+We just wanted to live among the X's(?) and count it as an inevitable mistake. 
+If that's true, what you can do is just add a penalty for having guys on the wrong side. 
+So now, instead of trying to maximize the margin, we'll maximize the margin plus a penalty for the errors. 
+But what that lets you do is say, if you can separate it, then separate it, and you'll always get a separator if you can. 
+If not, then you have a kind of very well articulated criterion for saying how to back off, what to do it you want to have (inaudible). 
+Again, I'm not going to get into the detail. 
+I just kind of want to get the (inaudible). 
+==========
+OK, so next big maneuver, which is really important, is what to do about non-linearly separable data that you actually want to treat as non-linearly separable. 
+So, imagine that you have this. 
+OK, you might look at that and say that a non-linear separator's going to do that job and I kind of liked that as a separator. 
+How could I ever arrive at an answer like that? 
+What we say, for instance, a multilayer neural network has the potential to make a separator like that, but it can be kind of hard to construct the network, or it's less clear what to do, so an alternative view is to realize that, for instance, if I -- let's say my original input is X and Y, right? 
+I just have these two input variables. 
+This is -- END OF SIDE L: If I -- let's say my original input is X and Y. Right? 
+I just have these two input variables. 
+So this is -- we have some original state places. 
+Now, I want to consider for a little while a higher dimensional space that I make out of the dimensions of my original space, and then I have a higher dimensional space which might look -- why don't I keep X and Y, say, but maybe I'm going to add, I would say X squared and Y squared and XY. 
+Now, it's going to turn out that a linear separator in the high-dimensional space is a quadratic separator in the original space. 
+So a linear (break in tape) separator in the original space gives us a non-linear separator in general. 
+Linear separator, excuse me, in the high-dimensional space gives us a non-linear separator in the original space. 
+And so that's the game that we're going to play in support vectors. 
+We're going to now try -- we're going to take our original inputs, X and Y, so right now think of it as blowing them up into this high-dimensional space somehow. 
+There's a whole theory of allowable ways to blow them up into the high-dimensional space, but this kind of general multiplicative expansion is a good one. 
+And then we're going to look for the maximum margin separator in the high-dimensional space. 
+That's going to give us a hyperplane in the high-dimensional spaces, and if you think about the hyperplane you can draw it back in the original spaces I'll give as a curve. 
+So there's two worries that you might have about this enterprise. 
+So one worry (inaudible) you might worry about overfitting, and you might worry about complexity of the main (inaudible). 
+Because this is kind of a complexity problem, too, so it's a different kind. 
+So because let's say I take my space when I do all the cross-multiplication just to get the squares. 
+Well, before when I had a hyperplane I just had to order N parameters in my hyperplane, right? 
+Because I just had one weight for each endpoint. 
+Well, if I generate an input vector that's got the square of the number of dimensions as I had originally, then I have the square of the number of weights, and that's like making my hypothesis class a lot bigger. 
+That's like asking for a lot more complicated answer. 
+And so that should be a real worry. 
+But it turns out that the power of the maximum margin, the power of finding the separator that goes the farthest away from all the points, again, in a theoretical sense, is enough to sort of beat back the complexity that you get from going in such a big space. 
+So it would never, ever, ever work to run the perceptron algorithm in a high-dimensional space, because that would find you any old separator and it might be one that was really too attached to your data, and now if you're in a really high dimensional space, the opportunities to get too close to your data are just enormous. 
+Think about it that way. 
+This hyperplane could just flop all over the place in this big space. 
+It's really very unconstrained, and so it could just really get too close to the data and then not be very robust. 
+But if you find the maximum margin separator in the high-dimensional space, then you'll be all right, so overfitting is OK, because we're going to maximize the margin. 
+All right, you say, but now I'm nervous about the fact that we're doing some algorithm that seems kind of complicated to find the maximum margin. 
+I mean, that's a little bit of an ugly optimization problem, and now you want to, say, at least square the number of dimensions, but often squaring isn't enough. 
+You want to cube it, or something. 
+So now I'm working in these really high dimensional spaces, and people in some sense work in enormously high dimensional spaces in this, like thousands and tens of thousands or hundreds of thousands of dimensions. 
+See, I don't want to run a learning algorithm on a hundred thousand dimensional space. 
+That seems kind of problematic. 
+So there's a beautiful trick called the kernel trick, which, again, I'll just illustrate for you. 
+The kernel trick is like this. 
+So if you look at the algorithm, the algorithms for finding the maximum margin separator, what comes up over and over and over again - - and I just erased my (inaudible). 
+Remember I said that you could describe the weights of the hyperplane and you could describe the hyperplane as a weighted sum of some support vectors? 
+So basically you can describe the hydroplane given a function X it's going to give you a value, and you're going to cut it off some value. 
+As the sum over the support vectors, some weight (inaudible). 
+That doesn't matter. 
+What matters is this, so if I give you a vector and you want to try to figure out, is it above or below the line, I'm going to computer something like this and compare it to some constant. 
+Now, so what this is is it's a bunch of dot- products of the point I'm interested in with the support vector points. 
+What matters here is that the only place that I ever deal with the points, the only way I ever handle vectors in this algorithm, ever, ever, ever, is to look at dot products between them. 
+The only thing I ever do with vectors in this whole algorithm is dot-product them. 
+OK? 
+So this is where we start to get nervous, because we don't want to take dot products of a hundred thousand dimensional vectors all the time. 
+That seems not good. 
+And because -- let me be clear about where these vectors came from. 
+I'm sorry. 
+(inaudible) that I had my original points are Y's in the low-dimensional space. 
+Now in the high-dimensional space I have X's. 
+Right? 
+So my original points were only ten-dimensional and my high dimensionals, let's say I have a hundred thousand dimensional points. 
+And my algorithm is going to be in some sense written in terms of dot products of these hundred thousand dimensional points. 
+It turns out that if you pick the transformation from Y to X in a good way -- and there's a bunch of ways that are good ways, it doesn't feel too constraining -- then you can rewrite this as some function of the Y, and a not too complicated function of the Y. 
+So again, I'm not going to go into the details here, but what it means is that you can do this maneuver of going from a low-dimensional space to a really high dimensional space, in fact, in some cases to an infinite dimensional space, where obviously you can't write the vectors down and take the dot product. 
+But you can get the effect of taking the dot product of these vectors in this very high dimensional space by doing some manipulations on the vectors down in the original low-dimensional space. 
+Now, this doesn't work for every transformation from low to high, but it works on a whole bunch of nice ones. 
+So the effect of this is that you can learn very complicated separators fairly efficiently with this direct algorithm that doesn't have a learning rate or local optima, and those are two of the things that sort of are a big pain in using neural network-type algorithms, because you have to fiddle with the parameters a lot to get them to work. 
+So this is something -- I don't know, it may be waning now. 
+Two years ago, it was the hot thing in machine learning, and now people are trying to understand how it trades off against other kinds of algorithms, but it's definitely an interesting thing that people are doing. 
+OK, in the next five minutes I'll tell you about my favorite machine learning algorithm. 
+Now that we've talked about just about the most kind of complicated (inaudible). 
+Any questions about this? 
+The main thing is this linear separator is a high-dimensional space that's equivalent to a complicated separator in a low-d space, and you can do it fairly efficiently. 
+OK, here's my favorite one. 
+(inaudible) It's called (inaudible). 
+So the algorithms that we've talked about so far, all this linear separators and the networks and the support vector machines -- they're sometimes called -- oh, but then people argue. 
+Never mind. 
+Well, you can think of them as the kind of -- a family of parametric methods, in the sense that it feels like you're picking a family of hypotheses that you're going to try to use to fit your data, right? 
+Either it's linear or it's a neural network with two lumps, or it's a support vector machine where I've done a quadratic expansion of the inputs or something like that. 
+But sometimes, maybe you kind of don't want to commit in advance to the complexity of the answer that you're looking for, and you want to do something pretty simple. 
+==========
+So your nearest neighbor -- you take your training points and you remember them. 
+OK, that's the learning algorithm. 
+So now, you get a new query point and when someone says, "What's the value of this point here?", 
+you go and you measure the distance between this point and all the other points and you figure out which point's the closest, and you say, "plus." 
+That's all. 
+C: Where's the learning? 
+L: I don't know. 
+It's in remembering all the data you're seen before, I guess. 
+Or it's in the clever extrapolation based on distance of classes. 
+I don't know where the learning is. 
+You could say -- so this algorithm never has written down in some sense its hypothesis, though it turns out if you -- you can make a (inaudible) diagram. 
+Anyway, there really is a -- there's some kind of separator that gets induced by the points, but the algorithm doesn't bother articulating it anywhere. 
+It just kind of emerges out of the answers that it would give to the questions. 
+So it has some advantages and disadvantages. 
+So the advantage is that there's essentially no training time. 
+Another one is that you can learn from a very few points. 
+So -- and this matters to me when I try to get robots to learn things. 
+(inaudible) something over here was a dumb thing to do. 
+Automatically -- I mean they could (inaudible) automatically I'm going to believe that a lot of things that are really very much like that are bad things to do, that you get a kind of really very quick generalization from just a very few points, and that's a good one, too. 
+It has some disadvantages. 
+I'll put things in a different column as I go. 
+Do you see the disadvantage? 
+C: (inaudible) L: Got it. 
+The classification time can really be a problem. 
+You have to compute the distance between this point and every other point. 
+Now, you can actually ameliorate that a lot by using something like A-D trees. 
+I don't know. 
+The idea is that you make a kind of hierarchical spatial partitioning of your data set so that instead of -- in order to find, say, the one nearest neighbor or the ten nearest neighbors of your point, you don't have to examine everybody. 
+You can kind of, in a logarithmic time, drill down into the right and (inaudible). 
+So if you do it naively, then you have to go through every single point and say, "Is this the closest?" 
+But if you organized it a little better, you can do it in kind of (inaudible). 
+Here, you can generalize it a little bit. 
+I mean, let's say you have noise. 
+Then you might not want to give the answer of the one single nearest point, so your generalization is you look at the K nearest points and pick the majority class. 
+You can show that in the large data limit it will asymptotically to the best thing that you can do. 
+In terms of just being pretty simple and easy to cope with, it's a good one. 
+One other thing, which people often cite as a problem but I think it just highlights an important facet of machine learning, again, is that you need -- I'm not sure if this is a (inaudible), so I'll put it here in (inaudible). 
+You need a distance measure. 
+Right? 
+If you're going to say, "I'm going to predict the class of this point as the class of the nearest point," then you need to know what you mean by nearest. 
+And so if you have a lot of attributes, you might say, well, you know, this attribute matters more than this other one. 
+Right? 
+Maybe you want to say that blood pressure matters more or less than some other thing in predicting that somebody has a heart attack. 
+And so if you want to be able, for instance, to trade these attributes off against each other, you have to put that into your definition of what it means for one point to be close to another point. 
+So that's the place where you can inject your own knowledge about the problem. 
+It's also possible to use kind of held-out training data to learn the distance measure(?), but then you get into a kind of much more complicated algorithm. 
+All right, so let me stop there. 
+Next time we'll do some overview stuff, talk about philosophy, and hand out practice problems. 
+END OF TAPE
+==========

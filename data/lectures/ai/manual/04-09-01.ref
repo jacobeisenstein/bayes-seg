@@ -1,0 +1,461 @@
+==========
+So, last time, we talked about probability, in general, and conditional probability and so on. 
+So what I want to do today is give you an introduction to Bayesian networks and then we'll talk about doing inference on them and then we'll talk about learning in them as we go on. 
+OK. 
+So the idea is that if you have a complicated domain, with many different propositional variables -- in some sense to know everything about what's going on, you need to know the joint probability distribution over all those variables. 
+But if you have N binary variables, then there's, you know, 2^n possible assignments and the joint probability distribution requires a number for each one of those possible assignments. 
+What's the probability that the world looks like this and this and this. 
+So, the intuition is that there's some kind of, some separability in the world, some independence, that you don't actually have to know all of those 2^n numbers in order to know what's going on in the world, that you can take advantage of some structure. 
+So that's the idea behind Bayesian networks. 
+So these networks kind of have two components. 
+The first component is often what's called the "causal component." 
+It describes the structure of the domain, and then the second part is the actual numbers, the quantitative part. 
+So we'll start looking at the structural part and then we'll look at the quantitative part. 
+So I'm going to do this by going through a couple of examples. 
+These are cribs from a really nice introductory book on Bayes Nets. 
+Russell and Norvig is pretty good, too, but I like this other introduction better. 
+If anybody finds themselves really wishing for a different version of something to read, we could potentially copy this thing and hand it out -- though after today, it may be that we will have exhausted most of its usefulness. 
+A couple of little vignettes of, incredible, insightful reasoning. 
+==========
+Here's a case: Inspector Smith is sitting in his study, waiting for Holmes and Watson to show up in order to talk to them about something, and it's, you know, it's winter and he's wondering if the roads are icy. 
+He's worried that they might crash, OK. 
+So he's waiting for them. 
+He figures if they've crashed, he can go have lunch, but he doesn't know anything yet about what's going on. 
+So he's waiting for them to show up. 
+Then his secretary comes in and tells him that Watson has had an accident. 
+He says, "Hmm, Watson had an accident. 
+Gosh, it must be that the roads really are icy. 
+Ha! 
+I bet Holmes is going to have an accident, too. 
+They're never going to get here. 
+I'll go have my lunch." 
+So, OK. 
+That's sort of funny. 
+The secretary says to him, "No, no. 
+The roads aren't icy. 
+Look out the window. 
+It's actually, it's not freezing and they'd put sand on the roads anyway." 
+So he says, "Oh, OK. 
+I guess I better wait for Holmes to show up." 
+OK. 
+So how would you model that, using a little Bayesian network? 
+So the idea is that we have, we have three propositions. 
+We have: Are the roads icy? 
+"Icy." 
+And then we have "Holmes Crash." 
+And "Watson Crash." 
+So those are the three variables in our domain that the Inspector's thinking about, and the idea is that he's got sort of a causal model of what's going on in the world, to say that, "Well, if it's icy, it's more likely that Holmes is going to crash." 
+And also, "If it's icy, it's more likely that Watson is going to crash." 
+So he starts out and he has some beliefs about what's going on. 
+So, then, the secretary tells him that Watson crashed. 
+And then he does this reasoning that says, "Well, if this is the cause of that and that happened, then that somehow increases the likelihood that this has to happen." 
+And that, "if the likelihood that this happens is increased, well, it's going to increase the likelihood that his happens, too." 
+So even though we had this sort of picture with arrows going down, there's this idea that, at least, evidence can kind of flow up and down, right? 
+So finding out about this system, in some sense, makes us think that this cause is more likely, which, therefore, makes this other symptom more likely. 
+So that's the first part of the reasoning. 
+Then, the secretary says, "No, the roads aren't icy." 
+Once the secretary says, "the roads aren't icy," then this piece of information doesn't really tell us anything about that. 
+So there's a little piece of reasoning. 
+And so what we would say about this, we would say that, H -- we'll call this variables -- H and W and I, that h and w , they're dependent, in general -- right? 
+-- because finding out something about w tells us something about h. 
+But they're conditionally independent, given i. 
+__: (inaudible) Oh, OK. 
+We'll, no, given "I," meaning -- This is a really good point. 
+We aren't quite sure when I'm writing h and w and i what they, what I really mean is that random variables, themselves, not particular assignments to the variables. 
+So when you make a statement about something being dependent or independent, it's usually, you're talking about, given a particular random variable. 
+Now, you're right, but there are situations where things might be dependent, given one assignment for the variable and independent given another assignment to the variable. 
+We would just say that they're dependent. 
+So, at this point, we don't have that resolution. 
+So we just say, "given an assignment to this number." 
+Other questions or -- Yes? 
+OK. 
+==========
+Let's do another one. 
+So that would be the icy-roads scenario. 
+Now, we have the wet grass scenario. 
+So the Holmes has moved to L.A. and his grass is wet, which is a real surprise in L.A. 
+And he wonders if it's because it rained or because he left the sprinkler on. 
+OK. 
+So he thinks about it, whether it's because he left his sprinkler on. 
+Then he goes and he looks and he sees that his neighbor Watson's grass is also wet. 
+So that makes him think, it's been raining because rain would cause them both to be wet. 
+And it, then, decreases his belief that the sprinkler was on. 
+OK. 
+So how does this go? 
+He comes out and he looks at his lawn. 
+He sees that it's wet, and he thinks, "Ha, maybe, left the sprinkler on last night or maybe it rained." 
+So his belief that he left the sprinkler on went up for a while. 
+Then when he went and saw his neighbor's lawn, he became really sure, really much more sure that it rained last night and his belief that the sprinkler went on went down. 
+We'll do these things out quantitatively in a bit, but I wanted to kind of do the qualitative stuff first. 
+OK. 
+So let's draw a picture of that. 
+So you might have, "Sprinkler on." 
+"Rain". 
+"Holmes' lawn wet." 
+OK, so the first part of the picture looks like this. 
+But we know that rain also would cause Watson's lawn to be wet. 
+So the way that this story goes is, we observe this node, right? 
+We come out and we see that the lawn is wet and so from that, we believe that this is more likely and this is more likely. 
+Now, it also is true that without observing Watson's lawn, just as we had evidence come and go up here and down over there, without going and looking at Watson's lawn, if Holmes sees that his lawn is wet, he's going to believe that it's more likely that Watson's lawn is wet, too -- right? 
+-- because this cause becomes more likely and, therefore, this symptom becomes more likely. 
+OK. 
+But when he sees his lawn wet, this cause becomes more likely also. 
+Now when he goes and observes Watson's lawn and sees that it is wet also, this probability goes way up because, notice, there's sort of two pieces of corroborating evidence. 
+And, interestingly enough, this one comes down. 
+So this is this phenomenon that gets called "explaining away," and, again, we'll do that out, so that you see that it really comes out in the numbers. 
+But it's sort of nice because if you say, "Well, gosh, this could have caused it. 
+Or this could have caused it," but once you pick a cause, then the other cause's probability goes back down. 
+==========
+So here are the rules for transmitting evidence: So, in a serial connection, you have a piece of network structure that looks like this. 
+So we could transmit evidence through unless B is instantiated. 
+So what's an example of this? 
+Well, the battery's dead, so the car won't start, so the car won't move. 
+So finding out that the battery's dead gives you information about whether the car will move or not. 
+Finding out whether the car won't move or it will move tells you something about the state of the battery. 
+But if you know that it won't start, then knowing about the battery doesn't tell you anything about whether it'll move or not. 
+It's sort of like, knowing that it won't start gives us the proximal, sort of a more proximal explanation for what's going on, so this extra information won't really help. 
+Does that make sense to everybody? 
+==========
+So there's one kind of connection that you could have in a network. 
+You can have: "Diverging Connections." 
+So, in that case, you have a, b, c and we get exactly the same rule: We can transmit evidence through unless B is instantiated. 
+So this is exactly like this picture here. 
+We have something that seems like a cause and two effects and so if we get information about one effect, it tells us something about the likelihood of the other one. 
+Except in the case where we know, for sure, that the cause is either there or not because once we know this -- right? 
+- - once we know whether or not it's icy, once we know whether or not the patient has this disease, then the symptoms aren't really related to one another. 
+So those are the two kind of easy cases. 
+==========
+And then we have this other case which is tricky, which is the converging case. 
+It'd look like this. 
+And in this case, we transmit evidence from a to c only if b or a descendant of b has received evidence. 
+This is a tricky one. 
+So that's a bit like this part of the problem: The "sprinkler," "rain" and "Holmes' lawn is wet," right? 
+We have two causes for a single symptom. 
+Think of it that way. 
+So if we don't know anything about the symptom, we have no information about it. 
+So let's say, a sore throat. 
+This could be sort of apropos. 
+So either you have a viral infection or a bacterial infection and, either one of those could cause a sore throat. 
+So patient walks in and you don't know anything about whether or not you have a sore throat, then finding out whether they have a viral infection doesn't tell you anything about whether they have a bacterial infection. 
+And those are sort of two independent causes that might or might not happen and either one, if it happens, will give you a sore throat. 
+But, let's say, you might, "Oh, well, they might be immune- compromised, but they're more than more likely to have the other one -- Let's like forget that whole line of reasoning, just for a minute -- right? 
+So, you know, there's a lottery that decide whether you're going to get a viral infection and a lottery that decides whether you're going to get a bacterial infection. 
+And you might get them both, but they're independent. 
+That's what this picture's meant to convey. 
+But, if the patient comes in and we see evidence of a sore throat, then these things become coupled in a funky way, like they become coupled in this explaining away kind of way, which means -- Let's say that we know you have a sore throat. 
+First of all, if we know you have a sore throat, then these two probabilities will go up higher than they were before. 
+But, then, if we know you have a sore throat and we do a culture and we find out that there are bacteria in there, then that evidence will probably get through and tell us that it's actually less likely that you have a viral infection than you thought you had before. 
+So if you have information about this system, it actually couples the two causes, which is kind of fun. 
+__: ...instantiate 
+means the same as receiving evidence? 
+No, good. 
+Thank you. 
+So "instantiate" means, "I know exactly the value of this variable." 
+Machine evidence, it is weaker. 
+It just means somehow I have some information that changes my probability distribution on the assignment for this variable, but it doesn't have to be as strong as an assignment. 
+So, for instance, you might have a situation where you have this (o->o(->D)<-o) and you have an assignment to variable d, and an assignment to variable d gives you information, gives you evidence about the value of this variable. 
+And that's enough to couple the two causes of that. 
+So, yes, the received evidence is weaker. 
+Yes? 
+__: So, very often, the case are a and c conditionally independent? 
+OK. 
+Good. 
+So formulate your question precisely and then we'll answer it. 
+Are a and c conditionally independent, given b? 
+__: Yes. 
+Yes. 
+__: So you can't really tell the serial connections and the diverging connection unless you had a (inaudible). 
+That's right. 
+That's exactly right and, in fact, you can computationally -- I mean, it turns out eventually -- you can turn any picture like this into one like that. 
+I mean, you can change the numbers in a graph. 
+You can change the numbers in a Bayesian network in such a way that if you wanted, you could turn a serial connection into a diverging connection or a diverging connection into a serial connection. 
+Some arrows, you can actually turn around. 
+So, I'm using this language of causes and effects, of causes and symptoms. 
+It gives us an interpretation of these arrows that makes them pretty intuitive, more intuitive for humans to specify. 
+It turns out that you can use these nodes and arrows to specify relationships that aren't causal and, you know, philosophers argue about what causality means and it's very complicated and so on. 
+But, a very intuitive way to use this notation is to try to make the arrows kind of correspond to causation. 
+But you're right. 
+But these two cases are really very, very similar and kind of deep down formally, you could just turn one and do the other. 
+But that one is fundamentally different. 
+OK. 
+So let me, then, define from these three cases a general notion that's going to become important when we talk about how to do inference in these networks, and we'll practice with this idea for a bit. 
+==========
+Two variables a and b are -- I'm coining a term here -- "d-separated" if and only if for every path between them, there is an intermediare variable V such that either o the connection is (serial or diverging) and v is known o the connection is converging and neither v nor any descendant has evidence. 
+The opposite of "d-separated," not d-separated, we'll call "d-connected." 
+In the absence of any evidence -- so no variables are instantiated -- are a and c d-separated? 
+No. So they're connected. 
+How about b and d? 
+Let's do it. 
+We have to find out something about every path from b to d. 
+How many paths are there from b to d? 
+__: Two So, now, each one counts as satisfying the rules there. 
+So let's take this half. 
+Is it serial or diverging or converging? 
+__: Diverging. 
+It's diverging and v is known. 
+No. So, the whole thing is not d-separated? 
+So it's d-connected. 
+OK. 
+==========
+This is with no instantiations. 
+So information flows through this graph, at least it flows over this way. 
+Does information flow down this way? 
+No. This path would have satisfied the rules. 
+This one let the cat out of the bag, but this one would have been OK. 
+So here's a question: What piece of evidence would let us have d-connection between b and d? 
+A. So if a is instantiated, then, b and d are d-separated. 
+So, if we know a, then this path was OK, according to case 1, and this path is OK, according to case 2. So if we know a, information doesn't go from b to d. 
+__: If we know a, c doesn't work because why. 
+Because we don't know anything about c. 
+So, in these converging connections, the only kind of information that can propagate through is if we know something about c because if you took a away, this piece of network structure says, wrongfully, b and d are independent causes of c. 
+__: When we started off on this, we talked about conditional independence. 
+So "d-separated" is the same as conditional independence. 
+Yes, it will be. 
+__: So like when you have a long path, how do you know whether it's converging or diverging? 
+Well, so, remember, a path, itself, is not diverging or converging, right? 
+So one way to think about this is that information is going to flow along a path, unless it's cut off, for some reason, and it's cut off at a node, and these are the two kinds of cuttings- off that we could have. 
+So there's a variable v that's going to be the cut-off; it's going to be the problem. 
+And it's a problem if it's known and the connection through it is either serial or diverging, and it's also a problem if it has no evidence that it's converging. 
+Those are the things that can cut it off. 
+Variables, themselves, are not converging or diverging or serial but paths through variables are. 
+So what we discovered here so far was that if we don't have any information, then b and d are not d-separated. 
+Information can flow from b to d. 
+Then, we figured out that if somebody told us the value of a, then b and d become d-separated. 
+Now, what if someone tells us the value of c? 
+A and C? __: B and d becomes d-connected? 
+They become connected, again. 
+So we have the two paths, right, and for them to be d-separated, both halves have to be blocked. 
+This path is blocked when a is instantiated. 
+This path is blocked when c has no information, but if we give information to c, it becomes unblocked. 
+It opens the floodgates. 
+So that little example, actually, gives us a lot of the case of a lot of what's going on. 
+So is everybody OK with the four-variable thing? 
+==========
+Then we'll come back to the bigger one. 
+So the question was, what if b is uninstantiated? 
+So let's ask a particular concrete question. 
+So let's ask the question: Is a d-separated from e? 
+So we're going to ask the question: What's the relationship between a and e? 
+So let's find all the paths between a and e. 
+There's one that goes like that. 
+There's one that goes like that. 
+And there's one that goes like that. 
+I think that's all we have between a and e, right? 
+So, now, let's take the first path. 
+Remember, the idea is to ask the question, are a and e d-separated? 
+We want to say, "Do all the paths have a blockage? 
+If all the paths have a blockage, they're d-separated." 
+So, does this path, a-b, b-e, have a blockage? 
+How about this one? 
+No. How about this one? 
+Converging? 
+OK. 
+Good. 
+So they have a converging connection here but it's not blocked because we have evidence all the way down here (M). 
+So this path is not blocked. 
+So they are not d-separated. 
+We don't have to go anymore. 
+So a and e are connected. 
+Let's see. 
+And it's clearly going to go over to f and down to i. 
+Now, maybe, a and l. 
+So let's ask the question for a and l now. 
+Let me find a different colored chalk. 
+So are a and l d-separated? 
+So we have three paths -- one, two, three; one, two. 
+What am I doing? 
+Can't do that. 
+Three paths. 
+OK. 
+So let's see if all of these paths are blocked. 
+So let's take the path that goes a-b, h-j, i-l. 
+Can we find a blockage? 
+Let's see. 
+This is not a blockage. 
+No, it looks like we're connected. 
+This is a very connected graph. 
+==========
+So that's the notion behind d-separation, anyways, to build up the intuition -- if variables or two variables are d-separated, then if you change your uncertainty in one, it won't change the certainty in the other one. 
+These paths are paths along which information can propagate. 
+Now, let's make this concrete entirely by doing the probability theory of it all and then next time, we'll see how we can exploit the idea of d-separation to do inference efficiently in these graphs. 
+That's the plan. 
+OK. 
+==========
+So a Bayes net has -- These things get called Bayesian networks, sometimes with "belief" inserted here; sometimes without the Bayesian, sometimes they get called "belief networks." 
+It depends on who you talk to. 
+OK. 
+So what do they have? 
+They have a set of variables each of which can take on a finite set of values, a set of arcs between them, they're directed arcs, I should say, but it has to be acyclic. 
+So, you've all seen directed acyclic graphs. 
+Anyway, the important point is that there's no cycle of arcs. 
+You can't follow the arrows and get back to where you started. 
+And, then, here's the probabilistic part: Every node, a, with parents b1 through bn, has a probability distribution, a probability of a, given b1 ... 
+bn specified. 
+So every node has a probability distribution that comes along with it, and that probability distribution specifies the distribution of the values in that node, given the assignments for the values in the parents. 
+And, then, there's the theorem that somebody had to go to the trouble to prove which is, "If a and b are d-separated, given the total evidence, then, the probability of a, given e = P(A|B,e). 
+That was the question about conditional independence. 
+But conditional independence is the statement about probabilities which is a low-level of reasoning and, sometimes, you can just do this graph theoretic d-separation stuff, more easily and that tells you about which things you're dependent on which other things. 
+OK. 
+==========
+So here's another important sort of theorem, the chain rule of probabilities. 
+Notation: So let's say we have a whole bunch of variables, b1 through bn. 
+I use big letters to stand for variables and little letters to stand for their values. 
+So I'm going to write this out in complete detail and then I'm going to show you what I tend to write, and you can tell me whether you want me to stick with the details or not. 
+But let's assume that they're Boolean variables, OK? 
+The probability of V1 = v1 and V2 = v2 and, etc., and Vn = vn, is equal to the product over all these variables, of the probability of Vi= vi children, the parents of vi. 
+OK. 
+So this is actually pretty cool and pretty important So we're saying that the problem with the joint probability distribution -- so this an assignment of values for all the variables any assignment that you want, that that probability distribution is the product of all the individual probability distributions that are started in the nodes of the graph. 
+Right? 
+So the parents of vi are just the nodes that have arcs into vi. 
+All right, let's do an example. 
+So there's my graph. 
+And now we'll compute the probability -- So this is where I started using the notation of a and b and c and d. 
+I'm going to let -- When I write something like this, what I mean is, the probability that a is true and be is true and c is true and d is true. 
+And I'll put bars over the top if I mean false, instead of writing the probability that a equals true and b equals true and c equals true and d equals true because that just gets too tedious. 
+OK. 
+So the problem that a and b and c and d is equal to -- OK, according to that rule -- Well, let's do it using conditioning, using methods that we studied last time, and we'll see if we get the same results as if we did it that way, according to the chain rule. 
+So let's divide this up into the probability of d, given a and b and c has the probability of a and d. 
+Is that step OK? 
+By the definition of conditional probability, I do believe it's OK, no matter what. 
+That didn't hinge on anything to do with that arrow. 
+Now let's look at the probability of d, given a and b and c. 
+What is that equal to? 
+There's a d-separation relation. 
+D is separated from which other variables? 
+By whom? 
+It's d-separated from a by c. 
+Right, so a is d-separated from d by c. 
+And a is d-separated from, and b is separated from d by c. 
+That is to say, if we knew c, it would cut off the connection between a and d. 
+Information would not flow between a and d, if we knew c. 
+So, that means that the probability of d, given a and b and c, is equal to the probability of d, given c. 
+We figured out the d-separation relationships and then we applied this. 
+So it basically says, once you know c, a and b just don't tell you anything. 
+C has cut off the transmission of information from a and b down to d. 
+So the probability of d, given a and b and c, is equal to the probability of d, given c. 
+So there's a little simplification there. 
+Now, we still have to worry about the probability of a and b and c. 
+So, using the same strategy, I'm just going to re-write that to be the probability of c, given a and b, times the probability of a and b. 
+The probability of c, given a and b, well, that we can't take apart any further. 
+C depends on a, c depends on b -- there's nothing we can do about that. 
+What about the probability of a and b? 
+Are a and b d-separated? 
+__: (inaudible) Not knowing anything, a and b are d-separated. 
+So we can re-write that to be the probability of a times the probability of b. 
+Our answer is that. 
+The probability of a and b and c and d is the probability of d given c, which is the table that you would store right here, times the probability of c given a and b, which is the probability that goes here, times the probability of a times the probability of b. 
+So that's an example of the chain rule. 
+OK, for each variable, we just have to condition on its pact. 
+And we multiply those together and we get that. 
+==========
+So what that means is that if you have any independencies -- if you have anything other than all the arrows in your graph, in some sense, then you have to do less work to compute the joint distribution. 
+You have to store fewer number in your table, you have to do less work. 
+Now, it's true that there are some probability distributions for which you have to have all the arrows in there, there's no other way to represent them. 
+But there are plenty of other ones that do have some amount of d-separation and therefore give us some efficiency in calculating these things. 
+==========
+Let us conclude by doing the numerical calculations that go with those two examples. 
+So let us start with the icy problem. 
+So let's imagine that the probability of I being true is 0.7 -- OK, I just put a conditional probability table in every node. 
+That's one of the parts of my Bayesian network. 
+So we have the graph structure, and now we're going to put the conditional probability tables in every node. 
+The conditional probability table specifies the value of this node given values to the parents. 
+This node, I, has no parents and therefore I just have to assign a probability value. 
+Now -- and because these are Boolean variables in all the examples we'll do today. 
+You know that if I claim that the probability of I is 0.7, then you know the probability of not I is 0.3. 
+So I'm not going to bother writing that down. 
+Now here we have this variable, W, that depends on I. So you need to make a table of the probability of W given I. And so now it has to be indexed here by I and not I. So this now is where I abuse notation. 
+Because when I see this as a table of probability of W given I, I mean I for all values of I. And here I really mean I equals true, I equals false. 
+__: If you're asking -- using probability that W is true given a particular -- given -- some value of I Right, and so you could even -- to be absolutely rigorous about the notation here, I would say the probability W equals true given I, and the probability W equals false. 
+Of course, we don't need to fill out that part of the table. 
+But we'll do one table all the way out. 
+OK, so the probability of W is true given that I is true is going to be 0.8. 
+That's to say, if the roads are icy, then 0.8 chance that Watson going to crash his car. 
+And then, if the roads are not icy, then in our little example, he is such a bad driver that the probability is 0.1 that he's going to crash anyway. 
+And then this would be 0.2 and 0.9. 
+These numbers don't add up to one; these do. 
+We're going to assume that Holmes and Watson are indistinguishable in their guidance skills. 
+And so this same table also applies to that. 
+I am going to go through some reasoning in these graphs using the methods we already learned last time. 
+Basically, Bayes rule and conditioning -- to figure out some answers and kind of see how it works. 
+And then next time, which will be a week from today, we'll look at an algorithm that does this systematically. 
+==========
+So let's say we want to know -- just a priori, without any information -- what's the probability that Watson is going to crash? 
+How would you go about computing the probability that Watson is going to crash, given the information we have? 
+We want to know -- we don't know the probability Watson's going to crash. 
+We know the probability he's going to crash given that it's icy and given that it's not icy. 
+Does that suggest a technique from last time? 
+==========
+A little way of decomposing a problem? 
+P(W) = P(W|I)P(I) + P(W|!I)P(!I) 
+Sometimes you know the little pieces of a bigger question. 
+You can put them together. 
+What's the probability that Watson crashes, given that it's icy? 
+0.8. 
+And the probability that it's icy? 
+0.7. 
+Probability that Watson crashes given that it's not icy? 
+0.1. 
+Probability that it's not icy? 
+0.3. 
+So we get 0.56 plus 0.03 equals 0.59. 
+OK? 
+Now -- so the same is true for Holmes, right, because they have the same probability table, same driving abilities. 
+Now we find out that W is true. 
+Watson has crashed. 
+==========
+So let's figure out what that tells us about whether it's icy, and what that tells us about Holmes's situation. 
+So we want to know what's the probability that it's icy, given that Watson crashed? 
+Well, our arrows don't go in that direction, and so we don't have tables that tell us the probabilities in that direction. 
+So what do you do when you have conditional probability that doesn't go in the direction you want to be going? 
+Bayes' Rule, yes. 
+OK, that's Bayes' Rule. 
+So the probability that Watson crashes given that it's icy is? 
+0.8. 
+Probability of icy is 0.7. 
+OK, now -- and the probability of Watson crashing we happen to have conveniently just calculated is 0.59. 
+And luckily for you I computed this already -- because I can't do arithmetic to save myself -- 0.95. 
+That seems good, right? 
+We used to have degree of belief 0.7 that it was icy, and then we heard that Watson crashed, we said, oh no, it really must be icy. 
+0.95. 
+==========
+Now let's see what do we think about Holmes? 
+So now we want to know, what's the probability that Holmes crashes, given that Watsons crashed. 
+OK, Watson crashes -- what does that tell us about Holmes? 
+So now we seem to be a little bit stuck because -- Bayes' Rule doesn't help us here. 
+So when Bayes' Rule doesn't help, usually what you have to do is do some conditioning. 
+You may have to do some Bayes' Rule after that. 
+But you add more variables into the mix. 
+And so we can put icy over here on the right hand side. 
+So one thing is to remember how to do conditioning when you're already conditioned. 
+So this becomes the probability of H given W and I plus the probability of I given W plus the probability of H given W and not I times the probability of not I given W. So when you do that conditioning maneuver, to something that's already got a condition on the right-hand side, you just keep that condition everywhere. 
+So now we might be able to get somewhere. 
+Let's see -- probability of H, given W and I. What's that? 
+__: (inaudible) Good. 
+It's the probability of H given I. Remember -- knowing that the roads are icy, Watson's fate doesn't tell us anything about Holmes's. 
+We assume that they're not driving right behind each other, that they're not coupled in any way other than the fact that they're driving on the same road. 
+But once you know the condition of the roads, then what happens when a guy doesn't tell you anything about what happens to the other. 
+So we get probability of H given I, probability of I given W -- oh, we figured that one out already, OK -- all right, let me write it out quick first then... 
+So again, probability of H given W and not I is the probability of H given not I and then we have probability of not I... OK, so the probability of H given I is 0.8. 
+Probability of I given W is 0.95. 
+It's much more likely that it's icy. 
+Probability of H given is not I is 0.1, and probability of not I given W? 0.05. 
+The probability of I given W and the probability of not I given W have to add to 1.0. 
+And this works out to be 0.765. 
+So we started out with a probability of 0.59 that Holmes was going to crash, because when we didn't have any information on the probability that Holmes is going to crash, the probability that Watson is going to crash is the same. 
+==========
+So we started out believing with probability 0.59 that Holmes was going to crash. 
+Then when we heard that Watson really did crash, our probability of Holmes crashing went up to 0.765. 
+So we said oh gosh, the roads are icy, uh-oh, I bet he's crashing. 
+Now we want to compute one more thing. 
+So now the secretary -- the voice of reason, says "Look out the window. 
+It's not icy." 
+So now we know not I. So now we're interested in, one more time, trying to decide whether Holmes is going to come or whether we can sneak out and go have lunch. 
+So we want to know the probability of Holmes coming given that Watson crashed and it's not icy. 
+So this is just the probability of H given not I. Why is that? 
+It's a sentence involving the word "d-separated." 
+Because Holmes and Watson are d-separated, given knowledge of I. So given that we know this, these two are d-separated. 
+So for that reason, they're conditionally independent, and for that reason, we can leave the W out here. 
+So probability H given not I -- that is the same as probability of W given not I, which is ... 
+So we cut off that whole line of reasoning and everything goes back to the way it used to be. 
+END OF TAPE 
+==========

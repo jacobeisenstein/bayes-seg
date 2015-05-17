@@ -1,0 +1,446 @@
+==========
+If I have an object , mass m , in gravitational field , gravitational force is in this direction , if this is my increasing value of y , then this force , vectorially written , equals minus mg y roof .
+Since this is a one dimensional problem , we will often simply write F equals minus mg .
+This minus sign is important because that 's the increasing value of y .
+If this level here is y equals zero , then I could call this gravitational potential energy zero .
+And this is y ... Then the gravitational potential energy here equals plus mg y .
+This is u .
+So if I make a plot of the gravitational potential energy as a function of y , then I would get a straight line .
+This is zero .
+So this equals u ... equals mg y , plus sign .
+If I 'm here at point A and I move that object to point B , I , Walter Lewin , move it , I have to do positive work .
+Notice that the gravitational potential energy increases .
+If I do positive work , the gravity is doing negative work .
+If I go from A to some other point call it B prime then I do negative work .
+Notice the gravitational potential energy goes down .
+If I do negative work , then gravity is doing positive work .
+I could have chosen my zero point of potential energy anywhere I please .
+I could have chosen it right here and nothing would change other than that I offset the zero point of my potential energy .
+But again , if I go from A to B , the gravitational potential energy increases by exactly the same amount I have to do exactly the same work .
+So you are free to choose , when you are near Earth , where you choose your zero .
+Now we take the situation whereby we are not so close to the Earth .
+Here is the Earth itself .
+Of course you can also replace that by the sun if you want to .
+And this is increasing value of r .
+The distance between here and this object m equals r .
+I now know that there is a gravitational force on this object Newton 's Universal Law of Gravity and that gravitational force equals minus m M Earth G divided by this r squared , r roof so this is a vectorial notation .
+Since it is really one dimensional , we would ... Just like we did there , we would delete the arrow and we would delete the unit vector in the positive r direction and so we would simply write it this way .
+The gravitational potential energy we derived last time equals minus m M Earth G divided by r and notice , here is r and here is r squared and if you plot that , then the plot goes sort of like this .
+This is r , this is increasing potential energy all these values here are negative and you get a curve which is sort of like this .
+This is proportional to one over r .
+Now , of course , if the Earth had a radius which is this big , then , of course , this curve does not exist , it stops right here .
+If I move from point A to point B , with a mass m in my hand , notice that the gravitational potential energy increases .
+I have to do positive work , there is no difference .
+If I go from A to another point , B prime , which is closer to the Earth , notice that the gravitational potential energy decreases .
+I do negative work .
+If I do positive work , gravity is doing negative work .
+If I do negative work , gravity is doing positive work .
+Right here near Earth , where this one over r curve hits the Earth , that is , of course , exactly that line .
+That dependence on y is exactly the same as the dependence on r and then you can simplify matters when you are near Earth .
+When the gravitational acceleration doesn 't change you get a linear relation .
+But that 's only an exceptional case when you don 't move very far .
+The gravitational force is in the direction opposite the increasing potential energy .
+Notice that when I 'm here , the gravitational force is in this direction .
+Increasing potential energy is this way .
+The force is in this way .
+When I 'm here , gravitational potential energy increases in this way ; the gravitational force is in this direction .
+When I 'm here , the gravitational potential energy increases in this direction .
+The gravitational force is in this direction .
+When I 'm here , the gravitational potential energy increases in this direction .
+The gravitational force is in this direction .
+The force is always in the opposite direction than the increasing value of the potential energy .
+If I release an object at zero speed , it therefore will always move towards a lower potential energy because the force will drive it to lower potential energy .
+==========
+Now I change from gravity to a spring .
+I have a spring which is relaxed length l I call this x equals zero and I extend it over a distance x and there 's a mass m at the end and there will be a spring force .
+And that spring force ... F equals minus kx .
+It 's a one dimensional situation so I can write it without having to worry about the arrows .
+There is no friction here .
+It 's clear that if I hold this in my hand , that the force Walter Lewin equals plus kx .
+It 's in the direction of increasing x .
+If I call this point A at x equals zero and I call this point B at x equals x , then I can calculate the work that I have to do to bring it from A to B .
+So the work that Walter Lewin has to do to bring it from A to B is the integral in going from A to B of my force , dx .
+It 's a dot product , but since the angle between the two is zero degrees , the cosine of the angle is one , so I can forget about the fact that there 's a dot product .
+I move it in this direction .
+So that becomes the integral in going from zero to a position x of plus x plus kx dx , and that is one half k x squared .
+And this is what we call the potential energy of the spring .
+This is potential energy .
+It means , then , that we ... At x equals zero , we define potential energy to be zero .
+You don 't have to do that , but it would be ridiculous to do it any other way .
+So in the case that we have the near Earth situation of gravity , we had a choice where we put our zero potential energy .
+In the case that we deal with very large distances , we do not have a choice anymore .
+We defined it in such a way that the potential energy at infinity is zero .
+As a result of that , all potential energies are negative .
+And here , with the spring , you don 't have a choice , either .
+You choose ... at x equals zero , you choose potential energy to be zero .
+So if you now make a plot of the potential energy as a function of x , you get a parabola , and if you are here , if the object is here , then the force is always in the direction opposing the increasing potential energy .
+If you go this way , potential energy increases .
+So it 's clear that the force is going to be in this direction .
+If you are here , the force is always in the direction opposing increasing potential energy .
+Increasing potential energy is in this direction , so the force is in this direction .
+You see , it 's a restoring force .
+The force is always in the direction opposite to increasing potential energy .
+If you release an object here at zero speed , it will therefore go towards lower potential energy .
+The force will drive it to lower potential energy .
+If we know the force in this case , the spring force or in those cases , the gravitational force we were able to calculate the potential energy .
+Now , the question is , can we also go back ?
+Suppose we knew the potential energy .
+Can we then find the force again ?
+And the answer is yes , we can .
+Let 's take the situation of the spring first .
+We have that the potential energy u of the spring equals plus one half k x squared and if I take the derivative of that versus x then I get plus kx , but the force , the spring force itself , is minus kx , so this equals minus the spring force .
+So we have that du/dx equals minus F , and I put the x there because it 's a one dimensional problem it is only in the x direction .
+The minus sign is telling you that the force is always pointing in the direction which is opposite to increasing values of the potential energy .
+That is what the minus sign is telling you .
+It 's staring you in the face what I have been telling you for the past five minutes .
+If we have a three dimensional situation that we know the potential energy as a function of x , y and z , then we can go back and find the forces as a function of x , y and z .
+It doesn 't matter whether these are springs or whether it is gravity or whether it 's electric forces or nuclear forces , you then find that du/dx equals minus F of x , du/dy equals minus Fy and du/dz equals minus Fz .
+What does this mean ?
+It means that if you 're in three dimensional space , you move only in the x direction .
+You keep y and z constant , and the change equals minus Fx .
+That gives you the component of the force in the x direction .
+You move only in the y direction , you keep x and z constant , and then you find the component of the force in the y direction .
+We call these partial derivatives , so we don 't give them a d but we give them a little curled delta .
+If we go back to the situation where we had gravity , we had there the situation near Earth .
+We had u ... was plus mg y , so what is du/dy ?
+This is a one dimensional situation so I don 't have to use the partial derivatives .
+I can simply say du/dy .
+That is plus mg , and notice that the gravitational force was minus mg .
+Remember ?
+The minus sign is still there .
+It 's still there .
+And so you see that here , indeed , du/dy is minus the gravitational force .
+Now we take the situation that we are not near Earth we have there so we have u equals minus m M Earth G divided by r there 's only an r here so du/dr ... The derivative of one over r is minus one over r squared .
+The minus sign eats up this minus sign , so I get plus m M Earth G divided by r squared so the gravitational force ... the gravitational force equals minus that .
+It is minus du/dr and , indeed , that 's exactly what we have there minus that value .
+So whenever you know the potential as a function of space , you can always find the three components of the forces in the three orthogonal directions .
+==========
+Suppose I have a curved surface literally , a surface here in 26.100 , which sort of looks like this ... something like this .
+I call this , arbitrarily , y equals zero and I could call this u gravitational potential energy zero , for that matter .
+So this is a function y as a function of x and the curve itself represents effectively the gravitational potential energy .
+This is y and this is x .
+So the gravitational potential energy u equals mg y , but y is a function of x , so that is also u times m ... excuse me , that is m times g times that function of x .
+There are points here where du/dx equals zero .
+I 'll get a nice mg in here ... Where 's zero ... and where are those points ?
+Those points are here , here , here , here and here .
+If du/dx is zero , it means that the force the component of the force in the x direction is zero , because du/dx is minus the force in the x direction .
+So if we visit those points , for instance here , then there is , of course , gravity , mg , if there is an object there in the y direction ... in the minus y direction and there is a normal force in the plus y direction and these two exactly cancel each other .
+So the net result is that here , here , here , here and there there is no force on the object at all so the object is not going to move , it 's going to stay put .
+Well , yes , it 's going to stay put .
+However , there is a huge difference between this point here and that point there and you sense immediately that difference .
+If I put a marble here , I will have a hell of a time to keep the marble in place , because if there is a fly there in the corner of 26.100 which does something then the slightest amount of force on this one and it will start to roll off .
+In fact , what will happen is it will go to a lower potential energy .
+Here , however , if this one is offset , then it will want to go to a lower potential energy .
+The force is always opposing the direction of increasing potential energy , so the force will drive it back and so that 's why we call this a stable equilibrium .
+It will always go back to that point .
+And this is an unstable equilibrium .
+We have a setup here , and I would like to show you how that will work .
+So we do have something that is a curved object .
+It 's a track .
+Let me give you a little bit better light condition .
+So you see there , there is that object , a little ball .
+And no surprise , if I offset it from the lowest point that it will be driven back to that point that 's trivial .
+What is less trivial is that there is a point here whereby , indeed , the net forces are zero and it is not easy to achieve that , but I will try to put it there so that it , indeed , stays put .
+I 'm not too fortunate , it is very difficult .
+I 'm trying ... no ... Yeah !
+Did it .
+It 's there , it 's very unstable .
+I blow ... oh , it 's not so unstable .
+And there it goes .
+So you see , that 's the difference between stable equilibrium and unstable equilibrium .
+At the stable point , the second derivative of the potential energy versus x is positive .
+At the unstable point , the second derivative is negative .
+==========
+I 'm going to return now to my spring and I 'm going to show you that if you use the potential energy of the spring alone that you can show that an object that oscillates on a spring follows a simple harmonic motion .
+So here ... is u as a function of x , and this is the parabola that we already had which equals one half kx squared .
+Let the object be at a position x maximum here .
+It 's going to oscillate between plus x max and minus x max .
+When it is at a random position x , there is a force on it and the force is always in the direction opposing the increasing potential energy so the force is clearly in this direction .
+It 's being driven back to equilibrium .
+When it is there , it will have a certain velocity .
+The velocity could either be in this direction or it could be in that direction .
+It has a certain speed and since spring forces are conservative forces , I can now apply the conservation of mechanical energy .
+We call this a potential well .
+The object is going to oscillate in a potential well .
+Of course , it doesn 't oscillate like that .
+It really oscillates like this , of course .
+It 's a one dimensional problem .
+The total energy that I started with if I release it here at zero speed equals one half k x max squared .
+That is e total .
+That will always be the same if there is no friction of any kind and I have to assume that there is no friction .
+That must be , now , one half m v squared at a random position x , plus one half k x squared , which is the potential energy at position x .
+So this is the kinetic energy and this is the potential energy .
+v is the first derivative of position versus time , so I can write for this an x dot .
+And now what I 'm going to do , I 'm going to rewrite it slightly differently .
+I 'll bring the x dot squared to one side , my halfs go away and I divide by m , so I get plus k over m times x squared , and then I get minus k x max squared equals zero .
+Did I do that right ?
+Yes , I divide ... Oh , there 's an m here , and the m has to be here .
+And now what I 'm going to do , I 'm going to take the time derivative of this equation .
+Now you will see something remarkable falling in place .
+Just for free .
+I take the derivative versus time .
+That gives me a two x dot , but I have to apply the chain rule so I also get x double dot , the second derivative it 's the acceleration plus I get a two k over m times x , with the chain rule gives me an x dot .
+This is a constant , that 's the total energy when I started , so the whole thing equals zero .
+I lose my two , I lose my x dot because it 's zero and what do I find ?
+x double dot plus k over m equals zero .
+And this makes my day because I know this is a simple harmonic oscillation .
+You 've seen this equation before .
+We derived it in a different way .
+We didn 't use forces today .
+We only used the concept of mechanical energy , which is conserved .
+We know the solution to this equation ... There is an x here .
+I heard someone mention the x thank you very much .
+The solution is : x equals x max times the cosine omega t plus phi .
+This is the amplitude .
+And omega equals the square root of k over m , and the period for one oscillation equals two pi divided by omega .
+We were able to do this .
+We were able to apply the conservation of mechanical energy because spring forces are conservative forces .
+So you 've seen , in a completely different way , how you arrive at the same result .
+==========
+Now I 'm going to try something similar to another potential well and that potential well is a track and the track is a perfect circle .
+And I 'm going to slide down that track an object mass m , and I 'm going to evaluate the oscillation along a perfect circular track .
+And to make it as perfect as I can , I even have here a pair of compasses ... make it a ... that 's the track .
+And the track has a radius R , and at this moment in time the angle equals theta , and here is the object .
+I call this x equals zero .
+That is also , of course , where theta equals zero .
+This is increasing value of y , and I choose this y equals zero .
+And so the gravitational potential energy of this object is its own mg y , so I have to know what this y is , and therefore I have to know what this distance is .
+That 's very easy .
+This one here equals R cosine theta and so this one is R minus R cosine theta .
+So the potential energy equals mg times R one minus cosine theta , if I choose zero there .
+I 'm free to change that but that 's , of course , a logical thing to do here .
+Notice if theta equals zero and the cosine theta equals one , then you find u equals zero .
+That 's , of course ... I have defined it .
+That 's the way I defined my y equals zero .
+So u equals zero .
+Notice that when theta equals pi over two if the object were here that you find that the potential energy u equals mg R .
+That 's exactly right , because then the distance between here and the y zero is R , so this is the potential energy as a function of angle theta .
+The velocity of that object as a function of theta is given by R d theta/dt .
+And I can make you see that very easily .
+Let this be the angle d theta so it moves in a short amount of time over an angle d theta and the arc here is dS , and the radius is R .
+The definition of theta that 's the definition of theta which is in radians is that dS divided by R equals d theta .
+That 's our definition of radians .
+So I take the derivative , the time derivative , left and right , so I get the dS/dt which , of course , is the tangential velocity along that arc equals R times d theta/dt , for which you can write R theta dot .
+d theta/dt ... d theta/dt is sometimes called omega , which is the angular velocity , but keep in mind that in this case the angular velocity omega if you want to call this omega , which is the angular velocity is changing with time .
+The angular velocity is zero when you release it and is a maximum when it goes through the lowest point .
+So I can now apply the conservation of mechanical energy , because I know what the velocity is at any angle of theta and I know what the kinetic ... what the potential energy is .
+So , let the total energy be just the mechanical energy which depends on my initial conditions wherever I start .
+Maybe it 's just that I release it here with zero speed ; maybe I give it a little speed .
+It is a number , it is a constant .
+So that is going to be one half mv squared at a random angle of theta .
+And that means this is v , so that is R squared times theta dot squared .
+This is simply one half mv squared , nothing else , so this is the kinetic energy .
+Plus the potential energy , which is mg times R times one minus cosine theta .
+And this is always the same , independent of the angle of theta , because gravity is a conservative force .
+So this is the conservation of mechanical energy .
+This angle cosine theta is really a pain in the neck , and therefore what we 're going to do is something we have seen before we are going to make a small angle approximation ... small angle approximation .
+And we 're going to write for cosine theta one minus theta squared divided by two .
+That is a very , very good approximation .
+That approximation is way better than the one we did before when we simply said the cosine of theta equals one .
+Remember we did that once ?
+We said , Oh ... for theta is very small .
+The cosine of theta is about one .
+If we did that now , we would be dead in the waters , because if we said the cosine of theta is one , this becomes zero and you end up with nonsense , because it would say that the mechanical energy is changing all the time because this velocity is changing all the time .
+So we cannot do that .
+We would kill ourselves if we did that .
+The approximation is really amazingly good .
+If I give you here theta in radians and I give you here the cosine of theta and here I give you one minus theta squared over two , then if I take 1/60 of a radian and I pick 1/60 since that is approximately one degree .
+But I pick exactly 1/60 and I ask what the cosine is , that is 0.999. And then I have an 861114 .
+I just used my calculator .
+Then I calculate what one minus theta squared over two is and I find 0.999861111. That is very , very close .
+That is only ... it only differs by three parts in a billion .
+That is very close .
+That means the difference between the two is only one third of a millionth of a percent .
+Suppose now I go a little rougher and I go to one fifth of a radian , which is about 12 degrees , so this is very roughly 12 degrees .
+Then the cosine of theta equals 0.98007 , and one minus theta squared over two equals 0.98000. So that still is amazingly close that is , only differs by seven parts in 100 , 000 , so the difference is less than 1/100 of a percent .
+So with this in mind , I feel comfortable to pursue my conservation of mechanical energy .
+And I 'm going to replace this cosine theta by one minus theta squared divided by two .
+So I will continue here the center blackboard is always nice , you can see it best and I will massage that equation a little further and , of course , you can already guess what I am going to do when I massage it a little further .
+I 'm going to take the time derivative just as I did in the case of the spring .
+So we are going to get that the mechanical energy which is not changing equals one half m R squared theta dot squared plus mg R .
+Cosine squared becomes one minus theta squared over two so we have a minus times minus becomes plus so I get simply theta squared over two .
+And now I take the time derivative ... for this becomes zero ... equals ... Now , I get a two out of here , which eats up this one half , so I get m R squared , then I get theta dot , but the chain rule gives me theta double dot .
+Excuse me ?
+Anything wrong ?
+I don 't think so , thank you .
+So I have to take the derivative of this one .
+The two flips out , which eats up this two , so I get mg R and then I get a theta .
+With the chain rule , gives me a theta dot .
+I lose my m , I lose one R , I lose my theta dot I picked the wrong one ; I lose my theta dot , not the theta and what do I find ?
+That theta double dot plus g over R times theta equals zero .
+And I couldn 't be happier , because this tells me that the motion is that of a simple harmonic oscillation .
+And the solution is x ... excuse me , not x .
+Theta equals some maximum angle for theta .
+It 's the amplitude in angle times the cosine of omega t plus phi .
+This is the angle of frequency .
+It has nothing , nothing to do with that omega there , which is the angular velocity , which is changing in time .
+This is a constant , this is angular frequency and this omega equals the square root of g over R , and so the period of the oscillation is two pi times the square root of R over g .
+And when you see that , you say , Hey !
+I have seen that before .
+Where have we seen this before ?
+Almost a carbon copy of something that we have seen before .
+What is it ?
+( class murmurs ) LEWIN : Excuse me , speak louder .
+( echoing class ) : Pendulum !
+We had a pendulum whereby we had length l of a massless string .
+We had an object m hanging on the end and what was it doing ?
+It was going along a perfect arc which is exactly identical .
+The problem is the same , it 's not a surprise , because now we have a surface which is an exact , perfect arc .
+It 's a circle , we have no friction .
+We assumed with the pendulum that there was no friction either .
+So it shouldn 't surprise us that you get exactly the same period that you had with the pendulum and ... except that , of course with the pendulum , what we called l is now R .
+Gravity is the only force that does work and so it is justified to use the conservation of mechanical energy because gravity is a conservative force .
+We used the small angle approximation to make it work .
+In the case of the spring , we had that the potential energy was proportional to x squared and out came a perfect simple harmonic oscillation , no approximation necessary .
+Now we forced this potential energy ... we forced it into being dependent on theta squared .
+That 's really what we did .
+You see , that is the term of the potential energy that you have there .
+And by the approximation of cosine theta being one minus theta squared over two , we forced this term to become quadratic in theta and therefore now , with that approximation it becomes a perfect simple harmonic oscillation .
+Now comes a key question .
+I said , Gravity is really the only force that does work .
+Is that true ?
+There 's no friction for now .
+Is that really true ?
+When we had the pendulum , it 's true there is gravity .
+That 's clear .
+There 's a gravitational force , which is mg , but there is also tension .
+We never mentioned that .
+We didn 't even talk about it when we did the conservation of mechanical energy .
+When the object is here , sure , there is gravity and sure , there is no friction .
+So there is no force along the arc , but there must be a normal force .
+Is the tension not doing any work ?
+Is the normal force not doing any work ?
+Did we , perhaps , forget something ?
+Remember last week , I put my life on the line .
+I was so convinced that the conservation of mechanical energy was going to work that I almost killed myself not quite with this huge , 15 kilogram pendulum that I was swinging .
+I believed in the conservation of mechanical energy and I overlooked the tension .
+Is it possible that the tension does , perhaps , positive work ?
+If that 's the case , I could have died .
+What is the answer ?
+Is the tension doing any work and in the case of my circular track is , perhaps , the normal force doing any work ?
+What is the answer ?
+( class murmurs ) LEWIN : I want to hear it loud and clear !
+CLASS : No .
+LEWIN : No !
+Why is it no ?
+Why is it not doing any work ?
+Because what ?
+( student answers ) Exactly .
+You got it , man !
+That 's it .
+The force is always perpendicular to the direction of motion .
+And since work is a dot product between force and the direction that it travels , neither the tension nor the normal force does any work .
+So don 't overlook the force , but do appreciate the fact that they don 't do any work .
+==========
+Great !
+So now I 'm going to show you a demonstration which I find one of the most mind boggling demonstrations that I have ever seen .
+We do have a circular track .
+You have it right in front of you .
+That is a circle , although you may not think it is , but it is .
+And that circle has a radius which , according to the manufacturer , is 115 meters with an uncertainty of about ... I think it 's about five meters .
+It is extremely difficult to measure and even during transport , you think it could change .
+Let me try to clean this a little better .
+And so the radius of this ... the radius of curvature of our arc , which is also an air track , equals 115 plus or minus five meters .
+So we can calculate now what the period of oscillations is .
+The whole track is five meters long .
+So half the track is about 2 meters , so the angle theta maximum is approximately 2 meters which is half the length of the track divided by 115 and that is an extremely small angle .
+That is about 1.2 degrees , because this is in radians and this is in degrees .
+So the angle is very small , so we should be able to make a perfect prediction about the period .
+And I am going to do that .
+I take two pi times the square root of R over G and R is 115 , 115 ... I divide it by G .
+I take the square root , I multiply by two .
+I multiply by pi and I get 21.5. T and this is a prediction ... equals 21.5. The uncertainty in R is about 4.3 . Since we have the square root of R , that becomes 2.2 . So if I multiply that by .022 , I get an uncertainty of about 0.47. Let 's call this 0.5 seconds .
+So this is a hard prediction what the period of an oscillation should be 21.5 plus or minus a half second .
+Now I 'm going to observe it and we 're going to see what we 're going to ... how this compares .
+I don 't want to ... I don 't want to oscillate it ten times .
+That will take three , four , five minutes that 's too long .
+It is not really necessary because my reaction time is 0.1 second , so even if I did only one oscillation , that would be enough to see whether it is coincident with that ... consistent with that number .
+However , it is such a beautiful experiment .
+It 's so much fun to see that object go back and forth in 21 seconds , that I will go ... For your pleasure and for my own pleasure , I will go three oscillations .
+Not that it is necessary , but I will do it .
+3T is going to be something plus or minus ... and this is my reaction time , which is 0.1 second , and then we can all divide that by three and then , of course , the error will go down by a factor of three , and we will see whether this number agrees with this one .
+All right , can you imagine someone making a track like this ... air track with a radius of 115 meters ?
+I mean , what is this ?
+This may be eight meters .
+115 meters !
+That is something like ten times higher ... more 15 times higher than this ceiling .
+Amazing that people were able to do that .
+In fact , nowadays , you can 't even buy this anymore .
+This is probably some 50 years old , if not older .
+I have to get the air flowing out of all these holes .
+There are many , many small holes in here that you cannot see .
+The air is now blowing .
+And this object is going to be put on here and just because of gravity , it will go .
+That 's all it is only gravity will do work .
+Here 's the timer and we 're going to time it .
+I will start it off first and then when it comes back to a stop , I will start to time because that 's , for me , a very sharp criterion .
+When the object comes back and comes to a halt here , it 's very easy for me to start the timing .
+You may notice , as you watch , that some of the amplitude will decrease because there is ... hold it , hold it , hold it !
+Because there is , of course , a little bit of friction .
+It 's very little , but it is not zero .
+Enjoy this , just look at it .
+Isn 't this incredible ?
+It just goes simply by gravity .
+It 's like a pendulum which has a length of 115 meters .
+It 's about to complete its first oscillation .
+It goes back ... Actually , some of you may be able to see the curvature .
+You can really see that it is not straight .
+So we 're coming up to the second .
+I better get back in position .
+So when it stops here , it has made three complete oscillations .
+Sixty four point zero five .
+Let me turn this off .
+So 3T equals 64.05. I 'm lazy 64.05 , I divide that by three .
+That is 21.35 , plus or minus .03. That 's exactly in agreement with the prediction , with the uncertainty of the prediction .
+I have something very similar , and that is , again , a curved track .
+It 's not ... Oop , I hope I can retrieve that ball .
+It would be nice .
+Hmm , what happened ?
+Boy !
+You have to be ... Gee , what 's happening here ?
+Oh , yeah , I got it , got it , got it .
+Phew !
+Tricky to make a hole in here .
+This is an arc , not unlike this one .
+There 's more , a little bit more friction and , in this case , the radius is 85 centimeters .
+So we can calculate what the maximum angle is .
+The radius is 85 centimeters and the arc to the edge is about 20 centimeters .
+So we have now a situation like this .
+R equals 85 centimeters and this here is approximately 20 centimeters , so theta maximum is roughly 20 divided by 85 and that is something like 13 degrees .
+13 degrees is not a bad situation because the difference between the cosine theta and one minus theta squared over two is less than 1/100 of a percent , it is that small .
+So I can make a prediction of the period of this oscillation , predict and you can go through exactly the same exercise .
+You take two pi times the square root of R over d and you find 1.85. The uncertainty of this radius is , of course , not very large but we are not certain about the radius to about one centimeter , so it 's 85 plus or minus one centimeters .
+So that 's about a 1.2 percent error and so the error , then , in the prediction will be 0.6 percent ; it 's about .01 seconds .
+So I expect ... this is my prediction .
+Now , I really want to challenge this .01 and so now I 'm going to make the observations and surely I 'm going to do it now 10 times , because then the uncertainty will be 0.1 seconds that 's my reaction time and so I have the final period to an accuracy of .01 seconds and so we can compare these numbers directly and that is what I will do now .
+I have here the timer and I 'm going to oscillate that back and forth and that would only take 20 seconds zero it , we started here .
+We have great confidence in physics , right ?
+We believe in physics .
+We believe in the conservation of mechanical energy .
+Starts ... are you counting ?
+Is this two ?
+Yeah ?
+Is this three ?
+Four ?
+CLASS : Four .
+LEWIN : I don 't believe you .
+Okay , we start again .
+Now !
+One , two , three , four , five , six , seven ... I 'm getting nervous .
+Eight , nine , ten .
+Holy smoke !
+22.7 seconds !
+It should have been 18 !
+22.7 seconds .
+There must be something fundamentally wrong with the conservation of mechanical energy .
+Or is there something else ?
+And what is the difference between the two experiments ?
+STUDENT : Friction .
+LEWIN : Excuse me ?
+STUDENT : Friction .
+LEWIN : Oh , no , the friction is so low , that is not the reason .
+There 's a huge difference .
+Think about it when you take your shower this weekend .
+There is a huge difference between this object moving and that object moving and when you find out , that is the reason why that is way slower , not friction .
+See you next Wednesday .
+==========

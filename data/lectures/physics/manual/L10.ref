@@ -1,0 +1,494 @@
+==========
+If I have a spring ... and this is the relaxed length of the string ... spring , I call that x equals zero .
+And I extend the string ... the spring , with a p , then there is a force that wants to drive this spring back to equilibrium .
+And it is an experimental fact that many springs we call them ideal springs for many springs , this force is proportional to the displacement , x .
+So if this is x , if you make x three times larger , that restoring force is three times larger .
+This is a one dimensional problem , so to avoid the vector notation , we can simply say that the force , therefore , is minus a certain constant , which we call the spring constant this is called the spring constant and the spring constant has units newtons per meter .
+So the minus sign takes care of the direction .
+When x is positive , then the force is in the negative direction ; when F is negative , the force is in the positive direction .
+It is a restoring force .
+Whenever this linear relation between F and x holds , that is referred to as Hooke 's Law .
+How can we measure the spring constant ?
+That 's actually not too difficult .
+I can use gravity .
+Here is the spring in its relaxed situation .
+I hang on the spring a mass , m , and I make use of the fact that gravity now exerts a force on the spring , and when you find your new equilibrium this is the new equilibrium position then the spring force , of course , must be exactly the same as mg .
+No acceleration when the thing is at rest .
+And so I could now make a plot whereby I could have here x and I could have here this force F , which I know because I know the masses .
+I can change the masses .
+I can go through a whole lot of them .
+And you will see data points which scatter around a straight line .
+And the spring constant follows , then , if you take ... if you call this delta F and you call this delta x , then the spring constant , k , is delta F divided by delta x .
+So you can even measure it .
+You don 't have to start necessarily at this point where the spring is relaxed .
+You could already start when the spring is already under tension .
+That is not a problem .
+You 'll be surprised how many springs really behave very nicely according to Hooke 's Law .
+Uh , I have one here .
+It 's not a very expensive spring .
+You see it here .
+And there is here a holder on to it so it 's already a little bit under stress .
+That doesn 't make any difference .
+These marks here are 13 centimeters apart , and every time that I put one kilogram on , you will see that it goes down by roughly 13 centimeters .
+It goes down to this mark .
+I put another kilogram on , it goes down to this mark .
+I put another kilogram on and it goes back to this mark , all the way down .
+And if I take them all off ... so what I 've done is I effectively went along this curve , and if I take them off , if it is an ideal spring , then it goes back to its original length , which it does .
+That 's a requirement , of course , for an ideal spring if it behaves according to Hooke 's Law .
+Now , I can , of course , overdo things .
+I can take a spring like this one and stretch it to the point that it no longer behaves like Hooke 's Law .
+I can damage it .
+Uh , I can do permanent deformation .
+Look , that 's easy .
+For sure , Hooke 's Law is no longer active .
+Look how much longer this spring is than it was before .
+So there comes , of course , a limit how far you can go before you permanently deform your spring .
+What I have done now with that spring , probably in the beginning I went up along a straight line and then something like this must have happened .
+I got a huge extension .
+My force did not increase very much .
+And then when I relaxed , when I took my force off , the spring was longer at the ends than it was at the beginning .
+So I have a net extension which will always be there , and that 's not very nice , of course , to do that to a spring .
+So Hooke 's Law holds only within certain limitations .
+You have to , uh , obey a certain amount of discipline .
+==========
+There are ways that you can also measure the spring constant in a dynamic way , which is actually very interesting .
+Um , I have here a spring , and this spring ... this is x equals 0 , and I attach now to the spring a mass , m .
+This has to be on a frictionless surface , and you will see , when I extend it over a distance x , that you get your force , your spring force that drives it back .
+We have , of course , gravity , mg , and we have the normal force from the surface .
+So there is in the ... in the y direction , there is no acceleration , so I don 't have to worry about the forces in the y direction at all .
+If I let this thing oscillate , I let ... I release it , it will start to oscillate about this point , back and forth , then as I will show you now , you will find that the period of oscillation , the time for one whole oscillation is 2 pi times the square root of the mass m divided by the spring constant k .
+I will derive that you will see that shortly .
+In other words , if you measured the period and you knew the math , then you can calculate k .
+Alternatively , if you knew k and you measure the period , you can calculate the mass , even in the absence of gravity .
+I don 't use gravity here .
+So a spring always allows you to measure , uh , a mass even in the absence of gravity .
+The period that you see , the time that it takes for this object to oscillate once back and forth , is completely independent of how far I move it out , which is very nonintuitive , but you will see that that comes out of the derivation .
+There is no dependence on how far I move it out .
+So whether I oscillate it like this or whether I oscillate it like this , as long as Hooke 's Law holds , you will see that the period is independent of what we call that amplitude .
+So I 'm going to derive the situation now for an ideal case .
+Ideal case means Hooke 's Law must hold .
+There 's no friction , and the spring itself has negligible mass compared to this one .
+Let 's call it a massless spring .
+So now I 'm going to write down Newton 's Second Law : ma , which is all in the x direction , equals minus kx .
+a is the second derivative of position , for which I will write x double dot , mx double dot one dot is the first derivative , that 's the velocity ; two dots is the acceleration plus kx equals zero .
+I divide by m and I get x double dot plus k over m times x equals zero .
+And this is arguably the most important equation in all of physics .
+It 's a differential equation .
+Some of you may already have solved differential equations .
+The outcome of this , you will see , is very simple .
+x is , of course , changing in some way as a function of time , and when you have the correct solution for x as a function of time and you substitute that back into that differential equation , that equation will have to be satisfied .
+What would a solution be to this differential equation ?
+I 'm going to make you see this oscillation first .
+I 'm going to make you see x as a function , and I 'm going to do that in the following way .
+I have here a spray paint can which is suspended between two springs , and I can oscillate it vertically , which is your x direction , like that .
+So x changes with time .
+The time axis I will introduce by pulling on the string .
+When the spray paint is going to spray , I 'm going to pull on that string , and if I can do that at a constant speed , then you get horizontally a time axis and of course vertally ... vertically you will get the position of x .
+So I want you to just see qualitatively what kind of a weird curve x as a function of time is , which then will have to satisfy that differential equation .
+All right .
+It 's always a messy experiment because the paint is dripping , but I will try to get the spray paint going .
+There we go .
+Okay .
+Now I 'll pull ... All right .
+Will you give me a hand ?
+Yeah , could you , please ?
+I will cut it here and then you ... Be very careful , because it 's ... it is messy .
+Oh , let 's put it ... let 's take it out this way .
+Aah ... Okay , just walk back .
+Just walk yeah , great .
+I 'll hold up the top so that we can see it fine .
+Okay .
+What is ... what does it remind you of ?
+( student responds ) LEWIN : Sinusoids reminds me of a cosinusoid , by the way .
+Sinusoid or a cosine same thing .
+All right .
+Let 's try to substitute in that equation a sinusoid 's or a cosine solution , whichever one you prefer .
+Makes no difference .
+So I 'm going to substitute in this equation this is my trial function that x as a function of time is a constant , A I will get back to that in a minute times cosine omega t plus phi .
+This A we call the amplitude .
+Notice the cosine function is ... the highest value is plus one and the lowest value is minus one , so the amplitude indicates that is ... the farthest displacement from zero on this side would be plus A and on this side would be minus A .
+So that 's in meters .
+This omega we call the angular frequency .
+Don 't confuse it with angular velocity .
+We call it angular frequency , and the units are the same .
+The units are in radians per second , the same as angular velocity .
+If I advance this time little t if I advance that by 2 pi divided by omega ... if I advance this time by 2 pi divided by omega , then this angle here increases here by 2 pi radians , which is 360 degrees , and so that 's the time that it takes for the oscillation to repeat itself .
+So this is the period of the oscillation , and that is in seconds .
+And you can determine ... if you want to , you can define the frequency of the oscillations which is one over T , which we express always in terms of hertz .
+And then here we have what we call the phase angle , and I will return to that .
+That 's in radians .
+And this trial function I 'm going to substitute now into this equation .
+So the first thing I have to do , I have to find what the second derivative is of x as a function of time .
+Well , that 's my function .
+I have here first the first derivative , x dot .
+That becomes minus A omega .
+I get an omega out because there 's a time here , and now I have to take the derivative of the function itself so I get the sine of omega t plus phi .
+Of course I could have started off here with a sine curve ; I hope you realize that .
+I just picked the cosine one .
+x double dot .
+Now I get another omega out , so I get minus A omega squared .
+The derivative of the sine is the cosine .
+Cosine omega t plus phi .
+And that is also minus omega squared times x , because notice I have A cosine omega t plus phi , which itself is x .
+So now I 'm ready to substitute this result into that differential equation .
+This must always hold for any value of x , for any moment in time .
+And therefore , the only way that this can work is if omega squared is k over m .
+So omega squared must be k over m .
+And therefore , we now have the solution to this problem .
+So we have omega equals the square root of k over m and the period is 2 pi times the square root of m over k .
+And what is striking , really remarkable , that this is independent of the amplitude , and it 's also independent of this angle phi , this phase angle .
+What is this business of this phase angle ?
+It 's a peculiar thing that we have there .
+Well , you can think about the physics , actually .
+When I start this oscillation , I have a choice of two things .
+I can start it off at a certain position which I can choose .
+I can give it a certain displacement from zero and simply let it go .
+But I can also , when I let it go , give it a certain velocity .
+That 's my choice .
+So I have two choices : where I let it go and what velocity I give it .
+And that is reflected in my solution : namely , that ultimately in the solution I got the result of A and the result of phi , which doesn 't determine the period , but it results from what we call my initial conditions .
+And I want to do an example whereby you see how A and phi immediately follow from the initial conditions .
+So in this example , I release the object at x equals zero and t equals zero .
+So I release it at the equilibrium .
+At that moment in time , I give it a velocity , which is minus three meters per second .
+My units are always in MKS units .
+The spring constant k equals ten newtons per meter , and the mass of the object is 0.1 kilograms .
+And now I can ask you what now is x as a function of time , including the amplitude A , including the phase angle phi ?
+Well , let 's first calculate omega .
+That is the square root of k over m .
+That would be ten radians per second .
+The period T , which is 2 pi divided by omega , would be roughly 6.28 seconds .
+And the frequency f would be about 0.16 hertz , just to get some numbers .
+1.6 hertz sorry .
+This is not my day .
+This is 0.628 , and this is 1.6 hertz .
+2 pi divided by omega ; you can see this is ten .
+Six divided by ten is about 0.6. All right , so now I know that at t equals zero , x equals zero .
+So I see my solution right there .
+Right here I put in t equals zero , and I know that x is zero .
+So I get zero equals A times the cosine of phi .
+Well , A is not zero .
+If I release that thing at equilibrium and I give it a velocity of three meters per second , it 's going to oscillate .
+So A is not zero .
+So the only solution is that cosine phi is zero , and so that leaves me with phi is pi over two , or phi is 3 pi ... phi is 3 pi over two .
+That 's the only two possibilities .
+Now I go to my next initial condition , that the velocity is minus 3 .
+Now , here you see the equation for the velocity .
+This is minus 3 at t equals zero .
+So minus 3 equals minus A , and A is ... we don 't know yet .
+Minus A , and then we have omega squared .
+Omega sorry which is ten .
+t is zero .
+I get the sine of phi .
+If I pick pi over 2 , then the sine of phi is 1 .
+And so you find immediately that A equals plus 0.3 And so the solution now , which includes now phi and A , is that x equals plus 0.3 times the cosine of omega , which is 10t plus pi over 2 .
+So you see that the initial conditions ... what the conditions are at t equals zero , they determine my A and they determine my phase angle .
+If you had chosen this as the phase angle 3 pi over 2 that would have been fine .
+You would have found a minus sign here , and that 's exactly the same .
+So you would have found nothing different .
+==========
+I want to demonstrate to you that the period of oscillations , nonintuitive as that may be , is independent of the amplitude that I give the object .
+And I want to do that here with this air track .
+I have a ... an object here .
+This object has a mass 186 plus or minus 1 gram .
+Call it m1 .
+I 'm going to oscillate it and we 're going to measure the periods .
+But instead of measuring one period , I 'm going to measure ten periods , because that gives me a smaller uncertainty , a smaller relative error in my measurements .
+So I 'm going to do it as an amplitude , which is 15 centimeters .
+Let 's make it 20 centimeters .
+So I get 10T , I get a certain number , and I get an error which is my reaction error , which is about a tenth of a second .
+That 's about the reaction error that we all have , roughly .
+Then I will do it at 40 centimeters .
+We get a 10T , and we get , again , plus or minus 0.1 seconds .
+And we 'll see how much they differ .
+They should be the same , if this is an ideal spring , within the uncertainty of my measurements .
+You see the timing there .
+I 'm going to give it a 20 centimeter offset , which is here , and then I will start it when it comes back here .
+So I will allow it one oscillation first .
+That 's easier for me to see it stand still when I start it .
+There we go .
+One ... two ... three ... four ... five ... six ... seven ... eight ... nine ... ten .
+What do we see ?
+15.16. 15.16 seconds .
+By the way , you can derive the spring constant from this now because you know the mass and you know the time .
+Now I 'm going to give it a displacement , an amplitude which is twice as high .
+So I make it 40 centimeters .
+So this is ten .
+40 centimeters a huge displacement .
+Now ... one ... two ... three ... four ... five ... six ... seven ... eight ... nine ... ten .
+15.13. Fantastic agreement within the uncertainty of my measurements .
+They 're within 3/100 of a second .
+Of course if you try it many times , you won 't always get that close , because my reaction time is really not much better than a tenth of a second .
+Now I will show you something else which is quite interesting , and that is how the behavior of the period is on the ... on the mass of the object .
+I have here another car which weighs roughly the same .
+Uh , I 'm going to add the two together , and so we get m2 is about 372 plus or minus 1 gram .
+The plus or minus 1 comes in because our scale is no more accurate than one gram .
+So we put them both on the scale and we find this to be the uncertainty .
+So now I 'm going to measure the ten periods of this object with mass m2 , so twice the mass .
+So that should be the square root of m2 divided by m1 times 10 times the period of m1 .
+And so I can make a prediction because this is the square root of two , and I know what this is .
+So I will take my calculator and I will take the square root of two , and I multiply that by , uh , let 's take 15.15. And so that comes out to be 21.42. 21.42. It 's not clear that this two is meaningful .
+And now comes the 64 question : What is the uncertainty ?
+This is a prediction .
+And this now becomes a little tricky .
+So what I 'm telling you now may confuse you a bit .
+It 's not meant to be , but I really won 't hold you responsible for it .
+You may now think that the uncertainty in these measurements follows from the uncertainty in this , which is true , which is about 0.6 , and from the uncertainty in this , so this has about an uncertainty of 0.6 . I got it low because I measured ten oscillations , you see ?
+The uncertainty is only one out of 150 , which is low .
+You may think that the uncertainty in there equals the square root of 372 plus or minus 1 divided by 186 plus or minus 1 .
+And now you may argue , and it 's completely reasonable that you would argue that way you would say , Well , this is roughly a quarter of a percent error here under the square root and this is roughly half a percent error .
+One out of 200 is about half .
+So you would add up the two errors a quarter plus half , that 's about 0.7 and because of the square roots , that becomes 0.35 , and that 's wrong .
+And the reason why that is completely wrong that has to do with the fact that these two errors are coupled to each other .
+See , we ... the 186 is included in the 372 .
+The best way I can show you this suppose I measured m1 divided by m1 , which would be 186 plus or minus 1 divided by 186 plus or minus 1 .
+That number is one with a hundred zeros .
+This number is one .
+You have the mass of one object ; you divide it by the same object .
+Whereas if you would say , Ah , this is a half a percent error and this is a half a percent error , you would say the ratio has an error of 1 , and that 's not the case .
+So I will not bother you with that .
+I will not hold you responsible for that , but it turns out that if you do it correctly and you take the error of this into account , of about 0.6 , that the error in this ratio is really much less than .2 . You can almost forget about it .
+I will allow , generously , for a 1 error in the final answer , and so I stick to my prediction that the 10T of double the mass is going to be like this .
+And now we 're going to get the observation : 10T times m2 , which is double the mass , and that , of course , always has my uncertainty of my reaction time .
+There 's nothing I can do about that .
+And we will compare these two numbers .
+So I will put the other mass on top of it .
+Goes here .
+Tape them together so that they won 't fall off .
+There we go .
+So , I hope I did that correctly .
+The square root of two times 15.15. We 'll give it a ... amplitude , something like 30 , maybe 35 centimeters .
+There we go .
+One ... two much slower , eh ?
+You see that .
+Three ... four ... five ... six ... seven ... eight ... nine I 'm not looking ten .
+21.36. 21.36. You can round it off if you want to , and you see that the agreement is spectacular .
+Within the uncertainty of my measurements , it comes out amazingly well .
+You could have removed this two , of course , because if you have an uncertainty of .2 here , it 's a little silly to have that little two hanging there .
+But you see that indeed this spring is very close to an ideal spring .
+It obeys Hooke 's Law , and it is also nearly massless .
+==========
+Here is the pendulum .
+Here is the mass , and it 's offset at an angle , theta .
+The length of the pendulum is l , the length of the string .
+There is gravity here , mg , and the other force on the object , the only other force , is the tension , T .
+Don 't confuse that with period T ; this is tension T .
+It 's in newtons .
+Those are the only two forces .
+There is nothing else .
+The thing is going to arc around like this and it 's going to oscillate .
+I call this the y direction and I call this the x direction , and here x equals 0 .
+Well , I 'm going to decompose the tension into the y and into the x direction as we have done before .
+So this is going to be the y component .
+This is the x component .
+So this y component equals T cosine theta and the x component equals T sine theta .
+And now I 'm going to write down the differential equations of motion , first in the x direction .
+Second ... Newton 's Second Law : ma equals ... this is the only force in the x direction .
+It 's a restoring force , just like with the spring .
+I therefore have to give it a minus sign .
+So equals minus T times the sine of theta .
+T itself could easily be a function of theta .
+So I have to allow for that .
+The sine of theta equals x if it 's here at position x divided by l , and so I can write for this minus T which may be a function of theta times x divided by l .
+That is my differential equation in the x direction , and I prefer always for this a to write down x double dot .
+Now the y direction .
+In the y direction , I have m y double dot equals ... this is my plus direction , so I have T cosine theta minus mg .
+This is equation one and this is equation two .
+And so now we have to solve two coupled differential equations , which is a hopeless task .
+It looks like a zoo , and it is a zoo .
+And now we 're going to make some approximations , and the approximations that we will make which we will often see in physics when something oscillates what we call the small angle approximations .
+Small angle we will not allow theta to become too large .
+I 'll be quantitative , what I mean by too large .
+When theta , which is in radians , equals much , much less than one , we call that a small angle .
+If that 's the case , the cosine of theta is very close to 1 .
+You will say , Well , blah , blah , blah how close to 1 ?
+Okay , five degrees the cosine is 0.996. That 's close to 1 .
+Ten degrees the cosine is 0.985. That 's only 1 different from one .
+So even at ten degrees , you 're doing extremely well .
+So , this is consequence number one of the small angle approximation .
+But there is a second consequence of the small angle approximation .
+Look at the excursion that this object made from equilibrium in the x direction .
+That 's this big .
+Look at the excursion it makes in the y direction .
+It 's this small .
+It 's way smaller than the excursion in the x direction , provided that your angle is small .
+I 'll give you an example .
+At five degrees , this excursion is only 4 of this excursion .
+At ten degrees , this excursion is only 9 of this excursion .
+And since the excursion in the y direction is so much smaller than in the x direction , we say that the acceleration in the y direction can be approximated to be roughly zero .
+There is almost no acceleration in the y direction .
+With these two conclusions , which follow from the small angle approximation , I go back to my equation number two , and I find that zero equals T , which could be a function of theta .
+The cosine of theta is one minus mg .
+So I find that T equals mg .
+Notice it 's no longer even a function of theta .
+So I simply have , in my small angle approximation , that I can make T the same as mg .
+It 's approximately , but I still put an equals sign there .
+I substitute this back in my equation number one .
+And so now I get that m times x double dot and now I bring this on the other side plus T is now mg mg times x divided by l equals zero .
+And now comes the wonderful result : x double dot plus g over l times x equals zero .
+And this is such a beautiful result that it almost makes me cry .
+This is a simple harmonic oscillation .
+This equation looks like a carbon copy of the one that we have there .
+Here we have k over m , and there we have g over l .
+That 's all .
+Other than that , there is no difference .
+So you can write down immediately the solution to this differential equation .
+x will be some amplitude times the cosine of omega t plus phi , just as we had before , and omega will now be the square root of g over l .
+And so the period of the pendulum will be 2 pi times the square root of l over g .
+Just falls into our lap , because we did all the work .
+I want you to realize that these results for a pendulum have their restrictions .
+Small angles , and we discussed quantitatively how small you would like to allow , and also the mass has to be exclusively in here and not in the string .
+We call that a massless string .
+To give you some rough idea of what these periods will be , substitute for l , one meter .
+Now , you take for g 9.8 , take the square root and you multiply by 2 pi , and what you find is that the period is about two seconds .
+So a pendulum one meter long has a period of about two seconds .
+One ... two ... three ... four ... five ... six .
+So to go from here to here is about one second .
+If I make it four times shorter l four times shorter the square root of four is two .
+Then the period is ch ... the period is changing .
+Four times shorter , the period must be two times shorter .
+To make roughly 25 centimeters .
+I 'm not trying to be very quantitative here .
+Now the whole period must be about one second .
+One ... two ... three ... four ... five ... six .
+Roughly one second .
+So , you see that the period is extremely sensitive to the length of the string .
+==========
+I now want to compare with you the results that we have for the spring with the results that we have from the pendulum to give you some further insight .
+We have the string , and we have the pendulum .
+And I 'm only going to look at the period T , which here is 2 pi divided by the square root of m over k , and here is 2 pi times the square root of l over g .
+If I look here , there is a mass in here .
+If I look here , it 's independent of the mass .
+Why is there a mass in here ?
+That is very easy to see .
+If I take a spring and I extend the spring over a certain distance , then there is a certain force that I feel .
+That force is independent of the mass that I put at the end of the spring .
+The spring doesn 't know what the mass is you 're going to put on .
+All it knows is I am too long and I want to go back to equilibrium .
+That force is a fixed force .
+If I double the mass , that fixed force will give , on double the mass , half the acceleration .
+If the acceleration goes down , the period of oscillation goes up .
+It 's very clear .
+So you can immediately see that with the spring , the mass must enter into the period .
+Now go to the pendulum .
+If I double the mass of my bob at the end of a pendulum , then the vertical component of the tension will also double .
+That means this restoring force , which is proportional with the tension , will also double .
+So now the restoring force doubles and the mass doubles , the acceleration remains the same , the period remains the same .
+So you can simply argue that there should be no mass in here , and there isn 't .
+How about this k ?
+If k is high , then a spring is stiff .
+What does that mean , a stiff spring ?
+It means that if I give it a small extension , that the spring force is huge .
+If I have a huge spring force , the acceleration on a given mass will be high .
+If I have a high acceleration , the period will be short , and that 's exactly what you see .
+If k is high , the period will be short .
+g .
+Imagine that you have a pendulum in outer space , that there is no gravity , nothing .
+The pendulum will not swing .
+The period of the pendulum will be infinitely long .
+Going to the shuttle where the perceived gravity in their frame of reference perceived ; they 're weightless , remember their perceived gravity is zero .
+You take a pendulum in the shuttle and you put it at this angle , you let it go , it will stay there forever and ever and ever .
+The period is infinitely long .
+But take a spring in the shuttle and let the spring oscillate , and it does .
+So you can actually measure the mass of an object using a spring on the shuttle and let it oscillate if you know the spring constant , and that 's the way it 's actually done .
+So , you see indeed that these things make sense when you think about it in a rational way .
+We have here in 26 100 the mother of all pendulums .
+It is a pendulum ... ( object clangs ) Oops .
+It is a pendulum which is 5.1 meters long , and there is a mass at the end of it which is 15 kilograms .
+The length is 5.18 meters and the uncertainty is about five centimeters .
+We can 't measure it any better .
+And the mass at the end of it , which doesn 't enter into the period , is about 15 kilograms .
+The period , which is 2 pi times the square root of l over g , if you substitute in your length of 5.1 meters , you will find 4.57 seconds .
+4.5 second ... seven .
+Since you have a 1 error in l , you 're going to have a half a percent error in your period , so that is about 0.02 seconds .
+So this is my prediction .
+And now I 'm going to oscillate it for you and I 'm going to do it from two different angles .
+I 'm going to do at a five degree angle and I 'm going to do it at a ten degree angle .
+In order to get my relative error down , I will oscillate ten times .
+So I 'm going to get at an angle theta maximum of roughly five degrees .
+I get ten T equals something plus or minus my reaction time , which is 0.1 of a second .
+And then I will do it from ten degrees and I will do again ten T , and again my reaction time is not much better than 0.1 second .
+So , let 's do that first .
+I will move this out of the way because if that 15 kilogram object hits this , that is not funny .
+All right .
+Zero .
+I have a mark here on the floor .
+This is about five degrees , and this is about ten degrees .
+I will first do it from five degrees .
+I will let it swing one oscillation , and when it comes to a halt here , I will start the timer .
+That 's , for me , the easiest .
+But I count on you when it comes to counting .
+You ready ?
+You ready ?
+You 're sure ?
+I 'm ready , too .
+Okay .
+Now , keep counting and don 't confuse me again , now .
+You 're completely responsible for the counting .
+So you only have to tell me is when ... when eight or nine is coming up .
+That 's all I want to know .
+Don 't even bother me with three .
+Don 't even bother me with four .
+Just let me know when I have to get in position for the final kill .
+Notice there 's almost no denting on this pendulum .
+The amplitude remains almost the same , whereas with the ... with the air track you could actually see that there was already some kind of friction ... Where are we now ?
+STUDENTS : Nine .
+LEWIN : Nine ?
+Nine , right ?
+STUDENTS : Ten .
+STUDENT : Oh , my God !
+LEWIN : 45.70. 45.70. Where is my chalk ?
+45.70. What was my prediction ?
+( students responding ) ( applause ) LEWIN : Yeah !
+Yeah !
+Yeah , exactly .
+You get the picture .
+That is pure luck , because my accuracy is no better than a tenth of a second .
+Now we do from ten ... ten degrees , and I want to show you now that the effect on the angle you go from five to ten is small , so small that you cannot measure it within the accuracy of your measurement .
+Yeah !
+Okay .
+Again , relax and count .
+Aah , nerve wracking !
+Ooh !
+Where are we now ?
+STUDENTS : Seven .
+LEWIN : Seven .
+STUDENTS : Eight .
+Nine .
+Ten .
+Oh !
+( applause ) LEWIN : Did you expect anything else ?
+( students laugh ) LEWIN : 45.75. One of the most remarkable things I just mentioned to you is that the period of the oscillations is independent of the mass of the object .
+That would mean if I joined the bob and I swing down with the bob that you should get that same period .
+Or should you not ?
+I 'm asking you a question before we do this awful experiment .
+Would the period come out to be the same or not ?
+( students respond ) LEWIN : Some of you think it 's the same .
+Have you thought about it , that I 'm a little bit taller than this object and that therefore maybe effectively the length of the string has become a little less if I sit up like this ?
+And if the length of the string is a little less , the period would be a little shorter .
+Yeah ?
+Be prepared for that .
+On the other hand , I 'm also pre ... well , I 'm not quite prepared for it .
+( students laughing ) LEWIN : I will try to hold my body as horizontal as I possibly can in order to be at the same level as the bob .
+I will start when I come to a halt here .
+There we go .
+( students laughing ) LEWIN : Now !
+You count !
+This hurts !
+Aah !
+( students counting in background ) ( laughter continues ) LEWIN : I want to hear you loud !
+STUDENTS : Four !
+LEWIN ( groaning ) : Oh ... STUDENTS : Five !
+YOUNG MAN : Halfway !
+LEWIN : Thank you !
+STUDENTS : Six ... LEWIN ( groaning ) : Oh ... STUDENTS : Seven ... Eight .
+LEWIN ( groaning ) : Aah ... STUDENTS : Nine ... Ten !
+LEWIN : Ah !
+STUDENTS : Oh !
+( cheering and applause ) LEWIN : Ten T with Walter Lewin .
+45.6 plus or minus 0.1 second .
+Physics works , I 'm telling you !
+I 'll see you Monday .
+Have a good weekend .
+( applause )
+==========

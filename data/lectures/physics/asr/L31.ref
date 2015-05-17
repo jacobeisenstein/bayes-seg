@@ -1,0 +1,598 @@
+==========
+so far we had oh
+calculated the periods of lots of oscillators pendulums it s it s
+worth school loops
+we estimate a cake
+more the equilibrium and then they were oscillating at their own preferred frequency
+today i
+discuss with you what happens if i force a pond a system a frequency of my own
+so we call it s
+oscillations
+i can think is spring system as we had before
+this is x equals zero is tax
+and we have the spring force
+very familiar minus k x but now is object here which is mass m
+i m going to air force to it s
+and zero which is the amplitude of the force
+times the cosine of omega t so i m going to force it s in a sinusoidal fat action
+with a frequency that i choose
+this frequency is not the frequency with which the system wants to oscillate is the one that i i choose and i can vary that and the question is what will the oh jack do well
+we have newton s second at an a
+equals minus k acts
+plus that force and zero cosine omega t
+a is x doubled lot
+so i get x doubled hot
+us i bring this then okay over m times x equals zero
+divided by m times the cosine omega t
+know the question is what is the solution to this differential equation
+very different sleek different poem which so before because the before we had is zero here
+no we have here a driving force
+it s clear that if you wait long enough about sooner or later that system will have to start oscillating at its frequency
+in the beginning is maybe a little different the beginning that may want to do its own thing but ultimately if i take you
+by your armed and i shake you back and forth
+the beginning you may object with sooner or later
+you have to go with the frequency that i force myself a pond and when we reach that states we call that
+the steady state as opposed to the beginning
+when things are a little bit confuse which we call the trends in phase so in a steady state
+the object much somehow them must have a frequency
+which is the same as the driver and it has some them to today
+and i want to evaluate with you that amplitude a
+so this is my trial function that i m going to put into this differential equation x got
+equals minus a e
+omega t sine omega t
+x double got equals minus a omega squared cosine omega t
+and so i m
+substitute that in here
+so i m
+get minus a
+omega squared
+cosine omega t
+plus s okay over m times a cosine
+omega t and that leak almost
+have zero divided by m
+times the cosine of omega t in that must always holds so therefore i can
+divide out my cosine omega t
+i can bring the a s together so i get a times okay over them
+minus omega squared
+equals zero divided by m
+now the scale for an
+is something that we re familiar with
+if we d that the system knew its own thing we bring it away from aquarium and we don t drive it
+than we know that omega l squared which i will give is zero
+equals p over them
+this is the frequency that we have dealt with before this is the driving frequency it s very different
+and so i m going to substitute in here for okay over them omega zero squared
+and so i find then that the amplitude
+of this object here at the end of the spring will be at zero divided by m
+divided by omega zero squared minus omega square
+and this amplitude is very remarkable correct restrict
+first of all if i drive the system at a very low frequency
+so that omega is much much smaller than omega zero
+we call omega zero often the natural frequency is the one that it lights
+if you have only a much much less than omega zero this goes omega zero squared is okay over them
+so you get an amplitude a
+which is at zero divided by k
+if you d go omega way above the natural frequency
+or let s say omega goes to infinity
+becomes very very large then downstairs become very very large to a goes to zero
+but now what happens when omega is exactly omega zero then the system goes whack e
+look what happened the downstairs become zero and the amplitude goes to infinity
+and that s what we call resonance
+to we drive it at that frequency the system goes completely desert
+i can make a plot of a as a function of frequency
+when i say omega you can obviously always change too
+it s if you prefer that because omega
+it s two pi times f so you can do it either in hertz we can do in radians per second course
+so if i make a plot
+of the amplitude
+versus frequency omega
+than at low values
+i have here as zero divided by k is the amplitude
+when i hit the resonance frequency the natural frequency of the system it goes out of hand
+goes to infinity the moment that omega is larger than omega zero notice that the amplitude becomes negative
+and negative amplitude simply means that you get if all of a sum and a fish change of hundred eighty degrees
+so the object is hundred eighty degrees out of phase with the drive for
+i will not like spent on that too much today but it is negative and so it comes up here
+and then it goes here two zero for very high frequencies of omega
+so something very spectacular is going to happen that the resonance frequency of the system
+in practice of course the amplitude will not go to infinity and the reason for that is that there s always frictional some kind there s always damping
+but you get a very high amplitude but not infinitely high
+so if i make you more realistic plot
+of the amplitude that i will take out the
+absolute value the magnitude so we don t have to worry about it getting
+negative we don t have to worry about a hundred eighty degrees fe shifts
+then you would get a curve that looks like this
+and here then
+if this is frequency f then here you would get a natural frequency wind things go out of hand
+and depending upon how much damping there is
+this curve would look either very narrow and very spike e
+goes very very high
+then there is very little damping or if there s a lot of damping in this system it s more like this
+food and their lists
+we call this the resonance curve the narrow that is the less damping there it s
+i have here system on the air track
+which is an object that i can drive
+with the frequency that i can choose
+here is a spring
+object mass and
+and here s another spring
+sticks on this side right there and here i m going to drive it
+so i have here this variable force that you see there
+and what i want to show you now is that first i will drive it at a frequency
+which is way below resonance frequency than you will see
+but amplitudes not very large
+i will then drive it way above resonance frequency again you will see an amplitude which is very low
+if i can go very high frequency
+you ll see medical almost ten spill
+and then i will try to hit the resonance frequency
+and that will be it s about one hertz the resonant frequency if i just let is object do is own think
+there s this now you see the natural frequency it s about one hertz
+but now i m going to drive it
+yeah what s a system
+and we re going to pull on this
+when was the frequency that we control
+so that means start
+you see here the frequency as an indicator very low way lower than one hertz
+and when you look at the way that the system response
+if you wait long enough when the trans inside i doubt
+you will see that they go and the hands that the amplitude
+is in phase with the driver that s why we have plus amplitude here
+the phases not so important to the sea they go and and hence
+very small amplitude
+roughly at zero divided by k which is the spring constant of the spring
+now i ll go way above resonance and the system will slip here to don t pay attention to the air anymore
+way above resonance
+you see start to slip
+look at the amplitudes are them all is very small
+but when over this curve so first we probe and in our problem here
+well almost all moving at all
+almost and instead what i m driving it with high frequency now and now i m going to find you
+this resonance which is mu one hertz
+which is somewhere here hello
+very high temperature and we not careful than we can actually break this is
+very high altitudes i m trying to scan over it now
+go a little bit off resonance
+now back on resonance
+you would use amplitude
+the turnip off
+so you see the response when i drive a system
+==========
+when my system is a little bit more complicated for instance if i had
+two masses here so i would add one here
+spring constant k
+spring constant k
+i could repeat this experiment and if i did that
+i would find two resonance frequencies
+and if i do it with three objects i would find three resonance
+i did with five i would find five resonant frequencies
+and when i make then this curve of a amplitudes as a function of frequency
+your earth s or in radians per second which ever you prefer
+then if i had three objects there in a row you see something like this
+and the petting of and how many of these objects you have you get
+more and more resonance is
+and these resonance is can all be found by drive in the system and searching for the
+if i go to a system
+whereby i have an infinite number all these
+mass is we call them couples oscillators is oscillate is i couple through the springs
+an infinite number of couples oscillators would be a violin string
+here s a violin string
+and the reason why i call it infinity number off
+oscillators is that i can think of each atom we each molecule as being driven
+is being connected by springs to the neighbor
+and so it s an infinite number of couples oscillates
+and so when i start to shake the system
+i would expect all on resonance is
+and that s what i
+explore with you now
+in the case here
+that d objects moves in the same direction of the spring i call this the y direction
+and i call this the x direction
+so the spring is in the x direction the object the beats are in the x direction and the oscillations are in the x direction we call those
+wanted to know
+oscillations
+there s also a way that you can have transverse oscillations transverse
+whereby the motion
+is in the y direction whereas the beats are in the x direction i could even do that with the system i could make them oscillate like this
+because the spring fall asleep also work if i do this with this is
+and that s the way i want this
+the violin string or pay piano string to oscillate now because that s the only meaningful way that i can make it oscillate
+and so i wonder if i m going to drive it hit by shaking it up and down
+searching for the resonant frequency is what i will be seeing
+if i d i go it s very low frequencies this thing
+lasted me the string this nothing just port doesn t respond to me
+i am somewhere here in the resonance curve
+but then when i increase the frequencies slowly i get the very first
+frequency at which it likes to oscillate i call that f one
+and when i look at the spring you will see that shortly the string will oscillate like so we ll go up here
+and it ll go down here and all it will do with this
+just to just to just that s this first resonance and i call this n equals one
+often called the first
+harmonic then i go to higher frequencies and
+it will not do very much very happy
+and then all the southern i it this seconds
+resonance i call that f two
+and the second resonance will show up like this this point of this string will not move what all
+when this part is up
+this part will be down i call that s n equals two and it oscillate like so
+worst worst worst and this point which is not moving at all we call that and note
+i go a little bit beyond that
+second resonance and nothing happens of the spring the string will be quite unhappy sure
+others a little bit until i hit another resonance at three and then
+is the next resonance i will see two nodes of here one here and one here
+and this the string will oscillate like so this goes up and down
+hundred eighty degrees
+phase and these two ends are in phase this n equals three
+and i can go on like that and add notes and i will show you some of that
+very shortly the
+frequency that i generates i call that f of n and is an integer could be one two three or four
+is the year in have one
+in other words if everyone
+were hundred hertz
+then f two
+i would be two hundred hertz and f three
+would be three hundred hertz
+we call n equals one
+we call that the first harmonic some books also color to fundamental
+i will call it the first harmonic
+and we call n equals two the second harmonic
+and so one and equals three is the third harmonic
+so we re
+get a series of this discrete frequencies which we re equally spaced f one
+depends on the lengths of the string on the tension
+i will write tension don t confuse this with periods
+and it depends on the mass of the stream
+without going into the detail how the dependence is the sine d
+parameters that determine the first harmonic
+i have here a very special violin string or piano strings whatever you want to call this
+and we can generate
+these resonance frequencies by searching for them and i wouldn t even assistance from
+a student would you be willing to help me
+so you hand and one called one end of the
+we had a string in your hands
+don t let it go please don t let it go
+i ve from what s your won t let it go either
+okay so i put a certain tension it and i start to shake in a very low frequency
+look oh
+and look are happy this string is nothing
+it is laughs at me ignores me doesn t like it
+now are
+increase the frequencies
+and now hitting the first resonance coming up there it is that s exactly the shape that you see in the blackboard
+very clear i shake it here i ve exactly the residence
+and one let me now try to hit the second harmonic
+if i go work a little over the f one then nothing much happens
+hard for me to see is this
+is is the second harmonic or that is already the third to any the third it
+but it s you re the right to give the second
+i think i got it now you i
+okay so here you see the second harmonic
+it s indeed that note that point standing still
+and the amplitude is enormous that s a characteristic for
+the resonance frequency we color also normal mote frequency or natural frequencies all the same thing
+now try to generate one that is very highs high as i possibly can
+and you tell me which harmonic it is
+all we have to do is count how many nodes there i m not counting my hand and his hands and you add one
+and that is the harmonic that i generate
+the system is not too happy see you feed it or if when it comes out
+no no no no no it s even i m off resonance
+it s very hard for me to hit resonance but i will get it
+that comes and goes there s no question now
+god i m on resonance now look at it
+them on resonance
+so how many if you count sick some er nick
+look twelve to me that okay you count that and i can
+okay thank you very much so you see here
+how with system response
+to the driver
+and a complicated system like its string has many many
+of these resonance frequencies
+which we call the normal modes
+no when you have a of island you re forced reads
+they re all have the same length their musical instrument like a piano or by the length is different
+violin four strings all the same length you can set the
+pension so you have something to play with
+the tension is change normally when you tony instrument before you start playing
+but these four strings all have a different max
+and that gives them a very different frequencies
+now you play the violin you cannot change the tension of course during the playing that would be a little difficult ago that instruments that exists
+well actually the plane depends on the tensional string
+as a violin that s not the case so with a violin
+the only option you have well your playing it is to make the string length shorter
+and you do that by moving your finger along the string by making it shorter the frequency goes up and by making it longer
+the frequency goes down
+now you excite a musical instrument like a piano string or violin string
+there is nothing that is driving it exactly at that resonance frequencies if you
+get a four hundred forty
+when it s
+a violin string
+that and you know driving in exactly at the four hundred forty hertz like we re doing well that s true
+but if you take a bow
+and you worked a string with a bow
+then in a way which you doing is you re exposing that s string
+two older possible frequency is not just one is overwhelming action
+i could all sure rub it with them i think alike clock it s why could kick it and what it does it
+it ignores all the frequency is
+which are not at resonance but it picks out ones which are at resonance
+so striking with a bow always effectively exposing it
+to a whole large spectrum of frequencies and it picks out the ones that it lights
+in fact if you strike a violin string with a ball you make excited
+simultaneously in the first harmonic
+and in the second and even in the third harmonic or even higher harmonic x and that makes
+the difference between the various in some of that gives it a special tom quality
+depends upon the cocktail the combination of the various
+harmonic so that you excite
+==========
+now if you go to would wind instruments
+and the situation is quite different i have here
+a sound cavity it s a box which has length l
+and their their insight here
+and i
+see whether this system has resonance frequencies so i put in here little loudspeaker
+generate sound to different frequencies and search for resonance is
+and the or the resonance is of this system however
+are different from this string in that sense it s not the box that resonates here
+but is the air itself that starts to resume
+x like is when
+in fact in that sense it is very parallel to our spring system
+it is also longitudinal
+oscillation was that is the transverse oscillation so you make pressure waves inside
+and if you do that the right frequency the x like a spring and then you get strong reactions which are
+the resonance is in this case the
+ends modes the nth harmonic
+is given by
+and
+times the velocity of sound divided by two l and v
+is about three hundred forty meters per second at room temperature so it is the sound speed
+note is it s again linear and and
+in other words if an instrument produces a certain frequency
+that is say that l
+equals twenty five centimeters is
+they you can calculate the frequency have one you know with the speed of sound is three hundred forty
+so we take n equals one
+so the frequency that we get equals three hundred forty
+divided by two l which is oh point five
+in meters and so that gives me six hundred and eighty hertz
+so that we be just bake would give you six hundred eighty hertz but the second harmonic f two
+will be double that so will be thirteen hundred and sixty hertz and so one
+now this system which is closed on both side wouldn t be very good usable instruments because you sound would not come out
+so what it will do the make them open a sound cavity
+which is is open on both sides
+like this for instance is open on both sides
+and even though in a surprise you if we put a little now speaker here
+we can excite the air column even in is open system in a complete similar way than we do it here it is close system
+and you get exactly the same series of frequencies that i put you on the blackboard
+there also musical instruments which i ll open on one side and close on the other
+so this is called an open open system
+and this would be called a closed open clarinet is closed it ll
+here i can also get a series of resonance frequencies even though here
+this series wouldn t be exactly like this it s a little different it doesn t matter now how different but it s it is a little different but you get again a whole series
+of resonance frequencies
+so again you see that if i make this system longer than
+i get low frequencies so if i make the length one meter the big
+then i would get a frequency f one
+which is about four times lower than the one that i have there
+which is hundred seventy hertz
+and if the second harmonic put and three hundred and forty hertz and so one
+so when you see an organ
+in a church you see all these organ pipes different length along once the remote owns in short one set of very high times
+and that is the way that these instruments work
+i have here a
+wind organ which i have demonstrated to you before it is open on both sides
+and because it is clear gate it
+the very special way what i blow wind passes it will go into
+resonance that s to say went here is like the spectrum of all possible frequencies
+it s like the bone the violin
+and then it picks out frequency is that it likes
+however if i increase the speed of the winds i can try to
+force it into how higher frequencies
+so it low wind speed i m more likely to it
+the low harmonic that i wind speeds i m more likely to it s the
+high harmonic this what a seventy five centimeters one is open open and if i were able
+two hits the first harmonic that would be a frequency of about two hundred and forty hertz
+i may not be able to excite the lowest harmonic
+the first harmonic but i ll try but certainly the the higher monitor very easy to excite
+and i can make you even this and simultaneously to more than one frequency just like a violin string
+when you strike it can simultaneously oscillate in a combination of these motes
+so let this world is the rounds first start low
+any to forty
+this is hot
+i think this is the two forty this is the lowest this is the first harmonic
+well times it unique that you heard two simultaneous
+to
+if you play a flute that you do the following you make a hole in here
+and when you take your fingers of balls all s then the effective length of the flute is this long you get huh uh height how
+but you think on this one
+then the effective lengths of the flute is this formula low tone you put your finger on both
+the fact of length of the flute is this long and you get in even motor
+i have here very special flute
+open on both sides and here you see the two bowls will first close to two
+that gives us the lowest frequency
+flutes so it s a matter of making the in some and longer or shorter
+i have another example your of an instrument which is open here and here is close
+this is my version of a trombone the piston here
+so this is a system that is like this but i can move is in and out
+and so when i have it s far in frequency would be high
+and and here
+directly related to the lengths of this trombone
+and if you learn how to play you can try to play but tune of fry
+thank you
+==========
+resonance is are all around us
+when you drive your car
+you may notice that all of us how to use them crazy rental somewhere could be your mirror could be something else could be and ash tray
+because you driving it to your exciting it with the frequency with it a real go around and you a into resonance frequency you re go a little store
+and the red will stop to something else we started rather the reason why
+the first metals topic because you go off resonance but you may go on resonance of another object
+well objects that you have in your room
+have preferred resonance frequencies
+whether the data pots or the and so what is your refrigerator anything you can think of everything has resonance freak which is your body as resonant frequencies if i two q in my
+i hands and i would start to shake you
+then if i do it at low frequency
+not much would happen but there would be one frequency that your arms begin to move like this like they re physical pendulum is right and if i hit that frequency
+than the d that would be a strong response and so your body has many
+resonant frequencies you are a few lakes you had everything
+also experience all of us emotional resonance is
+a small input hewish out for a lot is an emotional resonance
+if someone touches the sense that if you re if that is a
+resonance someone could say something to u n
+the korea descended issue for you and you re going on here you responses unload of the strong
+that in my view is also a form of a emotional resonance
+i have here two tuning forks
+and this tuning forks i designed in such a way that are have to do is just bang them
+and they ll pick out there on resonance frequencies tuning fork very simple like this
+i give it a cake
+and the kick is like dumping a whole spectrum of frequencies on it and it picks out the ones that it lights which is this one
+and that s the one in which it will resonates it s possible that i can excited that high frequencies that higher
+harmonic but that s a little hard even with a tuning fork
+so this one is two fifty six hertz
+soda prong small two hundred fifty six times per second and this one is four hundred forty hertz
+and our accounts you don t hear higher harmonic
+if i take something as simple as a wine glass like these
+it has many many normal mote frequency as many resonance frequency is
+the lowest one is very easy to excite
+and i will do that i will rub it with my finger
+lubbock is like striking the string with a bow
+it s all the same i expose it to lots of frequency is it ignores the mall it picks out wanted it likes the resonance frequency the normal modes the natural frequency
+and what the glass will do and it s always
+harmonic and is first harmonic it ll sort of oscillate like this and i will show that to you later in this lecture in slow motion
+but let me first make you listen to the
+the frequency it s around four hundred inserting seventy two which i have to wash my hands because i have chopped on my fingers and because of the
+i will not be able to excited that have to really rub it with some liquid
+and therefore my hands have to be
+shot free chop is just to re see
+try
+whenever students went after the nurse a reciprocal port we would all do this
+i m counting m x one more is
+to we are not exciting it with the four hundred seventy hertz i m dumb thing i ll frequency
+a whole spectrum of frequencies on it and it picks out to one
+that it likes which in this case is the four hundred and seventy hertz
+resonance is can be destructive and room or has it that there are singers
+women who take the wine glass
+and they do exactly what i did they do this
+some careful
+can see with their force increase the volume of the voice and then the room i has it that bang
+the glass goes another what s the amplitude of the glass becomes so large
+that you get so high so close to resonance and so much power goes into it because of the volume of the force
+that the glass breaks i m going to try to break a glass with you
+and you see that it is not easy
+um hum i have here a wine glass almost the same as the one i have here it there
+and we can eliminate that glass with the stroke light which you see here and i m going to show you there
+the display of that stroke light and reason why least rover it is
+that we want you to see as we excite the exact frequency of the glass
+we wanted to see the motion of the glass and the way we can make you see the motion is buys coding is not exactly at the frequency of sound
+but the little bit different frequencies
+so you will see the stroboscopic motion then of the glass
+so i can already i will make it darker shortly but i want you to see at least most of this i can
+generate then the four hundred and seventy hurt which is very close to the resonant frequency
+is it on the dual use
+we will increase the volume and then we will try to hit that resonance chess light
+we maybe i ll buy a few words we have to be line was in hertz
+and then we ll see where we can make the glass break
+now
+one you the sound is
+be very strong so you may
+as time goes on as we go to high volume a want to turn
+you may want cashew years in fact i will use this to protect my ears
+and i ll even use this to protect my suitcase the glass might break
+which i doubt whether it d well but nouns
+all right so let s make it very dark
+so you see here the glass
+it s not doing very much
+and i m now going to increase
+the volume of the sound
+and a cow my years now you ready we did you see some motion
+i m not sure that i m on resonance
+a increase the volume
+i m now i change the frequency
+i mentioned that resonance is can be very destructive
+and there are some striking examples in history affect you may have been there is a storm you may have seen that traffic signs
+which just a sign on a whole that the traffic signs course doing this
+this is strange because there s a wing the wind is a like a spectrum of all kinds of frequencies
+it s like blowing every to a musical instruments
+and then this traffic signs picks out the frequency that it likes
+and then if you win the strong enough it could be very destructive and the most x striking example of destruction
+is that of a bridge which was built
+and that is tacoma reach the west coast which is very dramatic
+and of course i will have to show you that movie you will see look to rinse can do to a bridge
+so we ll start this movie and then we ll make it dark
+hundred first of july of ninety four
+delegation the citizens met in washington state
+the weather was beautiful the occasion the star
+and the speech making a banned altogether appropriate
+this was the grand opening
+of the tacoma now is three
+from the beginning of the rich japan peaches sound between seattle and to call
+is travel and buy
+has well it should
+the common
+one along versus but
+and get somebody had overlooks
+of probably would ve really
+one of the longer suspension bridges on earth
+the problem wasn t that right from the beginning
+a lot of people did a lot of tension they they did
+but somewhere along
+and this was up and
+get of those as someone forgot
+the significance
+of resonance
+another the tacoma knows bridge was the most spectacular alien harvard history
+unfortunately its first performance is destined to run only about four months
+and indeed you do you
+do whatever it is and
+even before construction is completed people observed its peculiar behavior
+couples because even like breeze ripples ran along the perch
+at a robot one of the local humorous call gallon be heard
+and for for the obvious reasons the names of these intervals um hum um hum i m for
+and this now seattle and tacoma were sports minded cities
+for four months a regional sport was to drive across the bridge on them and
+well some kind of those like writing will reverse your
+there s bound to do this concerning see the car in front disappear
+how popular this bridge sport was
+or to what extent in mind is but across the country is anybody s guess
+on november seventh nineteen forty
+wins relative in water
+about forty miles per hour
+uh new mode appeared rather than the bridge began to twist
+no wind of forty miles per hour is not too strong
+but it was strong enough start the bridge to is by
+and had eleven a and get
+it s amazing what resonance can do
+with the physical instruments we have we re stuck to the
+==========
+speed of sound in air which is three hundred forty meters per second
+and when i speak to you
+i have here the sound cavity
+which has a certain sized certain shape and y speak
+the size and this change this is the size and shape changes all the time
+and that gives my force a very characteristic sounds that makes it possible for me to become a low son s makes it possible for me to make a high sound
+and whether whole i speak you will say now
+that s no question that small from the wind it s clear
+sperry recognizable each one of you and i have a very
+well recognizable voice
+the situation would change if i could change the speed of sound in my system
+and and helium which has a very
+different molecular weight from air has ooh
+i a speed then the
+speed of sound in air it s about two point seven times higher
+two point seven times
+three hundred forty meters per second
+so if i fill my system with helium art from the fact
+that there is no oxygen in helium so i would
+very long that s a detail
+if i fill my system with helium
+then of course my a vocal courts and my sound cavity here
+they don t know that s so they do the same thing that they normally do when they speak for you
+however since the speed of sound is much higher
+here in my sound cavity the frequency that will produce is way higher
+and i sound very different
+the problem however is as i mentioned there is no oxygen in helium and yet if i only take a little bit of helium doesn t work very well and you don t hear much different so i have to really take a lot of hidden and i will try that
+but that for that i pay small price and small price is that you can faint
+i ve tried just stay away from the fading level so here is helium and
+i have to that my hair out first and then get him in and maybe that the beam out again
+and that the human they get in during that time i i can speak but then when i think i m for enough with helium
+i will say a few which to you
+so let s get the pressure of the level that i like
+where d i was there for a very limited
+well i know they do it is and have feelings a thank you
+==========

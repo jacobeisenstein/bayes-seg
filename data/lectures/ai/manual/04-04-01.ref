@@ -1,0 +1,478 @@
+==========
+We had a -- Alice found an interesting error in the Weld paper, which is important to you guys because there's an apparent mismatch. 
+There's one figure that gives the operator descriptions for their example problem and another figure that shows the mutexes in the planning graph, and they are inconsistent. 
+So when I -- their planning graph, I think, is really just wrong. 
+It shows that there's an operator called Carry, and an operator called Dolly, right, for taking out the garbage, and when I wrote the operator descriptions, at least to play with, I put garbage -- I made garbage be a precondition of these two things. 
+That is, you have to have garbage to take it out, but they don't. 
+They don't make it a precondition in their description of the operators, and they don't make it a precondition in the planning graph, so it's not -- so there's this, the garbage proposition and they don't make garbage a precondition of Carry and Dolly, but they do make Carry and Dolly mutually exclusive and the only reason that I can imagine that they made Carry and Dolly mutually exclusive was that they thought that garbage was going to be a precondition anyway. 
+To have a consistent view of that problem, you can take the operator descriptions that we gave you, which have garbage as a precondition, and take their picture and add this precondition and this precondition, and then I think we'll have a consistent view. 
+It's just good for you to see an example of a planning graph that matches correctly a set of operators so that you can debug your algorithm. 
+OK, so today's the day to switch gears into kind of a whole new part of the class. 
+So far, we've been looking at models of reasoning about the world with models of the world that are deterministic. 
+They talk about the world as being certainly in one state or another and where we have deterministic models of how the world evolves, where it's in this state and we take this action that'll go into this other next state. 
+Within logic, we have a way of talking about it or allowing ourselves uncertainty and that's disjunction. 
+So you can say the box is either red or blue, and I don't know which. 
+So there's a method for articulating uncertainty. 
+And you can imagine, if you're really confused, using really big disjunctions to say, well, I don't know whether this or this or this or that or that. 
+But the problem with really big disjunctions is that you don't have a way of saying which of these outcomes is more likely than which other ones. 
+So I might take -- if I try to drive to Boston, it might take me ten minutes, but it might also take me twenty minutes, or an hour, or a further amount of time, and in thinking about how I want to drive or whether I want to go at this time or day or whatever, I really need some kind of quantitative understanding of the relative likelihood of these different things. 
+It's not enough to know that there are a whole bunch of different possible outcomes. 
+I want to know something -- you know, that some of them are more likely than others. 
+So we're going to move into the second part of the course and we're going to spend really concentrating on probabilistic methods and models of thinking about the uncertainty in the world, and the big thing that they give us is the ability to attach numbers to the likelihood of various kinds of results. 
+OK, so probability theory is a prerequiste -- well, some brush with probability is a prerequisite for this course, so I assume that you've seen it once before, but today I'm going to kind of go over some of the basics, mostly just to establish a common vocabulary because I think we're going to be looking at it and using it in a way that may be different from the way that it's been introduced to you. 
+OK, so first of all, what I want to do is talk a little bit about the foundations of probability, so people have been thinking about probability for a long time. 
+Hume is probably the philosopher who kind of had a semi-modern but interesting view of probability, and he worried a lot about the problem of induction. 
+And induction is going to be really important to us when we get to machine learning, right? 
+==========
+How do I know that just because the sun has come up every other day before today, how do I know that it's going to come up tomorrow? 
+And that's a real big problem for him and it's a problem for machine learning sometimes, too. 
+But you can think about -- so let's say I'm -- there's some probability that the sun comes up tomorrow. 
+Now, if I said that it's equal to .999, 
+Let's say I said that, first of all, would you agree or disagree with that statement? 
+Disagree? 
+So who else disagrees? 
+OK, why do you want to disagree? 
+C: (inaudible) L: Right, so good. 
+That's -- right. 
+Somehow you have this idea that it's been more than a thousand days that it's come up and so somehow it seems like it's too small a number. 
+Does anybody else have another reason for objecting to that? 
+C: (inaudible) L: That's actually a question of what tomorrow means. 
+So let's say April 5th, 2001, by our reckoning, et cetera. 
+So the standard view of probability, and the one that if you took a statistics class is certainly the one that you were exposed to, is the frequentist view. 
+And it says that probability is really statements of frequency, right? 
+That's in saying the probability of the sun coming up tomorrow, that says that one out of a thousand times, it's not going to come up. 
+And that the way that you can get that probability is by watching this event over and over and over lots of times, multiple trials, and measuring it. 
+And that's what it means to be a probability. 
+You get at it by measuring it, and usually there's this idea that the probability is inherent in the process, that there really is true uncertainty, true probability in the world. 
+So a canonical example that people use in probability textbooks is coin-flipping, or rolling dice. 
+So let's think about coin-flipping for a minute? 
+So do you think that coin-flipping is a deterministic or a non-deterministic process? 
+How many people think coin-flipping is deterministic? 
+OK, how many think it's probabilistic? 
+How many are asleep? 
+I guess they don't answer. 
+OK, so it seems like we have kind of a fifty- fifty answer between probabilistic and deterministic. 
+Somebody who's deterministic, tell me why. 
+C: If you knew enough about everything that was going on, you could predict the outcome. 
+L: So there's this idea that at least somehow in macro-level physics, if you knew the initial conditions, if you knew the forces, if you knew the wind currents in the room, if you knew whatever there was to know, if you knew all that, then there would be an actual fact of the matter. 
+It really either -- you know, it's going to do something, and that's determinate, and there's no uncertainty. 
+There's no deep uncertainty in the process. 
+It's just that there's uncertainty that we don't have enough information about what's going on. 
+So it's kind of an interesting thing. 
+You could still kind of take the frequentist view of that process, but it's going to lead us also in another direction. 
+C: I was going to say the most common downfall would be it's very difficult to determine actually how much -- what element of probability is actually determined based on your lack of knowledge and what is actually inherent. 
+L: Inherent. 
+Right. 
+So then we get really to the foundations of physics and whether you're really -- I mean, even at the level of quantum mechanics, it's not obvious that there's not really another story underneath there that would make it deterministic. 
+We don't happen to know it, but maybe there is. 
+If we just got the right little -- whatever story it might be, there might be a story that would remove all the uncertainty. 
+Or it would at least push the uncertainty down into yet another different level of the story. 
+So, we're not maybe going to get into that whole question of reductionism, but it's an important thing to at least keep in mind that we use this term uncertainty to really talk about two kinds of things, something that we want to say there's real randomness in the process, and some other thing that really has more to do with our uncertainty about what's going on in the world. 
+OK, if you want to take a frequentistic approach to something like "the sun comes up tomorrow," though, the question about tomorrow was really important. 
+The question is does it refer to actual tomorrow, or tomorrows in general? 
+Because if you want to say, "Well, let me look and see how many days there have been in the past that we've seen the sun come up" and do some kind of ratios or something, well, that's somehow implying that today is like yesterday which is like the day before, which is like the day before that, which is like the actual 4/5/01, and that therefore, that whole set can be taken together and thought of as samples of whether or not the sun comes up. 
+So whether or not the sun comes up on 4/5/01, -- that particular question has never been (inaudible). 
+We have no data about that, so how can we measure? 
+How could we gather frequentist information about whether the sun's going to come up tomorrow? 
+Maybe you can't. 
+All right. 
+I think the frequentist view of probability is fraught with complications. 
+It's very hard, I think, to get the story exactly right. 
+We could go and try to do that, but I'm going to advocate a different approach, which is also, I think, much more useful for AI, which is the subjective approach, or sometimes called the Bayesian view, and that's that probability is a model of your degree of belief, your personal, private degree of belief. 
+And so then it's not even any more correct to say "the probability" that this coin comes up heads, or "the probability" that the sun comes up tomorrow. 
+It's the degree to which I think this coin is going to come up heads, or the degree to which I think the sun is going to come up tomorrow, and so there's one thing that's pretty interesting. 
+Here, in the frequentist view, you can be wrong. 
+You could say, "I think the probability of this coin coming up heads is 0.6," and a frequentist could hit you on the head and say, "No, it's 0.4." 
+In some sense, there's this idea that there's a fact of the matter to argue about. 
+In the subjectivist view, you can't be wrong. 
+It's like pain. 
+You can't be wrong about whether you're in pain. 
+You can't be wrong about your beliefs. 
+Well, it turns out that you can be a little bit wrong. 
+So, you want to say that in the subjectivist probability world, in some sense you can't be wrong but you can be inconsistent. 
+And we'll spend a little bit of time this morning exploring what it means to be inconsistent, and why you shouldn't be inconsistent, but you can't be wrong. 
+Assigning probabilities to basic events, in some sense, you can't be wrong about it. 
+OK, all right. 
+So let's talk about the axioms of probability theory, basic ideas of probability, and then we'll think about whether that formal system is a good map or model for people's degree of belief about things in the world. 
+So we're going to look at a formal system, then we're going to see if it does a good job of telling a story about that . 
+It's easy to argue that the formal system does a good job of telling the frequentist story, which you understand, for some version of the frequentist story, but the connection to the Bayesian story is more interesting. 
+==========
+So probability theory is a logic. 
+It's a language for taking about the likelihood of events. 
+So there's this idea that you have a universe, and we'll just talk about the discrete case. 
+Maybe when we get into learning we'll do a little bit of stuff in continuous probability, but the discrete case is good enough for us. 
+So you have some universe of atomic events, things that could happen or ways the world could be. 
+You could almost think of atomic events as being like interpretations, back in the logical world, but the terminology of atomic events. 
+And what we're going to want to do is talk about the probability of subsets of this universe. 
+And remember, again, back in logic, a formula in logic describes a subset of an interpretation. 
+It talks about some set of ways the world could be. 
+We're going to talk about sets of ways the world could be. 
+We're going to assign probabilities now. 
+Instead of assigning truth value one or zero to a set of ways the world could be, we're going to assign a probability between zero and one. 
+So anything in between zero and one to a set of ways the world could be. 
+So the axioms of probability theory, so probability is a function. 
+It maps events -- not necessarily atomic events -- events into the range zero and one. 
+It has by sort of axiomatic definitions the following properties. 
+The probability of True is one. 
+True is the probability of the universe, the probability that something in this realm of discussion that we have available to us is actually the fact, the case, is one. 
+So when you say, "Here's my universe," and you say, "These are all the ways the world could be," well, the world's got to be in one of the ways that it can be. 
+OK? 
+Probability of False is zero. 
+And that, if you think of it in terms of atomic events, false is the empty set. 
+So the probability that none of these events is happening is zero. 
+So there's a whole bunch of ways the world could be, and one of them is actually the case. 
+So so far, this just maps onto propositional logic directly. 
+Then we really have just one more axiom, that there's a probability of A or B is the probability of A plus the probability of B minus the probability of A and B. So I'm sure you've all seen this. 
+The argument is from a Venn diagram. 
+Right? 
+Think of this as being the universe. 
+Then A is some subset of the universe and B is some subset of the universe, and the probability that you were in the -- that A or B is true, that's like the probability of the union of the sets A and B, that all of this stuff plus all of this stuff, but if you didn't put this term on here you would be double-counting the intersection. 
+We have to subtract it out. 
+I'm really unsure of how fast to go there, because theoretically you've all seen this before, but on the other hand people forget pretty easily. 
+That's it. 
+That's all you ever need to know about discrete probability. 
+From there, everything else derives. 
+And there's actually this really cool manuever which I considered doing in class today, but I decided that it was probably a little too (inaudible), but it turns out that you don't even have to -- so I could ask you to just accept these axioms. 
+I could just ask you to accept this set of definitions for what probability is. 
+And you could say, yes, fine, seems reasonable to me, or you could say no, I don't like it. 
+It's not maybe the most intuitive set of axioms to either accept or not accept. 
+What's neat is that there's a way to derive this set of axioms from a much more kind of gut- level set of things about your preferences about lotteries. 
+They say things like, you should prefer a lottery that has a higher probability of getting a good outcome to one that has a lower probability of getting a good outcome. 
+There's a set of very, kind of, again seems like hard to accept properties about your preferences about lotteries, and you see by that set of preferences about lotteries, then this is the way that probability has to behave. 
+So in formal decision theory it's a cool maneuver. 
+So that's one reason that you might want to have your probabilities follow these axioms. 
+There's a more compelling reason which I hope to demonstrate now, which is that if your beliefs do not satisfy these axioms, I can make money from you. 
+So this is a more pragmatic argument. 
+So remember I said that you couldn't be wrong about your beliefs, but you could be inconsistent. 
+So what I want to spend a little bit of time doing now is exploring what it means for your beliefs to be inconsistent and how, in fact, if your beliefs are inconsistent, I should be able to make money from you. 
+OK, but first I have to take a survey. 
+==========
+I'm going to write the question on the board just so that I don't prejudice anyone. 
+Let's see. 
+OK, think about that question for a minute. 
+This is a serious question and I want you to think of an answer. 
+I want everybody to think of an answer, and then I'm going to ask you, and you're all going to raise your hand, either for A or B. All right, you got it? 
+How many people vote for 1? 
+How many vote for 2? All right, so it's close, because this was maybe 50 percent, 40 percent. 
+OK, Do you think that there's enough information in this problem for one of those answers to be right or wrong? 
+No, I'm sorry. 
+Is there enough information in the problem for one of those answers to be right or wrong? 
+That is, can you tell whether A is more probable than B, for sure? 
+C: Well, if you (inaudible) then obviously (inaudible) then one is more popular. 
+L: So this is like saying, right, Jane is a feminist and Jane is a bank teller. 
+So that's like saying A and B. This is saying Jane is a bank teller. 
+It's like saying A. In every case that A and B is true, A has to be true. 
+We have a different Venn diagram now. 
+We have ... 
+OK, here's A, the cases in which Jane is a bank teller. 
+Here's B, the cases in which Jane is a feminist, and here are the cases in which she's a feminist bank teller. 
+And they are of necessity smaller than the cases in which she's a bank teller. 
+Anybody who was a proponent of answer number two want to argue with me? 
+They usually do. 
+So this example isn't mine. 
+There's actually a fascinating field of psychology where they spend lots of time demonstrating all the ways in which people are clearly and systematically not correct probabilistic reasoners. 
+And it's interesting, and it leads you to a bunch of cognitive theories of how it is that people may do their uncertain reasoning instead, and one big idea is that this is sort of a notion of prototypes. 
+So when you read this story, you kind of get a prototypical Jane in mind. 
+She probably has Birkenstocks on. 
+And so, and then gosh, she doesn't seem like a bank teller. 
+But she does seem like a feminist, and so answer number two just seems so much more attractive. 
+But in terms of probability theory, it's not. 
+==========
+So there's -- the inconsistency in some people's beliefs, and so now I can show that if you have this inconsistency, I ought to be able to cause you to make a set of bets with me that will allow me to win. 
+So let me do this. 
+This is also sort of a parlor trick, but I like it. 
+So this way of arranging bets is called a "Dutch book". 
+I'm not sure why, exactly. 
+It's an old term from theory of probability and philosophy, and presumably it's "book" as in "bookies", right, so to make a book is to set the odds on a bunch of events, and the idea here is that if you have inconsistent beliefs I can set some odds on some bets such that you -- the bets are attractive to you, you will want to take them, but I can prove that no matter what happens in the world I win. 
+So let me just do that. 
+So imagine that you assign the probability of A to be 0.3 and the probability of A and B to be 0.4. 
+Maybe I can show that I can get you into trouble that way. 
+So let me make a chart. 
+Let's say you believe -- here's you -- you believe proposition A with probability 0.3, proposition A and B with probability 0.4. 
+This is a variation -- there's an example like this in the book, but it's of a different problem. 
+OK, so what does this mean? 
+I say I want to bet with you. 
+I want to bet with you on A, with stakes of three to seven. 
+OK, so let A be the proposition that Seabiscuit wins the Kentucky Derby If A is true, I get seven. 
+If it's false, I pay you three. 
+Now, why would you want to take this bet? 
+Well, this actually changes a little bit, and say that I'll even pay you three plus epsilon just to make sure it tips you over to the right side of the balance. 
+If you think about this, you would think, if A is true, now being you, if you think that's A is going to be true three times out of ten, right? 
+So it's sort of like there's a 0.3 change that you'll have to pay seven, and a 0.7 chance that you'll get three plus epsilon. 
+So if you think it out, it looks like somehow you stand to win a little bit on this bet, so you ought to take it if you believe that A is going to happen with a probability of 0.3. 
+Similarly, I'm going to bet on not A and B. So, if not A and B is true, then I get four. 
+If not, I pay six plus epsilon. 
+This is going to be the same basic thing. 
+OK, so now let's think about all the ways the world could be. 
+It could be that A and B are true, that not A and B, that A and not B, that not A and not B -- so those are, in our limited sphere of reasoning, all the ways the world can be. 
+So let's fill out this row in the table. 
+So if A is true, I get seven. 
+So this -- we'll make this your payoff. 
+If A is true, I get seven. 
+That means you pay me, so you have to pay seven. 
+And here's a case where A is true. 
+If A is false, then I'm going to pay you three plus epsilon. 
+All right. 
+But we have this other bet going on at the same time. 
+OK, so now this other bet, if A and B is false -- let's do it this way. 
+If not A and B is true, I get four. 
+So not A and B is true in these three cases, so you have to pay me four, but in this case A and B -- so not A and B is false, because A and B is true, so I have to pay you six plus epsilon. 
+If you add up each of those columns, each of the ways the world could be, no matter what happens in the world, I win. 
+And it's because you assigned a higher probability to A and B than you do to A. It doesn't matter what B is. 
+You just shouldn't do that. 
+So if your beliefs are consistent, I can't do this to you. 
+I can't arrange to make money off of you no matter what happens. 
+I mean, obviously, if your beliefs are consistent, you could lose money in some circumstances, but you'd also win money in some other circumstances. 
+But if your beliefs are inconsistent with the laws of probability, I can make money. 
+So let that be our motivation for wanting to codify beliefs using laws of probability. 
+It is obviously, patently not what people do, but it seems like it's probably at least a good foundation upon which to build computer systems that try to do a good job of solving problems in the world. 
+OK? 
+==========
+All right, so now let's talk about belief updating systems. 
+So random variables. 
+You probably know what a random variable is, but let me just kind of again say how we're going to think about random variables. 
+So, random variable. 
+The cliche about talking about random variables is that they're neither random nor variables. 
+You can think of them as a function from some discrete domain, in our case, into zero and one. 
+We'll mostly look at propositional random variables, things like is it raining or is it not. 
+So you can think of raining is true with probability 0.2, then I would say raining is a mapping, so raining of true is 0.2 and raining of false is 0.8 -- and sometimes we will deal with random variables that have more than just Boolean values, but mostly we'll just think about propositional random variables for now. 
+So now you can think of your domain -- you can think of your primitive events in your domain as being a -- define your universe by saying, "Here are all the random variables. 
+Here are all the propositional random variables that describe my universe." 
+That's like saying, here are the primitive propositions in the logical case. 
+And then all the particular discrete events in your domain are assignments of values to the propositional variables. 
+OK, so there's this notion of a joint distribution. 
+And that's really your probability assignment to all combinations of the values of the random variables. 
+==========
+So here's an example of the joint distribution. 
+We're actually going to use this example a fair amount, so I'll draw it over here. 
+So imagine that we're embarking on a little dentistry and we want to understand the relationship between having toothaches and having cavities. 
+So our domain has two random variables in it, two propositional random variables. 
+Does the patient have a toothache or not? 
+Does the patient have a cavity or not? 
+So you could make a little table, all right. 
+There's cavity, not cavity, toothache, not toothache, and then we have to fill in some probabilities. 
+What do we know about the sum of the values in that table? 
+That they have to add up to one. 
+Remember, we said that the probability of the universe was one, and by the additivity rule of disjunction that says the probability of this or this is the sum of the probabilities minus the intersection, using that rule you can show that that table has to sum up to one. 
+OK, so given this table, given the joint distribution of all the variables in your domain, you can answer any probability question that anybody would ever ask you. 
+That's in some sense all there is to know. 
+And if you're in a domain that only has two variables, that's cool. 
+You can just make up a table and then answer questions with it. 
+We'll see how to answer some questions. 
+But obviously, in a domain that's very big. 
+You don't want to ever have to make that table, and so what we're going to do is spend the next couple weeks looking at ways of doing probabilistic reasoning, taking advantage of some structural properties of your knowledge in the world to let you ask and answer probability questions without making the whole table. 
+But today we'll use the table just to illustrate some points so that we know what the underlying definitions of various things are. 
+That's going to be our plan. 
+OK, what is the probability of cavities? 
+Probability of cavity is 0.1, because cavity, that's kind of half of the domain. 
+To get the probability of cavity you add up all the primitive cavity cases, 0.1. 
+The probability of toothache -- C: 0.05. 
+L: 0.05. 
+All right. 
+OK, now let's look at the notion of conditional probability. 
+What did I do with the eraser? 
+So conditional probability, formally, you say that the probability of A given B, is the probability of A and B divided by the probability of B. This is sort of like saying restricting our consideration just to the part of the world in which B is true, what proportion of events satisfy A? What proportion of them are in A? So if we draw the picture -- so looking at the probability of A given B, we just look at the part of the world in which B is true. 
+So we just for a minute take B to be our universe. 
+Of course, so now, the probability of A given B is you can think about the ratio of the probability of this event, right, that's A and B, to the probability of (inaudible) B. Think of it as just temporarily taking your universe to be B, and then thinking about the parts. 
+OK, so in our example, what is the probability of cavity given toothache? 
+All right, so the probability of cavity and toothache is what? 
+Cavity and toothache? 
+Probability of cavity and toothache is 0.04. 
+That's probably too high. 
+The probability of toothache is 0.05. 
+Right, so this is going to be 0.8. 
+The probability of the cavity just to start out with, is not all that high, but given that you have a toothache, of all the people that have toothaches, then the incidence of the cavity is actually pretty hight. 
+So this is getting to be the structure of the kind of reasoning that we'll be doing, right? 
+You start out with -- and this is sometimes called a prior probability. 
+The idea here is you walk into this problem having some belief about the likelihood that a patient has a cavity. 
+Now, and maybe this belief was derived from past experience, maybe it's derived from reading textbooks, maybe it's derived from talking to other people. 
+Who knows what, but it's your personal, private belief that the next person walking through your door is going to have a cavity. 
+Then you ask him, "How do you feel," and they say, "I have a toothache." 
+Then if you know the probability of cavity and toothache, then you can figure out the probability of cavity in that case. 
+We'll actually see a way of automating this process and see exactly what information you need to make it work out pretty efficiently. 
+But that's how the story goes. 
+==========
+So there's another way to get at this question. 
+And another way to write down a conditional probability. 
+So you could put a probability that A given B is equal to the probability of B given A times the probability of A. This is just an algebraic massaging of the stuff that we already know. 
+And on the face of it, it doesn't necessarily seem very useful. 
+But what we'll see is that in fact it's a kind of reasoning that we naturally do all the time. 
+So let me write this again with a different kind of names for the variable. 
+So you might, for instance, want to write, what's the probability of some disease given this symptom. 
+Well, that's the probability of the symptom given the disease, times the prior probability of the disease divided by the probability of the symptom. 
+So a common reasoning pattern is that we have this already. 
+Right? 
+This is our starting probability. 
+This is our belief about the state of affairs when we don't have any evidence at all. 
+Then, we get some information. 
+Somebody tells me, ah. 
+This person has a symptom. 
+And then we would like to update our beliefs. 
+We'd like to take what we used to believe and the evidence that we just got and combine them together and compute a new belief, a new degree of belief in whether this patient has this disease. 
+In order to do that, we need, apparently, to know two things. 
+We need to know the probability of this symptom, although we'll come back to that. 
+It turns out that we can kind of finesse that. 
+But what we really need to know is this. 
+The probability of the symptom, given the disease. 
+What's the probability, for instance, of having a toothache given that I have a cavity? 
+So why would I rather -- so this is kind of a funny thing. 
+It's like if I know the conditional probability in this direction, I can compute the conditional probability in this direction. 
+Why wouldn't I want to just learn the conditional probability in this direction to begin with, and the answer is that these conditional probabilities tend to be more generally useful, more true across a broad range of situations, so let's talk about how that line works. 
+Imagine that the disease is bovine spongiform encephalopathy. 
+Right? 
+So imagine that the disease is -- you know what that is, right? 
+BSE? 
+Mad cow disease? 
+Imagine that's the disease we're interested in, and I don't know what the symptoms of it -- probably, like, paralysis or something. 
+So I want to know what's the probability that my cow has BSE given that it's got paralysis. 
+What my answer -- don't you want to know that? 
+My answer to that question is going to be different, you ought to think, from somebody in England's answer to that question. 
+Why is that? 
+Why should it not be? 
+C: Because they have a higher prior -- __: Right, because they have a higher prior. 
+Because just the base rate is higher of BSE (inaudible). 
+Here it's like (inaudible) or something, here to here. 
+On the other hand, this probability -- somehow the probability of paralysis given BSE, that seems like more of a universal property, right? 
+And we could think of it as a causal relationship, that really what happens is the disease is causing this symptom, and once you know that somebody has this disease, the probability of the symptom is going to be the same, no matter where they're from, so the probability that an American cow is paralyzed given that it has BSE is the same as the probability that a British cow is paralyzed given it has BSE. 
+So it turns out that in all kinds of domains it's easier and more useful and more generally applicable to learn these kinds of relationships and compute this when necessary using your base rate, than to try to learn these things directly. 
+So this is how diagnostic systems normally get built. 
+It also lets us chain evidence together in a way that I'm going to do next. 
+Does this basic kind of reasoning seem OK to you? 
+You start with the base rate, then you ask how likely is it that I get this evidence, given that this thing is true, and that gives you a new and updated value. 
+You know, you guys are probably all engineers, also, so if you've ever studied something like a Kalman filter, or recursive probabilistic estimation, or something like that, it's doing exactly this, right? 
+You have some hypothesis about where the guided missile is, or something, and then you have -- so you get a sensor reading. 
+You get a sensor reading about where it is. 
+That's like saying, this is like getting a sensor reading. 
+This is getting some information that bears on the underlying fact of the matter, but doesn't tell you exactly what's going on. 
+So you can think of seeing a system as getting a particular sensor reading. 
+It tells yo something about the underlying state of the system, and now you can take your old beliefs about the state of the system, and the sensor reading, and compute a new belief about the state of the system. 
+It's exactly the same thing, dressed up in different vocabulary. 
+What do we do about this? 
+The probability of the symptom? 
+There's one more term in here. 
+It turns out that there's an easy way you can deal with the probability of symptom. 
+And we can do it using a process that's awfully useful to know about, so there's a kind of a standard manuever in probability called conditioning. 
+So this is a general rule. 
+We can say the probability of A is equal to the probability of A given B times the probability of B + probability or A given not B times the probability of not B. All right. 
+Let's prove this. 
+We'll do one set of proofs. 
+What's the probability of A given B times the probability of B? C: (inaudible) L: Good. 
+It's the probability of A and B. And this is the probability of A and not B. And if you do the Venn diagram thing, then the probability of A is definitely equal to the probability of A and B, plus the probability of A and not B. They're mutually exclusive and exhaustive pieces of that space. 
+Anyway, this again, it's no earth-shattering theorem or anything, but it turns out to be handy, because a lot of times there'll be some primitive thing, like what's the probability of a paralyzed cow. 
+I don't know! 
+But maybe I can try to compute that from more primitive things that I do have access to. 
+Now, you'll notice, if you make the analogy with what we did over there, that this piece of this definition maps onto that. 
+Probability of A given B times prob of B. If we also compute the prob of symptom given not disease times the prob of not disease and we add that to this, we'll get the prob of symptom. 
+So, now you know how you compute this if you have this, right? 
+Using that conditioning rule. 
+Assuming that you knew probability of symptom given not disease, usually if anybody tells you -- people do studies and they say how likely is it to be paralyzed given that you have this disease, what's always reporting along with that is how likely it is to be paralyzed if you don't have it, or in the general population. 
+So there's two things that always come together, one of them by itself usually doesn't help you very much. 
+OK. 
+So we could compute that if you want to using conditions. 
+==========
+OK, so before we get to that we have to talk about independence. 
+Again, I'm sure you've come across this. 
+So we'll say A and B are independent, if and only if -- and there's a million ways to write this same statement, but one is to say that the probability of A and B is equal to the probability of A times the probability of B. Another way to write it is to say that the probability of A given B is equal to the probability of A. Another way to write it is to say that the probability of B given A is equal to the probability of B. These are all ways of saying A and B have nothing to do with each other. 
+That is if you tell me everything there is to know about B, it won't tell me one bit of a hint of information about A, and vice versa. 
+That's the notion. 
+Somebody's height and weight are not independent. 
+Whether you get a good grade in this class and come to the lectures, I hope are not independent. 
+You know, what you ate for breakfast and how you do to this class probably are independent, except that there are studies that show the students that don't eat breakfast don't do well in school. 
+So maybe -- it may be that at some level everything is dependent, but we can at least make some kind of abstraction of independence just to get on with things, because it's going to turn out that independence relations are going to be the key to doing probabilistic reasoning efficiently. 
+And you can already get that at an intuitive level. 
+If every possible thing you could know bears on every possible other thing that could be, then in some sense there's nothing to do than but to consider completely worked out world states all at once. 
+There's nothing to do but consider that joint table all together. 
+But if these things can be kind of taken apart a little bit, if you can think about breakfast without thinking about the color of the car you drive, then that would be good, and so we're going to look at ways of using independence relations to make reasoning more efficient. 
+OK, so there's independence. 
+There's a more useful notion, really, which is conditional independence. 
+So we'll say that A and B are conditionally independent given C if and only if the probability of A given B and C is equal to the probability of A given C. So this says I'm going to tell you C. Now, given that I have already told you C, telling you B doesn't give you any more information. 
+==========
+So a canonical -- an example that people use to drive this all the time is in the domain of toothaches. 
+So let me erase this one. 
+Imagine that now we have three propositions. 
+We have whether you have a toothache, whether there's a dark spot in your X-ray -- we'll call it proposition X, a spot in your X-ray -- and whether you have a cavity. 
+Again, in this way of thinking about primary causes and their symptoms, you might imagine that having a toothache is a symptom of having a cavity, and having a spot on your X-ray is a symptom of having a cavity, and certainly any pair of these variables is related, so if somebody walks in and says, "I have a toothache," then it's more likely that when you take the X-ray they're going to have a spot, and vice versa. 
+So they're related. 
+So all these variables are related to each other. 
+But there's a structure that you can see that typically it'll be the case that T and X are conditionally independent given C. The idea is that if you have a cavity -- probably dentists could argue with this. 
+This is an example of the kind of independence assumption. 
+Maybe it's an idealization, but it's not too far off, that whether or not you have a toothache given that you have a cavity is not related to whether or not it's going to show up on the X-ray. 
+All right? 
+Whether it hurts and whether you can see it are independent given that it's there. 
+Does that make sense? 
+This is, like, a really crucial concept for the next two weeks, so I want to be sure that you've got the idea. 
+C: So P of B given H P(?) is (inaudible). 
+L: So another way of saying it is that P of B given A and C is equal to P of B given C. Another way is to say that P of A and B given C is -- well, maybe I should prove this one. 
+P of A given C times P of B given A. This is the analog to that one. 
+Let me give you a car example, where it's more clear, maybe even than toothaches. 
+We know more about cars than toothaches, most of us. 
+So let's say something's wrong with your car, and you're considering the following proposition. 
+One is that the battery is dead. 
+One is that the radio works; that the radio plays when you turn it on, and the other one is that the starter turns over. 
+This is an English idiom meaning that when you turn the key it makes noise. 
+Are any of these propositions -- just two of them -- independent of one another? 
+Because if you walked into a car and the radio plays, you're going to think it's more likely that the starter will turn over. 
+But if the radio doesn't play, you might naturally think, hmm, maybe the battery's dead and so the starter will not turn over. 
+So knowing this, here's the information about this. 
+Any one of these gives you information about the other one. 
+So what if I tell you the battery is good? 
+Definitely, I know it. 
+I tested it. 
+Now, does the radio playing tell you anything about the starter? 
+No. Well, you know, it might, actually, if it shared a wire to some other place in the car, but naively, if the starter's connected to the battery and the radio's connected to the battery, and they don't share anything else, then given that I know the battery works or given that I know the battery's dead, either way, this doesn't give you information about that. 
+So in this case, we would say that R and S are conditionally independent given B. 
+==========
+So now let's think about how would you do Bayesian updating when you have multiple pieces of information to integrate in as you go along? 
+All right, and there's two ways to do this. 
+One is to integrate both pieces of information all at once, and the other one is to do one at a time. 
+So imagine that the person walks in and I don't think about -- standard practice in my dental office is they take an X-ray no matter what. 
+So the person walks in the door, finally, to the dentist, and here I have the X-ray so I can see whether or not there's a spot on it and I have the complaint of the patient so I know whether or not they're complaining of a toothache, and then my problem is to update my belief in whether or not the patient has a cavity, given both of these pieces of information. 
+OK, so here I have two pieces of information. 
+How do I do the update? 
+OK, so what I want to know is the probability of a cavity, given T and X. You can afford to be lazy here a little bit. 
+We write these -- because we're going to start writing big error conditional probability formulas. 
+They're just going to get bigger and have more things on the left and the right of the bar. 
+Assume if there's two variables on either side, assume they're conjoined. 
+Assume that it's an and. 
+Separate them with commas sometimes, and sometimes I won't even remember the commas. 
+Just assume it's an and. 
+So, this is the probability that the person has a cavity given that they have a toothache and there's a spot on their X-ray. 
+So, what is that? 
+Well, we can use Bayes' rule and we can actually do the -- let's do Bayes' rule, just directly out. 
+OK. 
+So Bayes' rule says this is equal to the probability of T and X given C, and the probability of C over the probability of T and X. Now, unless we make some assumptions, we can't really go any farther. 
+You can't know -- without making some assumptions, you can't know the probability of T and X, unless you've gone out and assessed it. 
+Unless somebody's done studies of how many people have toothaches and spots on their X-rays, or how many people have both of those symptoms given they have a cavity. 
+And so once you start considering conjunctions of things, it's very -- you're lucky if somebody's done a study relating one symptom to a disease. 
+Forget the possibility that someone would do all the combinatorially many studies that you could do. 
+So what we typically do is make an assumption of conditional independence. 
+So in this case, let's assume that C and X are conditionally independent given C. That lets us take this expression apart. 
+Oh, I didn't do good board management and I erased the crucial little piece of theorem which used to be right there, so that -- the probability of T given C times the probability of X given C, times the probability of C all divided by the probability of T and X. Now, this is pretty cool. 
+At least, the top looks really very nice. 
+The top says, well, I started out with this prior probability of someone having a cavity, and I find out that here's a spot on their X-ray so I multiply in a kind of factor that takes that evidence into account, and then I find out that they have a toothache and then I multiply in another factor that takes that into account, and you can probably see just from the structure, at least, of the top part of the formula that we could do this evidence combination in - - sequentially, rather than jointly. 
+And we get the same answer, right? 
+So if first you found out that they had a toothache, and then later you found out that you had the X-ray, you could just fold that in incrementally. 
+==========
+So this part all looks pretty good, and the only problem we're left with is that normalizing constant down there. 
+The reason people call it a normalizing constant is because another way to look at this is that people know -- we know -- that the probability of C given T and X plus the probability of not C given T and X has to be one. 
+Here's another way of looking at normalizing. 
+That's just another fact of probability, which you could put on your list of little theorems of probability to be verified. 
+These are the sorts of things you should be able to figure out easily. 
+OK, so probability of C, probability that you have a cavity given this evidence, plus the probability that you don't have a cavity given this evidence, this has got to be one. 
+OK, so that means that you can compute the numerator here for this case and the numerator for that case and add them -- I'm sorry, I have to explain this in a better way. 
+Well, let me just write it all out. 
+This is equal to this over the probability of T and X. This is equal to this over the probability of T and X. So if you multiply this out, you see that the sum of these two numerators is equal to this normalizing factor. 
+OK? 
+So this plus this is probability of T and X. That's what we did on the board before. 
+So a kind of standard way that people will do this computation is -- you compute this numerator because you're going to need it, and you compute this numerator because you might need that one too, and then if you really need the probability, you just add these together and use that to divide (inaudible). 
+It's just algebra, but it's a trick that can make it easier to do the computation. 
+We'll find it out again when you need it. 
+OK, so I'll give you an exercise for tomorrow. 
+Not tomorrow, Monday, and a couple of other things to look at. 
+in the book. 
+And then basically, we'll start talking about Bayesian networks, which is a way to really vividly codify these conditional independence relationships. 
+All right, so here's something, a little proof. 
+The conditional version of Bayes' rule; it's a one-liner. 
+And also look at the exercises... 
+END OF TAPE 
+==========

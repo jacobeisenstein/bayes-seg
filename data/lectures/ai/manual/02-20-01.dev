@@ -1,0 +1,622 @@
+==========
+So -- last time we talked about propositional logic. 
+There's no better way to empty out a room than to talk about logic. 
+(Laughter) So now, today we're going to talk about what it is that you might -- having done -- gone to all that work of establishing syntax and semantics and all that -- what might you actually want to do with some descriptions that are written down in logic? 
+So there are two things that we might want to automatically determine about a sentence of logic. 
+Well, and maybe there are others but one is satisfiability, and another is validity. 
+OK. 
+We -- this is a test for you guys -- last time we talked about a way to determine whether a sentence is satisfiable. 
+Can you tell me what it is? 
+You know an algorithm for this. 
+Yes? 
+__: It could be possible to find the variables that make it true? 
+Right. 
+So it's satisfiable if there's some assignment that makes it true. 
+And so you could obviously -- and you read all the assignments and see if there's one that makes it true. 
+And how do you tell if a sentence is valid? 
+Anybody else? 
+__: (inaudible) So the same thing but except all of them. 
+So valid means it's true in every assignment. 
+Satisfiable means there's one assignment that makes it true; validity, every assignment makes it true. 
+So, we're going to next talk about better ways to compute satisfiability and better ways to compute validity. 
+That's going to be our theme for today and maybe some more of tomorrow, I'm not sure. 
+==========
+So, satisfiability problems -- it turns out that there are cases that -- there are problems in the real world that end up being expressed essentially as lists of constraints where you're trying to find some, say, assignment of values to variables that satisfy the constraints. 
+So an example might be scheduling people to work shifts in a hospital, right? 
+Filling out the nurse shifts in a hospital. 
+Different people have different constraints, some don't want to work at night, no individual can work more than this many hours out of that many hours, these two people don't want to be on the same shift, you have to have at least this many per shift and so on. 
+So you can often describe a setting like that as a bunch of constraints on a set of variables. 
+There's an interesting application of satisfiability that's going on here at MIT in the Lab for Computer Science, in fact I want to put a link to Daniel Jackson's home page, maybe you can help me to remember to do that. 
+So Professor Jackson's doing this thing where he's interested in trying to find bugs in programs. 
+So that's a good thing to do, but he wants to get the computer to do it automatically. 
+And one way to do it is to essentially make a small example instance of a program. 
+So an example of a kind of program that he might want to try to find a bug in would be an air traffic controller. 
+So there's -- the air traffic controller has all these rules about how it works, right? 
+So you could write down the logical specification of how the air traffic control protocol works, and then you could write down another assertion that says, "and there are two airplanes on the same runway at the same time." 
+And then you could see if there is a satisfying assignment, sort of if there is a configuration of airplanes and things that actually satisfies the specs of the air traffic control protocol and also has two airplanes on the same runway at the same time. 
+And if you can find -- if that whole sentence is satisfiable, then you have a problem in your air traffic control protocol. 
+So there's an example of something that people are doing. 
+==========
+So satisfiability problems are typically written as sets of constraints, and that means that they're often written -- pretty much always written -- in conjunctive normal form. 
+All right, the conjunctive normal form -- an expression -- a sentence is written in a conjunctive normal but it looks like A or B or not C and B or D and not A and B or C or F. Or something like that. 
+So it has to form -- its outermost structure is a conjunction. 
+It's a conjunction of multiple units. 
+These units are called "clauses." 
+This is a clause. 
+And a clause is the disjunction of many things. 
+And the units that are inside clauses -- like this -- are called literals. 
+And a literal is either a variable or the negation of a variable. 
+If you have an expression where the negations are pushed in as tightly as possible, then you have ors, then you have ands. 
+This is like saying, however it is, every assignment that you make has to meet each of these requirements. 
+You can think of each clause as a requirement. 
+So somehow, this clause has to be satisfied, and it has different ways that it can be satisfied, and this one has to be satisfied, and this has to be satisfied, and that. 
+Now, you can take any sentence in propositional logic and write it in conjunctive normal form. 
+==========
+So, let's see -- what if I have (pause) that expression, how can I turn it into conjunctive normal form? 
+OK. 
+Usually, the first step -- step one is to drive in negation. 
+Is there anybody here who hasn't heard of DeMorgan's Rules? 
+OK. 
+They're something you see in -- circuit design sometimes -- so here's your rule. 
+Not A and B is equivalent to not A or not B. So that's one of DeMorgan's Laws. 
+So if you have a negation on the outside, you can push it in and change the connective. 
+And it works the other way, too. 
+If you have not A or B, is equivalent to not A and B. So we can -- using those rules, we can drive this negation in and we'll get A or B and -- what does that turn into? 
+__: (inaudible) Right. 
+Not C and not D. All right. 
+And then, step two is distribute or over and. 
+So now we have this A or B and not C and not D. Particularly, you can safely leave those parentheses in, right? 
+And is associative, it doesn't really matter. 
+And distribute "or over "and" means that if we have A or B and C, that's equivalent to A or B and A or C. You can prove these things to yourself if you wanted to using the method of proof tables, you could try to prove that they were valid. 
+They are. 
+OK. 
+So we can distribute "or" over "and", and if we do that over here, what do we get? 
+Can we apply that to this? 
+What is the first clause going to be? 
+__: A or B. A or B, and A or not B and A or not C. So there we go. 
+And now that's in conjunctive normal form. 
+Is that cool? 
+Is everybody content with conjunctive normal form? 
+Now, the thing about conjunctive normal form is, that although you can convert any sentence to conjunctive normal form, you might do it at the price of an exponential increase in the size of the expression. 
+Because if you have A and B and C OR D and E and F, you end up making the cross- product of all of those things. 
+So you can get into some trouble in that way. 
+So -- just something to know. 
+It's going to turn out that, interestingly enough, the proof thing is to try to look at the satisfiabilty problem, we typically do it by thinking of our sentences that they're in conjunctive normal form, and when we're thinking about validity we usually look at disjunctive normal form, which is the dual of this, which we'll mention briefly later on. 
+Just so you know. 
+==========
+So now we know how to make CNF. 
+So let me now write down the equation of the day, the sentence of the day, in conjunctive normal form. 
+It looks like this. 
+P or Q ... 
+So is that satisfiable? 
+We'll have to figure out how to prove whether it's satisfiable or not. 
+OK. 
+So what would -- the main way of trying to prove whether that's satisfiable is to first -- for satisfying an assignment is to just enumerate all the assignments and then see if that expression is true of all of them, but that's tedious. 
+There are only five variables in that expression, so that's 32 assignments, but as we get more and more variables it gets worse and worse. 
+All right. 
+So let's think about a process for searching through the space of assignments that's more efficient. 
+And it's good we're going to end up with an algorithm that's a well-known algorithm but we'll kind of try to get there by example. 
+All right. 
+So, let me get an eraser here... Let's make a search tree. 
+We'll start out by considering the possible assignments that we can make the variable P. We can assign it true or false. 
+So let's -- we're going to think about this search tree, so we can define P false or true. 
+I guess -- in my example I did the falses first. 
+Now, if I assign P "false", that simplifies my problem a little bit. 
+You could say, before I made any variable assignments, I had to find an assignment to all the variables that would satisfy this set of requirements. 
+==========
+Having assigned P the value "false", now there is a simpler set of requirements on the rest of the assignment. 
+So let's think about how we can simplify a sentence based on a partial assignment. 
+So let's actually figure out what the answer is and then we'll write down the general rule. 
+OK, so if I assign P the value "false", let's consider this clause. 
+Is this clause going to be important to us somehow? 
+If we assign P the value "false"? 
+What does this clause turn into in terms of requirements? 
+__: Q is true. 
+Good. 
+Q is going to have to be true, right? 
+Because this way we have to make either P or Q. If we commit to making P false, then we have no choice but to make Q true. 
+So this is going to turn into Q or -- excuse me, and -- I'm going to put Q in parentheses for reasons we'll see in a minute. 
+All right, now what about this clause? 
+What's that going to turn into if we assign P to "false"? 
+__: True. 
+Excuse me? 
+__: R has to be true. 
+OK. 
+Not Q or R, right? 
+T or not R, that stays the same. 
+What about this one, not P or not T? __: (inaudible) We've satisfied it. 
+We don't have to worry about that anymore, right? 
+Because we've committed to making P false, that requirement's done. 
+It's like doing one of the requirements in your major or something. 
+You have to take either this or that or that, you take one of them, that category's done. 
+All right, so that side's all done. 
+==========
+P or S, we've got the same deal we had before, and the last two don't involve P, so they come along for the ride. 
+OK, so if we commit to P being false, this is what remains. 
+So simplification goes like this: assign and simplify -- there's going to be a subroutine in an algorithm we end up with eventually. 
+So given a formula \Phi in a literal U -- OK, let's call it a formula \Phi in a literal U. OK, literal is either a variable or its negation. 
+So in this example we just did here, our literal would have been not P, right? 
+So we were given this big formula, now we're given the literal not P, and so the question is how can we assign not P and simplify the results to get that? 
+So what we want to do is, two things. 
+We want to delete all clauses containing U, To delete the clauses containing U? They're satisfied. 
+Don't have to worry about them anymore. 
+So that's why we got rid of all the clauses that had not P in it -- well, there was only one, but we got rid of it. 
+And then we want to delete not U from all the remaining clauses. 
+Because it's not an option. 
+If we're committed to U being true, then not U is no longer an available option for us. 
+OK. 
+That's it. 
+Just As A Reminder, What if we delete all the options from a clause, then what we have left is -- what do you think? 
+__: (Inaudible) Yes, there's some debate here. 
+It's really false. 
+If you think about the clause as being -- like if I could either take this class or another class but then for some reason I couldn't take this class and for another reason I couldn't take the other class, then I can't satisfy the requirement. 
+Right? 
+So here's type one, an empty clause is false. 
+All right. 
+But what about the thousands with no clauses? 
+What about a sentence with no clauses? 
+(Pause) There's no requirements. 
+True. 
+So that's going to be really important to us as we sort of work out this algorithm. 
+OK. 
+Everybody happy with that so far? 
+==========
+OK, let's keep doing our search. 
+So we tried assigning P false and we decided if we reassign P false then this is what we'd have to do. 
+So now let's consider the variable Q. All right, we can assign Q true or false. 
+Let's consider the false branch -- we're just doing our beautiful depth first search here -- so we're going to assign Q false and simplify. 
+OK? 
+So the rule says that we delete all the clauses that have not Q in them. 
+OK? 
+So we're going to delete that one. 
+And we delete Q, because Q is not not Q from any clause that we find it in. 
+So what's this first clause going to turn into? 
+Empty clause. 
+What's the next one going to turn into? 
+It's going to go away -- OK, good -- it doesn't matter. 
+So there's another good little important -- a corollary of "an empty clause is false" is, "any sentence containing an empty clause is false." 
+Good. 
+So, as soon as we get to here, and we think about assigning Q to be false, we realize that there's no point in considering that there's still a whole eight more ways that we could assign the remaining variables here, but none of them will be of any use to us. 
+So, there's this whole big ton of the search tree that we can just cancel, because we know that there's no way that we can find a satisfying assignment in there. 
+I have this pithy description of the diagram -- reject falsity. 
+OK, this is lesson number one. 
+OK, so in searching the tree, if you ever get to the point where you know the sentence is false, don't continue. 
+Time to backtrack. 
+But backtracking means go back up one, and try it with the next assignment. 
+Have Q assigned to one. 
+OK, so if you make Q true, things look up a little bit, right? 
+So let's figure out how we rewrite this expression with Q assigned to true. 
+The first clause? 
+Goes away. 
+Second clause? 
+R. And Q doesn't participated in any of the rest of this, so it just comes along, right? 
+So we get R and T or not R and S and T or R or S and not S ... 
+OK. 
+P, Q, that's a plain R. Let's consider R false. 
+Do we have to consider that for very long? 
+No. Why? 
+__: (inaudible) OK, good. 
+So, right away again we see if we assign R to false, we're going to get the empty clause. 
+There's no way to satisfy this expression with R false. 
+So we can cut all that out. 
+We could even have been smarter, though. 
+Right? 
+By inspection of that formula, what do you know? 
+Just by looking at it? 
+(Pause) That R and S don't have to be true. 
+Because for sure, if you assign R false, we're stuck, and for certain, if assign S to false we're stuck. 
+OK. 
+Rule number two. 
+Actually, this is rule number three. 
+Sorry. 
+Accept the inevitable. 
+That is -- I'm going to write this down as a regular algorithm, but I'm very pleased with my little list of maxims there. 
+All right, so that means that when you find a variable that is all by itself in a clause, then you might as well assign it to that value because it would have to be that value. 
+So, we won't even think about that. 
+So if we have that rule, we won't even bother coming down this far and saying No, we can just cut to the chase here and say OK, R has to be true. 
+R has to be true, then that goes away, T or not R becomes T ??? 
+T, and S and we've proved that one true, and not S or T, and you can see now that we're just going to be forced to assign T and S. OK? 
+All right. 
+There's another rule, which actually doesn't -- I tried to construct an example that would in a very short amount of time illustrate every rule. 
+But there's another thing that you can see here. 
+I mean, let's imagine that there's another variable, called X. And T is here, and we say T or X. Right? 
+We just grabbed another variable from somewhere. 
+Then we are forced by the rule that says the literal all itself you just have to assign it to that value. 
+That one doesn't really apply anymore. 
+But you might be inclined to assign T true anyway, why is that? 
+__: Because it satisfies a large number of clauses. 
+Because it satisfies a large number of clauses, but something even stronger than that. 
+Can you go wrong by assigning T true? 
+See, T only ever occurs positively here. 
+So in the case that it's all by itself, you must define it to be true. 
+I mean, in this case you're not required to assign T true, it might be that you can satisfy this by assigning T false, though, in fact you can't. 
+But with a cursory inspection you don't know that, but you can tell very quickly that you can't hurt anything by assigning T to be true. 
+If T only ever occurs positively, it's OK, assignment true. 
+Nothing is hurt. 
+In the same way, if it only occurs negatively, then assign it false. 
+No problem. 
+OK. 
+That's my other rule "Go with the flow". 
+We need a better little aphorism here, if anybody comes up with a better one, I'll give them a prize. 
+There's another rule "embrace truth". 
+Right? 
+If we assign S to be true, and T to be true, then we'll have a sentence with no clauses, right? 
+If we assign S to be true, we get T or X and T, and if we assign T to be true, we have no more clauses. 
+Now, haven't finished our job in some sense, we haven't worked out what value X is going to take on, but at this point we don't care. 
+So you might as well just stop. 
+You can give back an answer that says, here, I've assigned these values to these variables, but I don't care what X is. 
+And that will happen. 
+All right. 
+==========
+So anyhow, let me write down the algorithms. 
+In the way that it's written down in the Cook paper. 
+We're keeping that. 
+So this algorithm is called DPLL for Davis Putnam Logeman and Loveland. 
+One of these interesting sociology of science kind of this, like Davis and Putnam kind of did it, and then Logeman and Loveland made it better, and some people only call it Davis Putnam but that hurts the feelings of Logeman and Loveland, and so we're being very embracing in calling it DPLL. 
+OK, DPLL takes a formula -- sentence \Phi as input, and it tries to tell whether it's satisfiable, and as a side-effect, just to be helpful, if the answer's yes, it will give you back a satisfying assignment. 
+Because it's not usually the case that you want to say, is it possible to schedule all the nurses for the next month of shifts? 
+You'd actually like to know what assignment it is that works. 
+So here we go. 
+If \Phi is empty, return -- what's the answer if \Phi is empty? 
+True, yes. 
+If there's an empty clause in \Phi, return (pause) false. 
+All right. 
+If there is a unit clause U in \Phi, return -- OK wait one minute -- DPLL of \Phi of U. OK. 
+This is - - in the terminology of the Cook paper, this operation of assigning and simplifying, of taking a formula and assigning some value to a literal, they call it \Phi(U). 
+All right, so you give it a formula and assignment and it gives you back a formula. 
+OK. 
+A unit clause is a clause with only one literal. 
+Right? 
+So that's one of those forced choices. 
+So if you have a clause with only one literal in it, then go ahead and assign it, you get back a formula, and then you can call DPLL recursively on that formula. 
+So we're going to write down a nice recursive recursive algorithm that embodies that search -- the search tree, but doesn't explicitly (inaudible) the tree. 
+All right, is this clause -- this case make sense to everybody? 
+Let's see, OK, so now we have, if there is a pure literal Q in P, return P to ... 
+OK. 
+A pure literal is ... 
+literal only occurs positively or negatively. 
+All right. 
+So it means we -- if P is in the formula, then it is always positive, there are no not P's. 
+Or if S is in it, it is always negative, there are not S's but no plain old S's. 
+These are the choices you're forced to make; these are the choices you could make without hurting yourself. 
+But you might as well. 
+OK. 
+If all else fails, then we have to take a search step. 
+So, the algorithm continues over here, otherwise, for some variable if DPLL of \Phi of V is true, then return True. 
+Otherwise, return DPLL of \Phi of not V. 
+So, if we couldn't do any of these things that were obvious -- so we pick some variable, try assigning it to be true, and then recursively do this, and if that works out, that's cool and the answer's yes. 
+If it doesn't work out, what we do is try assigning it false and maybe that will work out. 
+But -- I mean, once we've tried true and it didn't work, then the only thing that remains is to try false and see if there are any ways to go from there. 
+So that's it. 
+That's the whole algorithm. 
+So there's one sort of thing that's unspecified that's in this algorithm. 
+What is it? 
+__: Which variable V. Which variable V, right? 
+For some V. 
+And that's open -- there's no obviously right way to do it. 
+The paper talks about a heuristic called "MOMS". 
+(Laughter) Which I find entertaining. 
+See Moms heuristic -- QC -- the variable with the maximum number of occurrences in minimum sized clauses -- moms. 
+OK, why would that -- why would you think that would be reasonable to write this? 
+__: To make a fairly strong constraint. 
+Right, right. 
+So, kind of a general idea is that you -- if things are going to go badly, you'd like them to go bad soon. 
+You don't want to assign a bunch of variables and then suddenly realize that you were stuck. 
+If you're going to be stuck you'd like to reveal it as quickly as possible. 
+And so, this idea is that well, a variable that occurs quite frequently in small clauses is one that is pretty highly constrained, and maybe by picking a value for it now, you'll reveal whether there is a conflict. 
+That's fine, you can do it any way you want to. 
+In fact, in the problems that -- we're going to ask you to solve some -- figure search clauses, so we're going to give prizes to whomever can solve the biggest ones the fastest. 
+So it may require some creativity in coming up with things like that. 
+And it turns out that a lot of AI is bound up in understanding some particular traits or tendencies of your problem and using them to constrain the kinds of searches that we do. 
+Because, typically we try to solve problems that are the easy ones are NP-complete, but the hard ones are harder than that. 
+And the question is, well why do you not just go home in despair? 
+And the answer is that usually, although your problems are maybe very hard in the worst case, that maybe there's a particular, some insight that you can get into the problem that you have at hand that gives you a way to come up with good heuristics or rules of thumb that let you kind of solve them plausibly. 
+Yes? 
+__: I was just wondering -- so this algorithm only returns one possibility? 
+Right. 
+You could force it through all possibilities. 
+How would you -- what would you change? 
+(Pause) __: (inaudible) You got it. 
+That's right. 
+So -- if there's some -- if there's a satisfying assignment then it's guaranteed to find it. 
+But if there's more than one, it will -- still is just going to return the first one it finds. 
+So this is right. 
+This step -- remember, this is the one that wasn't a forced choice. 
+We said you couldn't hurt yourself by assigning, say S to be true in my example, whatever it was ... 
+you couldn't hurt yourself by doing it, but you might limit the number of possible solutions you would find. 
+So you would want to take this out, because if you were interested in finding all the possible solutions, then this might limit the possible solutions. 
+And then, of course, you want to do both cases here, right? 
+So you -- this has the effect of just quitting when you find one that works, but if you want to find all of the solutions, then you really have to traverse the whole tree. 
+Would this be better than enumerating all the assignments in the case that you want to find all the satisfying assignments? 
+__: Yes. 
+Yes, why? 
+__: Because you can detect unit clauses. 
+Right. 
+You can propagate get unit classes and you can cut off the failing branches early. 
+So it's still worth doing, even if you want to find all the answers. 
+__: How do you do a thing like a scheduling problem? 
+You don't have -- you have a large combination of literals. 
+Yep. 
+__: Do you enumerate all the possible...? 
+Yes, it's an interesting -- that's pretty disgusting, all right? 
+Because sometimes you would have to have a boolean variable for every assignment of person to shift, or something. 
+So that could get pretty disgusting. 
+It's like in the airport stuff, you have to have a boolean assignment for every airplane at every time step to every chunk of air space or something. 
+So you can actually solve really pretty big instances of these problems. 
+But, again, the Cook paper talks a lot about the sizes. 
+Because typically, they're always hard ones that you're in trouble with, but there aren't that many. 
+In the space of all possible problems of a given size, most of them aren't so hard, it turns out. 
+That is to say, most people don't succumb to things like this, that lop off whole big chunks of estate space at once. 
+But it does feel not so right, it feels like you might be throwing away some important structure in the problem, and we're going to come back to that -- it's going to be what, in fact, motivates us to move to first order kinds of representations and first order logic. 
+==========
+OK, we'll talk briefly about another class of methods for doing satisfiability, and then we'll switch to proofs. 
+So this algorithm is Sound, meaning if it gives you the right answer -- IF it gives you an answer (pause) it's correct -- and it's complete, which means, it always gives you an answer. 
+So it does seem like pretty important requirements on an algorithm. 
+It sort of -- it seems kind of unfortunate to have to deal with an algorithm that violates either one of those requirements. 
+So what we're going to do now is look at a class of algorithms that are sound, but not complete. 
+So they run, and maybe they give you an answer or maybe they say, sorry. 
+They don't ever give you a wrong answer, but sometimes they don't give you an answer. 
+And why would you ever want one? 
+Well, sometimes they run a lot faster than these more systematic ones. 
+==========
+All right, so let's consider an algorithm called GSAT. 
+It's a randomized algorithm. 
+It's not Very randomized. 
+We'll talk about a more randomized algorithm next. 
+Basically what it does is hill-climbing in the space of assignments -- of total assignments. 
+OK. 
+So that is to say it picks some assignment at random, and then it looks somehow at the neighboring assignments -- we have to define what neighboring assignments are -- and then moves to the neighboring assignment with the least cost. 
+And then they'll move to the neighbors of that assignment, and move to the neighbors of that assignment with least cost... 
+And it walks through a space of assignment and it hopes to find a satisfying assignment. 
+And if it does, it says, Yes, I found one, and if it -- you get tired of waiting, then you stop it. 
+Or it quits after a certain amount of time. 
+OK, so we're going to define the cost of an assignment to be the number of unsatisfied clauses. 
+All right. 
+So let's say I start with an assignment -- over there we have variables P, Q, R, S, T. So let's say I have assignment 00000. 
+What's the cost of that assignment? 
+Let's see. 
+The first clause is unsatisfied. 
+See? 
+That's why when we assigb false to all the variables then this thing is false. 
+So that cost us one. 
+How about this one? 
+True. 
+Basically, anything with a negation in it is OK. 
+Those are all made true by that assignment. 
+Here's another one that costs us and here's another one that costs us. 
+So the cost of that assignment is three. 
+OK? 
+So the algorithm is this: randomly choose A, flip the variable that results in lowest cost, even if it's worse than A, restart after some variable M flips. 
+Stop after N restarts. 
+All right, so here's the idea. 
+Restart means go back to here. 
+__: (inaudible) Excuse me? 
+__: Do you want to start at the (inaudible)? 
+Oh, yes, right, good. 
+OK, so we started an assignment. 
+We consider all the ways to obtain the single variable in that assignment when you look at the costs. 
+We see which one of those successors has the lowest cost, and adopt that as our new assignment. 
+If it has cost zero we're done. 
+If it doesn't, we do the same thing. 
+We consider all the one-bit changes, go to the lowest cost. 
+After we follow a particular trajectory for M-steps and we haven't found a cost-zero answer, we give up and start again at a random new point, and after we've tried some number of trajectories we pitch the whole thing together and say, "I don't know." 
+C: So what's (inaudible)? 
+It might be that all the successors -- it's not true in this case, but it might be that all the single- bit flips of this have a cost that's higher than three. 
+Now, if you were doing kind of conventional hill- climbing, you'd say forget it, I'm in a local optimum. 
+I'm stopping and I'm going to restart all the way over again. 
+It turns out that people have done a bunch of experiments. 
+It turns out that it's OK to just persist. 
+It gives you a way to kind of walk out of the local optimum and sort of walk over the hill. 
+So even if all of the children are worse for this one, you still go to the best child and continue. 
+C: What happens if the local optimum is, like, once you step out of that and your local optimum is the lowest cost (inaudible). 
+__: Yes, you can end up going back and forth, back and forth. 
+You do that for a while, and then after it flips you leave. 
+I mean you could try to detect it and bail out. 
+Yes. 
+C: Is there even really a feel of a local optimum here? 
+Is there a space continuous and smooth or anything? 
+__: No, it's neither of those things. 
+It's discrete, but there's still the notion of a local optimum. 
+It still could be that -- so the notion of local optimums still exists in discrete spaces, right? 
+So each point has a discrete number of neighbors, and if all those neighbors are worse than where you are, then well, you're at the optimum. 
+Is it worth simulating on the board? 
+I kind of doubt it now. 
+OK, so it's sound. 
+Not surprising, right. 
+If it happens on an answer it knows that it's an answer and it tell you it's an answer. 
+That's good. 
+But it's not complete. 
+It might never find one if one exists. 
+And it also isn't -- there's this other sense of complete which isn't the true sense of complete, but also you can't use this algorithm to enumerate all the satisfying assignments, because you'll never know if you've got 'em all. 
+It's not systematic. 
+C: (inaudible) __: Right. 
+Because cost of zero means that all the clauses were satisfied and you're OK. 
+If cost is anything higher than zero that means one of these constraints is being violated, one of these qualities aren't satisfied. 
+Yes? 
+C: Why doesn't the size of the clause factor in somehow? 
+__: Good! 
+So you could be smarter about this. 
+This is just an algorithm that somebody pulled out of their hat and it turns out to work surprisingly well. 
+C: Why? 
+Why does it work? 
+__: I don't know, but it was beating the pants off of DPLL for while. 
+People had these big contests. 
+There were web sites with a gazillion big hard instances of SAT problems. 
+But then the DPLL people got to work and tuned up their code some more and then it seems to work better. 
+It kind of goes back and forth and it depends in interesting and not yet completely well-characterized ways on some of the details or the nature of the problems that you're being given to solve. 
+How constrained are they? 
+And if you read the Cook paper, they talk about cases where, for instance, for DPLL problems -- there are two kinds of easy problems. 
+One easy problem doesn't have very many constraints at all. 
+There are lots and lots of solutions. 
+It's not hard to find them. 
+Those are easy also for GSAT. 
+There's another kind of problem that's easy for DPLL and that's one where there are almost no assignments, where it's completely constrained. 
+DPLL does OK there, because of the way that it propagates the constraints through, and lops off whole big parts of the space, but those are harder for GSAT. 
+So there are some offsetting strengths and weaknesses. 
+But right now, the evidence is essentially empirical, but empirical evidence, this works pretty well. 
+Even better is the next one I'll tell you about which seem even goofier. 
+Any questions about this? 
+==========
+Here's a variation on that theme called WalkSAT. 
+We're doing the same kind of thing, that is to say we're moving around on the space of possible assignments. 
+But in this case what we do is we randomly select an A first. 
+We randomly select an unsatisfied clause. 
+So we have an assignment -- obviously if there were no unsatisfied clauses, then we'd just leave. 
+But if we were just picking an assignment at random and we looked to see, well, some of the clauses are unsatisfied. 
+We randomly choose one of the unsatisfied clauses, C, then with probability equal to 0.5 we either flip the variable in C that results in lowest cost or flip a randomly chosen variable. 
+So this is like GSAT but with noise added to it, so if you're tending to get stuck someplace then randomly flipping a bit might get you out of some commitment that you've made that's just not getting you anywhere good but you can't see how to undo it. 
+Last one, it seems to work better than GSAT. 
+Again, people have had very good success with it and a lot of domains. 
+Usually works better in domains that are underconstrained rather than overconstrained. 
+That's obviously not complete. 
+Then it's the same sort of termination. 
+You go back to here, you do that for a while, until you're tired, and then you pick another starting point and then walk around from there for a while, and then when you're really tired you just quit. 
+OK. 
+Any questions about satisfiability? 
+All right. 
+==========
+Take a deep breath and we'll talk about proofs. 
+I'll erase the board while you breathe. 
+So in proof, the notion is we want to find -- we want a test for validity, sort of an inpenetrable slogan that I wrote on the board at the end of last time. 
+Let's try to remember what it might mean. 
+Right, this means invalid. 
+The idea is that a knowledge base -- so a knowledge base is just a bunch of sentences, or you can consider it to be just one sentence which is all the things you know, conjoined, put together with and. 
+A knowledge base entails phi. 
+That means it's OK to conclude the formula phi from the knowledge base, because all models of the knowledge base are also modeled with phi. 
+That's true if and only if the sentence "knowledge base implies P" is valid. 
+That is to say, this sentence is true in all models. 
+It's true in all interpretations. 
+So that's an important thing to remember. 
+One way to tell if something is valid is to prove it from nothing, so proof is going to be a way to figure out how something is entailed by something else, but you can also use it as a way to determine validity. 
+So, we'll make this more concrete, and introduce one more symbol. 
+I promise no more symbols after this. 
+We're going to write this other thing called single turnstyle. 
+So this means "entailed", and this means "can be proved from". 
+So there are some things that ought to follow if you know about the facts in the knowledge base. 
+There are some things that ought to follow from that knowledge and if we kind of adopt a formal system of proof, then there will be some things that can be proved from those sentences. 
+And you would like for them to be connected up, fairly strongly, in fact. 
+I have soundness and completeness written down over there. 
+We have the same idea, but we can write it. 
+In terms of proof we can write it very vividly. 
+A system is sound... 
+and complete -- oh, I love these huge, beautiful symmetric things. 
+OK, so some of this is if I can prove it, if I can derive it, then it's correct. 
+That means I don't get any wrong answers. 
+And if it's correct, then I can derive it. 
+OK? 
+So you know, if you're a student, don't you wish you were a sound and complete deriver of theorems or something? 
+Because you'd always get correct answers and you would be able to get all the answers. 
+So that would be good. 
+All right. 
+So what's the proof system? 
+What is this single turnstile thing about, anyway? 
+Well, presumably all of you guys did high school geometry, and that's usually people -- often people's only exposure to formal proof. 
+Remember that? 
+You heard that side A was equal to side B, and the other side of the triangle is equal to that side of that other triangle and then you applied the side-angle-side theorem to conclude -- at least people in American high schools were familiar with side-angle-side. 
+The side-angle-side theorem allows you to conclude that the two triangles were similar, right? 
+So therefore, similar. 
+Right? 
+So therefore it's similar. 
+So everybody did that. 
+That is formal proof. 
+You've got some set of rules that you can apply. 
+You've got some things written down on your page, and you kind of grind through applying the rules that you have of the things that were written down to write some more stuff down and so finally you've written down the things that you wanted to, and then you to declare victory. 
+That's the single turnstile. 
+So there are two kinds of proof, but we're going to talk about one briefly and then the other one less briefly. 
+==========
+There's something that's just called natural deduction, which is this thing that's really exactly like high school geometry. 
+We'll talk a little bit about natural deduction just to give you a flavor of how it goes in propositional logic, but then it's going to turn out that it's not as well-suited as a general strategy for computers. 
+So this is a proof system that humans like, and then we'll talk about a proof system that computers like, to the extent that computers can like anything. 
+So here, a proof is a sequence of sentences. 
+This is going to be true everywhere. 
+First we'll list the premises. 
+And it's the same. 
+My analogy -- the things we've been talking about here, the knowledge base. 
+The things that you know to start out with. 
+You're allowed to write those down on your page. 
+Sometimes they're called the "givens." 
+You can put the givens down. 
+Then, you can write down on line I the results of applying an inference rule to the previous lines. 
+All right, and then, when Phi is on some line you know that KB -- well, you just proved Phi from KB, and if your inference rules are sound, and they'd better be, then KB entails Phi. 
+So let's look at inference rules. 
+We don't really know what they are yet. 
+Here's one. 
+It has the great Latin name, "modus ponens". 
+I should have looked up what it means. 
+I don't remember. 
+What this means, if somewhere on your page you have something written that's like "formula implies formula" and you also have on your page written the first formula, then you're allowed to write on your page the second formula. 
+Inference rules are just about ink on paper, or bits on your computer. 
+They're not about anything in the world. 
+They're just about what you're allowed to write on the page. 
+Proof is just about writing stuff on a page, just a syntax thing. 
+But if you're careful in your proof rules and they're all sound, then at the end when you have some bit of syntax written down on your page, you can go back via the interpretation to some semantics. 
+So you started out, from facts about the world, you're writing down formally as your knowledge base. 
+You do stuff with ink and paper for a while and so you have some other symbols written down on your page and then you go look them up in the world and say, "Oh, I see. 
+That's what they mean." 
+That's sort of how this goes. 
+So there's an inference rule. 
+Here's another one, "and elimination". 
+And so if you have something that looks like alpha and beta, then you can conclude alpha. 
+There's a bunch more. 
+You can make up all the ones you want. 
+They're listed in the book. 
+There's a new one called "and introduction", and then we'll do a little proof. 
+Just to make you feel like you're back in high school geography again. 
+So and introduction looks like this. 
+If you have alpha written on your paper and beta written on your paper, then you can conclude -- what do you think? 
+Guess, from the name. 
+C: Alpha and beta. 
+None of these things seems really too surprising. 
+So if you have this written down on one line, that written down on the other line, you can write this on the third one. 
+==========
+OK, so let's do proofs. 
+We're going to be given: P and Q. P implies R. Q and R implies S. And we would like to prove S. OK, what can we do with those rules and the stuff that we have written up there? 
+Give me a line number and a rule to apply it to. 
+C: Line 1, say P. __: Yes, from line one, we can say P. So we can say P. And we got that by taking line one and using and elimination. 
+Now what can we do? 
+Somebody else? 
+Our proof step. 
+C: We can say R from... 
+__: We can say R from four and two and modus ponens. 
+Now what do we do? 
+C: Q. __: We can say Q. Good. 
+We can say Q from 1 and "and elimination". 
+Then, big step here. 
+C: R implies S. __: R implies S. Ah. 
+Remember the precedence rule. 
+And binds tighter than implication. 
+C: Q and R by "and introduction". 
+__: Good. 
+We can make Q and R by and introduction. 
+We get that from lines five and six, and and introduction and finally we get S from seven and three and modus ponens. 
+So, there. 
+This is an example of proof, natural deduction. 
+When I was an undergrad I took a logic course and then I took a set theory course that did nothing but sitting at the computer and doing proofs like this. 
+==========
+It makes you good at symbol manipulation by doesn't necessarily give you insight into the -- but, so there are systems, there are a lot of system out there that allow you to do natural deductions but they're what's called proof checkers, which means you would type in line one and introduction P, or something, and it would say, "OK" or "not OK." 
+So it's just telling you whether you could make that step. 
+Actually, in this example, you could probably just prove that so it could, but it couldn't necessarily prove anything you wanted it to. 
+So very typically sound but not complete. 
+It won't let you prove false things, but they won't necessarily prove anything that is a consequence of what you have written down. 
+All right, so, that's the natural deduction. 
+All right. 
+Computers like to use the resolution rule. 
+Let me just say one reason about why computers don't like this. 
+I had one example of when this gets a little bit tricky. 
+What if I know this -- P or Q implies R, T implies R. I would like to conclude R. You think that's a sound conclusion? 
+Just ignoring the rules, do you think it would be correct to conclude R? Do you think R is entailed by that knowledge? 
+C: Yes. 
+__: Yes. 
+But these proof rules won't let us do it. 
+There are proof rules that will. 
+The problem is disjunction, you have to do what is called proof by cases. 
+You've all done proof by cases informally, right. 
+You assume P and from that you prove R, and then you assume Q, and from that you prove R. And it turns out that when you start having to do that, the branching factor of trying to do a proof automatically gets really high because you can assume by cases, you can pick any two of these things. 
+You can pick any rule you want to apply, and pretty soon the number of next steps that you can write down in your proof is just enormous, and it makes it a really hard space to search automatically. 
+So that's why computers don't like to do natural deduction. 
+So next time we're going to talk about a rule called resolution. 
+There's a law in the single inference rule, called resolution, that lets us prove anything is all by itself sound and complete in proposition logic. 
+The computers like it because it has fewer options. 
+OK, see you tomorrow. 
+END OF TAPE 
+==========

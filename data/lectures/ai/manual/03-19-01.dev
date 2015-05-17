@@ -1,0 +1,487 @@
+==========
+So we're talking about planning. 
+And we talked about strict -- the strict sort of operator representations and then the partial order planner which seemed like a good idea because it would let you do this kind of non-linear planning, put in planned steps in whatever order you wanted to and hook them up. 
+And there's something attractive about the partial- order planners. 
+They seem almost like you might imagine that a person might go about planning, right? 
+You kind of put these steps in and then try to fix up the problems, and it seems kind of appealing and intuitive, and so, attractive to people, but they're really awfully slow. 
+Right? 
+So the (inaudible) of the search base is kind of funny. 
+It's not at all clear how to apply the things that we learned, say, in the SAT stuff to partial order planning. 
+It's not clear how to prune the state space, how to recognize failures early, all those kinds of things. 
+So in what appears to be a sort of a retrogressive move of the planning community about maybe ten years ago kind of ditched that stuff and said no, wait a minute, maybe we can do better by looking at these planning problems in some sense in a little bit more of a primitive way. 
+Just to give you the previews. 
+So what we're going to do today is talk about GraphPlan and SatPlan, which were described in the paper we handed out last time, and then probably next time, which won't be until after spring break -- it's too bad, I just couldn't order things right. 
+I assumed you didn't want the exam to be the first thing after you came back. 
+Anyway, so the next time we'll talk a little bit about how people have moved forward from GraphPlan and SatPlan into some more rich representations and there's a kind of a circle right at this moment in the research community into hooking back into some of those ideas that came up in the partial order planning. 
+So I wound up learning something about different techniques for planning. 
+You can see something about the cycles of research sort of style, which are always interesting as well. 
+OK, so GraphPlan. 
+So GraphPlan happened also sociologically when a bunch of -- a couple of theoreticians decided that, "Oh, these planning people they plan around with algorithms. 
+What do they know? 
+We know about algorithms, so let's just try to take this planning problem they have and get at it somehow more directly. 
+==========
+OK, so here's the idea. 
+The idea with GraphPlan is, well, it's a propositional planner. 
+So that means that there are no variables around in the course of planning. 
+So when we did the partial order planning examples, we were doing the blocks world and we had these planning, these operator schemas, the set of X's on Y's, et cetera, et cetera, and we had these variables X and Y. In GraphPlan, we're not going to be able to have any variables floating around during the planning process, so not having any variables makes your life simpler in the sense that you don't have to worry about unification or variable matching or any of that stuff, but it may make it harder in that if you really do have six blocks and an on (A, B) relation then you'll have to make 36 propositions for every possible instantiation of the variables in that relationship. 
+So if you need to talk about six different blocks and how they could be on each other, then that might be a lot of proposition. 
+But at least in this work, it's going to turn out that it's worth having a big representation that's fairly easy to deal with, that it's going to be more efficient to do that than to have a very concise but kind of complicated representation as we have when we have variables. 
+So that's the tradeoff, and so in this case we're going to go for big but simple, the propositional planner. 
+And it has the following structure. 
+This isn't really going to make too much sense until we cache it out on the board, but the idea is that you make a plan graph of depth k, and then you search for a solution, and if you succeed you return a plan. 
+Otherwise, you increment K and go back to to there. 
+So that's the basic scheme. 
+So we're going to look for plans but we're going to look for plans of increasing -- it's interesting. 
+Note that I wrote "make a plan graph of depth K." We're going to look for plans of depth K, so if we look for a depth two plan, it's going to be a partially -- the answers that we get back can be partially ordered, or at least they'll have a fixed number of steps, right? 
+They'll have K steps -- K time steps, I should say -- but each time step might have more than one action, so it might be that you have some actions that could conceivably be executed in parallel. 
+Maybe you can or can not actually execute them in parallel, but there'll be some actions where you don't care what order they occur in, and so what you would get out of GraphPlan is you might get a plan that looks like this and say this is a depth three five-step plan. 
+All right? 
+So if you could actually execute these things in parallel, then it would only take you three time steps. 
+So if you have to linearize them, it's OK, and you could put these two in any order and those two in any order. 
+OK? 
+So what we're going to do is we're going to search for a depth one and then a depth two plan and then a depth three plan and so on, until we find the answer, and that's just a little like iterative deepening. 
+Some of the motivations for doing that are the same. 
+And one of the things, just sort of interesting to think about, there are really two different problems. 
+==========
+If you read the book, they sometimes talk about planning versus scheduling. 
+In scheduling, the tasks are fixed. 
+Scheduling might be we have to figure out how to fit all your classes into your schedule, or all the exams into the exam period, or all the whatevers into some period of time, and maybe you have constraints on some various things, but you don't have to figure out which particular tasks you need to do. 
+Typically, that's specified, and all you have to do is find an ordering for them. 
+In planning, you have to find the tasks, decide which set of tasks or steps, and schedule them. 
+GraphPlan kind of takes a funny intermediate -- I mean, I think of a GraphPlan as sitting in here somewhere, like committing to a particular depth and searching for a plan within that depth. 
+It very much circumscribes the set of plans that it's willing to consider. 
+It circumscribes the set of tasks, or the set of steps that it's going to try to fit together into a plan. 
+So it tries to say, all right, I'm just going to look in the place of two-step plans, that limits my options in some sense, and I can do that sort of more efficiently. 
+For those of you who care about complexity stuff, scheduling is, in most formulations, NP complete. 
+So there's basically exponentially many schedules, and in the worst case you have to try them all. 
+But planning is worse. 
+Planning is P-space complete because you might have a -- sometimes you might have a very small description of your problem so there are just a few very general- purpose operators, but the plan itself might be quite long, so there's variability in the length of a plan as well as in all the different operations that you might have to put in, so planning, where you have to have to think about what all the different operations are, is more complicated because you don't know the length of the plan. 
+So GraphPlan tries to take good advantage of this fact and say, "Well, I'm going to do something that's more like scheduling and I'm going to keep increasing my horizon." 
+Now, because it's doing planning in the worst case, it may have to increase its horizon out pretty darned far and so it's still a hard problem, but it's trying to leverage this idea of trying to work in a very limited space and just increasing the size of the space it's thinking about as it goes. 
+==========
+All right, so let's look at it concretely now. 
+All right, so a planning graph looks like this. 
+You have a bunch of levels. 
+You start with level zero, level one, level two. 
+At the even- numbered levels you have propositions, which they draw as a little dot. 
+So you have proposition at the even level and you have actions at the odd levels. 
+So this is the proposition level, an action level, a proposition level, an action level... 
+So if we make a graph on this set of nodes, it would encode depth two plans. 
+So there's two -- this is potentially what actions we might pick on the first step, and these are what actions we might pick on the second step. 
+The level zero propositions are whatever's true in the initial state. 
+So the rough idea is this: you take a particular action and you connect it up to its preconditions on the previous step. 
+So we're going to make a graph structure. 
+So we look at level zero and we say, what about the propositions that have to be true in order for this action to be executable? 
+And then you connect the action up to its effects in the next level. 
+So the preconditions are here and the effects are here. 
+And again, you would do the same thing here, right? 
+So this same action is going to have these preconditions there. 
+And then it's within this structure that you're going to try to look for a plan, so we make the graph, search for a solution, and see if we can find one, if not iterate it. 
+So that's the basic structure. 
+==========
+Now what we'll do is talk about the notion of mutual exclusion. 
+So it's not -- so what makes a planning problem hard is the fact that all of these actions aren't consistent with one another, right? 
+That some actions might clobber other actions, delete their preconditions or conflict with them in some way, and so what we have to do -- one thing that we've encoded in the planning graph, the cause and effect relationships of the action, so we might be able to look for a set of actions that covers some desired goal states in the last layer, but we also have to somehow encode into our graph that not all of these actions are compatible with one another. 
+So what I'm going to do now is I'll explain the algorithm to you. 
+I'll write it up on the board, the rules for computing mutual exclusion, which is a way of saying which actions and which propositions are incompatible with each other as we go through the graph. 
+Then we'll look at the examples that they do in the paper in some detail on the board. 
+OK, so we'll say look at the rules for mutually exclusive actions. 
+OK, we're going to go along and we're going to look at an action layer, and we'll start with this one and we'll say what causes two actions in the same layer to be mutually exclusive, that is, to be such that we can't execute them both at once. 
+Mutually exclusive gets abbreviated as "mutex." 
+Operating systems people will be familiar with that. 
+Two action instances at level I are mutex, and we have three cases. 
+So case one is called: inconsistent effects. 
+So the inconsistent effects is if the effect of one action is the negation of the effect of another. 
+So if one action causes P to be true and another action causes P to be false, you can't execute them both at the same time. 
+Another case is called interference. 
+One action deletes the preconditions of another -- and that's deemed to be also a case where you can't execute the two actions at the same time. 
+Because remember, we said that when we had one of these plans that had two action steps at the same point in time, our assumption was that you could linearize them in either order, and obviously, if one deletes a precondition of the other then you can't linearize them in any order, so that's not OK. 
+The third case is called: competing needs. 
+The actions have precondition that are mutually exclusive at the previous level. 
+==========
+So we're going to have this notion that actions being mutually exclusive and propositions being mutually exclusive, so one thing that can make actions mutually exclusive is essentially if their preconditions can't possibly both be satisfied during this time step, then there's no way you could execute these two actions now at the next time step. 
+So that's how you decide if actions are mutually exclusive, and you do it making reference only to properties of the actions and to what's going on with the preconditions of the previous step. 
+So then we'll give it a definition of what makes a proposition to be mutually exclusive, and you'll see that you were able to just sweep forward through a graph calculating which things are mutually exclusive with which other ones. 
+Now, so what makes propositions mutually exclusive? 
+We're going to say two propositions at level I are mutex if they're negations of one another. 
+It's pretty clear you can't have P and !P 
+true in the name step. 
+Another thing that makes two propositons mutually exclusive is if all the ways of achieving a proposition at the previous level are pair-wise mutually exclusive. 
+So what does that mean? 
+It could mean that -- so let's say, here's a proposition, here's another proposition. 
+Let's say that there are two way of achieving this one and there are two ways of achieving this one, but we've decided for whatever reason that it's not possible to execute these two together or these two together, or these two together, or these two together. 
+Then it's pretty clear there's no way to cause both of these propositions to be true. 
+So if there's no way to make these guys all true at the next level, then they're mutually exclusive. 
+==========
+So to make the planning graph, you start with the initial conditions. 
+So you just put over here in this layer all the things that are known to be true in the initial state. 
+So it could be -- that could be negated, now, so it could be P and !Q and R and S. Maybe that's what we know to be true in the initial state. 
+So then the question is, what actions do you put here? 
+And typically, the answer is that you just add whatever actions could conceivably be made true on the first step. 
+So you can take your operator description and see which -- of all the operators you have, see which ones have preconditions that are mentioned here in level zero, and then you put them here and hook them up to their preconditions. 
+There's no point putting in an action here that has a precondition of !R, 
+because there's no way that you could ever do that on the first step, so you might as well just not put it in there. 
+Start with initial conditions, add action when satisfied preconditions. 
+At the next level of propositions, we're going to add all effects of the actions at the previous level, and we're also going to add maintenance actions -- well, we can think of them sort of as actions. 
+I'll show you here. 
+OK, so let's just look at a somple example. 
+OK, let's say that this also has the effect of !P. 
+Here's an action, and it has in its preconditions P and !Q. 
+It has as its effects R, S, and !P. 
+(inaudible). 
+So there's also a possibility, in some sense, to not do anything, or to cause P -- we can kind of let P be true on this step because we just let it stay true. 
+So they do this in the pictures, in the graph, by drawing a line. 
+For every condition that you have on some level, you could also draw a line to that same condition at the next level, which sort of stands for not messing with P. So that's what I mean over there by adding maintenance actions. 
+So you're going to add more propositions at this level because the things that might get made true by the actions, but you're also going to add these maintenance arcs for all the propositions that you have before; that stands for allowing them to stay true by not messing with them. 
+==========
+So now, I guess we'll write down the algorithm for solution extraction. 
+I realize we've gone a long time without doing anything concrete. 
+And then we'll do a whole concrete example. 
+So first of all, if all the literals in the goal appear at the deepest level -- whatever level you've picked, like in this case, four -- AND they're not mutex, then we'll search for a solution. 
+So let's say you've tried to look forward, right? 
+Your goal is to have P be false and R be false, and you've gotten this deep -- and you see !P 
+here, but you still don't have !R. 
+Well, then you know that there's no way that you could find a plan. 
+There's no - - you haven't even been able to come up with an operator that would make R false. 
+So if you can't find one of your goal literals over here on the right-hand side, then for sure there's no plan. 
+OK. 
+The second case is, well, maybe you'll find !R over here, but you (inaudible) this mutex stuff you discover that !R and P can't both be true at the same time at level four, because let's say it takes the same resources to swap them both and they conflict with each other or something. 
+So that's another indication that there's not going to be a two-step or depth two plan that will let those things be true. 
+But now if you find that all the goal propositions are mentioned over here and they're not mutually exclusive, then there MIGHT be a plan in this graph. 
+There might be a plan of depth two that will actually achieve the goal. 
+So now you have to go looking for a plan. 
+So this is a search step. 
+So for each subgoal at level I, choose an action to make it true (to achieve it). 
+If it's mutex, with another action that we've already chosen -- Fail. 
+This choose is our magic non- deterministic way of writing down the search program, so at some level you're trying to find a plan and your plan needs to have this be true, and this be true. 
+So you pick a way to satisfy this and you pick a way of satisfying that, and as long as they're not mutually exclusive then you feel good about that, and then the preconditions of those actions become subgoals at the level I-2. 
+So now you go back and do the same -- repeat for the preconditions at level I-2. 
+So basically, you just have to have some -- you have to end up with a choice of a set of actions, maybe more than one on each level, such that those actions achieve the goal of X and then the preconditions of the actions that are chosen at this level are satisfied at this level and those are consistent with the effects of the actions that you chose for you (inaudible). 
+So you have to end up with (inaudible) embedded in this graph. 
+So that's a search problem, but it's a fairly circumscribed search problem. 
+We just have to -- it's not too hard. 
+And we'll see -- if we have time today, we'll see how you can actually turn that into a SAT problem, which is kind of cool, because we already know how to do SAT problems. 
+==========
+So here's a really simple planning domain. 
+It's completely propositional and very, very simple. 
+It's the one from the paper. 
+So the goal -- we're trying to get ready for a date. 
+So somebody's coming to our house for dinner. 
+So we wish to impress. 
+So our goal is to have taken out the garbage, so not have garbage in the kitchen, and to have dinner, and to have a present. 
+And our initial state, there is garbage all around, and our hands our clean, and it's quiet. 
+OK, and the operators are these. 
+There's a Cook operator and it's preconditions are that we have to have clean hands and the postcondition is we're going to have dinner. 
+We have a Wrap action, and we have to wrap the package. 
+For some reason, we have to do it while it's quiet. 
+This is a really contrived example, but it's big enough to draw on the board in all its glory, so there you go. 
+And the postcondition is that we have a package, which is good. 
+A present. 
+Now, then, we have two ways of taking out the garbage. 
+We can either carry out the     age. 
+That's precondition is that we have garbage, and the postcondition is that we don't have garbage, which is good, but we also have dirty hands. 
+And we can take out the garbage with a dolly, so that also has a precondition of having garbage, but its postcondition is that the dolly is noisy because it needs to have the wheels oiled, so it ruins our quiet and contemplative situation which we're not able to ever get back, and so we will not be in the proper frame of mind to wrap the present. 
+That's kind of a dumb example, but I don't have time to make up my own dumb example, so we'll use their dumb example. 
+OK, so the goal is to find some set of actions that will get us from the initial state to the goal. 
+OK, so here's clean, garbage and quiet. 
+OK, so those are the three things we know to be true in the first step. 
+Now I can add the actions that we could possibly carry out, and it actually looks like we could carry out all of our actions. 
+Right? 
+There's just four actions, and all of them have their preconditions satisfied OK, so cook, wrap, carry, dolly. 
+==========
+All right, so let's draw -- we'll draw the graph. 
+Yes, we'll put the mutexes in later. 
+So let's see, how do the preconditions set up here? 
+So, clean is a precondition for cook. 
+Quiet is a precondition for wrap. 
+The garbage is a precondition for carry and for dolly. 
+That's precondition stuff looks. 
+Now let's figure out what happens over here. 
+So we'll -- OK, this is now layer two. 
+We'll have clean again. 
+So we could maintain clean, and we'll have garbage. 
+We could maintain garbage. 
+OK, now what's the post-condition of cook? 
+Dinner. 
+We don't have dinner here yet. 
+So cook makes dinner. 
+The postcondition of wrap is present. 
+We don't have that yet. 
+The postcondition of carry is !garbage 
+and !clean, 
+so we have to add those. 
+!garbage and !clean, and the post-condition of dolly is !garbage 
+and !quiet. 
+This is all worked out inn the paper too. 
+So there's our planning graph. 
+That's the first planning graph we would make. 
+It sort of considers the question of maybe we could actually solve our problem all in one level, all at once. 
+==========
+So now it's time to do the mutexes. 
+So we're going to figure out which of these things are mutually exclusive. 
+All right, so we're going to start with this layer, and it's going to get kind of ugly, but we'll see if we can do it. 
+So at this layer, there's nothing mutually exclusive, which is good; the initial state is not inconsistent. 
+So now let's figure out which of the actions are not mutually exclusive. 
+OK, so do we have anything with inconsistent effects? 
+Do we have any actions with inconsistent effects? 
+C: Cook and carry. 
+L: Cook and carry. 
+Well, they don't have inconsistent effects, right? 
+The effect of one is not the negation of the other. 
+They're going to be inconsistent for another reason, but let's go through these and read them one at a time. 
+So, it doesn't look like we have anything with inconsistent effects, but we do if you consider these maintenance actions. 
+So we're going to say that in fact, so carry, which causes !Clean to be true, is going to be inconsistent with maintaining clean. 
+So we're going to say those two things are inconsistent. 
+Because we can't choose to keep clean true from before and to carry the garbage. 
+You can't do both of those. 
+OK, is there anything else that makes !clean? 
+No. So we're all right there. 
+Now, garbage. 
+We can't choose maintain garbage and do either carry or dolly, so these things are inconsistent. 
+OK, let's see. 
+We can't maintain quiet and do dolly. 
+There's a mutex there. 
+I think those are all the inconsistent effects. 
+Now we can move to interference. 
+So we have an action where one action deletes the precondition of the other one. 
+C: Carry and cook? 
+L: Good. 
+Dolly and wrap, and carry and cook. 
+Dolly causes !quiet, which deletes the quiet precondition of wrap, so we can't do dolly and wrap. 
+Carry and cook. 
+And competing needs, we don't have any competing needs right at the moment, so I think that's it. 
+OK, so those are all the actions that we can't do at the same time. 
+Now, because of the fact that we can't do various pairs of actions at the same time, that has implications for which of all these pairs of propositions can be true at the same time, so we'll find for instance, well, not surprisingly, right, we could do all the negations, right? 
+So quiet and !quiet 
+can't be true at the same time. 
+Garbage and !garbage 
+can't be true at the same time. 
+Clean and !clean 
+can't be true at the same time. 
+So those were easy ones. 
+Now we have some things that are mutex because all the ways of achieving them are mutex. 
+So, let's see which ones remain. 
+So there's a couple of garbage things. 
+Let's see. 
+garbage and !clean, and garbage and !quiet. 
+So let's see if we can figure that out. 
+Right, so the only way you can maintain -- so inconsistent support. 
+The other thing that can make propositions mutex is if all the ways of achieving them are pair-wise mutually exclusive, right? 
+So the only way of achieving garbage is to maintain it. 
+But there are two things that are inconsistent with maintaining garbage. 
+So carry is inconsistent with maintaining garbage, and carry is the only way to cause !clean to be true, so garbage and !clean 
+can't both be true at this step. 
+Similiarly, the same argument applies for garbage, dolly, and !quiet. 
+So we have that one. 
+Then we have something between present and !quiet. 
+The only way to make present true is wrap. 
+The only way to make !quiet 
+true is dolly. 
+But wrap and dolly are inconsistent, so we can't do present and !quiet. 
+And there's another !quiet 
+conflict with garbage. 
+We have that already. 
+There's one more !clean. 
+!Clean and dinner. 
+All right, let's think about that one. 
+So the only way to achieve dinner is cook. 
+The only way to achieve !clean is carry, but cook and carry are not consistent so we need to do this. 
+There we go. 
+An algorithm only a computer could love. 
+C: (inaudible) L: I connected dinner and !clean on the inconsistent support rap. 
+So in terms of algorithms that people have intuition for, this isn't high on the list. 
+I think we want to try to do the next layer, but I'll sketch how it would happen in the next layer. 
+So first of all, let's try to ask the question, could the goal conceivably be true? 
+OK, so our goal is !garbage 
+and dinner and present. 
+So here's !garbage and dinner and present. 
+So it looks like these could possibly be true. 
+They're not obviously inconsistent. 
+But -- so what we're going to do then is we're going to try to find a way to make !garbage 
+true. 
+Well, we're going to try to find a way to make dinner true. 
+That has to be Cook. 
+We try to find a way to make present true. 
+That has to be Wrap. 
+So far so good. 
+We could do both cook and wrap. 
+Then we have to try to find a way to make !garbage 
+true, but either of our ways of making !garbage 
+true are inconsistent with cook and wrap, right? 
+They're mutex. 
+So there's no set of actions that we could do at this layer that makes our goal true. 
+So there's no depth one parallel plan for solving our problem. 
+So we take a deep breath, and what we do -- I'm not going to draw in all the orange arcs again, although, you know, it turns out that there are fewer. 
+Actually, I think I am going to draw it out, because it's actually simpler and it makes an important point. 
+So we say, all right, we failed to do it at level one, so let's see if we can do it at level two. 
+So we do the same. 
+Clean, garb, quiet, dinner, present, !garb, 
+!clean, 
+!quiet. 
+And we hook up the preconditions just the same way we did before. 
+And the maintenance actions go like this. 
+And we hook up the post- conditions as before so cook achieves dinner, wrap achieves present, carry achieves !garb and !clean, 
+dolly achieves !garb and !quiet. 
+So there's our graph, and then we have to do the mutexes. 
+OK, I'm not going to do them all out, but here's something important to know. 
+It's that the same -- we're basically going to get the same set of mutually exclusions on the actions that we did before, and on the propositions, it's going to turn out that all we get are the P and !P 
+ones, so garb is still basically mutually exclusive with !garb 
+no matter what, and clean was !clean, and quiet was !quiet. 
+And those are the only ones where we're going to get to that level. 
+And that's actually a theorem. 
+It says that as you go more and more levels deep, there are fewer mutual exclusions. 
+So why is that? 
+Somebody have an intuition for what it might be? 
+C: (inaudible) L: With every level you add, you have more freedom about what you're doing, and you can choose to let some conditions persist and make, I don't know, true and false and so on. 
+And as you go along, because you have more freedom, more ways to do things, then there are fewer unsolvable classes. 
+So that's kind of a useful thing to know. 
+So, now, once you get to this point, it's going to turn out that as before it look like our problem is solvable, and in fact we can do it. 
+I can sketch the solution out here. 
+There are actually multiple solutions. 
+We can choose to do -- let's see. 
+We need !garb, 
+dinner, and present. 
+We're going to make !garb 
+true by carrying at this step. 
+We're going to make present true by wrapping. 
+And we're going to make dinner true by maintaining dinner, and then we're going to cook. 
+So that's all we have to do. 
+All right. 
+Good. 
+So that's our plan. 
+We're going to cook on the first step, then on the second step we're going to wrap and carry, thereby having dirty hands for when our date come over, but hey. 
+All right. 
+So all this scribbling all over the board, you wouldn't think it would have revolutionized planning. 
+But it really did. 
+It was this thing where people were making ever-more complicated versions of the partial-order planner and adding bells and whistles to it, and it seemed really neat and quite intuitive and it worked. 
+C: (inaudible) maintain garbage and (inaudible)? 
+L: Yes, there's sort of an -- C: (inaudible)? 
+L: Yes, it can be (inaudible), so the assumption here is that yes. 
+You kind of have to think -- if something's - - you kind of work from back to front, so if something got to be true here, then you have to say how you're keeping it true. 
+So I guess you have to say -- let's see. 
+Garbage has to be true -- let's see -- so garbage has to be true in order to carry. 
+So you're right. 
+I mean, I guess we really should emphasize that garbage has to be true in order to carry, and emphasize that quiet has to stay true in order to wrap. 
+So the plan usually is just described as cook and then wrap and carry, but it's nice to show how the preconditions are getting satisfied. 
+Yes, so we have these chained through the graph. 
+And there are other solutions too. 
+So the thing is, you can take a planning problem and even a pretty big planning problem, even some of these blocks-world planning problems where the operating descriptions have variables in them, so all you have to do is say, "Here's my limited domain of discourse," right? 
+"I have these six blocks or these five blocks or these twelve blocks." 
+Then you just turn a crank and generate all the propositions and you generate these graphs that are really big. 
+I mean, you still at every level, you just have all the possible propositions. 
+They don't get multiplied out, anyway. 
+You have all the possible propositions at these levels, all the possible actions, all the propositions, and so on, and as you throw levels out, it only grows linearly. 
+Now, the place where something exponential happens is in the search for a solution within the graph. 
+That might turn out to be fairly complicated. 
+So growing your graph out seems like a giant pain, but it's just kind of a crank that your computer can turn perfectly well, and then you have to search within the graph so see if you can find, essentially, a choice of actions at every level that will satisfy all the correct preconditions. 
+So this made sort of a huge impact and a huge splash. 
+People started winning planning contests with this algorithm. 
+So then, some other people looked at this and said, well, you know, people have been having some luck with doing satisfiability. 
+In particular, the randomized algorithms for satisfiability started to be working in other contexts, and so people said, "Hmm! 
+Well, if we can do this WalkSAT, kind of GSAT, WalkSAT stuff for satisfiability problems in general, probably everything deep down could be written as a satisfiability problem, then maybe we could take these planning problems and make them into satisfiability problems. 
+==========
+So that's the other kind of line of attack that I wanted to talk about today, so that's SATPlan. 
+There's one way to convert a planning problem into a satisfiability problem that takes -- by doing the GraphPlan stuff first, by making the plan graph, and then kind of extracting a set problem from that and trying to solve it. 
+So basically, you turn this into a SAT problem, so that if you have a good way of solving SAT like DPLL or WalkSAT or GSAT, then you can just solve this that way. 
+I'm going to talk for the remaining time today about a somewhat more direct way of describing a planning problem as a SAT problem. 
+This is, again, an algorithm that only a computer could love. 
+We're going to keep this indexing idea from GraphPlan, so we're going to have a variable for every proposition at every even step (time index). 
+So we'll have variables like clean at zero -- we'll make it clean at zero or garbage two. 
+That means if my hands are clean at step zero or there's garbage still in the kitchen at step two. 
+And you remember, we threw out this idea of alternations between proposition layers and action layers. 
+We don't have to do it this way, but it keeps things tidy. 
+So I have a variable for every proposition at every even time index, and we'll have a variable for every action and every odd time index. 
+Now, we're also going to pursue the same general methodology of picking a time, picking a length. 
+We're going to try to find plans of depth two, or four, or six. 
+We'll solve, see if we get a solution. 
+If we do, great. 
+If not, we'll increase the horizon and solve it again. 
+So it's going to be the same thing. 
+So we're going to make a particular SAT instance, which basically it's going to be a sentence that has a satisfying assignment, if and only if there is an end, there's a depth N plan to achieve our goals. 
+And so then if you run a SAT solver on it, you get back the satisfying assignments. 
+That will encode in it exactly which actions to take. 
+Right? 
+You could look at it and see which actions or sets are true, and those are the actions you're going to be taking. 
+And then if there is no satisfying assignment, that's a proof that there is no depth two plan, so OK, let me try a depth three plan, so OK, that's the way this thing will work. 
+So this is exactly an instance of reducing your current problem to the previous one. 
+I argued before that reducing planning to first-order logic and theorem proving wasn't such a good idea, because that's computationally horrendous. 
+It turns out that reducing planning to satisfiability isn't so bad. 
+You get really big SAT problems but at least there's a kind of a pretty effective algorithmic crank that you can turn to try to solve the satisfiability problem. 
+==========
+OK, so SAT, remember, is write a sentence for satisfiability. 
+It's just a conjuction of clauses. 
+So somehow we have to turn this planning problem into a conjunction of clauses such that if there is a satisfying assignment, then there's a plan. 
+So we have to -- this is going to be a bunch of different kinds of clauses that we'll throw into the mix. 
+Constraints, essentially, on the form of a plan. 
+OK, so first, we have the initial sentence. 
+So we're going to have one clause that says - - we'll do it by example -- garbage at zero and so this is a whole bunch of clauses, right? 
+And clean at zero and quiet at zero. 
+Those are three things we know for sure. 
+So we'll throw them and those have to have those assignments. 
+Now, so there's a further wrinkle here, which is in GraphPlan we were able to be sort of agnostic about the truth values of the things that weren't mentioned, right? 
+So when we talked about what was truly the initial state, we just put down the things that were known to be true and we were OK with saying and those other things, we don't know whether they're true or not. 
+In this view, we're going to have one variable for every single proposition at every single time step and we actually have to be committed about whether they're true or false. 
+They can't just float around. 
+So when we talk about the initial state, we're going to say the initial state is this. 
+The garbage zero, clean zero, quiet zero and there's no present, and there's no dinner. 
+So we kind of have to describe the whole initial state. 
+The goal on the other hand, we can leave some things out of the goal. 
+So we're going to have a goal. 
+Let's say we're going to look for a depth two plan. 
+Then our goal would be that there is no garbage in step four, and that there's a present in step four and there's dinner at step four. 
+So that kind of nails down the initial and the final conditions of our planning problem. 
+So we need a set of axioms. 
+You can think of it as a set of clauses, a set of constraints, that describe how the actions and their preconditions and their effects work. 
+So we'll have a set of axioms that are the form: an action implies an action at time T implies its preconditions at T-1 and its effects at T+1. 
+So we'll do one example. 
+An example could be cook, right, so cook at time step one implies clean at zero and dinner at two. 
+So this just says -- if you're going to have a variable cook, true. 
+If you're going to say that we're cooking in time step one, then you had better also say that you're clean at step zero and there's dinner at step two. 
+So then you can turn that into clauses, right? 
+And you get !cook 
+one or clean zero and !cook one or dinner two. 
+So you would have one of these for every action, at every time. 
+For every possible action and every odd time step, you throw in one of these axioms. 
+That's exactly like drawing the arcs between the actions and their preconditions and their effects, just hooking things up. 
+OK. 
+Now we need frame axioms, and I'm going to -- the paper I handed out goes into this stuff in a lot of depth. 
+They talk about a whole bunch of different ways of encoding actions, and they talk about a couple different ways of doing frame axioms. 
+I'm just going to talk about explanatory frame axioms, since they work out nicely. 
+Right? 
+What are frame axioms for? 
+Somebody tell me about that? 
+In general? 
+What's the frame problem? 
+C: (inaudible) nothing else, if you have (inaudible) changeable. 
+L: Right. 
+So frame axioms say that if I haven't said that something changes then it doesn't, or they say explicitly if I paint something it doesn't move. 
+So explanatory frame axioms, - for every state change, and I'll say this by example, say what could have caused it. 
+So for instance, you might say there's a state change if I have garbage at time one, and !garbage at time three, then I either get a dolly at time two or a carry at time two. 
+So here, basically, you have for every possible initial time step -- you do these over each T, T+2 in a pair -- and for each proposition you say what it is that could have caused this to change. 
+Now, you can do contrapositive reasoning. 
+And SAT will do this in some sense implicitly for you, because remember that if we know P implies Q, you know that !Q 
+implies !P. 
+Right? 
+So for this axiom, you know that if you didn't do dolly and you didn't do carry, then it can't be that the garbage variable switched its sign. 
+This is the only way that you could have done it. 
+So if you didn't do one of these things, then it didn't change, and so there's your frame axiom. 
+So there's basically one more set of axioms that you need to keep actions from conflicting, so we need conflict exclusion axioms, and then we'll be ready to go. 
+So we'll say for all conflicting axioms or actions A and B at step T add We will say !A at T or !B at T. So what's a conflicting action? 
+Is it if one's preconditions are inconsistent with another's effect. 
+So if you have two actions and one's preconditions are inconsistent with another one's effect, they can't happen -- it might look like they could happen exactly at the same time, but it would not be the case that you could do either linearization. 
+So we have the same constraint came up in GraphPlan. 
+OK, so now you can turn the handle. 
+You could take a planning problem and make a big sentence. 
+You just take the conjunction of these unit clauses and the conjunction of all of these things but hook the actions up to their preconditions in effect and the conjunction of all the frame axioms and the conjuctions of these conflict exclusion axioms, and you clausify it all, and now you have a SAT sentence and you're ready to go and you just feed it into DPLL of WalkSat and poof, out comes your answer. 
+If an answer doesn't come out you do it again for a bigger ending time and eventually you'll get the answer out to your planning problem. 
+==========
+So it turns out that there's room to be very clever in -- the way I described this here is a pretty simple kind of compilation from a planning problem to a SAT sentence. 
+You can be much cleverer and there's piles of preprocessing steps you can do to try to shrink the size of the sentence. 
+You could also, for instance, if you're doing, say, DPLL, people have found that converting this to a DPLL sentence and forgetting where it came from isn't as effective as noticing that DPLL works by picking variables to assign in some order and it turns out that you can be cleverer about choosing the order of the variables to assign by knowing where they came from. 
+So in particular, the action variables are good ones to assign first in DPLL, because those are the things that really will cause the conflicts as quickly as possible, so if you can convert the sentence, you convert a planning problem into a sentence, but if you go to apply DPLL you can use -- your insight about where this sentence came from in order to search the space more effectively. 
+So up until about maybe three years ago or so, this was the thing. 
+If you were going to win a planning contest, which there are planning contests, involving things like logistics; I have all these trucks and all these packages and I have to move all these things around. 
+Then something like GraphPlan or SatPlan was the way to go. 
+Now, more recently, people have gone back to these methods that are a little bit more first-orderish, a little bit more -- they keep the structure of the original problem around and take advantage of it. 
+END OF TAPE 
+==========

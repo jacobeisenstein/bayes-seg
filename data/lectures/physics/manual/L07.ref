@@ -1,0 +1,499 @@
+==========
+So far in these lectures we 've talked about mass , about acceleration and about forces , but we never used the word weight , and weight is a very nonintuitive and a very tricky thing which is the entire subject of today 's lecture .
+What is weight ?
+Here you stand on a bathroom scale .
+Gravity is acting upon you , the force is mg , your mass is m .
+The bathroom scale is pushing on you with a force F scale and that F scale which in this case if the system is not being accelerated is the same as mg that force from the bathroom scale on you we define as weight .
+When I stand on the bathroom scale I could see my weight is about 165 pounds .
+Now , it may be calibrated in newtons but that 's , of course , very unusual .
+If I weigh myself on the moon where the gravitational acceleration is six times less then I would weigh six times less so far , so good .
+Now I 'm going to put you in an elevator and I 'm going to accelerate you upwards and you 're standing on your bathroom scale .
+Acceleration is in this direction and I will call this plus and I will call this minus .
+Gravity is acting upon you , mg and the bathroom scale is pushing on you with a force F .
+That force , by definition , is weight .
+Before I write down some equations , I want you to realize that whenever , whenever you see in any of my equations g g is always plus 9.8. And my signs , my minus signs take care of the directions but g is always plus 9.8 or plus 10 , if you prefer that .
+Okay , it 's clear that if this is accelerated upwards that F of s must be larger than mg ; otherwise I cannot be accelerated .
+And so we get Newton 's Second Law : F of s is in plus direction ... minus mg it 's in this direction equals m times a and so the bathroom scale indicates m times a plus g .
+And I have gained weight .
+If this acceleration is five meters per second squared in this direction I am one and a half times my normal weight .
+If I look on the bathroom scale , that 's what I see .
+Seeing is believing that is my weight .
+If I accelerate upwards , with 30 meters per second squared 30 plus 10 is 40 I am four times my normal weight .
+Instead of my 165 pounds , I would weigh close to 700 pounds .
+I see that seeing is believing .
+That is my weight .
+Now I am going to put you in the elevator here you are and I 'm going to accelerate you down .
+This is now a .
+And just for my convenience I call this now the plus direction just for my convenience it doesn 't really matter .
+So now we have here mg that is gravity acting upon you .
+And now you have the force from the bathroom scale .
+Clearly , mg must be larger than F of s ; otherwise you couldn 't go being accelerated downwards .
+So if now we write down Newton 's Second Law then we get mg minus F of s must be m times a .
+This holds for acceleration down and so I get F of s equals m times g minus a .
+This is one way of doing it and you put in positive values for a .
+If a is five meters per second squared you get ten minus five is five your weight is half .
+You 've lost weight .
+Being accelerated down , you 've lost weight .
+You could also have used this equation and not go through this trouble of setting up Newton 's Law again .
+You could simply have said Okay , this a is minus in this coordinate system and so you put in a minus five and a plus ten you get the same answer .
+So you have lost weight when you accelerate downwards .
+Suppose now I cut the cable ... cut it .
+Then this a is ten meters per second squared if we round it off .
+You go down with ten meters per second squared so g minus a is zero .
+You are now weightless , you are free falling .
+You have no longer any weight .
+You look at the bathroom scale and the bathroom scale will indicate zero .
+You 're floating , everything in the elevator is floating .
+If you had a glass with water you could turn it over and the water would not fall out .
+It 's like having the shuttle in orbit with the astronauts being weightless .
+There is a great similarity between the astronauts in the shuttle and a free falling elevator .
+The only difference is that the elevator will crash , will kill you .
+In the case of the shuttle it never hits the earth because of its high speed .
+We 'll talk about this much later when we deal with orbits and with Kepler 's Law .
+What exactly is free fall ?
+Free fall is when the forces acting upon you are exclusively gravitational .
+Nothing is pushing on you ; no seat is pushing on you , no string is pushing on you .
+Nothing is pulling on you , only gravity .
+I will return to this weightlessness very shortly in great detail but before I do that , I would like to address the issue how could I determine your weight if I hang you from a string ?
+So now , instead of standing on a bathroom scale you are here .
+Here is a string .
+You might even have in the string a tension meter as we have seen earlier in lectures .
+And you are holding desperately onto that string .
+Just like that .
+The system is not being accelerated , gravity is mg and so there must be tension in the string , T which is pulling you up which , if there is no acceleration , must be mg .
+I read the scale and I read my weight .
+This scale indicates , in my case , 165 pounds .
+While I 'm hanging , I can see my weight .
+So you see , it makes very little difference whether I am standing on a bathroom scale and read the force with which the bathroom scale pushes up on me or whether I hang from a scale extend a spring and read that value .
+It makes no difference .
+The tension here would indicate my weight .
+There is a complete similarity with the bathroom scale except in one case , something is pulling on me ; in the other case , something is pushing on me from below .
+Now let 's accelerate this system upwards with an acceleration a and I call this plus .
+Then , of course , this T must grow ; otherwise you cannot be accelerated .
+Newton 's Second Law , T minus mg must be ma .
+The tension in the string equals m times a plus g .
+Ah !
+We 've seen that before .
+No difference with the elevator .
+You accelerate the system , the tension will increase and you will see that , you will read that on the scale .
+Your weight has increased , you weigh more .
+Needless to say , of course , if you accelerate the system down that you will weigh less we just went through that argument .
+And if I cut the cable completely you go into free fall .
+T will go to zero , a become minus ten plus ten is zero .
+You 're in free fall .
+The scale reads zero , you are completely weightless .
+==========
+If we accept the idea of weight being indicated by the tension in a string then there is a very interesting consequence of that .
+I have here a pin which is completely frictionless and I have on both sides a string and this string has negligibly small mass .
+Now , just assume that it is massless .
+And there is here an object m1 and there is here an object m2 and I am telling you that m2 is larger than m1 .
+So we all know what 's going to happen .
+The system is going to accelerate in this direction .
+M2 will be accelerated down and m1 will be accelerated up .
+What comes now is important , that you grasp that .
+I claim that the tension on the left side must be the same as the tension in this string on the right side .
+T Left must be T Right .
+Why is that ?
+It is because the pin is frictionless and it is because the string is massless .
+Take a little section of the string here a teeny weeny little section .
+If there is a tension on it that is , a force in this direction and there is a force in this direction these two could never be different because then this massless string would get an infinite acceleration .
+So there can never be a change in tension from this side of the string to the other .
+If you take a little section of the string here there it is , teeny weeny little section so there is tension on the string and there is tension on the string this one could never be larger than that because this little piece of string would get an infinite acceleration .
+So because there is no friction on the pin and because the strings are massless only because of that must the tension be everywhere the same .
+If there is friction in the pin which we will do later then that 's not the case .
+Given the fact that the tension left and the tension right are the same I must now conclude that these two objects have the same weight because didn 't we agree that tension is an indication of weight ?
+So these objects have now the same weight .
+And some people may say Oh , that 's a lot of nonsense , you must be kidding .
+If m2 is larger than m1 this must have a larger weight than that .
+Well , they are confusing weight with mass .
+It is true that m2 is a larger mass than m1 but it is equally true that the weight of these two objects is now the same according to my definition of weight .
+Let us calculate the acceleration of this system and let 's calculate the tension and let 's see what comes out .
+I first isolate here object number one .
+This is my object number one .
+I have gravity , m1 g , and I have a tension T .
+Nonnegotiable .
+T better be larger than m1 g .
+Otherwise it would never be accelerated up and we know it will be accelerated up .
+So what do we get ?
+We get T I will call this plus direction , by the way minus m1 g equals m times a .
+So the tension equals m1 times a plus g .
+Hey !
+We 've seen that one before .
+This one is being accelerated upwards .
+Notice it gains weight .
+That 's the tension and this is the acceleration .
+I have one equation with two unknowns so I can 't solve it yet .
+But there is another one , there is number two here .
+For number two , we have a force , m2 g and we have the tension up .
+This one better be larger than that one ; otherwise it wouldn 't be accelerated down .
+Let me call this direction plus .
+The reason why I now switch directions and call this plus as well as this is a good reason for it .
+It 's not so arbitrary anymore .
+I know that this acceleration is going to be a positive number .
+Because it 's going in this direction , it 's a given .
+If I called this negative , I would get here a negative acceleration for the same thing for which I get here a positive .
+That 's a pain in the neck .
+I don 't want to have a plus and a minus sign there , have to think about that it means the same thing .
+So the moment that I decide to define this the plus direction I know that this acceleration will also come out to be the same sign as this one .
+So I flip the signs there .
+So now I apply Newton 's Law .
+I get m2 g minus T equals m2 a .
+And so I get T I 'll write it here equals m2 times g minus a .
+Two equations with two unknowns .
+Well , that shouldn 't be so hard to solve these two equations .
+You can immediately eliminate T , by the way .
+If you add this one with this one , you really I call this equation one , you call this equation two you immediately lose your T and you get that the acceleration , a equals m2 minus m1 divided by m1 plus m2 times g .
+And you substitute that a in that equation and you 'll find that the tension equals 2mg divided by m1 plus m2 .
+This is very easy for you to verify .
+Let us look .
+This is m1 , m2 ... 2m1 , m2 I lost one m 2m1 , m2 .
+Let 's look at these equations , let 's scrutinize them a little .
+Let 's get some feeling for it rather than accepting them as being dumb equations .
+Let 's first take the case that m2 equals m1 , and I 'll call that m .
+Notice that a becomes zero and notice , if you substitute for m1 and m2 m here that you get 2m , you get mg .
+So T becomes mg .
+That is utterly obvious .
+If m1 and m2 are the same , nothing is going to happen .
+They 're going to sit there , acceleration will be zero and the tension on both sides which is always the same , we argued that is going to be mg .
+Clear .
+Now we 're going to make it more interesting .
+Suppose we make m2 much , much larger than m1 and in a limiting case we even go with m1 to zero .
+Let 's do that .
+What you see now , if m1 goes to zero this goes away , this goes away , a goes to g and T goes to zero .
+If m1 is zero , T goes to zero .
+That is obvious !
+Because if I make m1 zero , m2 goes into free fall .
+And if m2 goes into free fall its weight is zero and so the tension is zero that 's exactly what you see and you see that the acceleration of that object is g , which it better be , because it 's in free fall .
+So you see , this makes sense .
+This is exactly consistent with your intuition .
+And if you wanted to make m1 much , much larger than m2 and you take the limiting case for m2 goes to zero you 'll find again that a goes to g and that T goes to zero except that now the acceleration is not this way ... ( makes whooshing sound ) but now the acceleration is this way and now this object will go into free fall .
+And therefore there is no tension in the string anymore .
+M1 , if I return to the case which we have there that m2 is larger than m1 m1 is being accelerated upwards .
+That 's nonnegotiable , so it must have gained weight .
+M2 is being accelerated down , so it must have lost weight .
+Just like being in an elevator , there 's no difference .
+They each weigh the same one loses weight , the other gains weight .
+They each weigh the same , and so I can make the prediction that if this is m2 g , which was its original weight and this now is the new weight , T that m2 g must be larger than T .
+M1 gains weight , so T must be larger than m1 g .
+M2 loses weight , so T must be smaller than m2 g .
+That 's my prediction it has to be .
+And we can ... I can show you that with some easy numbers .
+Let m1 be 1.1 kilograms and let m2 be 1.25 kilograms .
+Frictionless system , and the string has a negligible mass .
+What is the acceleration a of the system ?
+I get m2 minus m1 that is 0.15 divided by the sum , which is 2.35 and that is approximately 0.064 g , approximately 0.064 g .
+It 's about 1/16th of the gravitational acceleration .
+It 's a very modest acceleration .
+What is the tension ?
+Well , I substitute my numbers for m1 and m2 in there .
+You can take , for g , 10 , if you like that and you will find that the tension equals 1.17 g .
+And now look at what I predicted .
+They both weigh 1.17 g , that 's nonnegotiable .
+That is my definition of weight the tension in both sides is the same .
+That 's my definition of weight .
+This is their weight .
+This one had a weight 1.25 g without being accelerated .
+You see , it has lost weight , because it accelerated down .
+This one had a weight of 1.1 g .
+You see , it has gained weight , because it has accelerated up .
+So you see , the whole picture ties together very neatly and it 's important that you look at it that way .
+==========
+I now want to return to the idea of complete weightlessness and I want to remind you , a few lectures ago how I was swinging you at the end of a string in the vertical .
+I was swinging you like this .
+And I was swinging a bucket of water like this .
+And I want to return to that .
+I want to look at you when you are at the bottom of your circle and when you are at the very top of that circle .
+You go around a circle which has radius R .
+Here is that circle .
+There 's a string here , you 're here .
+And there 's a string here and at some point in time , you 're there .
+And you 're going around ... let 's assume that you 're going around with an angular velocity omega and for simplicity , we keep omega constant .
+But that 's really not that important .
+Okay , this is point P and this is point S .
+Let 's first look at the situation at point P .
+You have a mass and so gravity acts upon you , mg .
+There is tension in the string , T .
+There must be this is nonnegotiable a centripetal acceleration upwards .
+Otherwise , you could never do this .
+Remember , from the uniform circular motion .
+So there must be here centripetal acceleration which is omega squared R or , if you prefer , v squared divided by R if v is the speed , tangential speed at that point .
+It must be there .
+Let 's look here .
+Right there , gravity is acting upon you , mg .
+Let 's assume this string is pulling on you .
+Let 's assume that for now , so there is a tension .
+The string is pulling on you .
+Therefore , nonnegotiable , when you make this curvature here there must be a centripetal acceleration and that centripetal acceleration must be omega squared R .
+That is nonnegotiable , it has to be there .
+Let 's now evaluate first the situation at P and I will call this plus and I will call this minus .
+So what I get now is that T minus mg must be m times the centripetal acceleration so T must be m times the centripetal acceleration plus g .
+Hey !
+That looks very familiar .
+It looks like someone is being accelerated in an elevator almost the same equation .
+If the centripetal acceleration at this point for instance , were 10 meters per second squared then you would weigh twice your normal weight .
+The tension here would be twice mg .
+If this were five meters per second squared then you would be 1 times your weight .
+Let 's now look at the situation at S .
+At point S , I 'm going to call this plus and that minus .
+I 'm going to find that T plus mg must be m times the centripetal acceleration Newton 's Second Law .
+So I find that the tension there equals m times a of c minus g .
+Hey !
+Very similar to what I 've seen before .
+This object is losing weight .
+Let us take the situation that a of c is exactly 10 meters per second squared and we discussed that last time when we had the bucket of water in our hands .
+If a of c ... if the centripetal acceleration when it goes through the top is 10 , then this is zero .
+So the string has no tension , the string goes limp and the bucket of water and you are weightless .
+If the centripetal acceleration is larger than 10 then , of course , the string will be tight .
+There will be a force on you and whatever comes out of here will indicate your weight .
+If a of c is smaller than 10 , that 's meaningless .
+The tension can never be negative .
+A string with negative tension has no physical meaning .
+What it means is that the bucket of water would never have made it to this point .
+If you try to swing it up as someone tried in the second lecture but didn 't make it to that point the bucket of water will just fall .
+You end up with a mess , but that 's a detail .
+So the bucket of water , when it is here ... If the acceleration there , the centripetal acceleration were exactly 10 meters per second squared then that bucket of water would be weightless .
+==========
+So I said earlier that when you 're in free fall all objects in free fall are weightless .
+It 's like a spacecraft in orbit or an elevator with a cut cable .
+It also means that if I jump off the table that I 'm weightless while I am in mid air , so to speak .
+It means this tennis ball ... while it is in free fall , it has no weight .
+Now it has weight .
+Now the weight is even higher because I am accelerating it and now it has no weight .
+The tennis ball is weightless and I assume , for now , that the air drag plays no role .
+If I jump off the table I will be weightless for about half a second .
+This is about one meter .
+If I jump from a tower which is 100 meters high I will be weightless for 4 seconds ignoring air drag .
+I prefer today the half a second .
+I am going to jump off this table with this water in my hand .
+And I 'm going to tell you how I can convince you that as I jump , that I will , indeed , be weightless .
+Here is the bottle .
+There is a gravitational force on the bottle .
+My hands are pushing up on this bottle .
+My hands are being a bathroom scale .
+I feel , in my muscles , the need to push up .
+In fact , I might even be able to estimate the weight playing the role of a bathroom scale .
+It 's a gallon of water , it 's about nine pounds .
+Now my own body ... gravity is acting upon me but I am being pushed up , right there .
+Suppose we jumped .
+There would be no pushing from me on the bottle anymore no pushing there on me , the table .
+Only gravitation would act upon us and we would be weightless .
+How can I show you that we are weightless ?
+Well , if I don 't have to use my muscles to push on this bottle upwards I might as well lower my hands a little bit during this free fall .
+And you will see that the bottle will just stay above my hands without my having to push up .
+Therefore , being the bathroom scale I no longer have to push on it .
+I no longer ... my muscles don 't feel anything and the bottle is therefore weightless .
+The bottle is weightless when we jump ; I am weightless and even this bagel is weightless .
+We 're all weightless during half a second .
+There is no such thing in physics as a free lunch .
+You have to pay a price for this half a second of weightlessness .
+What happens when I hit the floor ?
+I hit the floor with a velocity in this direction which is about five meters per second .
+You can calculate that .
+But a little later , I 've come to a stop .
+That means during the impact there must be an acceleration upwards .
+Otherwise my velocity in this direction could never become zero .
+Therefore , I will weigh more during this impact there is an acceleration in this direction .
+The five meters per second goes to zero .
+If I make the assumption that it takes two tenths of a second that 's a very rough guess , this impact time then the average acceleration will be five meters per second divided by 0.2 ; that is 25 meters per second squared .
+That means the acceleration upwards is 2 g .
+That means I will weigh 3 times more .
+Remember it is a plus g , so a is 2 g up plus the g that we already have ; that makes it 3 g .
+So instead of weighing 165 pounds I weigh close to 600 pounds for two tenths of a second .
+So we get four phases .
+Right now , I 'm my normal weight if I stand on a bathroom scale .
+I jump for half a second , weightless hit the floor for about two tenths of a second maybe close to 600 pounds .
+And then after that I will have my normal weight again .
+Now , you 're going to have only half a second to see that this bottle , as I jump , is floating above my hands .
+I will pull my hands off so you will see that I no longer have to push it .
+That means it 's weightless .
+Are you ready ?
+I 'm ready .
+Three , two , one , zero .
+Did you see it floating above my hands ?
+We were both weightless .
+==========
+Now , I have been thinking about this for a long , long time .
+I have been thinking whether perhaps this could not be shown in a more dramatic way perhaps even a more convincing way .
+And so I thought of the idea of putting a bathroom scale under my feet tying it very loosely so that it wouldn 't fall off when I jump and then show you that while I am half a second in free fall that the bathroom scale indeed indicates zero .
+And don 't think that I haven 't tried it .
+I 've tried it many times with many bathroom scales .
+I made many jumps .
+There is a problem , and the problem is the bathroom scales that you buy that you normally get commercially they indeed want to go to zero .
+It takes them a long time .
+They have a lot of inertia , their response time is slow .
+But even if they make it to zero by the time you hit the floor then immediately the weight increases because you hit the floor and your weight comes up by 3 times .
+So it begins to swing back and forth and it becomes completely chaotic and you can no longer see what 's happening .
+And it just so happened that about six months ago , Dave ... I had dinner with Professor Dave Trumper and I explained it to him that it is just unfortunate that you can never really show it that you jump off the table , have a bathroom scale under you and see that weight go down to zero when you are in free fall .
+And he said , Duck soup I can do that .
+He says , I can make you a scale which has a response time of maybe 10 milliseconds so when you jump off the table in 10 milliseconds you will see that thing go down to zero .
+And he delivered , he came through .
+He built this wonderful device which he and I are going to demonstrate to you .
+Let me first give you some reasonable light for this .
+And I would like to show you on the scale there what this scale that he built is indicating .
+Here is the scale , I have it in my hands .
+And on top of this scale is a little platform just like on your scale .
+This platform weighs 4 pounds .
+And you can see that , it says about 4 .
+Now , you will say Hmm !
+I wouldn 't want that kind of a bathroom scale .
+I mean , if I want to see my bathroom scale I want to see a zero before I want to go up .
+I 'm heavy enough all by myself .
+I don 't want to get another 4 pounds .
+The manufacturer has simply zeroed that scale for you but obviously also your bathroom scale has a cover on it .
+Once you have seen these demonstrations you will be able to answer for yourself why we don 't zero this why we really leave this to be 4 .
+That 's the actual mass which is on top of the spring .
+But it 's not really a spring it is a pressure gauge , but think of it as a spring .
+4 pounds .
+Here we have a weight which is a barbell weight , which is 10 pounds .
+Is this from one of your children , Dave or were you doing it yourself ?
+10 pounds ... we put it on top here .
+What do you see ?
+Roughly 14 pounds .
+All right , we are going to tape it down .
+There we go .
+And we 're going to drop it from about 1 , two meters and we drop it in here , well cushioned because we don 't want to break this beautiful device .
+When we drop it , the response is so fast that you will see , indeed , that pointer go to zero .
+Now , keep in mind , when it hits the cushion that the weight will go up .
+For now , I want you to concentrate only on the thing going to zero and not what comes later .
+We will deal with that within a minute .
+Okay ... 14 pounds .
+You know why the thing is actually jiggling back and forth ?
+I can 't hold it exactly still and so I slightly accelerate it upwards and downwards and when I accelerate it slightly upwards it weighs a little more and when I accelerate it downwards , it weighs less .
+It 's interesting .
+You can see I 'm nervous .
+That 's my nervous tension meter there .
+Okay , we 're ready ?
+Look and ... don 't look at me , now , look at that pointer .
+Three , two , one , zero .
+Did you see it go to zero ?
+All the way to zero .
+Now comes something even more remarkable .
+He said to me , I can also make the students see the response on a time scale of about a fraction of a second .
+By the way , this is the hero who made all this stuff .
+He 's fantastic .
+( class applauds ) LEWIN : He can show you the weight on an electronic scale and this weight you will see as a function of time .
+I will put the ten pounds back on again ... tape it a little tighter and so the level that you see now is 14 pounds .
+This is 14 pounds and this is zero , this mark is zero .
+I 'm going to hold it in my hand .
+And notice , if I can hold it still you 're back to your 14 pounds .
+Now I 'm going to drop it .
+You will see it go down to zero .
+It will hit the floor , the cushion .
+It will get an acceleration upwards .
+It will become way heavier than it was before and then it will even be bounced back up in the air and it goes again into free fall .
+We will freeze that for you , and you will be able ... we will be able to analyze it , then , after it all happens .
+So , 14 pounds ... three , two , one , zero .
+And now Professor Trumper is freezing it for you .
+Now look at this , look at this incredible picture .
+This is truly an eye opener for me , when I saw it .
+The physics in here is unbelievable .
+Here is your 14 pounds .
+Tick marks from here to here are half a second .
+It was half a second in free fall and it goes to zero , that 's no weight .
+Now it hits the floor , the cushion and its weight goes up in something like a tenth of a second .
+Look , this is about one , two , three ... It 's about 3 times its weight now .
+So the 14 has to be multiplied by 3 or four which is exactly what we predicted that it would be much higher .
+But now it 's being ... it bounces off , because it 's a very nice cushion .
+It throws it back up .
+So it goes back into the air so it goes immediately to weightlessness again and then it oscillates back and forth .
+And then here you would expect that this level , 14 pounds , would be the same as this .
+And the only reason why that 's not the case is there 's a little cable that fell with it which is pushing a little bit up on the upper ... on the upper disc that is there so it 's making it a little lighter .
+Isn 't it incredible ?
+You see here in front of you the weightlessness and you see the extra weight when it hits and again followed by weightlessness .
+Dave , A plus , you passed the course .
+==========
+There is a great interest in doing experiments under weightless conditions .
+NASA was very interested in it .
+And if you would jump 100 meters up in the sky you would only be nine seconds up .
+You wouldn 't even be weightless because of air drag .
+However , if you could jump up way near the top of the atmosphere where the air drag is negligible then you would be weightless for quite some time .
+And that is what people have been doing for the past few decades .
+Professor Young and Professor Oman here at the Aeronautics Department have done what they call zero gravity experiments from airplanes and I will explain that in detail but first I want you to appreciate that zero gravity is a complete misnomer .
+Zero weight , yes zero gravity , no .
+If you have an airplane anywhere near Earth , flying whether the engines are on or whether the engines are off or whether it is free falling doesn 't matter .
+There is never zero gravity .
+There is always gravity thank goodness .
+But if you are in free fall , indeed , there is no weight .
+Apart from that , they call them zero gravity experiments and why not ?
+Maybe it sells better .
+They fly an airplane , which is the KC 135 and they do these experiments at an altitude of about 30 , 000 feet .
+If I could clean this as best as I can ... The plane comes in at one point in time at an angle of about 45 degrees .
+There 's nothing special about that 45 degrees .
+It 's just ... that 's the way it 's done .
+You have to also think of the convenience convenience for the passengers .
+The speed is then about 425 miles per hour so the horizontal component is about 300 miles per hour and the vertical component is also 300 .
+The air drag is very little .
+Let 's assume , for the sake of the argument that the engines are cut and the plane goes into free fall .
+It 's no different from this tennis ball ( makes whooshing sound ) the same thing .
+You 're going to see a parabola .
+And so this plane is going to free fall and comes back to this level .
+And let 's analyze this arc , this parabola .
+Right here at the top , clearly there will still be 300 meters per second in the absence of any air drag .
+You should be able to calculate with all the tools that you have available how high this goes from this level .
+In other words , what is the time that the velocity in the y direction comes to zero ?
+You can calculate that and then you know how much it has traveled .
+Very crude number , this is about 900 meters .
+And it will take about 15 seconds to reach this point so it will take about 30 seconds to go from here to here and in those 30 seconds the horizontal displacement is about 3 kilometers .
+And all these numbers you should be able to confirm .
+Right here , the engines are restarted .
+During this free fall , everyone in the airplane is weightless including the airplane itself .
+Now the engines start , and the engine is sort of ... The plane is going to pull up , it goes into this phase and then the plane flies horizontally for a while .
+During this phase , as we just discussed it 's like hitting the floor .
+You need an acceleration in this direction .
+There will be weight increase so there is here an acceleration upwards .
+And during this time , very roughly people have about twice their weight .
+And then here , they have again normal weight .
+And then the plane pulls up again and here it goes and repeats the whole thing again going into free fall .
+So again here , people have more than their normal weight .
+Zero weight , more than normal weight normal weight , more than normal weight , free fall .
+And the whole cycle takes about 90 seconds .
+You can imagine that it is very important when you are here in free fall , when you have no weight that when your weight comes back and your weight doubles and Professor Oman told me that this change from zero to twice your weight takes less than a second that you better know where your feet are and where your head is because if your head is down and you all of a sudden double your weight you crush your skull , so you have to be sure that you are standing straight up in the plane when your weight begins to double and we will see that very shortly , how that works .
+I want to show you first some slides from these experiments .
+So here you see the situation that we just described .
+Let us start here , that is where I started with you .
+The plane turns the engines off .
+This is the parabola .
+Here the engines are restarted .
+This is the free fall period .
+This is about 30 seconds .
+The engine is restarted , and during this time there is an acceleration upwards and they call it 2g peak .
+Well , they really mean 1g .
+What they really mean , that my weight doubles .
+They call that 2g but , of course , they call this 0g which is equally incorrect .
+It 's not 0g you have no weight .
+This is weightless , here your weight is double here your weight is normal , here your weight roughly doubles and you go into another free fall period and the cycle from here to here is about 90 seconds .
+Now , the irony has it that the reason why these flights are done is to study motion sickness under weightless conditions .
+Astronauts were complaining about motion sickness .
+And so Professor Young and Oman have done lots and lots of experiments with airplanes and later , also , in the shuttle to study this motion sickness .
+I find it rather ironic because if you and I were part of these experiments we would get terribly sick because of the experiments .
+Just imagine that you go from weightlessness into twice your weight , back to weightlessness .
+We would be puking all day !
+How can you study people who are sick ?
+How can you study the sickness due to weightlessness ?
+Well , they must have found a way .
+They do this about 50 times per day .
+And now I want to show you some real data which were kindly given to me by Professor Young where you see them actually in the plane .
+I believe I have to put this on one and start the ... Can you turn off the slide projector ?
+So here you see them in the plane .
+They are not weightless , they are climbing up .
+I think this is Professor Young .
+The guys lying on the floor must be a bit tired .
+The light will shortly go on , and when the light goes on that 's an indication that the weightlessness is coming up .
+It already went on , I must have missed it , I wasn 't looking .
+And there they go into weightlessness .
+See , this person is upside down here .
+You better get straight up before your weight doubles because you 'll crash into the floor .
+( class laughs ) LEWIN : And now it takes 60 seconds because the whole cycle is 90 seconds and in these 60 seconds they get ready for the next free fall for the next weightlessness .
+And you will see very shortly the light will go on again , and that will tell them that the weightlessness is coming up and then they will be weightless for another 30 seconds .
+The sound that you hear is obviously the engines of the plane .
+There you go light goes on , they get a warning , they take their headphones off and everything becomes weightless .
+They may not like that and so they put their headphones in a secure place .
+You see that here Professor Young takes his off .
+And there they go again ... swimming in mid air .
+( class laughs ) 30 seconds weightless .
+( class laughs ) LEWIN : And the plane in which this happens ... ( class laughs ) LEWIN : Yeah , these things happen .
+I 'd like to show you a last slide of the plane that they do these experiments from .
+This is the plane while it is in free fall .
+About 45 degree angle and these people have done a tremendous job in indeed making a major contribution to the airsickness due to weightlessness .
+All right , see you Friday .
+==========

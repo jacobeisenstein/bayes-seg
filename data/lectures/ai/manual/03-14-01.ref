@@ -1,0 +1,545 @@
+==========
+Last time we talked about partial order planning, and we got sort of through the basic idea and the formal description of what constituted a solution. 
+So, our plan for today is to actually write the algorithm out on the board, and then go back and work through the example that we did, especially the last part of it and be sure we see how the algorithm would do the steps that are necessary to get the things out in the right order, and to do another example just for practice, and then we'll start talking about a newer algorithm called GraphPlan. 
+So, let's talk about partial order planning. 
+So, I'm going to write the algorithm on the board--not in complete detail. 
+The algorithm is in complete detail in the text book, but we're just going to kind of talk about it. 
+==========
+So remember the idea -- let's remind ourselves. 
+What are the pieces of a partially ordered plan, as we're going through it? 
+What are the things that are in a plan? 
+__: (inaudible). 
+Steps. 
+There's a couple kinds of constraints. 
+What constraints do we have? 
+__: Ordering. 
+__: Ordering. 
+What other kinds of constraints? 
+There are variables. 
+We may have variable constraints. 
+And then we have causal links. 
+These are kind of bookkeeping-- bookkeeping information that let us remember that the reason that we have this step in the plan or the way we think that we're going to cause some pre-condition of some step in the plan to be satisfied is by putting this other step into plan. 
+So, they connect up, sort of the effects of one action with the preconditions of another action, so you know why you are doing things. 
+So, and the idea, right, with the partial order planning algorithm is that we go along and we add these things into the plan, searching through the space of plans, not necessarily putting the steps in in the order that they're going to happen, until we find a plan that's correct. 
+So here's the algorithm: partially-ordered planning algorithm. 
+So first we make a minimal plan. 
+Right then, remember the idea of the minimal plan was that it had a start and a finish, and start is temporarily constrained to be before finish. 
+And the idea was was that start step, remember the start step produces as an effect the initial conditions, and the finish step requires, as sort of pseudo-preconditions, the goal, just to make everything tidy. 
+OK, so we make this minimal plan, and then we loop until the plan is a solution to the problem. 
+And last time we talked what it meant to be a solution. 
+And basically what it meant to be--a solution was that every pre-condition has some step that causes it to be true, and there's no other step that could come in and clobber it, and that all the ordering constraints are satisfied. 
+That was what it meant for a plan to be a solution. 
+And we're going to loop until the plan's a solution, we'll pick a sub-goal, choose an operator, so a sub-goal is an unsatisfied pre-condition. 
+The basic idea is you look around in the current plan, as it stands, for some sub-goal that hasn't been satisfied. 
+You look around for an operator that could make that true, and you resolve threats. 
+And we'll talk about that. 
+But this is the basic structure in the algorithm. 
+You basically, you keep looking for a sub-goal to address, finding a way of addressing it, and then fixing up some problems that might have been introduced because of the way that you chose to address the problem. 
+So, that's the high-level goal. 
+So, let's talk about pieces. 
+So, selecting a sub- goal doesn't really have any more detail. 
+Right? 
+So, selecting a sub-goal just means finding some pre- conditions somewhere in the plan, that hasn't yet been satisfied, or that doesn't have a causal link pointing to it. 
+So that's easy, we'll just leave that one. 
+Choose operator's worthy. 
+But how do we chose an operator? 
+OK. 
+==========
+We're going to choose an operator and the operator, we've decided from selecting a sub-goal, this operator is going to have to try to make some condition C true and its going to make it true, for some particular sub-goal. 
+So, for some particular step in the plan, that needs C to be true. 
+Right? 
+So, you can think of selecting a sub- goal that gives us a particular step in the plan that needed the condition C to be true. 
+OK, so now we have to try and pick an operator for that. 
+All right. 
+So, the first step is Choose. 
+And I'm going to draw a box around it, and I'll explain in a minute why I did that. 
+Either- -and there's actually choices here, so we could either choose a step S from the plan or a new step S by instantiating an operator that has C as an effect. 
+So, there are two ways that you could try to satisfy a precondition. 
+You could look at your plan and see if you already have a step in your plan that can make that precondition true, and probably if you have one, that's a good way to try, at least first. 
+Or you could go through your bag of tricks, your set of operators, possible things that you can do, and see if you have an operator, that has an effect that would satisfy C. And if you do, you can instantiate that operator. 
+So there's two different high level things you could do, right? 
+At the high level, you can either pick an existing step or you can make a new one, and then of course there are all the different choices of existing steps and new ones that you could make. 
+So, there's kind of a lot of options. 
+All right. 
+If there's no such step, Fail. 
+Put a box around Fail. 
+We'll talk about Choose and Fail in a minute. 
+OK. 
+But if it does work out, then we add a causal link from this step S, to Sneeds with C on the arrow saying, step S is going to achieve condition C for step Sneeds, who needs it. 
+And we're going to add a temporal link and a temporal constraint, that S has to come before Sneeds. 
+And we may have to add S to steps, if necessary. 
+That's the sort of book- keeping. 
+All right. 
+If we had to make a new step, then we'd be sure to put it in our steps here. 
+OK, so the basic idea here makes sense to everybody? 
+If there's a hole in your plan, there's some condition that you need to make true. 
+You try to figure out a way to make it true. 
+Either by noticing that you already made it true with some other thing that you're doing in the plan or by adding a new thing in. 
+OK. 
+So, let's talk about Choose and Fail for a minute. 
+A lot of times in AI and other endeavors, you need to make programs that are fundamentally searching in space. 
+Right. 
+They're trying a bunch of options, and looking for some set of options at a bunch of different choice points, such that they'll all work out. 
+And so, when you write a program to do that, there's kind of a lot of book-keeping that you have to do about which choices were available every time you had the choice, and which ones you tried so far, and what would the next one be to try, and that kind of thing. 
+And that sort of bookkeeping about keeping the search going obscures the sort of underlying nature of the program. 
+So, what we're going to do is follow a tradition of describing such things as non-deterministic programs. 
+So, when we say Choose and Fail here, what we mean here is sort of a whole complicated thing that choose means pick, somehow, non-deterministically--from all the different ways that you could pick something, pick a satisfactory thing, and fail means that if you hit fail, it doesn't mean the whole algorithm fails or anything like that. 
+It means that you should go back to the most recent place where you made a choice and make a different one. 
+So, think of it as a programming language feature that makes it easy to write programs that search. 
+This used to be a homework assignment in 001, in some years ago--adding these features to your programming language. 
+But, the idea is, you just want to say, look here are all the different ways that this could work out, and we have to be able to try every one of them. 
+We have no idea which one's right. 
+Or maybe we do, and so maybe you would want to put some ordering ideas here. 
+But, we don't know which one's right, and we're going to pick one of them, but we will know sometimes that this isn't working out, and if we do, we'll say no, and that means you have to go up and try something new. 
+And this may happen recursively at many levels, and if it does, then when you fail, when for instance, if you exhaust all of these options, then maybe you kind of propagate your fail up to some previous choice you made and you have to make a different choice. 
+There's a discussion of this, I think also, in one of the appendices of Russell and Norvig. 
+So, that's choose operators, and the other thing we have to do is resolve threats. 
+==========
+So, what we have to do here is, remember a threat--what is a threat? 
+We've been saying, so, just to get the language right, a step S threatens a causal link hence Si -c-> Sj, yes? 
+Not C is in the effects of S, and its possible that Si < S < Sj. 
+This is the definition of what a threat is. 
+So the idea is that you have this causal link. 
+You've been doing your planning business, and you've decided that you're going to go to the bank. 
+You're going to the bank in order to get money which is a precondition for buying bread. 
+But, there's a substep which is Buy(mink coat), which has the effect of "not money". 
+And so that would threaten this plan, this connection between going to the bank and having money to buy bread, and its a threat if we don't have, if the ordering constraints in our plan are such that its possible that we would buy the mink coat in between going to the bank and buying the bread. 
+If this would happen somewhere else in the plan, and its constraining to not be between these two things, than its not a problem, but if it could be here, than it could be a problem. 
+So, that's a threat. 
+So, what happens if we have threats. 
+Well, there are two choices. 
+So, we say for each threat, we're going to choose, and choose here again is a non-deterministic choice point We're going to chose either promotion or demotion. 
+So we could promote S, and to promote S means to add constraint, so that S comes before Si. 
+Or we could demote S and that means that's constrained so that S goes after Sj. 
+And so if we want to remove the threat, we have to somehow make the subcondition not the truth. 
+We can't change the effects of S, so what's left is to change the ordering, and so we can say--we could try to force this step to come before I and J. We could try to force this step to come after I and J. Either one of those things will fix up this problem. 
+What we would do is, we would choose to promote S. We would add a constraint in, and then we were to say, if the constraints are inconsistent, fail. 
+And the same thing would be true here. 
+So choose we may--we either try to promote or to demote, whichever one we try, we throw in this new constraint. 
+So, we will looks and see if the constraints are inconsistent, we fail. 
+That would mean pop up here and try the other one. 
+If that fails, that means pop all the way out of here. 
+This threat can't be addressed. 
+And so we would say, again, the constraints are inconsistent. 
+==========
+We'll go back to the milk, drill, and bananas example of last time, and just see how the algorithm plays out. 
+So, we're going to enter into this planning process, kind of in the middle. 
+In fact, we'll pick it up just about-- last time we got a certain distance and then at the very end, I began waving my hands wildly. 
+So, we'll pick it up where we started waving hands, and structure it a little more carefully. 
+OK. 
+So, here we have start and finish. 
+OK, we'll use pink for causal link. 
+We'll assume the planning process has proceeded a fair amount. 
+We decided that we're going to do "buy drill" is going to achieve have(drill) for us. 
+Buy milk is going to achieve have(milk). 
+Buy(bananas) is going to achieve have(bananas). 
+Sell (hardware store, drill), sell(supermarket, milk), and sell(supermarket, bananas) were all true in the start state. 
+So, start also produces at home. 
+And we're going to use go (hardware store) to achieve at(hardware store). 
+And we're going to use go(supermarket) to achieve at(supermarket). 
+And everywhere there's a causal arrow, there is also a temporal arrow. 
+If you look at the algorithm, every time we add in a constraint that says that this is causing that, we also add in a temporal constraint. 
+So, now the question is: what would you like to do in this plan? 
+__: So, if we go hardware store, that achieves At(hardware store). 
+Did you say that? 
+__: Yes, I did. 
+You know, I did, sort of implicitly with this arrow. 
+You're supposed to achieve at hardware store so it makes it true. 
+__: Is that part of the post-condition. 
+__: Yes, it is. 
+So, I just didn't write it twice. 
+By having arrow here, that implies that there was a post- constraint. 
+Yes. 
+But I certainly could, I mean it would be clearer if I didn't. 
+What do we need to do next. 
+So let's imagine, this is the state of our plan. 
+So, we're looping. 
+Is the plan a solution? 
+Is it OK? 
+No. There's some unachieved pre-conditions. 
+So, pick your pre-conditions. 
+Which one would you like to address? 
+__: (inaudible) you have a threat. 
+__: Good, so what's a threat? 
+__: Going to the hardware store ... 
+__: So, concretely what's the threat? 
+__: (inaudible) that could possibly be in between Buy(Milk) and Buy(Bananas). 
+__: Right. 
+So, this not at, so, in some sense you could say that this X is not yet instantiated. 
+Its a funny kind of thing. 
+Its like its a possible threat. 
+You could say, well, I could see a way, if X, for instance becomes supermarket here--then I'm in trouble, because now this "not at(X)", this thing is going to threaten either of those links. 
+__: (inaudible) because it's not instantiated. 
+__: But because, OK, but that's a good point. 
+So, what do you do if with these uninstantiated variables? 
+And there are a couple of different kind of things that you could do. 
+One is that you could have a variable constraint. 
+You could just bind it. 
+You could say you're not allowed to have uninstantiated variables. 
+So, you could find an instantiation, and either it would or it wouldn't be a threat, or we're going to instantiate this thing in just a minute, but. 
+Another thing that you could do, but which makes the implementation, which is some sense the right thing to do, but which makes the implementation of the algorithm harder would be to constrain this X to be not supermarket. 
+But you could say, "I'm not sure what X needs to be. 
+And I'd really hate to make a commitment, but I do know that if its the supermarket, I'm in trouble. 
+That's not--but that's even a little bit too strong, right, because its a funny combination, well, if its the supermarket, then we might have to change the ordering of things. 
+If its not the supermarket, then we don't have to worry about the order. 
+So, the answer is that we're just going to not worry for the moment about conflicts that involve an uninstantiated variable. 
+But when we do instantiate it, then if we're having a problem, it will pop out and we'll have to deal with it then. 
+That was a good question. 
+Any other-- __: (inaudible) from start to all those cells (inaudible) useful for start (inaudible) or (inaudible) clearly defined-- __: Right, but, but just put them in terms of making-- you're right--so, in some sense it seems--it might seem a little silly to have this link from start to here, but it helps you make the algorithm compact because it means that you don't have to treat the initial condition as being anything special. 
+Right. 
+You just, all you have to do to initialize the algorithm is to throw in the start action, that has the effects, all these things that are true in the initial state, and then you just treat those as you would treat any effects of any action. 
+So, its more--you know, you could say, no, these are just-- they're true always. 
+You know, they're kind of special in some way, and so I don't need the links, but its actually more of a pain to do that when you're writing your program, than it is to just do this. 
+So, yes, usually if you can avoid special cases, you're more likely to implement the algorithm right. 
+So, let's say--so here's a pre- condition that unsatisfied. 
+Its not hard to decide what to do next. 
+You just look around and find something that doesn't have a pink arrow going into it, a pre-condition. 
+So all right, I want to satisfy at(X). 
+What would be a way to do that? 
+Should be able to come up with at least two. 
+__: Home? 
+(inaudible). 
+__: Great, so we can instantiate X to home, and we can do this--I'm going to use yet another color, just in case we have to go back and undo it. 
+Not that I think we're going to have to or anything, but you never know. 
+Sort of a causal link. 
+So, this is also causal. 
+And then, we would make X home. 
+I don't think there's any problem yet. 
+So we're almost done. 
+There's only one more pre-condition that we have to satisfy. 
+This one. 
+And we might say, well all right, let's be convenient just to make that be home too. 
+Why not? 
+Its there, its easy. 
+So, I can do that. 
+OK, now we have a problem. 
+Someone tell me concretely what the problem is. 
+Yes? 
+__: If you go to one, then you're going to go to the (inaudible). 
+__: So, in our language of the planning algorithm, this step is a threat to that link. 
+And symmetrically, this step because it produces "not at home", is a threat to that link. 
+So, we've got these threats. 
+So, now the way that you try to fix a threat is you try to move it, the threat to before things are happening, but you can't move this to before start. 
+When we put it in the plan, we constrained it to come after start. 
+So, you can't make this come before start. 
+So, maybe you could make this go after this one. 
+Right? 
+Then it wouldn't mess up this precondition anymore. 
+But then if we make this one go after it, you'll find that you have a similar problem that this is messing up that one. 
+So, anyway there's no way to make that work out. 
+No amount of promoting or demoting those guys will make it. 
+So, we backtrack. 
+We say, oh, that didn't work. 
+==========
+All right, but we're feeling lazy, so is there another good way, maybe to instantiate that X? __: You could require (inaudible) to the store before go to supermarket. 
+Or at, require that you're at the hardward store before you go to the supermarket. 
+__: Right. 
+So, but then just being kind of a mindless executor of our algorithm, I could say what's the way to achieve at X. Well, if I set X to hardware store, then I can achieve at X. So, let me do that. 
+So, I'm going to say that this is going to achieve that and this becomes hardware store. 
+And this becomes hardware store. 
+OK. 
+So, now we're going to go to hardware store before we go to the supermarket. 
+So, that looks pretty good. 
+Do you see any other possible difficulties? 
+__: Well, if you leave the hardware store before you buy the drill. 
+__: You might leave the hardware store before you buy the drill. 
+That would not be cool. 
+After all you went to the hardware store just so you could buy the drill. 
+So, again in the language of threats and steps and stuff, what does that mean? 
+It means that going to the supermarket threatens this arrow right here. 
+Right? 
+Because this arrow says, "I'm achieving the condition 'at hardware store' for 'buy drill'." 
+But if I go to the supermarket in between, its going to cause no hardware store to be true, and so that's a threat and that's bad. 
+So, I have to fix it somehow. 
+OK. 
+What are our two ways of fixing a threat? 
+__: Promote or Demote __: So we either make it go before or after. 
+Well, its pretty clear we can't make "go supermarket" go before "go hardware store" and have the orderings come out consistent. 
+But it looks like it might be OK for the "go supermarket" to come after "buy drill". 
+So, we can add an ordering constraint. 
+__: (inaudible). 
+__: So, the assumption here is that if we don't say that we're going to mess something up that we're not. 
+So, this is a threat to "at hardware store", because it explicitly turns at hardware store off. 
+But everything else, if it doesn't have it in its list of effects, the assumption is that it just going to leave it alone. 
+So, this is the only step that causes at hardware store to be false. 
+So, that's the only possible threat. 
+So, now we have a plan. 
+And I think its correct. 
+The example in the book was more complicated because you have to be "at home" at the end, but its sort of more of the same so I'm not going to do that. 
+Does this make sense to everybody? 
+So--you're going to go to the hardware store, then buy a drill, then go to the supermarket. 
+Those have to happen in that order. 
+Then you can buy milk, bananas, in whichever order you want to. 
+__: I think its (inaudible) that X is the hardware (inaudible). 
+__: That would be kind of a hypothetical discussion that we had. 
+__: (inaudible). 
+__: Well, it was going to be that either it couldn't be supermarket or that we had to constrain it to be in some order. 
+__: But it can be. 
+__: It can be supermarket with an ordering constraint. 
+Yes. 
+So, we couldn't see--when we started off, there was a little nervousness about this X, because we could see that for some values of X we could get into trouble, and in fact, we did. 
+But, its hard to predict exactly what kind of trouble you can get into, so its better to just kind of go along, not worry about uninstantiated variable. 
+Just worry about it once it starts being manifestly a problem. 
+__: (inaudible) where we went to the supermarket first and then it could be that we could either buy the milk or the bananas. 
+How would we indicate that both of those buy milk and bananas at the supermarket store have to come before going to the hardware store. 
+__: So, if we had just processed--so there's another perfectly valid plan, which happens not to be the one that we got because of the order that we just decided to do things in. 
+If we had decided that we were going to go to the supermarket first and then the hardware store, then we would end up having to put constraints just as we--we assume we ended up having just this one thing fix the plan for us. 
+If we had done it the other way around, we would have ended up with two temporal constraints. 
+One that says Buy(milk) has to come before going to the hardware store and the other said buy (bananas) has to come before going to the hardware store. 
+We can still be agnostic about which one of those had to go first, but we could say that they both had to come before that, so that's--that's encoded, sort of, in the partial order. 
+Yes? 
+__: So, (inaudible) you could order a buy milk and then go to the hardware store. 
+__: Right, good. 
+No. The algorithm is correct and complete. 
+So, if there's a plan, it will find one, and it will never find a plan that's just broken. 
+But there's no sense in which it's efficient. 
+You can't guarantee it that its going to find it pretty fast, and you can't guarantee that it's going to find the best plan. 
+So, yes, there's nothing to keep you from going home, going to the hardware store, going back home, going to the supermarket. 
+When we had, pick something to satisfy preconditions, and when we did it here, we were very conservative in our pickage, and so we tried to reuse the steps and the variables that we had around already, but if we weren't--actually, we could instantiate new actions all day long. 
+So, that's a potential problem. 
+__: We almost beat the path (inaudible) to make it be able to do (inaudible). 
+But what we have right now is basically a number of steps (inaudible). 
+__: Right, and so the next thing that you need to add, and its very difficult and very important is some ordering, basically ordering ideas, so that when you're picking a new step, or picking a way of satisfying a precondition, you'd try to do that in a way that is most appropriate, whatever that might mean. 
+You know, just saying that if you try--if you can satisfy it with a step that you already have, that's a good start. 
+Or try to satisfy it with a variable that you've already used once before. 
+There's some kind of basic ideas like that. 
+But sometimes for a real domain, you'll actually have to use domain knowledge to say--given these two ways of trying to satisfy something always, always try this one first. 
+Always try--if you need a new object, always try to buy that before you try to make it. 
+Depends on whether you're more constrained on money or time. 
+==========
+Let's do another example. 
+In a different domain. 
+We have to do at least one example in these block world domains, because its such a kind of canonical thing for that old fashioned AI program to do. 
+So, imagine that you're a completely disembodied two- dimensional robot. 
+And you have piles of blocks. 
+Imagine that you have this stack of blocks. 
+And your goal is--you want to get A on B and B on C. Now, turns out that this configuration of blocks is called the Sussman anomaly. 
+I was wondering why it was sort of a kind of an interesting planning problem, and we'll see that our algorithm looks fine on it, and its because way back--when was it--I don't know. 
+We could get the date. 
+Gerry Sussman, who's a professor here--his thesis was a planning system, basically. 
+Back when people were just starting to think about how you would solve these problems, and the strategy that they used was like the strategy that the first STRIPS used to plan, and that was. 
+It said, well all right, I have this conjunctive sub-goal to satisfy. 
+I have to somehow get A on B. And I have to somehow get B on C. And what I'm going to do is I'm going to try to do this one first, and then that one. 
+And if it doesn't work out that way, I'll try to do that one first and then this one. 
+So, let's say--it tries to solve the problem of putting A on B first. 
+I tried to solve the problem of putting A on B first. 
+If it does that, it will put B on the table and A on B. And now it says, OK. 
+Let me solve the problem of putting B on C. And now it's all messed up because its putting A on B first and C is sitting over here. 
+He's going to have to undo that somehow. 
+Its going to get an ugly plant. 
+__: (inaudible). 
+__: Excuse me? 
+You can't do two at once, no, one at a time. 
+Yes, I should have written the rules. 
+I'll write the rules up here in a minute. 
+Now, OK, well, we'll say all right, well that doesn't work out very well. 
+Let me try putting B on C first. 
+Well, cool. 
+It puts B on C. It says OK, now I can put A on B. Oh, shoot, because A has gotten stuck under there. 
+So, what it means is that the decomposition doesn't work out as nicely as you would like. 
+You can't just pick one subgoals, solve it, pick the other subgoal and solve it. 
+And you can't concatenate the plans to do that. 
+You have to actually worry about intermingling. 
+And that was really one of the motivations for going to these kinds of planners that don't treat the steps in such a strict order. 
+So, anyway, I thought that would be such a classical example, I thought we would do this example using the partial order planning. 
+So, let me write down-- it also illustrates some points about operator descriptions. 
+So, let me write down one set of operator descriptions that you could have. 
+All right, so the things in our world are going to be A, B, C, and the table. 
+So, we're going to have objects A, B, C, and the table. 
+And we're going to have a predicate On and a predicate Clear. 
+And its going to be important that things be clear. 
+So here is a way to write the operator description. 
+We have one operator called Move, some block from X to Y. So, the preconditions for that have to be that block is on X, that block is clear, and that Y is clear. 
+And what is the effect going to be? 
+What's going to be true after executing this operator? 
+__: On B Y, __: On B Y. What else? 
+__: Clear X. __: Clear X. Some things get messed up. 
+__: Not on (Z, X). 
+__: Not on (Z, X). 
+__: Not clear(Y). 
+__: Not clear(Y), right. 
+Now, part of the reason that I like to show this to you is because it illustrates the strengths the weaknesses of working in this kind of language, say, as opposed to full first-order logic. 
+In full first-order logic, you could just define clear, right? 
+Because X was clear so there does not exist a thing that is on X. But then, you--you have to do work, maybe a lot of work, to figure out if X is clear or not. 
+Here it says we're just taking the approach of tracking, in some sense. 
+Tracking whether everything is clear or not, and always asserting it into our database as we go along, so that we just know as we go. 
+And then we don't have to think about what we actually clear, we just look it up. 
+So, its sort of more work to write it down. 
+This was like humans doing the computer's working, but it turns out its a good trade off because its not too much work for the humans, and doing those proofs might be pretty hard for the computer. 
+So, we're explicitly tracking on here. 
+So now, there's a little, problem. 
+The key point--this ought to be able to be our only operator. 
+Basically, all we can do is move things around. 
+It turns out that we end up in trouble with the table. 
+So, let's talk about the table for a minute. 
+So, and in particular about the table and the notion of being clear. 
+So, if you take clear to mean that there's nothing on it, then the table's not clear here. 
+But yet, we like to assume for the purpose of these planning problems. 
+There's basically always room at the table for another block. 
+So, the table's always clear. 
+So, you could just say the table's clear. 
+What's wrong with just putting clear table in the initial state and using that operator description. 
+__: (inaudible). 
+__: You're going to turn clear Y false. 
+All right. 
+So, that's a bummer, but we do have to deal with it. 
+So, we're going to add another operator description. 
+Move table, special one. 
+So, we have to do two things. 
+One is that we're going to add the requirement here that Y be a block. 
+If we require Y to be a block, then we're sure that we're never going to apply this to the table, and then we can mak a new operator called move table, which just takes two arguments. 
+We're going to move a block from X to the table. 
+And the preconditions of that will be on (b,X), Clear(b) and that's all. 
+And the effects will be on (b, table) and clear(X) and not on(B,X). 
+All right, so let's do the problem. 
+So, we'll have start. 
+And start has the following facts for us on (C, A), on (A, table), on (B, table) clear( C), and clear (B). 
+That's what we know when they wake up. 
+And finish requires on (A,B) and on(B,C). 
+Here we go. 
+==========
+What would you like to do? 
+Where's a precondition that needs to be made true. 
+On(A,B) So, we're going to do on(A,B) true. 
+It doesn't look like we can just use some fact we already have to make it true, so we have to add another step. 
+Looks like move would be good. 
+And we want to be in sort of least commitment in our moving, so we're going to move A from somewhere to B. Let's write out all the postconditions, just so that we're shown all the effects. 
+So, we'll get on(A,B). 
+We'll get not on(A,X). 
+We'll get clear--and then we can use that to satisfy that--preconditions, preconditions. 
+__: (inaudible). 
+__: Yes, right. 
+I need another clear? 
+__: Not clear(B). 
+__: OK. 
+Thank you. 
+All right, and our preconditions are on (A,X) clear(A) clear(B)--and I'm going to leave the block precondition out, just because it's trivial and tedious. 
+We would have to assert block(A), block(B), and block(C) in the start state. 
+What do you want to do next? 
+Somebody pick a precondition that's not satisfied. 
+__: If A were on the table, would you need another (inaudible) there? 
+__: No, its OK. 
+X can be the table. 
+That doesn't--we just had to do this maneuver to deal with the fact that we didn't ever want to assert not clear(table). 
+So, we can move things from the table, no problem, because that causes the table to be cleare, and the table was already clear anyway. 
+The table was always clear. 
+Oh, let me add that, actually. 
+Yes. 
+Clear (A). 
+Clear (A), that's going to be a hard one. 
+How can we make A clear? 
+Well, the way we make things clear is either by moving them, moving something off of them. 
+Right? 
+So, and the thing that we're moving off of A, we can either move to some block or to the table. 
+Let me just guide you to the choice of moving it to the table. 
+So, we can move-table something off of A. Oh, I'm going to run out of space anyway. 
+OK, move table something off of A. That will produce On (Y,table), clear(A) and not on(Y,A). 
+So, we hook those back together, and we have to put in the preconditions of move YA. 
+So, the preconditions are on YA-- __: Is that clear A or clear Y? (inaudible). 
+__: Yes, its very confusing. 
+Move table means move Y from A to the table. 
+Right? 
+So, then A becomes clear. 
+So for that to be true, Y has to be on A. I mean, for that to be applicable, Y has to be on A, and clear Y--OK. 
+We have things to do. 
+__: So, on C (inaudible). 
+__: Good, so on CA and on YA, we will connect those guys up and we'll make Y be C. __: (inaudible). 
+__: There's, so then clear C. We have clear C. We'll take it. 
+So, this side's in good shape pre-condition-wise. 
+How about another pre-condition to satisfy. 
+__: Clear B. __: Clear B is just satisfied in the initial state. 
+But we could try to clear B by moving something off of it. 
+But if we tried to clear B by moving something off of it, then we'd have to put something on it in order to move something off of it, and that would not be so efficient, so we won't do that. 
+Now we want to see what we can deal with on (A,X) and on(B,C). 
+Which one do you like? 
+__: (inaudible) __: On(A,X). 
+OK. 
+We can make that true by instantiating X to table. 
+So, table, table, table, table, ah! 
+All right, that all looks good. 
+Now, what's left is on(B,C). 
+So, to get B to be on C, it means we're going to have to move. 
+Now let's do move(B,X,C). 
+That produces on (BC,), not on (B,X). 
+Clear X, not clear (C). 
+And it requires on (B,X), clear (B), clear (C). 
+And that completes that. 
+Now we have--now one thing to do to be sure that we haven't introduced any threats. 
+One thing to just check which I just checked is to be sure that we're not depending anywhere on B being on somebody and we're not depending on C being clear. 
+If we were, we might have to add some ordering constraints. 
+OK, so then we have to just deal with the preconditions of this. 
+So, how about the clears. 
+Maybe they just come for free. 
+It looks like maybe. 
+We get clear B from here and clear C from there, on(B,X). 
+On the table. 
+Now we're going to need an ordering constraint here. 
+Obviously we have a threat, and I haven't seen it and neither have you. 
+__: Clear(table) requires clear (inaudible). 
+__: This requires Clear C. __: (inaudible) clear C (inaudible). 
+__: This requires Clear C. So, here's an important link, right? 
+There's a clear C that we're using, and this guy right here makes it false. 
+So, this step is a threat to that link. 
+OK. 
+__: (inaudible) not clear B (inaudible). 
+__: Good. 
+So, this guy--this step is a threat to that one. 
+All right, well, let's deal with one threat at a time. 
+So, let's deal with that one. 
+OK. 
+So, we could try and put this threat before the start but we can't. 
+So we'd better constrain it to come after this. 
+So, we'll do that. 
+All right, so this is no longer a threat. 
+All right, the other problem was clear B and not clear B. So, this step threatens this link. 
+We could try to make this step come before the start, but that's no good. 
+So, we'll have to make this step come after this one. 
+That's OK. 
+Good. 
+And I think that's done. 
+So what do we do? 
+We first move C from A to the table. 
+Then we move B from the table to C, and then we move A from the table. 
+So, we can nail the Sussman anomaly. 
+The chapter after this one. 
+So, this was chapter eleven in the book. 
+==========
+Chapter twelve talks about a number of other extensions that you can do to essentially make the language that you use to describe the way the world works richer. 
+So one thing that you can do is have conditional effects. 
+So, for instance--imagine we have a light switch, in particular a push button light switch, which there are some of. 
+So, and the way it works is if the lights on, it turns it off and if the light's off, it turns it on. 
+It turns out that you can't really represent this very well in this language, but you can add--that's a kind of richness that you can add to the representation. 
+Its not very hard to add negated goals or even disjunctive goals are not too hard -- if you can put an or in your goal and either achieve this or that, that's not very hard, because non-deterministically --well, let me try to do it this way. 
+If this doesn't work, then try to do it other way. 
+I mean, it adds to the search, but it doesn't make the complexity of the algorithm any bigger. 
+So, what you can't do, and what we'll actually address later on, but in this model, it just doesn't work out at all, is how disjunction in the effect. 
+Your world can't be non- deterministic. 
+You can't say, I turned on the switch and either this light comes on or that one. 
+That means that you need an extra kind of branchiness. 
+You have to think about well the world could go like this and it could go like this and I'll have to deal with both cases. 
+So, we don't deal with that kind of thing very well. 
+==========
+So, let me just say something about hierarchy, because was just thinking about planning in non-deterministic domain, but so this idea of planning things out non-linearly is important and one of the motivations that I gave was you could kind of figure out what the important things were that you were going to do. 
+Stick those in your plan, and maybe fill the details in later. 
+But, even so, you probably don't--if you're doing a really complicated thing, you probably don't want to be planning all at the same level of abstraction. 
+So, imagine that you're trying to figure out how to organize somebody's birthday party or something. 
+so, you might have really high level things like find a location and invite the people and do this and do that, and you'd like to make a plan at the very high level of abstraction, where you have something like invite everybody to the party as an operator, as an action. 
+And then have some pre-conditions and some post- conditions. 
+Now, you might not know how to do that entirely. 
+Exactly how you're going to invite everybody to the party may depend on the particular properties of the situation, like who that person's friends are and whether they have e mail addresses and how much time you have before the party and all that sort of stuff. 
+But the idea that you'd like to make a plan, maybe its totally ordered, maybe its partially ordered, and a very high level of abstraction and say, OK, good. 
+I know that if I do these five things, these five high level things, then I will have solved my problem, but you still will have to take a particular one of these high level things like make the food and decorate. 
+I don't know, you decorate parties. 
+And then each of those things may actually have a whole lot of particular details that you have to work out, and this may itself work out to a complicated partially ordered plan itself. 
+But, the thing is that if you believe the planning for making food and the planning decorating can be decoupled, or that its only kind of mildly coupled, then you can very effectively do the high level planning and then the low- level planning and get a huge computational win. 
+Because this plan after all only has five or six things in it. 
+It doesn't have fifty or sixty, and the difference between planning five to six things and planning fifty and sixty is really big. 
+So, in any kind of realistic domain, one thing you always want to look for is sort of opportunities to do things hierarchically, and the book has a nice discussion of how to do that in chapter twelve. 
+We're not going to go into it in detail. 
+But, its a thing that really gives you a lot of leverage, and so I thought it was sort of important to point out. 
+OK. 
+Any questions? 
+All right, good. 
+Do some reading and we'll talk about graph plan and set plan next time. 
+END OF SESSION 
+==========

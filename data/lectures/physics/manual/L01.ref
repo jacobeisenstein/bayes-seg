@@ -1,0 +1,513 @@
+==========
+In physics , we explore the very small to the very large .
+The very small is a small fraction of a proton and the very large is the universe itself .
+They span 45 orders of magnitude a 1 with 45 zeroes .
+To express measurements quantitatively we have to introduce units .
+And we introduce for the unit of length , the meter ; for the unit of time , the second ; and for the unit of mass , the kilogram .
+Now , you can read in your book how these are defined and how the definition evolved historically .
+Now , there are many derived units which we use in our daily life for convenience and some are tailored toward specific fields .
+We have centimeters , we have millimeters kilometers .
+We have inches , feet , miles .
+Astronomers even use the astronomical unit which is the mean distance between the Earth and the sun and they use light years which is the distance that light travels in one year .
+We have milliseconds , we have microseconds we have days , weeks , hours , centuries , months all derived units .
+For the mass , we have milligrams , we have pounds we have metric tons .
+So lots of derived units exist .
+Not all of them are very easy to work with .
+I find it extremely difficult to work with inches and feet .
+It 's an extremely uncivilized system .
+I don 't mean to insult you , but think about it 12 inches in a foot , three feet in a yard .
+Could drive you nuts .
+I work almost exclusively decimal , and I hope you will do the same during this course but we may make some exceptions .
+==========
+I will now first show you a movie , which is called The Powers of Ten .
+It covers 40 orders of magnitude .
+It was originally conceived by a Dutchman named Kees Boeke in the early '50s .
+This is the second generation movie , and you will hear the voice of Professor Morrison , who is a professor at MIT .
+The Power of Ten 40 Orders of Magnitude .
+Here we go .
+MORRISON : 1 October .
+We begin with a scene 1 meter wide which we view from just 1 meter away .
+Now , every 10 seconds we will look from 10 times farther away and our field of view will be 10 times wider .
+This square is 10 meters wide and in 10 seconds , the next square will be 10 times as wide .
+Our picture will center on the picnickers even after they have been lost to sight .
+100 meters wide the distance a man can run in 10 seconds .
+Cars crowd the highway , powerboats lie at their docks .
+The colorful bleachers are Soldiers' Field .
+This square is a kilometer wide 1 , 000 meters the distance a racing car can travel in 10 seconds .
+We see the great city on the lake shore .
+10 to the fourth meters 10 kilometers the distance a supersonic airplane can travel in 10 seconds .
+We see first the rounded end of Lake Michigan then the whole Great Lake .
+10 to the fifth meters the distance an orbiting satellite covers in 10 seconds .
+Long parades of clouds , the day 's weather in the middle west .
+10 to the sixth a 1 with six zeros , a million meters .
+Soon the Earth will show as a solid sphere .
+We are able to see the whole Earth now just over a minute along the journey .
+Earth diminishes into the distance but those background stars are so much farther away they do not yet appear to move .
+A line extends at the true speed of light .
+In one second , it half crosses the tilted orbit of the moon .
+Now we mark a small part of the path in which the Earth moves about the Sun .
+Now the orbital paths of the neighbor planets .
+Venus ... and Mars ... then Mercury .
+Entering our field of view is the glowing center of our solar system , the Sun followed by the massive outer planets swinging wide in their big orbits .
+That outer orbit belongs to Pluto .
+A fringe of a myriad comets too faint to see completes the solar system .
+10 to the 14th as the solar system shrinks the one bright point in the distance our sun is plainly now only one among the stars .
+Looking back from here we note four southern constellations still much as they appear from the far side of the Earth .
+This square is 10 to the 16th meters , one light year not yet out to the next star .
+Our last 10 second step took us 10 light years further .
+The next will be a hundred .
+Our perspective changes so much in each step now that even the background stars will appear to converge .
+At last , we pass the bright star Arcturus and some stars of the Dipper .
+Normal but quite unfamiliar stars and clouds of gas surround us , as we traverse the Milky Way galaxy .
+Giant steps carry us into the outskirts of the galaxy and as we pull away , we begin to see the great flat spiral facing us .
+The time and path we chose to leave Chicago has brought us out of the galaxy along a course nearly perpendicular to its disc .
+The two little satellite galaxies of our own are the Clouds of Magellan 10 to the 22nd power , a million light years .
+Groups of galaxies bring a new level of structure to the scene .
+Glowing points are no longer single stars but whole galaxies of stars seen as one .
+We pass the big Virgo cluster of galaxies , among many others .
+100 million light years out .
+As we approach the limit of our vision we pause to start back home .
+This lonely scene , the galaxies like dust is what most of space looks like .
+This emptiness is normal .
+The richness of our own neighborhood is the exception .
+The trip back to the picnic on the lakefront will be a sped up version reducing the distance to the Earth 's surface by one power of 10 every two seconds .
+In each two seconds , we will appear to cover 90 of the remaining distance back to Earth .
+Notice the alternation between great activity and relative inactivity a rhythm that will continue all the way into our next goal a proton in the nucleus of a carbon atom beneath the skin on the hand of the sleeping man at the picnic .
+10 to the ninth meters ... 10 to the eighth ... seven ... six ... five ... four ... three ... two ... one .
+We are back at our starting point .
+We slow up at 1 meter , 10 to the zero power .
+Now we reduce the distance to our final destination by 90 every 10 seconds , each step much smaller than the one before .
+At 10 to the minus two 1/100th of a meter , one centimeter we approach the surface of the hand .
+In a few seconds , we 'll be entering the skin crossing layer after layer from the outermost dead cells into a tiny blood vessel within .
+Skin layers vanish in turn an outer layer of cells , felty collagen a capillary containing red blood cells and a ruffly lymphocyte .
+We enter the white cell .
+Among its vital organelles the porous wall of the cell nucleus appears .
+The nucleus within holds the heredity of the man in the coiled coils of DNA .
+As we close in , we come to the double helix itself a molecule like a long , twisted ladder whose rungs of paired bases spell out twice in an alphabet of four letters the words of a powerful genetic message .
+At the atomic scale , the interplay of form and motion becomes more visible .
+We focus on one commonplace group of three hydrogen atoms bonded by electrical forces to a carbon atom .
+Four electrons make up the outer shell of the carbon itself .
+They appear in quantum motion as a swarm of shimmering points .
+At 10 to the minus 10 meters , one angstrom we find ourselves right among those outer electrons .
+Now we come upon the two inner electrons held in a tighter swarm .
+As we draw toward the atom 's attracting center we enter upon a vast inner space .
+At last , the carbon nucleus .
+So massive and so small this carbon nucleus is made up of six protons and six neutrons .
+We are in a domain of universal modules .
+There are protons and neutrons in every nucleus electrons in every atom atoms bonded into every molecule , out to the farthest galaxy .
+As a single proton fills our scene we reach the edge of present understanding .
+Are these some quarks at intense interaction ?
+Our journey has taken us through 40 powers of 10 .
+If now the field is one unit then , when we saw many clusters of galaxies together it was 10 to the 40th , or 1 and 40 zeroes .
+==========
+I already introduced , as you see there length , time and mass and we call these the three fundamental quantities in physics .
+I will give this the symbol capital L for length capital T for time , and capital M for mass .
+All other quantities in physics can be derived from these fundamental quantities .
+I 'll give you an example .
+I put a bracket around here .
+I say [speed] and that means the dimensions of speed .
+The dimensions of speed is the dimension of length divided by the dimension of time .
+So I can write for that : [L] divided by [T] .
+Whether it 's meters per second or inches per year that 's not what matters .
+It has the dimension length per time .
+Volume would have the dimension of length to the power three .
+Density would have the dimension of mass per unit volume so that means length to the power three .
+All important in our course is acceleration .
+We will deal a lot with acceleration .
+Acceleration , as you will see , is length per time squared .
+The unit is meters per second squared .
+So you get length divided by time squared .
+So all other quantities can be derived from these three fundamental .
+==========
+So now that we have agreed on the units we have the meter , the second and the kilogram we can start making measurements .
+Now , all important in making measurements which is always ignored in every college book is the uncertainty in your measurement .
+Any measurement that you make without any knowledge of the uncertainty is meaningless .
+I will repeat this .
+I want you to hear it tonight at 3 : 00 when you wake up .
+Any measurement that you make without the knowledge of its uncertainty is completely meaningless .
+My grandmother used to tell me that ... at least she believed it ... that someone who is lying in bed is longer than someone who stands up .
+And in honor of my grandmother I 'm going to bring this today to a test .
+I have here a setup where I can measure a person standing up and a person lying down .
+It 's not the greatest bed , but lying down .
+I have to convince you about the uncertainty in my measurement because a measurement without knowledge of the uncertainty is meaningless .
+And therefore , what I will do is the following .
+I have here an aluminum bar and I make the reasonable , plausible assumption that when this aluminum bar is sleeping when it is horizontal that it is not longer than when it is standing up .
+If you accept that , we can compare the length of this aluminum bar with this setup and with this setup .
+At least we have some kind of calibration to start with .
+I will measure it .
+You have to trust me .
+During these three months , we have to trust each other .
+So I measure here , 149.9 centimeters .
+However , I would think that the ... so this is the aluminum bar .
+This is in vertical position .
+149.9. But I would think that the uncertainty of my measurement is probably 1 millimeter .
+I can 't really guarantee you that I did it accurately any better .
+So that 's the vertical one .
+Now we 're going to measure the bar horizontally for which we have a setup here .
+Oop !
+The scale is on your side .
+So now I measure the length of this bar .
+150.0 horizontally .
+150.0 , again , plus or minus 0.1 centimeter .
+So you would agree with me that I am capable of measuring plus or minus 1 millimeter .
+That 's the uncertainty of my measurement .
+Now , if the difference in lengths between lying down and standing up if that were one foot we would all know it , wouldn 't we ?
+You get out of bed in the morning you lie down and you get up and you go , clunk !
+And you 're one foot shorter .
+And we know that that 's not the case .
+If the difference were only one millimeter we would never know .
+Therefore , I suspect that if my grandmother was right then it 's probably only a few centimeters , maybe an inch .
+And so I would argue that if I can measure the length of a student to one millimeter accuracy that should settle the issue .
+So I need a volunteer .
+You want to volunteer ?
+You look like you 're very tall .
+I hope that ... yeah , I hope that we don 't run out of , uh ... You 're not taller than 178 or so ?
+What is your name ?
+STUDENT : Rick Ryder .
+LEWIN : Rick Rick Ryder .
+You 're not nervous , right ?
+RICK : No !
+LEWIN : Man !
+( class laughs ) Sit down .
+( class laughs ) I can 't have tall guys here .
+Come on .
+We need someone more modest in size .
+Don 't take it personal , Rick .
+Okay , what is your name ?
+STUDENT : Zach .
+LEWIN : Zach .
+Nice day today , Zach , yeah ?
+You feel all right ?
+Your first lecture at MIT ?
+I don 't .
+Okay , man .
+Stand there , yeah .
+Okay , 183.2. Stay there , stay there .
+Don 't move .
+Zach ... This is vertical .
+What did I say ?
+180 ?
+Only one person .
+183 ?
+Come on . 
+.2 Okay , 183.2. Yeah GW05 GW01 .
+And an uncertainty of about one ... Oh , this is centimeters 0.1 centimeters .
+And now we 're going to measure him horizontally .
+Zach , I don 't want you to break your bones so we have a little step for you here .
+Put your feet there .
+Oh , let me remove the aluminum bar .
+Watch out for the scale GW01 .
+That you don 't break that , because then it 's all over .
+Okay , I 'll come on your side .
+I have to do that yeah , yeah .
+Relax .
+Think of this as a small sacrifice for the sake of science , right ?
+Okay , you good ?
+ZACH : Yeah .
+LEWIN : You comfortable GW02 ?
+( students laugh ) You 're really comfortable , right ?
+ZACH : Wonderful .
+LEWIN : Okay .
+You ready ?
+ZACH : Yes .
+LEWIN : Okay .
+Okay .
+185.7. Stay where you are .
+185.7. I 'm sure ... I want to first make the subtraction , right ?
+185.7 , plus or minus 0.1 centimeter .
+Oh , that is five ... that is 2.5 plus or minus 0.2 centimeters .
+You 're about one inch taller when you sleep than when you stand up .
+My grandmother was right .
+She 's always right .
+Can you get off here ?
+I want you to appreciate that the accuracy ... Thank you very much , Zach .
+That the accuracy of one millimeter was more than sufficient to make the case .
+If the accuracy of my measurements would have been much less this measurement would not have been convincing at all .
+So whenever you make a measurement you must know the uncertainty .
+Otherwise , it is meaningless .
+==========
+Galileo Galilei asked himself the question : Why are mammals as large as they are and not much larger ?
+He had a very clever reasoning which I 've never seen in print .
+But it comes down to the fact that he argued that if the mammal becomes too massive that the bones will break and he thought that that was a limiting factor .
+Even though I 've never seen his reasoning in print I will try to reconstruct it what could have gone through his head .
+Here is a mammal .
+And this is one of the four legs of the mammal .
+And this mammal has a size S .
+And what I mean by that is a mouse is yay big and a cat is yay big .
+That 's what I mean by size very crudely defined .
+The mass of the mammal is M and this mammal has a thigh bone which we call the femur , which is here GW04 .
+And the femur of course carries the body , to a large extent .
+And let 's assume that the femur has a length l and has a thickness d .
+Here is a femur GW04 .
+This is what a femur approximately looks like .
+So this will be the length of the femur ... and this will be the thickness , d and this will be the cross sectional area A .
+I 'm now going to take you through what we call in physics a scaling argument .
+I would argue that the length of the femur must be proportional to the size of the animal .
+That 's completely plausible .
+If an animal is four times larger than another you would need four times longer legs .
+And that 's all this is saying .
+It 's very reasonable .
+It is also very reasonable that the mass of an animal is proportional to the third power of the size because that 's related to its volume .
+And so if it 's related to the third power of the size it must also be proportional to the third power of the length of the femur because of this relationship .
+Okay , that 's one .
+Now comes the argument .
+Pressure on the femur is proportional to the weight of the animal divided by the cross section A of the femur .
+That 's what pressure is .
+And that is the mass of the animal that 's proportional to the mass of the animal divided by d squared because we want the area here , it 's proportional to d squared .
+Now follow me closely GW04 .
+If the pressure is higher than a certain level the bones will break .
+Therefore , for an animal not to break its bones when the mass goes up by a certain factor let 's say a factor of four in order for the bones not to break d squared must also go up by a factor of four .
+That 's a key argument in the scaling here .
+You really have to think that through carefully .
+Therefore , I would argue that the mass must be proportional to d squared .
+This is the breaking argument .
+Now compare these two .
+The mass is proportional to the length of the femur to the power three and to the thickness of the femur to the power two .
+Therefore , the thickness of the femur to the power two must be proportional to the length l and therefore the thickness of the femur must be proportional to l to the power three halfs .
+A very interesting result .
+What is this result telling you ?
+It tells you that if I have two animals and one is ten times larger than the other then S is ten times larger that the lengths of the legs are ten times larger but that the thickness of the femur is 30 times larger because it is l to the power three halves .
+If I were to compare a mouse with an elephant an elephant is about a hundred times larger in size so the length of the femur of the elephant would be a hundred times larger than that of a mouse but the thickness of the femur would have to be 1 , 000 times larger .
+And that may have convinced Galileo Galilei that that 's the reason why the largest animals are as large as they are .
+Because clearly , if you increase the mass there comes a time that the thickness of the bones is the same as the length of the bones .
+You 're all made of bones and that is biologically not feasible .
+And so there is a limit somewhere set by this scaling law .
+Well , I wanted to bring this to a test .
+After all I brought my grandmother 's statement to a test so why not bring Galileo Galilei 's statement to a test ?
+And so I went to Harvard where they have a beautiful collection of femurs and I asked them for the femur of a raccoon and a horse .
+A raccoon is this big a horse is about four times bigger so the length of the femur of a horse must be about four times the length of the raccoon .
+Close .
+So I was not surprised .
+Then I measured the thickness , and I said to myself , Aha !
+If the length is four times higher then the thickness has to be eight times higher if this holds .
+And what I 'm going to plot for you you will see that shortly is d divided by l , versus l and that , of course , must be proportional to l to the power one half .
+I bring one l here .
+So , if I compare the horse and I compare the raccoon I would argue that the thickness divided by the length of the femur for the horse must be the square root of four , twice as much as that of the raccoon .
+And so I was very anxious to plot that , and I did that and I 'll show you the result .
+Here is my first result .
+So we see there , d over l .
+I explained to you why I prefer that .
+And here you see the length .
+You see here the raccoon and you see the horse .
+And if you look carefully , then the d over l for the horse is only about one and a half times larger than the raccoon .
+Well , I wasn 't too disappointed .
+One and a half is not two , but it is in the right direction .
+The horse clearly has a larger value for d over l than the raccoon .
+I realized I needed more data , so I went back to Harvard .
+I said , Look , I need a smaller animal , an opossum maybe maybe a rat , maybe a mouse , and they said , okay .
+They gave me three more bones .
+They gave me an antelope which is actually a little larger than a raccoon and they gave me an opossum and they gave me a mouse .
+Here is the bone of the antelope .
+Here is the one of the raccoon .
+Here is the one of the opossum .
+And now you won 't believe this .
+This is so wonderful , so romantic .
+There is the mouse .
+( students laugh ) Isn 't that beautiful ?
+Teeny , weeny little mouse ?
+That 's only a teeny , weeny little femur .
+And there it is .
+And I made the plot .
+I was very curious what that plot would look like .
+And ... here it is .
+Whew !
+I was shocked .
+I was really shocked .
+Because look the horse is 50 times larger in size than the mouse .
+The difference in d over l is only a factor of two .
+And I expected something more like a factor of seven .
+And so , in d over l , where I expect a factor of seven I only see a factor of two .
+So I said to myself , Oh , my goodness .
+Why didn 't I ask them for an elephant ?
+The real clincher would be the elephant because if that goes way off scale maybe we can still rescue the statement by Galileo Galilei and so I went back and they said Okay , we 'll give you the femur of an elephant .
+They also gave me one of a moose , believe it or not .
+I think they wanted to get rid of me by that time to be frank with you .
+And here is the femur of an elephant .
+And I measured it .
+The length and the thickness .
+And it is very heavy .
+It weighs a ton .
+I plotted it , I was full of expectation .
+I couldn 't sleep all night .
+And there 's the elephant .
+There is no evidence whatsoever that d over l is really larger for the elephant than for the mouse .
+These vertical bars indicate my uncertainty in measurements of thickness and the horizontal scale , which is a logarithmic scale ... the uncertainty of the length measurements is in the thickness of the red pen so there 's no need for me to indicate that any further .
+And here you have your measurements in case you want to check them .
+And look again at the mouse and look at the elephant .
+The mouse has indeed only one centimeter length of the femur and the elephant is , indeed , hundred times longer .
+So the first scaling argument that S is proportional to l that is certainly what you would expect because an elephant is about a hundred times larger in size .
+But when you go to d over l , you see it 's all over .
+The d over l for the mouse is really not all that different from the elephant and you would have expected that number to be with the square root of 100 so you expect it to be ten times larger instead of about the same .
+==========
+I now want to discuss with you what we call in physics dimensional analysis .
+I want to ask myself the question : If I drop an apple from a certain height and I change that height what will happen with the time for the apple to fall ?
+Well , I drop the apple from a height h and I want to know what happened with the time when it falls .
+And I change h .
+So I said to myself , Well , the time that it takes must be proportional to the height to some power alpha .
+Completely reasonable .
+If I make the height larger we all know that it takes longer for the apple to fall .
+That 's a safe thing .
+I said to myself , Well , if the apple has a mass m it probably is also proportional to the mass of that apple to the power beta .
+I said to myself , Gee , yeah , if something is more massive it will probably take less time .
+So maybe m to some power beta .
+I don 't know alpha , I don 't know beta .
+And then I said , Gee , there 's also something like gravity that is the Earth 's gravitational pull the gravitational acceleration of the Earth .
+So let 's introduce that , too and let 's assume that that time is also proportional to the gravitational acceleration this is an acceleration ; we will learn a lot more about that to the power gamma .
+Having said this , we can now do what 's called in physics a dimensional analysis .
+On the left we have a time and if we have a left ... on the left side a time on the right side we must also have time .
+You cannot have coconuts on one side and oranges on the other .
+You cannot have seconds on one side and meters per second on the other .
+So the dimensions left and right have to be the same .
+What is the dimension here ?
+That is [T] to the power one .
+That T ... that must be the same as length to the power alpha times mass to the power beta , times acceleration remember , it is still there on the blackboard that 's dimension [L] divided by time squared and the whole thing to the power gamma so I have a gamma here and I have a gamma there .
+This side must have the same dimension as that side .
+That is nonnegotiable in physics .
+Okay , there we go .
+There is no M here , there is only one M here so beta must be zero .
+There is here [L] to the power alpha , [L] to the power gamma there is no [L] here .
+So [L] must disappear .
+So alpha plus gamma must be zero .
+There is [T] to the power one here and there is here [T] to the power 2 gamma .
+It 's minus because it 's downstairs .
+So one must be equal to 2 gamma .
+That means gamma must be minus one half .
+That if gamma is minus one half , then alpha equals plus one half .
+End of my dimensional analysis .
+I therefore conclude that the time that it takes for an object to fall equals some constant , which I do not know but that constant has no dimension I don 't know what it is times the square root of h divided by g .
+Beta is zero , there is no mass h to the power one half you see that here and g to the power minus one half .
+This is proportional to the square root of h because g is a given and c is a given even though I don 't know c .
+I make no pretense that I can predict how long it will take for the apple to fall .
+All I 'm saying is , I can compare two different heights .
+I can drop an apple from eight meters and another one from two meters and the one from eight meters will take two times longer than the one from two meters .
+The square root of h to two , four over two will take two times longer , right ?
+If I drop one from eight meters and I drop another one from two meters then the difference in time will be the square root of the ratio .
+It will be twice as long .
+And that I want to bring to a test today .
+We have a setup here .
+We have an apple there at a height of three meters and we know the length to an accuracy ... the height of about three millimeters , no better .
+And here we have a setup whereby the apple is about one and a half meters above the ground .
+And we know that to about also an accuracy of no better than about three millimeters .
+So , let 's set it up .
+I have here ... something that 's going to be a prediction a prediction of the time that it takes for one apple to fall divided by the time that it takes for the other apple to fall .
+==========
+H one is three meters but I claim there is an uncertainty of about three millimeters .
+Can 't do any better .
+And h 2 equals 1.5 meters again with an uncertainty of about three millimeters .
+So the ratio h one over h two ... is 2.000 and now I have to come up with an uncertainty which physicists sometimes call an error in their measurements but it 's really an uncertainty .
+And the way you find your uncertainty is that you add the three here and you subtract the three here and you get the largest value possible .
+You can never get a larger value .
+And you 'll find that you get 2.006. And so I would say the uncertainty is then .006. This is a dimensionless number because it 's length divided by length .
+And so the time t1 divided by t2 would be the square root of h1 divided by h2 .
+That is the dimensional analysis argument that we have there .
+And we find if we take the square root of this number we find 1.414 , plus or minus 0.0 and I think that is a two .
+That is correct .
+So here is a firm prediction .
+This is a prediction .
+And now we 're going to make an observation .
+So we 're going to measure t1 and there 's going to be a number and then we 're going to measure t2 and there 's going to be a number .
+I have done this experiment ten times and the numbers always reproduce within about one millisecond .
+So I could just adopt an uncertainty of one millisecond .
+I want to be a little bit on the safe side .
+Occasionally it differs by two milliseconds .
+So let us be conservative and let 's assume that I can measure this to an accuracy of about two milliseconds .
+That is pretty safe .
+So now we can measure these times and then we can take the ratio and then we can see whether we actually confirm that the time that it takes is proportional to the height to the square root of the height .
+So I will make it a little more comfortable for you in the lecture hall .
+That 's all right .
+We have the setup here .
+We first do the experiment with the ... three meters .
+There you see the three meters .
+And the time ... the moment that I pull this string the apple will fall , the contact will open , the clock will start .
+The moment that it hits the floor , the time will stop .
+I have to stand on that side .
+Otherwise the apple will fall on my hand .
+That 's not the idea .
+I 'll stand here .
+You ready ?
+Okay , then I 'm ready .
+Everything set ?
+Make sure that I 've zeroed that properly .
+Yes , I have .
+Okay .
+Three , two , one , zero .
+781 milliseconds .
+So this number ... you should write it down because you will need it for your second assignment .
+781 milliseconds , with an uncertainty of two milliseconds .
+You ready for the second one ?
+You ready ?
+You ready ?
+Okay , nothing wrong .
+Ready .
+Zero , zero , right ?
+Thank you .
+Okay .
+Three , two , one , zero .
+551 milliseconds .
+Boy , I 'm nervous because I hope that physics works .
+So I take my calculator and I 'm now going to take the ratio t1 over t2 .
+The uncertainty you can find by adding the two here and subtracting the two there and that will then give you an uncertainty of , I think , .0... mmm , .08. Yeah , .08. You should do that for yourself .008. Dimensionless number .
+This would be the uncertainty .
+This is the observation .
+781 divided by 551 .
+One point ... Let me do that once more .
+Seven eight one , divided by five five one ... One four one seven .
+Perfect agreement .
+Look , the prediction says 1.414 but it could be 1 point ... it could be two higher .
+That 's the uncertainty in my height .
+I don 't know any better .
+And here I could even be off by an eight because that 's the uncertainty in my timing .
+So these two measurements confirm .
+They are in agreement with each other .
+You see , uncertainties in measurements are essential .
+Now look at our results .
+We have here a result which is striking .
+We have demonstrated that the time that it takes for an object to fall is independent of its mass .
+That is an amazing accomplishment .
+Our great grandfathers must have worried about this and argued about this for more than 300 years .
+Were they so dumb to overlook this simple dimensional analysis ?
+Inconceivable .
+Is this dimensional analysis perhaps not quite kosher ?
+Maybe .
+Is this dimensional analysis perhaps one that could have been done differently ?
+Yeah , oh , yeah .
+You could have done it very differently .
+You could have said the following .
+You could have said , The time for an apple to fall is proportional to the height that it falls from to a power alpha .
+Very reasonable .
+We all know , the higher it is , the more it will take the more time it will take .
+And we could have said , Yeah , it 's probably proportional to the mass somehow .
+If the mass is more , it will take a little bit less time .
+Turns out to be not so , but you could think that .
+But you could have said Well , let 's not take the acceleration of the Earth but let 's take the mass of the Earth itself .
+Very reasonable , right ?
+I would think if I increased the mass of the Earth that the apple will fall faster .
+So now I will put in the math of the Earth here .
+And I start my dimensional analysis and I end up dead in the waters .
+Because , you see , there is no mass here .
+There is a mass to the power beta here and one to the power gamma so what you would have found is beta plus gamma equals zero and that would be end of story .
+Now you can ask yourself the question well , is there something wrong with the analysis that we did ?
+Is ours perhaps better than this one ?
+Well , it 's a different one .
+We came to the conclusion that the time that it takes for the apple to fall is independent of the mass .
+Do we believe that ?
+Yes , we do .
+On the other hand , there are very prestigious physicists who even nowadays do very fancy experiments and they try to demonstrate that the time for an apple to fall does depend on its mass even though it probably is only very small , if it 's true but they try to prove that .
+And if any of them succeeds or any one of you succeeds that 's certainly worth a Nobel Prize .
+So we do believe that it 's independent of the mass .
+However , this , what I did with you , was not a proof because if you do it this way , you get stuck .
+On the other hand , I 'm quite pleased with the fact that we found that the time is proportional with the square root of h .
+I think that 's very useful .
+We confirmed that with experiment and indeed it came out that way .
+So it was not a complete waste of time .
+But when you do a dimensional analysis , you better be careful .
+I 'd like you to think this over , the comparison between the two at dinner and maybe at breakfast and maybe even while you are taking a shower whether it 's needed or not .
+It is important that you digest and appreciate the difference between these two approaches .
+It will give you an insight in the power and also into the limitations of dimensional analysis .
+This goes to the very heart of our understanding and appreciation of physics .
+It 's important that you get a feel for this .
+You 're now at MIT .
+This is the time .
+Thank you .
+See you Friday .
+==========

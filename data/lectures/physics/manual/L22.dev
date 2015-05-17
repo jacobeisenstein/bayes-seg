@@ -1,0 +1,435 @@
+==========
+Today , I will talk to you about elliptical orbits and Kepler 's famous laws .
+I first want to review with you briefly what we know about circular orbits , so I wrote on the blackboard everything we know about circular orbits .
+There 's an object mass little m going in a circle around capital M .
+This could be the Sun ; it could be the Earth .
+It has radius R , circular .
+We know there in equation one how to derive the time that it takes to go around .
+The way we found that was by setting the centripetal force onto little m the same as the gravitational force .
+Also , the velocity in orbit maybe I should say speed in orbit also follows through the same kind of reasoning .
+Then we have the conservation of mechanical energy the sum of kinetic energy and potential energy .
+It 's a constant ; it 's not changing .
+You see there first the component of the kinetic energy , which is the one half mv squared , and then you see the term which is the potential energy .
+We have defined potential energy to be zero at infinity , and that is why all bound orbits have negative total energy .
+If the total energy is positive , the orbit is not bound .
+And when you add these two up , you have an amazing coincidence that we have discussed before .
+We get here a very simple answer .
+The escape velocity you find by setting this E total to be zero , so this part of the equation is zero .
+Out pops that speed with which you can escape the gravitational pull of capital M , which is the square root of two times larger than this V .
+And I want to remind you that for near Earth orbits , the period to go around the Earth is about 90 minutes , and the speed this velocity , then , that you see in equation two is about eight kilometers per second , and the escape velocity from that orbit would be about 11.2 kilometers per second .
+And for the Earth going around the Sun , the period would be about 365 days , and the speed of the Earth in orbit is about 30 kilometers per second , just to refresh your memory .
+Now , circular orbits are special .
+In general , bound orbits are ellipses , even though I must add to it that most orbits of our planets in our solar system very close to circular , but not precisely circular .
+But the general solutions call for a elliptical orbit .
+And I first want to discuss with you the three famous laws by Kepler from the early 17th century .
+These were brilliant statements that he made .
+The interesting thing is that before he made these brilliant statements , he published more nonsense than anyone else .
+But finally he arrived at two ... three golden eggs .
+And the first golden egg then is that the orbits are ellipses he talked always about planets and the Sun is at one focus .
+That 's Kepler 's law number one .
+These are from around 1618 or so .
+The second ... Kepler 's second law is quite bizarre how he found that out , an amazing accomplishment .
+If you take an ellipse , and you put the Sun here at a focus this is highly exaggerated because I told you that most orbits look sort of circular and the planet goes from here to here in a certain amount of time , and you compare that with the planet going from here to here in a certain amount of time , then Kepler found out that if this area here is the same as that area here , that the time to go from here to here is the same as to go from there to there .
+An amazing accomplishment to come up with that idea .
+And this is called equal areas , equal times .
+Somehow , it has the smell of some conservation of angular momentum .
+And then his third law was that if you take the orbital period of an ellipse , that is proportional to the third power of the mean distance to the Sun .
+And he was so pleased with that result that he wrote jubilantly about it .
+I will show you here the data that Kepler had available in 1618 , largely from the work done by , of course , astronomers , observers like Tycho Brahe and others .
+You see here the six planets that were known at the time , and the mean distance to the Sun .
+For the Earth , it is one because we work in astronomical units .
+Everything is referenced to the distance of the Earth .
+This is 150 million kilometers .
+And it takes the Earth 365 days to go around the Sun ; Jupiter , about 12 years ; and Saturn , about 30 years .
+And then when he takes this number to the power of three and this number squared , and he divides the two , then he gets numbers which are amazingly constant .
+And that is his third law .
+The third law leads immediately to the inverse square dependence of gravity , which he was not aware of , but Newton later put that all together .
+But he very jubilantly writes : And he wrote that in 1619 .
+So , orbits in general are ellipses .
+And now I want to review with you what I have there on the blackboard about ellipses .
+You see an ellipse there ?
+Capital M could be the Earth , could be the Sun is at location Q .
+The ellipse has a semimajor axis A , so the distance P to A perigee to apogee is 2a .
+If M were the Earth , capital M , then we would call the point of closest approach perigee , and the point farthest away from the Earth , we would call that apogee .
+If capital M were the Sun , we would call that aphelion and perihelion .
+So you see the little m going in orbit ; you see the position vector r of q .
+It has a certain velocity v .
+And so the total mechanical energy is conserved .
+The sum of kinetic energy and potential energy doesn 't change .
+The first term is the kinetic energy one half mv squared , and the second term is the potential energy no different from equation three for circular orbits , except that now capital R , which was a fixed number in a circle , is now a little r , and little r changes , of course , with time .
+Also that velocity , v , in that equation number five will also change with time because it 's an elliptical orbit .
+It will not change in time in equation number two and in equation number three .
+Now I give you a result which I didn 't prove , and that is that the total mechanical energy , which has these two terms in it which you do fully understand , also equals minus mMG divided by 2a , and a is the semimajor axis .
+And compare number five with number three , then you see they are brothers and sisters .
+The only change is that what was capital R before is now little a , the semimajor axis .
+And if you want to calculate the time to go around the ellipse , then you get an equation for T squared , which is almost identical to number one for the circular orbit , except that now the radius has to be replaced by a , which is the semimajor axis .
+And the escape velocity you can calculate in exactly the same way that you calculate the escape velocity under equation number four .
+All you do is you make the total energy zero , and then you solve equation three and equation five , and out pops the speed that you need to make it all the way out to infinity .
+And that is in the case of the circular orbit , square root of two times the speed in orbit .
+So these are the numbers that we are going to use today , the equations .
+And there 's one thing which is already quite remarkable and very nonintuitive very nonintuitive , to say the least .
+That if you have various orbits which have the same semimajor axis , that the period is the same and the energy is the same , and that 's by no means obvious .
+So , this is one orbit think of it as being an ellipse and this is another one .
+This distance is the same as this distance .
+I 've just done it that way .
+That means , according to equation five and six , that both orbits have exactly the same mechanical energy , and both orbits have the same periods .
+So to go around this circular orbit will take the same amount of time as to go around this one , and that is by no means obvious .
+==========
+I now want to start with a very general initial condition of an object , little m , in orbit ... in an elliptical orbit .
+And I want to see how we can get all the information about the ellipse that we would like to find out .
+So I 'm only giving you the initial conditions .
+So here is an ellipse , here is P and here is A .
+If this is an ellipse around the Earth , then this would be perigee and this would be apogee .
+The mass is capital M , this is point Q .
+Let me get a ruler so that I can draw some nice lines .
+So the distance AP equals 2a a being the semimajor axis and our object happens to be here mass little m and this distance equals R zero .
+Think of it as being time zero .
+And at time zero , when it is there , it has a velocity in that ellipse .
+Let this be v zero .
+And there is an angle between the position vector and v zero ; I call that phi zero .
+So I 'm giving you M , I 'm giving you v zero , I 'm giving you r zero , I 'm giving you phi zero .
+And now I 'm going to ask you , can we find out from these initial conditions how long it takes for this object to go around ?
+Can we find out what QP is ?
+Can we find out what the semimajor axis is ?
+Can we find out what the velocity is at point P , at closest approach when this angle is 90 degrees ?
+And can we find out what the velocity is when the object , little m , is farthest away apogee ?
+Can we find all these things ?
+And the answer is yes .
+a is the easiest to find the semimajor axis .
+I turn to equation number five , which is the conservation of mechanical energy .
+And the conservation of mechanical energy says that the total energy is the kinetic energy plus the potential energy equals one half mv zero squared .
+That is when the object is here at location D minus mMG divided by this r zero at location D .
+This can never change .
+This is the same throughout the whole orbit , so it must also be , according to equation five , minus mMG divided by 2a .
+And so you have one equation with one unknown , which is a , because you know all the other things : M cancels ... M always cancels when you deal with gravity , so you only have a as an unknown .
+So that 's done .
+If the total energy were positive , then for this to be positive , a has to be negative .
+That 's physical nonsense , of course , so this only holds for bound orbits .
+So positive values for E total are not allowed .
+Once you have a , you use ... so this is from equation number five .
+If you now apply equation number six , immediately pops out T , the orbital periods , because the only thing you didn 't know yet was a , but you know a now .
+So we also know how long it takes for the object to go around in orbit .
+And I try to be quantitative with you .
+Step by step , as we analyze this further , I will apply this to a specific case for someone going around the Earth .
+Everything I 'm telling you today , including all numerical examples , are in a handout which is six pages thick , which I wrote specially for you .
+It will be on the Web .
+We 're not going to print it here that 's a waste of paper .
+It 's 1999 , so that 's what we have the Web for .
+So you can decide on your own how many ... how much notes , how much time you want to spend on notes , and to what extent you want to concentrate and try to follow the steps .
+It 's up to you .
+But everything is there literally everything , every numerical example .
+We take for capital M ... we take the Earth , and that is six times ten to the 24 kilograms .
+So that 's my M .
+I promised you you will know M .
+I will give you r zero .
+That is 9 , 000 kilometers .
+That 's the location at point D .
+I give you the conditions at D .
+The speed at point D is 9.0 kilometers per second , and I 'll give you phi zero is 120 degrees .
+Everything else we should be able to calculate now from these numbers .
+First of all , with equation five , you can convince yourself sticking in these numbers that the total energy is indeed negative .
+Of course , if I make the total energy positive , it 's not an ellipse , so then it 's all over .
+It is negative ; it is an ellipse .
+So with equation number five , I then pop out a .
+Right ?
+Because that 's one equation with one unknown , and I put in the numbers you can confirm them and check them at home and I find that a is quite large .
+a is about 50 , 000 kilometers .
+That 's huge .
+That is almost infinity , not quite .
+Remember , it starts off at 9 , 000 kilometers , but a is 50 , 000 kilometers .
+That means 2a is 100 , 000 kilometers .
+Why is that so large ?
+Well , the answer lies in evaluating the escape velocity .
+The escape velocity of this little mass when it is at position D , for which these are the input parameters , is the square root of 2MG divided by r zero , and that is 9.4 kilometers per second .
+Well , if you need 9.4 kilometers per second to make it out to infinity , and you have nine kilometers per second , you 're pretty close already .
+So that 's the reason why this semimajor axis is indeed such a horrendous number .
+It 's no surprise .
+If now I use equation number six , then I find the period , and I find that it takes about 31 hours for this object to go around the Earth .
+So far , so good .
+Now we want to know what the situation is with perigee and with apogee .
+Can we calculate the distance QP ?
+Can we calculate the speed at location P and at location A ?
+And now comes our superior knowledge .
+Now we 're going to apply for the first time in systems like this , the conservation of angular momentum .
+Angular momentum is conserved about this point Q , but only about that point Q .
+It is not conserved about any other point , but that 's okay .
+All I want is that point Q .
+That is where capital M is located .
+What is the magnitude of that angular momentum ?
+Well , let 's first take point D .
+When the object is at D , the magnitude of the angular momentum is m times v zero times r zero times the sine of phi zero .
+This is the situation at D .
+Why do we have a sine phi zero ?
+Because we have a cross between r and v , and with a cross product , you have the sine of the angle .
+So that 's the situation at point D .
+What is the situation at point P ?
+Well , at point P , the velocity vector is perpendicular to the line QP , so the sine of that angle is one .
+So now I simply get m times v of P times the distance QP .
+And you can do the same for point A .
+You can write down m times v of A times QA .
+I 'm not doing that .
+You will see shortly why I 'm not doing that .
+Nature is very kind .
+Nature 's going to give me that last part for free .
+This , by the way , is the conservation of angular momentum about that point Q where the mass is located .
+I have here one equation with two unknowns v of P and QP so I can 't solve .
+So I need another equation .
+Well , of course , there is another one .
+We have also the conservation of mechanical energy .
+So now we can say that the total energy must be conserved , and the total energy is one half ... I do it at point P equals one half mvP squared that is the kinetic energy minus mMG divided by the distance , QP .
+This is the potential energy when the distance between capital M and little m is QP .
+With this number , we know ... because that is minus MG divided by 2a .
+That 's our equation number five .
+Oops !
+I slipped up here .
+You may have noticed it .
+I dropped a little m which should be in here .
+Sorry for that .
+And so now we have here a big moment in our lives that we have applied both laws .
+This is the conservation of mechanical energy .
+And now I have two equations with two unknowns QP and v of P and so I can solve for both .
+Notice that this second equation is a quadratic equation in v of P .
+So you 're going to get two solutions , and the two solutions one , v of P will give you the distance QP .
+The other one will be vA , which gives you the distance QA .
+How come that we get both solutions ?
+Well , this is only a stupid equation .
+This equation doesn 't know that I used a subscript P .
+I could have used a subscript A here and put in here QA .
+That 's the term that I left out .
+And therefore , when I solve the equations , I get both vP and vA because those are the situations that the velocity vector is perpendicular to the position vector .
+And if I use now our numerical results , and I solve for you that quadratic equation two equations with two unknowns then I find that QP you may want to check that at home is about 6.6 times ten to the third ... three kilometers .
+It means that it 's only 200 kilometers above the Earth 's surface .
+At that low altitude , this orbit will not last very long , and the satellite will reenter into the Earth 's atmosphere .
+And it leads to a speed at point P , at perigee , of 10.7 kilometers per second .
+My second solution then is that QA turns out to be huge .
+No surprise because we know that the semimajor axis is 50 , 000 kilometers .
+We find 9.3 times ten to the four kilometers , and we find for v of A , this value is 14 times larger than this one , and so the velocity will be 14 times smaller .
+I think it 's 0.75 kilometers per second .
+Yes , that 's what it is .
+Immediate result the conservation of angular momentum that the product of QP and vP must be the same as QA times vA .
+That 's immediate consequence of the conservation of angular momentum .
+And when I add this up , QA plus QP , I better find 2a , which in our case is about 100 , 000 kilometers , because a was 50 , 00 kilometers .
+So when you add these two up , you must find very close to 100 , 000 , and indeed you do .
+So now we know everything there is to be known about this ellipse , and that came from the initial conditions from the four numbers that I gave you .
+We know the period , we know where apogee is , we know where perigee is , we know the orbital period anything we want to know .
+==========
+Now I want to get into a subject which is quite difficult , and it has to do with change of orbits .
+Burning a rocket when you are in orbit and your orbit will change .
+And I will do it only for some simplified situations .
+I start off with a circular orbit , and I will fire the rocket in such a way ... that I will only fire it in such a way that my velocity will either increase exactly tangentially to the orbit , so that it will increase in this direction or that it will decrease in this direction .
+So if I 'm going in orbit like this , I either fire my rocket like this , or I fire my rocket like this , but that is difficult enough what we do now .
+So this is our circular orbit with radius r , and at location X , at 12 : 00 , that is where I fire my rocket .
+The first thing I do , I increase the kinetic energy .
+So I fire my rocket , I blast my rocket , we go in this direction .
+I blast my rocket in this direction , and so the speed which was originally this in orbit the speed will now increase .
+I add kinetic energy , and now I have a new speed which is higher .
+If my speed is higher , then my total energy has increased .
+I increased the kinetic energy .
+The burn of the rocket is so short that I can consider after the burn that the object is still at X .
+It 's a very brief burn .
+So the kinetic energy has increased ; the potential energy is the same , so the total energy is up .
+And therefore , the total energy now is larger than the total energy that I had in my circular orbit .
+But if that 's the case , then clearly 2a must be larger than 2R .
+I now go into an elliptical orbit because the new velocity is no longer the right velocity for a circular orbit .
+And so what 's going to happen I 'm going to get an elliptical orbit like so , whereby 2a must be larger than 2R because my total energy is larger .
+And you see that immediately when you go to equation number five .
+If you increase the total energy , then your a will go up .
+Okay , so 2a is larger than 2R .
+That also means that the period T must be larger than the period in your circular orbit .
+Fine .
+So far , so good .
+My other option is that I 'm going to fire the rocket when I spew out gas in this direction , so I take kinetic energy out .
+So after the burn , my speed is lower .
+My speed is now lower .
+I have taken kinetic energy out .
+When I take kinetic energy out , the total energy is going to be less than the circular energy , 2a will be less than 2R , and the orbital period will be less than the circular orbital period , and therefore , my new ellipse will look like this .
+And so these are the three situations that I want you to carefully look at because I 'm going to need them in the next very dramatic story which has to do with the romance between Peter and Mary .
+==========
+Peter and Mary are two astronauts , and they are both in orbit in one and the same orbit around the Earth .
+This is where Peter is at this moment , at that location X , and this is where Mary is .
+They are in exactly the same orbit , but different satellites .
+They go around like this , and they are at a distance from each other which I will express in terms of a fraction F of the total circumference , so that this arc equals F times 2 pi R .
+That 's how far they are apart .
+And that means for Mary to make it all the way back to point X would be one minus F times 2 pi R .
+So far , so good .
+Mary forgot her lunch , radios Peter and says , Peter , I have on food .
+Peter feels very sorry for her , says , No sweat .
+I will throw you a ham sandwich .
+So Peter prepares a ham sandwich and wants to throw it to Mary in such a way that Mary can make the catch .
+How can Peter possibly do this ?
+Well , the best way , the most obvious way to do it is to make an orbit for the ham sandwich whose orbital period is exactly the same as this time for Mary to make it back to X .
+And I will be more specific by giving you some numbers .
+Then you can digest that better .
+Suppose they are in an orbit with a radius of 7 , 000 kilometers .
+And suppose F equals .05 , so the separation between Peter and Mary is 2 , 200 kilometers .
+So that is F times 2 pi R .
+If you know the radius R , then , of course , the velocity of the astronauts follows immediately .
+You have all the tools there .
+So with R equals 7 , 000 kilometers , the astronauts a now stands for astronauts is a given , nonnegotiable , and that is about 7.55 kilometers per second .
+7.55 kilometers per second .
+And what is also nonnegotiable is the period to go around , which is 97 minutes .
+All of that follows from this R .
+Okay , if it takes 97 minutes to go around , then five percent of 97 minutes is five minutes , if I round it off .
+So this takes five minutes to go .
+95 of 97 minutes is 92 minutes .
+So for Mary to go around and go back to point X is 92 minutes , rounded off numbers .
+So if I can give my sandwich an orbit which has a period of 92 minutes , I 've got it made because after 92 minutes , the sandwich will come back to X and Mary is at X .
+It 's important that you get that idea .
+If you get that idea , then all the rest will follow .
+So the period of the sandwich after the throw of Peter maybe he has to throw backwards .
+If that period is 92 minutes , when Mary is here , she will catch the sandwich .
+And so the necessary condition for this first solution , which is an obvious one , is to make the period of the sandwich S stands for sandwich to make that one minus F of the period of the astronauts in orbit .
+This is the 97 minutes ; this is .95 , so this is 92 minutes and this is 92 minutes .
+So then Mary will be back at point X .
+What is the orbital period of the sandwich after the throw ?
+Well , that is 4 pi squared you can find that in equation number six times a to the third divided by MG to the power one half .
+That must be equal one minus f times the orbital period of the astronauts who are in circular orbit .
+So I take equation number one , and that is four pi squared , R cubed divided by GM to the power one half .
+That is a necessary condition .
+Look , we lose M , we lose G , we lose four , we lose pi .
+What don 't we lose ?
+Well , what we don 't lose is a to the power three halves equals one minus f times R to the power three halves .
+So a equals R times one minus f to the power two thirds .
+And this is an amazingly simple result .
+It means if you know the orbit of Peter and Mary , which is R , and if you know how far the two lovers are apart , which is expressed in this f , then you know what the semimajor axis is of the sandwich orbit .
+That comes immediately out of this equation .
+But once you know the semimajor axis , you can immediately calculate , with equation five , the speed of the sandwich .
+Because if equation number five will tell you that minus mMG divided by 2a a being now the semimajor axis of the sandwich orbit equals one half m times the velocity of the sandwich squared .
+This happens at location X after the burn after the burn means after Peter has thrown minus mMG divided by capital R , because the sandwich is still at location capital R , but Peter has changed the speed to vs. And so once you know a , this equation immediately gives you vs , and once you know vs , then you know with what speed Peter should throw .
+Well , let us work it out in detail in the example that we have there .
+If we calculate a with the numbers that we have there , which you can easily confirm because you can apply this equation for yourself you know what f is , you know what R is .
+Then I find that a is 6 , 765 kilometers .
+Notice that this is smaller than R .
+It better be , because it 's clear that after the sandwich is thrown , that we get a green ellipse .
+We want this time to go around to be less time than Peter to go around .
+And if this time is less than the time that it takes Peter to go around , he has to throw the sandwich backwards , and therefore , you expect that the semimajor axis will be smaller than R , and it is .
+The speed of the sandwich , which follows then from equation number six , which was the conservation of mechanical energy , is 7.42 kilometers per second .
+Now , what matters is not so much what the speed of the sandwich is , but what matters for Peter is what is the speed that he will have to give the sandwich , which is v of s minus v of a , and that you have to subtract the speed v of s is the speed of the sandwich , v of a is the speed of the astronauts in orbit .
+This is minus 0.13 kilometers per seconds .
+And the minus sign indicates that he has to throw the sandwich backwards .
+So quite amazing .
+He is seeing Mary all the way in the distance , and in order to get the sandwich to Mary , he doesn 't do this , but he does this ( whooshes ) And the sandwich then will go into this new orbit , going still forward .
+92 minutes later , it 's here , and Mary ... Oh , we were here .
+So he goes forward .
+92 minutes later , the sandwich is here .
+92 minutes later , Mary is right at that point and can make the catch .
+Now , .13 kilometers per second is 300 miles per hour , which is a little tough , even for Peter .
+And so we have to look for different solutions .
+This won 't work .
+This was an easy one , but it doesn 't work .
+Well , there is no reason to rush .
+We can make the sandwich go around the Earth two times and Mary three times , or Mary two times and the sandwich only once .
+As long as they meet at point X , there is no problem .
+So we have a whole family of solutions .
+We can have Mary pass that point X na times , and we can have the sandwich pass that point X n sandwich times .
+As long as these are integers , that 's perfectly fine .
+Then ultimately , if they have enough patience , they will meet at point X .
+And if you take these ... this new concept into account that you can wait a certain number of passages through X , then the equation that you see there the relation between a and R changes only slightly .
+You now get that a equals R times n of a minus f divided by ns to the power two thirds .
+And if you substitute in here a one and a one , which is the case that they make the catch right away , then you see indeed you get R ( one minus f ) to the power two thirds .
+So that 's exactly what you have there .
+Not all solutions that you try will work .
+One solution that won 't work is na equals one and ns equals three has no solution .
+And I 'll leave you with the thought why that is the case .
+Has no solution .
+==========
+In 1990 , when I lectured 8.01 for the first time , I asked my friend and colleague George Clark to write a program so that I could show the class this toss of the sandwich with Mary and Peter in orbit and the sandwich orbit and everything and the catch , and he did .
+It was a wonderful program , but that program no longer works because that 's called progress .
+The computers have changed and so , my right hand , Dave Pooley , offered to rewrite the program so that it works on Athena , and we were going to demonstrate it to you , and you can play with it yourself .
+It is available on the homepage , so whatever Dave is going to show you , you can do yourself .
+The input parameters that we need for this program are the radius R , our f and our n of a and our n of s .
+And the program will do all the rest , so you can specify how many times you want Mary to go through point X , how many times you want the sandwich to go through point X .
+The program will then calculate for you the speed of the sandwich .
+It will also give you vs minus va , which is really the speed with which Peter has to throw it , but very cleverly , the program works with a dimensionless parameter which is this value .
+And this value , which is vs divided by va minus one is a number that is quite unique , because you get solutions which turn out to be independent of capital G and independent of capital M , and I 'll give you an example .
+Suppose you will find for this ... for this dimensionless number , suppose you find minus 0.0175 , which is the solution for n one ... na is one and for ns is one .
+So you 'll see that .
+The computer will generate that number for us .
+If now we take our orbit of 7 , 000 kilometers ... we know what v of a is , and so we can calculate now that vs minus va is the va times that number .
+But we know what the va is , it 's 7.5 , so you get minus 0.175 times 7.55 kilometers , and lo and behold , that is our minus 0.13 kilometers per second .
+Of course !
+It has to be that number , because that 's what we calculated for our case , n equals one .
+There it is .
+And so this dimensionless number is very transparent , and we will show you some examples .
+This would be the 300 miles per hour , which , of course , is not very doable .
+Dave , why don 't you demonstrate the program ?
+And then you 'll see what we can do with that program .
+We can substitute in there quite a few parameters that you will find no doubt interesting .
+Give us an explanation , Dave , of what the students can do with this .
+Oh , let me show them an overhead here which would help you in following what Dave will be telling you .
+You see there the f value ?
+It 's always 5 we took , and you 're going to see here the numbers for ... the number of times that Mary passes through point X and the number of times that the sandwich will pass through point X .
+This is that very first case that we worked on together .
+Here , you see that number minus 0.017 , and you see indeed that it is a successful catch .
+So let 's work at that first .
+David , explain how it works .
+DAVID : Okay , well , you can see in the middle of the screen is planet Earth , and these two triangles represent the astronauts .
+The yellow one is Mary and the red one is Peter , and he 's holding the sandwich right in the middle .
+They start off at a radius of 22 , 000 kilometers from the center of the Earth .
+That 's the default , but you can change that if you 'd like .
+And we set na and ns through these pulldown menus , so we 'll set them both to one and one now .
+And we ask the program to calculate the value for us of this dimensionless parameter , and it comes up with it , and we want to use that value .
+And so we have everything set ... LEWIN : That 's this number , right , Dave ?
+This minus 0.0175 , etc .
+DAVID : Yep , it 's right over here .
+So then we ask the program to prepare the toss .
+We click this button down here , and when it 's ready , the green play button will become active .
+And when that happens , we can click on that , and it 'll play the toss for us .
+LEWIN : Peter always throws at X , 12 : 00 .
+DAVID : Always at 12 : 00 .
+LEWIN : There goes the sandwich .
+You see the sandwich ?
+Great sandwich .
+Big sandwich .
+So notice that the sandwich makes it around exactly at the same time ( exclaims ) for Mary to be happy .
+Now there 's no reason why we shouldn 't try one , too .
+So that means Mary reaches point X , but the sandwich went twice around the Earth .
+There is no problem with this solution in principle , but you have to be quite far away from the Earth .
+If you 're too close to the Earth like Dave 's orbit , which has a radius of only 22 , 000 kilometers , something very catastrophic will happen .
+DAVID : Yeah , okay , so now we want to set ns to two , and we do that with the pulldown menu .
+And we ask it to prepare the toss again , and it goes through its numerical calculations of the orbit .
+And when it 's ready , it 'll let us know .
+And now we can watch the toss .
+LEWIN : So there goes the sandwich .
+It wants to go around the Earth twice , but it hits the Earth .
+That 's too bad .
+If you make this dimensionless parameter minus one , then v of s is zero .
+And what does it mean that v of s is zero .
+That the sandwich stands still , has no speed in orbit anymore .
+And so what happens with the ellipse , that becomes radial infall .
+Dave ?
+DAVE : Okay , so if we want to use our own value for this dimensionless parameter , then we can go to this box right here and put in whatever we want , so we 'll put in minus one .
+And we make sure that the program is going to use our value instead of the calculated value .
+In this case , these numbers don 't matter na and ns .
+They 're irrelevant , because the program is going to use our value .
+We ask it to prepare ... LEWIN : The minus one overrides everything else now .
+DAVID : Yes .
+It 's going through its calculations , and now we can see what happens .
+LEWIN : 12 : 00 , there goes the sandwich .
+Now , Peter decides at one point that instead of throwing the sandwich backwards , he can also throw the sandwich forward , because , look , we have here the red ellipse .
+There 's no reason why Mary couldn 't go twice through X one ... twice .
+And then the sandwich would make a larger ellipse and meet here when Mary has gone around twice .
+Then , of course , the sandwich has to be thrown forward .
+And so Peter makes a calculation for what we call the 2/1 situation .
+Mary goes twice through X ; the sandwich goes once through X .
+But Peter made a mistake .
+Peter got nervous , and he puts in the wrong parameters , and you will see what happens .
+Dave will first show you the right parameters .
+DAVID : Okay , so if we would have asked the program to calculate it for the case of 2/1 , it would have come up with a value for this dimensionless parameter of .1659 or something thereabouts .
+But , you know , Peter made his miscalculation , and he wants to use .164 , so this is what we 'll put into the program , and we 'll prepare the toss and see what happens with this value .
+Okay , now it 's ready .
+LEWIN : Poor Mary must be hungry by now .
+There we go .
+Now we go forward .
+You can see that .
+You see , it goes forward .
+It goes a very large ellipse , and Mary will go around twice .
+When Mary is here , see , the sandwich is only halfway .
+And if Peter had only done it right , Mary 's troubles would now soon be over .
+But Peter made this small mistake , and ... ( students laugh ) And Mary cannot catch it .
+If you make this dimensionless parameter plus .42 , then it 's very easy to convince yourself that the sandwich must be a plus will have the escape velocity from the orbit .
+Maybe Peter got angry at one point at Mary you never know about these situations and he threw it very fast , and Dave will show you what happens then .
+DAVID : Okay .
+LEWIN : And it goes to infinity , and it won 't be fresh anymore when it gets there .
+Okay , see you Friday .
+==========

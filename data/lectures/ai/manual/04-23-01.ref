@@ -1,0 +1,641 @@
+==========
+So the subject of the next two lectures is decision making when there's uncertainty. 
+So, we started out doing inference in the deterministic case and then planning, which was really sort of decision making in the deterministic case. 
+Then we've been looking at probabilistic inference or reasoning, and so know well look at sort of the probabilistic equivalent of planning. 
+We're just going to have two lectures on this, which isn't nearly enough time, but that's OK, there's just not so much time to go into a lot of subjects. 
+So I'm just kind of helping to give you the high-level view of what some of the issues and questions are. 
+Today we're just going to look at the question of essentially how to make one decision in the face of uncertainty. 
+When you have a deterministic problem -- should I do this or should I do that -- it's not too hard to decide typically, which are the one things to do. 
+Because the idea would be that you'd say, well what would happen if I did this, what would happen if I did that, and do I like - - which of the outcomes do I like better, and then you do that one. 
+It's usually pretty straightforward. 
+And so when we looked at planning, what made it hard was that we were considering whole line sequences of events or actions and we wanted to understand how they would interleaf or connect together or something and that's where the complexity came in. 
+Here, we have complexity just in virtue of the fact that we're not exactly sure what's going to happen when we take an action. 
+And so one action may have a variety of different potential consequences, another action may have another variety of different potential consequences, and we have to figure out how we're going to kind of balance them out or trade them off against each other. 
+So that's kind of the issue. 
+And intuitively, the idea is you want to take the action that's going to give you the best chance of the thing you want the most. 
+But usually it doesn't work out that you have one action that's just got the most probability of giving you the very best thing, right? 
+Usually there's some kind of tension. 
+So then my question is how to resolve that tension. 
+==========
+So what I'm going to do today is talk about decision theory and I'll actually start out by going through a kind of -- a formal derivation of what it is that people normally do. 
+Because I think it's kind of interesting. 
+It makes actually fairly few assumptions about what you bring to the problem, and then it gives us a formal way of solving them. 
+So the idea is that we're going to think about lotteries. 
+That the fundamental idea here is a lottery. 
+A lottery is a choice between -- a lottery is a probabilistic event with two possible outcomes. 
+And we'll draw it like this usually. 
+A lottery has a circular node which means there's some chance. 
+We'll say the probability of P if something happens, the probability of 1 minus P if something else happens, and then we'll write out here just the possible outcomes. 
+So now what I'm going to do is go through a set of six assumptions that we might make about your preferences about lotteries. 
+So we're going to assume that there are lotteries in the world and that each individual person has their own system of preferences about lotteries. 
+And it's going to turn out that if your preferences satisfy a certain set of rules, then we can give you a very sort of effective way of doing decision making under uncertainty. 
+And in particular, as we go on today and tomorrow and during some of the learning stuff, we'll assume that your preferences satisfy these rules. 
+Or that the preferences of the robot or the machine or whatever it is that you're trying to make. 
+OK, so here are the rules. 
+One is, orderability. 
+And it says that if you're given two different lotteries, A and B, either you like A better than B -- I'm going to write a kind of funny "greater than" sign that means I like it better. 
+All right, so given two lotteries, either you like A better than B, or you like B better than A, or you're indifferent between A and B. That's sort of hard arguing, right? 
+For pretty much any two things, you've got to figure out, either I like this one better than that one, that one better than this one, or I'm indifferent. 
+That pretty much covers the bases. 
+Hardly anyone can argue with that assumption. 
+All right, here's another one, might be [writing on board] (inaudible) I like A better than B and I like B better than C, now I like A better than C. That's one of those things that you think you'll probably -- I mean, it seems reasonable to require it of yourself, but you can actually find cases where people don't exhibit transitivity of their preferences. 
+If you show people pairs of things -- Oh, I like this one better than that one, that one better than this other one -- but you can get them to say all kinds of things that don't necessarily satisfy that axiom. 
+But maybe if you're making a robot, it seems like it's a reasonable enough thing to want your robot to want. 
+OK, continuity. 
+[writing on board] Continuity goes like this. 
+If you like A better than B better than C, then there exists a P such that you're indifferent between lottery 1 and lottery 2. So let me draw lottery one, it looks like this. 
+Lottery 1 says for probability of P I get A, for the probability of 1 minus B I get C, and Lottery 2 says, no matter what, for probability 1 I get B. So think about that for a minute. 
+There are three things in the world, I like A the most and B the least. 
+And there's some probability -- any probability you want -- but there's some probability such that I would just as soon have B for certain as have a lottery between A and B. It could be one, it could be zero. 
+But there's a probability. 
+OK, that's all right. 
+==========
+A couple more of these things and then we'll be -- we'll have our definition of preference and utility. 
+So the next one is substitutability. 
+[writing on board] So, if you're indifferent between A and B, then you should be indifferent between Lottery 1 and Lottery 2. So here's Lottery 1. 
+And here's Lottery 2. [writing on board] So if you like this car as much as that car, then you should like any lottery that has this particular car as one of the prizes, as much as you like some other lottery that has all the same prizes except that you substitute in this other car. 
+Sure. 
+Monetenicity (sp?) -- I'm going to have to erase some things, but that's all right. 
+[writing on board] Here we say if you like A better than B, and if P is bigger or equal to Q, then you'll like Lottery 1 at least as well as Lottery 2. And Lottery 1 looks like this [writing on board]. 
+And Lottery 2 looks like this [writing on board]. 
+So that says, there's two things in the world and you like A better than B. A lottery in which you have a higher probability of getting A is better than a lottery in which you have a lower probability of getting A.
+==========
+And finally we have decomposing. 
+Decomposability says that Lottery 1 should be equivalent to Lottery 2. Lottery 1 is P, one minus P ... 
+Q, one minus Q ... 
+OK, so this is a lottery -- this is a two-stage lottery. 
+These things exist. 
+You get your lottery ticket, you scratch it off or something, by some chance you just lose, with another chance you get to enter the weekly drawing. 
+And then that's a further lottery. 
+So you can imagine a two-stage lottery. 
+There's a probability it's either you get outcome A, There's a probability one time C that you enter the next stage of the lottery where there's a probability too that you get B and so on, but that should be equivalent -- this Lottery 1 -- should be equivalent to some other Lottery 2 which is a two- stage lottery -- excuse me, a one-stage lottery, where the probability P to get A with probability Q times one minus B, you get B, and the probability one minus Q, one minus P, you get C. OK, so what does all this mean? 
+These are six assumptions about your preferences for essentially your choices under uncertainty. 
+If your preferences satisfy all six of those rules, then we can model your decision making under uncertainty using a utility function. 
+So that's our main theorem or the thing that we'll occupy ourselves with for the rest of the day. 
+For this (inaudible), if your preferences satisfy these six axioms or six functions, then there's some function U such that you prefer A to B if and only if U of A is bigger than U of B and you're indifferent between A and B if and only if U of A. OK, so this says -- we started out just assuming that you had binary preferences on lotteries, so that I could ask you, do you like this lottery better or that one? 
+And you would say yes or no. 
+But if your binary preferences on lotteries satisfy all these requirements, none of which seems too peculiar, then we're in this nice situation where instead of talking about, Oh I like this better than that and that better than the other thing and so on, that we could actually just talk about your having a utility function. 
+So that U is called the utility function. 
+And it maps outcomes, states of the world -- hams, kittens, noisy trucks, CDs, piles of money, interesting courses -- all those things, it maps them into some real value scale that will allow you to compare. 
+Not only does it map those particular known things to utilities, but also it maps lotteries over those things. 
+It's cool. 
+So now we can kind of develop this calculus of utilities of how good is -- how much do you appreciate something, and we can use that to sort of make more complicated decisions. 
+So, let me now do the expected utilities. 
+Furthermore, if that is true, then the utility of a lottery is equal to the expected utility of the outcome. 
+==========
+So we'll compute the utility of a couple of lotteries. 
+So you know how to compute the expected value of a random variable, right? 
+Expected value of a random variable is the sum over all the possible values it could take on of the probability times the value. 
+So this is the same notion of expectation. 
+So the expected value of this lottery is the sum over all the possible outcomes of the probability times the result. 
+So 0.8 times $300 is $240. 
+(inaudible) times 0.1, nothing. 
+And 0.1 times 100 minus 10 ... 
+so, the expected value of this is $230. 
+Let's computer -- here, I'll write it over here. 
+The common thing is to write it next to the node. 
+Now let's think about this one. 
+0.6 chance in 1,000, 0.1 chance of 100, and 0.3 chance at -600. 
+So we get 0.6 times 1,000 times 600, plus 10, minus three times 6 -- 180, that's 410. 
+No 430 -- 430? 
+430. 
+So now, how many of you -- these lotteries should look a little bit familiar to you -- how many of you preferred Lottery A? (Pause) Maybe half. 
+How many preferred Lottery B? OK, so it looks like you're about 50-50. 
+Now, the thing -- so remember when we first started talking about probabilistic reasoning and we said that really, you couldn't be wrong about your beliefs, you could just be inconsistent. 
+We just said that if you're inconsistent, then you could get into trouble. 
+But we weren't into making judgments about whether your beliefs are right. 
+We sort of are going to be the same here about preferences. 
+You're welcome to prefer certain things to certain other things, but we can do the same sort of maneuvers. 
+If your preferences are inconsistent, then we can cheat you, get money from you, do things you don't like. 
+OK, so some of you prefer one lottery, some prefer the other, and that's OK. 
+But it seems to be a little bit at odds with the idea that somehow we can take expectations and evaluate lotteries that way. 
+So one answer to the fact that some of you prefer Lottery A to Lottery B is to say, Well it must be that your beliefs violate the assumptions we made on utilities. 
+So there's another way out of this problem. 
+There's another story to tell about why a lot of people prefer Lottery A. Does anyone have an intuition? 
+Yes? 
+__: You can't lose as much. 
+You can't lose as much, right? 
+There's a sense in which the people who prefer Lottery A are risk-givers. 
+They're saying, I don't want to lose too much money. 
+And it turns out that that's fine, that it wasn't necessarily correct of us to write these dollar values over here as a measure or as the utility of the outcomes. 
+==========
+So for money -- for the utility of money, is usually posilinear. 
+All right, so it's usually not the case that you value two million dollars exactly twice as much as you value one million dollars. 
+So let's see how that goes on the scale of these things. 
+And I might have to take (inaudible) dollars. 
+graph, and I'm going to make a ... 
+all right, so let's just think about the utility of money on the scale of this problem. 
+So the biggest outcome was +1,000 and the worst one was -600. 
+So let's just consider +1,000 ... 
+-600 [writing on board]. 
+OK. 
+So I want to make a plot of utilities going from -600 to 1,000. 
+And I'm just going to arbitrarily set the axes so that it goes between zero and one. 
+So we're going to say let's just consider the amount of money between -600 and 1,000. 
+And I will assign the utility of -600 to be zero and we'll assign the utility of 1,000 to be one. 
+So let's consider zero. 
+So now I need someone who prefers Lottery A to be my able assistant for just a little while here. 
+Do I have a volunteer? 
+You don't have to get out of your chair, you just have to answer some questions. 
+OK, so let's -- what we're going to try to do is assess your utility for zero dollars. 
+So the question is -- all right, imagine that you have a choice between these two lotteries. 
+Well, this is (inaudible), right. 
+So this lottery says for sure you get nothing. 
+And then there's this other lottery that says, well with some probability you get $1,000 and with some other probability you lose $600. 
+So the question is, what prob -- what value of P would make you indifferent between those two lotteries? 
+so let's see, if P were 50-50, would you go for the top one? 
+__: No. No. How about if -- so what if there was a, say a 0.9 probability of winning $1,000? 
+__: (inaudible) How about 0.8? 
+__: No. No. So somewhere between 10 and 0.8 and 0.9. 
+So that means that, Greg, the utility of zero for you is somewhere like about here, sort of 0.85 we'll say. 
+Now let's ask -- actually, some of these utilities are funny in the negative, but let's see what happens. 
+So we'll ask this question at - 300. 
+And we'll ask the question (inaudible). 
+We'll ask three -- we're going to try to get two more points out of you, and then we'll stop bothering you. 
+So now let's say these are your choices. 
+Uh-huh? 
+__: Are you plotting the utility of 1 with (inaudible)? 
+This is dollar value. 
+So I'm trying to figure out -- so the preface here is that some amount of money -- that the value of money is not linear. 
+Right? 
+So that having twice as much money doesn't necessarily have twice as much value. 
+So this is money -- for the utility of an amount of money. 
+And I should say, I mean usually the way we do this -- and again, one of the reasons is that it's personal -- is that it's with respect to the thing with respect to your current baseline. 
+Because you could imagine if you're at different baselines, you might have very different curves. 
+And we'll talk about that in a minute. 
+So you have some amount of money, and this is -- for the utility of this delta of money for you right now. 
+OK, so here's the question. 
+Either you just gotta pay $300 -- so this is like, you've got a bad parking ticket -- or no, a traffic ticket. 
+You owe $300 for being a reckless driver, or maybe you could go to court and sue the cop for damages or something, I don't know what the story is here for how these things come about. 
+So either you have to pay $300, or you can enter this lottery. 
+So now the question is, what P would make you indifferent? 
+So now we -- for 50-50? 
+So would you do that for 50-50? 
+__: (inaudible) 0.1. 
+So some people would do it for a really low probability. 
+Yes, that's interesting. 
+But would you do it for 0.4? 
+__: Yes. 
+0.3? 
+__: (Pause) (inaudible) Yes, OK. 
+So sort of 0.2, 0.4. 
+OK, so that says -- so for - 300 -- so let's see, I guess 0.5 is about here, so somewhere about here is that point. 
+All right, now let's do just one more. 
+$500. 
+So either I give you $500 straight out, or you enter this lottery. 
+What does the probability have to be? 
+0.9? 
+That means, let's say you get either $500 or you get a 0.9 shot at $1,000 and a 0.1 shot at -$600. 
+__: Yes, 0.9 (inaudible). 
+0.9 you'd take it? 
+0.8? 
+__: (Pause) (inaudible). 
+Yes, I hope not, because from 0.85 you were only -- yes, all right. 
+So you are going to be sort of like this. 
+So this is actually a fairly difficult sort of a curve which is going to go like that. 
+So what's interesting is that it's - - I am terrible, I can't -- I have a constitutional block at concave versus convex. 
+This is concave, right? 
+Is that concave? 
+You're in the cave. 
+(laughter) Convex. 
+I don't know what it is, it's just like every now and then there's things I can't get. 
+So this is actually quite a typical shape of people's utility curves. 
+Most people are concave in the domain of winning, and convex in the domain of losing. 
+Which is kind of an interesting thing. 
+It's like you'll do a lot to avoid a certain risk. 
+You'll do a lot to avoid a certain loss. 
+You really hate the idea of a certain loss and you really tend to love the idea of a certain gain. 
+That's how people typically are. 
+So if you were building an automatic decision system to do some work for you, you'd have to figure out what your preferences ought to be. 
+So let's talk a little bit more -- no, let's do -- we'll do this example over again using this utility curve and then we'll talk about this other thing I was going to talk about. 
+So now instead of using these dollar values here on these lotteries, let's use those utilities and see what answer we get. 
+So now $300 has a utility -- I'm just getting -- I would guess about 0.8. 
+Zero -- oh no, wait, not 0.8. 
+It's going to be higher than 0.8, right? 
+More like 0.9. 
+Zero is going to have a utility of 0.85 and -100 looks like it's going to have a utility of about 0.5. 
+I'm just trying to make up these number off that graph. 
+OK, 1,000 has the utility of 1, -600 has the utility of zero, and +100 will give a utility of about 0.8. 
+==========
+So now let's compute the expected utility. 
+Now, for somebody who has that particular profile on utilities, which of these lotteries would they prefer? 
+So, now I didn't bring my calculator, so you guys can help me. 
+So 0.8 times 0.9 equals .72, 
+0.1 times 0.85 that's 0.085, and 0.01 times 0.5 is 0.05. 
+So we get 0.09, 0.84. 
+Yes? 
+OK? 
+And over here we get 0.6 times the utility of 1, so that's going to be 0.6. 
+0.1 times the utility of 0.87, so it's going to be 0.087, and that's the utility of zero, so here we get 0.687. 
+And now, according to that utility function, this lottery is better. 
+Does everybody understand why we did (inaudible) with the dealer? 
+OK. 
+==========
+So let's just talk a little bit about the shapes of utility functions and what they might or might not get you into. 
+Yes? 
+__: I'm still (inaudible) how you were (inaudible) on the graph to the left (inaudible). 
+OK, good. 
+So it was this number here -- OK. 
+So, this P -- in this picture it was P that was going there and it was S that was going here. 
+So I was trading off an amount X that you would get with certainty against the probability value in this lottery. 
+Now, why would it make sense to use a probability as a utility? 
+Well here I fixed this stamp, right? 
+I decided that the worst possible thing that could happen in this little limited scenario was I was going to assign it a utility of zero. 
+And that the best thing that could happen I was going to assign utility 1. 
+And now we're kind of -- we're interpolating between them. 
+And especially there's a construction that tells you that it's OK having a utility function. 
+That same construction actually tells you that the only way to, in some sense correctly formalize the notion of uncertainty is to use the theory of probability that we already used. 
+So we just -- these have to obey the laws of probability. 
+And they will. 
+Other questions? 
+OK, so if you risk -- the usual thing for B is risk averse. 
+And so your utility curve will in general look like this. 
+Let's say you consider three different possible outcomes. 
+Your utility curve looks something like this -- so it doesn't usually go down. 
+Usually, the more money you have, the happier you are. 
+But it can be the case that the difference in utility between -- all right, so say here's some money, here's utility, and we have a small, a medium, and a large amount of money. 
+In the risk-averse case, the utility of a medium amount of money is bigger than one-half times the utility of small plus one-half times the utility of large. 
+And sort of what this is saying is that it's really worth a lot to me to get this much money, but after that, more money has incrementally got less value for me. 
+Now the fact that people feel this way -- that they just like risks -- especially in the negative -- so let's think about insurance just for a minute. 
+You can think about buying insurance as choosing between these two lotteries. 
+So in probability one you have the cost of your insurance policy, or you have this other thing which is probability P your house burns down, and probability 1-P everything's OK. 
+That's roughly the situation with insurance. 
+And those people will pay a fair amount of money in some sense -- more than the -- more than -- if you were to do the expected value calculation here, insurance would be a certain amount. 
+But people are willing to pay more than that amount. 
+Because they really don't want to accept the risk of their house burning down. 
+And that's how insurance companies can make money. 
+They make money because you don't have a linear utility function on (inaudible). 
+But sometimes people are actually risk- seeking. 
+==========
+So, risk-seeking looks like this, and your utility function goes like that. 
+What's a situation in which you think somebody might have a utility function like that, on money? 
+__: Investment returns? 
+Investment returns. 
+(Pause) Yes, that's right, I guess that's right. 
+Some people are gamblers. 
+Maybe that's saying the same thing over again. 
+But getting a little bit more money isn't worth it to you, right? 
+But getting a lot more is. 
+I mean, another situation in which you really think of people having this kind of a profile is if they're in really very bad straits. 
+And so it's a fun example to do which I was going to get a lottery ticket -- I have one in my finals but I couldn't find it somewhere -- when you have a lottery ticket, and if you get the brochure that goes with it, it gives you the probabilities of all the different outcomes and you can compute the expected value of a $1 lottery ticket, and it's usually about $0.50. 
+You think, OK, does that make it necessarily irrational to buy a lottery ticket? 
+What do you think? 
+(Pause) Do you think according to the -- does it violate our thinking about utility functions and computing the expect -- our preferences in lotteries (inaudible)? 
+(Pause) Can you connect it to a picture that looks like this? 
+(Pause) If you have a picture that looks like this -- let's say -- we could take it out of the negative just a little bit, as long as it stays flat it's no problem, right? 
+And basically the idea here is that well -- so if I bought the lottery ticket, I lose $1. 
+Big deal. 
+Especially if life isn't so good already anyway, lose $1, who cares? 
+It's already bad. 
+What's another $1 less? 
+But if I could win the lottery, something really good could happen, right? 
+My lot in life could change dramatically. 
+If that's true, then you could have a utility function that has this shape, and if you computed the expected utility for your of a lottery ticket, it would be good, it would be positive, it would be more than $1. 
+And so it would be worth buying a lottery ticket. 
+So the thing that's sort of nice about this theory is that it can model all kinds of different preferences. 
+Again, they just have to be (inaudible). 
+What would your utility function look like on money if you owed $1,000 to Vinnie the knee-breaker next Tuesday? 
+__: You either pay him or you don't pay him. 
+Yes, you pay him or you don't. 
+$1,000 and he's happy, less than $1,000 and he breaks your knees. 
+__: (inaudible) Right. 
+There's going to be a -- some (inaudible) knee in the curve. 
+Right, independent of the axes, it's going to be bad until you hit $1,000 and then suddenly it's going to be (inaudible). 
+So you could have all kinds of different utility curves. 
+Use (inaudible) timing. 
+I mean, (inaudible) broken knees you'd still rather have $990 than zero. 
+And up here, who knows, they can... 
+All right, so most people who sort of feel like they have a reasonable bank roll are risk-averse. 
+The more and more money you have, it seems -- people do a lot of analyses of these things. 
+Typically, the more and more money people have, the more linear their preferences become. 
+I guess some gonzo investors might be risk-seeking, but that's not too usual. 
+I'm going to hate that clock. 
+(Pause) All right, I think we're going to skip question number two. 
+Just for fun, I want to know -- I'm curious what people's answers to question number three were. 
+Just tell me -- how many people would pay me -- so everybody put your hand up. 
+So now, who -- I'm going to ask you put them down as we go. 
+==========
+So is there anybody who wouldn't pay $1 to play this game? 
+So everybody would pay $1 to play this game. 
+OK, who wouldn't pay $2? 
+OK. 
+$4? 
+OK, so it -- $8? 
+OK, so it looks like somewhere between two and four dollars, pretty much everybody put their hands down. 
+So that mean you -- that sort of your utility for this game seems to be about somewhere between two and four dollars. 
+Let's compute the expected utility of that, it's just fun. 
+Not the expected utility, let's compute the expected dollar value. 
+So there are all these things that could happen. 
+There's -- you could win two dollars, you could win zero. 
+Or two dollars, or four, or eight, etc. What's -- I'm putting my number on wrong. 
+Zero, two, four, eight. 
+OK, what's the probability you win zero dollars? 
+(Pause) What? 
+__: Half. 
+Half. 
+__: (inaudible) No. Zero. 
+I forgot what the (inaudible). 
+OK, what's the probability you win two dollars? 
+__: Half. 
+Good. 
+What's the probability you win four? 
+__: A quarter. 
+A quarter, right, good. 
+And eight? 
+An eighth. 
+Sixteen? 
+A sixteenth. 
+So the expected value of this is going to be one-half times two which is one plus 1/4 times four, which is one, plus 1/8 times 8 which is 1. 
+So what's the expected monetary value of this thing? 
+Infinity. 
+So if you have a linear valuation on money, you should be willing to pay me infinite money to play this game. 
+But you're not, and you don't, and there's a couple reasons maybe why you'd not like to do that. 
+One is that in fact you probably are somewhat risk-averse, and so banking on the fact that you're going to have this incredibly long run of heads and tails or whatever it is that will cause you to win is pretty unlikely. 
+So you're not willing to kind of go out that far. 
+The other thing is that you might not believe that I have an infinite bank, right? 
+So for this thing to really have infinite expected value, you have to believe that I could pay up arbitrary however many millions of dollars that might be required. 
+Even though it's very unlikely, you still have to believe I could pay you. 
+So this actually called the St. Petersburg Paradox. 
+People used to argue about it, they still do a little bit. 
+But again, you can show if -- I think the book does this example -- if you have a logarithmic utility on money, then this has a pretty small expectation. 
+$3 or something. 
+So it's just about what you (inaudible). 
+So now let's do an example of -- I keep looking at that clock, it makes me nuts -- do an example of decision making under uncertainty. 
+==========
+Just to start out with, we'll think about buying a used car, and then we'll add some various complications to it, and see how other factors can come in. 
+So that even choosing one action to take can be pretty complicated. 
+And then the theme for next time will be the analog of planning; how do you choose multiple sequential actions in a row. 
+OK, but given this utility... 
+[writing on board] So this is -- I'm just going to write down sort of the parameters of the problem. 
+So I'm considering buying a used car. 
+A particular one. 
+So the car costs $1,000. 
+I think I can sell it -- and I'm a good judge of this -- for $1,100. 
+I'm operating on pretty small margins here, they'll get smaller. 
+So every one of these cars is either a lemon - - I love the terminology of this paper -- or a peach. 
+Lemon I heard, peach is new. 
+Twenty percent of these particular cars are lemons. 
+And it costs $40 to repair a peach and $100 -- oh, excuse me, $200 -- to repair a lemon. 
+That's the set-up of this problem. 
+And let's assume that we're in a regime of, in this case, small enough deltas on my total bank account that we can treat my preferences for money as being linear. 
+If these were really big numbers, we couldn't just use the dollar values. 
+We would have to do a utility scale like we did before. 
+But for right now we can just use the dollar values. 
+OK, so let's think about how to draw out a tree that will help us think about and understand how to make this decision. 
+And so I'm going to make a decision tree. 
+And so here I am, I'm trying to decide whether or not to buy this car, and I don't have any more information than this. 
+So what I would do is I would make a decision tree with the square node. 
+A square node means I have to make a choice. 
+I'm either going to buy, or no. 
+If I buy this car -- so if I don't buy the car, my net gain and loss is zero. 
+So that's pretty much easy to think about. 
+If I do buy the car -- then the premise is, if I buy the car, I'm going to have it repaired and then sell it. 
+And so, the utility of that depends upon whether it's a lemon or a peach. 
+And I'm going to assume that that gets found out at the time that it needs to be repaired. 
+So I'm going to take it into the garage, and they're either going to charge me $200 or $40 to repair. 
+So now there's a node, which I'll draw as a circle, called a chance node, which is a case where I don't get to pick which of these branches we follow, nature does. 
+where it is a chance node and so the probability 0.2 -- it's a lemon. 
+And with probability 0.8, it's a peach. 
+Now, what's my dollar value gain if it's a lemon? 
+__: (inaudible) -$100. 
+Right? 
+I'm going to pay $1,000, I'm going to get back $1,100, but I'm also going to have to pay $200 to have it fixed. 
+So this is -$100. 
+And this is a +$60. 
+OK, so there's the basic decision laid out for me. 
+And so now we can evaluate a tree like this, and the way in general that you evaluate such a tree is that you do it from the leaves back to the roots, and whenever you reach a (inaudible) node like this, you compute the expected value, and when you reach a square node, which is a place where you get to make the decision, you take the max. 
+You have to average over the things that nature can do to you, but you get the max when you're picking your own outcome. 
+You're picking your own course of actions. 
+So, we average over the things that nature could do to us, and we get -- I actually calculated this, did I? -- 28. 
+Right, that's 6 times 8, this is 48 minus 1. 
+OK, so should I buy the car? 
+(Pause) Yes, I should buy the car. 
+So I put a little arrow out here saying yes, I'm going to buy the car. 
+And so this whole deal -- the whole opportunity to buy the car is worth $28. 
+All right. 
+Now, let's add some... __: What's this tree called? 
+Excuse me? 
+__: Is there a name for this type of tree? 
+Well, it's funny because it's called a decision tree, and why is it funny that it's called a decision tree? 
+Because we're -- when we talk about (inaudible) we may also study decision trees, which are the same in kind of open-ended tests, but other than that, fairly different. 
+But nonetheless, it's called a decision tree. 
+END OF SIDE So now, as I'm standing there at the used car lot, pondering the purchase of this fine car, someone comes up to me and says, Hey, I worked in the factory and if you tell me the serial number, for $20 I'll tell you whether it's a lemon or a peach. 
+Because I happen to know. 
+So now the question is, would it be worth it? 
+Would it be worth $20 to find out from this person whether or not the car is a lemon or a peach? 
+What's your intuition? 
+(inaudible) says yes, why? 
+What would you do? 
+How would things go? 
+You pay this guy $20, then what? 
+Excuse me? 
+__: (Inaudible). 
+All right, well we'll have to work out the math in a minute. 
+But the intuition is this: that here, we had to buy the car without knowing what it was. 
+But if somebody tells us what it is, then we can presumably make one decision in one case and the other decision in the other case. 
+And that way, we'll be making our decisions based on more information, we'll be able to match our decision more closely to the situation at hand. 
+So intuitively it's going to be worth something for that to happen. 
+But actually, I mean, you have to do the problem out on the board or your paper or something usually to figure out exactly what the advantage is. 
+==========
+So what we're going to do now is try to calculate a quantity that's called the expected value of perfect information. 
+Or the EVPI. 
+And how much would it be worth to you to know exactly what was going on? 
+I mean, usually you don't ever get a choice to have perfect information, but at least to give you around on how much you should pay for other kinds of information, like an inspection or something like that. 
+So how much would it be worth to know exactly whether this car were a lemon or a peach? 
+We can do this by making a decision tree, but now we can reverse the order of the nodes. 
+Because here the idea is, the first thing that's going to happen, after we pay, is we're going to get some information. 
+Then contingent on that information, we can make a choice about which action to take. 
+So we can draw a tree that looks like this. 
+Yes? 
+__: (inaudible) change all those circles to squares? 
+No, because it's not that chance decides something you buy and then you make a decision about whether it's a lemon or a peach. 
+It's -- you actually -- __: Just the circle to square, not the other way around. 
+Oh, just the circles to squares. 
+No, because you need a circle. 
+Now, chance is going to tell you what the guy tells you. 
+Chance still has a hand in which kind of car this is. 
+That's a good question. 
+So let's look at it this way. 
+Chance is going to pick whether it's a lemon or a peach. 
+And in fact, he can tell you which of these it is, this perfect information oracle is going to tell you which kind of car it is. 
+And he's going to say this is probability of 0.2, and this is probability of 0.8. 
+All right, that's sort of -- it depicts the randomization process for deciding which one of these cars you were getting. 
+Now you have this information, and in either case you can decide what to do. 
+So you can decide buy, don't ... 
+buy, don't. 
+OK, let's see; so if it's a lemon and you buy it, that's -$100, right? 
+If you don't buy it, it's zero -- __: Shouldn't that be $120? 
+Oh, good, so should we factor the cost in? 
+Let's do it this way. 
+Let's put a little C -- minus C on all of these, and we'll figure out what the cost -- what the break-even cost would be. 
+All right, if it's a peach and we buy it, it's $60 minus C, and if we don't buy it, it's ... 
+Yes? 
+__: Why would you ever buy it if (inaudible)? 
+Well, it might be -- I mean, in this case it's not true, but it might be that even if it's a lemon, you make a little money. 
+You don't make as much, but you make some. 
+So you're right, in this case, we're not going to do it. 
+But a priori, you wouldn't know that. 
+So we clearly don't want to buy this thing. 
+So remember, the way you evalu -- I also want to illustrate through the evaluation process -- so you evaluate it by going from the leaves back to the roots. 
+So you can evaluate this choice node by looking at these two outcomes and deciding which one you like better, and clearly it's to not buy the car. 
+So the cost here would be however much you paid to get your perfect information. 
+In this case -- but we're not going to know -- no, we'll still maximize - - in this case we would rather buy the car. 
+$60-C is better than -C. 
+So, do this and the value of this node is $60-C. 
+So now we know how good a position we're in, in some sense, when we heard that our car is a peach, and how good a position we're in when we've heard that it's a lemon. 
+And so now we compute the expected value here. 
+And the expected value here is going to be -- well, we're going to get this factor of -C no matter what. 
+And then it's 0.8 times $60 is $48. 
+[writing on board] So the value of being in this situation is $48 minus C, the value of being in this situation is $28. 
+What's the most you should be willing to pay this guy for this perfect information? 
+__: (Inaudible) Excuse me? 
+I'm sorry, I just can't hear you. 
+__: (Inaudible) OK. 
+So how much should we pay? 
+What? 
+$20. 
+Right, so the expected value of perfect information in this case is $20. 
+If you pay him $20, you've used up your whole margin -- $19.99. 
+You stand to make one penny. 
+Does this example make sense to everybody so far? 
+OK, let us -- __: (Inaudible) The expected value of perfect information? 
+No, so the idea of -- the expected value of perfect information -- it's the value of the information. 
+So the value of the information is the difference between -- so you can -- either you could pay this guy and have this outcome, or you could not pay him and have this outcome. 
+So if you set C to be $20, then there are a lot, you don't care which. 
+But it C is anything less than $20, then this whole thing is better. 
+So it's, how much is the information worth to you? 
+That's an important point. 
+Does this make sense to everybody else? 
+So we have two further -- I'm looking at that clock -- two further things that we can do here. 
+==========
+Let's look into the potential of buying a guarantee, and then let's look also into possibly having the car inspected. 
+OK, so these are two other things that you can imagine doing with a used car. 
+So let's look at the guarantee. 
+So we're scratching our heads some more, we decided -- let's say we decided not to take this guy up on his offer. 
+Although I supposed we could try to think about how they interact with one another. 
+Maybe you guys can think about how they interact with one another. 
+We'll just pick it up another time. 
+So we're offered a guarantee. 
+The used car guy comes out in his shiny suit and he says, Here, buy this car and I'll sell you this guarantee, and here's how the guarantee works. 
+It costs $60, it will pay for -- cover 50 percent of repair costs, and if the repairs are greater than $100, it will cover them all. 
+So this seems like probably a good thing. 
+Actually, I have a policy that reduces computation for me, which is that anytime anybody tries to sell me something like this, I infer that they're making money on it and so therefore I shouldn't buy it. 
+But that is only an appropriate inference to make if I share the same utility function they do, right? 
+Because it's exactly like the insurance thing. 
+If I'm sufficiently risk-averse, then it's in my interest to give money to you guys, and we're both happier than we were before. 
+That's sort of paradoxical, but it can happen. 
+It's a positive-sum game, insurance. 
+But I'm not that risk-averse and so I don't buy guarantees. 
+OK (inaudible). 
+So should we buy this guarantee? 
+I don't know, seems kind of expensive. 
+How should we think about it? 
+Let's think about it. 
+Again, just in a purely expected-value sense. 
+With the guarantee, we can just modify -- we're not getting any extra information, we're not really making any different decisions. 
+In some sense, either to buy the guarantee and we get this situation -- I mean, either we don't buy the guarantee and we get that situation, or we do buy the guarantee, and we still -- and then we buy the car I guess. 
+OK, so let's draw this out. 
+We say we buy the guarantee and implicitly the car, right, because who would buy the guarantee without the car. 
+Or we just buy the car, or we don't buy. 
+And we already know the value of not buying is zero, and we know that the value of buying the car from up there is $28. 
+So now we just have to think about what's the utility of buying the car with the guarantee. 
+So we still have the two lemon-peach outcomes, 0.2, 0.8. 
+And now -- what's the total utility of running a lemon -- all right. 
+If we have a lemon, repairs cost more than $100, so then we don't have to pay. 
+So that's good. 
+So that's zero for repairs, so it looks like we can earn $100, but we had to pay $60 for the guarantee, so it looks like +$40? 
+OK? 
+And in the case of the peach, it covers 60 percent of repair costs. 
+So that means instead of costing $40 to repair, it's going to cost $20, but it's going to cost $60 more to buy the guarantee, so that's $80, so it looks like a net of $20. 
+Right? 
+It made our -- this is how these things usually go -- it made our bad outcome not so bad and our good outcome worse. 
+So, let's see. 
+0.8 times $20 is $16, plus $8 ... 
+$24. 
+So here's a case -- here is exactly a case where many people would choose to buy the guarantee. 
+Having worked all this out, you choose to buy the guarantee, and you do it again because of (inaudible). 
+So if you had a non-linear utility function on money, you'd probably pick the guarantee. 
+Because you can't lose, right? 
+If you buy the guarantee, it's a guaranteed win, there's no way that you'll go into the hole. 
+Whereas in that picture over there, you could lose $100. 
+__: How much (inaudible) the utility function? 
+(Inaudible) and how many times can this -- the first thing about (inaudible) problem with the $1,000 gold watch. 
+If you do it n times, (inaudible) -- Look, if you do it n times, then in some place you're decreasing the variance with the whole distribution, right? 
+There's still a downside, but it's even less likely. 
+And again, it would depend on your utility function exactly how it all came out. 
+But you're right, that in general we're repeating the same -- makes it somewhat more predictable. 
+And so it's more powerful. 
+__: So the way you represent that, you just make a longer tree? 
+Really, in this formal way, the way you would represent it is -- likely we're going to put (inaudible) instead of one. 
+Well, you don't actually care about the order. 
+So you could just have a branch for each possible number of -- 100 heads, and 99 heads and 98 heads, and you'd write the probabilities and you'd work it all out. 
+But you'd find that an (inaudible) -- the probability of an (inaudible) is sort of clumped around the usual cases, and so it might be that those unusual ones didn't scare you so much. 
+I don't know, we would have to do it out to really see how it works. 
+OK, so let's do one more example, and it's going to be (inaudible) for me to give you guys a little Bay's (sp?) 
+Rule problem. 
+One more thing that we could do here. 
+All right, so the guarantee -- we're probably not going to buy the guarantee. 
+But, maybe we are, who knows, it's up to you, has to do with your utility values on (inaudible). 
+==========
+Now let's consider getting an inspection. 
+There's a garage across the street. 
+It costs $9 to get an inspection done. 
+This paper was written a long time ago, in the fifties or something, so these values for cars and things are not totally out of... (laughter). 
+And here's the properties of the inspection. 
+So the inspection -- you take the car in there, the guy's going to kind of poke it for a while and say Pass or Fail. 
+That's what's going to happen. 
+And the probability that they say Pass, given that it is a peach, is going to be 0.9. 
+And the probability that they say pass given that it's a lemon is going to be 0.4. 
+There's some discriminative power here, but it's nothing like perfect. 
+So what I would like you to compute for me right now is -- what we're really going to need is the probability that it's a lemon given that they say Pass, and the probability that it's a lemon... 
+So the probability if they say Fail is 1, and the probability... 
+OK, can you compute these things and it turns out that they'll (inaudible) C. [writing on board] (Pause) (Inaudible) __: We should just turn it off. 
+__: Maybe that's why it's (inaudible), they come and turn it off. 
+(Inaudible) OK, let's do this. 
+OK, lemon didn't pass. 
+What is it? 
+All right, let's do it. 
+Let's see, Pass given lemon, I is lemon, (inaudible) probability of Pass. 
+Yes? 
+Everybody get there? 
+All right, this we know, this we know, this we don't know yet. 
+So this is one of those annoying things that we have to do. 
+So this probability is out. 
+How do we do that? 
+(Pause) Pass given that almost -- Pass given lemon -- __: Times -- Right, times the probability of lemon plus -- not going to work -- time the probability of Pass given peach times the probability of peach. 
+OK, so Pass given lemon is 0.4, probability of lemon is 0.2, Pass given peach is 0.9, probability of peach is 0.8. 
+So we get 0.08 plus 0.72 is 0.8. 
+Is that good? 
+Did everybody get 0.8 for the probability of Pass? 
+Yes? 
+OK. 
+So this must be 0.2. 
+You might at this point think, well this is a good-for-nothing test, I walked in with 0.8, 0.2 as my probabilities and I'm getting 0.8, 0.2 as the probabilities of what he tells me. 
+But I think it's still going to be worth something. 
+But it all goes to show that the intuitions that you might get along the way are almost worth nothing. 
+Or usually, they're negative. 
+My friends, in problems like this you'll just have to do it out because otherwise you'll never know. 
+OK, so this becomes Pass given lemon is 0.4, probability of lemon is 0.2, probability of Pass is 0.8. 
+So that's 0.8 over 0.8, so that is -- no, what am I doing? 
+__: (inaudible) point zero. 
+0.01, OK, good. 
+No -- 0.1. 
+Good, someone just tell me one answer they got for this one. 
+0.6? 
+Good, (inaudible) 0.6 it must be right. 
+==========
+OK, so we have time to do the final thing out? 
+We do not. 
+OK, so what we will do at the very beginning next time is draw out the decision tree that we get that involves going to the garage, getting the inspection, and then deciding whether or not to buy the car. 
+You could add the warranty in there too if you want to. 
+All right, see you next time, do your homework. 
+__: Over here we have O to the end and here we have the beginning to M, and I think in alphabetical order. 
+More separated. 
+It's in here, it's in with all the other stuff, I was really efficient. 
+__: I think he sent an email about this. 
+Yes, these pictures are terrible. 
+__: (Inaudible) __: The lesson is, don't look at the chart -- don't look at the graphs on the paper about graph plan. 
+Instead, you should look -- just look at what it says in the paper. 
+Look at the text -- the graphs are missing a lot of U- texes (sp?) and (inaudible)
+END OF TAPE
+==========

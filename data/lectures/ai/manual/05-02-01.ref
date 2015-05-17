@@ -1,0 +1,572 @@
+==========
+All right. 
+So what are we doing? 
+We're learning Beizin (sp?) 
+(inaudible). 
+The last time we talked about what to do when you have, you know, let's say, you know, a file full of descriptions of some kind of variables but describes situations in the world like patients' temperature and blood pressure and various symptoms and so on, or, the, you know, the perceptual measurements of fish on a conveyor belt or something like that and the idea was to fill the Beizin (sp?) 
+network because it did a good job of modeling in line probability distribution of the data. 
+And, in particular, we looked at a situation where we weren't sure what the structure of the network ought to be, but, at least, we saw values for all the variables. 
+==========
+Today, we're going to look at the opposite case which is the case where you have hidden variables. 
+So imagine that you have a situation that really is appropriately modeled like this. 
+There's some kind of cause [writing on board] and then that cause makes itself evident in a bunch of different ways. 
+And this was actually, this particular picture is the 90 Beize example (sp?). 
+I'm going to use it -- I'm going to use "m". 
+I used "n". 
+We're going to use this as a running example in class today, although the stuff I talked about actually applies more generally. 
+It's a variant, and I'll talk about how it generalizes. 
+But imagine that this is a sort of an appropriate description of some circumstance. 
+But you can't observe, for any of your cases, this cause variable; it's hidden. 
+Now you could still certainly build a joint, an estimate of the joint distribution of all the evidence that you get. 
+And, so, again, you might think of this as a, you know, in the medical example, that this is the disease and these are the various symptoms of the disease that the patient comes in with. 
+So here's a question for you. 
+Imagine that we were to take the cause variable out, but then what we wanted to do is build a Beize (sp?) 
+network modeling the relationships among the evidence (inaudible). 
+What would that network look like? 
+Let's think about that. 
+Well, we could just start with one of these variables, let's say, e1 [writing on board]. 
+Let's just make that our first variable. 
+We can do that. 
+We can pick any one that we like. 
+And now we're going to add variable e2 to the network and although these variables are conditionally independent, given the cause -- right? 
+-- if we don't know the cause, they're dependent, right? 
+So if you don't know a cause, then, information about one symptom will give us information about another symptom. 
+That's one of the fundamental ideas of the Beizan (sp?) 
+model. 
+OK. 
+So that means, if we don't know the cause, then information about e1 is going to tell us something about e2. 
+Now let's say we want to add e3 to the network -- [writing on board] -- well, e1 is going to tell us about e3 and e2 is going to tell us about e3. 
+And if we want to add e4, it's going to need to be connected to e1 and e2 and so on. 
+So there's no disentangling here, OK? 
+All right. 
+__: (inaudible) But if you have a counter(inaudible), when you have a (inaudible), can you (inaudible)? 
+Does the clique (?) 
+imply that there's a hidden cost? 
+No, not necessarily. 
+But it might, at least, make you want to investigate that question because if you see something that's like this, you'd like to say, "Oh, boy, -- So one thing that's going to happen is -- So, for instance, the conditional probability for this table for this guy has a very unordered, 23 entry and, in general, if you have n nodes in this network, the last node you put in is going to depend on everybody else. 
+So it's going to be about choosing the end parameters in this (inaudible). 
+That's a lot. 
+That's enough to encode any possible joint distribution over all these variables. 
+That'll certainly do the job for you, but you might hope that there's some simpler structure in your problem because it'll make interest easier, because it'll take less data to learn it, because it'll be easier for humans to understand. 
+And if you show humans, say, "Look at this cool model I learned from your data, all the variables depend on each other," they say, "Oh, how enlightening." 
+I mean, it's not really very helpful necessarily. 
+This model, on the other hand, has on the order of how many parameters? 
+How many parameters are in this node, about? 
+One or two. 
+Depending on how many causes, right? 
+There's sort of one parameter for each possible value of cause, right? 
+The probability of this evidence, given that cause - - something like that and, then, there are n in these nodes. 
+So there's about order n parameters here. 
+[writing on board] Now this model may be too simple for a lot of cases, and there's a whole bunch of models that are more complicated than this, but not as complicated as that. 
+And so, you know, it's going to be interesting to think about how to find models that are actually somewhere in between. 
+But given what we saw last time, if I gave you a big data set -- right? 
+-- a big file of actual observed observations to each -- So, now, let's say that we have only four nodes, what our file would be, in each row,t here would be a value for each [writing on board] variable. 
+We could use those values to estimate the probabilities in the nodes. 
+That's what we did last time. 
+So, now, what we're going to do today is ask ourselves the question, what if we want to postulate a hidden variable. 
+We think there's a hidden cause, or more than one, but, for now, we'll talk about one. 
+So we're going to look at the case where the structure is fixed and the number of nodes in our connections are all fixed, but we only make observations of some of the nodes. 
+So we'll take this example as our concrete case. 
+So we assume that we get observations with these nodes but we never get observations of that node. 
+So the question is: How can we possibly learn the parameters in this network when we never get to see what the actual true, underlying cause is because, usually, I mean, you pretty much don't. 
+Maybe, if you get to do post-mortems or something, you get some insight into the cause. 
+But, in general, you don't get to know the cause, for sure. 
+Soooooo, let's think about just what our objective here would be. 
+==========
+So what we want to do is find the model [writing on board] "Find a Model M that maximizes the probability of the data, given the model." 
+That's what we were up to last time, right? 
+And so for us, now, the model is really just going to consist of the parameters and the conditional causes (inaudible). 
+So let me establish a little bit of notation for the parameters. 
+So in order to quantify this network, first of all, we need the parameters that just say, "What are the probabilities of the causes?" 
+So we're going to have some parameters. 
+I'm going to call theta (use theta, in general, to be all the parameters of the network) and we'll let theta 0J be a zero, the probability that the cause [writing on board] takes on value J. So there are all the probabilities that just tell us how likely are the various possible causes. 
+And, then, we're going to have a big set of parameters -- Theta I, J, K -- and that's going to be the probability that variable [writing on board] ei has value, value K, given that the cause is value J. So those are going to be J times, roughly, J times K many parameters in each one of these nodes. 
+Yes? 
+__: Could you just find zero? 
+Well, I need some more theta. 
+(inaudible) it could be the status of J. __: OK. 
+Yes, you know, I was actually specializing something that was a little bit more general. 
+But, sure, let's just call this "Status of J." So there's -- So many stages have one in (inaudible) and some have three. 
+I mean, the fact -- If you wanted to implement this after (inaudible), you could do something. 
+But anyway, this is the set of parameters. 
+These, all together, are what we'll (inaudible). 
+Those are all the parameters in the network. 
+And given that we fixed the structure, because right now we're considering a fixed- structure case, when we talk about forming the best model, what we really mean is finding the best data. 
+Structure 6. 
+So we want to maximize the probability of data, given theta. 
+So now the question is: Can we even write down a next question for the probability of data, given theta? 
+Anybody got any ideas how you'd do that? 
+How would you write an expression for the probability of the data, given, in this network? 
+Would you know how to do that? 
+OK. 
+You're in (inaudible) now. 
+Write it down. 
+Think about it and write it down, unless there's no hope, in which case we really need (inaudible). 
+If you have a data set d, made up of exactly four pupils -- right? 
+-- assignments for each of these points, so we'll call this, in general, "e-i-l." 
+That means the value of the i-th node, then the l-data point or data (inaudible) [writing on board] [hissing on tape]. 
+Imagine that you -- So you have a data set, a whole bunch of rows. 
+There are assignments for each one of the variables. 
+Given this network structure -- write that on your page "an expression for the probability of this data, given that model" -- the probability that this model would have generated that data set. 
+You can make the assumption that the individual data items are generated independently. 
+So the question is, here: What's the probability of the data, given the model? 
+Does the question make sense? 
+If the question doesn't make sense, ask. 
+[pause] __: (inaudible) Yes. 
+That's right. 
+All right. 
+Let's talk about this. 
+Somebody want to give me some help on this one? 
+We'll do it over here in the hall. 
+The "Probability of the Data, Given the Model." 
+[writing on board] What's the first way we decompose it? 
+__: (inaudible) Over. 
+__: QBQ (?) 
+product (?) of each node (inaudible) Almost. 
+But, first, we have a bigger product. 
+What's the bigger product? 
+__: (inaudible) All the data products. 
+So it's the product over all the data points -- __: (inaudible) -- the probability of, yes, data point (inaudible) l, given the model. 
+Good. 
+So then now we can extend that out. 
+So we get probability over l. 
+So now we have your product [writing on board] which is the product over nodes. 
+So if I were using "i," of the probability of -- And I'll write this out. 
+It's a probability that this node has the value that it has in this data cage. 
+So we'll write that, "ei = little eil, given -- And I actually don't have a good notation for this. 
+I'll just write it in English. 
+The values of the parents, right? 
+[writing on board]. 
+__: Would you say that (inaudible)? 
+Yes, you're right. 
+In that example, you could say that. 
+So we could say that e1 has value e1ln, etc. and ei minus 1 has value e5l. 
+And we're still conditioning on the model, right? 
+The model tells us what the conditional probabilities it will run. 
+OK. 
+So that's the answer. 
+I mean, the fact that this set of parents and all the nodes with the lesser indices is just, apart from that particular, in general you need to condition on the parents' having their values and you might need a different way to describe them. 
+Is everybody cool with that formula? 
+Yes? 
+__: (inaudible) The model -- well, so the model is doing -- they can just -- the conditional probability tables in that. 
+So, I could have written the data. 
+And it was to use -- We have three that just stands for all the traditional probability tables in the whole matter. 
+So it's just a matter of looking up in there to get the numbers, and multiply them all under Ego. 
+OK. 
+Can we apply this same strategy in the (inaudible) the one with the hidden costs? 
+It doesn't seem like it - because we don't know any values for the cause variable -- and everybody else depends on that. 
+So, what can you do with a variable whose values you don't know? 
+How about condition? 
+Right? 
+So, we can say - the probabilities in this case -- the probability of data -- given the data -- right? 
+What we wish we knew -- OK, let's actually do the first product. 
+The product is a product of data.0 -- given the datas. 
+So now we're stuck. 
+Now we have a particular data case, and we want to know - -how much do we use that data case? 
+Given this model that we have? 
+But we don't know how to do it, because we don't know a value from the cost. 
+So what can we do? 
+We can consider all the different possible values that cost could have. 
+Weigh them according to their probability. 
+That's the normal conditioning rule of probability that we learned the first day that we started doing probability. 
+So I'm going to erase this now, and then we're going to erase that. 
+OK. 
+==========
+This is going to be the product of the O's of a sum over all the possible values -- that would be J -- that very cause variable can take -- of the probability for the cause variable has Value J -- given the parameters -- times the probability that the data is what it is -- given beta, and that -- oh wait. 
+C equals (inaudible) OK? 
+We have the variable C, and we're not sure what value it had. 
+And so, we're going to get rid of all the variables it could have -- and the likelihood that it could have. 
+OK. 
+The probabilities of C equals J, given data -- we actually know a name for that. 
+What is it? 
+__: (inaudible) (inaudible) So that's part of our model. 
+Right? 
+So when you look at probabilities you pick it out of the model. 
+That's beta (inaudible) So that's Unit 1. 
+Now, what's the probability of a whole data case -- given the data values and the C equals J? No. Last time it was a product. 
+This time it's probably a product. 
+So, just essentially, this is going to be a whole product. 
+This is the way that the probability that we're talking about -- and now the probability of this is going to be a product. 
+Over all the E-nodes, over the probability that IGI has the values that it has in this case. 
+And that's little "eil" given the beautiful J and beta. 
+And we know that over there --what's that? 
+__: (inaudible) "I" and "J" (laughter) "eil" -- right? 
+But talking about mathinization -- but I don't know a better way to say it. 
+But this variable takes on the value that it has to take on in this particular load on the data site. 
+Probably doesn't want to go into it. 
+But I just managed. 
+OK. 
+So this all comes out to be just -- to write it more nicely. 
+The product over the "L's". 
+The sum over the "J's". 
+Say to J -- product over the "I" -- beta, I, J, E, L, L. OK, so -- yes? 
+__: Are you working on the general case -- or are we just working on -- We're just working on that case. 
+We're working on this case, right here. 
+The general case of -- the general is a lot like this. 
+But this is going to be more generally construed as -- well, first of all, there may be more than one hidden note. 
+So, right now, we're just throwing out over one hidden note. 
+And if there's many hidden notes, we'll have to condition on all the possible documents and hidden notes. 
+And then, here, there's maybe a more complicated parent structure, than the ones that we have. 
+The stories. 
+Any other questions? 
+OK, so -- here we have an expression -- by I believe given data. 
+Now, then the performance data -- which are three parameters. 
+And,the "eil" returns to (inaudible) let me know. 
+Our goal is going to be to try to find an employment for beta, so values for all those particular data parameters that maximizing the fact that what is the best possible model of this data given that (inaudible) Right. 
+So, yes, there is still all kinds of obvious ways to look at that and see how to fix the data. 
+So, now we're going to -- again, using this as a special case -- feature a general technique called (inaudible) for solving this problem. 
+__: (inaudible) I'll draw a little cartoon of our draft here. 
+==========
+[working on blackboard] You guys know EM? 
+Yes? 
+__: I've heard of it. 
+You've heard of it? 
+__: I've used it. 
+__: You've used it? 
+OK. 
+Cool. 
+__: (laughter) I've used it. 
+OK. 
+All right. 
+So, again, if this was sort of a general method -- we'll see how it ties in here, and then we'll think about how it applies -- you may have time to think how it applies in other cases. 
+OK, so here's how it's going to go. 
+Again, I'll tell them that we don't know C. We wish we knew C. But if we knew the values for C, we could just do that counting thing. 
+That we did the last time in order to estimate the parameters. 
+And then, everything would be cool. 
+All right, during the counting estimation, is probably the way to maximize this expression. 
+If you know all the valuable of all the variables. 
+But we don't know all the variables of all the variables. 
+So, what can we do? 
+Well, we can just provide values for the variables. 
+So, here's how -- here's the general stretch of the algorithm. 
+It's an iterative algorithm. 
+And it goes like -- we're going to guess -- so now you can say this. 
+For all those parameters. 
+Anything you want, better if there are no zeroes. 
+It's really much better if there are no zeros. 
+Usually you put 3's or you pick at random, or you set them all to be kind of middle-of-the-road -- .5, or whatever the number of cases or something. 
+But it doesn't matter. 
+Pick what you want to. 
+And then we are going to alternate between these two steps. 
+There's something called "Uneda" which is roughly - -and we'll do it later when we get into more detail - -which is roughly --- compute the probability that C has value K. And, K has -- so that's basically. 
+And we'll make a name for that. 
+We'll make it CC. 
+OK. 
+Right? 
+So, we don't know what the C's are. 
+But it's going to turn out that if we know the model -- so we guess the datas which means, basically, the strength is -- if we guess the datas, we have a whole big net. 
+And if we have a whole big net, I should think -- in case of a given - - all the other guys. 
+And I'm going to call this -- U-C-K. 
+So, now we have a whole big net. 
+The whole infrastructure. 
+We have the parameters data. 
+And now we have this big net. 
+And we know values for some of the notes. 
+We could use the beta for (inaudible) computer probability is to build as many nodes that we want. 
+So, that's what sort of give about a base map. 
+So, no problem. 
+We can use the base of the computer -- a probability distribution over the C. If we know the model, and we have data aside for the other net. 
+Yes? 
+So, E-L -- C -- L. Yes. 
+Does it make sense to you that you could do this? 
+Well, you know the structure. 
+You've seen the parameters. 
+You have a base net. 
+You have a base net, and a particular roll of your table, gives you an assignment to some of the variables - -the E's. 
+Double S -- that's the computer part. 
+Really distribution on some of the other variables -- in this case, just Variable C. OK. 
+So, now for every roll of our table, we don't know C. We still don't really know C. But at least we have a probability distribution on C -- which is a good step toward knowing C. Then, we're doing the M stuff - which is to -- re-estimate data using the data and the VC. 
+So, we're going to let this probability distribution over what the class might be for each row - -kind of stand in for knowing the class. 
+And, using that as a stand-in -- which you can compute anew -- a better estimate of the parameters. 
+And then, and we go back to that. 
+And we do that until data doesn't change very much. 
+So, the data that the probability of data given data -- modified (inaudible) [writing on blackboard] -- or at least non-decreasing factors, actually, probably with the data. 
+If you have a tenth of a maximum -- (inaudible) already higher. 
+Yes? 
+__: (inaudible) Potentially, enormously sensitive to the entry, so that it finds only -- the local optimum. 
+Right? 
+So that if you think of there being a kind of landscape of, you know, probability of a function of data, then if you start here, it'll work its way up to here. 
+But that mountain's higher - - there ain't no way that it is going to take you from here to there. 
+So, if you go back to all the sort of standard words about local organization -- On the other hand, there is no global observation on the top. 
+I mean there's no -- you don't really have a whole lot of good options. 
+You can do -- and, actually, there are some papers that describe it -- you can do a kind of ordinary grading of the fact if you want to. 
+Instead of PM -- but yes, there's kind of -- it is easier in the sense that it doesn't require (inaudible) like parameter. 
+So, I don't know if you guys have tried to do brilliant (inaudible) organizations and things. 
+But it's an algorithm that basically just figures out -- what's the easiest direction down the hill, and let me go down the hill, and take steps down. 
+But the problem is that there's a step-like parameter. 
+And if you don't do the job of setting up step- like parameters, then you get into all varieties of trouble -- including going really slowly, or doing gross, flagrant violations or all kinds of -- so, this is usually for a user to use out of the box, because it doesn't have a parameter. 
+But that's roughly what our enterprise is going to be today. 
+We have the probability of a data-given data. 
+We have data -- there's some surface as defined by this function right here. 
+And we need to try to find an offer above it. 
+Yes? 
+__: Is this a base of one? 
+Right, the HMM learning algorithm, of bound Welsh is the instant (inaudible) Yes, exactly right. 
+It's always applicable really, in a case where you're trying to maximize the probability of some data with respect to the models. 
+But some stuff is hidden. 
+And so, you're kind of always thinking of what the hidden variables might be like. 
+And using that in alternation with re-estimating a model -- Yes. 
+OK. 
+Any questions about it at this level? 
+__: (inaudible) No, no. 
+I think the safe thing is to do a lot of different ones, and then one at a time. 
+I've overhead a lot of experts have fairly serious arguments. 
+There are people who believe that the local (inaudible) have a problem, and there are people who believe it's a(inaudible) And so, yes, you can really construct problems that have bad little optims. 
+The question is whether they come up naturally -- or the other question is -- how big are their basins of attachment? 
+Sometimes you find a problem with a local optimum. 
+But it is not very stable. 
+If you started a little bit away from it - you would go zipping off to some other place. 
+So there's no real good reasons for using that. 
+__: (inaudible) You can randomize -- what often is even better if you saw a knowledge of the problem. 
+And sometimes, you might have -- in this particular example - it is not completely clear to me how to get at this starting point. 
+But, sometimes you have some ideas about how to get to this point. 
+Other questions? 
+Right. 
+So, now,let's do it out in a form that would be implementable. 
+And I know the names of all the boards. 
+You may not have to make these decisions. 
+__: [pause in tape] OK. 
+==========
+So, first let's do the E-step. 
+And what E stands -- actually -- E then stands for Expectation, Maximization. 
+So that the E-Step is an Expectation step. 
+OK. 
+So what do we want to do? 
+We want to propose of E -- E equals A. Just C. And the rest of the lot. 
+OK. 
+This is an instance of a base net, updated algorithm. 
+In regarding what we know. 
+At least we have to have this picture for now. 
+OK. 
+So -- how do we (inaudible) I'm going to make you do something (inaudible) maybe no. 
+You know, your notebook contains the knowledge of how to solve this. 
+(laughter) You can get it from your notebook --- from the back of your head. 
+__: [pause in tape] You can be direct. 
+A function. 
+__: [long pause in tape] OK. 
+What is the probability of C equals K given that -- do we know the name for that? 
+Lead it for K. (inaudible) OK. 
+How about this. 
+What do we do with that? 
+Probability of over E, given C? __: It's a product. 
+It's a product. 
+Good. 
+This comes apart. 
+Right. 
+That network starts your problems. 
+But, given C -- the C is independent. 
+So, this changes our whole product. 
+So this, becomes the product -- over I's. 
+B-I-L -- given C equal K and data. 
+And what are those? 
+Do you know the name for this probability? 
+Yes, beta I -- K, L, K -E-I-L. 
+OK. 
+So what do we have here? 
+We have the probability that C equals K, given E-L and beta is equal to beta for K, times the product over the I's of beta I, K, E, L, I. Then divided by this probability of the other thing. 
+So, I'm going to say -- from L to K. And, we're going to have to compute this for every K. And we know they all come out to 1. 
+So that will let us compute the I. OK. 
+This is the kind of variation that would not be out of the question that I might ask you do in on a smaller, and later at the end of the month. 
+Yes? 
+__: This is my question now -- can you go back to (inaudible) data example? 
+Sure. 
+Absolutely. 
+You can. 
+OK? 
+You know, (inaudible) right. 
+So, that's the average. 
+That's how you do the E- step. 
+So this is for every case. 
+I don't really know what the value of C was - -but given the data that I do have for it, and given the model that I've assumed, I think that we can do the distribution over the cards, right? 
+So this is for done for every patient in (inaudible) If I win the model, even patient that comes in, I have a computer probabily distribution that everyone's needed. 
+Yes? 
+__: Is that all things are important to (inaudible) Well, OK, you know, it's important. 
+So let me do this out. 
+I always -- I have to say, that when I was learning this stuff, the alpha thing always mystified me. 
+So let me -- here is -- and there are really only two possible values for C. Right? 
+K1 or K2. 
+Right? 
+Or K1 or K2. 
+OK. 
+Then - - END OF SIDE Then, let me call this quantity here theta K. That quantity is this times this, but it's missing this. 
+This quantity there is true for everybody, so we don't know what this is, actually, but we'll just leave it -- actually, it's OK for everybody. 
+This is beta sub K. We compute this -- so we can compute a beta sub one and a beta sub two. 
+We know that alpha times beta sub one plus alpha times beta sub two has to equal one. 
+This is a beta, this is alpha. 
+So the probability for this that we are in category one is -- this is the probability that C equals one. 
+And this is the probability that C equals two. 
+We know for sure that either C equals one or C equals two, so the probability that C equals one plus the probability that C equals two has to be one. 
+All right. 
+So this means that if we compute theta one and beta two, we can solve for the algorithm. 
+It's a kind of normalizing attack. 
+So I made a mistake by putting the K there. 
+So it's the same line of attack. 
+It's the probability that we got the evidence that we got. 
+__: Why do we compute the probability of C equals two? 
+Let's talk about patients, right? 
+Each person in our database is a patient and they have these symptoms, and we wish we knew what disease they had, because we're trying to understand the relationship between diseases and symptoms. 
+So we don't know what disease they have and nor is anyone ever going to tell us, that's the assumption here. 
+So what we're going to do is, given the model that we have and the evidence that we have, the evidence that we see, we can compute a distribution of what diseases they have. 
+Now, it's probably not very good, especially at the beginning, because this model is just nuts, we just picked it out of the air, but there's some distribution of diseases that is induced by the model that we have. 
+And then the idea is that we take this kind of not very good guess about what the disease might be and use that to get a better model, and we use the model to get a better estimate of what disease they might have and a better estimate of what disease they might have to get a better model. 
+__: But if we had multiple C, like multiple -- Multiple unknown nodes, yes. 
+__: Would you -- You would do these for all the unknown nodes. 
+But probably you would have some independent assumptions, so you would pass it -- when you don't have any independent assumptions then it might as well just be one big old unknown thing all mixed together, but if your structure tells you that there are certain kinds of independencies between your Cs, between your hidden nodes, then you can estimate the independencies. 
+But the point is that this estimation that we just did is exactly, exactly a call to the general purpose phase net inference algorithm, which says, we have evidence here, we want to know how the distribution is on that node. 
+But we know how to do that for any number of instructions. 
+__: What would your assumption with (inaudible) be? 
+Not today. 
+Which is what -- excuse me, where do you get the parameters fixed? 
+That's part of the model, but we're not (inaudible) the structure? 
+__: How would you define a model? 
+Model normally means parameters plus structure. 
+So last time we were looking for parameters and structure, but we assumed that we could see values for all the nodes. 
+Today we're fixing the structure with parameters only, where some of the nodes are hidden. 
+In fact you can put all of this together, but it's better to bite off one piece at a time. 
+So OK, are you cool with this? 
+OK. 
+That is the easy step, that's the easy step in this case. 
+So now we know for every row in our table, for every patient that we ever saw, we have a probability distribution of what diseases we think they have. 
+==========
+Now, I dare not erase this because I'll forget - - Now we're going to do some maximization tests. 
+It's called maximization, the idea is we're going to compute on - - we're going to find a new theta to maximize the probability of the data two theta and the P.V.s. 
+That's our new local goal. 
+Remember our global goal is to match by the probability of data (inaudible), but we don't have to do that directly. 
+But it turns out that by computing the distribution, the probability of the C's, that's going to give us, actually, an effective way to find an example. 
+Now, the C is only as good as these guys are, so it's not going to be our final answer, but again, you can show that it's better than the theta that we started this iteration with. 
+So the probability of the beta, given theta and C. Well, as usual, it's the product over a data point. 
+So what's the probability of data point L at -- yes, you know, I apologize to you guys, data point L is also -- I have two names for that, it's also EWL, I apologize. 
+What's the probability of that, given the thetas and given the C's? 
+So it's right here. 
+How do we go about thinking about that? 
+Well -- wait, wait wait, I'm sorry, I'm going down the wrong -- I'm going to replicate what was on this board that I erased, so we don't need to do that. 
+What we need to do is think about how to find that theta. 
+And what we're not going to do, which you're probably going to be grateful for, is that I'm not going to ask you -- I'm just going to tell you how to do it and I'm not going to derive it. 
+But the answer has a kind of intuitive (inaudible). 
+It goes like this. 
+We're going to find a new theta, so finding the theta is to find theta sub J and theta IJK, so let's talk about finding a theta sub J. So arguing theta sub J, the probability -- this is just the general proportions, just the general proportions of the various diseases in the general population. 
+How many people have disease one, how many people have disease two. 
+If we knew who had disease one and who had disease two, we would have simply computed a ratio. 
+But we don't know who has disease one and who has disease two. 
+But we do know, now, these probability distributions of who has disease one and who has disease two, the PC. 
+So if you think about it -- let's look at a case, actually. 
+Imagine that we have -- here's C equals one and C equals two, and 0.6, 0.4, 9.1, 0.8, we have three -- this is -- and there's a bunch of values, that's what we're getting, and we just, in the last round, said, well, given this evidence and given the model that we assume, here's how likely I think the various causes are for each of these patients. 
+Here's how likely these diseases are for each of these patients. 
+So let's look at these causes, these numbers here. 
+So now what we want to compute, somehow, we want to look at this and we want to estimate, in the population, what's the probability of cause one? 
+What's the first path you think of to do this? 
+First of all, you think cause (inaudible) is cause two, in general, in the population -- yes, OK. 
+So if I've told you, somehow, look at these numbers, and come up with the probability of cause one, what would you do? 
+Add it up and divide by three, yes, that's it. 
+OK, so. 
+Put the sum over the L's -- PCLJ -- the probability of cause J divided by the number of K, so this would be -- add it up and -- there's the answer. 
+And you can prove that this is where the maximum likelihood is estimated, that we're going to do these things with the thetas and that really will be the set of thetas that optimizes the probability. 
+This is how to do the thetas. 
+So it turns out, like this, the intuitively obvious answer is also the good one. 
+Is that OK? 
+Sometimes people call these "fictional counts" -- you could run across that term, and again, there's a sort of -- I'm not sure if this patient had disease number one, but I'll say, instead of putting a one and a zero here, I'll just say, well, 0.9 he is. 
+So we just add up the 0.9 where we normally would have added a 1 if we were counting. 
+So fractions. 
+Now, in order to estimate the other thetas, now we need a theta IJK. 
+The theta IJK is, again, let's imagine that we knew the class assignments. 
+If we knew the class assignments, we would go and we would say, of all the cases that had class assignment J, what fraction of them had (inaudible)? 
+So again, in the total knowledge case, this would be the number of times that we had C equal to J, and CI equal to K divided by the number of times we had C equal to K. That would be the way that we did it last time, that's the way to do it if you really know the C. But we don't know the C, again, we only have these fractions, and so we do this same testing, we just count the fractions. 
+So this comes out to be the sum over the L's of - - now we're going to count the weight, so I'm going to make the L index complicated -- the sum over the L's, where EIL equals K, so we're just going to look at the cases that have this value that we're interested in, and we're going to sum up the PCLJ, and we're going to divide that by the sum over all the L's of PCLJ. 
+So these theses are ones and zeroes in a complete knowledge case, then this is the number of times we've had cause J, and this is the number of times that we've had cause J and grade Y. So it's just like the (inaudible) but sort of weakened. 
+So this is -- So that's it, that's an algorithm. 
+You go back and forth, you guess the theta, you use the theta to compute the PCs, you use the PCs in your data to compute a new theta. 
+Back and forth, back and forth, back and forth. 
+You can prove that it gets better and better over time, eventually the theta quits changing very much, and so you quit, and you can restart it with a bunch of different initial thetas if you're worried about local optimum. 
+All right, so let me talk about a particular example that actually fits perfectly into the fish canyon case, a sort of related -- it's not exactly the same structure, but it's close. 
+Let me just ask if you're OK with this. 
+So one thing that you can think about that's going on here, that's sort of interesting -- imagine that we really did have patient cases, that we really did do this example, and we got to see all the C's, and we -- I've been calling C diseases, but we don't ever have any grand truth about the diseases of these patients, the assumption here is that we never know, there are no labeled examples at all, we just never know what diseases they have. 
+But in front of us, this network structure, we have this variable called C, and we actually have to pick an area for C also, we have to decide there's going to be two different values of C or ten different values of C. OK, you pick four values for C. What you're saying is, in some sense, I conjecture that there are four different, somehow, underlying disease states of people, or of people in this data set, and I want you to come up with an effective model of the data for the assumption that there are four disease states. 
+==========
+Now what that does as a side effect, and in fact people do exactly this, sometimes not for the side effect -- they do it for the side effect, is that it gives you a kind of clustering of the data, a clustering of the people, it says, if you say, go out and try to find four groups of people for me, please, four different probability distributions, it will do that, and sometimes the probability distributions that you get out, or the division of the people in the four groups is actually interesting. 
+That is to say, it's interesting to physicians. 
+So for instance, people used an algorithm very much like this to cluster astronomical data, so they had all these measurements of, you know, astronomical objects in terms of their brightness, their fuzziness, their color, and their whatever and whatever and whatever, and they said, OK, please cluster this data for me, please find an explanation of it, exactly in terms of some hidden cause in the manifestations, and that -- they crunched forever on this data, and they divided up all these astronomical objects into some number of categories, and they in some sense discovered a new kind of star that way. 
+That is to say, they found some category which afterwards, when the astronomers went and looked at it, they said, oh wow, cool, isn't it interesting, there's a group of stars that happens to have this sort of properties. 
+But -- __: (inaudible) You don't. 
+OK, good, exactly. 
+So you can actually -- Now, put a bigger loop right in here, and there's this inner loop, and there's a bigger loop which is structures. 
+Where a structure includes the arcs that you have in your network, the number of nodes, the area of the nodes, and so you can wrap a search in the space of structures around the outside of this thing that just finds a good parameterization of the structure. 
+So in the astronomical case, the only thing that they -- they had an outer loop and they just varied the number of parameters, varied the number of possible values in the node sequence. 
+When you do that you also end up having to optimize not just the probability of the data, given the model, but now you also have to put back in some kind of penalty term for having too complicated a model, because, for instance, if you have a database with a hundred patients, the very best model of that data is to say that there are a hundred different classes, each of which is exactly like this, and that gives you a probability one of your data, but it's not very interesting. 
+So you have to push on it somehow to say, well, you don't want to have too many classes, but you want to let it add classes if it's really going to make a big difference. 
+OK -- __: (inaudible) Right, but the point is that we don't -- __: (inaudible) Some structure -- some structure, now, instead of the length of the structure -- the nodes and their areas, area means the number of values that they can take on, and -- So you can say, I'm going to put in a binary node here, or a five- way discrete node there, or even, I'm going to put in a node with a guesstimate distribution, you could do this stuff in the continuous realm as well, but we haven't really talked about that. 
+You can take the area of the node and part of the structure. 
+OK. 
+__: (inaudible) Yes, so in fact, you'll never get a rigid assignment -- as you build, in computing these PCs now, these are telling you for each patient, what diseases they probably have. 
+But you never get a rigid assignment to cluster, you never get -- this is a kind of soft clustering. 
+PC never turns out to be one for a particular patient and a disease, or maybe it does, but that's rare. 
+==========
+So let me draw a picture of what this might look like in a continuous case, because it's easiest to get the intuition that way. 
+Imagine that you're in a fish cannery and there are all these fish coming by, and they have a weight and a length. 
+And that's all you've got, so you don't know anything about tuna and salmon. 
+Perhaps you're Renee Usher(?) or somebody who's trying to decide how to divide the fish up into groups. 
+So what you see is that -- you get all your fish and each of them have some external manifestations of their shape and size. 
+And now you think, I'd like to see if this data is usefully modeled and has any hidden variables behind it. 
+So in this case, probably you want to preserve the notion of the length and weight. 
+So in one set there's the species and there's the length and weight. 
+So what could be the weakness of a model that has this structure, or this domain? 
+Right, this actually seems like it's going to be a pretty bad model, because length and weight, in nature, are pretty strongly correlated. 
+So this says, one thing other than species, the length and weight are independent of one another. 
+But I think that's not going to be a good model. 
+So you want to couple these two. 
+So either you draw an arc between them or, better yet, you just say, all right, I'm going to model them as one big variable. 
+So here's a particular model that we (inaudible). 
+So the purpose of drawing things on the board, again, as an example of this kind of posturing that people quite typically do -- when you have continuous parameters like length and weight, you could (inaudible) and apply exactly the strategy that we did on the board, or you could say, no, they're continuous, let me model them using some continuous distribution. 
+You might say, for instance, that length and weight vary in some kind of normal distribution. 
+There tends to be a mean and some kind co- variant expression that describes -- I'll do it this way, length and weight, given species, vary (inaudible). 
+That is, for each species, we'll say number two, we're evaluating for number two, each one is individually well described in the normal distribution. 
+So you can use the same EM algorithm exactly for this situation, the idea is that here you have all these fish but you don't know what species they belong to, but you're interested in finding an assignment of them to the different species that will give you kind of a good way of describing the data that you have. 
+__: I don't understand how, without any -- Well, you can't say these are the tuna and these are the salmon, but you can say these are the class one and these are the class two. 
+__: Right, but if you apply that to the EM algorithm -- (inaudible) You're asking the algorithm, please divide my data up into a couple of groups, each of which is well described -- and then you might come in later on and look at it and say, sure enough, that corresponds to the division between tuna and salmon, or you can come along and say, gosh, that's an interesting distinction I never saw before, these are the fish that live in salt water versus pond water or -- who knows, but it's going to find some kind of distinction that helps it model the data. 
+But they're not doing anything that any visual human would naturally have invented. 
+__: Well, that was what I wanted to know when I asked about -- when you were saying that you cluster them into four groups, you can't really tell which cluster is (inaudible). 
+You could have another person say, that group has (inaudible) -- Right, well -- you can back that question up one step, and know that physicians argue about not just who has which disease, but what the diseases ought to be. 
+What are the right categories? 
+So also, this is about discovering or trying to come up with a good categorization, a good way of dividing people that come into the hospital into different diseases. 
+But if you come to the problem and say, I know there are these four diseases and I want to know who has which ones, then this isn't the -- then you need to know some labeled examples. 
+You need to know this is a flu and that's a cold and that's a heart attack. 
+But what this method would do is to have all the patients come in and say, they seem to divide up in this way, and then you could come later on and look at that division and see if you've got anything useful or interesting. 
+The algorithm has been found useful in that it is a compact way of describing the data, and it turns out that that's often what makes a distinction interesting to us as well. 
+Yes? 
+__: (inaudible) Actually, no. 
+It's going to turn out to be, but again, the proof step is really pretty complicated, but the same trick that we did there of estimating the categories and putting the probabilities in, using the probabilities of the categories to weight accounting, it should work the same way. 
+Let's say you want to estimate a mean, but you don't know exactly who's in what class and who's in the other class. 
+You still do an average, but you weight the average according to the class membership. 
+So the same estimators that let you estimate the beginning of the normal distribution, in general, it turns out they usually work OK when you use these not-for-real counts. 
+It's a little bit of a (inaudible). 
+But let me just sketch out how the algorithm would go for a problem like this, just to cement your intuition. 
+What would you do? 
+Let's ignore the (inaudible) for now, so it's something where we're going two round -- I could make the data a little more appealing. 
+So how are we going to do it. 
+We started out saying, maybe there's a mean here and a mean here. 
+We built our model around that, then you say, OK, if you have a mean here and a mean here, particularly in the initialization nodes, then you say, of these points, which ones probably belong to which mean? 
+And -- gosh, I don't know what will happen. 
+Probably it's going to decide that these guys -- maybe it's just going to solve for theta one for this guy and again -- it doesn't make a rigid distinction of which point is closest to which mean. 
+It computes, what's the probability that this point was generated by this distribution, what's the probability that this point was generated by that distribution, and those are the class probabilities for this -- __: If you put the mean out there -- Add it in there. 
+Again, you could be smart, like, at least put them on top of your data points so that they're not over on the other side of the board, but basically, yes. 
+So let's say we do that, we get this data point mostly over here. 
+So it's going to compute a new mean, it's going to take, in some sense, the data point for this guy, or the data points according to how close they are, and computing a new mean, estimating the new theta. 
+And so it's going to be a lot closer to this guy and it's going to get pulled a little bit towards the center of these two, they're pulling a little bit, because they might have been generated by this. 
+So it's going to tend to move this mean over here. 
+This one is going to probably get pulled over to here. 
+All right, now we do it again, we say, for each point, how likely was it to have been generated by this guy vs. that guy? 
+And really, most of the time, what happens is that this guy is going to start getting sucked down this way, he'll come down here a little bit. 
+This one might get sucked over here a little bit more. 
+And pretty soon this (inaudible) will be over here and this one will be over here. 
+__: (inaudible) Because, well, if you have a bad initial condition they could end up in the same place, but in general you get a better likelihood of the data if you separate them out. 
+Because if you put both medians right in the middle here, then none of these points is particularly right. 
+Whereas if you put one mean here and one mean here, then you can say, well, these guys are pretty likely to have been generated by this guy. 
+And these guys are pretty likely to have been generated by that guy. 
+And that fellow on these ones, they're just (inaudible). 
+It'll make some decisions about this. 
+__: In that example you just did, how many iterations did you go through? 
+Well, you know, one characteristic of this algorithm is that it tends to make really good, useful big steps at the beginning and then it tends to be kind of slow and tedious at the end. 
+But that could go as quickly as ten iterations, at least to get in the ball park. __: So it depends on how close you want to be to your optimum. 
+As the problems get bigger and higher and so on, usually, sometimes you get situations where this landscape has the unfortunate property of being really very flat in a lot of places, and so the character of this algorithm can sometimes be that although things are getting better, it's awfully, awfully slow, so sometimes you get hung up there. 
+I think that's it for this story, next time we'll talk about learning in the case where we actually have a particular goal in mind, that is to say, we're trying to generate particular answers. 
+END OF TAPE 1 1 
+==========

@@ -1,0 +1,475 @@
+==========
+__: ...it's the end of the term. 
+S: (inaudible) __: You wish. 
+Everything's due this week. 
+Yes, all right. 
+Except for the things that are due next -- I guess everything's due this week, because they can't be due next week. 
+Unless there's a... 
+OK, so what I'm going to do today is try to back up a little bit. 
+So we got a couple of comments -- Mike's (inaudible) ask him for comments, and I got one back saying it would be good if we kind of had a better idea of the bigger picture of machine learning and where these things fit in, so I'm going to try to do that a little bit, and then I'm going to develop further that multilayer neural network example. 
+I think they may have covered it in 6034, so those of you who took undergraduate AI here may have seen it before, but in my experience it doesn't usually hurt to see it again, but I apologize if you find it tedious. 
+OK, so let's talk just for a minute about machine learning. 
+I should also say that there's (inaudible) whole big long graduate course that's on the subject of machine language so (inaudible) this is something that you find interesting and you're not graduating or something, well then, you could take this other whole course. 
+==========
+But so if you pick up an ordinary machine learning textbook they'll talk about a number of different kinds of things, problems at a high level. 
+Classification is one, and naturally what Mike was talking about yesterday, but the general problem of mapping some kind of vector of attributes of objects, usually into two classes, zero and one. 
+Sometimes more than one class, but a small number of discrete classes. 
+There's regression, which we haven't really talked about. 
+We need to get to (inaudible) at the end a little, which is typically mapping an attribute vector into the real numbers. 
+So when would you want to do regression? 
+Well, let's say you want to be able to predict somebody's height as a function of their weight, or you wanted to be able to predict somebody's grade point average as a function of their SAT scores, or you want to predict some real value quantity as a function of some other quantities, well, that's a regression model. 
+And the sort of techniques that we use to do regression may actually end up being not that different from the techniques that we use for doing classification. 
+In fact, there's one way to think of classification as just a special case of regression where you have two values of zero and one, and sometimes you can do that but it doesn't always make sense to do it that way. 
+That's the usual thing. 
+This is a pretty big hammer, or a pretty general purpose thing, and sometimes you're better off doing something more special purpose for classification. 
+There's clustering, which often has the same goals as classification, namely mapping (inaudible) of zero and one, but the trading data are unlabeled. 
+In this case, in classification, you're given a set of X Y pairs, where X is a thing that you're trying to generate, and you have to come up with a mapping from X's into Y. 
+In clustering, you're given a set of X's only and told to come up with a mapping from X's into Y's. 
+So what good is that? 
+Clustering is a very weird problem, because what the evaluation metric for a clustering should be is never clear. 
+You're saying, "Here's a big bag of data. 
+Please divide it up into five groups for me." 
+It's interesting in some sense that a lot of the work in clustering is not so much on the best algorithms to do it, but is on what are appropriate criteria to use for clustering, and often what it has to do with is trying to understand what are the criteria that humans implicitly use, right? 
+Because you take a person and you give them a whole bunch of things and say, "Divide them into groups," yes, they'll do it, right? 
+People divide up species or they divide up chair into different classes or whatever, because people have some kind of built-in criterion of similarity or grouping that they would use to divide objects into categories, and so a lot of the research here has to do with trying to understand what criterion is it that humans would apply, and then, coming up with (inaudible) to do the clustering. 
+We're not going to be talking about that too much because it's kind of hard to understand, although one case of clustering is the thing that we talked about at the end of doing the (inaudible) networks where in the process of trying to build a model to describe the data we found that it was appropriate to describe it as having come from some discrete number of classes, and so that's a case where just trying to describe the data distribution compactly gave rise to a cluster. 
+We didn't have a specific clustering method that we were trying to come up with. 
+We just wanted to try to describe the distribution of the data. 
+OK, so these two are often called supervised basian(sp?) 
+because you're told what the output ought to be. 
+This is typically unsupervised. 
+And there's another kind of unsupervised basian which is actually what we spend an awful lot of time doing early on which is often called density estimation. 
+So this is also unsupervised, and this just says that when given some data you want to come with a probability distribution. 
+A good description of a probability distribution, so it can mean... 
+And so when we were trying to learn basian networks that's we were doing. 
+We were doing density information. 
+We were given a bunch of data and we were just trying to come up with a good estimation of the joint probability distribution, and so the X was right. 
+The X's were actually vector over a bunch of attributes and we wanted to come up with a -- so that the joint distribution of the X's. 
+So that's what the basian(sp?) 
+network learning was about. 
+Now, if you do this kind of density estimation, the idea was one of the things we talked about was if you do the density estimation then you have this general purpose model. 
+You've learned the relationship between all the variables. 
+You haven't picked one particular variable and called it the thing that you're trying to predict. 
+So in regression and classification you're saying, "I have these input variables, the X's, and I have the output variable Y, and my whole goal is to be able to predict the output variable Y as a function of the input variable. 
+Here just saying I want to learn the general relationship between all the variables has the advantage of if you do a good job of learning this then you can use it any way you want to, so that later on you could use it to, for instance, predict the probability that some particular dimension has some value B, given assignment to all the other ones, so all the other attributes. 
+So doing a density estimation first and then using it later on to make a classifier or a regression or something like that is possible. 
+And when would you want to do this? 
+You would want to do this when you're not sure how you want to use the model (inaudible), or if you're going to want to use it in a lot of different ways. 
+Or often, if you want to use human input, because humans tend to be able to help -- they have a better understanding or they're better able to give you prior knowledge about the relationship between the different input variables so they are necessarily to be able to help you understand how to build the classifier. 
+(inaudible) it's usually easier to get human input to do this. 
+On the other hand, you usually need less data to just learn a classification directly because it's a simpler model and it's more focused on what you're trying to do with with the model. 
+There's one other kind of learning that I'm partial to because it's the sort of thing that I do a lot research in, and we may or may not spend Monday talking about it. 
+I actually haven't decided whether to do that or a different subject. 
+And that's called reinforcement learning. 
+And at some level it looks like classification. 
+The idea behind reinforcement learning is that you're trying to learn a way of behaving, wandering through the world as you do in a model like a mark-up position(sp?) 
+process. 
+You're seeing states and you're trying to figure out what actions to take, so you're trying to come up a mapping from states into actions. 
+So at some level it sort of looks like classification, if you don't have very many actions and you're dividing the set of states into which states are the ones in which you should turn left and which states are the ones in which you should turn right. 
+The thing that makes reinforcement learning different from classification is the assumption that the world doesn't tell you which action you ought to take in which situation, but rather you have to kind of figure that out through trial and error. 
+So this is sort of supervised. 
+The assumption is that there's a world out there and it tells you when you're doing a good job and when you're doing a bad job, so there's a sort of world out there that says "good robot, bad robot." 
+But the world doesn't tell the robot what it ought to do, so it's different from clustering in that there is an objective, a direct objective that it's trying to optimize. 
+But it's a sort of weaker amount of information that it gets from the world so sometimes it's just called semi-supervised. 
+So that's sort of the big machine learning pictures. 
+These are the kind of categories of things that people tend to want to do. 
+==========
+All right, so now we're going to go back down to the specific case of looking at classification algorithms, so Mike started us off in classification last time and I'm going to probably spend the rest of the day talking about classification, and I may finish it up or we may do some more next time. 
+The reason to spend so much time on classification is that it's one of the most common learning problems that comes up and therefore the thing that's been studied a lot, and it's a case where we also have some sort of winning applications, so classification has a lot of techniques for doing it and people really use it for doing things like digit recognition or a good example is a thing which happened to me recently. 
+I don't know if you've had this. 
+When you use your credit card in an unusual way, sometimes an alarm will go off, figuratively. 
+The person will say the charge has been refused or we're supposed to call the credit card company. 
+So there are actually learning algorithms behind that stuff that try to learn the patterns, either general patterns of fraudulent credit card uses -- "I'd like to see if you're doing something which seems like it ought to be fraudulent." 
+Or a more interesting example is in cell-phone users, so they use learning algorithms to try to detect cell-phone fraud. 
+In that case, they try to learn your pattern of usage and then notice if suddenly your pattern deviates from what it used to be (inaudible) some alarm's going off. 
+So there's all kinds of cases where people really do classification, and in this case they're just trying to classify behavior as to whether it's fraudulent or not. 
+So that's (inaudible) about classification. 
+OK, so in learning a classifier, one thing that's useful to think about is that in terms of machine learning algorithms, a classifier... 
+Classification learning algorithms, and what it takes as input is a set of XI/YI(?) 
+pairs. 
+That's our data, and we're going to predict the Y's from the X's and the Y's are usually one or zero, or one or minus one. 
+And what comes out here is some kind of a mapping. 
+mapping X's for (inaudible). 
+Each particular algorithm usually has a set of possible mappings that it could give you as the answer, and the set of possible mappings is sometimes called the hypothesis class. 
+So one thing to do when you're thinking about a classification problem is to think about what would be a reasonable set of hypotheses for this particular problem that I have, so in the case of perceptrons, what was the hypothesis class? 
+What was the set of possible answers that we could get out. 
+Excuse me? 
+S: (inaudible) __: Yes, linear and (inaudible), so they were the hypothesis in classifying the X's were hyperplane. 
+They were linear divisions between the pluses and the minuses. 
+And so you could thing about, well, is this is a good hyperplane or a bad hyperplane, so that's what the perception algorithm's going to do, and if you want to decide here is this a good or a bad learning algorithm, is this a helpful or unhelpful learning algorithm, there are two questions you can ask. 
+One is, does it give me the best member of the hypothesis class for my data, and the other is, is the hypothesis class itself appropriate for the set of problems that I'm trying to solve. 
+So sometimes one of your separators will be good enough and sometimes they won't, but if linear separators aren't good enough for you then the (inaudible) algorithm is just never going to help you and you're not going to find a better algorithm in that class. 
+You're going to need to move to a different learning algorithm that has a bigger hypothesis. 
+So that's what moving into the multilayer perceptrons will let us do, so today I'm going to basically drive us to the multilayer perceptron algorithm. 
+==========
+I'm going to back up a step or two to establish some ideas. 
+So here's a linear separator. 
+What we know about the perceptron algorithm is that there's basically a perceptron theorem which says you have to (inaudible) data and linearly separable then we'll find a separator. 
+That's what the perceptron reporting algorithm says. 
+Now, but what if they're not linearly separable? 
+We might get into non-linearly separable case. 
+I can make one here. 
+What's your intuition for what the perceptual learning algorithm will do if they're not linearly separable? 
+What's the structure of the algorithm? 
+What does it do? 
+Go back, think about it. 
+S: (inaudible) __: Good. 
+Try to submit a (inaudible) member of its classifications, so it runs in this iteration. 
+It goes along and for each sand(?) point it says, "Am I getting this sand point right right now?" 
+And if it's getting it right it doesn't do anything. 
+If it's getting it wrong it's just hyperplane. 
+So if the data are linearly separable you can show that eventually it's going to get in a situation where all the pluses are on one side, all the circles are on the other side and then it's going to quit because if there aren't any more errors (inaudible) it doesn't have (inaudible) there. 
+In a case like there, where it can never get it right, it's basically going to just keep moving that little hyperplane around it and it's never going to converge to anything and you can't really guarantee exactly what it will do. 
+So that's a little bit unsatisfying, because even if you think that you have a problem that having a linear separator is a good enough answer, there might be noise and sensor(?) 
+reading or who knows what, and if you have just a little bit of noise then the perceptron can be really thrown off. 
+So one thing that you could do is try to come up with a different error criterion, because the error criterion for the perceptron is to say, "I'm going to find a line and any line that doesn't make any mistakes is good enough for me. 
+In fact, my whole goal is to just find a line and it doesn't make a difference. 
+But now, let's say we want to relax that. 
+What we want to (inaudible) is to relax and strengthen it. 
+We could say, you know, I think some mistakes are inevitable, but sometimes I'm going to get things wrong. 
+Sometimes they're going to have points on the right-side line. 
+But at least I'd like to minimize either the number of mistakes or how far away they are from the line or something like that, so one next step that you could take is what's called a mean-squared error criterion. 
+==========
+So let's take the following view, that our X's -- that our Y's are in this phase(?) 
+minus one plus one. 
+That doesn't really matter if they are, actually. 
+Then you could say that what I want to do is find a set of weights -- remember, I'm still trying to find a line, I'd like to find a set of weights. 
+And I'm going to try to come up with a model where Y is expressed directly as the by-product of the input and the weight(?). 
+So before we pick the by-product of the input to the weight then we put it through this linear threshold function, and we just said there are possibly going to be guys on this side of the function and there are guys on that side of the function. 
+Here we're going to actually say that we want to try to generate the ones and the minus ones. 
+Or you could think of it as where we wanted to (inaudible). 
+So in that case we could establish an error criterion, and this is what we would like if -- our goal in life would be for our Y's to be expressible as a linear function of the X's and the question is can you find some linear function of the X's that causes the guys on one side of the line to be mapped to negative one and the guys on the other side of the line to be mapped positive. 
+In fact, we'll probably make a classifier that says our output, if we really use this thing, will generate an output of plus one if W-dot-X is greater than zero and minus one otherwise. 
+So we'll use it in the same way. 
+We'll use it as if we had a threshold function but we're going to train it to a different criterion. 
+We're going to train it to a criterion that's based on this idea, and so we're going to say we wanted to establish a notion of how good is a set of weights for our problem. 
+So how good is a set of weights? 
+Well, a set of weights is good if it gets all the data points right, or the error of a set of weights is the error of the weights on the sum of the main point(?) 
+so we're saying we have a data set. 
+We're going to look at each point in the data set so each I in the data set, and we're going to ask what's the difference between the answer that we're supposed to generate for that data point and the answer (inaudible) that my model generates. 
+So this is the real answer, and then the answer that my model generates. 
+I want to look at the difference between those two things, and because they (inaudible) not be sensitive to the sign of the difference and because various things work out nicely, (inaudible). 
+OK, and so now mostly I write this as (inaudible). 
+I really want my answers to be close as I can in the squared error sense to these desires answers (inaudible). 
+So now I can try to find a set of weights that minimize the error function, and in fact this is a simple linear case. 
+You can do it analytically, but I'm going to do it a different way because it's going to help us do the gradiant, the multilayer perceptron thing. 
+Everybody following what I'm up to? 
+OK. 
+So the basic idea, so there's a whole general class of algorithms called gradient descent algorithms, and they say if you want to minimize some quantity, so we want to adjust our weights, W, to minimize E of W, what we can do is take steps downhill. 
+So you think of W, E of W. So somehow there's these weights that we get to adjust. 
+In our case, it's going to be in many dimensions, but I'll start in one. 
+So let's say we have one way we get to adjust. 
+Here's the error as a function of that weight, and what we want to do is we find ourselves as some point in weight space. 
+We just pick an initial setting of the weights. 
+We could choose(?) 
+the gradient, which is the direction of steepest descent downhill, and then we pick a set. 
+And we do that again, and we do it again, and we do it again, and we do it again. 
+And depending on how big the steps are that we take, we either converge to a local optimum or we get into deep trouble. 
+So there are rules about -- you have to pick the step size with it. 
+It gets smaller and smaller and you go if you really want to prove that you (inaudible). 
+So in all kinds of cases, even if you can't analytically compute the local optimum you could at least do this kind of walking downhill to get to (inaudible), so you've probably seen this in some other contexts. 
+But lots and lots of algorithms on machine learning basically turn into optimization problems, so here we have an observation problem. 
+We just need to find the best W, but that's hard to do, so we're going to do it by the method of gradient descent. 
+And it turns out there you can do it incrementally nicely, so I'll come back to the incremental case in a minute, but we'll just look at the (inaudible). 
+OK, so can we derive a gradient descent rule for learning a set of weights in this learning algorithm? 
+The answer is sure, all we have to do is take the derivative of the error, the first derivative of the error with respect to the different weight. 
+So we want to compute the partial derivative of the error with respect to weight of J, because this is after all the sum over the J's of weight J. I'm just assuming that we've added a one to all of our input vectors so that -- Mike talked this last time -- so that our thing doesn't have to go through the (inaudible) so it has an offset. 
+We're not even going to talk about that. 
+OK, so what is the partial derivative of the error with respect to the weight of J? What's the derivative of the sum? 
+Sum of the derivate? 
+We have to go kind of (inaudible) though this. 
+All right, on our error is a sum so the derivative's going to be a sum over that way. 
+OK, so then we have a squared term, so we get two, put it out there, times the derivative of the stuff inside. 
+OK, so the derivative of Y-sub-I with respect to weight J is zero. 
+They're not related to each other. 
+The derivative of this dot product with respect to weight-sub-J will - - all the terms except for the ones that involve weight-sub-J and X J go away. 
+And so we're locked with X J. S: Minor? 
+__: Minor. 
+Shoot, now I'm going to diverge from my notes, because I wrote it the other way around. 
+I'm going to flip it now because if I don't I'm going to get all messed up as I go on, so instead of putting the minus out there I'm going to do this. 
+OK. 
+==========
+Just so you remember our notation this is the J component of the I input vector. 
+So there's the derivative of E, so now we can derive an algorithm, and our algorithm is going to be that we choose W arbitrarily. 
+We'll come back to that in a minute. 
+Then we loop setting W -- we have one loop, and then we have another loop that says for all J, weight J, it's going to get assigned to the previous weight J minus some learning rate times the derivative, right? 
+Because we're going to go down the hill. 
+The minus has to do with moving downhill. 
+This output is a learning rate which we'll talk about, or a step size. 
+Let's call it a step size. 
+It's more erudite. 
+And then we have our expression for the gradient, and then we've got that two -- but this is kind of a scalar thing so we'll ditch the two. 
+Then we get the sum over all of the data patterns of W dot X I minus 5 I times X Y. So there's an algorithm. 
+And people have shown that if you do the right thing with the step size parameter, which is usually make it smaller as you go, then this will actually converge to an optimum, and in the linear case there's really a single minimum, so you don't have to worry about converging to a bad (inaudible). 
+All right, this kind of algorithm makes sense to everybody. 
+I'm basically doing this one so we can do a more complicated one. 
+S: So your algorithm (inaudible) your input? 
+__: Yes. 
+Well, we look through the I's here. 
+OK, so let me talk about a variation on this one. 
+So let's be sure that this algorithm is OK. 
+So we're saying for every weight we're going to move it. 
+In general what we're going to do is we're just going to keep moving the whole factor of weights, and how do I move a particular weight? 
+Well, I go and I compute this sum over the I's, and that tells me how to move that way. 
+S: (inaudible) __: When things aren't changing very much. 
+And that could get you into trouble if it turns out that the basin of the thing is really flat and the thing's won't change very much but you might be pretty far away from (inaudible). 
+The method of gradient descent is fraught with difficulty and there are books and books and books on how to accelerate it. 
+You can compute (inaudible) derivatives, sort of a Newton's method type thing which tells you how to take jumps. 
+You can -- there's a bunch of pitfalls but they're addressed generally in the question of how you do gradient descent methods, not particularly for the (inaudible). 
+But if you're going to apply this you do actually have to be (inaudible) a lot. 
+Any other questions? 
+Yes? 
+S: (inaudible) __: This is a vector. 
+So X I is the whole input vector, the whole I input vector, and X I sub-J is the J element of that vector. 
+And so, I mean, if you look at it it's sort of interesting. 
+This term is sometimes described as an error term, right? 
+This is how far off, how far wrong we were on data case I. And you're saying, "I'm going to adjust this weight." 
+So, let's (inaudible). 
+Here's X1 through XN. 
+You can think of these as variables, and they're going to get multiplied by the weight and summed up, and here comes our answer. 
+So the question is, how much should I change this weight, right? 
+So here I've got a particular assignment to the X's. 
+What came out was the particular answer. 
+Now I compare what actually came out to what I wish would have come out. 
+There's my error. 
+That's how bad this instance is. 
+Intuitively, you think, well, the bigger the mistake I make, the more I have to change the weight, so that's good. 
+We have that kind of proportionality. 
+And then we have the proportionality on the particular (inaudible) and we're asking the question how much should I change, say, weight one. 
+And how much you should change weight one is proportional to how big an error you have on this whole input pattern and also to how big a number you have here as the input, because intuitively the bigger this X(?), the more it contributed to the answer that got generated, so if this is a big contributor, then it sort of deserves more of the blame for that error, and so it should get a bigger update. 
+Kind of a (inaudible). 
+S: (inaudible) is actually like a sort of (inaudible). 
+__: Right, the J's are the features, yes. 
+S: And then the (inaudible) like one data point (inaudible). 
+__: Which datapoint, yes. 
+So you might have a file of somebody's temperature, and their age. 
+That would be (inaudible) X1 and X2. 
+Then you're trying to predict something based on that. 
+And then if you have a whole bunch of these, this whole thing would be called X1. 
+And so (inaudible) X3, so the temperature of the third patient would be X-super-3 (inaudible). 
+OK, any other questions? 
+So let's think about the way we're doing the tree(?) 
+here. 
+So if that's the error criterion we're trying to minimize, then this is a really very direct way to do it. 
+We just take the derivative. 
+This is the right (inaudible). 
+But sometimes you would like to use this algorithm in a little bit of a different way and it turns out it's OK to do that, and so you might imagine that you're in a situation where there are just new patients coming in all the time. 
+So at this rate we're saying our algorithm has to be able to iterate over all the patients, iterate over all the data cases just to make one step of updates to the parameters. 
+You might imagine applying this online so that every time when your patient comes in you somehow do an update (inaudible) and then you throw the patient away, do a new one, and update the base. 
+Out goes the patient, right? 
+If you want to log the data and not enough brain to remember all those data cases, then you might have to just make incremental updates based on each person that comes in, and it turns out that that's OK, so this is typically called a batch training version of the algorithm, because we have a batch of data, and we'll just repeatedly go through that data in order to (inaudible). 
+==========
+Another situation is online training, and in this case we don't really assume that we have a batch of data. 
+Instead we really think of ourselves as having a data source, which generates X Y pairs according to some possibility distribution. 
+So that's like the source of patients. 
+Every time one comes through the door we think of it as grabbing a person independently from this distribution. 
+Then our error criterion, instead of being a sum over the particular dataset we have becomes -- now we have a clash of notations big time. 
+The expect -- error expectation of Y minus W (inaudible). 
+Where now Y and X are random variables drawn according to this distribution. 
+So instead of saying I want to do a good job on my dataset for a particular fixed data set, you want to say I want to do a good job on average with respect to some underlying probability distribution that's out there and describes the way people come through the door. 
+But then, we don't want to actually estimate that probably of distribution because that would be too tedious. 
+So it turns out that you can do something called stochastic gradient descent, and in stochastic gradient descent instead of computing a really good estimate of the gradient(?), 
+so here this really is -- if that's our error criteria, this really is the gradient. 
+We just know it, and we go down that way. 
+In stochastic gradient descent, it's like we just draw a sample of what the gradient might be like. 
+Each person comes in and they tell us not really what direction to go, but an example of what direction to go in. 
+You could show that if you do this right and you just let each person kind of influence the weight individually, you'll also end up converging to the right solution, so you get a training algorithm that looks instead like this. 
+We still choose W arbitrarily. 
+I'll come back to that. 
+Now I loop. 
+I choose -- let me think. 
+Choosing has too much volition in it. 
+I draw X I Y I from E of X Y. That means I allow a patient to come into the door, or a fish to come down the conveyor belt, or something. 
+And then I do an update to my weights based just on this example, so I sort of (inaudible) and let W J get W J (inaudible) alpha. 
+(inaudible) So here I just have this one datapoint in my hand. 
+I let that influence my weights, and then I throw it out the window. 
+They don't have any memory requirement. 
+So that's another way that you can (inaudible). 
+S: (inaudible) __: You're right. 
+There's a very strong assumption here. 
+The convergence assumptions are that there's data really drawn independently from this source, so that -- you're right. 
+In some sense, the old data can get overwhelmed or forgotten. 
+But if you believe they're being drawn independently at random, then whatever it was that you used to know will always be refreshed at some point by the sample. 
+(inaudible) that's how it works. 
+You also have to take care. 
+In this case, you really have to be sure to decay(?) the alpha. 
+As the alpha gets smaller and smaller and smaller, it's like you're averaging over a longer and longer window, so that's crucial. 
+So if alpha is too small then you don't take big enough steps in the beginning and it takes you forever to go down the hill that you need to go down. 
+If alpha is too big, then every new patient that comes in, you kind of are blown in the wind. 
+So each person, uh-oh, this one had heartburn and died. 
+OK, for sure, the next person who has heartburn is going to die. 
+You would take too big of a step. 
+You don't want to do that. 
+So a small alpha lets you average over a lot of people and also makes you slow. 
+So there's always a tension and a trade-off and usually what you do is you let the alpha get smaller over time. 
+All right. 
+So this is sometimes called the online case and -- END OF SIDE __: ...because 
+people wanted to try to make models of how neurons might learn. 
+We know what we know about neurons means that a lot of these models probably really can't be right, but in any case, certainly the view that what your brain does is -- I can't even say, certainly, but for a variety of reasons it's more attractive to have a model like this that just incorporates each new datapoint into the sort of fixed settings, the connection rates in your neurons rather than having to keep all these things in a file and keep going through them. 
+So, this view is more effective. 
+This is the way to wring every last thing out of the data that you have. 
+This is the way to use lots of data but in a very lightweight manner. 
+There one more training strategy which actually will be relevant, especially in which it doesn't really make any sense in this context, but it will make more sense later on, but I'm going bring it up now, called "stochastic training". 
+This is a case where we have a fixed data set but what we do is we draw examples uniformly at random and do online training. 
+That's another way that you could do things. 
+Instead of summing over all the examples in your file you could just pick an example, do an update, pick an example, do an update. 
+There's another thing that people sometimes do, which is to go through their files in order, picking an example and doing an update. 
+That's not strictly OK, because it violates an independent assumption about the sampling. 
+You sort of -- correlations in your sampling, and that might not cover (inaudible). 
+So just register the idea of stochastic training and we'll come back to it. 
+All right, so this is -- I'll choose something arbitrarily. 
+Well in this case it doesn't really matter because in the linear case because you have a bowl(?) 
+you can start with any weight vector and you'll eventually get to the optimum. 
+That will not be true later on. 
+OK. 
+So now I'm going to take the next step towards back propagations, right, where it's multi-layer perceptrons. 
+Are you OK with this? 
+All right. 
+==========
+So our goal in the multi-layer network, if you remember, is to come up with a way of having a non-linear separator, because a linear separator can only do so much, right? 
+You might just have data that looks like this and you want to be able to say, look, these guys and those guys all go together, and no matter how good your (inaudible) for fitting a linear separator is, you're not going to be able to do that. 
+So my (inaudible) if we had a multi-layer perceptron we could represent XOR, and then more generally we could represent any kind of function we want to with a sigmoidal along the (inaudible). 
+So what I'm going to do is just look at a sigmoidal unit, a single unit first, and we'll figure out how to do the mean squared error update for that, the aggregated descent map(?) for that, and then we'll do it for the whole map. 
+So we're going to build up to doing this case, but for right now let's consider the single sigmoidal unit. 
+So what I mean is that we're going to try (inaudible) the thing that was like -- so our parameters are still these W's but what has changes it that we're going to run this product through the sigmoid hunch(?), so G of X is 1 over 1 plus e to the 1, and it looks like this. 
+In fact, people often use the hyperbolic tangent which looks just like that but goes from minus one to plus one, but since it's not the example that's in all the books I'm going to talk about this one because this is the one (inaudible). 
+There are actually reasons to prefer the other one. 
+OK, so now we're going to have a machine that generates answers that go between zero and one, and we're going to try to -- so now we'd better arrange it, at least move our Y's so they're between plus one and minus one or plus one and zero, then we're going to try to do the same (inaudible) we did before, but now we have this non- linear adding in the output. 
+Now we're going to use this thing -- again, we're trying to train this thing to generate zeroes and ones for our datapoints. 
+It's still going to make it so there's a non-linearity in its output, but it's still going to display the linear separator. 
+Sometimes that can be confusing so I'm trying to be sure that that makes sense to you. 
+So we're still -- in the end we're going to say that something is in class one of some input X if G of X dot W is greater than, in this case, .5 and that we're in (inaudible) class two otherwise. 
+This will induce a hyperplane separator in the space of X so the separator is still a linear separator as long as we have only one of these things. 
+We're going to get to put them together and (inaudible) but for right now we're still going to have a linear separator in the world but the function that we're using to do this operation on is different. 
+Does that make sense to everybody? 
+OK. 
+So now, (inaudible). 
+==========
+So now let's derive a gradient descent rule for this. 
+So we have the error (inaudible) the weights (inaudible) planes of -- I'm going to develop just a little bit of notation. 
+I'm going to let O I be G of X I dot W. So what is X? 
+That's the actual output -- O is for output -- that's the actual output when we got input I. So Y I is the output we would like, O I is the output we got. 
+It's going to be handy to have that name around. 
+OK, so how can I write that error criterion? 
+Which thing would we like to be close to which other thing? 
+Z: O I and Y I? __: Got it. 
+We would like O I to be near Y I and (inaudible). 
+So there's our error coding. 
+In terms before, it's the same error criterion, really. 
+Before, O I was just X I dot W. Now it's G of X I dot W. So now we can derive -- so how do we -- how does the error change as the function of one of the weights? 
+That's the question. 
+Well, to (inaudible) the I's, O I minus Y I. OK, now I have to take the derivative of the inside so what's the derivative of the O I with respect to one of the weights? 
+We have to do that in pieces too, so for the derivative of this thing with respect to W, it's the derivative of G, X I dot W. We'll come back to that. 
+Then times the derivative of the inside stuff, and then derivative of this inside stuff is X (inaudible). 
+OK, so except for the G prime part, do you believe that? 
+I'm sure you knew how to do it once upon a time, but usually the stuff just falls right out of your brain. 
+OK, G prime of X. I'm not going to derive it, but you can do it if you want to refresh your freshman calculus knowledge. 
+Turns out most elegantly that G prime of X is equal to G of X times one minus G of X. Cool beans. 
+Right, for this particular definition of G, right. 
+If this is G then that's true. 
+If something else was G, then that's not. 
+OK, so that means we get... 
+That's the derivative. 
+It's not too hard to calculate. 
+And now last time we saw how to go from a derivative to a gradient descent algorithm. 
+Same thing here. 
+We just use this derivative instead of the other derivative. 
+OK? 
+==========
+Now for the grand finale. 
+So we needed a little intuition. 
+We could gain a little intuition here. 
+The little bit of intuition is this. 
+No, it doesn't matter. 
+(inaudible) OK, so now we want to do multi-layer (inaudible). 
+I'm going to do this for a special case which is probably just more than you want to see anyway. 
+Let me just be sure that I get my notation right because this is a bear. 
+If you're notation is wrong, then it all comes apart. 
+So we have X1 through XN. 
+Those are our inputs. 
+Now we're going to have hidden nodes Z1 through ZM and we're going to have our output node Y. These are hidden, these are (inaudible). 
+And our inputs are all (inaudible), sometimes called a (inaudible) connected network. 
+So let me draw a little more in for you. 
+So the inputs, every input is connected to every hidden node and every hidden node is connected to the output. 
+The same notation for the weights. 
+I'm going to call the weight on this link weight super-Z 1 and this one weight super-Z M. So this vector weight here is called weight Z. Configure those as a -- I don't know why I called it that, but I did. 
+The weight's coming out of the Z, one for each Z. 
+This vector weight, I'm going to call weight 1. 
+So this vector weight here is weigh M. And this particular weight here, for instance, is called weight M2. 
+So weight M2, that's the weight from input two to hidden node M. OK? 
+All right, and I'm going to assume that each one of these things is a sigmoidal unit -- I'll put a little sigmoid picture in there -- of the kind that we just looked at. 
+So please tell me Z -- oh, yes, there's the whole question of entities. 
+(inaudible) Z K is what function of the axis? 
+How do I write down an expression for Z K as a function of X's and W's? 
+For Z K (inaudible) one of these, think of Z 1. 
+What's Z 1? 
+S: (inaudible) __: Yes. 
+G of... S: (inaudible) __: Correct. 
+So what comes out of here is the sigmoid function G applied to the dot product of the weights of the incoming arcs, that's W super 1 times X which is the vector input. 
+So this is going to be X dot W K. OK? 
+So we're just saying what comes out of each of these Z's is G of the input vector X dotted with the weight vector that goes into that unit. 
+All right, what's Y? S: It's the (inaudible) J of Z multiplied by the W of Z. __: Good. 
+All right, so similarly, the computer which comes out of Y, we take all the outputs of the Z's, starts at vector Z. Z stands for this vector of all the values coming out of here. 
+We dot product it with the weight from those arcs and we run it through the sigmoid function and get out Y. So now you know if you do the weights and I gave you an input X, you could compute the output of the set, right? 
+Everybody could do that? 
+OK, good. 
+Happy to answer questions? 
+S: (inaudible) how many (inaudible) do you need? 
+__: Oh, that's a good one. 
+We'll come back to that at the end. 
+I'm going to have a whole long list of things to talk about. 
+For right now, let's assume that it's six, by telling you there are six or four or something. 
+So the number of Z's is fixed and which nodes are connected to which other ones are fixed, in this case, in this particular pattern. 
+OK, so the error is going to be as before. 
+OK, and O I -- sometimes Y. OK, let me actually just write it (inaudible). 
+This is the relationship we would like to have hold, but in fact we'll call this thing for a particular Z I we'll call this O I and we're going to have to have V I's. 
+So a particular input X I comes in, and that's going to cause some set of Z values to be calculated. 
+That'll be Z I and that will cause an output here and we're going to call that output O I. All right. 
+So that's O I. OK, so now we have to do these tier jobs (?) and then we'll be done and I'll talk to you about all the ramifications of all this next time. 
+So tier jobs are to figure out the gradient of the error with respect to one of these weights, because all these weights have the same basic structure, so we could figure out how wiggling one of these weights will change the error, then we'll know how to update these, and then a little bit tricker, we have to figure out how wiggling one of these waves all the way back here will change the error. 
+So that's our job, so we'll do the easy case first. 
+The easy case is going to be D E by D W Z -- let me just get what notation I used. 
+K. So we're going to consider a particular one of these weights. 
+How does that effect the error? 
+Yes? 
+OK. 
+So, You'll be used to this part of it now. 
+So far that's all as before, and now we need D X I dot W -- oh, let me get this clear. 
+X I dot W Z. No, no, no, sorry. 
+I've got to add my (inaudible). 
+OK, O I is the Z I dot W so this is G of Z I dot W Z. One minus G of Z I dot W. Now we need to figure out the derivative of this thing with respect to W D sub K. Well, lucky us, all the terms fall out except for the one that involves W D sub K and the thing there is the super I sub K. So that's it. 
+So this is just beautiful, right? 
+It says in order to update this weight, all that matters is what is happening on the output and how activated this node was, what the Z was coming out of here, because that tells you how big a responsibity, how big a contribution this weight was making for that answer. 
+So that's good. 
+That's just like what we had before. 
+It ignores the fact that there was some whole big network computing with these. 
+It doesn't care. 
+It's just knows whatever Z was, that now (inaudible). 
+==========
+Now, let's do the trickier one. 
+(inaudible) W K L. I get W K L is going to be the weight from input L to unit K. This is from input L to hidden K. So this is how much do we have to adjust one of those weights out between the inputs and the hidden nodes. 
+So we get our standard story here, G of -- that so much stays the same, and now we have D by D W K L of Z I K started with -- sorry, this isn't Z. S: (inaudible) __: I'm sorry, where? 
+S: In the (inaudible) you erase the dot product (inaudible). 
+__: Oh, no. 
+S: (inaudible) __: Yes, yes. 
+OK, so the question now is what is the contribution -- what all this first stuff has to do with how badly wrong we are here. 
+And now we're going to have to figure out what consequences that has going back through the rest of the (inaudible). 
+So let's do that, the subproduct(?). 
+So now we want to ask the question, if we change this weight how much is it going to change the output of unit K. Changing this weight is not going to change the output of any other units, so they fall out. 
+The partial derivatives go away. 
+That's why we only have that one term left over there. 
+So how much is changing this weight going to change the output of that unit? 
+Remember that the Z here is the G of X dot W so we'll get G of X I dot W K, 1 minus G of X I dot W K, and then the derivative of the stuff that's on the inside with respect to that weight, and the only one that's going to matter is X I F. So what do we get in the end? 
+The final rule we get for D E by D W K L is -- now, I'm going to take this and call it delta I. That sort of -- really, the error (inaudible). 
+You can think of it as being a measure of the error that's happening at the output end, OK? 
+So we're going to have this to sum over the I's, the error that's happening because of I, and now we have the derivative of this product so we're just going to get W Z K times the derivative of Z, so we'll plug this thing in. 
+So now let me use a better (inaudible). 
+So what we're saying - - so we're interested in a particular weight. 
+Let's take this one. 
+We want to know how much did we change this weight, and what we're finding is that it depends on how much error we have here times weight Z K which is how big a connection there is between here and there times something like the amount of error that we have here times the value that we have here. 
+So well, this is how messed up we are, this is how much of that being messed up can be attributed to this guy, this is how messed up this guy is, and this is how much this particular input contributed to this guy's being messed up, and that's how much we should change this weight. 
+You can do this in the general case for much more complicated networks but the indices get out of hand, so I'm not going to hope to do that on the board. 
+==========
+Next time we'll talk about how you actually make this into a practical algorithm and another couple of algorithms for doing classification. 
+END OF TAPE
+==========

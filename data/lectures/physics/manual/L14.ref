@@ -1,0 +1,490 @@
+==========
+If you are standing somewhere on Earth ... this is the Earth , the mass of the Earth , radius of the Earth , and you 're here .
+And let 's assume for simplicity that there 's no atmosphere that could interfere with us , and I want to give you one huge kick , an enormous speed , so that you never , ever come back to Earth , that you escape the gravitational attraction of the Earth .
+What should that speed be ?
+Well , when you 're standing here and you have that speed , your mechanical energy which we often simply call E , the total energy is the sum of your kinetic energy this is your mass ; this is your escape velocity squared plus the potential energy , and the potential energy equals minus m Mg divided by the radius of the Earth .
+So this is your kinetic energy and this is your potential energy always negative , as we discussed before .
+Mechanical energy is conserved , because gravity is a conservative force .
+So no matter where you are on your way to infinity , if you are at some distance r , that mechanical energy is the same .
+And so this should also be one half m v at a particular location r squared minus m M earth G divided by that little r .
+And so at infinity , when you get there little r is infinity , this is zero , potential energy at infinity is zero and if I get U at infinity with zero kinetic energy , then this term is also zero .
+And that 's the minimum amount of energy that I would require to get you to infinity and to have you escape the gravitational pull of the Earth .
+If I give you a higher speed , well , then , you end up at infinity with a little bit net kinetic energy , so the most efficient way that I can do that is to make this also zero , so you reach infinity at zero speed .
+So this is for r goes to infinity .
+And so this E equals zero then .
+And so this term is the same as this term for your escape velocity .
+And so we find that one half m v escape squared equals m M earth G divided by the radius of the Earth .
+I lose my little m , and I find that the escape velocity that I have to give you is the square root of two M earth G divided by the radius of the Earth .
+And this is enough , is sufficient to get you all the way to infinity with zero kinetic energy .
+If you substitute in here the mass of the Earth and the radius of the Earth , then you will find that this is about 11.2 kilometers per second .
+That is the escape velocity that you need .
+It 's about 25 , 000 miles per hour .
+Again , we assume that there is no air that could interfere with you .
+If the total energy when you leave the Earth with that velocity if the total energy is larger than zero , you do better than that .
+You reach infinity with kinetic energy which is a little larger than zero .
+We call this unbound orbit larger or equal .
+If E is smaller than zero , that the total energy that you have is negative , then you will never escape the gravitational pull of the Earth , and you will be one way or another in what we call a bound orbit .
+==========
+Let 's pursue the idea of circular orbits .
+Later in the course we will cover elliptical orbits , but now let 's exclusively talk about circular orbits .
+Now , this is the mass of the Earth , and in a circular orbit is an object with mass m , a satellite , and m is way , way , way smaller than the mass of the Earth .
+And the radius of the orbit is R , and this object has a certain velocity v , tangential speed .
+The speed doesn 't change , but the direction changes , and there has to be a gravitational force to hold it in orbit , and the gravitational force is exactly the same as the centripetal force we 've discussed that many times before .
+And so the gravitational force which is necessary to make it go around I could also say the centripetal force is necessary to make it go around in a circle that gravitational force equals m M earth G divided by R squared .
+This is now the distance from the Earth to the satellite , and that must be equal to m v squared divided by R , and that is that tangential speed that you see here , which a little later in time , of course , would be here .
+I lose my m , and so you see now that the orbital speed not to be mistaken for escape velocity the orbital speed is exactly the same what we have there except the square root of two divided by R .
+This is now R .
+And there it was R earth .
+If you know R , then you can calculate the speed in orbit .
+If you know the speed in orbit , you can calculate R .
+And so the period of going around in the orbit , T equals two pi R divided by the orbital speed , and when you do that , you get two pi .
+You get an R to the power three halfs , and you have downstairs the square root of G M earth .
+Let me move this in a little .
+Two pi R to the power three halfs .
+So again , if you know the radius , if you know how far you are away from the Earth , the period follows uniquely .
+If you know the period , then the distance to the satellite follows uniquely .
+If we take the shuttle as an example of a near Earth orbit , so we have the shuttle .
+The shuttle may be 400 kilometers above the Earth 's surface .
+So we have to add to the radius of the Earth 400 kilometers , so you end up with about 6 , 800 kilometers for the radius of the orbit of the shuttle , and you substitute that in here , the mass of the Earth and the gravitational constant , you 'll find that T is about 90 minutes .
+It 's about 1 hours .
+The shuttle takes about 1 hours to go around , and the speed , that tangential speed , is very close to eight kilometers per second .
+And that holds for all near Earth orbit satellites .
+Whether they are 400 or 500 or 600 kilometers , that doesn 't change very much .
+If you take the moon the moon is much further away than the shuttle , and you take the distance to the moon which is some 385 , 000 kilometers you substitute that in this equation , you will find that the period for the moon to go around the Earth is about 27 days .
+And its speed is only one kilometer per second .
+It 's much further out .
+If it 's much further out , R is much larger , and so you see the speed will be much lower .
+If you take the Earth itself around the sun because we can use all these equations replace the mass of the Earth by the mass of the sun , and then we can do this for planets .
+So if we take the Earth around the sun , then we have to put in the mass of the sun , which is about two times ten to the 30 kilograms .
+And the distance from the Earth to the sun , we have seen that before I call that the distance from the sun to the Earth is about 150 million kilometers .
+Forgive me for mixing up meters with kilometers , but you have to convert that , of course , to meters .
+And when you calculate how long it takes the Earth to go around the sun , no surprise you will find 365 days .
+So that 's simply substitution of these two quantities in the equation that I have here and that I have here .
+The velocity of the Earth in orbit is about 30 kilometers per second .
+That 's a substantial speed , by the way , that the Earth is going around the sun 30 kilometers per second way higher than the speed that the shuttle is in around the orbit ... around the Earth , which is only eight kilometers per second .
+Jupiter is five times further away than the Earth , and so the time for Jupiter to go around goes with five to the power 1 .
+That 's about 12 , so it takes Jupiter about 12 years to go around the sun .
+Notice that this period is independent of the mass of the little satellite , and that was very unfortunate for the Americans when on October 4 , 1957 , Sputnik was launched .
+They could find the radius very easily , because they knew the period that it took Sputnik to go around the Earth .
+That was about 96 minutes .
+They could calculate the velocity , they could calculate the radius , but they had no clue about the mass , and that was a key piece of ingredient that the Americans wanted , because if the mass was very large of Sputnik , that would indicate , of course , that the Russians had very powerful rockets .
+You cannot tell the mass from the orbital parameters it 's independent of mass .
+Whether you have a very light object or a very heavy satellite , they have the same velocity in orbit if they are at the same distance , and they have the same orbital period .
+I mentioned earlier , notice that the orbital period and the escape velocity vary by a square root of two if you are at a particular position .
+For instance , you 're at a particular position around the Earth , here at a satellite .
+If you want to escape from this , you will need a speed which is the square root of two times larger than that orbital velocity .
+And so if you wanted to escape from the Earth , then you need your 11.2 kilometers we have it there .
+If you are near Earth in orbit , you are eight kilometers per second , and eight times the square root of two is exactly that 11.2. So you see the connection is always through this square root of two .
+There is something remarkable about these numbers .
+The total mechanical energy and I will write that once more here which is one half m v squared at a given radius minus little m capital M G over r ; whether M is the mass of the sun or the Earth is of no concern to me now .
+This is the kinetic energy for something in orbit at this radius , and this is the potential energy .
+But now notice , I can substitute now for this v squared , I can substitute the square of this that is the orbital speed and then I get M G over R .
+And so this one equals one half m MG over R .
+And now compare the two .
+They almost look like carbon copies of each other , except that there is a minus sign here , which is crucial , and there is a half here , which is missing here .
+And so the total energy E which I 've called the mechanical energy always for a circular orbit is one half U and is the same as minus the kinetic energy .
+A remarkable coincidence , you would think .
+It is not as much a coincidence as you think , of course .
+But if something is in orbit , this is the orbital speed at radius r , then always is its total energy ... is half the potential energy .
+It 's always negative .
+Okay , later in the course we will cover elliptical orbits .
+I will not do that today , and so I will march on to a completely different topic , and that is the topic of power .
+So I will abandon for now the orbits entirely .
+==========
+What is power ?
+Power is work that is done in a certain amount of time .
+dw/dt , if w is the work , is the instantaneous power at time t .
+We also know power in terms of political power .
+That 's very different .
+Political power you can do no work at all in a lot of time , and you have a lot of power .
+Here in physics , life is not that easy .
+The units of power are the units of work , which is joules per second , for which we often write W , which is named after the physicist Watt .
+Don 't confuse this w for work with the W for watt , which is one joule per second .
+Now , the work that I do , that the force is doing , is the dot product between the force and a certain displacement of that force .
+We have dealt with that before .
+That is a little bit of work that I 'm doing , right ?
+I have a force which is constant during a short , small displacement .
+And so I can substitute that in there , and so I get that the power is the derivative of this versus time .
+And that is ... if I keep this force constant for that short amount of time is the dot product times the velocity , because dr/dt is simply the velocity of that object .
+So power is also force dotted with the velocity .
+If the force were perpendicular at all times to the velocity vector , then the power is zero .
+Let 's take an example .
+I am on a bicycle here is my bicycle and I 'm sitting on a bicycle here and I 'm trying to get going .
+And I have a certain velocity , and I keep that velocity constant .
+That 's the way most people would ride their bikes .
+Now , there is air drag , which is unavoidable .
+We discussed that .
+And the air drag acts like a force on me , F drag , and so somehow , I , Walter Lewin , will have to come up with the force in this direction to overcome this drag so that the speed can be constant , because if the net force is zero on me , then of course I will have a constant velocity no acceleration , no change in the velocity .
+How do I do that ?
+Well , I push on the pedals .
+But the pedals push back on me .
+Action equals minus reaction .
+So that causes no net force on the bike at all .
+I push on the pedal ; the pedal pushes back on me ; those two forces cancel .
+We call them internal forces .
+Now , the pedals push on the chain , and the chain pushes on the wheel , and ultimately this wheel wants to start rotating in this direction because of my pedaling .
+And now here with the ... with the floor , with the road , there is friction , and so now the wheel pushes onto the road , and the road pushes back .
+Action equal minus reaction .
+And it is that force , which is really the friction that is the force that Walter Lewin has to come up with in order to make sure that he can go with a constant speed .
+It 's the friction that does it .
+You have to really think about it .
+It 's remarkable .
+If there were no friction of that road , you couldn 't cycle .
+I could do this , and I would just stay still , right ?
+There would never be any force here that would drive me in this direction so you can go .
+Of course , if you had a speed that you were sliding , then , of course , you would always maintain that speed .
+I want you to appreciate that the power that I have to deliver is an extremely strong function of the speed .
+If we are here in the domain of what I called earlier regime two , which is the pressure dominated regime , then the drag force is proportional to v squared .
+Let 's say it is a constant times v squared .
+We spent a whole lecture on this .
+That 's regime two .
+Let 's assume it 's there .
+Then if I have ten miles per hour here , I drive ten miles per hour , and I tell you that the power ... this is a given , this is not something that I show you , that is just a given , that that is about a power of 0.02 , 1/50 , of a horsepower , and one horsepower is some crazy unit 400 ... 746 watts .
+So this is about 15 watts .
+So I 'm pedaling , and I keep my speed ten miles per hour , and I have to generate 15 joules per second on average .
+But now I want to go to 25 miles per hour .
+So here we get 25 .
+That is 2 times higher .
+But now the power that I have to generate is the dot product between the force and the velocity .
+Now , the force and the velocity are in the same direction , so the dot can disappear , so I get that the power is k times v to the third , and so now if I want the speed to go up by a factor of 2 , the power that I have to generate is 2 to the power three times higher , and that is about 15 times higher , so now you 're talking about 0.3 horsepowers , and you 're talking about something like 230 watts .
+And that is quite a power , let me tell you .
+I wonder whether there are many here in the audience who could generate this for more than even half hour .
+Most of us could probably do it for a few minutes , but not for hours .
+It depends entirely , of course , on your condition .
+==========
+There is also heat energy , and heat energy is expressed in a very different way .
+We express that in terms of calories .
+And a calorie is defined in a very special way as the energy which is needed to increase one gram of water by one degree centigrade .
+And so in general we can write that Q , which is heat energy , which is in calories , is the mass of the object times the specific heat , which for water would be one calorie per gram per degree centigrade times the temperature increase that we apply .
+So we increase the temperature of an object .
+The object has a mass m .
+We increase the temperature by this much , so many degrees Kelvin or degrees centigrade that 's the same and then this is the number of calories that you have to put in there .
+Um ... I gave you the specific heat for water in calories per gram , not per kilogram .
+If I gave it per kilogram , which may be nicer for this course , then of course it would be thousand instead of one .
+Aluminum has a specific heat of 0.2. Lead is unusually low it 's only .03. It 's very , very low .
+Ice is only half the specific heat of water .
+Ice is only ... ice is only one half calorie per gram per degree centigrade .
+The physicist James Joules , after we ... we call after him the unit of work was the first to demonstrate that heat energy and mechanical energy are really equivalent .
+He did an ingenious experiment .
+Of course once you hear it , you said , Well , I could have thought of it myself .
+He takes objects with masses which hang from strings and he lowers them in a gravitational field over a certain distance .
+So he knows what mgh is .
+And he uses this rope to rotate scoops which are in water .
+And these scoops are driven .
+There is mechanical energy , mgh comes out in the scoops , and what does he notice ?
+That the temperature of the water goes up .
+And he measures the increase in temperature , and he knows how the calorie was defined , and so he found that one calorie is approximately 4.2... now it 's called joules .
+At that time it wasn 't called joules yet .
+So there is a direct connection between the two .
+I would like to ... I 'm going to throw several numbers at you during this lecture , and I prepared a view graph .
+Don 't copy the numbers , because it 's all on the Web .
+But some of these numbers I will return to , and therefore I thought I might as well compile them in one .
+You see there on the top there that one calorie is 4.2 joules .
+You also see the horsepower and other units that will come up very shortly are all defined there .
+When we burn something , there is a chemical reaction which produces heat , in many cases .
+Gasoline produces per gallon something like close to a hundred million joules .
+Your body produces heat .
+Your body is roughly at a temperature of 98 degrees Fahrenheit , unless you happen to run a high fever today .
+And your body is radiating electromagnetic radiation .
+You can 't see it with your eyes , because it 's infrared .
+But when it 's dark and you hold someone in your arms , you can feel that heat .
+That heat is a fantastic amount .
+That is about 100 joules per second that you radiate 100 watts .
+You radiate at the same level as a 100 watt light bulb , but it 's , of course , distributed over a much larger area , so you 're not that hot as a 100 watt light bulb .
+But it 's a fantastic amount a hundred watts that you radiate for the simple fact that your body has to be kept at that temperature .
+It means that in one day about ten to the seven joules that you generate .
+Ten to the seven joules that is what you generate in terms of heat , ten to the seven joules per day , and that is about two million calories per day .
+Where does the body get it from ?
+Food .
+You better eat two million calories per day .
+Now , I can see some of you turn pale and green and purple , and say , Over my dead body !
+Two million calories per day ? !
+You must be out of your mind !
+Well , not quite .
+You see , when you read on the packages calories , then it is called a capital C a l and that is really a kilocalorie .
+So you have to divide this by a thousand to compare it with the packages that you buy , how many calories there is in the food .
+So you have to eat roughly daily about 2 , 000 kilocalories' equivalent of food .
+And if you eat a lot more than that , well , you pay a price for that sooner or later .
+How about mechanical work ?
+Don 't we have to eat also for all the mechanical work that we do ?
+We work so hard , and I 'm sure there must be a lot of energy going into that work .
+Well , I have a surprise for you .
+It 's very disappointing .
+The kind of work that you and I do in one day is so embarrassingly little in terms of mechanical work that you can completely neglect it .
+Suppose we go up three floors .
+We walk up three floors , which is about ten meters high .
+And let 's say we do that three times per day .
+And let 's give you a mass of about 70 kilograms .
+It 's about my mass .
+How much work do I do when I do that three times ... ? Oh , let me do it five times per day .
+Boy , I really go out of my way .
+Five times per day I go three floors up .
+Well , the amount of work that I do is mgh .
+mgh .
+The ten meters have to be multiplied by five , because I do it five times , and so I get 35 , 000 joules of work that I do .
+35 , 000 joules .
+Compare that with the ten to the seven joules per day that your body generates in terms of heat .
+You think you have to eat a little bit more for these lousy 35 , 000 joules ?
+Forget it it 's nothing .
+In fact , your average power if you did ... if you walked up these stairs and you spread it out over a day , and say you ... it took you ten hours .
+You go once up in the morning and then sometime the afternoon , and you go up in the evening and maybe twice in the evening .
+It takes you ten hours to go five times up these three floors .
+Then the average power that you have done , that you have generated , is 35 , 000 joules divided by 36 , 000 seconds .
+That is embarrassingly little .
+That 's about one watt .
+Compare that with your body , which generates a hundred joules per second every second 100 watts .
+So it is completely negligible .
+However , if you climb a mountain 5 , 000 feet and you do that , then the work you have to do is a million joules .
+Now , a million is no longer negligible compared to the ten to the seventh .
+And so now you feel hungry , and now you really need more food .
+And if you do that in two hours , the power that you have generated is substantial .
+You will have generated an average power of 160 watts more than the body heat during those two hours , of course .
+And so now the body says , I want to eat more .
+I want to be compensated for the work if I climb this mountain .
+If I climb 5 , 000 feet and I have to do an extra work , which is ten to the six joules , you got to eat more .
+Now , you would think that you have to eat only ten percent more than you normally eat , because you say , Ten to the six is only ten percent of ten to the seven .
+But that 's not true ; you have to eat a lot more , because the conversion from food to mechanical work is very poor something like 20 .
+So you may have to eat 40 or 50 more than you normally do in one day .
+Suppose I wanted to take a bath , and I want to calculate how much energy it takes to heat the bath a wonderful thing to have .
+Well , we now know how to do that .
+Q is the number of calories , m times C times delta T that 's the equation .
+A bath would contain about 100 kilograms of water .
+That is about 28 gallons .
+And let us assume that the temperature increase is about 50 degrees centigrade , which is the same as 50 degrees Kelvin .
+We have water , and so you 'll find that Q then becomes roughly 5 , 000 kilocalories that 's how much heat energy it takes which is two times ten to the seven joules .
+So that 's the energy that is needed to heat up a bath and enjoy that pleasure .
+I 'll get back to this bath very shortly .
+There are many forms of energy .
+As we 're all familiar with , there is electric energy , there is chemical energy I mentioned that already , gasoline burning there is mechanical energy , when we move things in a gravitational field , and there is nuclear energy .
+A waterfall is mechanical energy mgh .
+You can convert that to electricity .
+You can convert it to heat .
+Electricity will power your coffee machine .
+It will power your TV , your radio , your VCR , your electric toothbrush everything .
+It may power your electric blanket , if you have one .
+Electric blanket is only 50 watts .
+Compare that with a human being 100 watts .
+Much nicer to have a human being with you in bed than one electric blanket believe me .
+( students chuckle ) LEWIN : Nuclear energy can be converted into heat , and that can be converted into mechanical energy and again into electricity .
+Chemical energy gasoline , fossil fuel can be burned , converted to heat , converted to electricity .
+I have here a device that allows me to convert mechanical energy to electric energy , and I would like to invite a student to come up here , a volunteer , a he or a she , who is going to show how he or she can convert mechanical energy into electric energy .
+We 'll have the special light conditions so that we can see it well .
+So , who wants to do that ?
+Yeah , please come .
+There is a 20 watt light bulb here .
+You will see it very shortly .
+And this man has a lot of power , I can tell .
+More than 100 watts .
+Go ahead .
+Power that 20 watt light bulb .
+Put your foot on here .
+Take it easy .
+( apparatus trundling ) Quite impressive , eh ?
+Okay , now we 'll tighten the nuts a little on you .
+Here we have six of them .
+So now go ahead , and now you are trying to generate 120 watts of power .
+You think you can do it ?
+STUDENT : I 'll try .
+LEWIN : Try it .
+( apparatus trundling ) They look pretty dim to me .
+Nowhere near .
+( apparatus trundling ) Nowhere near keep going , man , keep going !
+( students laugh ) LEWIN : You 're not even at the level of 120 watts .
+It 's hopeless .
+It 's hopeless .
+( more laughter ) LEWIN : You can 't do it .
+And even if you could do it , you would have to do this for 48 hours in a row to heat up my bathtub .
+Think about that .
+For one bath , 48 hours .
+But you can 't even do it .
+120 watts is too much .
+I don 't blame you I can 't do it either .
+( students applaud )
+==========
+There are batteries .
+Batteries convert chemical energy to electricity directly .
+We are all used to these fancy dry cells , but in the old days , and still nowadays in your car , there are acid batteries .
+If I have here a beaker with acid , for which most commonly is used sulfuric acid , and I put here in a zinc wire and here in a copper wire , then this is a battery .
+I believe this side of the battery is positive and this is negative .
+Now , we have them here .
+We have this sulfuric acid and we have zinc and we have copper .
+But if we use only one cell , then I won 't be able to light a small light bulb .
+Just like with your flashlight that you have at home , you sometimes have to put in several cells in series to get a higher voltage so that you can power a small light bulb .
+The light bulb that we have here is only a few watts .
+It 's almost nothing , and I will still try to get it lit , which is not so easy , because this battery has a self destruct in it .
+The moment that I put this zinc in there , I get very violent chemical reactions .
+The fumes are awful you may actually smell that in the first row ; it 's very awful and the battery works only maybe for a few minutes .
+So I have to do this very fast since it has a self destruct built in , and when I do it , I will make it at the very last minute , I will make it completely dark .
+So the way I will do that is , why don 't we turn everything off ?
+And now I leave a few things on first .
+I can put the copper in .
+The copper is not the worst .
+Let me first put the copper in .
+That 's pretty innocent .
+So I 'm going to build four cells and put them in series , and I have the copper now in place .
+So that 's not the worst .
+The moment I put the zinc in , then things begin to be very unpleasant , but when I make it very dark , I close the circuit , and I hope you will be able to see the light no pun implied .
+So let 's leave something on and turn all the rest off .
+I 'm going to make it very dark very shortly .
+First you still have dim light .
+Aah one thing goes in .
+Ugh !
+I already smell it .
+Two things go in .
+And the third goes in , and now I 'm going to make it completely dark .
+And now I have to close the loop with the last piece of zinc .
+Look at that little light bulb that is right there .
+There it goes !
+There !
+I see the light !
+Did you see it ?
+It doesn 't last very long , but it 's there .
+Boy , it was very bright , wasn 't it ?
+You saw it , right ?
+Unmistakable .
+I have to get this out , because otherwise we will all be dead by the end of the lecture .
+( students laugh ) Okay .
+And let 's cover these also up , because this sulfuric acid ugh !
+So your lead battery in your car works with the same idea , except this is lead oxide and this is lead .
+So it works with lead oxide and lead , and it 's a very , very powerful battery .
+There are batteries which are very fancy which can be charged .
+Nickel cadmium is a battery that can be charged .
+My electric shaver works on these batteries .
+It 's wonderful .
+If I forget to shave in the morning , I can still do it before you come in here .
+That 's the great thing about batteries .
+This is probably ... this probably consumes 30 watts , 30 joules per second is my rough guess .
+And I can probably get one hour of shaving out of that .
+Probably shave six , seven times , so that 's a total of 100 , 000 joules that 's not bad out of a battery .
+And you can even recharge it .
+Now , we all know when you really need batteries , they 're dead .
+When you 're in the mountains and you need your flashlight because it 's really an emergency , it just so happens that the batteries are dead .
+And therefore almost every mountaineer has with him or her a device which converts mechanical energy into electricity .
+( device ratcheting ) And this is it .
+Hey , you see nothing .
+Oh , my light bulb broke .
+( students laugh ) LEWIN : Oh , how sad .
+( more laughter ) LEWIN : When you 're in the mountains , you see , things never work .
+Let me see whether the bulb may not have been tight .
+( Lewin chuckles ) What a tragedy .
+( device ratcheting ) No .
+The light bulb gave up .
+I can 't show you the light .
+But you 've seen it there .
+I 'm sorry that 's the way it works .
+I have to put a new light bulb in .
+I 'll give you back your view graph , because I 'm going to talk about a few more numbers , and they 're all here , so you don 't have to copy anything .
+It 'll all be on the Web .
+==========
+The world energy consumption of the entire world of six billion people by the way , the six billionth was born two days ago .
+Have you heard about that on the radio ?
+6.00000 billion people now on Earth is about four times ten to the 20 joules per year .
+That is the entire consumption .
+The United States has only 1/30 of the world population and consumes one fifth of that .
+We are really energy spoilers , big energy spoilers .
+The sun is a wonderful source of energy .
+The sun has a power of four times ten to the 26 watts four times ten to the 26 joules per second mostly in the visible light and some in the infrared .
+If the sun is here and the Earth is here , and you can calculate how much of that energy reaches the Earth at the distance of the Earth so you have to know the distance , but we know that ; that is 150 million kilometers .
+And so that energy goes out radially , symmetrically , isotropically in all directions , and so it 's very easy .
+You know that the surface area of this sphere is four pi r squared , and so you can calculate how much for every square meter reaches the Earth .
+And that is a classic number that almost everyone knows , certainly people who are in solar energy .
+That is 1 , 400 watts per square meter .
+That is what reaches the Earth .
+That is about 100 million joules per square meter every day .
+It would be nice if we could harvest that , and it would be nice if we could use that 100 million joules per square meter per day to provide the world with this four times ten to the 20 joules per year .
+To do that , you would need ten to the ten square meters to absorb that solar energy .
+That 's trivial .
+That 's only the size of Holland .
+No big deal .
+If we lose Holland , that 's no big deal , so ... ( students laugh ) However , there is a catch .
+There is day and night , which we haven 't allowed for yet .
+We just assumed that the sun was always there .
+There are clouds .
+And then the sun rises and the sun sets , and of course if the sun is at the horizon and here is your plane where you try to absorb the sun , you get nothing , so you have the cosine of the angle has to be taken into account .
+And then the efficiency of the units that you 're using , with which you capture the solar energy could be solar cells .
+It 's a very low efficiency .
+And if you take all that into account , you would need an area more like 400 by 400 miles .
+Now you 're really talking .
+That 's something like the whole of England and the whole of France .
+And so not only are the costs staggering , but it is simply beyond our present technological capabilities .
+So solar energy plays a very small role in our world economy .
+Nuclear energy , which is the fission of uranium or plutonium , was very popular in the '70s , but it has become a little bit less popular lately .
+We had the Three Mile Island accident in our own country , and you 've heard just a few weeks ago about the nasty accident that there was in Japan .
+So people are , understandably so , emotionally strongly biased against the use of nuclear energy .
+But nuclear energy is all around me , at least every day .
+I have a very special collection of Fiestaware , which is American tableware which was designed and built in the '30s , in 1937 , and it went on until the '50s .
+And here I brought you some of this .
+This is a ten inch plate , and this is called Fiesta red .
+Even though it 's orange , we still call it Fiesta red .
+It has uranium oxide in it .
+That red is uranium oxide .
+That is the same uranium that powers nuclear reactors .
+This is cobalt ; it has no uranium in it .
+And this , again , it 's my cup of tea radioactive .
+Uranium oxide .
+Okay .
+You ready for this ?
+You hear this ?
+This is a Geiger tube .
+It can measure the gamma rays that the uranium emits when it spontaneously breaks up in pieces and energy is released we call that fission .
+You 'll hear a little beep .
+I 'll hold it close to my microphone .
+( rapid high pitched beeping ) That 's the plate from which I eat .
+( much slower beeping ) This cup has no uranium oxide .
+But my cup of tea ... ( rapid high pitched beeping ) Radioactive .
+So if you want to come for dinner , you 're more than welcome to do so ... ( students laugh ) LEWIN : But you know what you 're in for .
+We have fossil fuel on Earth .
+We are consuming at this moment the fossil fuel at a rate which is a million times faster than nature could create it one million times faster .
+And if we consume it at the present rate , or increase maybe by only three percent per year , then we won 't have any left in less than 100 years .
+So we have an energy crisis a real energy crisis .
+And we have an environmental problem , because all these power plants and all the industries cause pollution .
+And so what are we going to do about it ?
+My own energy consumption is quite modest , I think , although I am also in your country , so I 'm sure I also consume six times more than the average person in the world .
+I use electricity , for which I get a bill .
+I have gas heat ; I heat with gas .
+And I have also cooking with gas .
+I use my car gasoline .
+And when I add that all up , I think I consume roughly 400 million joules per day .
+That 400 million joules per day is the equivalent of having 100 slaves working for me like dogs 12 hours a day .
+Think about that .
+What a luxury , what an incredible time we live in .
+One hundred slaves are working for every single person here in my audience 12 hours a day , working like dogs to make you live comfortably .
+For one kilowatt hour of electricity , which is four million joules , I pay only a lousy ten cents .
+My entire energy bill for those 100 slaves is no more than 150 a month .
+What a bargain to have 100 slaves working for you for 150 a month .
+But now comes the 64 million question : How are we going to continue this ?
+Because we are running out of fossil fuel , and nuclear energy has its problems .
+Well , the only way that we might survive the quality of life is at stake here is nuclear fusion .
+Not fission , whereby uranium and plutonium breaks up in pieces , but fusion .
+If you could merge deuterium with deuterium , you gain energy .
+Now , we have one out of every 6 , 000 hydrogen atoms on Earth is deuterium , and we have a billion cubic kilometers of water .
+Now , it is unclear whether we will ever succeed in making a fusion reactor working .
+That is still completely unclear .
+People work hard on it .
+But if we succeeded , then simply the oceans would provide the world , if we consume it at that same rate that we are consuming today four times ten to the 20 joules per year we would have enough energy for 25 billion years .
+All the worries are over , because the Earth is not going to survive for any more than five billion years .
+Five billion years from now , the sun will become a hundred times bigger than it is now , and it will just swallow up the world , and it will be the end of MIT , of everything .
+( students chuckle ) LEWIN : So all we have to think of is in terms of energy for about five billion years .
+I want to leave you with what I call a brain teaser .
+I have here a very special ball .
+And I 'm going to bounce this ball , and I want you to look at it and tell me what you think is the source of that energy .
+It 's important that we have little light , because if there 's too much light , then you won 't see it well .
+So , this is a ball .
+See , I have another one here .
+And I will bounce it here , and then notice what you see .
+Just keep looking .
+It stops .
+The other one .
+And the other one .
+Now , I want you to think about ... you 've seen now what happens .
+I bounce it , it starts blinking .
+Clearly , there 's mgh available when I bounce it .
+Where does the energy come from of the blinking light ?
+Think carefully before you give an answer .
+It took my graduate students and me , embarrassingly , at least ten minutes before we had the answer .
+Think about the fact that they continue to blink and then stop .
+Talk about it among yourselves .
+Think about it when you have dinner , breakfast , when you take your shower .
+And discuss it on PIVoT .
+See you next Friday .
+==========

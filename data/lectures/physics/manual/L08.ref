@@ -1,0 +1,426 @@
+==========
+Today we 're going to talk about friction , something ... ( students murmuring ) Please , I have a terrible cold .
+My voice is down .
+Help me to get through this with my voice thank you .
+We 're going to talk about friction which we have never dealt with .
+Friction is a tricky thing , not as easy as you may think .
+I have an object on a horizontal surface .
+The object has a mass , m , gravitational force , mg .
+This is the y direction .
+This could be the x direction .
+There must be a force pushing upwards from the surface to cancel out mg because there 's no acceleration in the y direction .
+We normally call that the normal force because it 's normal to this surface and it must be the same as mg .
+Otherwise there would be an acceleration in the y direction .
+Now I am going to push on this object with a force force Walter Lewin .
+And we know that the object in the beginning will not start accelerating .
+Why is that ?
+That 's only possible because there is a frictional force which adjusts itself to exactly counter my force .
+I push harder and harder and harder and there comes a time that I win and the object begins to accelerate .
+It means that the frictional force which is growing all the time as I push harder reaches a maximum value which it cannot exceed .
+And that maximum value that the friction can achieve this is an experimental fact is what 's called the friction coefficient mu which has no dimension , times this normal force .
+We make a distinction between static friction coefficients and kinetic .
+This is to break it loose , to get it going .
+This is to keep it going when it already has a certain velocity .
+The static is always larger than the kinetic for reasons that are quite obvious .
+It 's a little harder to break it loose .
+Once it 's going , it 's easier to keep it going .
+==========
+It is fairly easy to measure a friction coefficient by putting an object on an incline and by changing the angle of the incline , increasing it .
+This is the angle alpha .
+You increase it to the point that the objects start to slide down .
+Here is the object .
+This is the gravitational force , mg which I will decompose in two forces : one in the y direction which I always choose perpendicular to the surface and another one in an x direction .
+You are free to choose this plus or this plus .
+I will now choose this the plus direction .
+I am going to decompose them , so I have one component here and this component equals mg times the cosine of alpha .
+And I have a component in the x direction which is mg sine alpha .
+There is no acceleration in the y direction , so I can be sure that the surface pushes back with a normal force , N and that normal force N must be exactly mg cosine alpha because those are the only two forces in the y direction .
+And there is no acceleration in the y direction so this one must be mg cosine alpha .
+Now this object wants to slide downhill .
+Friction prevents it from doing so so there 's going to be a frictional force in this direction .
+And as I increase the tilt this frictional force will get larger and larger and larger and then there comes a time that the object will start to slide .
+Let us evaluate that very moment that it 's just about to break loose .
+I 'm applying Newton 's Second Law .
+In this direction , now , the acceleration is still zero but the frictional force has now just reached the maximum value because I increase alpha so this component will get larger and this component will get larger .
+This component will get larger .
+This component is still holding its own but then all of a sudden it can 't grow any further and it starts to accelerate .
+So Newton 's Second Law tells me that mg sine alpha minus F f maximum at this point is zero .
+And this one is mu static times N , which is mg cosine alpha .
+This one is mg sine alpha .
+This equals zero .
+I lose my mg , and you see that mu of s equals the tangent of alpha .
+It 's that easy to measure .
+So you increase the tilt .
+We will do that later until it starts to slip and then at that critical angle that it starts to slip you have a value for mu of s for the static friction coefficient .
+It is very nonintuitive that this friction coefficient is completely independent of the mass .
+The mass has disappeared .
+Think about it it 's very nonintuitive .
+If you double the mass , the angle would be the same given the fact that you have the same kind of object .
+The friction coefficient only depends on the materials that you have the materials that are rubbing over each other .
+It 's also independent of the surface area that is in contact with this incline which is equally nonintuitive .
+It 's very nonintuitive , but we will see that that 's quite accurate within the uncertainties that we can measure it .
+If you have a car and you park your car you throw it on the brakes and you put it at an angle and you increase the angle of the slope the friction coefficient for rubber on concrete is about one so the tangent is one , so the angle is about 45 degrees .
+So if the road were 45 degrees , the car would start to slide independent of the mass of the car no matter whether it 's a truck or whether it is a small car independent of the width of the tires .
+It doesn 't enter into it even though you may think it does .
+They would both start to slide at the same angle given the fact , of course the same road and the same kind of rubber .
+I first want to show you some of this which is at first very qualitative .
+I don 't want it to become quantitative yet .
+The difficulty with these experiments are I 'm going to use this plank here that the moment that my fingers touch this plank or touch the bottom of any of the objects that I 'm going to slide , then all hell breaks loose .
+A little bit of water on the plank would locally make the friction coefficients larger .
+My fingers have chalk on them .
+A little bit of chalk on a local place would make the friction coefficient go down .
+That 's why , at this point , we 'll keep it a little qualitative .
+The first thing I want to show you is , if I take a rubber puck and I put the rubber puck on this incline and I have a plastic bin this is quite smooth , I put it on here that it 's immediately intuitive that the friction coefficient of this plastic bin will be lower than of the rubber puck .
+So when I increase the angle , you expect that first the plastic bin will start to slide and then the rubber puck .
+And if I gave you the angles at which that happens you could actually calculate the two values for the friction coefficient which I will not do now , but I will do that later .
+So all I want you to see I hope that this one will go earlier than that one .
+So I am going to increase the tilt ... I do it very slowly .
+I try not to ... rock the boat too much , very slowly .
+We must be approaching the critical angle for the plastic .
+Boy , it 's holding on to itself .
+There it goes ... and the rubber goes a little later .
+The rubber can be made rough by rubbing it on one side in which case the angle will be even larger .
+I told you that the friction coefficient is independent of the mass of the object .
+I have two identical bins here ... well , as far as they can be identical .
+Maybe one at the bottom is a little rougher than the other .
+But in one , I 'm going to put 200 grams which is about five times the weight of the bin .
+And then , within reason when I tilt them , they will go at the same angle because it 's independent of the mass .
+So let 's try that again and see how close they are .
+It may be off by half a degree or one degree , of course because the plank is not uniform everywhere .
+And now it 's 18 degrees ... 19 ... 20 ... 20 ... 21 , and the other one is 21.2. So they almost go at the same time , so you 've seen that apparently the mass has very small if any effect .
+Now comes something that I always find very , very nonintuitive and that is surface area .
+I have two pieces of wood and they 're identical whatever that means , identical ; you can never make them exactly the same in terms of roughness .
+This surface we prepared as well as we prepared this bottom surface .
+But this bottom surface here is four times smaller in area than this surface area here , the flat part .
+I 'm going to put the flat one here and I 'm going to put the same object but with its small area here .
+If indeed the friction coefficient is independent of surface area , then when I tilt them they should start to slide roughly at the same angle .
+There we go .
+14 degrees ... 16 ... 18 ... one goes and the other one follows .
+It was in two tenths of a degree .
+And the reason why there 's always some difference of course , the plank is not exactly uniform .
+I have to be careful that I don 't touch the critical surfaces .
+So you have seen difference in friction coefficients and you have seen there 's almost no effect on surface area and there 's no effect on the mass .
+And that is both very nonintuitive .
+The width of the tires of your car does not matter .
+And that ... I ask you the question to explain in your assignment number three why race cars have very wide tires .
+There must be a reason for that .
+I want you to think about that .
+==========
+There is another way that one can measure the friction coefficient which is way more complicated and really , that 's not the reason why I want you to see it .
+The reason why I want you to go with me through these arguments is that you begin to see how subtle and how really difficult friction is .
+I 'm going to put an object now on an incline again , as we did before and instead of having it sit on its own I 'm going to attach to it a string .
+So here is that object and here is the string and a pulley and here a string .
+And here is an object mass m2 , and this object has mass m1 and the angle here ... alpha .
+I 'm looking for my green chalk .
+I want to use the same color convention .
+Now let 's look at all the forces that we can think of .
+Here is m1 g .
+Let 's decompose that in y and x direction .
+And I will call this direction y , as I always do perpendicular to the surface .
+So we call this y and I will call this direction now the positive x direction .
+You 're free to choose it any way you want to .
+The force here is m2 g ... and now comes a major problem .
+The biggest problem is that you do not know in advance whether this system will start to accelerate in this direction or whether it will start to accelerate in this direction or whether it will not accelerate at all it 's quite possible .
+And all these three cases , as you will see have to be dealt with independently .
+You cannot do it with one equation , as you will see .
+Let 's first decompose this force as we did before , in the y direction .
+So this one equals m1 g cosine alpha and this one , the x component which is in the minus x direction now equals m1 g sine alpha .
+Clearly , this one m1 g cosine alpha we never have to worry about .
+There is no acceleration in the y direction so this normal force N will kill this one and this is m1 g cosine alpha .
+So you never have to worry about the y direction ; we know there 's no acceleration .
+We only deal with forces in the x direction that are of interest .
+There is a tension in this string and now comes the problem : I do not know in what direction the frictional force is .
+If this object has the tendency to go uphill which I don 't know yet then the frictional force is in this direction because it opposes always the direction in which the object wants to go .
+If , however , this object wants to go in this direction which I do not know then the frictional force has to be put in this direction .
+And I don 't know that .
+The only thing I do know is that the maximum value of the friction will be mu static times N , which is what we had there .
+Remember , that 's the maximum value that the friction can have times m1 g cosine alpha .
+That I know .
+So now , if I want to deal with this I have to look at three complete different situations : acceleration in this direction in which the friction is pointing here ; acceleration in this direction in which the friction is pointing there ; or no acceleration at all .
+There is also , of course , the tension here ... and this tension is exactly the same as that tension .
+We discussed that last time .
+I will not go over that because this is an ideal and , of course , an unphysical situation .
+The pulley has no mass the pulley is completely frictionless and the string has no mass it 's a massless string .
+And I argued last time that therefore the tension here must be the same as the tension there .
+We even know the tension .
+I 'm going to evaluate , for now only situations that the system is at rest .
+It 's not yet moving .
+If the system is at rest , T must be m2 g because this object is not being accelerated .
+So we already know that all situations where the system is at rest T must be m2 g that 's nonnegotiable .
+It 's this T as well as that T .
+Now I have to start splitting in the following situation .
+My first option is that I make the assumption that the system is just ... just about to start accelerating upwards .
+It isn 't doing it yet ; it is just about to do that .
+If that 's the case , then I know that the frictional force will be in this direction and it will have reached the maximum value with the static friction coefficient .
+Now I can write down , in the x direction , Newton 's Second Law .
+Now I have T , which is in the positive direction minus m1 g sine alpha minus F f max .
+That now has to be zero , just at the moment that it is just about to change its mind and start accelerating .
+Now , I know what T is , that is , m2 g so m2 g equals m1 g sine alpha plus the maximum frictional force , which is this value .
+So this is just at the moment that it wants to start sliding .
+Therefore , if I make mass m2 a hair larger , just a hair it will go .
+And therefore the moment that I make this a larger sign I know that it 's going to accelerate uphill .
+That 's the criterion for going uphill .
+Now I look at situation two .
+Now I make the assumption that the object , still standing still is just about to start accelerating downhill .
+Aha !
+If that 's the case , I know that the maximum force is now pointing upwards the same magnitude , but it has now a different direction .
+So now I can write down Newton 's Second Law .
+So the frictional force is now helping T .
+So now we get T plus F f max minus m1 g sine alpha equals zero .
+We know that this is m2 g so m2 g equals m1 g sine alpha minus F f max .
+Notice the difference : there 's a plus sign here ; there 's a minus sign here .
+This is ... the object is still not moving but if I make m2 g a hair less , just a teeny weeny little less it will definitely start to accelerate downwards .
+So if I make this smaller than sign the object will start accelerating downhill .
+This is condition one , this is condition two .
+If the condition is neither one nor two ... what do you think will happen then ?
+Very possible that you don 't meet any one of these two conditions .
+What do you think will happen ?
+( class murmurs ) LEWIN : Can 't hear you .
+( student replies ) LEWIN : It won 't move a is zero .
+Because this ... both cases are going to accelerate so in all other cases , the acceleration equals zero .
+And the frictional force , in this case will adjust itself just the right way so that Newton 's Second Law in the x direction will give you , for the force , a zero .
+Let us take a very simple example so that you see this at work .
+So , we have an example here , and in my example I have m1 equals 1 kilogram , m2 equals 2 kilograms .
+Can 't make the numbers much simpler .
+I take alpha equals 30 degrees .
+I take a static friction coefficient which is 0.5 and I take a kinetic friction coefficient which is a little less , which is 0.4. The question is now , is it going to be accelerated uphill or accelerated downhill or no acceleration at all ?
+What it comes down to is that we have to evaluate these three terms .
+Let 's first take m2 g m2 g equals 20 .
+We 'll just take , for g , 10 that is just easier .
+M1 g sine alpha ... The sine of alpha is a half , so that is five .
+M1 g sine alpha equals five .
+And what is F f maximum ?
+I have to use , for my friction coefficient , .5. I have to use , for m1 , one here , a 10 , and have the cosine for 30 degrees .
+And what I find you have to take my word for it that this is about 4.33 , and I want to remind you I have used the static friction coefficient .
+This is in newtons .
+I never put a capital N for newtons because that is very confusing with this normal force .
+All my units are always in S.I .
+units so the force is always in newtons .
+Aha !
+We are well on our way .
+Let 's first test whether condition one is met .
+Is 20 larger than 5 plus 4.33 ? And the answer is yes , it is .
+So we know that it 's going to be accelerated uphill .
+That is nonnegotiable .
+So now I could ask you a simple question : What is the acceleration and what is the tension in the string ?
+And so you will think Oh , well , that is within arm 's reach .
+Not quite , because things are now going to change .
+If it is going to be accelerated uphill then at least I know one thing which I am going to put in this drawing now .
+I know that this is the maximum friction possible which now becomes mu kinetic because it 's going to move times m1 times g times cosine alpha .
+So that is already one change .
+It is moving , so sure , it 's going to be accelerated so the frictional force is in this direction , has this value .
+So let 's write down now Newton 's Second Law in the x direction .
+So we have T in the positive direction minus m1 g sine alpha minus this maximum force minus mu k m1 g cosine alpha and that , now , according to Newton 's Law , must be m1 times a , if a is T acceleration uphill .
+One equation with two unknowns .
+You don 't know a and you don 't know T .
+Or do you know T ?
+What is T ?
+What is the tension ?
+What is the tension when that thing is being accelerated uphill ?
+Anyone has the courage to try ?
+( student responds ) LEWIN : You think m2 g you couldn 't be more wrong .
+It 's now moving , it 's being accelerated .
+That means this object is going to be accelerated down and if this force is the same as this it can never accelerate down .
+This T must get smaller .
+Remember , an object in an elevator being accelerated down loses weight it 's losing weight .
+This object must be accelerated down .
+We have to take that into account .
+So the tension , once it starts accelerating , will go down .
+So I have the second equation for object number two .
+I call this the plus direction , so for object number two I have m2 g minus T equals m2 times a .
+It is very important that you see that the tension will change .
+Now I have two equations with two unknowns and now I can solve .
+It 's very easy you just add them , and I leave you with that .
+I 'll just give you the results .
+I find that the acceleration , a , equals plus ... I think 3.85. That is correct plus 3.85 meters per second squared .
+And I find that the tension equals 12.3 newtons .
+I want to dwell on this a little bit .
+I find , for the acceleration , a plus sign .
+Had I found a minus sign , I would ... I 'm sure I would have made a mistake .
+Why is it mandatory that I find a plus sign ?
+Absolutely mandatory !
+Who wants to try that one ?
+Yeah ?
+( student making explanation ) LEWIN : Yeah , you say ... you say it well .
+I would have said it slightly differently .
+We know that the acceleration is in this direction .
+We derived that .
+Therefore the acceleration since I call that the plus x direction that was my plus sign must come out plus .
+So if this comes out negative , you 've made a mistake .
+I also want this number to be less than 20 .
+If not , I 've made a mistake .
+Why does that number have to be less than 20 ?
+( student making explanation ) LEWIN : Exactly this object is going down .
+To put it the way we put it last time it lost weight , it 's accelerated downwards .
+This Nt g , which is 20 , better wins it from T ; otherwise it would never be accelerated down .
+So this plus sign is a must , and this is a must .
+And if you find not a plus sign but a minus sign you have to go back to your calculation because you 've made a mistake .
+Now we take the same situation , I leave everything unchanged but I make the second mass , m2 , I make it 0.4 kilograms .
+So now all the numbers remain the same that we have there except that m2 g now becomes 4 .
+Now I 'm going to test again .
+This m2 g , which is 4 is that larger than 5 plus the frictional force static , 4.33 ? The answer is no .
+I 'm going to test for my second case .
+Is m2 g smaller than 5 minus 4.33 ? The answer is no , so what do we conclude ?
+What must be our conclusion ?
+Condition one is not met , condition two is not met .
+The conclusion is a is zero .
+The object will not be accelerated and the frictional force is going to adjust along the x direction so that the acceleration indeed is zero .
+How does the frictional force do that ?
+This is that slope , here is that object .
+I will only put in the forces along the x direction .
+I don 't bother about the y direction .
+I know that there is m1 g sine alpha , and that one is 5 .
+So we have here a component of gravity which is the m1 g sine alpha , and we know that that is 5 .
+We have it there .
+I also know that we have tension here and the tension must be m2 g because the object is not being accelerated .
+We 're back where we were .
+Number two is not being accelerated .
+The tension is 20 ... sorry , not 20 , what is my m2 ?
+The tension is ... mg is 4 .
+Five newtons downhill , four newtons uphill .
+What will the friction be , how large , and in what direction ?
+Uphill , how large ?
+One , exactly .
+The friction will adjust itself so that there is equilibrium if nothing is going .
+All right , I now would like to do a few demonstrations whereby I want you to calculate the friction coefficients for me .
+So we 're going to put a particular object on that incline and I 'm first going to raise the angle until it breaks loose .
+So you should be able to calculate what the friction coefficient is using the equation tangent alpha equals mu s .
+And the object that I use for that is this ... this box .
+In this box is a little weight that 's not very important .
+It makes the whole thing 361 grams .
+I want you to know that the weight of this object is 361 grams .
+I 'll write it down for you here .
+So , the mass of the object is 361 ; I 'm sure that the uncertainty is at least 1 gram .
+You have to trust me when I give you the angles .
+I 'm going to increase the incline and there comes a moment that it will start to slide .
+I 'll give you the angle and I want you to calculate that friction coefficient .
+So we 'll do that first ... there we go .
+It 's now 10 degrees , 11 ... 12 , 13 ... 14 , 15 ... 16 17 ... 17 , 18 , 19 , 19 , 20 20 degrees .
+It starts to slide at about 20 degrees write that down .
+Now I 'm going to do exactly this experiment : Put a rope over it , with a pulley , and put m2 on this side .
+And now I 'm going to load down m2 to the point that it starts to slide uphill .
+That should allow you to also calculate the friction coefficient .
+You have all the tools for it , because once you know that it is just at the point of breaking and going uphill you know that that equals sign of that equation holds and so you should be able to calculate the friction coefficient .
+Would you find exactly the same number as you find from this experiment ?
+Not very likely .
+You have to think about that for yourself .
+Wood has grain , and the grain in this direction could be very different from the grain in this direction .
+But it would be interesting to compare the two numbers to see how much they 're off .
+So I 'm going to put here this rope over here and I 'm going to set the angle now at a given value so this is now not negotiable .
+I set it at 20 .
+I could be off by half a degree .
+Again , you see , it wants to go .
+You just saw that at 20 degrees , it wants to go .
+So I prevent it from going and so I 'm going to put a little weight on here .
+Now there is 100 grams , and it 's not going .
+It 's happy and it 's sitting there .
+A is zero .
+That condition isn 't met and this condition isn 't met .
+So now you must write down in your notebook that alpha now it 's an independent experiment equals 20.0 , maybe plus or minus 1 .
+I think it 's about 1 degree accuracy that I can do .
+Okay , I 'm going to load here more weight more mass , I should say at m2 and I 'll give you the numbers and when it breaks loose , you will see it .
+I will give you the numbers .
+Now , I have done this many times , believe me and the breaking point is not always at the same mass .
+The mass could differ by 20 , 25 grams easily .
+So whatever number we 're going to find for m2 I would say you should at least allow an uncertainty of about something like 25 grams just because I 've done it many times ... and I know it could even be worse at times .
+The humidity could change in the room and that could change the friction coefficient .
+Okay , we have 100 grams on it ... we have 200 grams on it ... 250 ... 260 ... 270 , and it goes at 270 .
+Did you see it go ?
+It started to slide at 270 .
+So at 270 grams , I met exactly that condition .
+It was an equals sign .
+That should allow you to calculate the static friction coefficient and you 'll get a chance to do that in your third assignment .
+When I had this thing up here , and when I was loading this down making it heavier and heavier , I hope you realize that at first it wanted to slide in this direction .
+So at first the friction was in this direction .
+As I loaded it down more and more the friction became less and less and less .
+There comes even a time that the friction becomes zero .
+I loaded more and more and more .
+The friction flips over to the other side .
+The friction grows and grows and grows fights an heroic battle to not make it go uphill loses the battle at one point , reaches the maximum value .
+I put a little bit more on here and it goes .
+So this frictional force is really having a rough time starting off in this direction , slowly becoming less becoming zero , changing direction , reaching the maximum and finally losing the battle .
+==========
+Friction is often a pain in the neck , as we all know .
+Friction causes wear , it causes tear and it costs fuel .
+With a car , there 's a lot of friction with the road .
+You pay for that , and people try to reduce friction with bearings and with lubrication , oil .
+Water is an amazing lubricant .
+If it starts raining and there is a little bit of dust on the road the friction coefficient between your tires and road can become so low that you begin to hydroplane and that you literally ... ( makes whooshing sound ) that your friction coefficient goes almost to zero .
+It happened to me once , and it 's no fun .
+It can happen instantaneously particularly when the rain begins in the very early part of the rain when the road is dusty so you get the water with a little bit of dust mixed .
+It 's a very dangerous situation .
+At home , I have a pan this is my pan at home .
+Actually I have more than one pan at home , believe me .
+But this is a very special pan and what is special about it is something that I discovered purely by accident and I want to share with you this remarkable pan .
+You see , when I rotate this cover there 's a lot of friction you can hear it .
+( metal lid grating ) And it stops .
+You can hear it , right ?
+And so one evening I was boiling potatoes and I was looking at this pan , and I walked up to it because I wanted to check the potatoes .
+And I touched the thing , and there was no friction .
+It just went spinning and spinning and spinning .
+I couldn 't believe my eyes until I realized what is happening .
+Water had accumulated in the rim of this pan and the cover was beginning to hydroplane .
+( metal lid skimming freely ) I 'm putting water in it now .
+( metal lid skimming freely , silently ) You almost don 't hear it anymore .
+Isn 't that amazing ?
+Almost frictionless .
+So now the water acts like a lubricant .
+And you try it with your pan , it won 't work because you need just the right shape and you need the right edge to be able to lubricate it that way .
+There are many experiments that are done and many attempts have been made by people to reduce friction .
+You try , if you can , to avoid contact between two surfaces .
+That you can do by putting a lubricant in between .
+But even better it would be if you could separate the object completely and only have air in between because air has much less friction than a liquid .
+And that 's being done with great success .
+People use hovercrafts so they blow air out from below so the craft lifts itself up and now it 's no longer in contact with the water .
+It 's above the water , so if it moves now all it has to overcome is the air friction and that 's it and that helps tremendously .
+You will be seeing in this lecture hall many demonstrations that I will be doing in the future with what I call an air track .
+I will show it to you in a minute .
+It is a long ... call it a bar , for now .
+The cross section is a triangular shape and there are holes in here , and we blow air out of that .
+And on top of that are devices which have been specially designed to perfectly fit this triangle .
+And when you start blowing the air they are lifted up , so they float .
+And so now when you give them a little tap they can move almost not quite , but almost without friction .
+Here 's one ... a lot of friction .
+Now I 'll turn on the air .
+( air whooshing ) Look at the difference .
+Isn 't that amazing ?
+It 's floating on its own air cushion .
+And if I turn it off ... ( air clicks off ) the moment that the air stops , you will see it stops .
+So this is the technique that is often used to do demonstrations if you have to do them with a minimum of friction .
+Of course , you could do experiments in the shuttle very well , where you have , again , only air around you .
+But that 's , of course , a very expensive way .
+In 26.100 , we will use the air track when we start colliding objects and try to see what happens before and after the collision .
+There is another device , which is very intriguing and that also acts on the idea that it lifts itself up as a result of gas which is flowing out .
+In this case , it 's a container of carbon dioxide ... with carbon dioxide in here , which is solid and there is a small opening here and this is an extremely well machined flat surface , very flat .
+And the whole thing rests on an extremely flat surface .
+Because of the room temperature the carbon dioxide will start to evaporate and will start to flow out .
+And therefore under this thing comes a film a very thin layer of carbon dioxide and now you can move this around in two dimensions .
+You are not stuck , like you are there , to one dimension of going back and forth on what we call the air track .
+But now you can move it around over this whole surface .
+And that allows you to do very interesting things as I want to show you next .
+First make it dark .
+FILM NARRATOR : And we 've filled that can with dry ice that is , solid carbon dioxide .
+Now , you know solid carbon dioxide is very cold .
+This white stuff is just frost that 's gathered on the outside of the can .
+Now , as the can absorbs heat from the room the carbon dioxide evaporates and turns into a gas .
+The gas takes up more room than the solid so it has to go somewhere .
+It can 't come out the top so it comes out a little hole here in the bottom of the disc .
+Now , you can 't see it coming out the hole , but if I make a flame I think you can see that there 's gas coming out and blowing the flame .
+Now if we put the disc with its stream of gas coming out the bottom down on our table top which is made of a very smooth piece of plate glass ... We can wait a moment while the gas coming out builds up pressure underneath which it has to do in order to escape .
+By now , the disc is floating on this film of escaping gas .
+That film is so thin that I 'm sure you can 't see it from out there .
+I can scarcely see a space between the disc and the glass , myself .
+But if you 'll come and look over my shoulder I think I can show you that there is a space by slipping underneath the disc this piece of tinfoil I took off a chewing gum wrapper .
+Now , we 'll slip the tinfoil between the disc and the plate glass top of the table showing that there is indeed a space , a thin film of gas between the disc and the glass upon which it 's resting .
+The purpose of this is simply to reduce the friction to a point where we won 't have to worry about it or measure it in our experiments today .
+It 's fun to play with this thing let me show you .
+I 'll give it a little push , just a little one .
+And there it goes , moving sedately , no sign of slowing up .
+Come on back .
+Same thing in the other direction .
+It takes only a very tiny force to start it in motion .
+Let me show you that .
+( triumphant Spanish dance music playing ) ( music continues throughout rest of film ) ( music ends ; applause ) LEWIN : So you see , fleas are good for something .
+Have a good weekend .
+See you Monday .
+==========

@@ -1,0 +1,680 @@
+==========
+All right, let's talk about these for a bit. 
+==========
+The only good alien is a dead alien. 
+Does anyone want to take a crack at that one? 
+__: For all X, good X implies dead X? So that's sort of -- the only good thing is a dead thing, right? 
+How would we qualify that to apply only to aliens or members of some class you don't like. 
+Yes? 
+__: Actually, what I meant is, alien(x) and good(x) -- implies dead X. All right. 
+If it's alien and it's good, then it's dead. 
+So what do you think about that? 
+(Pause) Does that seem OK to everybody? 
+So that -- the way I read it was, Forall(x) alien(x) implies (good(x) -> dead(x)) __: (inaudible) So let's think about whether these two things are equivalent. 
+Now, the way that we know -- I think the best way that we know how to understand the arrow is to turn it into an "or", right? 
+So let's rewrite this version with an "or" in the antecedent. 
+How do we do that? 
+What does it turn out to be? 
+We're going to turn the arrow into an "or". 
+What does -- P arrow Q, what does that... 
+__: Not P or Q. Not P or Q. OK. 
+So we would get, not alien of X or good of X Or dead X. Now, we can push the negation in, let's just do that for practice. 
+So we're going to get, for all X, not alien of X, or not good of X, or dead X. So everything is either not alien, not good, or dead. 
+All right. 
+Now, let's see what that turns into. 
+I think it'll be the same. 
+But we'll just do the exercise. 
+OK. 
+So not P or Q, right? 
+So we get, not alien or good implies dead, right? 
+And so then we figure that here, so we'll get not alien or -- then not good, or dead. 
+So yes, they come out to be the same. 
+OK, does that make sense to everybody? 
+This is the time to ask, it's just going to get worse. 
+Yes? 
+__: We've already done (inaudible)? 
+Oh, a good literal question! 
+OK. 
+Good, so let's do a simpler case. 
+Let's go back to the good implies dead, because that -- yes, let's just look at this for a minute. 
+What if we had good of X, if and only if dead X. So that would say -- so that's equivalent to, for all X, good of X implies dead of X and dead of X implies good of X. Right? 
+So this is -- everything that's good is dead and everything that's dead is good. 
+__: (inaudible) for all X (inaudible). 
+OK. 
+So let's put the alien in there, then. 
+So where would you like the double arrow to go? 
+In this one? 
+So we would have A -- now I'm just going to -- let me just get rid of the qualifiers altogether and we'll just look at the logical structure of it. 
+So we're going to have A and G if and only if D. All right? 
+Sort of -- you like that one? 
+__: I wouldn't like that one because (inaudible) good is dead. 
+OK. 
+To an alien, then good is equivalent to dead. 
+OK, so you want A is good implies (G is equivalent to D). 
+__: Yes. 
+OK, so what does that come out to? 
+Well, so we get not A or good implies dead and dead implies good. 
+All right? 
+So that's not A Or not G or B and not B or C. All right, so how are we going to give intuition for that? 
+__: Well that all dead aliens are good, which might not be the case. 
+So this is talking about a subset relation. 
+This is -- we're basically here trying to say that -- there are the dead ones, and there are the good ones. 
+But making the arrow go the other way states the other relationship. 
+__: For this kind of notation, wouldn't you say for all X (inaudible) set of aliens would imply dead? 
+This kind of notation that we use? 
+It's not the kind of notation we're going to use in this class. 
+There are -- you can move into a kind of set theoretic way of talking about these things. 
+In fact, you could let aliens and good things be sets and talk about set relationships if you wanted formally. 
+But that's not what we're going to do here. 
+Yes? 
+__: I have a question. 
+So instead of having an alien predicate, could you have a good-dash-alien? 
+What you can -- OK, good -- and the answer is, you can do anything you want to. 
+So, if I were to -- OK, so then there's two questions -- one is, what would I ask you to do on an exam? 
+Which is a type of issue on some minds. 
+And then there's what would it be right to do if you're actually trying to use this stuff to do something? 
+But if I ask you to do a problem like this on an exam, I would tell you what predicates to use. 
+So -- it's -- you could say, let P be the only good alien's a dead alien. 
+And then the formalization is P. That's OK too (laughter). 
+But that's (laughter) -- that's not what I was looking for. 
+So I would stipulate a little more. 
+And I probably shouldn't have done it here, but I knew we were just going to talk it through. 
+So then the question is, what level of granularity do you want when you are actually trying to talk about a problem? 
+And then, the answer is, well it depends on what kind of conclusions you want to be able to draw. 
+I mean, in preparing for class today I spent a lot of time trying to think about what good examples would be, and I read a long paper which is a kind of tour de force accomplishment in formalizing common sense reasoning, and it talks about cracking eggs. 
+I mean, it goes on for pages and pages and pages of logical axioms about what happens when you try to crack and egg. 
+And clearly the level of granularity of specification that you want here kind of depends on what you need to know about the cracking of eggs. 
+And so, you can choose to describe things at any level you want to, basically, as long as it gets your job done for you. 
+Which means you need to know what job you're trying to do. 
+So I figure we'll practice a little more with things that are disconnected from reality, and then we'll try to talk about some real problems and see where that gets us. 
+__: Could you explain that rule -- logic once again about __: No, like what the final conclusion is -- If you just look at good implying dead, that is saying literally that everything that's good is also dead. 
+But it's not saying that everything that's dead is good. 
+So maybe there's some dead aliens that are bad. 
+So, when you take the equivalence, you're saying these sets are exactly equal, which is saying that there are no dead aliens that aren't good. 
+__: Does the word "only" play any role? 
+Yes, it says the -- the only -- what that really means to say is that means or implies that there are no good aliens that aren't dead. 
+__: Like if it says a good alien is a dead alien, then it (inaudible)? 
+If all good aliens are dead aliens, then that would be the same thing. 
+__: OK. 
+So this is where you get into this great amorphous territory of the semantics of natural language. 
+And it's never going to be possible to completely nail down rules for going from a natural language statement into a logical statement. 
+So, "a good alien is a dead alien" probably means this, but there are probably cases where you could make a statement like that and it would mean something different, depending on the word and the way you used it and tone of voice and some other things like that. 
+Natural language interpretation is a really hard problem. 
+So, again, asking you to do these exercises is -- they're not necessarily entirely well-formed problems always, so there might be multiple answers that are possible. 
+==========
+The Barber of Seville shaves all men who do not shave themselves. 
+__: OK, so exists B, for all m and man of B and man of M and not shaves(m, M). 
+that implies that shaves(B, M). 
+Right. 
+Well, the way I wrote it was this. 
+But it's the same idea. 
+I mean, we didn't say there's somebody who shaves everybody who doesn't shave himself, we said the Barber of Seville does it. 
+So I was going to say, for all M, not shave MM implies shaves ("the Barber of Seville", m). 
+But, either way is fine. 
+__: But, if you do that you still haven't specified that I is in M, right? 
+Unless you put the M -- Right. 
+So here's another beautiful case of (laughter) it depends on what you decided that the universe of your variables is. 
+So you could say that the universe of my variables is there are only men in the world, and then that would be OK. 
+Or you could say that "shave" was only ever true of men, which may also mostly be true -- it depends on what parts are being shaven, I suppose (laughter). 
+But yes, yes. 
+Is that OK? 
+Everybody OK with that? 
+The next question is then, who shaves the Barber of Seville, which we'll take up later. 
+But you can think about that. 
+__: I have a question. 
+Uh huh? 
+__: I have no idea how to approach the problem. 
+Approach which? 
+__: How to approach number four. 
+Number four. 
+You can fool all of the people some of the time? 
+__: Yes. 
+OK. 
+Let's do that. 
+It's like the loves problem that we did last time. 
+But let's -- let me write down -- so I would -- assuming that what you would do is when you -- you could have a predicate "fool" or "can fool" of a person at a time. 
+Now you're OK? 
+__: Yes. 
+So then it's like everybody loves somebody. 
+There's some time at which, for all people, or -- it's some version of that. 
+You just have to get the quanitfiers in there. 
+All right. 
+There's one coin in the box. 
+So here -- I'm assuming we can use the predicate coin of X and in box X, and a hint that you need equality for this one. 
+Think about for a while longer? 
+Or should we just do it? 
+Think about it for a minute more. 
+And then we'll see if everybody has it. 
+There's -- yes, again, there is exactly one coin in the box. 
+You know, most time when people say "there's one coin in the box," they mean "THERE'S ONE COIN IN THE BOX!" 
+not, "there's at least one" or "there's at most one," or -- __: Do logicians follow what the normal person does? 
+Well probably not (laughter). 
+No. Among mathematician's logicians are thought to be weird. 
+Just so you know. 
+All right. 
+You can write that down. 
+OK, there's one coin in the box. 
+OK, let's see -- how do you say "there's a coin"? 
+__: Exists x coin(x) OK. 
+There's a coin in the box. 
+__: (inaudible) What? 
+And in box. 
+There's something that is a coin and it's in the box. 
+OK. 
+So now -- that means that we -- we're up to at least one, right? 
+There's at least one coin in the box. 
+Now how do you say, "and there are no other coins in the box"? 
+__: (overlapping dialogue; inaudible) Yes, OK, so this is a trick. 
+I mean, this is one of those things that might be hard to come up with organically, I don't remember, but which is -- it's the standard way to say -- this is to say, -- for all Y, if Y is a coin and it's in the box, then it's X. OK? 
+This is a queer thing, right? 
+It's a logic trick. 
+For everything else in the whole world, if it happens to be a coin and in the box, then it is X. 
+That's one of the only ways we have of saying "and there aren't any others." 
+Or you could say - let's see, you could probably replace this with, it's not the case that there exists a Y such that Y is a coin and Y is in the box and Y is different from X. I do believe those are the same. 
+Think we should prove that? 
+__: If there are multiple coins in the box, wouldn't the first statement be true? 
+Because X could be found to be multiple coins in the box? 
+so you're saying if -- so here's the box, and it's got A and B in it. 
+Right? 
+Then if we let X be A... 
+__: No, I don't think that... 
+No, I don't think we can ... 
+yes? 
+__: Can you use that little exclamation point thing -- Oh, good, so Misha has been reading the book! 
+Yes, great. 
+So they talk about those exclamation points, which means there exists a unique X such that Y. Yes, you could. 
+And effectively, that's going to be shorthand for this. 
+__: I don't understand why that is -- Yes, let's do a little proof for ourselves, that this is equivalent to that. 
+I think that would be useful. 
+Maybe it isn't, I mean, I can put it on the board. 
+Let's start with the bottom one and try and convert it to that. 
+So this is going to lead into stuff we're going to do next time anyway. 
+So what do we remember about driving in negation? 
+__: (inaudible) returns for all. 
+Good. 
+So what -- so you turn -- as you push a negation in, you turn "exists" into "for alls", "ands" into "ors" and "ors" into "ands". 
+OK. 
+So that means if we can rewrite this -- so we'll just work on rewriting this, and we may work on rewriting that, and then we'll see if we rewrite them to the same thing. 
+OK, so this is going to turn into, for all Y, not this and this and that. 
+So we're going to get, not coin of Y and not in box of Y or -- excuse me -- or Y is equal to X. Does everybody follow that step? 
+I did a couple in -- a couple steps in one row. 
+Now, let's take this one and do the same maneuver to it. 
+We'll -- let's take this one and rewrite the implications. 
+So that gets us to, for all Y not coin of Y and in box of Y or x=y. 
+And this turns into, for all Y not coin of Y or not in box of Y or X equals Y. So, luckily, we arrive at the same point. 
+So maybe this isn't actually a clearer way to say that. 
+But they formally come down to the same thing. 
+All right, so, there's X and Y. All right, those are our coins. 
+So that X is a coin and it's in the box, and Y is a coin and Y is in the box. 
+What would I say about the relationship between X and Y? __: They're not the same. 
+They're not the same. 
+And X is not Y, and now we need to say, and there aren't any more coins in this box, right? 
+And so then we can say -- we'll do it in that negative way. 
+There is not a Z such that Z is a coin and Z is in the box - and Z is not equal to y and z not equal to x. 
+So there's X and a Y and they're not the same, and then there's no further thing that is a coin that is in the box that is not Y and is not X. __: There is some reason why you did not write the Z? 
+You know, not equals -- No. I wrote it this way just because I thought I might end up negating this disjunction or something. 
+So P is notationally absolutely the same. 
+But, so the not -- this is equivalent exactly a macro for that. 
+Or actually, this is a macro for that, I guess. 
+Anyway, they're the same. 
+It's just -- I wrote it on the chalkboard. 
+__: So why is it and, and not both? 
+Instead of or? 
+Well, OK. 
+So here's the thing. 
+we -- usually when you -- there's another sort of rule when you're talking about existential is that usually you have conjunctions in mind because you're piling on the conditions. 
+You're saying what kind of Z -- what kind of a Z would mess us up? 
+Right? 
+What kind of a Z would make this thing false? 
+Well it would be a thing that was a coin that was in the box that not Y and not X. Right? 
+It has to satisfy all those conditions. 
+It would have to be not X and not Y in order to be a trouble maker. 
+Think of this as "and there are no troublemakers" and then you figure out what would a troublemaker be. 
+OK. 
+All right, we'll let you guys do the biggest coin in the box is a quarter. 
+And we'll do the last one because it's sort of recursive, it's just sort of nice. 
+And I'm going to hand out the solutions to this, and we'll type up solutions to the other set of exercises the last time (inaudible). 
+I think you can kind of see that. 
+OK. 
+==========
+You can access this site -- so imagine that someone was actually trying to say for some Web site or something, who is it that would be allowed to access the Web site. 
+You can access the site if and only if you are authorized to access it directly, or you're known to someone who can access the site. 
+All right, so we can say for all X and S -- because X gets to access to the site -- if and only if -- So now there's two choices -- there are two different ways that you could be authorized to access, so you could be authorized directly so we say, authorized like that. 
+Or -- now, what's the other case? 
+__: Exists Y. Good. 
+So we -- and we would say "known to" or something -- if X is known to Y, and? 
+__: Access(Y,S). 
+Good. 
+X is Y. 
+So that way, you could follow kind of a chain of known-to relations in order to demonstrate that you have access (inaudible). 
+Does that make sense to everybody? 
+__: I mean, it's only one deep. 
+Excuse me? 
+It's only one deep -- ah, good. 
+__: Oh, not it's not, I'm sorry. 
+So that's -- the easy error to make would be to write "auth" here and then it would only go one deep. 
+Right? 
+You say -- if you're authorized and you know somebody who's authorized, that only goes one step. 
+But this is a real recursive. 
+Because it goes back to the thing that we're doing. 
+OK, so I'm going to just give a little rant before we get into that. 
+==========
+OK, so we've been looking at logic, at first-order logic in particular, and I know that it's running through everybody's head, well why would you ever want to do this, right? 
+What is it good for? 
+And -- I mean, it's a hard question to say what it is good for. 
+Because, in some ways, any problem that you could solve by writing down the axioms that describes a situation and trying to prove a conclusion, you could also solve it by writing a special-purpose computer program. 
+Right? 
+So there's not -- so there's no question that you could really do more this way. 
+So the question is really, what kind of computations are usefully specified as problems of logical deduction, right? 
+When would you want to use logic to describe your problem, and say, (inaudible) to derive an answer, versus just writing a program to do the thing in the first place? 
+And the answer is usually that you want to use logic to describe your problem when the richness -- when the variety of things that you might know at a given point, or the variety of questions that you might want to answer, is high -- is great. 
+So, for instance, why do people -- you make a database -- so why would you do -- you can think of logic and theorem-proving as sort of database -- a database crazed on steroids or something. 
+So why do you have the database for the general query language? 
+Well, you have a general query language for a database because you're not sure in advance what particular questions you want to ask about your data, right? 
+You want to ask them questions and then see what the answers are and then ask some other questions and then somebody's going to come tomorrow and want to ask different questions. 
+Well, sort of the same thing applies to using logic to describe a domain or a problem. 
+Except that the richness of the questions and the rules that you can specify is much greater. 
+So -- I mean, that's sort of an answer for when you'd want to do this. 
+Let's look at some particular cases. 
+It was interesting -- I mean, there are actually, for instance, big research initiatives paid for by the military in order to write down logical descriptions of the various kinds of domains. 
+War-like domains, things involving missiles and bombs and tanks and targets and explosions and weapons and death and stuff. 
+And so, I spent a lot of time just browsing the Web just trying to get one of their axiom sets out so that we could talk about it today in class, just to se an example of some cases where you'd really want to apply this. 
+But I got reams and reams and reams of people talking about having done this, but what I never did find was any actual axioms. 
+So I'm going to keep working on that, just so I have a good example to show you guys. 
+But I made up an example, somewhat more palatable, anyway, describing an auction. 
+So imagine that you'd like -- you're running eBay or the eBay of the future or something, and you -- not only do you want to conduct auctions, you want to answer questions about auctions that have happened in the past, or define new kinds of auctions or something. 
+==========
+So, I defined a set of predicates that we might use -- OK, so let me talk about the process I went through to think about this. 
+At first, I thought about how do auctions go, and what kind of things participate in auctions and so on. 
+And that led me to think about what kinds of objects we would have in our universe. 
+And so you see in this little second line in this hand-out, I said we have bids, people, times and items. 
+In fact, we also have amounts -- I didn't actually put that down. 
+Amounts of money, and that's actually a really important thing in auctions. 
+We have money. 
+What good is an auction if you don't have money? 
+Right, now -- OK, so some of these things are obvious and some of these things are less obvious. 
+So let's talk -- so people, right? 
+-- so probably you have to talk about who's the bidder, maybe who's the buyer or who's the seller, so you have to talk about people, times -- all right, time really matters in an auction. 
+The semantics of a bid, what a bid means depends on when it was uttered, compared to the other bids. 
+I even -- again, it's hard to -- there are the items that you're auctioning off, so it makes sense that you would have items in your world. 
+Bids are less clear, right? 
+So I actually started out with a version of this that didn't have bids as objects. 
+But it was going to be much easier later on to make bids be objects, so I made bids be objects. 
+Now, the process that I went through in thinking about this is just like if any of you have had courses in or ever practiced at object-oriented design, it's the same sort of thing, right? 
+You think about what are the natural kinds of things in your world, and you say, all right these are going to be the objects in my universe. 
+Now the logic that we're using here is not typed. 
+There are typed logics where the quantifiers -- when you write for all X, you write for all people X, or for all cars X, or there exists a time Y or something. 
+Our logic isn't typed like that. 
+And so when I think of the things in the universe, it helps me think about the axioms I'm going to write down, but it's not a formal part of the specification to say what the types are. 
+So first you think about what the things are in the world, and then you think about the kinds of relationships between them, the kinds of predicates and the relations you think you're going to need. 
+Now, I would like to say that the way it works, as you would like to say what happens in object- oriented design is that you just said, and then you say, oh yes sure the cost isn't here, the method I need, and so on, and then that all works perfectly and then you go write the code, never making any changes to the conceptualization of the domain. 
+But of course that doesn't happen. 
+So, really, it's usually you do it here, right? 
+You start writing down a few axioms, you say, oh no, I need to talk about bids as objects so I'm going to back and change things around and so on. 
+So again, this is really a lot like writing code, especially in an object-oriented system. 
+So you think about the relationships, you write a little code, write a few axioms, go back, change the relationships around and so on. 
+So, this is the result of my having thought through and actually written out logical statements for the axioms and then I went back and said, all right, well here are the relationships that I'm going to use to do this. 
+Now, there's a third step that has to happen which I haven't done yet. 
+And it will also certainly cause me to go back and revise what I've done and it will cause us to go back and revise what we did in this example. 
+So my plan is, for today, is to go through and figure out logical statements that correspond to all the English statements on this page. 
+Now, they may be true in some sense. 
+Although, truth is always truthful with respect to interpretation, right? 
+So when we start writing axioms down about bids and sellers and buyers and stuff, we have a mental model of what the universe is that these things are applying to. 
+Now, what's going to happen, almost certainly, is that there will be many -- and then -- I mean, we're going to want to draw some conclusions about that model. 
+that's the idea, right? 
+We write down these axioms that describe some way the world works, and then we're going to want to draw some conclusions about that world. 
+What's almost certainly going to happen, though, is that these axioms that we write down describe the world we're interested in, but they also describe a whole bunch of other worlds that aren't the same as the one that we care about, right? 
+That is to say, there are going to be a bunch of other interpretations that make these axioms true, and that won't necessarily have the consequences that we're interested in. 
+So, when we get to the point of trying to prove things from these axioms, we'll find out that there are things that are left out -- that there are things -- there are more things that we're going to have to specify in order to really say how our auctions work. 
+In order to draw some conclusions that we want to draw. 
+So we'll come back to that later on, just so that you see how this is kind of an iterative process. 
+This process that we're going through right now is called the process of knowledge representation. 
+Taking some knowledge that we have, say about auctions, and figuring out what are the right terms to describe it and how do we write them down formally? 
+It used to be back in the heyday of symbolic AI that there are people whose cards said, "I am a Knowledge Engineer." 
+Which is always sort of a funny thing. 
+I guess there may still be some Knowledge Engineers, but it's a -- I think kind of a dying profession. 
+Someday later we can talk about why that might be. 
+Let's give these a try. 
+I'm going to not ask you to try these by yourselves because they're pretty unspecified. 
+==========
+OK, the high bid at time T is the highest valid bid made before time T. Does that seem right to you? 
+Right -- now we've left open what it is for a bid to be valid. 
+That's good and bad. 
+One reason for leaving open what it is to be valid is that -- and again, the reason for using a system like this for describing our problem is that it makes it pretty -- it's almost like having a subroutine, right? 
+It makes it easy to kind of swap in and out different definitions of that. 
+And we may do that as we go along. 
+So you get a lot of your intuitions about setting things up and modularity and stuff from programming will kind of apply here too. 
+OK, so the highest bid -- the high bid at time T is the highest valid bid made before time T. So we're going to use this high bid -- we're going to be defining "high bid." 
+__: I don't mean to split hairs, but what if at time T, a bid was made that's higher than anything before? 
+__: So you're saying the highest bid made before time T, what if exactly at time T a bid was made that was higher? 
+Oh, OK -- __: So you would have to specify before or at -- Before or at -- so we can use a less than equal to. 
+Good. 
+Or we can assume that we're measuring time at such a precision that it's impossible for two bids to be at the same time. 
+OK, so high bid. 
+So we're going to say for all bids, B is the highest bid -- the current high bid at time T. That's really sort of a current high bid, but I didn't have the patience to type too much. 
+OK. 
+For all B and T, OK -- so now we're going to write down a definition of what it means to be the highest bid at time T. OK. 
+The highest valid bid made before time T. So, well we know it has to be a valid bid. 
+So we have to say that B is bid, and it's valid, right? 
+And it was made before time T -- OK, what expression, what term describes the time at which bid B was made? 
+__: It's a function. 
+Right, it's a function. 
+It's one of these items here. 
+I decided to make it a function because every bid will have only one time. 
+Right? 
+So I can write, time of B. So the time of B has to be less than or equal to T. So now B is a valid bid that was made before time T. What more do we have to say about it? 
+__: It's less than or equal to (inaudible)? 
+Yes. 
+And this is equivalent to that. 
+__: So, is "less than or equal to" really a function No, it's a relation. 
+Less than or equal to is a relation. 
+It takes two things and gives you a truth value. 
+__: OK, so numbers are allowed -- Good, numbers are things. 
+We talked about money or amounts. 
+So, good. 
+So the question is -- you could say, well now are we going to have to axiomatize the integers? 
+Or God forbid, the reals. 
+We could, but we won't. 
+Right. 
+So the question is -- I suddenly wrote this mathematical relationship on the board. 
+We have equality, that seems sort of OK. 
+We talked about equality and then we talked about semantics. 
+But what about less than? 
+Well, you can axiomatize -- you can write down axioms that describe the natural numbers and you can write down axioms that describe the real numbers, but it gets really hairy really quick. 
+And if you throw in too much arithmetic, then you get Godel and incompleteness and all sorts of trouble. 
+So, let us let these times be integers first of all. 
+That saves us some kind of theoretical problems. 
+And let us also just assume that we're not going to have to do complicated logical reasoning on it. 
+So what does that mean? 
+Well, it basically means that if we're going to try to do inference here, we're going to always ask questions that force T to be bound, right? 
+So we're getting ahead of ourselves a little bit, but it's worth talking about. 
+So we're not, for instance, going to ask our theorem prover to give us all of the times at which B is the highest bid, right? 
+That's a question that you could in principle answer, there's no problem with that, but it would be hard to do. 
+On the other hand, it would be relatively easy to say, given the time, what's the high bid? 
+Because this question is easy to answer. 
+That was not helpful. 
+I'm sorry. 
+We'll come back to it again when we do reasoning. 
+Which is either next time or the time after, depending on how far we get with this. 
+So for now, write down arithmetic expressions with impunity and we'll see if it's OK later. 
+OK, so B is a valid bid that happened before time T. What else has to be true of B? __: It has to be the highest bid. 
+It has to be highest, OK. 
+So highest -- one way to say highest is there is nobody higher, right? 
+Good. 
+So there does not exist, and we'll call it B1, such that bid B1 and valid of B1 and amount of B1 is greater than the amount of B? Is that enough? 
+And time of B1 is less than t. 
+We're leaving open the question of high bids. 
+__: (Inaudible) So that means we could have two high bids right now. 
+This is -- there's nobody greater. 
+So that means if we have a tie, then they would both be considered to be the high bid. 
+Maybe we'll would do something to cause the second one to be invalid. 
+Yes? 
+__: So you could say that B1 (inaudible) B? Oh good, OK. 
+__: That's what I said before and I was saying the fact that you say B is greater than B1 -- OK, but actually the fact that I did that means is that they can't be equal. 
+But you're right, that in general we should do that. 
+Was that your question also? 
+OK. 
+Good point. 
+Did you get that one over there? 
+Just as with the coins in the box and stuff, we wanted to say -- here we want to say our bid is the highest. 
+And the way we're going to say our bid is the highest is to say there's no higher bid. 
+So what we said was, well there's no bid that's valid that happens at the same time or before T whose amount is greater than the amount of our bid, and we could conceivably have required also to say, and B1 is not B, right? 
+Because we don't want to use the same bid to fulfill this requirement. 
+But the fact that I didn't put an equality there means that they can't be the same bid, because there's no way -- if we instantiate this variable B1 and the variable B to be the same bid, then their amounts have to be the same. 
+So that teaches us from using the same bid in the world to be both B1 and B. Yes? 
+__: Couldn't there be a separate B1 that was equal to -- the amount of B1 would be equal to the amount of B, but the time would be less than T. And the time T would be less than the time of B. Yes? 
+__: And that one should be the high bid, right? 
+It could be the same bid amount that was made beforehand. 
+That should be the high bid, not B. Oh, I see. 
+Good. 
+All right. 
+So now here we have a choice. 
+We could put that into our axiom, or we could put it into the definition of valid. 
+Right, because we could say a bid is only valid if it's higher than the previous bid. 
+The previous valid bid. 
+So, you know, it's up to you. 
+__: I didn't think we'd been doing that. 
+Well, we haven't been doing anything (laughter). 
+So, I mean -- this is again, right -- we're just starting, but this is exactly like your synthetic process of programming, right, that you have to make these decisions. 
+And when you decide, oh I'm going to put it in valid, then you have to remember to put it in valid, or you put it in here, or you -- there's probably three other places in this whole axiomatization you can put it. 
+What matters in the end is that you put it somewhere. 
+So let's think about putting it in valid. 
+I like the idea of putting it in valid because we might also say -- maybe we have to say that the bid has to be a dollar more than the previous bid, right? 
+For eBay or ten percent higher, or... But that's a good point and I think -- I left it out entirely when I thought it through, so, that's OK. 
+Does this make enough sense to everybody? 
+The winning bid is the high bid at the close of the auction. 
+B is a winning bid if and only if high bid B at the close of the auction ... 
+so I have closing of I. Right? 
+Closing is a function of an item. 
+Items have a closing time, right? 
+When somebody puts an item up for sale, it has a closing time, or so they specify that we'll say. 
+So the closing of some item is the closing time. 
+How do we get an item? 
+__: Item of b? 
+Item of B. Now, on all these things that I chose to make functions, I could have made them relations. 
+And you could still write it down, but it would take more time. 
+__: Did you say B is a bid? 
+B is a bid. 
+I didn't say B is a bid. 
+__: But B means high bid. 
+We defined high bid, yes. 
+Good point. 
+These are exactly the sorts of things you have to reason about, and the sorts of things that you get in trouble if you don't do it right, but it's hard to anticipate them all. 
+OK? 
+__: Why do need the all -- for all B, in most cases? 
+Well, you have two other options. 
+One is to leave the quantifier off entirely, in which case you have to talk about some particular bid. 
+All right, so you could say that six is winning if it's the high bid, etc., etc., etc., but then that doesn't talk about any other bid. 
+Or you could say for some bid. 
+So this is just a general -- you're just defining a general property of all bids. 
+What does it mean for a bid to be winning? 
+For any bid in the world. 
+It's a winning bid if it has that property. 
+__: Is that actually a successful bid? 
+Well, right, so I wrote it for B. For all bids -- I mean. 
+my idea was that "successful" was going to be if and only if there exists a time such that it's the high bid at that time. 
+But there are going to be bids that are invalid for other ... 
+well, so maybe "successful" is going to be the same as "val" -- "invalid". 
+So we'll see. 
+__: If we want to be picky we could go back to the first item and say that I don't have a statement that says that item of B is equal to item B1. 
+You're right, and in fact I have that in my notes but I didn't remember it when I was writing it on the board. 
+Nope, not there though. 
+You're right, that's very important. 
+They'd have to be bidding on the same item. 
+I think that's it's going to turn out that successful is the same as valid. 
+That's why I decided to skip "successful" as I was going along. 
+We'll see. 
+We'll just have to work that one out and see how it goes. 
+Again, so -- I mean, the way this works is, we can define properties all day long. 
+And then we might ask as question, is "successful" the same as "valid"? 
+Right, are we going to define "valid" differently? 
+And the answer is maybe yes, maybe no, we can ask our theorem-prover for instance. 
+So -- and why would I have these two terms while I'm working through the axiomization? 
+Well, I have to find that the successful bids are ones that were at least, at some point, the going bid. 
+There may be other bids that are ... 
+yes. 
+Yes, now I wonder why -- OK, forget "successful". 
+I had a different idea of successful and valid, that is to say, that you could make a bid that was valid in the sense that there was nothing actually really wrong with it, but it was less than the current high bid. 
+So in that case, it would be valid in the sense of not being wrong for some other reasons that we'll talk about that can make bids wrong. 
+But it would be not successful because it wouldn't overcome the -- __: Couldn't you do something where you had a bunch of bids all that the same time and then you -- they were all valid and then you looked to see which one of them was successful? 
+I mean, it would be different than -- Right, you could do that. 
+So if you had things going in rounds, for instance. 
+Right. 
+OK. 
+So let's do five. 
+Five is the longest and hardest one, I think. 
+I don't actually know if auctions disallow these things, but it seems like kind of a weird thing to do. 
+To make it a -- I'm pretty sure eBay disallows it. 
+__: No, it doesn't. 
+No it doesn't? 
+You can make a higher bid? 
+Oh, because that's raising your implicit limit or something. 
+__: Well, it matters -- it complicates it because sometime they sell more than one item, the same thing at the same time, so... 
+Aha. 
+OK. 
+__: What matters is what time you got in at a certain price value, because more than one person can buy something and you could say -- Right, good. 
+OK. 
+So that's a great example then. 
+I mean, it might make good fodder for homework or something. 
+That is to say (laughter) ... 
+==========
+you'd like to be able, for instance, to write down some general rules about bids and items and sellers and money and transactions and stuff. 
+And then be able to swap out different particular rules about how this particular auction works. 
+And that's a good example of why you might want to use a sort of a logical reasoning for some. 
+Because it might be that swapping in the new rules was pretty easy, but writing a whole big program to decide who won would be more complicated. 
+So we could think maybe about how to swap in different rules for the winner later on, or how to deal with multiple things. 
+Or I was thinking of, we could also maybe work in something that allows you to retract a bid if there hasn't been another bid yet, or if the time -- so some rules about allowing bids to be retracted. 
+And see what happens if we do that. 
+A second consecutive bid by the same bidder is not valid. 
+All right, so. 
+So we have to write these things down on the board from beginning to end, but it's useful to think of them in gross structure first, right? 
+So I want to say, for all bids, if they have some property, then they're not valid. 
+So now we have to just figure out what that property is. 
+Second consecutive bid by the same bidder. 
+All right, so we're talking about a second bid, so we're talking about another sentence, so there exists a B1, and what about B1? 
+Well actually, it's going to be subject to a lot of the kinds of constraints that we talked about before. 
+So it has to be on the same item, and it has to be by the same bidder, and it has to be -- OK, so the bid that we're thinking about being invalid is B. So what would make B invalid is if B1 came before B. Right? 
+And was by the same bidder. 
+So, time of B1 is before B. We'll say we can't be simultaneous bids. 
+OK. 
+So now we have a bid by the same person before this one. 
+Now, that in itself isn't problematic, right. 
+What if I just stop now? 
+What would I be saying? 
+__: What if somebody else bid inbetween? 
+Right. 
+So what I'm saying now is, your second bid is invalid. 
+Just, in general -- but of course that's not what you want, right? 
+You want to say, and there's no other intervening bid by a different person. 
+Right? 
+So I'm considering the case -- here's B, made by me. 
+And here's B1 made by me. 
+Now, it'll be OK if there is yet another bid inbetween here, B2, made by someone else. 
+That would make it OK, right? 
+Now, we're trying to write down, though, the conditions under which things aren't OK. 
+So the condition under which things aren't OK is when there is such a B1 and there is not such a B2. 
+So. 
+There is not a bid -- a B2 on the same old item by a different bidder. 
+Now, what about the time? 
+In order for B2 to meet our requirements here, what does the timing have to be? 
+__: Greater than B1, less tha B. Right. 
+Greater than B1; less than B. So, time of B2 has to be greater than time of B1 and ... 
+I think that's it. 
+__: Shouldn't you also have to be a valid bid? 
+Oh, good. 
+Well, sure -- __: No. B just has to be ... 
+that's it. 
+OK, good. 
+So now this is a matter of content rather than formalization, but it's important to sort that out, because again, it's going to go together. 
+So does B2 have to be a valid bid? 
+I would think so, yes. 
+Yes? 
+__: So, who could define (inaudible) B? When you say time B1 -- plus one is (inaudible) Well, we could have "plus", but I think we're not going to - - so there's two views, right? 
+One is that time is only incremented when a bid is made. 
+Another view is that time marches on in integer steps and bids happen sometimes. 
+So, that was sort of the view that I had, but again, that's an important point. 
+I mean, to do this, you'd like to say at least in the comments of your file, I am assuming that time just marches on and bids come in integer slots. 
+Or I'm assuming that -- and sometimes it's what would be called an event-driven model that we think of time as being incremented every time something happens. 
+Even so, -- so if that were true -- if time were just incremented every time something happened -- then you're right. 
+All we would have to say is that I have a bid at time T and I have a bid at time T plus one. 
+Uh-huh? 
+__: Couldn't you also say that B1 is valid then? 
+__: No. Because we're trying to -- The first bid. 
+Right, good. 
+So, you're saying like, what if I just pulled really quick on that trigger finger or something and let's see, I made a bid here, B3, that would be ... 
+and then I made B1, that was me too. 
+So B1 would have been invalid. 
+And then I made another -- let's see. 
+So then -- well, now, who is going to be doing three bids in a row? 
+Well let's consider this one. 
+So if this one turns out to be invalid, the question is -- and there are no intervening other bids -- should B be invalid? 
+And the answer is, well certainly it should be... 
+__: But only if B3 is valid. 
+If you don't look at B3 at all -- Yes. 
+__: -- just pretend it's not there -- Right. 
+__: To make a bid B1 and it's not valid, you should be able to make another bid. 
+Right, OK good. 
+But it should serve to break -- OK, but it -- of another case because we decided that B2 has to be by somebody else. 
+So that's OK. 
+All right, so what we're deciding is that B1 needs to be valid. 
+Right, so if I made a bid that was no good for some reason -- maybe I was impolite or maybe it was not encrypted properly, or maybe something, right? 
+There's a host of reasons why it could have been invalid. 
+Then, that's OK. 
+Right? 
+Now I can make a new bid. 
+OK, that was good. 
+See, it takes a whole room full of people (laughter) to figure out how to do this right. 
+Or a debugger -- right, or the debugging unit, one of the two. 
+Just like writing programs. 
+I don't know how rooms full of people write programs. 
+Sometimes it works, sometimes it doesn't. 
+==========
+OK, let's see. 
+We have time for one more. 
+I like number seven. 
+So any bidder -- so we don't like people who mess this up. 
+So any bidder who makes an invalid bid is disqualified for the rest of this auction. 
+So there. 
+__: (overlapping dialogue; inaudible) So now -- OK, so now the question is, do you want -- you might rather leave it there anyway, right? 
+So again, there's a question of, do these particular axioms as you write them down work together at the moment? 
+And the answer is, well yes. 
+But just like you don't like to write programs that just happen to work because of some conditions that I've set up somewhere, sometimes it's good to just test those conditions even though you know it's going to be true because someday later it might not be. 
+Same thing goes here. 
+You still like your axioms to stand alone, to kind of make sense, to kind of say what you want them to say. 
+So let's try number seven. 
+OK, any bidder, any bidder for all P, all people. 
+And I'm using these variables as mnemonics again, right? 
+So I'm using P not B, just because I mean for it to range over people but I'm going to have to say maybe a person, or maybe not -- OK, for all persons, if there is some bid that is not valid and P bid it, then -- and I have this predicate "disqualify" -- disqualify. 
+P is disqualified from bidding on the item of B from T henceforth -- from the time of the invalid bid henceforth. 
+Good? 
+__: Disqualified from only that item? 
+I mean, we could boot you out of the whole system entirely, that would be OK too. 
+You could write axioms that would do that. 
+You could just change this axiom and off you'd go. 
+All right, we'll do -- __: Should this be a two-way implication? 
+Should it be? 
+Well, the question, is are there other things that could cause you to be disqualified? 
+And maybe I can't think of any right now, but maybe I would like to leave that possibility open. 
+OK, so let's do eight. 
+You guys do eight. 
+I'll give you two minutes to think about eight. 
+And then I'll talk about it and then we'll set you free. 
+You can take them on the way out the door. 
+OK. 
+It's going to have the same basic form as this axiom, right? 
+For all bids, if something about that bid, then it's not valid. 
+So it can be done. 
+All right. 
+what is it about that bid that could cause it to be invalid? 
+__: (inaudible) I think it's the time, OK good. 
+Yes, there's the time. 
+So what happened to that time? 
+__: Disqualified? 
+Disqualified. 
+Somebody got disqualified. 
+Disqualified has an item and a -- a person, an item, and a time. 
+So what person is the person at issue? 
+The bidder B. The item of B? And the time. 
+OK, so there's a time like this, and what else has to be true about that T? __: Time of B is greater than T? Right. 
+And this bid came after that time that the bidder was disqualified. 
+Done. 
+The bid is invalid. 
+Yes? 
+__: Why do you need the words "after he had been disqualified" in the sentence? 
+Well because I may have this bidder -- you could get I think in some trouble by saying -- let's say I go and I make a lot of bids that are just fine. 
+And they up the ante and they're valid and so on. 
+And then I do something bad. 
+Then all my bids after that are bad, but the ones before still have to stand, otherwise we might get into trouble interpreting the earlier part of the auction. 
+__: Oh. 
+But the way we wrote this word Time, the bidder is disqualified from every subsequent auction. 
+Right, but not preceding -- but all his preceding bids are still OK. 
+__: Yes, but -- OK, see number seven, perhaps, (inaudible) but make sure that we -- if he is disqualified bidding for shoes, he is disqualified bidding for another -- Right, when I said "the rest of the auction", I meant the rest of the auction of this particular item. 
+__: You didn't make a statement. 
+Right, I didn't say that, right. 
+When I was thinking "the auction" I meant -- right, good, the auctioned item, not the auction as a whole. 
+Yes, good. 
+__: It doesn't say it here. 
+We said it's the same item. 
+__: Oh, (inaudible). 
+So next time, we'll talk about inference and then we'll see if we can actually end up drawing some conclusions from this mess of axioms, I'm sure we'll have to go back and change them around. 
+==========

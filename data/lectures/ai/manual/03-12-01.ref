@@ -1,0 +1,588 @@
+==========
+So, we're switching gears now. 
+The first section of class, we talked about problem solving, and search in general, then we did logical representations. 
+And the motivation that I gave for doing the planning stuff, or the problem solving stuff, was well, you might have an agent that is trying to figure out what to do in the world, and so problem solving would be a way to do that. 
+And then we talked about, we motivated logic by trying to do problem solving in a little bit more general way, but then we kind of really digressed off into the logic stuff, and so now what I want to do is go back to a section on planning, which will be the next four lectures, where we talked about, go back to the--given now that we know something about search and something about logic, we can talk about how an agent really could figure out how to behave in the world. 
+This will all be in the deterministic case. 
+We're still going to assume that when you take an action in the world, there's only a single possible outcome. 
+After this, we'll back off on that assumption and spend, pretty much the rest of the term, thinking about what happens when that assumption goes away. 
+==========
+So, in planning, the idea is that you're given some description of starting state. 
+A starting state, or states some goal state or states, and some set of possible actions that the agent can take. 
+And you want to find the sequence of actions that get you from the start state to the goal state. 
+So, it's pretty clear that you can cast this as a problem solving problem. 
+Remember when we talked about problem solving, the idea was there was start state, and we searched through a tree that was the sequences of actions that you could take, and you tried to find a nice short plan. 
+So, you can take a plan, and it certainly maps onto that idea of a problem solving problem, but it may not be the best view to take. 
+Just for fun, let's think about one case. 
+So, first of all, in problem solving, when we looked at it, we started at a particular initial state. 
+So, it wouldn't be totally clear what to do if you had a set of possible starting states. 
+One thing that you could do is think of that same kind of problem solving search, but do it where your nodes would now represent sets states, rather than single states. 
+So, how would that go? 
+So, I don't know, to illustrate this, I cooked up a funny little example. 
+Imagine that we have a kind of a four by four world where these squares are all filled up, and the agent is starting out somewhere in the bottom row, we don't know where, and the goal is to get here. 
+Count the number of these states, the cells. 
+A, B, C, D, E...J, 
+K, L And so our first state is going to be I, J, K, L. That is to say, let's say the agent knows what's in the bottom row, but it's not sure where. 
+And the goal would be to try to find a plan that the agent could execute, that would get it to the goal state, no matter where it was. 
+So, how could that go? 
+Well, you could say, I am starting out in I, J, K, L. And imagine that the actions the agent can take are north, south, east, and west. 
+But if there's a wall nothing really bad happens to it. 
+It just stays there. 
+So, if we start out and think. 
+Now, state I, J, K, L. And we move south, what would our next state be? 
+Right. 
+I, J, K, L. Right. 
+So, how would you do that? 
+You would take. 
+If I were an I, I'd go to I. If I were a J, I'd go to J. So, if you would put--well, that's not very interesting. 
+Let's say--imagine that we're here, and we move north. 
+OK. 
+So, if we're in state I, and we move north, we'll go where? 
+G. J? J. K? K. And L? H. I don't know, where that's going to take us, right? 
+But you can imagine searching, and figuring out what to do. 
+Maybe, one profitable thing would be to try to move, say, east. 
+If we're in I, J, K, L, and we move east, let's say, if we're in I, we'll go to J. If we're in J, we'll go to K. And if we're in L--if we're in K, we'll go to L. And if we're in L, we'll go to L. So, that made our set of states smaller, which might be useful. 
+So, what you--you could imagine just going east until you are sure that you're in L, and then you could go north. 
+So, that's a way to do, to think about planning in the case where you're not absolutely sure what your starting state is. 
+==========
+But, it's still, it's really inefficient in any kind of a big domain because even though now we're planning with, maybe because we're planning with sets of states at the node, we're having to go through each little atomic state in our set of states, and think about how does each one of those atomic states transition to some other atomic state. 
+And that could be just really desperately inefficient. 
+So, one of our arguments for moving to logical representations was to be able to have a compact way of describing a set of states. 
+Like, you must be able to describe that set of states IJKL by saying, you know, the proposition "bottom row" is true and you might be able to say, well, if "bottom row", and no obstacles above me, then when I move, then I'll be in "next to bottom row", or something like that. 
+So, then that might mean that if you can sort of set up the logical description of your world in the right way, you can talk about these sets of states, not by enumerating them, but by giving logical descriptions of those sets of states. 
+And the idea is that a logical formula to stand for a set of states -- right? 
+-- it stands for all the ways the row could be that would make that formula true. 
+So, this leads us to the first approach to planning. 
+It's going to turn out not to be one that we're going to pursue very much, but it's sort of worth mentioning because it's a kind of a classical idea, and you can get somewhere with it. 
+So, here's another way that you can think about planning, is using, and the book talks about it in--I think chapter seven. 
+It is a situation calculus. 
+OK. 
+And the idea here is to use first-order logic, exactly as you know about it, to do planning. 
+So, first of all, we have to figure out how are we going to talk about states of the world, and start states and goal states and actions in such a way, in the language of first order logic, and then somehow use the mechanism of theorem proving to find a plan. 
+That's the idea. 
+It's appealing, right? 
+It's always appealing, if you have a general solution, if you can take a particular problem, and see how it's an instance of that general solution, maybe you can apply that, and then you get your answer out. 
+==========
+OK, so in situation calculus, the idea is that you--what we're going to do is "reify" situations. 
+Reify just means, essentially name. 
+Or treat them as objects. 
+So, we're going to say things like "at robot Room Six" in "situations 9". 
+So, where before you might imagine talking about the situation of a robot in a world, you might have said, "at robot room six," but now we want to be able to, in thinking about planning and thinking about different courses of actions, we want to be able to talk about where the robot is in different ways the worlds could be. 
+In different nodes in our search tree, if you will. 
+It could be at different times, but we're not even really necessarily thinking about time yet. 
+We're just thinking about different configurations. 
+Different ways the world could be. 
+Different situations. 
+So, we say "situation nine." 
+So, we'll always put any proposition that can change it's truth value in different situations, we're going to have the situation parameter over here. 
+So, that's how we're going to represent, we're going to use these situation variables to represent different ways the world can -- Then we can talk about how the world changes over time, by saying, by having the predicate or function "result". 
+We can say the result of doing action "move north" in situation one is situation six. 
+So, we can talk about situations resulting from other situations by taking an action. 
+And that's exactly what's going on here when we talk about, well, there was a situation or a set of situations and we took an action and here's a different set of possible situations (inaudible) well. 
+So, situations result from doing actions in other situations. 
+But, now what we want to do is explain, somehow write down how it is that what we know about S6 because of the fact that we got it by moving north from S1. 
+So, what do we know about S6? 
+Well, let's say, I mean, Russell and Norvig to talk about situation calculus in the context of the Wumpus world. 
+That's sort of entertaining to read that section. 
+It's not a real practical application, but that's OK. 
+But, so they talked about, well, imagine that you're running around in a silly little game, and you want to pick up some goal. 
+So, they write what are called "effect axioms". 
+Effect axioms tell you what are the effects of taking your actions on the world. 
+So, you might think something like for all things in situations S: If X is present in the situation, and X is portable, and we'll assume that things are always either portable or not, so you don't have to have a situation argument there. 
+Then, you're going to be holding X in a situation that the result of doing the grab action in situation S. So let's think about this part first. 
+It says, "for all situations." 
+So, we're talking about any situation. 
+Consider what happens if you're in some situation and you do the grab action. 
+So, this term here is the name for a situation. 
+It's the name for the situation that results from doing a grab in Situation S. Well what do we know about that situation? 
+Well, we happen to know that in that situation, you're going to be holding X. 
+Well, that's not always true. 
+When is it true? 
+It's true when X is actually there in a situation, and it's a portable thing that you can grad. 
+So, that's a way that you can talk about how taking actions has various kinds of results. 
+Another example of an Effect Axiom is dropping things. 
+So, you might think, for all X and F, not holding X in the result of dropped in S. So this is the kind of a crude action model, so if you execute the drop action, whatever you were holding, you're not holding anymore. 
+So, S is the situation. 
+Results have drop in S.... 
+It's a situation that comes. 
+__: Don't you think we have (inaudible)? 
+Well, good. 
+So, you could -- Right. 
+I mean, it depends on how you want to formalize the domain that you're in. 
+And in their assuming little Wumpus world example, it's kind of like those video games where you ride around and when you are in square, where you say "pick up" and you pick up. 
+That tells you to pick up whatever was there. 
+So, in this case, if there were four things present, you'd be holding them all, as a result of doing grab in their presence, and similarly "drop" just drops whatever you got. 
+But, you're right. 
+You could absolutely make a much more refined model where you could pick up and drop particular items. 
+Yes. 
+Right. 
+Anyway, in the situation that results from doing a drop action, you're not holding anything. 
+So, it's actually pretty nice, pretty rich, pretty effective language for describing domains, and you can describe pretty complicated ones. 
+There are some issues, though, here. 
+It's not enough to just say, in some sense, these positive effects of taking actions. 
+You also have to describe what doesn't change. 
+And, for a long time, people talked about the "frame problem," that is to say the, it's called the frame problem, I think, from the frames in movies. 
+Animators know that most of the time, from frame to frame, things don't change. 
+And when you write down a theory -- right? 
+-- we're saying, well, if there's something here, and you do a grab, then you're going to be holding the thing. 
+But, this doesn't tell us, for instance, what happens to the colors of the objects, or whether your shoes are tied, or the weather, as a result of doing the grab action. 
+But, you have to actually say that, right. 
+At least, in the situation calculus formulation, you have to say, "and nothing else changes" somehow. 
+So, one way to do this, is to write frame axioms, where you say things like, "for all objects and colors and situations, if the color of X in situation S is C -- actually this is a better way to write it -- the color of X in situation S is the same as the color of X in the result of doing grab. 
+That is to say, picking things up doesn't change their color. 
+Picking up other things doesn't change their color. 
+But it can be awfully tedious. 
+It can be awfully tedious to have to write all these out. 
+And, you know, it turns out that there's a solution to the problem of having to write all the actions. 
+You can read it in the book where they're talking about successive state actions. 
+So, there are ways of sort of saying, "this is when--this is when something moves and it doesn't move otherwise." 
+"This is when something changes color and it doesn't change color otherwise." 
+You can kind of say concisely. 
+OK. 
+==========
+Assuming you write all of these axioms down that describe the dynamics of the world. 
+They say how the world changes as you take action. 
+Then, how can you use theorem proving to find your answer? 
+Anybody have an idea? 
+You can write the goal down somehow as the logical state. 
+Right? 
+Like, you could say, well, I want to be in a situation where I'm the agent, where I'm at home and I am holding gold. 
+So, I'd like to be in that situation. 
+So, you could say, "Well, what I'm real interested in is the existence--some situation in which I'm at home and I'm holding gold." 
+So, you could, using your favorite theorem prover, try to prove that from all these axioms, and from a description of the current state, right? 
+So, you would say, "I started out at home in S0, but I'm not holding gold in S0, but I am holding rope." 
+So, there may be, it's a whole bunch of things that you know, you put those in your database. 
+You put all these actions that describe how the world works in the database, and then you kind of prove this. 
+And we saw tricks where you're trying to prove the existence of something, you can watch what happens to this variable, and if all goes well, what you'll get out is an instantiation of S to be something like, S is going to turn out to be something like the result of doing a move north, in a situation, that's the result of doing a grab, in a situation that's the result of going north in S0, let's say. 
+And that's the plan. 
+Because it says, "This situation here, is one that satisfies your requirement." 
+I was able to prove that in that situation, the goal holds. 
+And we can read out of the construction of the name of that situation what to do. 
+Right? 
+What would be the first action you'd have to take? 
+Let me actually change the example, so that the answer to the question is meaningful. 
+Right. 
+So, the first action you have to, in S0 I go south. 
+And that's going to get me into some situation. 
+And in that situation, I need to do grab, and that will get me into another situation; and, then, in that situation, I need to go north, and that will get me into the new situation which is F, which is the one where most of these things are true. 
+So, way back when I was more naive than I am now, when I first taught my first AI course, I tried to get my students to do this, to write down all these actions for the Wumpus world, and to try to use a theorem prover to derive plans. 
+It turned out that it was really good at deriving plans of Length 1, and sort of OK at deriving plans of Length 2, and, then, after that, forget it--it all just went right out the window. 
+And it was not a problem with my students or the theorem prover, but rather with sort of the whole enterprise of using the theorem prover to do this job. 
+==========
+So, there's sort of a general lesson, which is, there are all these mathematician jokes about reducing something to the previous, to a previous problem, right, you know, they know how to put out a -- I should have learned one of these jokes so I could tell it to you, but I can't, so I won't try. 
+Anyway, there's a kind of, there's this idea that, well, if I know a solution to a particular problem, if only I can turn the problem I have into an instance of that problem, then it's all done because I can just run that solution, right? 
+So, since we start out with trying to figure out how to do theorem proving and first-order predicate calculus, it seems like as soon as we can reduce planning to a problem of theorem proving in first-order predicate calculus, then everything is good. 
+But, there's -- and it is sort of, cognitively, very efficient to do things that way. 
+It's cognitively easy for us to say, "OK, it's first-order predicate calculus theorem proving, we know how to do that, we're done." 
+But it's not computationally efficient to do that. 
+It's rarely the case that taking a very specific problem, noticing that it's an instance of a very general problem, and applying the general solution technique is a good idea. 
+Because, usually, the fact that you have a particular specific problem to start with gives you some leverage, some insight, some handle on solving that problem more directly and more efficiently. 
+And that's going to be true for planning. 
+We're going to use a much restricted kind of logical representation in building a planner, but we're going to take advantage of some special properties of the planning problem to do it more efficiently. 
+All right. 
+So, there are a couple of important points in planning that we can do. 
+Special properties of planning: One is that we can connect action description and state descriptions. 
+And so, I've erased it now, but if I had an axiom that said that, as a result, we have that axiom that said, "As a result of grab, we can make holding true." 
+Well, you just might imagine, therefore, that if you were operating in a domain where you have holding as part of your goal statement, that noticing that this action that makes holding true, and noticing that you need to have holding be true, would give you the idea that probably you need to do an action that makes holding true. 
+So, rather than just trying all the actions and searching blindly through the search space, you could notice, "Goodness, if I need holding to be true at the end, then let me try to find an action that would make it true." 
+So, you can see these connections, and that can really focus your searching. 
+Another thing to notice, that's going to be really important, and we'll spend time probably mostly next time -- we'll see how far we get --is that you can add actions to your plan in any order. 
+You're trying to think about, I don't know, how best to go to Tahiti for spring break, you might think about which airline flight to take first. 
+That maybe seems like the most important thing. 
+You might think about that and really nail it down before you figure out how you're going to get to the airport or what hotel you're going to stay in or a bunch of other things like that. 
+You wouldn't want to have to make your plan for going to Tahiti actually in the order that you're going to execute it, necessarily. 
+Right? 
+So, you imagine, you consider all the different taxis you could ride in, and that would take you a long time, and then you write for each taxi, you think about, "Well, then how do I...." 
+You don't want to do that. 
+So, it can be easier to work out a plan from the middle out sometimes, or in different directions, depending on the constraints. 
+Another thing is that sometimes we can take advantage of, sub-problem independence. 
+So, if I have the goal to be at home this evening with a quart of milk and the dry cleaning, then if I see that I can solve the quart of milk part and the dry cleaning part roughly independently and put those solutions together. 
+So, to the extent that we can decompose a problem and solve the individual problems and stitch the solutions back together, we can often get something more efficient. 
+So, we're going to try take advantage of those things in the construction of a planning algorithm. 
+We're also going to scale back the kinds of things that we're able to say about the world. 
+Especially for right now, just to get a very concrete planning algorithm. 
+We'll be very restrictive in the language that we can use to talk about goals and states and actions and so on. 
+We'll be able to react, relax some of those restrictions later on. 
+We may or may not do that in this task, but you can read about some of it in the book, or in other papers, if you really were interested. 
+All right. 
+==========
+So, now we're going to talk about something called STRIPS. 
+Or STRIPS representation. 
+So, STRIPS is the name of the first real planning system that anybody built. 
+It was made in a place called SRI, which used to stand for the Stanford Research Institute, so the STR part is for the Stanford Research Institute Problem Solver or something. 
+Anyway, they have this robot named Shakey, a real, actual robot that goes around from room to room, and they needed -- and it really was shaky, right? 
+I actually have a video of it. 
+We can show the Shakey video sometime. 
+They would roll along and then, I don't know, it didn't decelerate in the most elegant way, so it would stop and go "ee-ee-ee". 
+So, it was called "Shakey." 
+But, it could actually drive around and go from room to room, and sort of push boxes a little bit from here to there. 
+I should say, it could do this in a very plain environment. 
+Kind of nothing in the way. 
+So, the thing is they built this planners sort of the first planner, so that Shakey could figure out how to plan, you know, to go from this room to that room, or to unblock a door so it could go around somewhere or it could push a box around. 
+So, it really worked, and it worked on some computer that's just -- And it's great to read the original STRIPS of paper. 
+I should have written this down It was like, one of the, oh, 4K of memory or 2K or something like that. 
+It was this big old computer, as big as this room practically, and it had about 4K of memory, so they had to be really careful that it didn't go nuts. 
+And it was written in LISP. 
+OK. 
+Here's how they represented states of the world. 
+So, we're going to look at a class of planners that has essentially grown out from STRIPS. 
+But, the kind of representation they use is really something that people have held on to for a long time. 
+So, we can represent a state of the world as a conjunction of ground literals. 
+Right? 
+Remember, "ground" means there are no variables. 
+And a "literal" can be either positive or negative. 
+So, actually, in true STRIPS, they were always, I think, always only positive. 
+So, you could say, you know, "In robot Room3" and "closed door6" and ... 
+That would be a description of the state of the world. 
+Things that are not mentioned here are unknown. 
+You just got some literals, and the conjunction of all those literals taken together describes the set of possible worlds -- right? 
+-- a set of possible configurations of the world. 
+But we don't say whether Door 1 is open or closed, and so that means Door 1 could be either. 
+And when we make a plan, it has to be a plan that would work in either case. 
+A That's what the state is -- And goal is also a conjunction of literals, but they're allowed to have variables. 
+You could say things like "My goal is to be (in robot, some room R) and in robot some room R and Charger. 
+You'd be able to say, "I want to be in a room where the charger is." 
+That could be your goal. 
+And maybe you'd make that true by going to the room where the charger is or maybe you'd make that true by moving the charger into some other room where -- I don't know. 
+But you could have that as your goal. 
+It's implicitly, existentially quantified as a sort of hidden existential quantifier. 
+We'll talk about actions; they're sometimes also called operators. 
+They have a name, and sometimes it's parameterized. 
+So they have a name. 
+They have a set of pre-conditions, which is also a conjunction of positive literals. 
+And intuitively a precondition is something like -- Actually, let me give you an example as we go; it works better that way. 
+So, you might have an action called "Go(there)". 
+Right? 
+It's the action of going somewhere; it takes the parameter called "There." 
+So, precondition might be that you're at here, and there's a path from here to there. 
+Right? 
+So, but intuitively, those things have to be true in some state before you could take the action. 
+And then you have "effect" which is a conjunction of literal, but not necessarily positive. 
+So, your effects might be, let's see, "at(there)," and "not at(here)". 
+So you say what's true now is a result of having done this action. 
+Now, since we're not doing this in a very general, logical framework, we're doing it in a very specific case, although we're using logical expressions here, we don't have to explicitly, for instance, have arguments that describe the situation, because, implicitly, an operator description says, "If these things are true, and I do this action, then these things will be true in the resulting situation." 
+But the idea of a situation as a moving line and so on is really built into the algorithm that we're going to use in the planner. 
+And so that situation is going to have to be named in the logical description. 
+Let me just give you a little bit of terminology, just in case you read other papers about planning. 
+These effects are sometimes called "post-conditions" -- that one is going to true afterwards. 
+It was also in the original STRIPS paper called the "Add List" and the "Delete List." 
+So "at(there)" would have been on the Add List; as a result of this action, you can add this. 
+And "at(here)" would have been on the Delete List; it was something that you would delete from the model. 
+This is all there is. 
+__: Why must the pre-conditions be positive? 
+That's a good question. 
+The answer is they don't -- In the original STRIPS representation, everything was positive, right? 
+All you ever had was a set of positive literals that describes a certain circumstance. 
+If you wanted, and it was related to the thing that I was about to say which is that there's no extra, there's no inference. 
+There's no way to draw further conclusions about a situation except for what was here. 
+So, imagine --let me see if I can cook up a good action. 
+Imagine that you wanted to talk about boxes being open and closed, for instance, and for some reason it was useful to you to have the name "open" and the name "closed," right? 
+You were going to depend on those things because you wouldn't be able to have "not(open)" in a pre-condition. 
+They wanted to make it as simple as possible because they didn't want it inferred, to have to infer that "not(open)" and "closed" were the same thing. 
+That was going to make it kind of too complicated. 
+So, you might have an operator that says, you have "open," you know, "openbox(B)", and the pre-condition might be "closed(b)", and then the post- condition might be "not closed(b)" and "open(b)" But it seems kind of a nutty thing to have to write down, but it really takes all the inferential burden away from the computer. 
+Now they built this system when, as I say, on this incredibly small and simple computer, and so they absolutely had to just make it as easy as they could for the system. 
+As time has progressed and computers have gotten fancier, people have added more richness back into the planners. 
+Typically, you don't have to go to quite this extreme. 
+They can do a little bit of inference about how predicates are related to each other. 
+And then you might be allowed to have, say, "not(open)" here as the precondition, rather than "closed." 
+But, in the original version, there was no inference at all. 
+All you had were these operator descriptions, and whatever they said to add or delete, you added and deleted, and that was it. 
+And to test if the pre-conditions, there was no theorem proving involved, you would just take these pre-conditions and look them up in your database and see if they were there or not. 
+So that's kind of what's going on. 
+I mean, STRIPS is one pole of really, of simplicity and planning and kind of the predicate calculus, The situation calculus thing, is the other pole. 
+And now, you know, people are building systems that live somewhere in the middle. 
+But it's useful to kind of see what the simple case is like. 
+So, the variables in an operator, let's talk about this, and then we'll talk about how to do planning. 
+__: Where's an operator and variable? 
+"There" is a variable and it's sort of implicitly, universally quantified, that there's kind of an implicit for all "There." 
+But you're not allowed to write any other quantifiers at all, and so an implicit universal quantification over these variables and implicit, existential quantifier in the statement of the goal. 
+That's it. 
+And people often talked about this as being an operator schema. 
+But you can think of it as standing for a whole set of operators -- one for each possible value of "there." 
+==========
+Let's talk about planning algorithms. 
+And let's talk about a particular planning problem. 
+So, I'm going to write the operator descriptions up over here. 
+There are two actions. 
+Let's keep "Go." 
+And we'll add "Buy." 
+The pre- conditions are going to be: "at(store)" "Sells(store,x)" and the effect is going to be "Have(x)". 
+OK, so there's an operator, right? 
+You go to the store; you buy something. 
+There's a nice problem in the book about extending this domain to deal with the case where you have money and how would you add money in as a pre-condition and a post- condition of the buy operator. 
+And it gets a little bit complicated because you have to have amounts of money and then money usually declines, and you go to the bank and so on. 
+So, it's a nice exercise to think about how you could do it. 
+OK, now let's imagine that your goal is to have milk and have bananas and have a variable speed drill. 
+OK, we're going to start at home and knowing that the supermarket sells milk, and the supermarket sells bananas, and the hardware store sells drills. 
+And for now just because it's going to be too complicated to write all over the board, we'll not worry about this path constraint, we'll assume that we can get from anywhere to anywhere. 
+You could obviously put in whatever path items you wanted. 
+OK. 
+==========
+So, we're going to use this example to think about how we might do planning. 
+We'll just keep it on there as kind of a background. 
+Now, if we go back to thinking of planning, right, as problem solving or that kind of search that we did on the board over here with sets of states, then you might say, "All right, I'm going to start in this state." 
+Write the start state, where we're at home, etc., that's the start state. 
+And I'm going to consider taking a particular operator, like "Go(somewhere)." 
+Well, there's a lot of different places I could go. 
+Maybe, this domain may be it's fairly obvious. 
+If you just look at this domain, it's pretty circumscribed and you can really only go to the supermarket and the hardware store, but imagine that there are a lot of other places you could go. 
+You get this really big branching factor that says, "Well, think of all those places I could go." 
+And then you can buy stuff. 
+Think of all the things you could buy -- right? 
+-- an incredible number of things you could buy. 
+So, the branching factor, when you have these operators, the variables in them is just huge, and if you try to search forward, you're just absolutely up-the-creek. 
+So, planners that search directly forward and plans for end in this situation frame, they're called "progression planners," right, trying to search forward. 
+But, that doesn't work so well because it's never, you know, you just don't know, where you're trying to go. 
+They're not very directed. 
+So, you say, "OK, well, I need to make my planner more directed. 
+Let me drive backwards from the goal state, rather than driving forward from the start state." 
+As you read the search chapter, they talked a lot about that, and if you can give a characterization of how your operators work backwards, rather than forwards, then maybe that's the way to go. 
+So, let's think about that. 
+So, rather than progression, we can do regression, which doesn't sound good, but it might be OK. 
+So, now we're going to start with the goal state. 
+Our goal state is this: We have milk and we have bananas and we have a drill. 
+OK. 
+So now we can do goal regression, which is sort of an interesting idea. 
+If this statement is true in the world, it would be the opposite of applying an operator description, then going forward. 
+We're going to go backward. 
+If we wanted to make this true in the world and the last action we took before doing this was a particular action -- let's say it was "buy milk" -- then you could say, "All right, what would have to have been true in the previous situation in order that "buy milk" would make these things true in this situation?" 
+So, if I want this to be true in the last step, what had to have been true on the next to the last step, so that "buy milk" would put me in that circumstance? 
+So, what would have to have been true in the previous step? 
+__: (inaudible) Right, OK, good. 
+So, at this point we can be sort of a little bit, reach a commitment, and say, "Well, we have to be at a store, and, milk." 
+What else has to be true? 
+__: (inaudible) And we have to have bananas and a drill. 
+Because we could have decided that what we need to do is buy milk by kind of taking this "have milk" and matching up the effects. 
+With these effects, we're saying, "Oh well, it would be good to instantiate the milk." 
+You can drive the binding of that variable pretty effectively by matching the effect of the operator against these things that you're trying to make true. 
+So, now you're left with this thing that you're trying to make true. 
+And now it seems a little bit harder -- right? 
+-- because, again, you could say, "All right, well, what can I do? 
+I could put in a step for buying bananas. 
+So, then, that's going to be requiring me to be somewhere. 
+I could put in a step for buying the drill right now. 
+I mean, you guys know that putting the drill and buying stuff here probably isn't so good because we can't buy it in the same place. 
+But the planning algorithm doesn't really know that yet. 
+You could also kind of go off. 
+If you pick this "at store," you could go nuts because "store" could be anything. 
+So, you could just suddenly decide that you want to be anywhere in the world. 
+So that's probably not a good one to try to satisfy. 
+You can try to satisfy that one, it might help you. 
+It turns out that you can satisfy that one without doing any work, by just picking a variable. 
+But anyway, you're going to see that if you try to build the planner based on this principle, that, again, you're going to get into trouble because it's hard to see, of these things, what to do next -- how they ought to hook together. 
+You can do it. 
+And you can do search just like usual, and you would try a whole sequence of actions backwards until it didn't work, and then you'd go up and back-track and try again. 
+And so the same search procedures that you know about would apply here. 
+But again, it feels like they're going to have to do a lot of searching, and it's not very well directed. 
+OK. 
+==========
+So, we're going to pursue for, I guess the rest of this class and then going on into the next class, the idea -- Plan Space Planning. 
+"Progression and Regression Search in [what we'll call] Situation Space." 
+Really, it works on sets of situations or logical descriptions of situations, right. 
+So, the idea is that this is the node in your search, and then you consider doing an action, and that takes you to another node in your search. 
+And the nodes in your search are situations. 
+You're thinking about sets of situations or situations. 
+Another way, a whole kind of different way to think about the planning process is that you're searching not in the space of situations, thinking about time unfolding as you're doing actions, but searching in the space of plans. 
+That's what we're going to look at now. 
+We're going to think about searching in plan space. 
+So, in searching in plan space, the idea is you start out with an empty plan, and then there are operations that you can do to a plan, and you want to do operations to your plan until it's a satisfactory plan. 
+Now you can de- couple the order in which you do things to your plan from the order in which the plans that will eventually be executed in the world. 
+So that's an important thing. 
+The searching in plan space, lets you decouple planning order from execution order. 
+And, in particular, just to give you an intuition, we'll go through this all pretty formally, but the idea is we're going to keep -- So we're going to operate on a representation of a plan. 
+We're going to keep adding, changing the representation of the plan. 
+And it's going to let us take what's typically called a "least commitment approach." 
+So, by "least commitment," what we mean is, here, it was feeling like, before we knew exactly what we were going to be doing in life, we had to decide what store we wanted to go to, and we had to decide right away that we wanted to buy the milk before the drill, bananas or the drill. 
+What you'd like to do, as you're going along, is to kind of be thinking of this in a big, unordered soup for a while, and say, "Well, I'm going to have to go somewhere and get the drill. 
+I'm going to have to go somewhere and get the bananas. 
+Can I figure that out and then think about what order they have to go in? 
+Maybe then think about which stores would be the right stores to go to in order to do that." 
+And so the idea is that you want to kind of keep working on your plan, but never commit to doing a particular thing unless you're forced to somehow: The idea being that it keeps you from having to back up and undo silly decisions. 
+So, you wouldn't commit to going to a particular store until you realized that, maybe there's this one store that can satisfy two of the things that you want to do. 
+So, we're going to kind of pursue this idea of least commitment planning. 
+The other kind of high level idea is a term from Simon; it's an old one. 
+And this is sort of what we said before, that we can do means-end analysis. 
+That is to say, again, you can look at what the plan is trying to do, what you're trying to achieve overall, look at the means that you have available to you, and try to match them together. 
+They built some early, Simon built an early planner that tried to look at the goal state, some goal state and some end state, and find the biggest difference. 
+Again, sort of trying to fly from one place to another, you would say, "Well, maybe the biggest difference is that --" Or, "The operator that will reduce the difference most between where I know I am and where I know I want to be is the flying operator. 
+So, let me put that one in first. 
+And then, I still have some other differences on either end. 
+Like, there's a difference between being at my house and being at the airport, and so I'll put in some operators to deal with that. 
+And there's another difference at the other end. 
+I'll put those in." 
+So, maybe addressing the biggest difference first is a way to kind of organize your planning in a way that'll make it more effective. 
+That's another idea at the higher level. 
+So, let us now look at this thing formally. 
+So, the plan is going to be kind of a more complicated object than usual. 
+==========
+So, what is a plan? 
+We'll call it a "PO" plan, where "PO" stands for "partially ordered". 
+And so we're going to have plan steps. 
+The plan is going to be a collection of steps, with some constraints on them, but without necessarily a commitment to a particular linear order in which we have to execute them. 
+So, a plan can consist of a set of steps. 
+And a step is just an instantiation, an instance of an operator. 
+And so, a plan -- You know, you might have a plan at the moment that has no steps in it, because you're just starting planning. 
+You might have a plan that has three steps in it, each of which is a "go". 
+Like, maybe you decided that you're going to have to move three times, and so you threw into your plans, "Go there," "go there," "go there." 
+But you haven't even decided what the "theres" are. 
+That's OK, that would be a plan of three steps where you haven't decided where it was going. 
+There's going to be a set of order and constraints on set. 
+We'll write it, something like, "SI goes before SJ." 
+So, you might know that you have to go to the bank before you go to the store. 
+You might have figured that out because you need money, and so that puts constraints on it. 
+__: I'm not familiar with that symbol. 
+Is that an alpha or is that -- Yes. 
+It's a -- Well, in the book it's a curvy less than. 
+__: OK. 
+(inaudible). 
+Yes. 
+People use it in algebra and stuff when they talk about an ordering, but they don't want to use the hard less than which means numeric less than to people. 
+So it's a kind of different less than. 
+There is a set of variable binding constraints. 
+So, they might be something like, "Some variable equals some value." 
+So V is a variable in one of the steps, and the X is a constant or another variable. 
+So it might be, I don't know, when you're trying to make a cake or something, and so you have to have the eggs and the flour in the same bowl. 
+So, you're going to have an operator that says, "Put the eggs in a [something] and put the flour in [something]." 
+Let's say, you don't want to commit which bowl it is yet. 
+Then, you might say, "Well, whatever the bowl is that I put the eggs into, it has to be the same as the bowl that I put the flour into, but it's not yet Bowl32." 
+So, that's the case where you would end up having kind of a partial plan where you had a variable constraint, that this variable equal that variable. 
+And the last thing is more for bookkeeping than anything else, but it's pretty important and it's the thing called the set of causal links for each step -- ordering constraints, variable binding constraints, and a set of causal links. 
+You would write "Step I achieved pre-condition C for Step J." So, if I have to have money in order to buy the bananas, then I might have a "go to the bank" action and a "buy bananas" action and I would put, during the bookkeeping and planning, I would put this link in there that says: The reason I have this action in here is because it achieves the "have(money)" pre-condition that allows me to do this action. 
+So, the idea is going to be, basically, the way that we do planning is: we add actions that we hope will achieve either parts of our goal, or pre-conditions of our other actions. 
+And to keep track of what we kind of have taken care of, we put these links in so that we can remember why we're doing things. 
+Often, you think real hard, and you realize, you figure out "Oh, I have to do this." 
+And then you might forget why it was that you committed yourself that you had to do a particular thing. 
+And these causal links are supposed to be good for getting into that situation. 
+So, a plan is just this. 
+It's the set of steps with these constraints and the bookkeeping stuff. 
+Thehe way we start off the planning process, the way we initialize the planning process is to start with a plan that looks like this. 
+It starts with two actions: Start and Finish. 
+And with the constraints, the start happens before finish. 
+And start is a special operator that has no pre-condition and it has as its effect the starting conditions of the problem. 
+So, in our "going to the supermarket" example, the starting conditions of that problem were that we were at home and we didn't have any milk and we didn't have the drill, and so on. 
+In order to make this thing kind of all nice and uniform, you just say, "Well, we started out not knowing anything, but there's this magic initial action that happened, and it has the starting conditions". 
+And there's a magic final action, "finish", that has as its pre-conditions the goal condition, and it has no effect. 
+So, this is our initial plan. 
+And now we're going to refine the plan by adding steps, ordering constraints, variable binding constraints, and causal links until it's sort of a satisfactory plan. 
+So, we're going to operate in the space of adding things to this plan, basically. 
+In general, we're not going to take things away. 
+And so the question is, "Well, what is it that makes a plan satisfactory?" 
+So we're going to write down on the board now a set of formal conditions on a plan that makes it a solution, that makes it a complete, correct plan. 
+So, for a plan to be a solution, it has to be complete and consistent. 
+==========
+So, let's talk about when a plan is complete. 
+Every pre-condition of every step is achieved by some other step. 
+We're going to have to say what "achieve" means. 
+So basically, if you look at our starting plan there, we see that there's this whole big list of pre-conditions for the final step, and so what we're going to have to do is somehow add enough other steps to achieve all the pre-conditions of the final step, as well as any of the pre-conditions of those other steps that we've added. 
+So, then, let's understand what "achieve" means, in either case but there's also a hard case here. 
+So we'll say, for Step I, achieve C for step J. SI has to come before SJ, right? 
+It's part of the notion of achievement, and C has to be a member of the effects of SI. 
+What else? 
+Is there anything else that you imagine we might need here? 
+Thus, by going to the bank step achieves "having money" for "buy milk." 
+If we go to the bank before we buy the milk, and going to the bank achieves having money -- There's another thing that could happen, though. 
+You could go to the bank. 
+Between going to the bank and buying milk, all kinds of things could happen. 
+Right? 
+You could be robbed, or you could spend it all on something more fun or who knows what? 
+Right? 
+So, you also have to say "And there's no intervening event that messes things up." 
+So, "There's no Sk such that, not C is in the effects of Sk." 
+So that's something that could kill our commission. 
+"And SI < SK < Sj [this is the tricky part] is consistent with the ordering constraint." 
+So, the idea is that these ordering constraints don't necessarily specify a total order on the plan steps. 
+So, it might be that the plan is very laissez-faire. 
+It's a, "Oh, go to the bank sometime. 
+Buy a mink coat sometime. 
+Buy milk sometime." 
+And so, you get back, and it doesn't say that buying the mink coat is between the bank and the milk, but buying the mink coat could be between the bank and the milk. 
+And that's enough for that to be a violation. 
+So, if we have a way of achieving every condition so that the thing that's doing the achieving is constrained to happen before we need it -- we get the money before we buy the milk -- it does do to the effect that we need and there's nothing that comes in between to clobber it, then our plan is good. 
+OK. 
+==========
+Let us just spend a few minutes doing an example plan for the milk case, very informally on the board, and the next time we'll go through the algorithm and do it again, more formally. 
+OK. 
+So, here's our initial plan. 
+I'm going to draw it. 
+So, here we have the start action, and here we have the finish action. 
+We'll let ordering constraints be in orange. 
+So, start has to happen before finish. 
+OK. 
+So, if you recall, the goal conditions were, "Have milk, have bananas, have drill." 
+OK. 
+So, what would you like to do? 
+Just be a moderately clever, human planner. 
+It doesn't seem like adding, ordering, or adding constraints at this point is going to get us anywhere, so probably we need to add a step. 
+What step would you like to add? 
+__: Buy milk. 
+Buy milk, yes. 
+It seems like no matter what, we're going to have to buy milk. 
+And that's going to have some links into this whole thing. 
+So, what do we know about buying milk? 
+Is there an ordering constraint that we'd like to have to buy milk? 
+__: After the start and before the finish. 
+After start and before finish, OK. 
+Good. 
+Now, "buy milk," had, as a pre-condition, that we were "at (X) and "Sells(X, milk)." 
+And it has as a post-condition, "have milk." 
+So, are there some causal links that we can put in now? 
+Why did we do "buy milk"? 
+__: Because we wanted to have milk. 
+Because we wanted to have milk. 
+So, let me put the pre- conditions down here. 
+We wanted to have milk. 
+We want to have bananas and we want to have a drill. 
+So, we can say, "All right, there's a causal connection here." 
+Right? 
+The reason I put this in was to achieve that pre-condition. 
+OK. 
+Eventually, we're going to have to satisfy two things. 
+We could do that now, or not, as you wish. 
+What else would you like to do to the plan now? 
+__: (inaudible). 
+Let's buy bananas. 
+Let's, for the sake of simplicity, delete the drill from the model. 
+We'll be happy with milk and bananas. 
+So, we're going to buy bananas. 
+And like you can see, this is going to get set up in a similar way. 
+So, we have to be at X. X has to be the sort of place that sells the bananas. 
+The result is going to be that we have bananas. 
+OK. 
+And then we can connect that up, let's see, temporally: This has to happen before the finish and after the start, and causally this having bananas is going to, we think achieve that pre-condition. 
+OK. 
+Now what do we need to do? 
+__: (inaudible) bananas as well. 
+OK. 
+We'll do one of these things at a time. 
+Maybe we'll add a constraint. 
+Looks good that if we constrain X to be the supermarket, right? 
+So, we'll add a goal constraint, I mean a variable constraint -- Oh, let me call this X1 and this, X2. 
+We'll let X1 equal supermarket. 
+And if we got X1 equals supermarket, then we're able to satisfy this pre- condition because way back in the first time I wrote this on the board, part of the start state was that the supermarket sold milk. 
+So, "supermarket," "milk." 
+This also provides, sell "supermarket," "bananas," and it also gives us "at home." 
+All right, so Sells(Supermarket, milk) , so we can get that from there. 
+That's good. 
+All right. 
+And if we're very clever, we'll instantiate this variable the same way, and we'll let X2 equal the supermarket. 
+All right, what else do we have to do to our plan? 
+Go to the store. 
+So, we have an action, "Go supermarket." 
+And we're going to require it temporally to go before "buying milk," say, but after start. 
+And it's going to provide us with "at X1," right? 
+And then if we're very clever, we can see that it will provide us with "at X2" because, sure enough, we've caused that, you know, X2 to be X1. 
+So, it will provide us with that, and then we have a real big spaghetti of stuff. 
+And if you look at it carefully enough, you'll see that it satisfies the requirements for a plan. 
+Basically, all the pre-conditions are satisfied, and there's nobody who can come in and clobber anything. 
+And what's sort of nice about it is that it is still agnostic about whether we buy the milk before the bananas or not. 
+So, if there were some reason -- Yes? 
+__: Go(SM) must come before the Buy(Bananas). 
+Oh, I do, thank you. 
+OK. 
+Right, otherwise, we would have been able to buy the bananas, and then go to the supermarket, and then buy milk. 
+Good. 
+Anyway, what's nice is that it's still left open the question of which order we do those things and what we promised at the end, if we have a plan that satisfies the criteria, is that any linearization of the steps in the plan that's consistent with the constraints is OK and will satisfy all the goals. 
+OK, so next time, we'll look concretely at the algorithms for doing the planning and we'll see what the issues are. 
+END OF SESSION 
+==========

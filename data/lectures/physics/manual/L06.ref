@@ -1,0 +1,489 @@
+==========
+Last time we discussed that an acceleration is caused by a push or by a pull .
+Today we will express this more qualitatively in three laws which are called Newton 's Laws .
+The first law really goes back to the first part of the 17th century .
+It was Galileo who expressed what he called the law of inertia and I will read you his law .
+A body at rest remains at rest and a body in motion continues to move at constant velocity along a straight line unless acted upon by an external force .
+And now I will read to you Newton 's own words in his famous book , Principia .
+Every body perseveres in its state of rest or of uniform motion in a right line unless it is compelled to change that state by forces impressed upon it .
+Now , Newton 's First Law is clearly against our daily experiences .
+Things that move don 't move along a straight line and don 't continue to move , and the reason is , there 's gravity .
+And there is another reason .
+Even if you remove gravity then there is friction , there 's air drag .
+And so things will always come to a halt .
+But we believe , though , that in the absence of any forces indeed an object , if it had a certain velocity would continue along a straight line forever and ever and ever .
+Now , this law , this very fundamental law does not hold in all reference frames .
+For instance , it doesn 't hold in a reference frame which itself is being accelerated .
+Imagine that I accelerate myself right here .
+Either I jump on my horse , or I take my bicycle or my motorcycle or my car and you see me being accelerated in this direction .
+And you sit there and you say , Aha , his velocity is changing .
+Therefore , according to the First Law , there must be a force on him .
+And you say , Hey , there , do you feel that force ?
+And I said , Yeah , I do !
+I really feel that , I feel someone 's pushing me .
+Consistent with the first law .
+Perfect , the First Law works for you .
+Now I 'm here .
+I 'm being accelerated in this direction and you all come towards me being accelerated in this direction .
+I say , Aha , the First Law should work so these people should feel a push .
+I say , Hey , there !
+Do you feel the push ?
+And you say , I feel nothing .
+There is no push , there is no pull .
+Therefore , the First Law doesn 't work from my frame of reference if I 'm being accelerated towards you .
+So now comes the question , when does the First Law work ?
+Well , the First Law works when the frame of reference is what we call an inertial frame of reference .
+And an inertial frame of reference would then be a frame in which there are no accelerations of any kind .
+Is that possible ?
+Is 26.100... is this lecture hall an inertial reference frame ?
+For one , the earth rotates about its own axis and 26.100 goes with it .
+That gives you a centripetal acceleration .
+Number two , the earth goes around the sun .
+That gives it a centripetal acceleration including the earth , including you , including 26.100. The sun goes around the Milky Way , and you can go on and on .
+So clearly 26.100 is not an inertial reference frame .
+We can try to make an estimate on how large these accelerations are that we experience here in 26.100 and let 's start with the one that is due to the earth 's rotation .
+So here 's the earth ... rotating with angular velocity omega and here is the equator , and the earth has a certain radius .
+The radius of the earth ... this is the symbol for earth .
+Now , I know that 26.100 is here but let 's just take the worst case that you 're on the equator .
+You 're ... ( no audio ) You go around like this and in order to do that you need a centripetal acceleration , a c which , as we have seen last time , equals omega squared R .
+How large is that one ?
+Well , the period of rotation for the earth is 24 hours times 3 , 600 seconds so omega equals two pi divided by 24 times 3 , 600 and that would then be in radians per second .
+And so you can calculate now what omega squared R earth is if you know that the radius of the earth is about 6 , 400 kilometers .
+Make sure you convert this to meters , of course .
+And you will find , then that the centripetal acceleration at the equator which is the worst case it 's less here is 0.034 meters per second squared .
+And this is way , way less this is 300 times smaller than the gravitational acceleration that you experience here on Earth .
+And if we take the motion of the earth around the sun then it is an additional factor of five times lower .
+In other words , these accelerations even though they 're real and they can be measured easily with today 's high tech instrumentation they are much , much lower than what we are used to which is the gravitational acceleration .
+And therefore , in spite of these accelerations we will accept this hall as a reasonably good inertial frame of reference in which the First Law then should hold .
+Can Newton 's Law be proven ?
+The answer is no , because it 's impossible to be sure that your reference frame is without any accelerations .
+Do we believe in this ?
+Yes , we do .
+We believe in it since it is consistent within the uncertainty of the measurements with all experiments that have been done .
+==========
+Now we come to the Second Law , Newton 's Second Law .
+I have a spring ... Forget gravity for now you can do this somewhere in outer space .
+This is the relaxed length of the spring and I extend the spring .
+I extend it over a certain amount , a certain distance unimportant how much .
+And I know that I when I do that that there will be a pull non negotiable .
+I put a mass , m1 , here , and I measure the acceleration that this pull causes on this mass immediately after I release it .
+I can measure that .
+So I measure an acceleration , a1 .
+Now I replace this object by mass m2 but the extension is the same , so the pull must be same .
+The spring doesn 't know what the mass is at the other end , right ?
+So the pull is the same .
+I put m2 there , different mass and I measure the new acceleration , a2 .
+It is now an experimental fact that m1 a1 equals m2 a2 .
+And this product , ma , we call the force .
+That is our definition of force .
+So the same pull on a ten times larger mass would give a ten times lower acceleration .
+The Second Law I will read to you : A force action on a body gives it an acceleration which is in the direction of the force ... That 's also important the acceleration is in the direction of the force .
+And has a magnitude given by ma .
+ma is the magnitude and the direction is the direction of the force .
+And so now we will write this in all glorious detail .
+This is the Second Law by Newton perhaps the most important law in all of physics but certainly in all of 801 : F equals ma .
+The units of this force are kilograms times meters per second squared .
+In honor of the great man , we call that one newton .
+Like the First Law , the Second Law only holds in inertial reference frames .
+Can the Second Law be proven ?
+No .
+Do we believe in it ?
+Yes .
+Why do we believe in it ?
+Because all experiments and all measurements within the uncertainty of the measurements are in agreement with the Second Law .
+Now you may object and you may say This is strange , what you 've been doing .
+How can you ever determine a mass if there is no force somewhere ?
+Because if you want to determine the mass maybe you put it on a scale , and when you put it on a scale to determine the mass you made use of gravitational force so isn 't that some kind of a circular argument that you 're using ?
+And your answer is No .
+I can be somewhere in outer space where there is no gravity .
+I have two pieces of cheese ; they are identical in size .
+This is cheese without holes , by the way .
+They are identical in size .
+The sum of the two has double the mass of one .
+Mass is determined by how many molecules how many atoms I have .
+I don 't need gravity to have a relative scale of masses so I can determine the relative scale of these masses without ever using the force .
+So this is a very legitimate way of checking up on the Second Law .
+==========
+Since all objects in this lecture hall and the earth fall with the constant acceleration , which is g we can write down that the gravitational force would be m times this acceleration , g .
+Normally I write an a for it , but I make an exception now because gravity , I call it gravitational force .
+And so you see that the gravitational force due to the earth on a particular mass is linearly proportional with the mass .
+If the mass becomes ten times larger then the force due to gravity goes up by a factor of ten .
+Suppose I have here this softball in my hands .
+In the reference frame ... 26.100 we will accept to be an inertial reference frame .
+It 's not being accelerated in our reference frame .
+That means the force on it must be zero .
+So here is that ball .
+And we know if it has mass , m which in this case is about half a kilogram that there must be a force here , mg which is about five newtons , or half a kilogram .
+But the net force is zero .
+Therefore it is very clear that I , Walter Lewin , must push up with a force from my hand onto the ball , which is about the same ... which is exactly the same , five newtons .
+Only now is there no acceleration so I can write down that force of Walter Lewin plus the force of gravity equals zero .
+Because it 's a one dimensional problem you could say that the force of Walter Lewin equals minus mg .
+F equals ma .
+Notice that there is no statement made on velocity or speed .
+As long as you know f and as long as you know m a is uniquely specified .
+No information is needed on the speed .
+So that would mean , if we take gravity and an object was falling down with five meters per second that the law would hold .
+If it would fall down with 5 , 000 meters per second it would also hold .
+Will it always hold ?
+No .
+Once your speed approaches the speed of light then Newtonian mechanics no longer works .
+Then you have to use Einstein 's theory of special relativity .
+So this is only valid as long as we have speeds that are substantially smaller , say , than the speed of light .
+==========
+Now we come to Newton 's Third Law : If one object exerts a force on another the other exerts the same force in opposite direction on the one .
+I 'll read it again .
+If one object exerts a force on another the other exerts the same force in opposite direction on the one .
+And I normally summarize that as follows , the Third Law as Action equals minus reaction .
+And the minus sign indicates , then , that it opposes so you sit on your seats and you are pulled down on your seats because of gravity and the seats will push back on you with the same force .
+Action equals minus reaction .
+I held the baseball in my hand .
+The baseball pushes on my hand with a certain force .
+I push on the baseball with the same force .
+I push against the wall with a certain force .
+The wall pushes back in the opposite direction with exactly the same force .
+The Third Law always holds .
+Whether the objects are moving or accelerated makes no difference .
+All moments in time , the force we call it actually the contact force between two objects one on the other is always the same as the other on one but in the opposite direction .
+Let us work out a very simple example .
+We have an object which has a mass , m1 .
+We have object number one and m1 is five kilograms .
+And here , attached to it , is an object two and m2 equals 15 kilograms .
+There is a force and the force is coming in from this direction .
+This is the force and the magnitude of the force is 20 newtons .
+What is the acceleration of this system ?
+F equals ma .
+Clearly the mass is the sum of the two this force acts on both so we get m1 plus m2 times a .
+This is 20 , this is 20 so a equals one meters per second squared in the same direction as f .
+So the whole system is being accelerated with one meters per second squared .
+Now watch me closely .
+Now I single out this object here it is ... object number two .
+Object number one , while this acceleration takes place must be pushing on object number two .
+Otherwise object number two could never be accelerated .
+I call that force f12 the force that one exerts on two .
+I know that number two has an acceleration of one .
+That 's a given already .
+So here comes f equals ma .
+f12 equals m2 times a .
+We know a is one , we know m2 is 15 so we see that the magnitude of the force 12 is 15 newtons .
+This force is 15 .
+Now I 'm going to isolate number one out .
+Here is number one .
+Number one experiences this force , f , which was the 20 and it must experience a contact force from number two .
+Somehow , number two must be pushing on number one if one is pushing on number two .
+And I call that force f21 .
+I know that number one is being accelerated and I know the magnitude is one meter per second squared .
+That 's non negotiable , and so we have that f , this one , plus f21 must be m1 times a .
+This is one , this is five , this is 20 and so this one , you can already see , is minus 15 .
+F21 is in this direction and the magnitude is exactly the same as f12 .
+So you see ?
+One is pushing on two with 15 newtons in this direction .
+Two is pushing back on one with 15 newtons and the whole system is being accelerated with one meter per second squared .
+Now , in these two examples the one whereby I had the baseball on my hand you saw that it was consistent with the Third Law .
+In this example , you also see that it 's consistent with the Third Law .
+The contact force from one on the other is the same as from the other on one but in opposite signs .
+Is this a proof ?
+No .
+Can the Third Law be proven ?
+No .
+Do we believe in it ?
+Yes .
+Why do we believe in it ?
+Because all measurements , all experiments within the uncertainties are consistent with the Third Law .
+Action equals minus reaction .
+It is something that you experience every day .
+I remember I had a garden hose on the lawn and I would open the faucet and the garden hose would start to snake backwards .
+Why ?
+Water squirts out .
+The garden hose pushes onto the water in this direction .
+The water pushes back onto the garden hose and it snakes back .
+Action equals minus reaction .
+You take a balloon .
+You take a balloon and you blow up the balloon and you let the air out .
+The balloon pushes onto the air .
+The air must push onto the balloon .
+And therefore , when you let it go the balloon will go in this direction which is the basic idea behind the rocket .
+( huffing and puffing ) I love to play with balloons , don 't you ?
+So , if I do it like this , and I let it go the air will come out in this direction and so then it means the balloon is pushing on the air in this direction .
+the air must be pushing on the balloon in this direction .
+There it goes .
+( whistles ) It didn 't make it to the moon but you saw the idea of a rocket .
+Action equals minus reaction .
+If you fire a gun , the gun exerts a force on the bullet the bullet exerts an equal force on the gun which is called the recoil .
+You feel that in your hands and your shoulder .
+I have here a marvelous device which is a beautiful example of action equals minus reaction .
+I show you from above what it looks like .
+You 'll see more details later .
+This rotates about this axis rather freely the axis is vertical and we have here a reservoir of water , which we will heat up .
+It turns into steam and these are hollow tubes and the steam will squirt out .
+And so when the steam squirts out in this direction the tube exerts a force on the steam in this direction so the steam exerts an equal force in the opposite direction and so the thing will start to rotate like this .
+And I would like to demonstrate that .
+You can see it now there .
+With a little bit of luck , there you see it .
+So we 're going to heat it .
+( torch hissing ) Walking .
+When you walk , you push against the floor .
+The floor pushes back at you and if the floor wouldn 't push back at you you couldn 't even walk , you couldn 't go forwards .
+If you walk on ice , very slippery you can 't go anywhere , because you can 't push on the ice so the ice won 't push back on you .
+That 's another example where you see action equals minus reaction .
+This engine is called Hero 's engine .
+Hero , according to the Greek legend was a priestess of Aphrodite .
+Let 's first look at it .
+She was a priestess of Aphrodite and her lover , Leander would swim across the Hellespont every night to be with her .
+And then one night the poor guy drowned and Hero threw herself into the sea .
+Very romantic thing to do but , of course , also not a very smart thing to do .
+On the other hand , it must have been a smart lady if she invented , really , this engine .
+Yesterday , I looked at the Web , ask.com .
+It 's wonderful you can ask any question .
+You can say , How old am I ?
+Now , you may not get the right answer but you can ask any question .
+And I typed in , Hero 's engine .
+And out popped a very nice high tech version of Hero 's engine .
+A soda can you pop four holes in the soda can at the bottom .
+So here 's your soda can .
+You pop four holes in here , but when you put a nail in there you bend every time the nail to the same side so the holes are slanted .
+You put it in water you lift it out of water and you have a Hero 's engine .
+And I made it for you it took me only five minutes .
+I went to one of MIT 's machines , got myself a soda put the holes in it , and here it is .
+It 's in the water there .
+When I lift it out , you will see the water squirts .
+There it goes .
+High tech version of Hero 's engine .
+Also makes a bit of a mess , but okay .
+All right .
+Try to make one it 's fun and it 's very quick .
+It doesn 't take much time at all .
+==========
+There are some bizarre consequences of these laws .
+Imagine that an object is falling towards the earth .
+An apple is falling towards the earth from a height , say , of , hmm , I 'd say 100 meters .
+And let 's calculate how long it takes for this apple to hit the earth which should for you be trivial , of course .
+So here 's the earth ... and the mass of the earth is about 6 times 10 to the 24 kilograms .
+And here at a distance , h for which we will take 100 meters is this apple , m , which , say , has a mass of half a kilogram .
+There 's a force from the earth onto the apple and this is that force .
+And the magnitude of that force is mg and that is 5 newton .
+I make g ten and just round it off a little .
+Now , how long does it take this object to hit the earth ?
+So , we know that 1/2 gt squared equals h .
+It doesn 't start with any initial speed , so that is 100 .
+G is 10 , this is 5 , so t squared is 20 .
+So t is about 4 seconds .
+So after 4 seconds , it hits the earth so far , so good .
+But now , according to the Third Law the earth must experience exactly the same force as the apple does but in opposite direction .
+So therefore the earth will experience this same force , f 5 newton , in this direction .
+What is the earth going to do ?
+Well , the earth is going to fall towards the apple f equals ma .
+So the force on the earth is the mass of the earth times the acceleration of the earth .
+The force , we know , is 5 .
+We know the mass , 6 times 10 to the 24 so the acceleration will be 5 divided by 6 times 10 to the 24 which is about 8 times 10 to the minus 25 meters per second squared .
+How long will the earth fall ?
+Well , the earth will fall roughly 4 seconds before they collide .
+How far does the earth move in the 4 seconds ?
+Well , it moves one half a earth t squared .
+That 's the distance that it moves .
+We know a and we know t squared , which is 20 .
+One half times 20 is 10 so that means this distance becomes that number times 10 .
+It 's about 8 times 10 to the minus 24 meters .
+The earth moves 8 times 10 to the minus 24 meters .
+That , of course , is impossible to measure .
+But just imagine what a wonderful concept this is !
+When this ball falls back to me the earth and you and I and MIT are falling towards the ball .
+Every time that the ball comes down we 're falling towards the ball .
+Imagine the power I have over you and over the earth !
+But you may want to think about this if I throw the ball up , going to be away from the earth I 'll bet you anything that the earth will also go away from the ball .
+So as I do this , casually playing believe me , man , what a glorious feeling it is earth is going down , earth is coming towards the ball .
+The earth is going down and I 'm part of the earth and I 'm shaking this earth up and down by simply playing with this ball .
+That is the consequence of Newton 's Third Law even though the amount by which the earth moves is , of course , too small to be measured .
+==========
+I now want to work out with you a rather detailed example of something in which we combine what we have learned today a down to earth problem the kind of a problem that you might see on an exam or on an assignment .
+We hang an object on two strings and one string makes an angle of 60 degrees with the vertical and the other makes an angle of 45 degrees with the vertical .
+So this is the one that makes an angle ... oh , 60 degrees with the horizon , 30 degrees with the vertical and this one , 45 degrees .
+Let 's assume that the strings have negligible mass .
+So they are attached here to the ceiling and I hang here an object , m .
+Well , if there 's an object m for sure there will be a force mg , gravitational force .
+This object is hanging there , it 's not being accelerated so the net acceleration must be zero .
+And so one string must be pulling in this direction and the other string must be pulling in this direction so that the net force on the system is zero .
+Let 's call this pull , for now , T1 .
+We 'll call that the tension in the string and we call the tension in this string T2 .
+And the question now is how large is T1 and how large is T2 ?
+There are various ways you can do this .
+One way that always works pretty safe you call this the x direction .
+You may choose which direction you call plus .
+I call this plus , I call this negative .
+And you could call this the y direction and you may call this plus and this negative .
+I know , from Newton 's Second Law F equals ma that there is no acceleration , so this must be zero so the sum of all forces on that mass must be zero .
+These three forces must eat each other up , so to speak .
+Well , if that 's the case , then the sum of all forces in the x direction must also be zero because there 's no acceleration in the x direction and the sum of all forces in the y direction must be zero .
+And so I am going to decompose them something we have done before .
+I am going to decompose the forces into an x and into a y direction .
+So here comes the x component of T1 and its magnitude is T1 times the cosine of 60 degrees .
+Now I want to know what this one is .
+This one is T1 times the sine of 60 degrees .
+This projection , T2 , cosign 45 degrees and the y component , T2 times the sine of 45 degrees .
+So we go into the x direction .
+In the x direction I have T1 cosign 60 degrees minus T2 cosign 45 degrees equals zero that 's one equation .
+The cosine of 60 degrees is one half and the cosine of 45 degrees is one half square root two .
+Now I go to the y direction .
+This is plus , this is minus , so we get one component here which is T1 times the sine of 60 degrees plus T2 times the sine of 45 degrees minus mg .
+It 's in the opposite direction must be zero .
+That 's my second equation .
+The sine of 60 degrees equals one half the square root three and the sine of 45 degrees is the same as the cosine one half square root two .
+Notice I have two equations with two unknowns .
+If you tell me what m is I should be able to solve for T1 and for T2 .
+In fact , if we add them up it 's going to be very easy because we lose this because we have both one half square root two .
+And so you see immediately here that one half times T1 plus one half square root three times T1 equals mg and so you find that the tension 1 equals two mg divided by one plus the square root of three .
+I can go back now to this equation T1 times one half equals T2 times one half square root of two .
+I lose my half and so T2 equals T1 divided by the square root of two .
+So the bottom line is , you tell me what m is I 'll tell you what T1 is and I 'll tell you what T2 is .
+Suppose we take a mass of four kilograms m equals four kilograms , so mg is about 40 if we make g ten for simplicity .
+Then T1 , if you put in the numbers , is about 29.3 and T2 ... 29.3 newtons and T2 is about 20.7 newtons , I believe .
+It 's very difficult to rig this up as an experiment but I 've tried that .
+I 'll show you in a minute .
+I want you to know that there is another method which is perhaps even more elegant and which you may consider in which there is no decomposition in the two directions .
+Here is mg that 's a given .
+And we know that the other directions are also given this angle of 30 degrees here and this angle of 45 degrees .
+If these two forces must cancel out this one why don 't I flip this one over ?
+Here it comes .
+I flip it over .
+There it is .
+T1 and T2 now , together , must add up to this one .
+Then the problem is solved , then the net force is zero .
+Well , that 's easy I do this .
+And now I have constructed a complete fair construction of T1 and of T2 .
+No physics anymore now , it 's all over .
+You know this angle here , 45 degrees , so this is 45 degrees .
+This is 30 , this is 30 .
+You know all the angles and you know this magnitude is mg so it 's a high school problem .
+You have a triangle with all the angles and one side ; you can calculate the other sides and you should find exactly the same answer , of course .
+We made an attempt to rig it up .
+How do we measure tension ?
+Well , we put in these lines , scales , tension meters and that is problematic , believe me .
+We put in here a tension meter , we put in here a tension meter and the bottom one , we hang on a string with a tension meter and then here we put four kilograms .
+These scales are not masses .
+That 's already problematic .
+The scales are not very accurate so we may not even come close to these numbers .
+For sure , if I put four kilograms here then I would like this one to read 40 newtons or somewhere in that neighborhood depending on how accurate my meters are .
+These are springs , and the springs extend and when the springs extend , you see a handle ... a hand go .
+You can clearly see how that works because if there is a force on that bottom scale in this direction , which is mg , and it 's not being accelerated then the string must pull upwards and so ... in order to make the net force zero .
+And if you have a pull down here and you have a pull up here and you have in here a spring then you see you have a way of measuring that force .
+We often do that we measure with springs the tension in strings .
+For whatever it 's worth , I will show you what we rigged up .
+Now a measurement without knowledge of uncertainties is meaningless I told you that .
+So maybe this is meaningless , what I am going to do now .
+Let me do something meaningless for once .
+And remember , when I show it , you can always close your eyes so that you haven 't seen it .
+So we have here something that approaches this 60 degrees and this approaches the 45 degrees and we 're going to hang four kilograms at the bottom .
+There it is , and here it is .
+All right , this one it 's not too far from 40 .
+It 's not an embarrassment .
+This one is not too far from 20.7. This one is a bit on the low side .
+Maybe I can push it up a little .
+I think that 's close to 30 ; it 's not bad .
+So you see , it 's very difficult to get these angles right but it 's not too far off .
+So let 's remove this again because this will block your view .
+These scales were calibrated in newtons , as you could see .
+==========
+Now we come to something very delicate .
+Now I need your alertness and I need your help .
+I have a block you see it there and that block weighs two kilograms .
+A red block .
+So here it is .
+It 's red .
+And I have two strings .
+It 's hanging from a black string here and a black string there .
+Ignore that red string , that is just a safety .
+But it 's a very thin thread here and here .
+And they are as close as we can make them the same .
+They come from the same batch .
+This one has a mass of two kilograms and this string has no mass .
+This is two kilograms .
+So what will be the tension in the upper string which is string number one ?
+This is string number two .
+Well , this string must be able to carry this two kilograms so the tension has to be 20 newtons .
+So you will find here the tension call it T1 which is about 20 newtons .
+So it 's pulling up on this object .
+It 's also pulling down from the ceiling , by the way .
+Think about it , it 's pulling from the ceiling .
+The tension is here , 20 newtons .
+We could put in here one of these scales and you would see approximately 20 newtons .
+What is the tension here ?
+Well , the tension here is very close to zero .
+There 's nothing hanging on it and the string has no weight so there 's no tension there you can see that .
+Now I am going to pull on here and I 'm going to increase the tension on the bottom one until one of the two breaks .
+So this tension goes up and up and therefore , since this object is not being accelerated we 're going to get a force down now on this object this tension must increase , right ?
+You see that ?
+If I have a force on this one ... so there 's a force here , and there is mg then , of course , this string must now be mg plus this force .
+So the tension will go up here and the tension will go up here .
+The strings are as identical as they can be .
+Which of the strings will break first ?
+What do you think ?
+LEWIN : Excuse me ?
+( student answers unintelligibly ) I can 't hear you .
+STUDENT : The one on top .
+LEWIN : The one on top .
+Who is in favor of the one on top ?
+Who says no , the bottom one ?
+( Student answers unintelligibly ) LEWIN : Who says they won 't break at all ?
+Okay , let 's take a look at it .
+The one on top that 's the most likely , right ?
+Three , two , one , zero .
+The bottom one broke .
+My goodness .
+Newton 's Second Law is at stake .
+Newton 's Third Law is at stake .
+The whole world is at stake !
+Something is not working .
+I increased tension here , this one didn 't break .
+This one 's stronger , perhaps .
+No , I don 't cheat on you ; I 'm not a magician .
+I want to teach you physics .
+Did we overlook something ?
+You know , I 'll give you a second chance .
+We 'll do it again .
+Let 's have another vote .
+So I 'll give you a chance to change your minds .
+It 's nothing wrong in life , changing your mind .
+It 's one of the greatest things that you can do .
+What do you think will happen now ?
+Who is in favor still of the top one ?
+Seeing is believing .
+You still insist on the top one ?
+Who is now in favor of the bottom one ?
+Ah , many of you got converted , right ?
+Okay , there we go .
+Three , two , one , zero .
+The top one broke .
+So some of you were right .
+Now I 'm getting so confused .
+I can 't believe it anymore .
+First we argued that the top one should break but it didn 't the bottom one broke .
+Then we had another vote and then the top one broke .
+Is someone pulling our leg ?
+I suggest we do it one more time .
+I suggest we do it one more time and whatever 's going to happen , that 's the winner .
+If the top one breaks , that 's the winner .
+If the bottom one breaks , well , then , we have to accept that .
+But I want you to vote again .
+I want you to vote again on this decisive measurement whether the top one will break first or the bottom one ?
+Who is in favor of the top one ?
+Many of you are scared , right ?
+You 're not voting anymore !
+( class laughs ) LEWIN : I can tell , you 're not voting .
+Who is in favor of the bottom one ?
+Only ten people are voting .
+( class laughs ) LEWIN : Let 's do this in an undemocratic way .
+You may decide what 's your name ?
+Alicia ?
+Georgia , close enough .
+( laughter ) You may decide whether the top one or the bottom one will break .
+Isn 't that great ?
+Doesn 't it give you a fantastic amount of power ?
+The bottom one .
+The bottom one .
+You ready ?
+Three , two , one , zero .
+The bottom one broke .
+You were right .
+You will pass this course .
+Thank you , and see you Wednesday .
+By the way , think about this , think about this .
+==========

@@ -1,0 +1,400 @@
+==========
+The work that a force is doing , when that force is moving from point A to point B one dimensional , here 's point A and here is point B and the force is along that direction or ... either in this direction or in this direction but it 's completely one dimensional , that work is the integral in going from A to B of that force dx , if I call that the x axis .
+The unit of work , you can see , is newton meters .
+So work is newton meters , for which we ... we call that joule .
+If there 's more than one force in this direction , you have to add these forces in this direction vectorially , and then this is the work that the forces do together .
+Work is a scalar , so this can be larger than zero , it can be zero , or it can be smaller than zero .
+If the force and the direction in which it moves are in opposite directions , then it is smaller than zero .
+If they 're in the same direction , either this way or that way , then the work is larger than zero .
+F ma , so therefore , I can also write with this m dv/dt .
+And I can write down for dx , I can write down v dt .
+I substitute that in there , so the work in going from A to B is the integral from A to B times the force , which is m dv/dt , dx which is v dt .
+And look what I can do .
+I can eliminate time , and I can now go to a integral over velocity velocity A to the velocity B , and I get m times v times dv .
+That 's a very easy integral .
+That is 1/2 m v squared , which I have to evaluate between vA and vB , and that is 1/2 m vB squared , minus 1/2 m vA squared .
+1/2 m v squared is what we call in physics kinetic energy .
+Sometimes we write just a K for that .
+It 's the energy of motion .
+And so the work that is done when a force moves from A to B is the kinetic energy in point B you see that here minus the kinetic energy in point A , and this is called the work energy theorem .
+If the work is positive , then the kinetic energy increases when you go from A to B .
+If the work is smaller than zero , then the kinetic energy decreases .
+If the work is zero , then there is no change in kinetic energy .
+Let 's do a simple example .
+Applying this work energy theorem , I have an object that I want to move from A to B .
+I let gravity do that .
+I give it a velocity .
+Here 's the velocity v of A , and let the separation be h , and this could be my increasing y direction .
+The object has a mass m , and so there is a force , gravitational force which is mg , and if I want to give it a vector notation , it 's mg y roof , because this is my increasing value of Y .
+When it reaches point B , it comes to a halt , and I 'm going to ask you now what is the value of h .
+We 've done that in the past in a different way .
+Now we will do it purely based on the energy considerations .
+So I can write down that the work that gravity is doing in going from A to B , that work is clearly negative .
+The force is in this direction and the motion is in this direction , so the work that gravity is doing in going from A to B equals minus mgh .
+That must be the kinetic energy at that point B , so that this kinetic energy at point B minus the kinetic energy at point A , this is zero , because it comes to a halt here , and so you find that 1/2 m vA squared equals mgh .
+m cancels , and so you 'll find that the height that you reach equals vA squared divided by 2g .
+And this is something we 've seen before .
+It was easy for us to derive it in the past , but now we 've done it purely based on energy considerations .
+I 'd like to do a second example .
+I lift an object from A to B I , Walter Lewin .
+I take it at A .
+It has no speed here ; vA is zero .
+It has no speed there .
+And I bring it from here to here .
+There 's a gravitational force mg in this direction , so the force by Walter Lewin must be in this direction , so the motion and my force are in the same direction , so the work that I 'm doing is clearly plus mgh .
+So the work that Walter Lewin is doing is plus mgh when the object goes from A to B .
+The work that gravity was doing was minus mgh we just saw that .
+So the net work that is done is zero , and you see there is indeed no change in kinetic energy .
+There was no kinetic energy here to start with , and there was no kinetic energy there .
+If I take my briefcase and I bring it up here , I 've done positive work .
+If I bring it down , I 've done negative work .
+If I bring it up , I do again positive work .
+When I do positive work , gravity does negative work .
+When I do negative work , like I do now , gravity does positive work .
+And I can do that a whole day , and the net amount of work that I have done is zero positive work , negative work , positive work , negative work .
+I will get very tired .
+Don 't confuse getting tired with doing work .
+I would have done no work and I would be very tired .
+I think we would all agree that if I stand here 24 hours like this that I would get very tired .
+I haven 't done any work .
+I might as well put it here and let the table just hold that briefcase for me .
+So it 's clear that you can get very tired without having done any work .
+So this is the way we define work in physics .
+==========
+Now let 's go from one dimensions to three dimensions .
+It is not very much different , as you will see .
+I go in three dimensions from point A to point B , and I now have a force ... which could be pointing not just along the x direction , but in general , in all directions .
+Now the work that the force is doing in going from A to B is F dot dr .
+r is the position in three dimensional space where the force is at that moment , and dr is a small displacement .
+So if this is from A to B , then dr here , if you 're going this direction , this would be the little vector dr .
+And here , that would be a little vector dr .
+And the force itself could be like this here , and the force could be like this there .
+The force can obviously change along this path .
+So let the force be ... F of x , x roof , plus F of y , y roof , plus F of z , z roof .
+I 'll move this A up a little , put it here .
+And let dr the general notation for vector dr equals dx , x roof , plus dy , y roof , plus dz , z roof .
+It cannot be any more general .
+So the work that this force is doing when it moves from A to B is the integral of this F dr .
+Let 's first take a small displacement over dr , then I get dw .
+That is simply Fx times dx it 's a scalar because this is a dot product ... plus Fy dy , plus Fz dz .
+That is little bit amount of work if the force is displaced over a distance dr .
+Now I have to do the integral over the entire path to get W .
+From A to B , that 's an integral going from A to B , integral going from A to B .
+I don 't need this anymore .
+Integral in going from A to B , integral in going from A to B .
+Now we 're home free , because we already did this .
+This is a one dimensional problem , and a one dimensional problem , we already know the outcome .
+The integral F dx , we found that is 1/2 m vB squared minus m vA squared , which in this case is obviously the velocity in the x direction , because this is a one dimensional problem .
+And the one dimensional problem indicates that the velocity that I 'm dealing with is the component in this direction .
+So we have that this is 1/2 m v B squared and this is the x component minus vA squared , and that is the x component .
+This is also a one dimensional problem now , except that now I deal with the component ... with the y component of the velocity , so I get 1/2 m times vB y squared minus vA y squared , plus 1/2 m vB z squared minus vA z squared .
+And now we 're home free , because what you see here is you see v squared in the x direction , v squared y component , v squared z component .
+And if you add those three up , you get exactly the square of the velocity .
+You get the square of the speed .
+So if you add up these three terms , you get vB squared ... I lost my m .
+Let me put my m in there .
+1/2 m times vB squared , and here you see Ax squared , Ay squared , Az squared minus vA squared , and you get exactly the same result that you had before , namely that the work done is the difference in kinetic energy .
+You can always think of these as speeds .
+Velocity squared is the speed .
+It 's the magnitude squared of the velocity .
+All right , I 'd like to return to gravity and work on a three dimensional situation .
+==========
+We have here , let this be x , this be y and this be z .
+And there is here , this is the increasing value of y .
+And there 's here point A in three dimensions like this .
+And there is here point B , so you get a rough idea about the three dimensions .
+And y of B minus y of A equals h .
+It 's a given there is a height difference between A and between B .
+There is a gravitational force .
+The object moves from A to B .
+Suppose it moves in some crazy way .
+Of course , gravity alone could not do that .
+There has to be another force if it goes in a strange way .
+But I 'm only calculating now the work that 's going to be done by gravity .
+The other forces I ignore for now .
+I only want to know the work that gravity is doing .
+The object has a mass m , and so there is a force mg , and I can write down the force in vector notation .
+It 's in this direction .
+So now I notice that there is only a value for F of y , but there is no value for F of x , and there is no value for Fx ; they are zero .
+And so F of y equals minus mg .
+And so if I calculate now the work in going from A to B , this is the integral in going from A to B of F dot dr , and the only term that I have is the one that deals with the y direction .
+The other terms have nothing in it , so it is the integral in going from A to B of Fy dy .
+And that equals minus mg , because we have the minus mg , times y of B minus y of h , so that is minus mg times h .
+And what you see here , that it is completely independent of the path that I have chosen .
+It doesn 't matter how I move .
+The only thing that matters is the difference in height between point A and point B .
+h could be larger than zero , if B is above A .
+It could be smaller than zero if B is below A .
+It could be equal to zero if B has the same height as A .
+Whenever the work that is done by a force is independent of its path it 's only determined by the starting point and the end point that force is called a conservative force .
+It 's a very important concept in physics .
+I will repeat it .
+Whenever the work that is done by a force in going from one point to another is independent of the path it 's only determined by the starting point and the end point we call that a conservative force .
+Gravity is a conservative force .
+It 's very clear .
+Suppose that I do the work that I go from A to B in some very strange way .
+Then it is very clear that the work that I would have done would be plus mgh , because my force , of course , is exactly in the opposite direction as gravity .
+So whenever gravity is doing positive work , I would be doing negative work .
+If I hold it in my hand , when I 'm doing positive work , gravity is doing negative work .
+Again , I 'm going to concentrate now on a case where we deal with gravity only .
+==========
+When there 's only gravity , then we have that minus mgh is the work done in going from A to B equals minus mg , times y of B minus y of A , and that now is the kinetic energy at point B minus the kinetic energy at point A .
+This is the work energy theorem .
+Look closely here .
+I can rearrange this , and I can bring the Bs in one side , I can bring the As on one side .
+I then get mg times y of B plus the kinetic energy at point B equals mg times y of A plus the kinetic energy at point A .
+And this is truly an amazing result .
+We call mgy ... we give that a name , and we call that gravitational potential energy .
+Often we write for that PE , or we write for that a u .
+And what you 're seeing here is that the sum of potential energy at point B and the kinetic energy at point B is the same as the potential energy at A and the kinetic energy at point A .
+One can be converted into the other and it can be converted back .
+Kinetic energy can be converted back to potential energy , and potential energy can be converted back , but the sum of them which we call mechanical energy is conserved .
+And mechanical energy is only conserved if the force is a conservative force .
+It 's extremely useful .
+We will use it many times , but you have to be very careful .
+It 's a dangerous tool because it 's only true when the force is conservative .
+Spring forces are also conservative , but , for instance , friction is not a conservative force .
+If I move an object from here to here ... Let 's suppose I move this object , and I go along a straight line , then the friction is doing negative work , I am doing positive work .
+But now suppose I go from here to here through this routing .
+You can see that the work I have to do is much more .
+Friction is not a conservative force .
+The frictional force remains constant , dependent on the friction , the kinetic friction coefficient , is always the same ... the frictional force , which I have to overcome as I move , and so if I go all the way here and then all the way back to this point where I wanted to be , then I have done a lot more work than if I go along the shortest distance .
+So friction is a classic example of a force that is not conservative .
+==========
+If I look at this result the sum of gravitational potential energy and kinetic energy is conserved for gravitational force then it is immediately obvious where we put the zero of kinetic energy .
+The zero of kinetic energy is when the object has no velocity , because kinetic energy equals 1/2 m v squared .
+So if the object has no velocity , then there is no kinetic energy .
+How about potential energy ?
+Well , you will say , sure , potential energy must be zero when y is zero , because that 's the way that we defined it .
+You see ?
+mgy is gravitational potential energy .
+So you would think that u is zero when y is zero .
+Not an unreasonable thing to think .
+But where is y a zero ?
+Is y zero at the surface of the Earth ?
+Or is y zero at the floor of 26.100 ? Or is y zero here , or is y zero at the roof ?
+Well , you are completely free to choose where you put u equals zero .
+It doesn 't matter as long as point A and point B are close enough together that the gravitational acceleration , g , is very closely the same for both points .
+The only thing that matters then is how far they are separated vertically .
+The only thing that matters is that uB minus uA ... uB minus uA would be mgh .
+It is only the h that matters , and so you can then simply choose your zero anywhere you want to .
+It 's easy to see .
+Suppose I have here point A and I have here point B .
+And suppose this separation was h .
+Well , if you prefer to call zero potential energy at A , I have no problem with that .
+So we can call this u equals zero here .
+Then you would have to call this u ... you have to call it plus mgh .
+If you say , No , I don 't want to do that ; I want to call this zero ... that 's fine .
+Then this becomes minus mgh .
+If you prefer to call this zero , that 's fine , too .
+Then this will have a positive gravitational potential energy , and this will have one that is higher than this one by this amount .
+If you say , I 'd like to call this zero , of course the same holds .
+What matters is what the difference between potential energy is .
+That is what we need when we apply the conservation of mechanical energy .
+That is what we need in order to evaluate how the object changes its kinetic energy .
+So where you choose your zero is completely up to you .
+As long as A and B are close enough so that there is no noticeable difference in the gravitational acceleration g .
+Before the end of this hour , I will also evaluate the situation that g is changing .
+When you go far way from the Earth , g is changing .
+So let us first do ... look at a consequence of the conservation of mechanical energy .
+Very powerful concept , and as long as we deal with gravity , you can always use it .
+==========
+You see here on the desk something that looks like a roller coaster , and I 'm going to slide an object from this direction .
+Let 's clean it a little bit better .
+Here is that roller coaster .
+This is a circle , and then it goes up again .
+And let the circle have a radius R .
+This point will be A .
+I release it with zero speed .
+I assume that there is no friction for now .
+This point will be B .
+And I define here y equals zero , or what is even more important , I define that u equals zero .
+And this is the direction , positive direction , of y .
+At A , the object has no velocity , no speed .
+At B , of course , it does .
+It has converted some potential energy to kinetic energy .
+At this point C , this has reached a maximum velocity that it can ever have because all the potential energy has been converted to kinetic energy .
+And at this point D , if it ever reaches that point , that will be the velocity , say .
+Okay , I start off , point A is at a distance h above this level , and so I apply now the conservation of mechanical energy .
+So I know that u at A plus the kinetic energy at A which is zero must be u at B plus kinetic energy at B , must be u at C plus kinetic energy at C , must be u at D plus kinetic energy at D .
+If there is no friction , if there are no other forces , only gravity .
+So we lose no ... no energy goes lost in terms of friction .
+We know that this height difference is 2R .
+And so now I can write this in general terms of y ... Take this point B .
+Think of that being at a location y above the zero line .
+Then I can write down now that uA , which is mgh ... That was a given when I started .
+That was all the energy I had .
+That was my total mechanical energy .
+If I call this u zero , which is free choice I have , equals u of B , which is now mgy , plus 1/2 m v squared at that position y .
+This should hold ... what you see there should hold for every point that I have here .
+It should for A , for B , for C , for D , for any point .
+I lose my m , and so you find here that ... We summarize it at v squared equals 2g , times h minus y .
+So this should hold for all these points .
+Therefore , it should also hold for point D .
+However , at point D , there is something very important .
+There is a requirement .
+There is a requirement that there is a centripetal acceleration , which is in this direction , a centripetal .
+And that centripetal acceleration is a must for this object to reach that point D .
+And that centripetal acceleration , as we remember from when we played with the bucket of water , that is v squared divided by R .
+And this must be larger or equal to the gravitational acceleration g .
+If it is not larger , the bucket of water would not have made it to that point D .
+So this is my second equation that I 'm going to use , so look very carefully .
+So v squared must be larger or equal than gR , so I have here v squared , which is 2g times h minus y .
+But y for that point D is 2R , so I put in a 2R , must be larger or equal to gR .
+I lose my g , so 2h minus 4R must be larger or equal to R , so h must be larger or equal to 2 R .
+This is a classic result that almost every person who has taken physics will remember .
+It is by no means intuitive .
+It means that if I have this ball here and I will show you that shortly and I let the ball go into this roller coaster , that it will not make this point unless I release it from a point that is at least 2 times the radius of this circle above the zero level .
+If I do it any lower , it will not make it .
+So think about this .
+That is something that you could not have just easily predicted .
+It 's a very strong result , but it is not something that you say intuitively , Oh , yes , of course .
+It follows immediately from the conservation of mechanical energy .
+So if I release it ... That 2 radius point , by the way , is somewhere here .
+So if I release this object way below that , it will not make this point .
+Let 's do that .
+You see , it didn 't make it .
+I go a little higher , didn 't make it .
+Go a little higher , didn 't make it .
+Go a little higher , still didn 't make it .
+Now I go to the 2 mark ... and now it makes it .
+2 times the radius , conservation of mechanical energy tells you that that is the minimum it takes to just go through that point .
+Of course , if there were no loss of energy at all , if there were no mechanical energy lost that means if there were no friction then if I were to release it at this point , it would have to make it back to this point again , with zero kinetic energy .
+But that 's not the case .
+There is always a little bit of friction with the track , for one thing , and also , of course , with air .
+So if I release it all the way here , you would not expect that it will bounce up all the way to here .
+It will probably stop somewhere there .
+It may not even make it to the end .
+We can try that .
+Oh , it made it somewhere to here a little lower than that level .
+Of course there is some friction , that is unavoidable .
+All right , this is a classic one .
+There are many exams where this problem has been given .
+I won 't give it to you this time , but it 's a classic one .
+You see it on the general exams for physics , and it 's simply a matter of conservation of mechanical energy .
+==========
+Let 's now look at the situation whereby A and B are so far apart that the gravitational acceleration is no longer constant , and so you can no longer simply say that the difference in potential energy between point B and point A is simply mgh .
+So now we are dealing with a very important concept , and that is the gravitational force .
+You can think of the Earth acting on a mass or you can think of the sun acting on a planet , whichever you prefer , but that 's what I want to deal with when the distances are now very large .
+Let me first give you the formal definition of gravitational potential energy .
+The formal definition is that the gravitational potential energy at a point P is the work that I , Walter Lewin , have to do to bring that mass from infinity to that point P .
+Now , you may say that 's very strange that in physics , there are definitions which ... where Walter Lewin comes in .
+Well , we can change it to gravity , because my force is always the same force as gravity with a minus sign , so it 's also minus the work that gravity does when the object moves from infinity to that point P .
+I just like to think of it , it 's easier for me to think of it , as the work that I do .
+So if we apply that concept , then we first have to know what is the gravitational force .
+If this is an object , capital M and you can think of this as being the Earth , if you want to and there is here an object little m , then I have to know what the forces are between the two .
+And this now is Newton 's Universal Law of Gravity , which he postulated ... Universal Law of Gravity .
+He says the force that little m experiences , this force equals I 'll put a little m here and a capital M here so it is little m experiences that force due to the presence of capital M equals little m times capital M times a constant , which Newton , in his days , didn 't know yet what that value was , divided by r squared , if r is the distance between the two .
+This object , since Newton 's Third Law holds action equals minus reaction this force , which I will indicate it as capital M , little m it is the force that this one experiences due to the presence of this one is exactly the same in magnitude but opposite in direction , and that is the Universal Law of Gravity .
+Gravity is always attractive .
+Gravity sucks that 's the way to think of it .
+It always attracts .
+There is no such thing as repelling forces .
+The gravitational constant G is an extremely low number 6.67 times 10 to the minus 11 in our ... as our units , which is newtons , gram meters per kilogram or something like that .
+That 's an extremely low number .
+It means that if I have two objects which are each one kilogram , which are about one meter apart , which I have now here about one meter , that the force which they attract each other is only 6.67 times 10 to the minus 11 newtons .
+That is an extremely small force .
+If this were the Earth , and I am here and this is my mass , then I experience a force which is given by this equation .
+This would be , then , the mass of the Earth .
+Now , F equals ma .
+So if I 'm here , I experience a gravitational acceleration , and the gravitational acceleration that I experience is therefore given by MG divided by r squared .
+And so you see that the gravitational acceleration that I experience at different distances from the Earth , or , for that matter , at different distances from the sun , is inversely proportional with r squared .
+We have discussed that earlier when we dealt with the planets , and we dealt with uniform circular motions , and we evaluated the centripetal acceleration .
+We came exactly to that conclusion that the gravitational acceleration falls off as one over r squared .
+Ten times further away , the gravitational acceleration is down by a factor of 100 .
+If you are standing near the surface of the Earth , then , of course , the force that I will experience is my mass times the mass of the Earth times the gravitational constant divided by the radius of the Earth squared just like we are here in 26.100 and so this must be mg .
+That 's the gravitational acceleration if we drop an object here .
+And so you see that this now is our famous g , and that is the famous 9.8. You substitute in there the mass of the Earth , which is six times 10 to the 24 kilograms .
+You put in here the gravitational constant , and you put in the radius of the Earth , which is 6 , 400 kilometers , out pops our well known number of 9.8 meters per second squared .
+Okay , my goal was to evaluate for you the gravitational potential energy the way that it is defined in general , not in a special case when we are near the Earth .
+So we now have to move an object from infinity to a point P , and we calculate the work that I have to do .
+So here is capital M , and here is that point P , and infinity is somewhere there .
+It 's very , very far away , and I come in from infinity with an object with mass m , and I finally land at point P .
+Since gravity is a conservative force , and since my force is always the same in magnitude except in opposite direction , it doesn 't matter how I move in ; it will always come up with the same answer .
+So we might as well do it in a civilized way and simply move that object in from infinity along a straight line .
+It should make no difference because gravity is a conservative force .
+So infinity is somewhere there .
+The force that I will experience , that I will have to produce , is this force .
+The force of gravity is this one .
+The two are identical except that mine is in this direction this is increasing value of r so mine would be plus m MG divided by r squared if I 'm here at location r .
+And let this be at a distance capital R from this object .
+You can already see that the gravitational potential energy , when I come from infinity with a force in this direction and I move inward , you can already see that gravitational potential energy will always be negative for all points anywhere .
+It doesn 't matter where I am , it will always be negative .
+You may say , gee , that 's sort of a strange thing negative potential energy .
+Well , that is not a problem .
+Remember that depending upon how you define your zero level here , you also end up with negative values for potential energy .
+So there 's nothing sacred about that .
+What is important , of course , if we get the right answer for the gravitational potential energy , that when we move away from this object that the gravitational potential energy increases .
+That 's all that matters .
+But whether it is negative or positive is irrelevant .
+So we already know it 's going to be negative , and so we can now evaluate the work that I have to do when I go from infinity to that position , capital R .
+So here comes the work that Walter Lewin has to do when we go from infinity to that point , which is capital R , radius , from this object .
+Think of it as the sun or the Earth ; either one is fine .
+So that is the integral in going from infinity to R of my force which is plus , because it 's an increasing value of R m MG divided by R squared dr .
+That 's a very easy integral .
+This is minus one over r , so I get m MG over r with a minus sign , and that has to be evaluated between infinity and capital R .
+When I substitute for R , infinity , I get a zero , and so the answer is minus m MG over capital R .
+And this is the potential ... gravitational potential energy at any distance capital R that you please away from this object .
+At infinity , it 's now always zero .
+Earlier , you had a choice where you chose your zero .
+When you 're near Earth and when g doesn 't change , you have a choice .
+Now you no longer have a choice .
+Now the gravitational potential energy at infinity is fixed at zero .
+So let 's look at this function , and let us make a plot of this function as a function of distance .
+The one over r relationship of the gravitational potential energy ... the force , gravitational force , falls off as one over r squared .
+Here 's zero .
+This is the gravitational potential energy .
+All these values here are negative , and here I plot it as a function .
+I use the symbol little r now instead of capital R .
+And so the curve would be something like this .
+This is proportional to one over r .
+If you move an object from A to B and this separation is h , and if A and B are very apart , the difference in potential energy is no longer mgh , but the difference in potential energy is the difference between this value and this value .
+And you have to use that equation to evaluate that .
+But you can clearly see that if I go from here to here if I take an object and go from here to here that the potential energy will increase , and that 's all that matters .
+So it increases when you go further away from the Earth if you look at the Earth , or from the sun if you look at the sun .
+Is there any disagreement between this result that we have here and the result that we found there ?
+The answer is no .
+I invite you to go through the following exercise .
+Take a point A in space , which is at a distance r of A from the center of the Earth , say , and I do that ... I start at the surface of the Earth itself , so the radius is the radius of the Earth .
+And I go to point B , which is a little bit further away from the center of the Earth , only a distance h .
+And h is way , way , way smaller than the radius of the Earth .
+So I can calculate now what the difference in potential energy is between point B and point A , and I can use , and I should use , this equation .
+And when I use that equation and you use the Taylor 's expansion , the first order of Taylor 's expansion , you will immediately see that the result that you find collapses into this result because the g at the two points is so close that you will see that you will find then that it is approximately mgh , even though it is the difference between these two rather clumsy terms .
+We will , many , many times in the future , use the one over r relationship for gravitational potential energy .
+We will get very used to the idea that gravitational potential energy is negative everywhere the way it 's defined , and we will get used to the idea that at infinity , the gravitational potential energy is zero .
+But whenever we deal with near Earth situations like in 26.100 , then , of course , it is way more convenient to deal with the simplification that the difference in gravitational potential energy is given by mgh .
+I always remember that mgh , Massachusetts General Hospital .
+That 's the best way that you can remember these simple things .
+Now I want to return to the conservation of mechanical energy .
+==========
+I have here a pendulum .
+I have an object that weighs 15 kilograms , and I can lift it up one meter , which I have done now .
+That means I 've done work mgh is the work I have done .
+Believe me , I 've increased the potential energy of this object 15 times 10 , so about 150 joules .
+If I let it fall , then that will be converted to kinetic energy .
+If I would let it swing from one meter height , and you would be there and it would hit you , you 'd be dead .
+150 joules is enough to kill you .
+They use these devices it 's called a wrecker ball they use them to demolish buildings .
+You lift up a very heavy object , even heavier than this , and then you let it go , you swing it , thereby converting gravitational potential energy into kinetic energy , and that way , you can demolish a building .
+You just let it hit ... ( glass shattering ) and it breaks a building .
+And that 's the whole idea of wrecking .
+( laughter ) So you 're using , then , the conversion of gravitational potential energy to kinetic energy .
+Now , I am such a strong believer of the conservation of mechanical energy that I am willing to put my life on the line .
+If I release that bob from a certain height , then that bob can never come back to a point where the height is any larger .
+If I release it from this height and it swings , then when it reaches here , it could not be higher .
+There is a conversion from gravitational potential energy to kinetic energy back to gravitational potential energy , and it will come to a stop here .
+And when it swings back , it should not be able to reach any higher , provided that I do not give this object an initial speed when I stand here .
+I trust the conservation of mechanical energy 100 .
+I may not trust myself .
+I 'm going to release this object , and I hope I will be able to do it at zero speed so that when it comes back it may touch my chin , but it may not crush my chin .
+I want you to be extremely quiet , because this is no joke .
+If I don 't succeed in giving it zero speed , then this will be my last lecture .
+( laughter ) I will close my eyes .
+I don 't want to see this .
+So please be very quiet .
+I almost didn 't sleep all night .
+Three , two , one , zero .
+( class laughs with relief ) Physics works and I 'm still alive !
+( applause ) See you Wednesday .
+( applause continues )
+==========

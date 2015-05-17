@@ -1,0 +1,656 @@
+==========
+remember early in the course we measured the average speed of a bullet which we fired from a rifle
+that was because we had the ability to very fast time the all this
+fast timing was not possible and people measured the speed of bored it s in a very delicate way
+and all the tools that we have weren t
+we can apply now to this
+device which we call the ballistic pendulum
+whether pendulum with a very
+a heavy object hanging here at the end i call it the block you see here
+and this pendulum of length l ours is about one meter
+i will give you the exact numbers later
+and we have a bullet of mass little m
+and the bullet comes in with velocity v
+that s completely you do or sticks in there it s a completely inelastic collision and the
+pendulum will then pick up a velocity v prime with the bullet insights
+the board it is somewhere here
+juan enemies concert so we clearly have bat and v
+equals n plus and times
+d drive
+so if you could measure v prime then you could measure the speed of the bullet which is v
+how to measure the prime
+well we wait for the pendulum
+to come to a halt let s see here when
+the speed is zero when it was here
+it had a speed v prime
+and we know that there was
+kinetic energy here
+no
+gravitational potential energy i can call this level u equals zero but right here
+if this difference in height is h
+then all the kinetic energy has been converted to
+gravitational potential energy so we apply d here in the
+work energy theorem or you could say what s the collin powell it
+you could say we apply the conservation of mechanical energy and so this
+kinetic energy which is one half m plus m
+times v primes quite it
+is now oh converted exclusively to gravitational potential energy
+which equals m plus m
+times g times that h
+and we use our campus and to the prime would be the square root of two g h
+and so all you would have to measure h and then you know v prime and if you know v prime you know the speed of the water
+but life is not that simple
+it s very difficult to measure h and i can make you see that suppose this angle
+angle theta when it comes to a halt
+is only two degrees
+then a each
+which is l times one minus cosine theta
+is only oh point six millimeters for that i mentioned that i have chosen here
+for length of one meter
+and that s it you can even see it that invisible that ll lonely you can measure twenty degree of accuracy
+so utterly going to do now well
+we are going to not measure h but we re going to measure ax
+i call this x equals zero
+and here when the pendulum comes to a halt i call that x
+for two degree angle x is approximately
+three and a half centimeters can easily be checked by you course
+they get huge displacement in this direction compared to h
+if you use small angle approximation you whether or even two degrees is very small
+then you can proof which is purely journal electrical
+mathematics and i leave you with that proof that this is approximately
+x squared divided by two l
+i want you to prove that
+you take the expansion of the cosine ferries of the taylor series
+and you cut off somewhere in this is not so difficult proof
+in other words
+v prime squared which
+is two g h
+can now be replaced by approximately
+two g times x squared divided by two l which is t times x squared
+divided by l
+and so the velocity of the bullet v
+which is m plus m
+divided by and
+i bring the them down there times v prime and v prime is now
+the square root of this so i get an x here times the square root of g over l and what you see now
+but in a very clever way
+by getting x in here we can now do a quite accurate measurements of the speed of this but it because we can measure x is a fair
+accuracy maybe an uncertainty of only one or two millimeters in x out of the three and half
+will four of five centimeters
+we re going to
+measure the speed of such a bullet we did that before or
+to get in number which is not too different i think we got something like two hundred
+two two hundred fifty meters per second
+i will give you the
+inputs for this experiment the bullet mass is two
+plus minus oh point two grams
+i apologize a day i don t give you all the numbers in n k s units you ll have to convert them of course two and t s units
+the length of the pendulum is one point one three meters plus or minus
+two centimeters we re not certain
+is an actress about two centimeters and the mass of that block
+which is huge i believe is thirty two hundred grams
+three point two kilograms with an uncertainty of about two grams
+so we have a ten percent uncertainty in the mass
+we have a two percent uncertainty in the length
+and we have negligible uncertainty in the mass of the block that s negative this wall
+so if i want to know now what the velocity is of the speed the bullet
+i can calculate what am plus n divided by m is i can calculate the square of the g over l
+and with those numbers i find four point seven
+times ten to the third
+times x we have to measure x
+now if you look at
+the uncertainty is in the whole thing we re going to measure x which may not be three and half centimeters it maybe four five
+but the uncertainty in our measurement will probably be
+two millimeters
+let s say it oh point two centimeters so this is not our real number yet so that would be
+an uncertainty of about two
+fifty is four out of a hundred is four percent this is four percent
+roughly four percent so
+i would say we get the time the final speed of the bullet to night you see of about fifty percent
+if we combine all the inserted it s
+so let s give it a shot no pun implied and we ll
+and we can make you see the
+pendulum right there very shortly
+and it is very clever the designs when the pendulum starts to string is going to move
+a
+small object
+there you have it think i can turn this on again think that s fine
+there is a very small
+why car which is this this black white or
+and as the pendulum swings this is five centimeters is a ten centimeters the wider will stay
+at the largest extension that when the pendulum swings back
+okay when we file bullets always a little risky i have here the
+the bolts
+and a bald in
+of what s in my pocket this one is right
+and the bullet
+and i call the gun
+everything done right yes
+so you can look there and then see this ring
+of this very massive block
+and the bullets will get absorbed in that ball
+you ready for this
+three two one o
+i would say five point two centimeters
+seems to me about right
+so x observed
+is about five point two centimeters
+and we know the uncertainty of the fifty percent or eighty
+so i have to calculate now the
+four point seven times ten to the third four point seven if opponent third
+multiply by i go n k s of course so that is point oh five two
+and that is two hundred forty four meters per second i remember last time we have something very similar
+so the speed of the boat it
+is about two hundred and forty four
+meters per second
+so though under speed of sound which is three hundred forty meters per second and we came to the same conclusion last time
+all right
+we had kinetic energy in the bullet before
+the bullet hits the block
+and you can calculate how but that is because you know the speed now and you know the mass one half m v squared
+you can also calculate how much kinetic energy there is
+when this bullet is absorbed in here that s very easy
+that s one half times the total mass and plus and
+times v prime squared
+but you also know now
+and so you will see then perhaps to your surprise that if you compare the two
+that ninety nine point ninety four percent of all available kinetic energy before the collision
+was destroyed and therefore was converted to heat that happened of course the heat was produced in that block
+now i m going to change too
+the concept of in tolls
+it s not completely unrelated to what we just ate
+an impulse is giving so one i take
+that s what an impulses
+our bullets gave in in tolls to this block it gave it a cake
+in post
+in pole is a vector
+and is the find
+as the integral
+of f d t doing a certain amount of time let s say from zero
+to delta t now i have equals m a
+which is also
+d v d t we have seen this now several times
+the rate of change of momentum and so i can substitute that in here and so i find then the integral
+from zero to delta t off
+d b d t
+the t and that makes me move to the
+domain off momenta
+so i have now simply the integral
+oh for d p from some initial momenta and p i to some final
+momentum p f
+and so that is simply
+the final momentum minus
+the initial momentum so what it impulse does it change is the momentum
+there is a force that acts
+on something for short amount of time could be a little longer you will see these rockets
+and that gives it a change in momenta
+==========
+if we have an object that we drop on the floor
+so we have an object mass and and we draw but on the floor
+and we let it fall over a distance h
+and is going to hit the floor with a certain
+speeds we know it down the velocity and then equals the square root
+of two g h
+if this were a completely elastic collision
+which the tense of course on the quality of the object and it depends on the quality of the four maybe super bowl all marble would be almost
+completely elastic then the ball would bounce back with that same
+velocity
+and if that were in the in a completely elastic collision then you can see that the impulse
+that the ball is given to
+that is given to the ball is the ball hits to florida for is getting in in pulse to the ball and that in powell s
+equals two m v
+the ball changes its momenta and it was first
+and v in this direction and now it s envy in this direction so the change is too
+and fee shown impulse is given to the ball
+now if the collision were completely inelastic then the ball would just a
+like a tomato i throw two metal on the floor goes
+no speed anymore when it hits the ground then of course the impulse would only be envy
+because then it doesn t come back up so there is no the change in momentum is then smaller
+we have here two bowls that look alike they have a mass of oh point one kilogram
+so and
+equals oh point one kilograms
+and i will dropped them from a height of about one and a half meters and that gives them a speed when they hit the floor
+of about five and a half meters per second
+and so the momentum change is two m v
+so the in poles
+equals two m v
+is about one point one and that would be kilograms
+meters per second
+and that means that if the collision time
+is dell pet the seconds that the average force
+to come on this ball
+during the collision with the floor equals
+b in volts divided by
+delta t because remember that what our definition vehicles
+so you know the in tolls we get a feeling for the average force
+and then for the ball that i will drop on the floor we ve done fast photography i will show you
+some results of the fast photography with the different ball but nevertheless
+within it with the ball that i will drop on the floor very shortly which is this one
+that in tight time is only too many seconds it s hard to believe that in too many seconds you tighter collision occurs
+and so if you substitute in here now too many seconds then you get for the average force five
+hundred fifty newtons
+just imagine this ball has a mass of oh point one kilogram
+the weight is one newton and during the impact it weighs five hundred fifty times more
+what in credible weight increase
+and the average acceleration that it experiences during the impact is five hundred fifty times g
+people play tennis and they have speeds of hundreds of miles per hour
+speeds are way higher than we have here ten times higher and so the weight increases
+is even more now if the
+collision were completely an elastic
+so that if it were tomato
+or neck and this one wouldn t come up the average force
+would still be approximately the same the reason being that
+the handles will be high
+but if the impact time were also hop anti in tolls where half then of course
+the force the average force will be the same very high
+but for short amount of time
+so i
+show what i first
+show you now the
+these two balls one is almost complete
+elastic collision with the floor
+whether this is a complete elastic collision depends not only on this ball whether this is a super bowl but also depends on the condition of the floor this is not a very good fords not mart
+trend i drop this one
+it doesn t come
+this point here
+so it s not a completely elastic collision
+but it bounces pretty much oh it is somewhere in completely inelastic and completely elastic it s not bad
+right that s not bad now this one watch it
+looks like
+but it ain t this one is completely inelastic it goes to the floor and it goes on
+you see a small about but that s it
+and so the impact times
+are very short to merely second see in the case of the
+well on that bounces back one mill is second in the case that wants that one clump and their average weight
+is about five hundred fifty times
+their normal weight
+i d like to show you
+fast photography on not is very same ball but on another one that we did let me take this
+is out and
+and that is a ball that comes down
+with a speed of four meters per second
+and each frame is one the second
+so you will see a ruler
+and the ruler indicates is has marks in centimeters
+and so you will see it go informally
+second see it will go one centimeter
+so it has a speed of two and a half meters per second it will it the floor
+and then we can count the number of milliseconds that it takes contact
+and going back up again this not
+be to the sect it s a little longer but again in passively sure
+all right we re going to make it a
+dark in order to get decent quality
+i m going to turn five of these off
+and i m going to set the t v hat two
+and now i will start this
+there we go
+let s hope that that will go
+okay that comes the bowl down the marks are in centimeters
+so it is a roller in centimeters
+this is one centimeter i remind the little
+because we were little too late
+okay but so it again so what s left
+when it pop passes this mark one two three is c four milliseconds for about one centimeter
+so that s to a half meters per second and now will count the number of milliseconds and impact
+one two three four five six
+and it s ah for about six maybe seven milliseconds
+and this is no special ball is in pack times are amazingly short
+now i have something very special for you something we use special
+something that has kept me awake
+things keep your way to physics and not only in physics
+this this
+but this is very special this is very special
+==========
+i have here a basketball
+not completely elastic but not better tennis ball
+not completely elastic but not bad
+now how i m going to drop them together vertically down
+and then this ball will bounce up somehow
+and so the question that have for you is
+you you think if i drop it from this how right
+that is tennis ball will sort of come up at most to this height and you think it will be low or
+do you think it will be higher
+so you sure intuition in the war scares it can be had drawn here is already portion this raindrop
+so what
+think will the tennis ball which about the same height with in favor of that
+fourth in favor of higher
+wow with the favor of a lot higher okay oh you out try it now
+i cannot guarantee you that this wall will go straight up
+after the impact because clearly between possible
+but is zero chance so probably go off it s on direction but you will see
+the fact that i had in mind
+so there we go
+and you see that indeed that that is ball
+goes way higher i ll try it once more to see when i get it
+go up a little bit more vertical it but that is very difficult it goes higher
+and if it s something that you should be able to calculate and you can and you will
+believe me it s part of assignment number six seven seen it yet their ego
+wow boy that was better
+well bo and your reading on and you know approximately how much higher it goes in this ball is way higher mass and this one of course the mass ratio comes into it
+and i d here twice as high
+you be surprised three of your assignment sixth much higher
+okay for you could even see it he always did it was quite a bit higher than twice
+great great experiment then the something you can do yourself to dormitory
+now
+discuss the remaining time about rockets
+a rocket
+==========
+experience an impulse
+from engine and that change is the momentum of the rocket
+the story going to the details of the rocket
+think about again the side year of throwing objects on the floor
+and let s turn to tomatoes
+i
+make noise because i want a complete in elastic collision
+to tomatoes hit the floor and
+it s not that i and i m not only going to for one tomato on the floor but i m very angry the today i m
+sort of these tomatoes on the floor
+n as in nancy tomatoes on the four
+if one tomato it s the floor
+the change of momentum is m v m is the mass of a tomato but i m going to throw and on the floor
+so the change of momentum is n as in nancy times the mass of the tomato times v
+and this is a number of kilograms per second of tomatoes that i throw on the floor
+so this is a change of momentum
+and so this equals delta up the
+divided by delta t
+and that s an average force
+so oh the floor
+will experience
+a force in down direction of course that was also the case here when the ball will experience a force up
+which we calculated here
+the floor experience of course the same force in down direction action act action equals minus reaction newton s third law
+so the force experienced it s the floor experiences a force in down direction
+and i can write it down it have somewhat more civilized form f equals
+d n d t
+times the velocity
+if the velocity of the tomatoes it it the floor is constant
+and we going to apply this two rockets were by exhaust out of rockets has relative to the rocket the constant speed
+and this is then the number of kilograms per second
+that i throw on the floor
+this is very real
+i can throw these tomatoes on a bathroom scale
+and if i through four kilograms per second on a bathroom scale
+and the it s the bathroom scale with five meters per second you better believe it that you will see
+that the bathroom scale will reach an average force of about twenty newtons four times five
+if it weren t tomatoes with the day was super bowls which would bounce up then the momentum change would be double and so the bathroom scale
+would indicate forty newtons so this is a real thing it s a real force that you can record
+now i m going to be a little bit unpleasant to you
+i m going to throw a rotten tomatoes at you
+here you are
+and and i have here a tomato
+and this to mate oh has zero speak to start with
+make you a little beer otherwise i will deal only to meet you
+so this issue
+and so i give this tomato a certain velocity v of x
+the two made oh it s you
+there may be stays there as possible maybe it will drip down but in any case
+the velocity and the x direction is gone
+so it it s you
+with a velocity v x and then d of x equals zero
+and it they make a mess
+you will experience a force if i keep throwing these tomatoes it you all the time
+and this is the force that you ll experience and that force is of course in this direction
+get all these tomatoes and you feel that as of force but now look at the symmetry of the problem
+here the velocity goes from v x two zero
+but i would so the tomatoes
+as to increase the velocity from zero to v x
+so for obvious reasons i must then fee you a force
+in this direction think of it is a week or when you fire a bullet
+so i experienced exactly the same force but in this direction
+and that now is the idea behind a rocket iraq it
+if you now tomatoes well not quite tomatoes it s viewing out hold gas in this direction
+and then the rocket will experience a force in that direction that is the basic concept behind a
+rockets and the high and a speed of the gas but it throws ow out
+the higher that velocity
+the more kilograms per second it s spit out
+the higher the n d t
+the height will be the force on the rocket and this force on the rocket is called the frost
+of the rocket
+so if we have a rocket in space
+here s the rocket
+and the rocket is
+you in now out gas
+with a velocity u which is fixed relative to the rocket
+it s a burning of chemical energy
+chemicals are burnt it comes out with a certain speed
+and the rocket will then experience a force which we call the thrust
+and that is given by this equation if you know how many kilograms per second dispute out
+and you know what the velocity is which i ve called you here
+this will tell you what a frost is of that rocket
+if we take the case off
+be sat around rockets that we re used for the landing on the moon
+cetera
+for the set and rockets the speed u
+was about two and half
+kilometers per second
+the the gas came out with to have kilometers per second relative to the rocket
+and the rate at which is hassles coming out is phenomenal
+fifteen collins of material per second d n d t
+is about fifteen thousand
+kilograms per second it s almost unimaginable
+and that would give and then of thrust
+of about thirty five million newtons
+we serve course was higher than the weight of the rocket otherwise a rocket would never go up the incredible frost
+i have also nice problem for you in the sign in six with the cetera rockets will see these numbers again these are rounded off
+so iraq and so obtain an impulse from their engines
+before x upon the rockets for certain amount of time we call that the burn time
+but as a neighbor and if you will the mass of the rocket goes down because if you will leads
+and therefore the acceleration during the burn goes up because the mask goes on
+and this makes it somewhat complicated to derive the
+velocity chains that you get
+during the ball during this impulse
+it s done in your book oh haiti and
+i find that derivation a little bit complicated
+i looked in another books that i ve found one in the book by kepler on physics
+and this derivation and i will go through that
+in general terms i put that on the web for you you should be here tonight
+so you may want to take very few notes the entire very patient
+of which i will just
+highlights the important issues is on the web
+and the way that he plays doing it is exclusively from
+you re frame of reference you re sitting in twenty six one hundred
+and you re seeing this of rocket go up
+==========
+let s keep that equation which is the thrust of the rocket
+except that in the case of a rocket we would call this mu which is the speed of the exhaust relative to the
+rocket and this is what we call the force
+so let s now take a rocket which
+at time t
+as seen from your frame of reference with you re sitting
+i use visa to your frame of reference is going up
+with a velocity v
+the mass of the rocket is and
+and now we re going to look at time t plus delta t
+the rocket
+has increased
+its speed
+v plus delta v
+the mass is m let me do that in
+not at in cork the mass is now them mine is delta n and here
+is a little bit of exhaust that was just so you out
+with velocity u relative to the rocket
+you relative to the rocket so you in twenty six one hundred
+we ll see the velocity of this little piece delta them
+you will see this to be v minus u
+if the velocity of the rocket is larger then you
+could be you will see the exhaust going up from your frame of reference if
+the velocity of the exhaust is larger
+then the velocity of the rocket from your frame of reference you will see you go down that s
+taking care of in the signs
+now how
+i m going to compare the momentum here with the momentum there
+and we take the situation that they are no external forces acting up on it so worn
+space this rocket burns
+momenta must be conserved
+the momentum at time t
+equals n times v
+that is very simple that s time t
+the momentum at time t plus delta t
+of the entire system including d exhaust
+if i m telling you the momentum is conserved you can take your the exhaust
+it s momenta of the system that is conserved the momentum of the rocket
+is going to change and the momentum of the eggs all losses going to change but not of the system
+so we re going to get mass times velocity
+and minus dealt i am
+times if v plus delta v
+plus
+gulf side and
+which has a velocity v minus u
+and how large is this well that is n v plus n delta v
+you see the and delta v here you see d m v
+and you get minus you dealt i am
+and the delta and v here cancels minus delta and v here
+and this term delta and delta v
+is the product of two incredibly small numbers i d ignore that
+so this is the momentum that it was delta t and this is the momentum at time t
+and so the change in momentum delta p which must be z row
+because momentum is conserved is n delta v
+mine is you dealt i am
+and delta t minus u
+dell time
+i can take the
+the relative of this equation so i get on the left side the p d t
+the p t is going to be zero
+so i get zero equals n times d v d t
+but d v d t is the x l a rocket minus u
+d and the t e
+and that is this trust on the rocket
+so what you see here is something that was very easy to digest
+that n a which is the
+this is the acceleration of the rocket is the mass of the rocket at time t equals
+the thrust of the rocket
+and that equals u e n
+the t and some people call this the the rocket equation
+now this is true if
+there is no external force on the system
+is interesting to include a real always from worth
+and if you ever be a launch from worth that and
+the rocket is going up in this direction
+but then gravity is exactly the opposite direction
+in other words only when you launch vertical it from earth would you have
+but thrusts like this and you would have and he like this in that case
+this equation has to be
+adjusted and then you get an a
+equals n thrust
+minus and the only if you have a launch from worth vertically up
+now you have to do a little bit of recycling
+and i will leave you with that massage in
+but couple of integrals unnecessary
+to convert this into the final
+velocity of the rocket after the burn
+to lead to the initial velocity
+and that part i will leave you with you but you will see that work out and all the tail on the notes that i left on the web
+and then you come up with a very famous equation that the final velocity of the rocket
+mine is the initial velocity of the rocket equals minus u
+times the logarithm of the final mass of the rocket divided by the initial mass of the rocket
+this is if there were no gravity and all
+just in case and only in case of a vertical won t from earth there is also here the term minus
+d t only if you have a vertical launch from earth
+when i works my lecture i noticed that in my enthusiasm i put brackets around two minus g t
+and his quite misleading because they may give you ron impression that is a product that s taking which is not so
+so the brackets really should not being around to minus g t e it is the storm mind issue logarithm
+of m f divided by m of y
+minus g t
+let s now look at this equation in a little bit more detail so the we get a little bit of feeling for it
+suppose we had a vertical on from earth but we have no rockets it s possible
+so this term the not exist
+what you see that the velocity the calls
+v initial we ve call that before in eight oh one the zero that the initial speed minus g t
+and we have that result doing our first lecture
+completely consistent with this equation if you have no rocket you get that v equals three zero minus t t if you throw the object
+vertically up when we had a vertical launch
+so that looks good
+we ll fund the earth
+and we now have a an initial speed
+which is zero the rocket is sending their
+and we fire the rockets d by the way is the burn time of the rocket
+and we write that down t
+is the burn time
+so oh initial speed is zero
+so now
+this final velocity v want this final velocity be anything physically meaningful positive number
+this thing has to come out positive and you will say how can that be
+because we have a minus sign here and we have a minus sign there how can that ever become positive well don t forget that at
+the final mass
+is small low always many initial mass because you burn few will
+and so the slaughter it them is always
+be negative
+and so this term is always
+be positive if you burn any field now of course for this velocity to be
+a real value physically meaningful this term
+has to kill this one has to be larger than this one otherwise raw could won t even go up you could be
+spring out few well the time a rocket would just be sitting there
+because this trust up effectively is not enough to lift it all
+so oh the first term has to win from second term in case of a vertical watch
+let s take a example with some numbers always gives a little bit of insight
+we have a burn time
+of about a hundred seconds and the initial speed is zero
+and let us take a case whereby you
+is thousand meters per second that is less than the saturn rocket but is still a sizable is a kilometer per second
+so the exhaust is coming out relative to the rocket with one kilometer per second
+and the final mass
+divided by the initial mass of the rocket
+is oh point one to ninety percent was burned the way it s a few that is gone you only ten percent left
+when the burn is over
+so now we can calculate
+if this was a lawn from earth a vertical aren t up we can calculate how large the store them is then the logarithm of this value
+multiplied it been minus u
+and then we find that the final velocity
+the first term is twenty three hundred
+and the second term hundred seconds and this is ten is minus thousand
+so you pay a price for the gravitational field
+and so you have about one point three
+kilometers per second
+is the final speed of that rocket be zero meters per second and that is in kilometers per second
+now if there were no gravity
+then of course the gain in speed this difference would be twenty three hundred meters per second
+also if there s no vertical launch
+but if for instance the rockets were in war bit
+around the earth here we have the rocket and
+going into orbit around the earth
+then of course even though there is gravity gravity is now not doing any work
+and therefore if you fire this rocket four hundred seconds
+the change in velocity the tangential change will also be twenty three hundred meters per second
+you cannot say now there is gravity and therefore we have to
+take the g t term into account
+it would be the same for this equation if you had an object going in this direction is minus d t term wouldn t be there either
+it s only of course when you deal with a vertical motion
+is very important to realize and very non intuitive
+that when you were in a certain amount of fuel
+for a given amount of time and you re paying a fixed change in the velocity
+this is fixed for a given amount of fuel
+a change in kinetic energy is not fixed
+now give you some numbers so that you can immediately check that for yourself
+and it is very non intuitive it is fact the mistake that is made by many physicists would think that if you burn
+the same amount if you will of the same rocket for the same amount of time that the increasing kinetic energy
+is a given that is not true it s the change in velocity that is a given that suppose that the fine oh
+minus v in this show is hundred meters per second just a given
+i have a rocket at a certain amount of fuel i burn it
+and that is my change in velocity
+i start off with the in this show is zero so my kinetic energy increased
+this one half m
+times hundred squared which is ten to the fourth
+that s what i got out of this burn
+now i use the very same rocket the same amount of fuel the same burn time
+so i get again that the final velocity minus the initial velocity is still hundred that s exactly the same
+but before the burn this rocket at an initial velocity of
+thousand meters per second what is now the gain of kinetic energy the final velocity
+is now eleven hundred that s not ago she will because the rocket changes the momentum changes the velocity by a fixed amount
+so now the gain of kinetic energy the increase of kinetic energy equals one half and
+times eleven hundreds squared minus
+one thousandths squared
+this is the new velocity and this was the old one
+and this number is one half m
+times two hundred thousand
+is could be in joules and this is also in joules this number is twenty times higher
+so you see that the change in velocity was exactly the same
+the rocket bird the same amount of time the same amount of fuel the to kinetic energy increase is way more if the rocket
+has a higher speed to start with
+we here in twenty six one hundred mate
+our own rocket it s a very down to earth motto no pun implied
+but it is quite powerful and and i would like to show it to you because we are quite
+proud of it as a raw could we use a fire extinguisher carbon dioxide
+and this fantastic invention i have here
+and this power full rocket is enough to reach the escape velocity of
+i ll almost reach the escape velocity but i crest see you next friday
+==========

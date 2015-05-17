@@ -1,0 +1,616 @@
+==========
+Today we're going to start talking about logic. 
+Now, my guess is that almost everybody's been exposed to the basic propositional logic in the context of machine architecture or something like that. 
+But, it turns out that that exposure to logic was just a little tiny piece of this enormous iceberg that we'll uncover a little bit more but we're not going to go crazy with logic in this course. 
+But we're going to do a fair amount of it, partly because it's relevant -- it's certainly of great historical relevance in AI, and it's making a resurgence, especially in things, for instance, what the Web is doing lately So the Web consortium now is interested in the idea of annotating Web pages with some logical descriptions of the content of what's on the Web pages. 
+And, I guess they're using first- order logic to do that. 
+So, we'll use some of those ideas to motivate an assignment -- the next assignment that we do. 
+We're going to start right now with a simpler logic than they're using. 
+But we're going to see where -- sort of try to introduce the basic ideas, all the important ideas of logic in the context of a simple logic called propositional logic. 
+And then we'll move on to first-order logic, which is a little more complicated. 
+OK, so why would we want to do this? 
+Well, carrying through the example of -- last time we talked about planning, or problem-solving in a circumstance where we had enough -- we didn't have two many states. 
+We had enough states of the world that we could -- not too many that you can't enumerate them Or enough to draw on the board or enough to sort of make an array with or something. 
+But if you know of a domain that's bigger than that, then you don't want to talk about individual states in particular, you'd like to probably talk about them in terms of sets. 
+You'd like to have a convenient way to name sets of states, and you'd like not even -- eventually, you'd like to not think about the states. 
+So I could say "It's raining." 
+And one way to think about what it means -- what that assertion means, that it's raining -- is to say that it stands for all those states of the world in which it's raining. 
+So there's a very short name for a very good set of states. 
+And logic is going to be basically about a way to do that. 
+To deal with little names for big collections of things, and to manipulate the big collections absolutely implicitly by manipulating the descriptions instead. 
+So that's the enterprise -- short names for big things. 
+We're going to -- instead of manipulating, instead of thinking about all the ways that the world could be, we're going to instead work in this language of names. 
+Language of expressions that describe those sets of states, and not worry about the sets. 
+==========
+So, what is a logic? 
+Well, a logic, at least informally, in the formal language, sort of the formal language -- and what that means -- it has the syntax. 
+The syntax is a description of what you're allowed to write down, what the expressions are that are legal in a language. 
+And we'll talk about these things in great detail, I'm just kind of outlining the -- what we're up to. 
+So there's a description of the legal expressions, that's the syntax. 
+There's the semantics -- which is some story about what those expressions mean. 
+OK, so this is form, this is content. 
+And then usually it comes with a proof system, which is a way of manipulating syntactic expressions to get other syntactic expressions. 
+And, why are we interested in manipulating syntactic expressions? 
+Well, because we know that the ones we get out at the end, we can consider their semantics and it will tell us something, in some sense, new about the world that we're thinking about. 
+(Pause) So, why do we want to do proofs? 
+Well, there's a couple of reasons for doing proofs. 
+One is that we might -- I mean, there are a whole bunch, but this is in the context of an agent trying to reason about his world and to do things in the world -- we might have a situation where we have a bunch of percepts. 
+You know, we found somebody come in with a dripping umbrella, we saw muddy tracks in the hallway, we see that there's not much light coming in the windows, we hear pitter-pitter-patter, we have all these percepts, we'd like to draw some conclusion from them, so we would like to figure out something about what's going on in the world. 
+We'd like to take all these percepts together. 
+So, we might take a whole bunch of percepts and draw some conclusion about the world. 
+That's one reason for using logic, one thing that you might use it for. 
+Another would be that you know something about the current state and you know something about the operator that you just -- that you're considering doing. 
+So you're planning your -- something about the situation that you're in, and you're considering taking a particular action. 
+You have a formal description of what that action does in the world. 
+You might want to take those things together and infer something about the next thing. 
+Properties. 
+So these are two kinds of inferences that an agent might want to do. 
+We could come up with a lot of other ones, but those are two good examples to kind of keep in your head. 
+==========
+Whenever anybody, I think, teaches logic, the students -- the eyes start to glaze over and I'm going to try desperately to keep that from happening. 
+Part of the problem is that I think it's really cool, so maybe it's just the fact that I can communicate to you that I think it's cool and you'll find it cool, too, but I'll try to do better than that. 
+But we'll see. 
+There's a couple chairs -- OK, so there's nothing to do but dive in and just hope for the best. 
+OK. 
+So we're going to do that. 
+OK, so that what -- kind of an interesting way of presenting logic -- first, if you read the chapter, first they talk about kind of logic in general and in the abstract. 
+Which, for logic -- the abstraction of logic is already awfully abstract. 
+But anyway, they talk about logic in the abstract and then they talk about propositional logic. 
+It seems to me that it's a little bit -- it's awfully ungrounded to talk about logic in the abstract. 
+So we're just going to dive right into propositional logic, learn something about how that works, and then try to generalize later on. 
+OK. 
+So the syntax. 
+Let's talk about the syntax of propositional logic. 
+(Pause) OK, we're going to talk about -- all right. 
+Syntax is what you're allowed to write on your paper. 
+You're all used to rules of syntax from programming languages, right? 
+So, in Java you can say For thing P equals foo D equals F(foo) -- no, that'd have to be a (inaudible). 
+See -- (inaudible) and T equals -- here's something syntactically (inaudible). 
+All right, so there are rules -- the rules of syntax, the grammar, the BNF stuff in the very back of the Java bar tells you there's going to have to be a semicolon here, the parentheses has to be there, that you can't just make random permutations of those symbols and expect the computer to have any idea what is going on at all, right? 
+So the syntax is what symbols you're allowed to write down in what order. 
+Not what they mean, not what computation they symbolize, but just what symbols you can write down. 
+Another famous illustration of syntax is this one -- probably due to Chomsky, I don't remember -- so this is a famous nonsense sentence, "colorless green ideas sleep furiously". 
+The idea is that it doesn't mean anything really, apparently, but it's syntactically well-formed. 
+It's got the nouns, the verbs, and the adjectives in the right place. 
+All right you couldn't -- if you start those words out, you get a certain -- you get not a sentence, right? 
+You'd get something that was weirder. 
+Here, you can say "This is a sentence that doesn't mean anything." 
+You've just got a syntax where the semantics are somewhat lacking, but if you scramble the words up, then you'd have something that didn't even have syntax. 
+So, "furiously ideas green sleep colorless" is not OK. 
+So let's talk about the syntax of our propositional logic. 
+So, we're going to call the OK things to write down "sentences". 
+So if something is a sentence, it is a syntactically OK thing in our language. 
+A sentence. 
+Sometimes they're called "WFFs". 
+Of course, if you go on and read other -- I did essentially read a little bit this morning, I looked at about three or four other logic books to be sure that I was using the terminology OK, or at least to be sure that Russell and Norvig were, and what I found was that everybody was using it differently, so I just quit worrying about it. 
+But, sometimes these things are called "WFFs" which is short for "Well-Formed Formula". 
+So you might run into that. 
+All right. 
+So, we're going to define the set of good sentences recursively. 
+So here's case number one. 
+True and false -- all right, those words, "true" and "false", are sentences. 
+All right, here's a pleasant one. 
+Propositional variables are sentences. 
+I'll give you some examples. 
+P, Q, R, Z. We're not -- at least, at this point, it doesn't work -- for right now, a language that a computer is going to read. 
+And so we don't have to be, between us, absolutely rigorous about what characters are allowed int he name of a variable or something like that. 
+But there are going to be things called variables, and we'll just use, say, uppercase letters for them. 
+Those are sentences. 
+It's OK to say "P" -- that's well-formed. 
+If \Phi and \Xi are sentences, then so are -- OK, so now I've got these variables, they're called metavariables, they range over expressions. 
+So if these two things are things that you already know are sentences because of this rule, then you can make a bunch more sentences out of them. 
+So, then so are -- put the parentheses around it -- not \Phi. 
+This stands for "not". 
+We don't have semantics yest. 
+You just are -- you're allowed to make those marks on your paper. 
+If somebody wanted you to make these marks on your paper, then you can make this one in front of it, that's OK. 
+You can write this down. 
+You can take these marks and put that thing inbetween and make these other marks. 
+You can do this... 
+a "V". 
+You can do this with an arrow. 
+The book writes a double arrow, but I find it tedious so I'll write a single arrow. 
+Don't worry about it. 
+There's only one arrow. 
+And there's a two-headed arrow. 
+And there's one more part of the definition, that says nothing else is a sentence. 
+OK. 
+That's the syntax of a language. 
+Is that OK? 
+Everybody's seen these kinds of things, now, right? 
+I could write strings of symbols down on the board and you could tell me whether or not they're sentences. 
+Q: Is that all-inclusive? 
+Um, that's it. 
+So, you get sort of primitive, or either True/False or these variables, and then you can combine them in these ways and that's it. 
+But remember, these are variables, so that means I can make (P ^ Q) v R, I can write that down, and that's OK, right? 
+Because this is a sentence, and this is a sentence, so putting them together must be a sentence. 
+So that's OK. 
+==========
+Now let's talk a little bit about parentheses, just to get that out of the way. 
+Technically speaking, we should probably require you to put parentheses around all of these sort of more complicated things, just so that we're clear on the precedents. 
+But all you guys are used to parenthesized languages that have operators of different levels of precedence, right? 
+So the precedents look like -- plus and minuses go on -- so the precedence ordering is this. 
+It's not, wedge, V, arrow, double arrow. 
+So -- just a little practice -- right, that expression is equivalent to that one, right? 
+And so this one's the loosest. 
+So, it goes like that. 
+Uh huh? 
+Q: Is the precedence part of the syntax? 
+Good. 
+Yes, right. 
+So, no. 
+In fact, if I were going to be this my most rigorous logician possible, I think what I would have to do is actually require you to put parentheses around all those -- all of these expressions, and then everything would always be fully parenthesized and then there would be no question of -- the order of precedence just wouldn't come into it. 
+These precedence rules are just to allow us to be lazy and leave some of the parentheses out, right? 
+It's just a way to say, if I write something without the parentheses, you can figure out where the parentheses really needed to go. 
+Right? 
+So, yes. 
+The -- all this precedence stuff is just kind of laziness. 
+Or efficiency or compactness or something, in the representation. 
+It's sort of extra syntactical. 
+OK, questions about the -- yes, good? 
+Q: Isn't precedence sort of a random (inaudible) syntax? 
+I mean, I think you can define this without the (inaudible) properties and that would be enough. 
+I (inaudible) syntax. 
+Well, that's true. 
+OK, good. 
+So, and -- right. 
+So I could say, you're allowed to write down these things like this, no parentheses, that's fine, and then when we get to the syntactic part, we'd have to say exactly how you take apart an expression that doesn't have the parentheses. 
+Now, most people don't want to bother doing that because that gets too tedious and it makes the structure of the definition of semantics ugly. 
+But you're right, you could do that. 
+And so, in practice, the boundary between syntax and semantics can be a little bit permeable. 
+But yes, that's a sort of a subtle point, but that's a good one. 
+Yes? 
+Q: How about the sensitivity of the pair of... That -- good. 
+So that's usually a matter of semantics. 
+Because we could say -- so the question is, is -- what does this mean? 
+So here's the question. 
+If I write A and B and C, let's just take that one for a minute. 
+If I write A and B and C, what does that mean? 
+Does that mean (A and B) and C? Or does it mean A and (B and C)? 
+And you know languages where those aren't the -- right, we can regardless all the same, but it isn't necessarily -- there are languages in which it's not. 
+So that's why, again, I think we really want to think about these expressions without parentheses as being shorthand. 
+And so, in fact, in our language, this operator will be associative. 
+And so, in fact, we don't have to sweat which of those things we mean. 
+What about the arrow? 
+Let's save that one as an exercise. 
+But remind me again when we get to the semantics of arrows. 
+Because it's a good one to work out. 
+Is there anything more we want to say about syntax? 
+I don't think so, I mean I -- those are the rules, that's it. 
+And these are the kinds of things you can write down. 
+But you can write "A arrow B or C two arrow B", and you can write these things as big and long as you want. 
+==========
+So let's talk about semantics. 
+Semantics, intuitively is, what do these things say about the world? 
+OK, so we could just write symbols on the board and play with them all day long, and it could be fun, it could be like doing puzzles. 
+But ultimately the reason that we want to be doing something with these kinds of logical sentences is because they say something about the world somehow. 
+And it's really important to be clear about the connections between the things that we write on the board and what we think of them as meaning in the world, what they stand for. 
+And it's going to be something different every day, right? 
+So, I remember when I was a little kid and I was on the bus. 
+And somebody's big sister or brother had started taking algebra and this kid told me, "You know what? 
+My big sister's taking algebra and A equals 3!" Right, so this was a fact: A equals 3. 
+And that wasn't really good. 
+But that's one of those things that's going to be variable, right? 
+That's one of things that's in the interpretation of the symbol somehow. 
+I mean, in fact -- or you might have said, it's not A equals 3, but A is the -- how much milk I have in my thermos, that would be another way to think about the relationship between the variable and some quantity out in the world. 
+So we're going to leave that variable, but we're going to talk about how these symbols can stand for quantities in the world and what that might mean. 
+So the semantics -- the meaning of a sentence here -- the meaning or semantics of a sentence is (inaudible). 
+What does that mean? 
+That means sentences are true or false. 
+It's going to turn out that sometimes we're not going to be able to figure out whether they're true or false, but we're going to think of the meaning of a sentence as a true/false. 
+Is it true or not? 
+So how do you decide if A wedge B wedge C is true or not? 
+Well, it has to do with A and B and C stand for in the world. 
+So I'm going to use this word "interpretation." 
+And interpretation -- and I'm going to depart a little bit from Russell and Norvig, but I'll explain why -- is an assignment of truth values to the propositional variables. 
+All right. 
+A truth value -- I said this, but let me just be clear -- is -- I'm going to use a different syntax for them because -- this is where using the board for two things is very hard, right? 
+There is a simple true and a simple false which are elements of our language, of our very formal language. 
+And this true and false -- the platonic concepts of true and false -- that's what these stand for. 
+OK? 
+So we want to say, "Isn't this stuff written on the board true?" 
+All right, that's the question. 
+So there's a difference between that same True written on the board and truth. 
+All right, this is truth, right there. 
+You got it. 
+So I'll assign an interpretation of an assignment of truth values to the propositional variables. 
+So, Russell and Norvig talk about interpretations in kind of a two-phase -- forget it, I'm not going to get into it. 
+Maybe at the end I will. 
+I think it'll just confuse you. 
+An interpretation is an assignment of truth values to the variables. 
+OK? 
+So that's a way the world could be. 
+That's an A equals 6 kind of thing, right? 
+So if this is our set of variables that we have, then P true, Q false, R true, V true, that would be an interpretation. 
+All right. 
+So then, given an interpretation, we can ask the question, is this sentence true in that interpretation? 
+We will write ?? 
+to mean. 
+Sentence \Phi is true in I. This symbol here is not part of the syntax of our language. 
+It's part of the way logicians write things on the board when they're talking about what they're doing. 
+You understand the difference? 
+Ask me if you don't know, it's a really important difference and it seems screwy, but it's important. 
+Think of -- if you can think of more sentences like expressions in the programming language, then you can think of stuff like this as talking about programs working in a certain way or not. 
+So this is just some standard logician notation. 
+I'm not going to write it on the board but it summarizes something here. 
+OK. 
+So, we'll write this down, if sentence \Phi is platonically true in interpretation I. OK. 
+\Phi has to be a sentence. 
+If it's not legal, then that's not even -- right, if you ask me, is that true, I won't even entertain the question. 
+That's not a question you could ask. 
+All right. 
+So now we can write down the rules of the semantics. 
+We can write down, on the board, when sentence B is true in interpretation. 
+Mm hmm? 
+Q: Mark the distinction of this T and this truth? 
+Good, OK, right. 
+This "true" is a symbol. 
+It's merely talk. 
+It's just a think you can write down on your page or type into your computer. 
+This is meant -- is what I'm using -- but now I'm talking to you and I'm using the board to talk to you, which is -- so I'm using the same medium for two different jobs, which is why it's confusing. 
+But this just means "true", like "true." 
+__: Really true. 
+Really true. 
+(Laughter) Right, this -- I could (inaudible) written in some other gunk there, I could have just made a different symbol there, and in some level it would be easier, but at another level you'd be mad at me if I did that, right? 
+But it would be just the same. 
+This symbol could be anything, anything at all. 
+Yes? 
+__: (inaudible) Because it can't change. 
+Well, we don't know yet. 
+So far - - see actually, that's a really good question. 
+From the perspective of syntax, there is no difference at all between that t-r-u-e and P. None at all. 
+But in a minute when I write down the semantics, we will treat them differently. 
+Yes. 
+That's a great question. 
+Yes? 
+__: Then true can mean that? 
+For now, true means nothing, but -- For now, nothing means anything because we haven't written down the rules for meaning. 
+It's just a thing that's OK to write down. 
+That's all. 
+Are you ready for meaning? 
+I'm ready for meaning. 
+All right, I'm going to write the semantics down in a way that's parallel to that. 
+So I'm going to erase this so that we have a parallel. 
+All right, so. 
+There's our first piece of semantics. 
+What does that mean? 
+Somebody tell me what that -- tell me in English what that means. 
+Yes? 
+__: The symbol "true" is true in all interpretations. 
+Right. 
+The symbol that this talk "true" is true -- so it's honestly true in every interpretation. 
+No matter what value you assign to the variable, that symbol is true. 
+__: Previously what you just erased, though, you had said - - you had another example up there with the symbols of I-P, and it was that Phi was true in interpretation I. Right. 
+__: So why isn't this true is "true" or true is "T" in interpretation I. That is it. 
+But it's actually true for all I. Right. 
+So the symbol -- so this sentence -- this is a sentence. 
+This sentence has truth value "true" in every interpretation. 
+__: So don't (inaudible) for all I? __: Yes, but you're going to -- Yes, OK. 
+I'll do that. 
+Yes, because I'm leaving I out. 
+All right, yes, I wasn't going to do that. 
+They're all interpretations. 
+So it's independent of I. No matter what I, "true" ... 
+so now you just define a meaning to that symbol. 
+OK. 
+Next clause. 
+Well, what does mean? 
+It means -- let me just write it in English. 
+The sentence "false" has truth value "F" in all interpretations. 
+All right, so you can take this to mean \Phi has value F in I. __: Do we have a definition or a rule that says if it's not true, then it's false? 
+Mm mm. 
+Well, no we don't. 
+I mean, it's going to turn out in this logic that it's true, but not in every logic. 
+__: So I think, well what this means -- I guess it's getting kind of too technical, but, it seems to me that if it's -- the sentence false is not true under any interpretations... 
+Right. 
+The fact that it has truth value "F" is going to turn out to mean that -- right, in this logic, it does not have truth value "true". 
+Right? 
+Is that -- __: So you're saying that if it doesn't have a truth value of "t", then it means that -- It doesn't have a truth value of "f'. 
+Right. 
+Though they're all (inaudible) better than me. 
+And there's a whole school of (inaudible) philosophy of people who believe that there's something other than true and false. 
+They do not believe in the law of a the excluded middle that says either \Phi or not \Phi. 
+Most of us believe -- you don't have to. 
+And you can -- and there's a whole range of (inaudible) not want to do that. 
+But we're not going to be -- kind of - - ordinary. 
+(Laughter) __: Why are these valid in all interpretation and this "Phi" is only valid a single specific I interpretation? 
+So, this is just a definition. 
+When I write a turnstyle little I \Phi, I was just defining that notation. 
+This is just a definition of this notation. 
+That if I write this thing with a slash through it, sub I, \Phi, what I'm saying is it's a shorthand for "this sentence has truth value F in interpretation I." So that really is just a definition of syntax on the board. 
+This -- these two things now are the only things we've written down that are descriptions of the semantics of our language. 
+OK? 
+And this is also for all I. For all I, this sentence has truth value F. OK. 
+All right, now we can do the connectives. 
+The parentheses are -- I'll leave out the parentheses. 
+All right, so now. 
+When is this expression true in interpretation I? Well, it's true if and only if that expression has truth value "false" in interpretation I. Right? 
+Whatever this is, if this means "false", then the expression that you get by putting this -- now we'll call it a negation symbol in front of it -- means "true". 
+Is that OK? 
+You get the enterprise here? 
+All right, you guys -- I'll write one more and then you can help me write the rest. 
+All right, so what if I have this piece of formula and I want to figure out what it means? 
+Why would you say, this thing is true in interpretation I. Why was that an important clause? 
+Well, I'll come back to it. 
+This and only this ... 
+this is true in interpretation I, and this is true in interpretation I. OK. 
+So now we'll call this thing conjunction. 
+OK? 
+Happy about that? 
+So that little caret thing means "and." 
+So how about this expression? 
+What are the semantics of this v that? 
+OK, I'll tell you "v" means "or". 
+So how do I know this expression is true? 
+__: It's not inclusive or? 
+It's inclusive. 
+OK. 
+__: Either of the two or both of them are not true. 
+OK. 
+So I'll say -- I'll start adding (inaudible). 
+If this is true or this is true. 
+And this is called (inaudible). 
+All right. 
+There's one more clause here that I should put right here. 
+I'm just going to do it by example. 
+So imagine that we want to know -- we have expression P. It's a particular one of our propositional variables, I'm going to ask if it's true in interpretation I. Wherever I is an assignment of truth values to variables. 
+So, to answer that question, we just look "P" up in the interpretation. 
+That's pretty much all of the semantics we need. 
+==========
+I'll do the two arrows, but the arrows are really -- can be construed as shorthand or macros. 
+But I'll write that down. 
+But are you OK with this stuff here? 
+So then we said what -- how it is that someone used the term "evaluate", which is good, which is the kind of computer scientists' way of thinking of what this is. 
+This is a definition of an evaluator. 
+Interpretation. 
+Interpretation, evaluation, right. 
+You give me some bunch of formal stuff like a computer program or a sentence in propositional logic, and I tell you, this value and how this case of values is going to be true. 
+T or F. Platonic truth. 
+OK, just for the record, I'm just going to write these definitions down. 
+This \Phi implies \Xi is equivalent to "not \Phi or \Xi". 
+And so anyplace you have this arrow, you could just replace it with that and be OK. 
+Arrow doesn't add anything new, but it gives us a way of writing things down that people find pleasant. 
+In this biconditional thing, which actually gets written this way in some books, means that \Phi implies \Xi, and \Xi implies \Phi. 
+OK, so this thing is called a conditional, this thing gets called a biconditional, sometimes this whole thing is called an implication, and sometimes this obviously gets called an equivalence. 
+Just a little more terminology because I may use it and I think the book does also. 
+These are conditionals or implications. 
+These kinds of statements are really -- they're around a lot, we use them all the time. 
+This expression gets called the antecedent. 
+And this expression is called the consequent. 
+Let's do truth tables just to see how that goes. 
+This you've certainly all seen, I think. 
+All right, so one way to think about the semantics of these things, and it's going to turn out one way to do proofs -- we'll get to what a proof is in a minute, but this is going to turn out to be one -- is by the method of truth tables, which basically means you enumerate all the interpretations of -- right, you enumerate all the interpretations of your variables and then you see which expressions that they make true and false and that helps you see something about these expressions, what they mean, how they work. 
+So let's make a truth table for two variables, P and Q. All right. 
+So, they could be -- I'm going to use one and zero just -- I'm not sure why -- it's easier to write on the board. 
+True and False start looking too similar if I write them. 
+OK, so all the -- if our propositional variables are P and Q, then there are four possible interpretations, right? 
+OK? 
+In general if you have K variables, there are 2^K possible interpretations. 
+All the different ways you can define (inaudible). 
+All right, now let's see what... 
+what truth values do those expressions are? 
+OK. 
+So for not P, in this interpretation, what's the truth value of not P? True? 
+Right? 
+P has -- I'm using zero for truth value False. 
+So, not P has truth value True. 
+OK? 
+P and Q. OK, so we said this is going to have truth value True if an only if P has truth value True and Q has truth value True. 
+So, how would I write this interpretation? 
+Just answer me. 
+We'll all get bored. 
+__: Zero. 
+Zero. 
+Zero. 
+OK, this is the only interpretation in which they're both true. 
+OK? 
+All right. 
+Or, now only one of them has to be true in order for this to be true, so we get? 
+__: (inaudible) P implies Q. This is a little bit of a funny one, right? 
+P implies Q was not P or Q. OK. 
+Tell me if it's true if -- this thing is true of P is false. 
+All right? 
+So we get one, one. 
+Does this look true? 
+If two is true, well that's this row and this row, so it's only not true there. 
+All right, this is (inaudible) some people's intuition of what something called "implies" ought to mean, right? 
+So I can say, "Leslie is 6 feet tall" implies "unicorns exist". 
+That's OK. 
+That's fine. 
+That truth value is True in the obvious interpretation of those two symbols. 
+All right, because this is false. 
+And from false, you can conclude anything. 
+This is where the computer is in Star Trek explode, right? 
+You tell them, P and not P and smoke comes out. 
+Well, I don't know -- smoke shouldn't come out, they should just get really accommodating that and be willing to say anything. 
+OK. 
+So that's implication. 
+Implication -- so it doesn't mean causes. 
+It doesn't mean is related in any kind of way that you imagine, it is just a bare, formal definition of not P or Q. There are also whole branches of logicians worrying about how to make an operator that really is -- that does describe some kind of real connection between P and Q, but it's very hard to do that. 
+OK, and biconditional P -- so that often -- that can also get read "P if and only if Q". 
+So that means -- well, let's actually do out both expressions so we can be clear. 
+Q implies P. So if Q implies P, that's true whenever P is true. 
+That's here. 
+And it's true whenever Q is false, which is here, and it's false there. 
+OK. 
+Now, this is defined to be this, and that, so it's true here, false, false here. 
+So someone asked me about exclusive or, that's yet another way to write exclusive nor (neg P iff Q). 
+Now, just kind of a name for "nand", they invented "nand" also, but they call it the Shepherd's stroke, because I guess Shepherd decided to write it, which is confusing to computer people anyway, we just want to see that. 
+==========
+A little more terminology, then we'll do some examples. 
+We'll have to wait to talk about proofs and that kind of thing. 
+OK. 
+So, valid. 
+OK, these are the definitions. 
+A sentence is valid if and only if it is true in all interpretations. 
+OK. 
+We have written on the board already one example of a valid sentence. 
+What was it? 
+True. 
+Here's one. 
+What's another one? 
+__: not False. 
+Not False. 
+OK, good, all right. 
+How about one involving P? __: P or not P. P or not P. No matter what value I find the P, either Q will be true or not Q will be true. 
+This is the thing that constructivists have don't believe. 
+But we do. 
+You don't have to. 
+But "valid" means true in every interpretation. 
+True no matter what meaning we assign the variables. 
+The sentence is satisfiable if and only if it's true in at least one interpretation. 
+True is satisfiable. 
+Not P is satisfiable. 
+Someone give me the definition of what unsatisfiable It's false in all interpretations. 
+OK, what are some unsatisfiable sentences? 
+__: P and not P Good, T and not P. That's when the computers explode. 
+Not true. 
+OK. 
+All right, now we're going to get to the important ... 
+important diagram. 
+We can use the method of truth tables to check these things, right? 
+Let's say if I wanted to know if a particular sentence was valid, or if I wanted to know if it was satisfiable or unsatisfiable. 
+I can do just what we did over there on the board, right? 
+Write down all the interpretations, figure out the value of a sentence in each interpretation, if they're all true, it's valid. 
+If they're all false, it's unsatisfiable. 
+If it's somewhere inbetween, it's satisfiable. 
+So there's a way -- you -- there's just a completely dopey, tedious, mechanical way to figure out if a sentence is one of these things. 
+That's not true in all logics. 
+This is a useful, special property of propositional logic. 
+It might take you a lot of time, but you can do it. 
+==========
+So now, another way to think about what's going on here -- I have to draw this picture. 
+OK so we talked about the relationship between sentences and interpretations, right? 
+That's the semantics. 
+And you can really -- you can think of a sentence as standing for, or as meaning a set of interpretations, right? 
+There is some set of interpretations that make this sentence true. 
+And just to -- I really apologize for the amount of terminology. 
+This is -- it's a rare event that we'll have so much terminology, but I think I should do it anyway, just because you'll run into these words. 
+So we'll say an interpretation is a model of a sentence if that. 
+I'm going to introduce one piece of interpretation and then we'll talk about this picture. 
+All right, so the interpretation of the model of a sentence would be if that sentence is true in the interpretation. 
+OK. 
+One more thing. 
+A set of sentences -- I'll use KB for Knowledge Base -- entails \Phi iff every model of KB is also a model of \Phi. 
+So now I can draw my picture and now we can talk about it. 
+And let's do an example. 
+Let's let KB be A and B. Let's let \Phi be B. OK. 
+Let's just think about this sentence A and B. That's our knowledge -- sort of that's what we know. 
+We know A and B. So, there's some -- and maybe our universe, maybe our number of propositional variables is really big. 
+Maybe there are 6,000 of them. 
+So that there are 2^6,000 possible interpretations. 
+We really don't ever want to think about making truth tables or enumerating them or anything, but they're out there, and if you can think of all of this universe of interpretations, right, there are some -- subset of them in which A and B is true. 
+So this is the set of interpretations that are models for A and B. So, we start with the sentence A and B and we can think about the set of models of A and B. OK. 
+Now, we have this other sentence B. What does the set of models of B look like in this Venn diagram? 
+Then -- but then the set of models of B is bigger than the set of models of A and B. Right? 
+It contains it. 
+Right? 
+So think of all the worlds where it's raining is true, think of all the worlds in which it's raining and I'm wearing a blue shirt. 
+Well, clearly, there are more worlds where it is raining than worlds where it's raining and I'm wearing a blue shirt. 
+So, we have this idea of entailment between sentences, which means whenever this one is true, that one is true too. 
+Or, it would be OK -- I mean, what it's going to come down to is it's would be OK to conclude B from A and B. Entailment -- you can informally read it as, it's OK to include \Phi from the Knowledge Base. 
+It's OK to conclude it. 
+When is it OK to conclude it? 
+When the set of possible models of this thing you're trying to conclude contains all of the models of the thing that you know. 
+Because if you know that the world is in this set, then very clearly you know that the world is in that bigger set. 
+This diagram that's very dear to the heart of logic people. 
+Mostly, we're only going to worry about the stuff that's above the wiggly line now. 
+But, as I said, it's useful to know why we're manipulating the stuff -- the sentences. 
+We'll think about manipulating sentences and what it means. 
+Yes? 
+__: What is the symbol on the outermost circle there? 
+Oh, "U" for Universe. 
+Sorry. 
+I should have made it square. 
+Yes? 
+__: This is the first time that implication has applied to sets?[?] 
+So here's the theorem. 
+All right, this is what a -- this looks like a statement in logic, but it's not, it's just Leslie's shorthand on the board. 
+It says, if the sentence \Phi is true in all models where the Knowledge Base is true, then this sentence -- Knowledge Base implies C -- is what? 
+Which of those words? 
+__: Valid. 
+Valid. 
+Right? 
+This is a way of writing "valid". 
+that means \Phi is valid. 
+It's true in all possible interpretations. 
+So if \Phi is true in every possible interpretation in the Knowledge Base -- if \Phi is true in every possible interpretation of the Knowledge Base -- every possible model of the Knowledge Base, then this is valid, it's true everywhere, right? 
+So here we convinces ourselves, I think, with this little diagram, that A and B entails B. That whenever A and B is true, then B has to be true. 
+That means that the sentence "A and B implies B" is valid. 
+It's true in every interpretation. 
+OK, so what we have to do next is talk about proof. 
+I'm not going to talk about it in detail. 
+Yes? 
+__: Could you also say that KB entails \Phi? 
+Or is that something else entirely? 
+Yes. 
+KB entails \Phi? 
+That -- yes, that's what we proved right here. 
+Yes. 
+Right. 
+(Pause) Oh, I'm sorry -- this is shorthand for -- I know what I didn't do -- this is shorthand for "entails". 
+Maybe that's what I didn't do. 
+Good, sorry about that. 
+And so another way to say -- another way to think about a sentence being valid is to say that it's entailed by True. 
+Next time we're going to talk about proof -- I'm not letting you go yet, don't worry, but we'll do some practice with this stuff -- but just so you know where were going. 
+Next time we'll talk about proof, which is a mechanical way to grind sentences into sentences that satisfies the entailment relationship. 
+That lets you draw what -- valid conclusions from assumptions. 
+So that's what it teaches you about, and that's what we'll do next time. 
+==========
+Let me now work us through some examples. 
+We can think about whether they're valid or unsatisfiable or satisfiable. 
+Excuse me? 
+Rather than doing up a table it might be easier if we can convert it into smoke or not smoke, right? 
+That's the definition of A implies B is not A or B. And we decided that smoke or not smoke was valid. 
+Everybody clear with that? 
+OK. 
+Smoke implies fire is satisfiable, right? 
+There's an interpretation of these two symbols that makes it true. 
+There are other interpretations that make it false. 
+I should say, everything that's valid is also satisfiable. 
+But when we say something is satisfiable, we'll mean for right now inclusively, that it's also not valid, otherwise we're going to show it as valid. 
+All right, how about -- this is a form of reasoning that you hear people do a lot, but the question is, is it OK? 
+Smoke implies fire implies not smoke implies not fire. 
+__: Invalid? 
+Right, it's not valid. 
+Should we work it out? 
+No. Yes? 
+No? Yes? 
+We'll do a table. 
+Or we could do this. 
+We could do -- (inaudible) some other territory that we don't want to get into today. 
+So here's a good way to show that something is not valid. 
+Supply for me an assignment and an interpretation in which it's false. 
+Somebody want to do -- can you do that? 
+Yes? 
+__: If smoke's false and fire's true. 
+Right. 
+If smoke is false and fire's true, right, then we get false implies true -- which is cool, that's true -- and here we get true implies false, which is not OK, but that's false. 
+So you get true implies false. 
+But the other thing is OK. 
+So this is valid. 
+And for those of you who love terminology, this thing is called the contrpositive. 
+So, if there's no fire, then there's no smoke. 
+about ...? 
+__: Valid. 
+Valid. 
+OK. 
+We can do that -- turn that into an "or" and see what we get. 
+We get B or D or -- how does this turn into an "or"? 
+-- __: Not (inaudible) Not B or D, OK. 
+This is not a good example for (inaudible). 
+OK, so what can we do with this algebraic simplification? 
+So we get B or not B or D. OK. 
+Well, so what if I make -- let's just try an interpretation -- now that I can try any interpretation -- so let's say I make B True and D False. 
+All right? 
+I'm going to get True or False or False or False. 
+That's OK. 
+No matter what, we're always going to get one thing that's true, so it's going to be true. 
+All right. 
+There's -- it's worth reading the chapter in the book about this stuff. 
+I didn't deviate very much. 
+I haven't covered the very last part when they talk about proofs. 
+So we'll do that next time. 
+And next time we'll also spend some time talking about satisfiability and introduce the first homework assignment, which (inaudible) will give and hand out then. 
+END OF TAPE 
+==========

@@ -1,0 +1,503 @@
+==========
+So at the end of the class yesterday, I talked about doing deduction and propositional logic in the natural deduction high-school geometry style, and then I promised you that we would look at resolution, which is the way that computers do better at proving things in propositional logic. 
+But I decided in preparing today's lecture that I would actually postpone that stuff and we'll talk about resolution in the context of first order logic. 
+So we'll talk about plausible ways to do theorem-proving on computers all at once, after we've seen how to do first-order logic. 
+So that's my plan. 
+So that means today's subject matter is first-order logic, which is extending propositional logic so that we could talk about things. 
+So in propositional logic, all we had was these variables that stood not for things in the world or even quantities or anything like that, but just facts, Boolean things that might or might not be true about the world, like it might be raining, or it might be greater than 67 degrees, or it might be this or that, but you couldn't have variables that would stand for tables or books, or the temperature, or something like that. 
+And as it turns out that that's an enormously limiting kind of representation, and there's a nice argument in the book. 
+I should say, I haven't been announcing readings or anything, but you should be following in the syllabus and reading the relevant chapters in the book. 
+The book turns a nice argument in this Hunt the Wumpus domain for why proposition logic is inadequate in that case. 
+So things that you might want to say in first-order logic that you can't say in propositional logic are things like when you paint the block it becomes green. 
+You might be able to say -- you might have a proposition for every single thing, like "my book is black" and "my book is green" and "my book is red", and then you could say that if my book was black and I paint it then after that my book is green. 
+But you'd have to have one of those propositions for every single book, or every single desk, or every single thing in the world. 
+You couldn't say that as a general fact after you paint something it becomes green. 
+==========
+Similarly, you might want to say something like -- this is an example that people find motivating in some cases. 
+Let's say you want to talk about what happens when you sterilize a jar. 
+Well, it kills all the bacteria in the jar. 
+Now, you don't want to have to name all those. 
+Say, bacterium 57 is dead, and bacterium 93 is dead. 
+Each one of those guys is dead. 
+All the bacteria are dead now. 
+So you'd like to have a way not only to talk about things in the world, but to quantify over them, to talk about all of them, or some of them without naming them explicitly. 
+Another example that might be relevant, say, for computer access or whatever is you might want to prove or try to understand whether someone should be allowed access to a web site. 
+And you could think, well, a person should have access to this web site if they've been personally, formally authorized to use this web site or if they are known to someone who has access to the web site. 
+So you could write a general rule that says that and then some other system or this system could try to prove that you should have access to the web site. 
+In this case, what that would mean would be going to look for a chain of people that are authorized or known to one another that grounds out in somebody who's known to this web site. 
+We'll look through that example later on today. 
+So first-order logic lets us talk about things in the world. 
+It's a logic like propositional logic. 
+It just hands you more stuff. 
+==========
+And so, my plan for today is for spending about the first half of the class doing the same thing we did with propositional logic and going over syntax and semantics, and the second half, doing something which I always think is kind of fun, which is practice with the logic and in particular with trying to write down statements in logic, and we'll do some together at the board, and then I'll hand out some exercises and let you guys do it for a while, and then we'll talk about the answers. 
+So that's my plan, so hold tight through a little bit of syntax/semantic stuff, and then we'll do some moderately entertaining exercises. 
+OK, so right, the big differences I said between propositional logic and first-order logic is that we can talk about things, and so there's a new kind of syntactic element. 
+We'll do syntax on this board. 
+There's a new kind of syntactic element called a term. 
+And the term, as we'll see when we do the semantics, is a name for a thing. 
+It's an expression that somehow names a thing in the world. 
+So there's three kinds of terms. 
+There are constant symbols. 
+So there are things like bread or Japan or bacterium39. 
+Those are symbols that, at least with an interpretation, name a particular thing. 
+Again, we'll work on the semantics of it in a bit. 
+There are variables which are not really in the language syntactically differentiated from constant symbols, so to know what's a variable and what's a constant symbol. 
+That has to sort of be defined. 
+In some ways, people write formulas down, they use lowercase, things that start with lowercase to be variables and things that start with uppercase to be constants. 
+In some other versions, people do it the other way around. 
+There are constant symbols and there are variables and when you start using a particular concrete version of this logical language to write things down you have to know which is which, but we'll see what they mean semantically, and there's one more thing. 
+There's a function symbol, applied to one, one more, terms. 
+So another way to make a name for something is to say something like "F(X)". 
+If F is a function, you can give it a term and then this thing is itself a term. 
+It names something, or F(X), or mother of John. 
+So those are -- that's how you can name them. 
+You name a constant, your variables. 
+We'll talk about what variables are. 
+They're a special thing now for us, and function symbols let you make names for things that are really complicated. 
+They don't really make more things in the world, they just let you make more names. 
+So that's what a term is, and now we can talk about sentences. 
+So in propositional logic we have sentences. 
+Now, in first-order logic it's a little bit more complicated, but not a lot. 
+So what's a sentence? 
+There's another kind of symbol called a predicate symbol. 
+The predicate symbol applied to zero or more terms. 
+So the predicate symbol is going to stand for a relation, so we might have things like on a B or a sister(Jane,Joan). 
+So these things are predicate symbols, these things are terms. 
+You can have complicated terms in there like sister(mother-of(John), Jane). 
+A predicate applied to zero terms is what's sometimes called a sentential variable. 
+It was our old kind of variable that we had before in propositional logic, like it's "raining." 
+It's a little bit of an artifice, but we'll take predicates with no arguments as to be variables that have values, true or false. 
+OK, so that's the sentence can be a predicate symbol by the zero or more terms. 
+It can also be T1 = T2. 
+So we're going to have one special predicate called equality. 
+You can say this thing equals that thing. 
+So one term equals another term. 
+And two more things that are new. 
+If v is a variable and Phi is a sentence then that and this are sentences. 
+This is an upside down A and a backwards E. You've probably seen them before informally as "for all" and "there exists", and that's what they're going to mean for us, too. 
+Then we have closure under the sentential operators that we had before so you can do and, or, implies, not, parentheses, like we had before in propositional logic. 
+So that's contained. 
+So all that basic connector structure is still the same, but the things that we can say on either side have gotten a little bit more complicated. 
+All right, so that's what we get to write down on our page. 
+Now we'll do some -- C: Can we tell the difference by looking at the symbols of function and - - __: No, we have constants and we have variables. 
+We have function symbols and we have predicate symbols and you can't tell by looking at them which is which. 
+You can tell by the context. 
+Yes. 
+C: For the = symbol, is it an assignment or a test? 
+__: It's an assertion. 
+It's like you can think of equals as being a special predicate, where it says only true if those guys are the same. 
+There's nothing operational about this, but we don't define or test. 
+Any questions just about syntax? 
+==========
+We'll talking about semantics, and then we'll do the examples and that's when you'll actually get intuition, but I feel like I have to at least write the rules down first. 
+OK. 
+All right, I'm going to do the semantics informally. 
+This isn't really going to look informal to you, but compared to the sorts of things that logicians write down, pretty informal. 
+So before we had an interpretation with an assignment of truth values to those sentential variables. 
+Now interpretation's going to have to be something more complicated. 
+So an interpretation -- but I'm not really going to do it. 
+Well, I'm going to do it sort of formally, but not too formally. 
+So it's going to contain U, which is a set of objects. 
+So what's an object? 
+Well, really, it could be this chair and that chair as and these pieces of chalk or it could be all of you guys or it could be some trees out there, or it could be rather more abstract objects like meetings or points in time or numbers. 
+But just the set of pretty much anything you can imagine thinking of as a set of. 
+C: Is this the (inaudible)? 
+__: Soon we will talk about a relationship between an interpretation, and just as before, we have a sort of things that were true or false in the world and the steps we wrote on the pages. 
+So now we're talking about the world, and then we'll talk about the connection between the two. 
+So there's a world. 
+There's some domain of discourse that we're going to -- so this is sometimes called the domain of discourse, or the universe. 
+That's why U -- the set of things that we're willing to talk about. 
+Then, a particular interpretation I. I maps constant symbols to elements of U. So I might have the constant symbol, Fred, and if there's a person -- there might be a particular person in my domain of discourse, and the interpretation is going to say that symbol Fred means this particular guy. 
+And we're going to map predicate symbols to relations on U. Remember a relation, like a binary relation is a set of pairs. 
+Just as an example, right? 
+So if I have a binary relation "brother of" and U is a bunch of people, then every pair of people such that the person who's the brother of the second would be in the relation that the predicate symbol brother-of is mapped to. 
+We'll do an example. 
+Just a couple more cases here and then we're ready to go with another example. 
+OK, clauses, symbols, predicates, and functions. 
+OK, here's a classic -- function symbols to function. 
+All right so, test of whether you've actually took 6042. 
+What's a function? 
+How's a function different from a relation? 
+C: Yes, each thing matches only to one. 
+__: Right, so a relation -- if you have the brother of a relation, that could be many pairs with the same first item and a different second item, but in a function, let's say you have many pairs, but if you have the same first time then you have to have the same second item. 
+So that means you just name the first item and then there's a unique thing that you get from applying the function. 
+So it's OK for mother of to be a function, discounting adoptions and stuff. 
+So there you go. 
+That's what an interpretation is. 
+So basically you're saying for all these symbols what do they mean? 
+Now we can do the definition of what it means for something to be true, and then we'll do examples. 
+==========
+First we'll talk about terms. 
+We'll just talk about the denotation. 
+So a term names something, but we like to be fancy so we say a term denotes something, so we can talk about what is the denotation of a term, that is, what's the thing that a term names. 
+And we'll say, well, I(Fred), we know it's defined. 
+If Fred is a constant symbol, then it's given. 
+That's one kind of a term. 
+What was another kind of term? 
+OK, a constant symbol. 
+We have variables. 
+What does X mean, if X is a variable? 
+The answer is, "mu." 
+That's a Zen joke. 
+If you don't get, then it's undefinable. 
+You can look it up. 
+OK, or we might have I(F(term)). 
+Right? 
+So another kind of term is a function applied to a term. 
+And so how do you know what it is, a function applied to a term? 
+Well, what you do is you apply the interpretation to the function symbol. 
+That gives you a function in mathematics land. 
+This F is a function symbol. 
+It's a piece of chalk. 
+It's a piece of writing, but when you apply the interpretation to that piece of writing you get an actual function in the land of Plato. 
+Then you can take an actual function in the land of Plato and apply it to something. 
+What you apply it to is the thing you get by figuring out what the denotation of term is, so I apply this function to I(term). 
+So we have another nice recursive definition. 
+In order to figure out a complex term, to figure out what a function is, you figure out what the term is and then you apply the function to the single term name. 
+Before we talked about what made certain sentences true and certain interpretations, so now we can do some more of that in the first order case. 
+That's one of our new kinds of sentences, and so it's predicate symbol applied to a bunch of terms. 
+That's a sentence. 
+That's something that's going to have truth value, true or false. 
+And how do we figure out whether it has truth value true or false. 
+Well, we can figure out the interpretations of each of the terms. 
+What kind of a thing is I(T1)? 
+What set does it belong to? 
+Uh-oh, I've failed you. 
+C: Would it be Boolean because it's (inaudible)? 
+__: What's the term? 
+What does the term do informally? 
+C: (inaudible) __: Yes, it means something, anything in the world. 
+So what set do we have? 
+Anything in the world? 
+C: The universe. 
+__: The universe. 
+Right. 
+So T1 is some stuff written on our board. 
+I(T1) is the thing that that stuff names. 
+It's a member of U. So we take each of these terms, like historically written over there was, I don't know, brother -- well, here, let's do it. 
+OK, so we can figure out that this, that I(John) is that particular guy, and I(Joe) is that other guy, made distinct by his hat. 
+So John -- we had this interpretation, we looked up this constant symbol John in our interpretation, and we got this guy. 
+We looked up the constant symbol Joe in our interpretation and we got that guy, and now we want to try to understand whether this sentence is true in our interpretation, so what we had to do is look up "brother" in our interpretation. 
+What kind of a thing is the interpretation of brother? 
+C: A function of the (inaudible)? 
+__: Right, it's a relation. 
+So it's a relation. 
+In this case, it's a binary relation. 
+It's a relation with two arguments, and so you can think of it as a set of pairs. 
+So we have a bunch of pairs of guys in here, and perhaps one of them is that guy, comma, that guy. 
+Those are pairs not of names or symbols or anything. 
+Those are pairs of stuff in our domain of discourse. 
+Pairs or elements of U. OK, so just so we get the datatypes right. 
+So here we have now a bunch of elements of U. We can make a tuple out of it and we can ask, is this a member of the interpretation of P? And that's the semantics, OK? 
+So this assertion, something like Brother(Joe, John) is true under interpretation I if and only if what we get by interpreting in some sense each of the terms to get elements of our universe, if that group of guys is in the relation that is the interpretation of P. We've got two more things like this to do, and then we're done. 
+I have an example sort of like that, but -- geometric objects so I can draw it better. 
+All right, so now we have to talk about the quantifiers, and then we'll be done. 
+All right, in order to talk about quantifiers we need one little notion. 
+We could say that we're going to extend an interpretation to bind variable X to value A. We'll write that I with X bound to A. So to element -- we're going to be clear here -- A in U. 
+So far we've just had these variables floating around and we said we didn't know what the interpretation was of a variable. 
+But in the course of trying to understand things, we're going to have to at least temporarily make some assignments or interpretations of the variables. 
+==========
+We're going to have to talk about a case where we have an interpretation and we're going to assign to this variable X the element A in the world, so it's like we make X into a constant symbol just for the moment. 
+You can think of it as adding X as a constant symbol to I. It's like adding -- I mean, if you've done programming language stuff at all, it's like adding a binding for a variable within an environment. 
+OK, so that's what that notation's going to mean, so then we can say, well how do we know, how do we evaluate the truth under interpretation I, of the statement "for all X, C"? 
+Because we said if Phi the sentence, then we could for all X, Phi. 
+So how do we know if that's true? 
+Well, it's true if and only if -- this sentence is true if for every possible binding of variable X to thing in the world A, Phi is true. 
+All right? 
+Every possible thing in the world that you could plug in for X, this statement's true. 
+That's what it means to say "for all X, Phi". 
+Similarly, you can guess where this one's going to go. 
+To say that there exists an X such that Phi, it means that Phi has to be true for some U, A in U. 
+That is to say where has to be something in the world such that if we plug that in for X, that Phi becomes true. 
+==========
+All right, let's work on an example. 
+Here's our world. 
+I'm going to draw a picture of it. 
+There's four things in our U. 
+Here they are. 
+So I'll actually give them names, because -- no, it's a danger to give them names. 
+No, I'm not going to give them names. 
+OK, so again I say that U is equal to thos, OK? 
+Now, I'm going to have a logical language and my constant symbols... 
+I have only one constant symbol, Fred, and I have some predicates: above, circle, oval, square. 
+And that's kind of a functional symbol. 
+We'll call it "hat". 
+Now, I've written -- perhaps it's because mental consternation or something. 
+I should not have written -- these constants and predicates, well maybe just the constants, suggest a particular interpretation. 
+The fact that I used this word, "circle", makes you guess that probably the interpretation of circle is going to be true for those guys and not the other one. 
+But of course it needn't be. 
+The fact that those marks on the board are like an English word that we think means something about the shape, et cetera, et cetera, et cetera. 
+That doesn't matter. 
+It's just some words that we write down on the board. 
+But it helps us understand what's going on. 
+It's just like using reasonable variable names in a program that you might write, but it's exactly that, right? 
+The problem doesn't -- when you call a variable the number of times I've been through this loop, that doesn't mean that the computer knows what that means. 
+Same deal here. 
+==========
+So now we can talk about a particular interpretation. 
+So here's the interpretation, I. I'm going to say I(Fred) is the triangle and I(Above)... 
+OK, what kind of thing is I(Above)? 
+C: Relation. 
+__: A relation. 
+Above is going to be a binary relation. 
+Sometimes people will write 2 here, meaning it's a binary relation. 
+It takes two arguments. 
+Circle's going to be a unary relation. 
+So above, let's see, it's going to have a pair of this and that, and the pair this and that. 
+There's above. 
+And I(Circle) is going to be the circle. 
+I(oval), I'm going to choose to interpret in the following way. 
+I'm not going to bother writing square down. 
+And let's make our interpretation that that has a function, right? 
+So it's going to be really the same as a lot of some of the absolute (inaudible). 
+C: (inaudible) now become a binary relation? 
+__: Oh, no, I'm sorry. 
+Thank you. 
+And to be absolutely precise, I should probably do that, but I do not feel we need to do that because -- C: Why should you do that? 
+__: Why should I do that? 
+Because I said the interpretation of a predicate symbol was a relation which is a set of tuples, not a set of things. 
+OK, I have hat, so I'm going to say the hat of Mr. Triangle is Mr. Square, and the hat of Oval Guy is a circle. 
+OK, so here's your domain, and here's a interpretation. 
+C: Did you interpret square? 
+__: Sure, what would you like it to be? 
+C: Triangle. 
+__: Oh, I went below the line of visibility. 
+Well, you guys can figure it out. 
+So now let's plan this. 
+(inaudible) a little bit. 
+OK, so here are some questions. 
+That true? 
+Yep. 
+C: I have a question about that. 
+__: Sure. 
+C: It looks like a function -- the interpretation of the function and has the same form, and predicate. 
+Is that true? 
+__: That's right, except with the constraint. 
+It turns out that this predicate, above predicate turns out to be a function also. 
+Remember, a function is kind of a specialization of a relation. 
+A function is kind of a relation, and the constraint -- the thing that makes a function a function is that for any given first item there's only a single possible second item, so for above, I could have just as well also added -- although you do it. 
+Like that. 
+There. 
+It's OK, I can do that, but I can't do that in a function, because in a function you want to be able to plug in the first argument and get out the second one. 
+So here, if I plugged in square I would know what to get out. 
+C: And also a function would be a set of full or pairs as opposed to (inaudible)? 
+__: Typically, a function -- you might have a function like, I don't know, the separator. 
+You could have a function with many arguments. 
+If you had a function of four arguments, then it's interpretation is really going to be a set of five-tuples, such that for given first four arguments there's only a single fifth. 
+OK. 
+So what do you think about that? 
+Is that true, Square(Fred), is that true in this interpretation? 
+C: (inaudible) __: Yes. 
+So if we look up the interpretation of Fred and the (inaudible) of I, and then we ask, and then we look at the interpretation of square, and that's the set of tuples that we ask is triangle, and that answers yes. 
+So, that's true. 
+OK, let's start by asking the question, what does that term -- what's the interpretation of that term, hat(Fred)? 
+C: (inaudible) __: The square, right? 
+So look up Fred, we get the triangle. 
+We look in hat, sure enough there's the triangle and square. 
+So hat(Fred) is a square. 
+So now, and we look up Fred, and now we're kind of down to asking is above true of this guy and that guy, and what's the answe? 
+C: False. 
+__: False. 
+OK, good. 
+Is that true? 
+C: (inaudible) __: Right, intuitive, certainly, you understand that it's yes, right? 
+Is there a thing that is an oval? 
+Yes. 
+So how do we get at that quite precisely? 
+We say that there's an extension of this interpretation where we take X and substitute in for it, oh, let's say, this guy. 
+That is the model of oval(X). 
+So what did I do? 
+I said, let me take my own interpretation. 
+Let me add oval in for X. So that's like I say, temporarily, I say that I(X) is a circle. 
+And now I ask, in that new regime, is it true that oval(X). 
+So I look up X and I get this guy. 
+I look up oval and I get this and I see that it's in there, and so the answer's yes. 
+C: And in a production system of this, how does it know to pick the circle there for the oval? 
+Does it just enumerate through everything in the universe, or is there some clever algorithm, or -- __: Right. 
+Actually, we're still in the platonic realm here, so I'm speaking to you sometimes in algorithmic terminology because I think gives people a good intuition for what's going on, but this is just definitions. 
+This isn't algorithms. 
+In general, you would -- you'll use a proof system to try to figure out whether this is true, and you won't -- when a computer's manipulating these logical expressions, it doesn't have access to the world. 
+And so, it's going to be trying to derive true statements from other true statements without knowing what the hell it's talking about, pretty much. 
+This was to help us know what we're talking about, but the computer's never going to know that, because it doesn't have access to the real world of triangles and squares. 
+Any questions? 
+All right. 
+Let's do another one. 
+All right. 
+I could have put something else in for X, right? 
+I could have put in the oval. 
+That would have worked OK, too. 
+That's fine. 
+If everything is an oval, that's OK, too. 
+This just means there's at least one. 
+One more, and then we'll be done with it. 
+How about that? 
+Maybe that was a big jump to make. 
+Intuitively, what do you think the answer is? 
+C: (inaudible) __: Yes, I think it's true. 
+All right. 
+C: (inaudible) __: No, it's true. 
+For every F, there's some Y. Since either X is above Y or Y is above X. There's a related statement. 
+We'll look at that one in a minute, right? 
+That's probably where I led you down the wrong path. 
+So how can we make this work? 
+This says we have to be able to -- for every single X, for every single way of setting X to something in the world, there has to be some way of setting Y to something in the world, so that one of these two things holds. 
+So pick something for X. Triangle. 
+Look at triangle. 
+For the moment, let's just consider one case, where we are going to put in X for triangle. 
+Now we have to ask, is this a case that there's a Y such that that's true. 
+All right, what do you think is going to be a good guess for Y? C: Square. 
+__: OK. 
+==========
+, or <triangle square> in the above relation, and the answer is yes, <square triangle>. 
+So if you can find a Y for every X, then you can make that true, so I think it's true. 
+What about this one? 
+For all X -- you'll see this notation. 
+I might as well use it now. 
+It's just shorthand for all X and for all Y. Think that rings true? 
+C: No. __: No. How come? 
+You can give me an example of an XY pair for which that's not true. 
+That would be enough to break it. 
+C: Triangle. 
+Triangle circle It's not the case that triangle is above circle or circle is above triangle. 
+All right. 
+==========
+So my plan is to spend the rest of the time practicing with writing things down in first-order logic. 
+This is one of these fields -- it's sort of like learning to program. 
+This is a lot like learning to program, where you have to go from ideas that are in your head to formal stuff written down on the paper, and at the beginning it's not obvious, and then you learn some tricks, and then it gets easier, and pretty soon you do it without thinking. 
+So we'll try to embark on that whole process. 
+Cats are mammals. 
+That's true, right? 
+You believe that. 
+And the usual interpretation of these symbols. 
+OK, so how would you think about writing that down in first- order logic? 
+All right, I'll give you a hint. 
+We'll use cat and mammal as predicate symbols. 
+Unary predicate symbols. 
+C: Forall x Cat(x) -> Mammal(x) __: There you go. 
+Let's talk about why that's right. 
+Remember the interpretation of that right arrow. 
+Let's try it that way and see if that eliminates anything important, How do you interpret right arrow. 
+How can we get rid of the right arrow and turn it into an or? 
+This, you should be able to do. 
+C: (inaudible) __: Good, Not(Cat(x)) or Mammal(x) -- so we're saying everything in the whole world is either a mammal or not a cat. 
+Do you believe that? 
+Because if it's a chair, well, that's OK, because it's not a cat. 
+If it's a dog, that's OK, because it's a mammal. 
+And so everything is either not a cat, or a mammal. 
+This may not be the clearest way to think about it, but eventually you can say, well, this says -- if you have a thing that isn't a cat, then it's not necessarily a mammal. 
+Another way to read this is that mammals are a subset of -- excuse me, cats are a subset of mammals. 
+The set of things for which the mammal predicate is true is bigger than the set of things for which the cat predicate is true. 
+So this is like a -- C: So if you have the implied symbol and the left (inaudible) that implies the right side true? 
+So if you did cat -- __: No, if the left is true, then the right side is true. 
+If it's false, then -- C: (inaudible) __: If the left side is false, then anything can be true. 
+If the left side is false, it doesn't imply anything about the right side. 
+That's why we can say if it's not a cat, then there are no further conclusions that we can draw. 
+This comes up all the time. 
+This form, for all X -- something of X implies something else of X. That's how basically you say that this is a kind of that, or a subset of those, or something. 
+All right. 
+Let's let Jane be a constant, Tall can be a predicate, and Surveyor can be a predicate. 
+How are we going to say Jane is a tall surveyor? 
+How are we going to say Jane is tall? 
+C: (inaudible) __: Tall(Jane). 
+Is everybody OK with that? 
+Tall(Jane). 
+OK, so that's not all we're going to say about Jane. 
+How can we say something more about Jane? 
+C: And. 
+__: And. 
+Surveyor(Jane) and Tall(Jane) A nephew is a sibling's son. 
+OK, so you can use nephew. 
+That's a binary relation, and sibling is binary, and son is binary. 
+So I'll start you off and say for all X and Y, X is the nephew of Y if and only if something. 
+So say it in English, what relationship has to hold between X and Y for X to be a nephew of Y? C: (inaudible) __: We need a Z who is a sibling of Y. Good. 
+So we need one. 
+We don't need everybody to be a sibling of Y. We just need one person to be a sibling of Y, so we need this. 
+So there's a Z. We have a sibling of Y, a sibling(Y, Z). 
+C: (inaudible) __: Thank you. 
+And what else about Z? C: son(x,z) __: Good. 
+That went well. 
+I didn't tell you which way it goes. 
+(inaudible) Good. 
+I should say we didn't really talk about binding. 
+Quantifiers grab everything to the right of them, basically, so the parenthesization of this goes like that. 
+OK, so X is a nephew of Y if and only if there's some third party who's a sibling of Y and so it's the father of X. Yes? 
+C: So is that an equal sign between -- __: Oh, yes, I forgot to talk about equals in semantics. 
+Oh, you mean could we write that using the equals sign? 
+No. I think. 
+So let's talk about why. 
+Equality is OK when you have a term that names a particular guy in the world, but none of these relations are functions. 
+There's no single nephew. 
+X is the nephew of many people, and X is also potentially the next nephew. 
+X is the nephew of many people. 
+X is the nephew of many people and Y may have many nephews. 
+So you can't -- I mean, it seems to be that you might be wanting to say the nephew of -- X is not -- you can't say X is equal to the nephew of Y. It's not going to turn out to be OK to write something like that now. 
+Syntactically, it's lovely. 
+But if we give our kind of ordinary interpretation to nephew, Y will have many nephews, so you can't use a function to describe that relationship. 
+C: Can you write it out with a -- __: Grandmother? 
+C: John and Joe and (inaudible). 
+__: We can use the equals sign if we talk about -- no, grandmother, you've got more than one grandmother. 
+No. Maternal grandmother. 
+Let's do -- we can say that for all X and Y, X is the M grandmother -- mgm, maternal grandmother. 
+X is the maternal grandmother of Y, if and only if there exists a Z, and we could use equality here, too, because mother is a function. 
+X is the mother of Z, and Z is the mother of Y. So there's one with equality. 
+We could have written it out that way. 
+But this is only OK because mother is a function. 
+There's only a single mother. 
+Each person has only one mother. 
+Doesn't work with more than one. 
+You can have the predicate, loves X, Y. Everybody loves somebody. 
+How do you think that's going to go? 
+C: For all X, Exists Y Loves(X,Y) __: Good. 
+That's right. 
+Now consider this statement. 
+What does that one mean? 
+There's one person that everybody loves. 
+The way this works is -- this one, it's like, for every X I can find a particular Y, and X loves Y. But everybody doesn't have to love the same person. 
+Everybody can love their own private person. 
+So the quantifier is interesting because the order really does matter. 
+Here's a fact about quantification. 
+Let's say nobody loves Jane. 
+Poor Jane. 
+How can we do that? 
+C: ForAll x, not loves(x,Jane) __: OK, so we can say for all X not loves Jane. 
+So for everybody, every single person, that person doesn't love Jane. 
+An equivalent thing to write, and this is a general transformation, if you have for all X not something, then it's the same as having not there exists an X something. 
+It's like saying I can't bring single X such that X loves Jane. 
+So those are true in general, so just some useful rules to know. 
+It works out that way and we also have if you have -- there's somebody that doesn't love Jane. 
+All right, this is -- there's at least one person in the world who doesn't love Jane. 
+You can write that equivalently as saying, "It's not the case that everybody loves Jane." 
+So these two are equivalent and these two are equivalent, but these two things are not. 
+... 
+==========
+Everybody has a father. 
+Somebody tell me. 
+C: Forall x Exists y F(y,x) Everybody has a father and a mother. 
+C: Forall x Exists yz F(y,x) and M(z,x) __: That's a good question. 
+I mean, they didn't tell us we had to, so we don't have to. 
+So it leaves upon the possibility that we're hermaphrodites and so we have one person who's both our father and mother. 
+That's one thing -- that's a really important question, though, because when you write down some set of constraints, that's all you write down, and if you want to say that then you have to add more. 
+You can be lulled into thinking that you're saying more than you are by the name that you use for these predicates. 
+Whoever has a father has a mother. 
+This is a general statement about people of the kind, everybody who is like this is like that. 
+All right? 
+So we'll talk about everybody, OK, now, who is like this. 
+So the who is like this part is, has a father? 
+C: Exists y F(y,x) __: OK, so this little expression here, you can think of it as being like a predicate. 
+It says, this the sort of -- says that X is somebody who has a father, and now we're saying if X is somebody who has a father, then X is also somebody who has a mother. 
+OK, let me use this opportunity to talk about scoping, briefly. 
+So if this is also kind of like variables in a programming language, if you put parentheses around here, or around a quantified expression, that closes the scope of this quantifier, meaning that for in here, any Y that we talk about is this Y, but then once we get out of that set of parentheses Y is not bound anymore, and if we're going to refer to Y out here we're in trouble, but we're free to bind it again if we want to. 
+Iit's legal to write down "there exists a Y such that there exists a Y." You could put nested quantifiers with the same variable, but there are some rules for interpreting it, but don't do it. 
+It's confusing. 
+C: (inaudible) __: OK, let's read it. 
+Whoever has a father has a mother. 
+All right, (inaudible) Right, because you could say whoever is in this class is alive. 
+Right? 
+And that would be -- I think that's true, right? 
+And that would be, if you're in this class, then you're alive. 
+But it's not true that whoever's alive is in this class. 
+Right, now, this is not properly part of logic itself, but it's an interesting exercise to think about how statements we make in natural language, what they really mean in some sense, and also it's easy to come up with various ambiguous sentences, sentences that you could interpret either way, and sometimes the ambiguity doesn't become clear until you try to write things down. 
+Quantifier scoping is one of those things. 
+I'm not going to come up with a good example, but the natural language people have a whole bunch where it's not clear whether the for all or there exists goes first, and you can read it either way. 
+==========

@@ -1,0 +1,662 @@
+==========
+last lecture
+i introduce the concept of angular momentum and torque
+here the most difficult concepts
+you know all of it a one and only
+when you get a lot of practice will you really get that angle for it
+and churn too bad it it takes awhile
+this is very difficult i will spend the next five lectures exclusively
+on dealing with these concepts
+and you ll see many excel pull some into it if some non intuitive and some ethan quite bizarre
+i d like to briefly review the key
+things we discussed last time and you see there related equations there on the blackboards
+we have a mass and
+and eleven that mass in your frame of reference have a velocity v
+so then it clearly has a momentum p hat
+then maybe a force acting a ball that mass f
+and now i choose a point q at random
+this is the position vector
+relative to q never and forget to indicate
+what the origin is that you have chosen than the definition
+of angular momentum relative to that point q
+equals the cross product
+all the position vector with speed and that is my equation number one there the
+direction is perpendicular to the blackboards
+and it will be in this case into the back
+and the magnitude can be calculated it s provided that you take the angle into account
+you get the sine of theta because of the cross product
+did torque relative to point q is defined as the position vector
+cross f in this case that would be out of the blackboards
+and again the magnitude can be found but you have to take into account the angle between
+the position vector and the force but torque
+least to a change in angle and and you see that in equation three
+if there is no torque
+then enjoyment among the changing you if you have a system of objects not just one like we have here but many interacting particles
+bad as long as there s no external
+net external torque all net system as a whole
+that angular momentum of the system as a whole will be conserved
+today you will see various applications of equation four
+and of equation five
+last time we already discussed the idea off spin angular momentum which is an intrinsic property
+five a rotating object we did an experiment with the ice okay that s the light when i was sacrificing their
+on this a rotating turntable
+and we ll see some more examples of that doing the next few lectures
+in case that you do have a
+rotation about an axis through the center of mass stationary axes through the center of mass
+then the angular momentum is intrinsic in the sense that you don t have to specify
+the point about which you take any moment you can take any points and you always find the same which is not true
+in this situation so that
+makes the intrinsic angular momentum quite unique
+the reason why so non intuitive and the momentum is that
+the angle went in the plans along the point you choose
+and a one problem you can sometimes pick a point
+about which the angular momentum changes but in the very same problem you can pick a point
+about which and lamenting doesn t change in both
+solution would be perfectly fat it so he often have a choice and uh doesn t make it very intuitive that doesn t make it
+very easy so let s start is an example which had also had last time where bye
+we have an object going around terror us all around the sun
+let s take the earth
+going around the sun
+i miss is the location of the sun and here s the earth has a mass m and it s going around
+with a
+velocity the magnitude doesn t change but the direction does change the position vector
+relative to point c is r c and then we have the gravitational force f
+which is a pointed towards the center and and
+the angular velocity omega is in this direction
+well go to equation number one
+and and the
+angular momentum relative to point c
+l relative two points see the magnitudes because the direction is clear
+if it s going as seen from where you lie counterclockwise than the direction of the end of momentum
+will be pointing
+the blackboard some only interested in the magnitudes that will be are of see
+times the mass times v
+and the reason why i don t worry about across now is because this angle is ninety degrees so the sine theta equals one
+now we may not like to levy in there
+it s up to you you can always write v equals omega are so you can also write then
+and r c squared times omega
+either once fine
+and this are if this is the
+radius of the circle that this obviously comes and
+r squared omega
+you could is chosen equation five
+and then you would immediately have said at aha
+i have a rotation about point q which in this case you see
+and so l the magnitude of l c
+because the moment of inertia about point c times omega
+the moment of inertia about point c for this object is clearly m r squared
+and i multiply that by omega
+and you see you get exactly the same answer so this is equation one
+but this would read of equation five
+you go to equation number two
+then he equation number two is telling me that if i choose some point c but only i choose point c
+that support relative to point c is zero
+equation number two because the force and the position vector
+make an angle hundred eighty degrees with each other whether you object is here
+or here or here that makes no difference and so the torque relative to point c
+is zero so i also know that the angular momentum
+is not changing well if if two points see
+but only relative to point c because any other point b q ditch oh most from here are here all here that would be the torque
+and the angular momentum will be changing soda something very special about this point c
+angular momentum is only can surface in this case about
+point c
+now i take another example
+==========
+whereby angular momentum is only conserved
+relative to one point but not to any other point i take
+oh well or a rod
+and the rod have mass m and length l
+and see if the center of mass of that rod
+but i ve force it to spin about point p
+and this distance
+this d think of this as a horizontal frictionless plane and i m rotating it
+with an angular velocity let s say we rotate it
+in this direction force it about that point p you put it in in there perpendicular to the blackboard and i rotated
+i d like to know what the
+magnitude is of the angular momentum relative to point b in for that i go immediately to equation five
+but it tells me that it is the moment of inertia about that x is two point p e times omega
+i remember the parallel axis theorem
+i know at the moment of inertia for rotation about the center of mass through this axis perpendicular to the blackboard
+i know that that one equals one twelve m
+l squared by just loop that up in the table the good i don t remember that
+so that ll be the moment of inertia about this axis
+and then a parallel axis through and tells me i have to add
+plus and e squared
+times omega i m not interested
+in the direction of l because that s immediately obvious if it s rotating clockwise
+then the direction of the angular momentum would be perpendicular to the blackboards
+and into the blackboard
+i claim that at this point p
+there must be a force acting on this rule
+and if force is in this direction
+and i can make you see that the best way by first show you the case of a
+mass was robbed
+with two equal masses at both ends
+and i rotate about this axis perpendicular to the blackboard
+there is going to be a centripetal force here and the centripetal force here
+and the two week or they cancel each other out so it ll be no force on that different point about which the to rotate however
+if i had
+the situation such that this is my massless rod
+and here are the two equal masses but now i rotate them about this point
+then this centripetal centripetal force is larger than this one so now i have a symmetry
+and so now there will be a force always been
+the road push on the pin in action equals minus reaction that in a push on the roller
+and is because of the same asymmetry did to have here
+that the will the force from the pin on point p however i don t
+care about that force because i m going to take the torque relative to point p
+and one i think it work relative to point p and the fourth through point p has no we re fact because the position vector is zero
+but i want you to present that there is a force so if i take a torque
+relative to point p i do not worry about this force
+well the torque relative to that point p zero and so it s clear that angular momentum relative to point p
+must be conserved angular momentum relative to point p is conserved take any other point
+the matter which one you take take this point q
+take this point here to this point here and angular momentum is not conserved you really see that
+if i take this point q here that this is the position vector
+and you see that are cross f is not zero so there s a torque relative to point q a them in tin is not conserved
+only this point the point is very special
+i now take this saying rule
+uh but i m going to make it rotate about the center of mass
+so here is now the same rule or
+and now i m
+to rotate it about the center of mass
+rotation same direction
+i ve is stationary axis in twenty six one hundred and is rotating about the center of mass see is my central might
+now there is no force
+on this been because of the symmetry which i just explained so the king is not pushing on the rod either
+so there s no force in all if this is a frictionless object
+so if there is no force it all then the torque
+relative to any point must be zero
+not only relative to this point but also relative to the sport than relative to this point because if the force is zero
+then any cross product of r and f is zero
+so now you see the special case that i ll dirty to be equation number six
+now you have the case that the angular momentum
+of this rotating object is the same no matter which point you choose we call that the spin
+angular momentum it is an intrinsic property off a
+spinning object and it is the same relative to any points that you choose and if you want to know how large that this
+well the magnitude
+all of the angular momentum i calculated about c which is the center of mass
+is simply the equation number six is the moment of inertia
+about that point c which is the center of mass times omega
+about the center of mass so see them center of mass and c are the same point
+what is the moment of inertia
+full rotation about the center of mass that is my one twelve m l squared
+so now i have one five m l squared
+time domain that that is now the intrinsic spin angular momentum and it is the same for any point
+that you choose even if i choose a point here in space
+you can prove that it s still the same
+angular momenta
+now we going to look at other applications very use number of applications in the next four five lectures we will go through many of them
+in some cases you will say out
+now that s into it if that s obvious in some cases you will say and not so intuitive
+and in some case you will fall off your chair
+is completely bizarre it is so not intuitive that you know even believe it s you
+believe it until actually show you
+with a demonstration that that s the way nature works that comes lake a mop today
+or assignment number seven i give you a problem problem seven now i
+in which i have a ruler or rod on a frictionless horizontal table
+and the ruler has a mass l and mass m and has a length l
+and here is the center of mass at sea
+and i hit that ruler i give it an impulse
+perpendicular to the direction
+of the ruler the i give it in in equals force acts a pond it for certain amount of time
+and let this distance
+be i think i call it d e in your problem
+at is a frictionless table
+i do this then
+very short it s
+and out a question is what will this object do
+what is your instinct hell you ll say well
+for sure it will move in this direction remember it s frictionless so whatever happens after the it happens forever and ever and ever will never start
+so you will all settled is
+move in this direction that s very fake would that s true
+but how about rotation with is rotate
+and if it rotates about which point
+well you may say well maybe where the point of rotation may depends on where i hate it
+that would be reasonable intuition bins notch rope
+it must rotate about the center of mass it cannot rotate about any other point
+suppose is rotated about this point just was sake of argument so after they hit
+it s rotate it about this point that would mean that the center of mass will then do this
+and that s not allowed because the center of mass d a s
+like a point in which all the mass is concentrate it
+f equals m a holds for the center of mass and so after the it
+a single point because them at the center of mass can always be considered to be a single point was all the mass in it
+that point could never do this that would be upset
+so format reasoning alone
+you must conclude a that s the only way that nature can
+digest that impulse is by giving
+the center of mass a certain velocity
+in this direction
+which will never change in addition it will give it
+and angular velocity about the center of mass and if there is no friction of that will never change
+so little later in time
+the center of mass will still be on this line
+and it may have rotated one or two or three rotations that depends that depends on how large items
+and that depends on this distance d but let s assume
+that it is now like so
+and then aids happily rotating with that angular velocity
+omega c and continues all the time with that velocity v center of mass and
+in that problem i m asking you to calculate the velocity of the center of mass and to calculate
+the angular velocity about the center of mass
+i ll help you a little bit
+and help that pitiful how cute little more
+put a center of mass
+what must always holds the center of mass x like a point source so it was always hold that at equal and
+eight of the center of mass that is really one of the major characteristics of the center of mass
+so if we look in magnitude f delta t e equals and
+times a center of mass delta t the force
+x was showed that amount of time and that s the impulse
+but if before i it s if this velocity is zero
+then a delta t
+is obviously the velocity of the center of mass afterwards v equals eighty right and equals zero to start with
+so you see now immediately that i that is the impulse
+equals n
+times the velocity of the center of mass
+and so the velocity of the center of mass
+equals i divided by n and so i have solved for you
+the first part of that problem of what is remarkable that is independent of
+b for d so really call that d it can really independent of the wet you hit here
+with the very same impulse point it there makes no difference the center of mass behaves like a point source of vehicles them a
+and the velocity of the center of mass only depends on i
+and all the mass of the object the larger i
+the larger the velocity that s of course quite intuitive
+and the larger the mass the lower the velocity
+but now comes the hardest parts and i will be a few largely with that hardest part but give your your clothes
+because now i what could calculate
+omega about the center of mass
+and now you have to choose an origin because you re dealing with forks you re dealing with
+changing angular momentum and so you probably to see issue origin
+and you will say okay let s think about what the
+angular momentum is relatives two points see before the collision and after the collision if you call the collision
+what is the torque rowlett if two points see
+well the torque relative two points see
+there is here the position vector r of see
+and the torque is our course f in this f x for certain amount of time
+so this certainly is not zero
+you re in clearly see that as a torque relative to point c
+and if there is a torque relative to point c the angular momentum relative to point c must be changing
+kauai you better life it s changing because the angular momentum before did it
+is zero
+but after day it
+the angular momentum is i about the center of mass times omega center of mass
+you can see that it it rotates about the center of mass it has a angular momentum
+of rotation about the center of mass which is i will make out before it was zero afterwards and this so clearly
+there must be the torque about the center of mass
+and so now all you would have to do is to somehow
+real late that change in angular momentum with this distance d and mice are
+and you will see it if he becomes larger that indeed the
+omega our center of mass the angular velocity about end of mass will increase is very sensitive
+that s also intuitively because if you live right in the middle
+you don t expect it to rotate and all you would just expect this object to translate and so clearly
+the velocity of the center of mass is in sensitive for where you hit but the
+angular velocity around the center of mass is very sensitive is i will show you shortly if you get here
+you don t expect any rotation
+some of you may say i don t like to take c s my or two
+i m
+pick another point is my boards and
+i m going to take this point p at night origin
+or any other point all hmm this line
+angular momentum must be conserved about that point
+because there is no torque relative to that point
+because any position vector
+from this point to here is in the same direction as the force so are cross at is zero
+so now we have a points infinite number of points all these points here on this line
+the torque is zero
+so the torque relative to point b is zero
+so there is angular momentum l relative to point p
+is conserved
+which is zero before
+and so x zero after the it
+isn t that interesting you can solve that problem
+and find exactly the same answer for
+the angular velocity about the center of mass by choosing point p just a matter of taste
+most of you would probably take c
+but if you pick point p the problem may even be a little easier
+both to work and i ll make sure that the solutions to boats work here on the final solutions
+for you will see that it can be done in two different weights
+i have here a length with a
+which i can hit
+here s is rural is if the center of mass and
+this is just for reference line
+what i will try a is to hit it s in a direction parallel to the reference line if i succeed then
+it may start to rotate but the center of mass should stay in that line depending on where it s however
+if i go hit it exactly parallel to this line
+it will must stay on the slide this and lasted don t start laughing then it s simply means that my angle is not perfectly in this direction
+if i get like this and obviously it will go in this direction
+so i will try to hit it s first
+oh long direction off this line
+i will it is right in the metal so i expect know rotation i only expect that the center of mass will move
+now there is also friction here so the single come to a grinding halt this will not go on forever and ever list right is
+and you see that s fantastic
+it moves it translate space on the line
+but it hardly rotated all because the heated very close to the center of mass now i m going to hit here
+for below the center of mass
+now i expect this point is still on the line if i m lucky enough that i needed in the right direction
+and then of course it will start to rotate like this and it ll come to a halt because of the friction
+so let s try that
+not letting face very close to a center to that line that means might it was
+almost perfectly in this direction and you saw it rotate i ll do it once more
+call look at at goes much farm is rotated over much larger angle the center of mass in these is very close to this line
+so i was lucky and my direction in which i give it
+was quite close to being parallel to that black line
+==========
+now comes another
+application off the
+use of four
+and that s
+has to do with simple harmonic oscillations
+we were able to calculate the
+period of oscillation of a pendulum
+that ll relatively easy most of you have even learn how to do that in high school
+a string know mass an object that the ends
+and you give it a cake and it goes
+to borrow my like if the angle is not too large
+but now suppose you have a rule like this
+and you have here a little pinhole and you re going to oscillate like this
+what now is the period of oscillation that looks like a mathematical had lake
+and yet with the knowledge that we have now
+is can be sold quite easily
+and we can make it quite accurate prediction
+about the periods of oscillation of this water complex system
+and a system as bizarre at this level
+which oscillates about that thing
+can now calculate it very easily
+with the knowledge that we have or at least that you will have very shortly if you spend the time and you study these
+so let s first do the
+we first take the dead older
+this is the
+the rule has a mass m and length l
+and in the center of mass of the rule at at and i make i force it
+to rotate about point p
+put it into their nearly frictionless
+and this separation between this center of mass and the
+i call that now
+the piston which hello
+this angle is theta but it rotates about a pin perpendicular to the blackboards
+sure there will be forced is through that point p i don t care about that
+because now i m not going to negotiate with you
+about which point i m going to take a torque i would insist on taking torques exclusively
+through that point p sort i get rid of any forces that go through that pin
+any force that the pain x earth on the object got don t care about it all i worry about now
+is this m g
+and this position vector r p
+that determines the torque
+and the magnitude of that torque and i m sure that torque is going to change in time
+here calls n g
+times this distance be
+but i have to take the sine of this angle theta because remember that is a cross product between our
+and f and the cross product is the sine of the angle it it s so the magnitude of that
+is going to be energy
+times b
+times the sine of theta
+is r because f
+the magnitude of arc force f this being f
+this being r
+i go to equation number
+for and i say aha
+that must be equal to the moment of inertia
+about point p about the axes
+food perpendicular to the blackboard through point p
+times are far
+which is the angular acceleration and of course
+this may change with time
+and a level chains with time
+however there is one important thing
+this torque is a restoring torque it wants to drive back to equilibrium and therefore
+we either minus sign here for the very same reason than when we did this plane
+that the force was minus k x and not plus k x
+now i say aha small angle approximation by to wear all fine
+equals omega dots
+first derivative of the angular velocity
+therefore also equals theta double not i also wrote that there
+and theta is this angle this is the change of this angle that you see there second derivative
+i say aha small angle approximation
+then the sine of theta is thing that we ve done that before
+provided the angle is in radians
+and so i m going to get that n g
+b theta plus i relative to p
+times faded doubled all
+equals zero
+and now i already begin to feel it
+in my blood stream
+i they begin to smell the simple harmonic oscillations and you too
+oh let s bring if a a double not
+naked out here plus n g b
+divided by the time theta equals zero
+and this for sure if this and blah mark oscillation in theta
+and the solution must be that theta and tie i m
+must be some maximum angle
+times the cosine of omega t plus phi
+this omega
+does nothing to do is that omega
+but this is the angular velocity and this
+is angular frequency
+yes will never change
+that s related to the period of oscillation this is changing all the time
+b theta the t is changing all the time
+when the object is here the theta d t has the largest value but the objects that objects then still be theta d t is zero
+so the angular velocity is changing this time
+but this omega is a continental is very awkward in physics that we use the same symbol the mom problem that have totally different be
+in any case we know that this omega the angular frequency equals the square root
+of n g b
+that invited by i off be
+and so the period of one oscillation which is two pi divided by omega has to be
+this is what this by the way
+is independent of the mass of the object
+you may say down but that is a mass downstairs you got but there s also mass upstairs
+because the moment of inertia about point p
+has a mass in it
+the nominal inertia about point p we find immediately by using the parallel axis theorem
+if we wrote rotating about the center of mass about this axis than it would be one hot one twelfth
+m l squared and so we have to add
+and e squared we do something similar there
+so this is one twelfth and
+else squared plus and
+times b squared parallel axis theorem and so now we find that the period is two pi
+times the square root off i lose my them
+so i get one twelve l squared
+plus b squared and i get here g b
+and that is a very simple result when you come to think of it
+the the
+be a complete had a to do even any other way
+and this always battles me so much
+some people some of you think that physics is difficult but i ll we think of it the other way around l we think of that
+physics is there to make very difficult things you see
+look at it is an incredibly complex system there s going to rotate about that in
+which is offset from the center and here is a very straightforward prediction about the periods
+in our case but b equals forty
+centimeters and that is in exactly the steak so l
+equals one point zero zero and b equals
+oh it s about forty centimeters but we could be off by something like
+maybe two millimeters and not so not so easy to get that whole in precisely
+so it s forty centimeters
+was a minus oh point two centimeters
+so that is an uncertainty of about half percent
+i well upstairs l square and b squared and downstairs be
+and that makes the air in air is is a bit complicated
+if i stick in the numbers
+that i find a period which will be very close to one point five six five seconds
+that s taking the exact numbers that i give you four l
+and i take forty nine point eight and i take the values will be
+since i prefer to be on the conservative site
+eyring low for uncertainty of about all point oh one seconds
+and i would like to make a measurement
+and show you
+yeah
+then show you what we get
+so we have here the key the ruler
+they re
+oscillate it
+small angle
+now we can be a little bits prefer make it a little larger
+stop it first
+now we ll start it when it stops of my sight that is with the easiest to do now
+one
+three four five
+six seven eight nine ten
+luck on the button
+way ways in the air
+amazing isn t it
+that s us complex systems can be so easily dealt with in physics
+is fifteen what is a point seven one
+and my reaction time is always point one second so the agreement is absolutely fantastic
+now i will show you once you have done least with your
+ruler you can our pioneers knowledge on away more interesting
+system
+and that is the
+the whole
+we ll take the hollow and we re going to do the same thing for the level
+and the system the approach will be exactly identical
+we have a pin through the wool oh oh
+this is the low
+this is point p
+this is the center of mass a call it see oh
+it s now like this
+a little later
+the center of mass will be here
+and this angle b theta
+a mass of the water level is n n has a radius r
+i know it ll be force is through that point p but i could care less about them
+all i worry about is is m g
+and this position vector r p
+and the whole whole thing goes but oh well i m going to get that the torque
+about that point p
+equals m g e
+and our fill fill in for this immediately the radius r
+times the sine of theta
+and that must be equal minus the moment of inertia about point p
+time theta and noble dot
+what is the moment of inertia about point p e
+wow that is the moment of inertia rotation about the center all my has
+plus m r squared it s a parallel axis theorem and a model of inertia
+for rotation about this axis
+his committee on r squared because all the mass is distributed at the circumference at distance r
+so this estimation of all the masses times the radius squared
+so this is going to be m r squared
+plus m r squared
+so there s two m r squared
+so we re wearing is to one side so we re
+get theta double dot
+plus and
+they are we make this theta as small angle approximation divided by i t
+equals zero ten belmont of oscillation theta is exactly that in solution but now our we get as a
+periods we get to pi
+times the square root off i t
+divided by n g r
+but i t
+is two m r squared
+the t i d divided by n g know be good now we have m g r divided by
+any are
+and that is two pi times the square root of two are over g
+and that is acute result
+the cost if i had a pendulum
+and the pendulum handle length
+that l which is two r
+and i put all the nth mass of the end of the pendulum and the string has no mass
+i would ve found exactly the same result remember the period of a pendulum
+two pi times the square of the fellow for g
+notice again there is no mass in there
+there s only a meadow geometry geometry is the only thing that determines the period of oscillation
+that s always the case was a pendulum the simple pendulum with them
+a mass of the handle also the period is independent of the mass
+not with springs but always with gravity
+so the first thing i want to show you is that if i have here
+apple on a string
+and to the center of the apple
+is about the same to here and it s been is about the same distance is the diameter of the
+of the water know that they probably have very closely the same period
+you see the track each other quite well
+not priest i i sleep because i will not able to get the lengths exactly right the very closely
+so ready to see that indeed that the result make sense
+but now i
+go one step further i want to do a quantitative measurements because i know
+the radius of this level
+the radius i think is forty centimeters
+and we know that too and accuracy
+um hum off about half a centimeter so our
+is forty point zero
+was minus oh point five centimeters you will say boy canyon of measure that any graph
+the hottest an intimate some which ubicom a centimeter it all the reason is it s not a perfect circle
+so if you measure that a gamut of various places you d always get the same and so that s why i allow for hot centimeter uncertainty
+so that s one percent uncertainty in our
+one percent under the square root that becomes half percent
+and so the prediction then
+would be if i put in the numbers here that we have is one point seven nine five
+and that would become have percent uncertainty
+profit hundred and seventy nine is about one so let s make it easy
+point oh one seconds
+that is my eye prediction
+and i m going to make ten oscillations
+which gives me an uncertainty
+of oh point one seconds in ten oscillations so that gives me an uncertainty of point oh one
+in one oscillation
+imagine that you come home base thanksgiving
+and it sure is two parent you say
+a by the way that data month to be able to calculate period of this
+oscillation
+the they would turn pay new glean purple
+and you take out your pockets
+and you just to it like that simple
+and not only that but you can do would m s rice you can show it is
+they re be proud of you
+okay
+let s try it
+their ego small angle five and this is about five degrees seven degrees doesn t make that much difference
+slow you don t get much above ten
+i don t like the way go
+i ll start when it stops here
+now one two three
+for five six seven
+eight nine and
+i smoke but that that
+eighteen oh seven
+eighteen know seven
+if i divide that by ten then i get one point eight
+oh seven let s call it one plus or minus oh point oh one
+and if you take this air into account in this week and make it is zero seven
+pretty impressive
+we have five minutes left and i want these these five minutes
+because i m
+ask you for different is what i m going to do the next five minutes because they
+by now you may be lost already and i m going to make the little words by shut it and you a little
+when this chart insert may fly really interesting
+if i spin and objects that all
+==========
+then clearly
+there will always be external friction on that top
+and the top will come to war it s it s obvious
+we ve all seen it you turn the top you wait awhile and it stops
+but if it doesn t start liking the ends when i gave the exam review in something stinks then you re being t it
+and your t v l something going on in that little black box which kept ago we of course can t keep going forever
+so every is when something in the laboratory here different from outer space
+there always external frictional torques on it and it will come to a halt
+it is in conceivable
+that all by itself it would come to war holes and then
+ten it away and that would be insert it couldn t possibly happen because the moment it comes to stop
+all the external torques go away so it will this sit there
+imagine that you slide an object on the table the plates
+and it comes to stop because of friction
+and it s comes back at you will be equally itself right unless you texas
+this point to it of course the no extra forces on it you shovel on the table
+friction takes out of the kinetic energy it comes to a halt and it s it s there
+it couldn t possibly come back at you would be a violation of basic laws of physics if you rotate if you spend a top
+than it has come to a halt and you couldn t possibly rotates come to a halt and reverse its direction
+of rotation and as long as we agree to that then you will pass this course
+now
+you already smell rat
+zoom you already smell left
+okay
+i feel piece of plastic
+so nice these of plastic you can come and examine it
+and this testing the haze quite nicely i will give a spin
+friction external torque friction will bring a to a halt and it stops
+no problem right conceivable that after the stop it would return reverse the direction of motion
+which and it just now
+you may i ll believe your ice in fact when i saw least first
+i did not believe my eyes when i saw it again
+i felt sick and this atomic and couldn t sleep all night
+the look at this i m rotating it
+it comes to a whole friction brings it to a halt and it reverses direction
+don t have sleep is nights about it
+and into some parts is this a complete violation of the conservation of angular momentum of some kind
+think about it and see you on wednesday
+==========

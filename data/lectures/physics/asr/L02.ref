@@ -1,0 +1,664 @@
+==========
+we will discuss velocity is an acceleration
+i ll start with something simple i have a
+martian of an object along a straight line
+we call that one dimensional motion
+and i ll tell you that the object is here time t one
+that time t two it s here time t three it s there
+dime t for it here and at time t five and back where it was a t one
+and here you see the positions in that s where it is
+located at that moment in time
+i will define this
+to be the increasing value of x is my free choice but i ve chosen is now
+now we will introduce what we call the average velocity
+i put a borrow for it that stance for average
+between time t one and time t two
+that we define in physics at x at time t two minus x at time t one
+divided by d two minus t one
+that is our definition in our case
+because of the way that i defined increasing value of x this is larger than zero
+however if i take the average velocity between t one in t five
+that would be zero because they are at the same position so the upstairs is zero if i had
+chosen t for and t two average velocity between time t two and t for
+you would have seen that that
+is negative because the upstairs is negative
+notice that i haven t told you where i choose my zero on my ex x is completely
+but important for the average velocity it makes no difference however
+if i had chosen this to be d
+direction of increasing x then of course the signs would flat
+then this would it be negative and this would have been positive
+so the direction that you re free to choose
+determines the signs the location where you put use zero
+is not important but signs in physics do matter
+science are important
+whether you owe me money or i ll only money
+the difference is only a minus sign
+but i think it s important for you
+now i will give you not only
+the positions as i did here on the x x is at discrete moment in time
+but i m going to tell you exactly when the object is at any moment in time
+here you see an axe the diagram
+so you see that at t one the object is that position
+x t one this is the road of the object this is the straight line where it s moving it starts here
+and it goes to this position he goes to this one that comes back to t ford it comes back here i will tell you now
+every moment in time in between
+and there do what i
+this this now information that is way more
+you have the information at any moment in time notice that i now would it choose x equals zero
+i chose it somewhere here
+but i could ve chosen it it any other points
+forever follows you will see that it makes no difference so i have chosen is zero point so that i can make a graph
+and now we will look at the average velocity
+in a somewhat different way
+say i choose my time t two and
+d three i draw here now this line
+and this angle i call off and and this part here
+i call delta x and this here is delta t
+and so you could right now
+if you careful about your sign convention you could write down now that the average velocity equals delta x
+divided by delta t but be careful
+if the angle is positive i call this a positive angle then
+the average velocity is positive but if i
+have a negative angle then
+the average velocity would be negative for instance between t for for n t five
+if i draw this line then this angle here
+is negative and so the average velocity between t forty five is now negative
+again if i had changed is zero point
+you would have found the same values for the average velocity the only difference what it being
+the position of the curve in that plopped
+==========
+there is a very big difference in physics between speed and velocity
+the average velocity between time t one and t five is zero but the average speed
+is not the average speed
+is defined
+as the distance travel
+divided by the time that it takes to travel that distance
+oh what is the distance that the object traveled between time t one and time t five
+well the object start it s at a position here on this x x is
+and then it when up reach the highest point here so make a drawing for you here
+reach the highest point here then it went down
+and then when it went here it went up again and comes down again and it s back
+and in order to find the average speed you would now have to know exactly what this distance is add up this distance
+added this distance and this is it
+and if that distance altogether were for instance three hundred meters and if the time between
+t one and t five were three seconds
+then the average speed would be three hundred meters divided by three seconds
+that would be hundred meters per second
+so the average speed would be hundred meters per second yet the average velocity would be zero
+if you look at the location
+eighty three and t two
+and i bring d three closer and closer to t two
+then this angle of off
+==========
+will increase
+and i can go to the extreme that i bring t three
+almost right that s key to
+the angle of all phi will then be tangential to this point
+this will then be my angle of offer
+and now you will understand how we defined
+the instantaneous velocity at time t
+which is different from an average velocity between two time into poles
+the instantaneous velocity
+v and i take a random time t
+equals the limiting case
+for x measured at time t plus delta t
+minus x measured at time t
+divided by delta t
+and i do that for delta t goes to zero so thing this single this is being
+p three and this s t two i bring t three
+closer and closer and closer to t two
+and the time between and then goes to zero and this
+is something that you undoubtedly recognize that s the first derivative
+if the position first this time
+and now comes in equation which is one of the very few
+that i want you to remember
+in fact in eight oh one
+v equals d x d t
+this is one that you must remember not only in eight oh one but for the rest of your time at m i t
+and this could be larger than zero is could be zero and this could be smaller than zero if the angle of all fire
+the tangential is positive then it is a positive value if it is negative however
+when you hear than it is and negative velocity and if the angle of all phi is zero then it
+the velocity is zero so if we now look at is hot
+a week and search for the times that the velocity is zero
+so you have to look for the derivative beings zero that means the angle awful being zero clearly year
+the velocity is zero right here it is turning point
+that means when the object is here it is zero
+when the object is here is again zero at this moment in time again the angle is zero
+and it is again zero here so those i the times that s the velocity is zero
+what a times that the velocity is positive well positive here
+velocity is positive here still positive positive becomes negative
+negative positive zero negative
+so that s the definition of the instantaneous velocity
+==========
+what is the instantaneous speed well
+speedy is not sign sensitive suppose that the velocity here
+just i call that v one suppose that was plus of thirty meters per second i just grab this number
+out of the blue and suppose here somewhere
+it was i call that v two
+suppose that was minus hundred meters per second this is negative and this is positive
+then we would have to say in physics whether you like do not not very pleasing
+but you would have to say that this velocity is lower than that one because minus hundred is lower than plus thirty
+but this need of course is higher here because the speed is the magnitude off the
+velocity any is not sign sensitive so this has the highest be the hundred meters per second and this has a lower speed
+but this has the lowest velocity it just
+in algebraic game but very important
+when you make your calculations
+i have always wondered what the
+average speed or the average velocity is of a bullet
+now i want you to realize i m not a fan of guns at all but it always in treat me
+how can i measure the average speed of a bullet
+and i ve discussed it with some people here
+and we came out with so an easy way to do that we
+have a wire which goes into the blackboards wire one
+and we have another wire that goes into the blackboard why the two and the separation
+is d
+meters we have to measure that the setup is here so this is why a number one
+and this is wire number two
+so you will see the coming in like this so i ll make this a one and now make this a two
+that s the weights set up and we fire a bullet
+which breaks this wire at that moment of time starts
+and then a break this wire and that s when the time and stops
+now i told you
+a measurement is weeding loss without knowledge of the uncertainty in your measure
+so there to insert insist and volts the distance and the timing uncertainty
+this distance i will measure for u d
+i have here a large ruler
+here s one wire here s the other wire
+i cannot do that any better really then
+maybe even half a centimeter because situation is not all that stable i don t know what happens when the boat it will hit the wire
+so i would say it is from the forty eight now half centimeters but i cannot guarantee it to better than
+how the centimeter well
+hundred forty eight and a half plus a minus oh point five centimeters
+i what you to appreciate that this is
+a very small percentage air
+is only five part out of fifteen hundred
+that is one
+three hundred so that is only a one thirty percent air that s very small
+that s what we call the relative air
+then i ask myself the question
+i
+measure the accuracy of the speed of the bullet to about two percent that was my goal
+how likely to do the timing well
+i had to make an s a mate very roughly
+how fast the speed of the ball it is and
+i would think it is probably lower than the speed of sound a speed of sound is three hundred forty meters per second
+i don t know whether it s two hundred her three hundred but it
+be somewhere in that ball park
+of the kind of wood it s that we have two hundred earth three hundred meters per second
+let s assume that the speed is three hundred meters per second just a while guess
+then it would take five milliseconds
+for this bullet to cross from here to here
+and if i want to make a measurement to two percent accuracy
+i have to know this timing to about one tense of a many seconds because one tends
+of them any second
+is about two percent of five so that sets the accuracy that i need to make it i mentioned
+and so we do have a time or it is about accurate to about the tens of milliseconds and so now i can
+measure that time
+so i m going to have here sometime that we measure plus minus oh point one
+and we ll do the whole thing in many seconds
+but our final answer will be in meters per second
+all right but always have to think heart
+when i do this because when we deal with bullets
+that is no kit stuff
+and i as i said i have nearly know experience firing guns
+this is the bolt
+but there we go
+which use the boat
+there we go
+in place
+before i do that i
+check check this circuit i
+make sure that the electronic circuits is properly working
+you see the timing here right
+so i do small test just to see whether the circuit is working
+yeah should be working becomes the bullet
+and already i m ready three two one zero
+what we see
+five point eight milliseconds
+five point eight is that what you see yeah
+five point eight milliseconds
+five point eight plus or minus oh point one
+so outcomes the ever reach call it speed a call it velocity is the same thing in this case
+one forty eight point five
+five point eight and i have to convert it to meters per second that brings it that two hundred
+and fifty six
+plus or minus now would you come in here with your plus or minus is this is a one point
+one third percent air is negligible to this one
+when out of fifty eight is about one point seven percent so this is the only one we have to worry about so the uncertainty in there
+is about one point seven percent is less than two that s what i want it and that gives me an error of about four meters
+per second and so this is the result
+and you see it s only meaningful because we have a good idea know about
+d uncertainties in
+the measurement
+just as we
+==========
+introduced average excel average velocity now
+i m going to introduce average acceleration
+notice that the velocity changes here throughout time
+and that brings me to the
+next part the logical part namely that we going to introduce
+an average acceleration and with a little bit of imagination you can probably guess what that
+looks like the average acceleration between time t one and time t two
+would end the the velocity at time t two
+mine is the velocity at time t one divided by p two minus t one
+and that i mentioned is lengths per second for times square towards meters per second
+square this and then for one dimensional situation
+this number can be larger than zero can be equal to zero and it can be smaller than zero
+in our case t one duty to here
+notice the velocity is zero as a start
+and it begins to increase because this angle of phi increase its feet and all that matters the angle increases so in our case from p one to t two the average acceleration is larger than zero
+look at the angle however
+if you take the average acceleration for between t one and t five that is smaller than zero
+because here the velocity is zero
+but he here the velocity is negative
+so if you substitute that in there you get in there it s what acceleration which is smaller than zero
+so the science in the velocity and the signs in average acceleration depend surely
+on how i have defined my increasing value of x
+not where i choose my zero point
+if i reverse the direction of increasing x that all my signs will change
+so you can also write down then that average acceleration if you like that
+is delta v divided by delta t
+but you must be careful because the dell about v is sign sensitive you must obey you sign convention
+i i have here a tennis ball
+and i can bounces tennis well i can throw it down
+and let us assume just for simplicity
+that it hits the floor at about five meters per second and that
+it s a very very good tennis ball
+and that and also bounces back with a
+velocity of about five meters per second
+i will choose this to be my increasing value of x and so it hits
+the floor like this that means
+the velocity at which it hits the floor is minus five meters per second it bounces off
+and there it comes and it goes up
+with plus five meters per second i call this v one
+and i call this v two so what now
+is the average acceleration well i would have to know the time that it takes
+for this changing
+direction in other words recall that the impact time
+i would say in this case the impact time delta t is probably about a hundred so the second
+and so my average acceleration would be v two
+mine is the one that is plus five minus minus five that is ten divided by ten to the minus two
+and there this plus one thousand meters per second squared
+i have all i ve observed carefully the signs
+if now i say aha i don t like is i
+call this
+the value of increasing ax
+no big deal this rule become plus this would become a minus
+and then this would become a minus so then the acceleration is minus thousand meters per second squared
+i have also here a tomato
+and i have here
+some eggs
+now imagine now that i
+thrown a tomato down or for that matter and the egg
+and that they hit the floor at five meters per second
+i could do that there would not come back up
+they would go oops
+so therefore the changing velocity would not be ten
+apart from the sign that you have to think about but it would only be five meters per second
+the impact time would probably be
+much longer maybe a quarter of a second so therefore
+the average acceleration during the impact
+would then the only five
+divided by one quarter would be something like twenty
+meters per second square
+now whether you call it the so what you call it minus twenty meters per second squared depends on
+you convention of what you call increasing x
+but d x and the tomatoes don t care would you call mine is and what you call plus
+whether the acceleration is minus twenty meters per second squared or plus twenty meters per second squared you better believe it the egg will break
+so with only in you convention that it matters but of course the physics will not change
+the eggs couldn t care less what you have chosen
+for your sign convention
+something breaks because the magnitude of acceleration becomes too high that s why something breaks
+a few days ago i saw sure with homes movie
+and there was a guy who foul on the floor marble for this hat
+was lined them motion was
+and he was what some
+and what s and said too sure calms what happened
+sure calms walked over to the guy touches him and he says
+the course his skull
+he looked very intelligent i must say when you set that he crush the skull and i sit cheap
+that s really physics in actions into one all the way
+um hum us a really modest velocity when he hits the floor
+but heretofore like
+little ball the guy was bold for one thing
+and so the impact time was very short
+and when impact time assured even if you hit the floor with them honest speed acceleration is high
+and that was too much and so that s why is school was crushed
+so it s what matters is this change in velocity and the impact time we
+==========
+now want to make one last
+step from average acceleration we want to go to d
+acceleration at any moment in time just the way we did that with velocity
+and that now is an actual step
+the acceleration at any moment in time would be the limit for delta t e
+goes to zero for v
+measure that t plus delta t minus d t divided by delta t
+hmm that is the instantaneous acceleration and this
+you will recognize is the first derivative of velocity versus time which is also
+second derivative of position versus time
+and so here comes the second equation that i really want you to remember for ever and ever and ever
+that the acceleration is d v d t which is also the two x
+it can square it
+weekend
+go to or plot and we can ask yourself the question now
+where is the acceleration is zero
+where is that larger than zero and where is it smaller than zero because this value can be
+larger than zero equal to zero and smaller than zero and now you have to be
+very careful when you try to derive that from this plot have to be very careful
+because you when i have no good feeling for second derivative velocity is easy all you have to do is looking at all fire
+but when it come to the second and if you have to see how all flies changing well
+right here
+the velocity is not changing so the acceleration everywhere here must be zero
+here the velocity is increasing
+so the acceleration must be larger than zero here
+and here the velocity is almost constant is almost a straight line
+what is that mean forty acceleration zero exactly
+here when it makes this rounding curve
+the velocity is positive here but on the side it s negative
+so what is that mean for the acceleration
+negative you cut it and so you can now roughly find where
+the what acceleration is positive whereas negative and where it is zero
+that s do
+a straightforward example the way that you could expect it on and the sine and or
+==========
+if you are extraordinarily lucky
+you might even get something like that on an exam
+very straightforward i m going to give you the position x as a function of time
+and then i ask you lots of questions about it so this example is in working example
+x equals eight
+minus six t plus d squared
+so this tells you whether it the ready object is at any moment in time and let this be in meters
+what now is the velocity at any moment in time well that s the
+the relative d x d t
+and i use the following
+x equals e to the power n
+then this most of you
+should know o d x d t is then and times t two the power n minus one that s all i m using
+so the derivative of a is zero i get here minus six i get here plus
+to t is would be in meters per second
+and the acceleration i have to take the derivative of the velocity i get plus two
+so notice that the acceleration
+is constant in time is not changing but the velocity is changing
+well at time t equals zero
+just i ve started probe a little bit i
+get a feeling for what this object is doing at time t equals zero
+x is plus eight
+the velocity is minus six
+meters per second and the acceleration a equals plus two
+i can also ask myself at what time is x equals zero
+what i d a times that x is zero well i have to solve this second order equation which is something that you ve old
+in high school and you will find that that s the case when the time
+is plus two and when the time
+is plus four
+take a plus two that makes this for
+four plus eight is twelve
+minus six times to that zero so you see the two works and you check that the four also works
+just for my curiosity when is the velocity is zero all that s easy
+that s when this equation is zero to so that s when t equals three
+what is at that moment a position ball i substitute t equals three in here and that gives me
+minus one x equals minus one so now i m ready
+to plot x as a function of t it s of course prevalent
+and i use this information that we ve just derived so here
+comes my plot
+let this be increasing value of x
+let this be eight
+and let this be minus one
+this is the time x is
+i have is zero here
+and so i want to cover let s say about six seconds so i have one
+two three four five
+six now i m going to use this information in order to
+give you a curve which is similar to that one except this is a simple one this is just the private
+so i know that at time t equals zero
+the object is at position eight
+i know all that x is zero
+that x is zero at the time
+two and at the time for so the object is here at this time and at this time
+and i noted that time t equals three it is at position minus one
+so the object is here and i also know that the velocity is zero so we can check that
+and so if i make this plot now
+then we would get a curve that sort of like this
+and yes in yeats notice the velocity here is zero the angle of phi equals zero
+the object starts out at t equals zero with a negative velocity
+you can see that the object at t equals zero is here this is where the object is i hope you rely third object is in every year
+this is the wrote this is the one dimensional track which the object is sitting the object is here and it starts going in this direction
+if it starts going in this direction the velocity must be less than zero and indeed it is it s minus six
+about
+there is the acceleration which is plus two in this direction the acceleration says i don t what to do go down
+i want you to go out well the velocity is s or or i can do with slowly slowly change
+and that s what it s doing it slowly changing the velocity and becomes the time that the velocity is zero
+so the object goes down the velocity change this
+and when it is at position minus one that has come to a grinding halt
+and now it is returning is positive value of a is now increasing the velocity and that s what you see
+i therefore bet you a nickel
+that if you substitute in that equation t equals four
+that the velocity better be positive
+it has chain from a minus sign to plus i m
+because of this positive acceleration i bet you nickel t equals four
+what is x of what is v we
+know v
+eight minus six plus two meters per second
+you see physics works v is now plus two meters per second
+so all that information is in there but i want you to be able to also
+digest it don t look at that curve at just some dumb how a parabola some dumb curve
+try to imagine what is happening and only then
+do you get some insight then you really begin to get it
+in your brains
+i now would like to write down
+in most general form the equation
+==========
+uh for the position
+and the velocity as a function of time
+for one dimensional motion
+whereby d acceleration is constant
+so it s going to be one dimensional again
+and we have a is going to be a constant
+and so the equation that i write down is the most general way that i can write it down
+so we re
+get x equals some numbers see one
+plus some c two times e plus some see three times t squared
+and notice oh i already race my example my eggs on what is go on but you would have seen this was an eighty four
+and here we had
+what it we have for minus
+we had minus six t and we had plus one p squared
+so you recognize these three
+i can now take to the rented if
+and so i get sea to
+pluses to see three times t
+and then i get the acceleration equals two c three
+and now we get some insight into these for these quantities
+clearly x one a c one
+is the position
+of x at time t equals zero for which we often write an x zero buzz windy
+is zero that is where x is c two
+is really the velocity
+at time t equals zero because when t is zero that s where and c two is v
+and the acceleration
+is not changing with time is two
+see three therefore see three is half the acceleration
+so this give you some insight in the meaning of these quantities and you can see you can read now some some physics in there
+see one see too fancy three and independently be either zero
+would larger than zero or negative
+makes no difference each one of these combinations is
+invalid possibility in physics
+well we have gravity
+an object
+is influenced by the gravitational acceleration
+and the gravitational acceleration is a constant
+and we write off and for that gravitational acceleration the letter g
+whether i draw an object or throw it vertically up or throw it vertically down it s all one dimensional
+it becomes to them and you when i throw it at an angle i keep it one dimensional the acceleration is always the same
+and that the g gravitational acceleration in boston is nine point eight zero meters
+per second squared and it s very the little bit for different places honors
+this gravitational acceleration
+is dependent
+of the mass of the object that i drop of the speed of the object
+of the chemical composition of the object of this i so the object and of the shape of the object assuming
+that we have no way and rec assuming that these experiments are done in in vacuum
+is it obvious that the gravitational acceleration
+is independent of all these quantities by no means is it true
+we think so
+but i want you to appreciate that it is not obvious and it cannot be proven from first principle
+remember last time
+we dropped an apple from three meters and we drop another one from one and a half meters
+and in your second to silence
+which you haven t seen yet i m asking you to calculate
+the gravitational acceleration for me using these both experiments
+and of course i want you to also tell me what you uncertainty is in your final answer
+and i d like to help you a little bit to set up
+and also to get these equations in terms off gravity
+whenever we deal with gravity we get the g in there so suppose here is the object
+at time t equals zero the was the apple and i
+call that position x zero i call that zero i m free to chose my zero position
+and i drop it is zero speed i just try to go because that s the way we did it in class the object goes down
+and it hits the floor well
+the general equations now
+which during gravity if i call this the increasing value of x
+you can choose it differently this is my choice today is the following
+x equals x zero plus d zero t
+plus one half
+g e squared and gee now is nine point eight zero
+meters per second squared
+the velocity at any moment in time equals v zero plus d t
+and the acceleration is constant is simply g
+now i in my case i have chosen t equals zero x zero is zero and i ve chosen this zero
+so these go and so you see that
+when the object is here which is three meters below this point
+and you know the time how long a two to get there that you can now calculate g
+because x would be then three meters that s when it s here
+we made a measurement in class only to to you know the time
+and so you can come up with a value for
+gee you can do that for both measurements
+and of course i want you to tell me also what the uncertainty is in those measurements
+remember that we derive it last time that see
+that the time that it takes so the apple to fall
+was seat times the square root of h over g and we never knew what that see watts
+i did a demonstration to show you that the time is proportional to this curve h
+we never know what that see what s now you know because now you have the equations here and you ll see that that see
+simply what s the square root of two but i could not the right that from i dimensional and now this is
+now
+==========
+i want you to relax and that the same time
+get a little bit older for change
+look at the situation v equals g t
+that means when i drop an apple and i m going to drop another one today that the velocity increases with time
+so if i d stroke this apple while it was falling
+i would see this separation
+when it s strokes to increase with time because the velocity
+goes up with time
+i have here an apple warm going to put an apple up about three meters from the floor
+three meters
+so the height is three meters approximately
+we know from last time remember we did it it was about seven hundred eighty milliseconds to hit the floor
+i will just rounded off i think about it about
+a tenth of a second
+just to get an idea
+if i finish if i stroll bit twice per second
+we call that two hertz so my stroke
+but is two times per second
+then i shoot hit that ball way when it s falling twice a twice probe like
+i don t know where it is though
+because when we stroll width and when let the apple go the two and not synchronized so maybe the if first time that the
+light brings it may be here in the second time maybe here but it s also possible that the first time it s here in the second time is there
+and so the first thing i want to do is to test you older to this we will brink
+you will tell me where you see and and
+but we will take a picture
+we will take a picture which will show is exactly where those two balls were
+but that s the first open space so get ready for this and then we will do a second one which is even more
+intriguing so now i have to first
+laura this is that what
+so that we get a nice dark background
+there we go
+okay
+wow with my finger prince on it it s not so black anymore
+their list that s the background
+but with them i doing on the the latter again i have to bring up and up
+fight is always a bad day for me okay
+so now i m
+bring a apple up there isn t
+the metal here their electro magnet and so i
+so we re switch here so that electromagnetism activate it s
+very similar to what we did last time we have to water apple of
+and the forest
+oh
+so now i have to start the
+the stroke
+that s about two hertz that s about to flesh is per second and i m going to make it it s like
+it s like
+all the lights call all
+i will count down three two one zero
+and bob there put behind the camera i will open the show other when i say one
+and when i say zero the ball will fall so oh you may i always see
+the ball in its highest position that may not count there course because
+it makes to flash is in the time that the show other is open and that i drop
+okay if you ready
+i m ready make it is dark because we can
+well you ready
+class e
+everyone ready you don t look ready okay
+three two one
+that was zero so let s look at is again in slow motion
+whereas the ball
+oh poor that s who bore you try that the ten time you never do that again
+it s so now we re developing that picture
+and i would like you
+so tell me where you saw the bowls
+where were they roughly
+where is the first one how much how much spot below the highest point
+oh it is much the first one
+and then the second one was pretty low then
+okay sounds interesting we ll take a look
+well a picture is developing
+i m now going to test you real good this
+i m going to
+it
+with an unknown frequency unknown to you
+i will tell you with secret it ah higher frequency you re
+see more balls on the way down
+i m not going to ask you
+well yeah they are exactly or want you to tell me afterwards how many you so that s all
+to count them as it falls you know you have only oh point eight seconds to count
+what how the the picture come out
+wow you re good puff
+you re good was very high actually the first the
+the first flash very high
+you see it s
+you hit very well
+we re going to start now with the seconds
+part
+is the audio restored should be
+so why you activated the magnet again
+there this
+oh goodness
+working
+okay thank you bob okay bob if you re ready
+i m ready
+make it is dark is weekend so you to tell me how many
+balls will you see dole or have to change so my goodness
+come out and you re now it m i t
+or you think
+well i m ready what do okay three two one
+well
+who so three
+for
+for onum know for
+five
+five t is a five there is a five
+another five who saw six
+wow seven eight
+nine
+and and who s just so blue arc
+well that a real winters i think
+well i tell you what s ten hertz
+and that is oh point eight seconds depending upon
+when you hit it s lucky you i will show you you either see seven or maybe eight
+false but it was a good test and for those of you
+who felt that it was only
+that only saw five
+there you see them that count on
+it s counted together one this is one
+two three four five six seven this is about
+so for those of you saw five
+i would say take some rest is we can t you need it
+around me to to see you monday
+==========

@@ -1,0 +1,533 @@
+==========
+We 're going to talk about a whole new concept , which is the concept of momentum .
+We 've all heard the expression , We have a lot of momentum going .
+Well , in physics , momentum is a vector , and it is a product between the mass of a particle and its velocity .
+And so the units would be kilograms times meters per second .
+F ma .
+That equals m dv/dt .
+That equals d ( mv ) /dt and that equals , therefore , dp/dt .
+So what you see the force is dp/dt , and what that means is if a particle changes its momentum , a force must have acted upon it .
+It also means if a force acts on a particle , it will change its momentum .
+Let us now envision that we have a whole set of particles which are interacting with each other , and the interaction could be gravitational interaction , could be electrical interaction , but they 're interacting with each other .
+Zillions of them a whole star cluster .
+I pick one here , which I call mi , and I pick another here , which I call mj .
+And there is an external force on them , because they happen to be exposed to forces from the outside world , and so on this one is a force Fi external , and on this one is Fj external .
+But they 're interacting with each other , either attracting or repelling , and so in addition to these external force , there is a force that j feels due to the presence of i .
+And let 's suppose they are attracting each other .
+This would be F that j experience in the presence of i .
+Actions equals minus reactions , according to Newton 's Third Law , so this force , Fij , will be exactly the same as Fji , except in the opposite direction .
+We call these internal forces .
+That 's the interaction between the particles .
+If these were the only two forces , then the net force on this object , on this particle i , would be ... would be a force in this direction .
+This would be F net .
+Now , you can do the same here .
+This would be F net on particle j , and this would be F net on particle i .
+But since there are zillions of objects here , there are many of these interacting forces , and so I can 't tell you what the net force will be .
+The net force is ultimately the sum of the external force and all the internal forces .
+What is the total momentum of these zillions of particles ?
+Well , that 's the sum of the individual momenta .
+So that is p1 plus p2 ... pi ... and you have to add them all up .
+I take the derivative of this dp total/dt .
+That is p1/dt .
+Well , that 's the force on number one .
+It 's the total force on number one .
+So it is F1 , but it is the net force on F1 .
+And F ... and dp/dt for this particle equals F2 net force , and the force on particle number i equals Fi net , and so on .
+And so when we add up all these forces , obviously that is the total force on the entire system .
+Now comes the miracle .
+The miracle is that all these internal forces eat each other up .
+This ji cancels this one if you look at the system as a whole not if you look at the individual particles , but on the system as a whole , they all cancel each other out .
+And so the total force on the system is simply the total force external .
+And all the internal forces you can forget about it .
+And this means , then , that we come to a key conclusion that dp total/dt ... in fact , I have it written down there .
+It 's so important that I want you to look at it this whole lecture .
+Look at this .
+You see that dp/dt is the total force externally forget all the internal forces and what it means ... that if the external force , the total external force on the whole system is zero , it means that the momentum cannot change .
+Momentum is conserved , and that 's called the conservation of momentum .
+It only holds if the sum of all external forces are zero .
+We could have hundreds of stars , like a globular cluster , and they could collide with each other , they could explode , they could break apart all those forces are internal , they don 't count .
+The angular mo ... the momentum of the cluster as a whole not angular momentum , I misspoke .
+The momentum of the cluster as a whole would not change if there are no external forces on the system , if the net sum , the total external force , is zero .
+So the individual stars will change their momentum all the time , because the individual particles in the individual stars will experience , of course , the internal forces .
+I 'm not saying that the individual particles do not continuously experience momentum changes .
+It 's just the system as a whole for which the momentum is then conserved .
+==========
+We can do a very simple example so that you get a feeling ... numerical idea .
+I would have a ... an object here as mass , m1 , and here I have one , m2 , and let this one have a velocity , v1 , and this one has a velocity , v2 .
+One dimensional problem , just as a warm up .
+They plow into each other and they stick together .
+I put some glue on one , and so they stick together .
+That 's a given .
+You have to accept that .
+Let this be the direction of increasing x , and so before the collision I have a certain amount of momentum .
+I can do this on a horizontal table , which is frictionless .
+I can do it on an ice surface , which is nearly frictionless and I ignore air drag .
+So this is the situation before , and so the momentum that I have before equals m1 v1 this is my plus direction I could put vectors over there but that 's really not necessary , because it 's a one dimensional problem plus m2v2 .
+If you like that , be my guest .
+That 's the momentum before .
+Now they stick together and so when they stick together , their total mass is m1 m2 .
+And then their velocity happens to be v prime .
+We often give a prime to the situation after the collision occurs .
+And so now I can apply , for the first time , the conservation of momentum .
+The momentum before must be the same as the momentum afterwards because there are no external forces on the system .
+When they collide , you better believe it that there are internal forces .
+You better believe that there is glue and it goes plunk and they feel those forces , both of them .
+The momentum of each one individually is changing , but not the momentum of the system as a whole , and so this equals ( m1 m2 ) v prime .
+And so , if you put in some numbers suppose m1 equals one kilogram , and v1 is five meters per second , let m2 be two kilograms and let v2 be three meters per second .
+And you see , since they are both in the same direction momentum here is 5 6 is 11 , so this is 11 .
+And this is 1 2 is 3 , so that is 3 times v1 prime , and so v1 prime is eleven thirds meters per second .
+So the conservation of momentum tells you what the speed is after the collision .
+When we deal with collisions , the velocities of the objects before the collision are unprimed .
+You see here v1 , and you see here v2 .
+Now , the velocities after the collisions , by convention , are primed .
+You see here v prime .
+Now if after the collision object one and object two have a different velocity , we will call it v1 prime and v2 prime .
+Now in this case , we 're dealing with an inelastic collision , so m1 and m2 are stuck together .
+They are merged , so it is sufficient to just call it v prime .
+You could have called it v1 prime , because v1 prime is the same as v2 prime is the same as v prime .
+And during the next four minutes , you will see that a few times do I call it v1 prime .
+I wish I really hadn 't .
+It would be better if I had just used v prime .
+That is unique and sufficient .
+Now , there was a certain amount of kinetic energy before the collision , and of course , we can all calculate that kinetic energy before the collision .
+That is one half m1 v1 squared plus one half m2 v2 squared one half m1 v1 squared , one half m2 v2 squared .
+How much is it ?
+You can do that as well as I can .
+If you add that up , you will find 21.5 joules .
+Trivial to stick in the numbers .
+Now I want to hear from you .
+What do you think the situation is with the kinetic energy after the collision ?
+Don 't look at the numbers .
+Just use your intuition .
+It may be wrong .
+That 's okay , my intuition is often wrong .
+So there was a certain amount of kinetic energy .
+We had this collision , and I want you to tell me whether you think that the kinetic energy has perhaps increased or decreased or maybe the kinetic energy hasn 't changed .
+Who thinks the kinetic energy has not changed ?
+Good for you .
+I see some parents even .
+Who thinks the kinetic energy has decreased ?
+Even better for you .
+Hey , there 's a professor of physics there .
+Can 't go wrong there .
+And who thinks the kinetic energy has increased ?
+No one thinks that .
+Hey , it 's amazing .
+Let 's take a look .
+Kinetic energy after the collision .
+That would be one half m1 plus m2 times v prime squared .
+Would we agree ?
+Let me write this at a different location .
+So this was the 21 joules .
+Well , you can do this as well as I can .
+We know that v1 prime is that is eleven thirds .
+And you will find that this number equals 20.2 joules .
+So the kinetic energy went down .
+Now , you may say , Well , big deal .
+Little bit of kinetic energy 1.3 joules .
+Who cares about 1.3 joules ?
+Well , it is a real big deal in physics , let me tell you .
+And I can appre ... I can make you appreciate that it is a real big deal by doing the following .
+I don 't change the masses , but I just am going to change the direction of the impact .
+Here is m1 and here is m2 .
+The speeds remain the same v1 and this is v2 .
+No change in the numbers except that they go now ( whooshes ) head on .
+What is the momentum of particle number one ?
+Well , that is mv .
+1 x 5 is plus 5 .
+Remember , this is the increasing direction of X .
+So the momentum is plus 5 .
+What is the other one ?
+That is 2 x 3 , that is 6 , backwards .
+This is minus 6 .
+So what is the total ... the total momentum ... let 's give it a magnitude equals minus 1 ?
+The magnitude is one , of course and the momentum , if I leave this off we would call that minus one because it 's a one dimensional problem .
+The momentum before is in this direction .
+It 's minus one .
+So what now is v prime ?
+They stick together .
+Here they are .
+And afterwards , I 'm not even sure whether they go this way or this way .
+Yes , I am sure , because the momentum is in this direction , so I predict that v1 prime will be in this direction .
+And so this now equals m1 plus m2 times the new v1 prime .
+Well , m1 plus m2 is 1 2 , is 3 kilograms and so you see that v1 prime equals minus one third meters per second .
+So the whole system now goes off with one third meters per second in this direction .
+The kinetic energy before has not changed those 21 joules , right ?
+That is independent of how I collide them with each other .
+What now is the kinetic energy afterwards ?
+This is a great tragedy , because now you get one half the sum of the masses , which is three times this small number squared .
+Goes with V squared , right ?
+And now there is only 0.17 joules left .
+Almost all kinet ... kinetic energy has been destroyed .
+So what you see here in front of your eyes that kinetic energy can be destroyed , but momentum cannot be destroyed in the absence of external forces .
+Kinetic energy and momentum is a totally different thing .
+The momentum of the individual particles gets changed , but the net momentum did not change but the kinetic energy was destroyed .
+I can destroy the kinetic energy completely if I want that .
+I can arrange a collision so that all kinetic energy has been removed .
+Suppose this particle has a mass five and the velocity is one .
+This is my shorthand notation .
+And this particle has a mass one but it has a velocity five .
+The momentum of this system is zero plus five in this direction , minus five in this direction .
+But you bet your life there is kinetic energy .
+After they collision ... they hit each other , we agreed that they would stick , there was glue on it .
+Momentum afterwards must therefore still be zero .
+Internal forces don 't matter no matter what happens .
+Kinetic energy is zero .
+So the whole system collides ( bing ) And afterwards you have here the sum of the total masses and it just stands still , because I told you that they are going to stick together .
+I used glue .
+==========
+If you have a car collision , and two cars hit each other , and I compare the situation just before the collision with just after the collision here are the two cars and one has a speed in this direction , the other has a speed in this direction , and they hit each other .
+And they stick together , it 's a given .
+You go ( whooshes ) one big clump .
+So this is before .
+And I can give them some velocities .
+This is the speed of one , v1 , and this is the speed of the other , v2 .
+Afterwards you see something like this : v prime .
+Just a wreck !
+The impact time is so short that the change in momentum due to friction with the road that would be an external force , friction with the road .
+But that can be ignored , is negligibly small .
+The cars hit .
+There is a huge internal force going on .
+One slams on the other and the other slams on one .
+There is even fireworks metal scrapes over metal .
+Friction , but that 's internal friction , not friction with the road .
+So momentum is approximately conserved if we can ignore the friction from the road during the impact because the impact time is so short .
+So let here be car with mass m1 and here is the other car with mass m2 .
+And we 'll make it a two dimensional problem , because we have seen only one dimensional problems now .
+Let 's make it a two dimensional problem .
+So this is the direction for this car , and let 's say this is the direction in which the other car is going , velocity v2 .
+And tragedy has it that this is the place where they 're going to collide .
+In what direction and what will be the speed after the collision ?
+I only compare just the moment before they hit with just the moment after they hit .
+What comes later is a different story .
+When you have formed the wreck , clearly it 's going to slide on the road , and then there is an external force which is friction , which will slow it down .
+It 's just during the impact I claim that to a reasonable approximation , momentum will have to be conserved .
+And so , what is the momentum of this one ?
+Well , this may be the momentum of this one .
+It may have a very small mass , small speed .
+And what is the momentum of this one ?
+Well , this may be the momentum of number one and this could be the momentum of number two .
+The net momentum is the vectorial sum of these two , which is this .
+That is p total of the system .
+That is never going to change .
+That 's before and after the collision exactly the same .
+And therefore if you knew this angle theta and you know p1 and you know p2 , then you can calculate in what direction the objects are going to slide , but of course you can also calculate then the velocity after the impact , because this total momentum must be the sum of the total of the two cars the mass of the two cars times v prime .
+And so you can calculate everything .
+And that 's what the police is doing when they find wrecks on the road .
+They actually use the ... the track , the ... the skidding tracks of the wreck to calculate v prime , and then they can try to reconstruct the situation as it was before the collision .
+Now , in all these cases , the objects stuck together .
+==========
+We 've only considered cases where they stick together , in which case we call those in physics completely inelastic collisions .
+Now , next lecture I will also deal with situations whereby during the collision , the particles bounce off each other .
+In completely inelastic collisions , you always lose kinetic energy sometimes a little , as you see there ; sometimes a lot , as you see there ; sometimes everything , as you see there .
+Always in inelastic collisions do you lose kinetic energy .
+Can we have , in a collision , an increase of kinetic energy ?
+Well , depends on how you define the word collision .
+The answer is yes .
+And in fact , I will show you an example and even do a demonstration .
+In the most simple case that I can think of , I have here a block which has a certain mass , m .
+But there is an explosive inside and all of a sudden , it goes Boom !
+It explodes .
+Well , before , the speed is zero and so the momentum is zero .
+And there comes the bang ( whooshes ) and one piece flies in this direction with a certain velocity , v2 prime .
+This is m2 .
+And another piece flies off in this direction with mass m1 , with velocity v1 prime .
+Clearly , momentum must be conserved .
+This explosion is only internal forces , and so you can write down ... if you call this the increasing direction of x , so this momentum is positive and this momentum is negative , the total momentum will never change .
+It 's the same before as it is afterwards , so this must be m2 times v2 prime minus m1 times v1 prime .
+What happened with the kinetic energy ?
+Well , kinetic energy has clearly increased .
+There was zero kinetic energy to start with .
+This one now has kinetic energy and this one has kinetic energy .
+Where did that come from ?
+Well , it was the chemical reaction of the explosion .
+Momentum , however , was conserved .
+See , momentum really doesn 't care about these explosions .
+That 's all internal forces .
+So be very careful .
+Never confuse momentum with energy .
+Energy can change or cannot change , can increase or decrease or remain the same kinetic energy , but if there are no external forces on the system , momentum is always conserved .
+And this is what I can show you .
+I have a demonstration set up on this air track , and we do it on an air track so there is a minimum of friction .
+And we 're going to push two cars together and we hold them together with a spring .
+The spring is like the explosion , like the dynamite that can push these apart .
+So here is one car on the air track , then there is a spring and there is another car .
+Let this mass be m1 and this mass be m2 , and this surface is nearly frictionless .
+And I hold them together with a string so that I can pull the spring in .
+So this spring is compressed , and the whole system is at rest , v equals zero .
+There is potential energy in that spring .
+I take a burner ( whooshes ) , and I burn away this thread .
+This is the situation before .
+Momentum before is zero .
+Total momentum afterwards would also be zero .
+It 's identical to what I did there .
+And so this object will fly in this direction , and this object will fly in that direction .
+And you already can tell what the ratio of the velocities will be , because you will see that v2 prime divided by v1 prime you see it right there equals m1 divided by m2 .
+And so I will make some predictions about the speed of these two objects .
+The largest mass , by the way , would get the smallest velocity , and the smallest mass would get the largest velocity , the largest speed .
+What you see in here are really speeds .
+We don 't have the information on the direction anymore .
+How do we measure the speed ?
+Well , we actually measure the time for the cars to move ten centimeters .
+Each car has a little metal plate which is ten centimeters long , and it blanks out a light emitting diode .
+And the moment that the light emitting diode is occluded , the timer starts , and the moment that the light emitting diode emerges again , the timer stops .
+So that 's the way we will measure the time for each car to move by ten centimeters .
+The first experiment that I will be doing , m1 is 244 plus or minus one gram and m2 is also 244 plus or minus one gram .
+In other words , the uncertainty in the masses is something like 0.4 . That 's just part of life .
+I can 't do much better .
+The time that it takes for object number one to go ten centimeters is obviously ten divided by v1 , which is the velocity that we want to compare them with .
+Now , the ten centimeters is really only known to an accuracy of about one millimeters .
+So that is an uncertainty of 1 in my timing in my velocity , so this is a 1 uncertainty .
+So if we measure the times that object number one and object number two will go through this timing device a measurement of ten centimeters you would expect the times to be the same to within roughly 1 .5... say 1 .
+There is , however , an additional problem that is very difficult for me to evaluate and that 's the following .
+If here is the light emitting diode , and here is that metal plate that I mentioned to you , which comes over this diode , occludes the diode , and says start the timer , and then the other end , of course , moves off and then the timer stops that criterion for on and off for one diode may not be exactly the same as for the other .
+Here is one system .
+One car will fly in this direction .
+And here is another system , and the car will fly in that direction .
+And that 's not so easy to evaluate unless you do a lot of experiments .
+So I would roughly guess I 'm always on the conservative side that this may add an uncertainty in the criterion of the diode of another millimeter .
+And so effectively , I really don 't know any better than two millimeters what the ten centimeters is .
+So I would say we really have to allow here for two percent plus .4 , so I would predict that the times of these two cars will be the same to within roughly 2 .
+That would be my prediction .
+So we 're going to write down here the times , and then we 're going to measure them .
+So time one and time two , and we will see whether these two numbers are the same within the uncertainty of our measurements .
+Here is the air track .
+Have to turn on the airflow .
+Oh , let me tell , for those of you ... For the parents in my audience who haven 't seen this one , this is a marvelous device .
+It is a track which is well constructed , so that these cars fit beautifully on this V shaped track , and then we blow air out of this track , which lifts these cars up so that they float , and so we can move them in horizontal direction with extremely little friction .
+There is no metal touching metal .
+The only friction you have is the air drag .
+That you can never avoid .
+When you go through the air with a car , there is wind the same wind that you feel when you drive your bicycle .
+But there 's very little , and that 's why these experiments are done on these air tracks .
+These are not cheap , by the way , these air tracks they 're very expensive .
+Well , you ... you pay 25 , 000 tuition , so you might as well get something for it , right ?
+So I hope that these timers are on .
+They are .
+And now we have here one car , and notice how frictionless it goes when I touch it .
+Very nice , almost frictionless .
+And here we have another one , and they have equal mass to within one gram .
+And there is a spring between them .
+Some of you may be able to see it .
+And I 'm going to attach now that string to hold them together .
+And so I put potential energy in the spring by pushing them together , and they are lined up now here .
+They have no momentum .
+The timer 's not on ?
+Has to be reset .
+Thank you .
+They 're now both zero .
+Yeah , you 're sure ?
+Okay .
+So now I 'm going to burn off that wire .
+The momentum of each one of those cars will change .
+One will go in this direction , the other one in this direction .
+Kinetic energy will increase .
+That 's the potential energy from the spring .
+But the momentum of the system as a whole after I burn the wire will remain zero .
+Ready for this ?
+Make me happy .
+What do you see ?
+You 're going to make me unhappy ?
+I better walk around .
+I can 't wait .
+220 ... oh , fantastic , absolutely fantastic !
+223 , 219 milliseconds .
+That is well within the uncertainties .
+What was the number , 219 ?
+219 milliseconds and 223 milliseconds .
+If I repeat the experiment and I make the string shorter , I will get different primes .
+I can never predict the times , because if I make the spring more squeezed , then obviously I will have more potential energy .
+And so the speeds of the cars will be higher , but the times will be the same within the uncertainty of the measurements .
+So I can never predict the time .
+Now we 're going to do an experiment whereby I 'm going to make m2 twice the mass .
+m2 is 488 plus or minus one gram .
+Now , that 's going to be interesting , because now you really begin to test the conservation of momentum .
+The momentum before is zero .
+I burn the wire , momentum afterwards is also zero .
+But the velocities ... oh , I erased this v2 prime divided by v1 prime equals m1 divided by m2 .
+And so twice the mass will get half the speed .
+And so now you 're going to see that one car will go twice as slow as the other .
+That 's the only way that nature can conserve momentum .
+Nature has no choice .
+Nature can deal with kinetic energy one way or another , but it cannot finagle momentum .
+So it must give the more massive car half the speed than it gives the other car .
+And so we 're going to redo this experiment now with a car here which is twice the mass .
+And this one equals ... Where is my other car ?
+Oh , my car is here .
+And this one is one mass , so this is the 244 , and the one on the ... on your right is the 488 .
+So I have to bring them together again with a string .
+So I ... I do the work now .
+I always do the work here in 26.100. I do the work .
+I squeeze these springs .
+I get paid for that , by the way .
+And that 's potential energy that goes into the spring .
+There it is .
+Momentum is zero .
+Kinetic energy is zero .
+I have to zero the timers .
+Oh , and I would like to make a prediction .
+I would like to see ... we 'll measure T1 and then we 'll measure T2 , and then we get a number and we get a number , and if we multiply this number by 2.00 , then I would like to get this number within the uncertainties of the measurements .
+There is always an uncertainty in any measurement that you do .
+All right ?
+Make sure that ... are the timers zero ?
+Okay , there we go .
+What do you see ?
+Ah !
+406 , 193 whoo !
+On the button !
+406 and 193 .
+0.406 is that what you see ?
+Yeah ?
+And 0.193. Now , I don 't even need my calculator to multiply this by two .
+I can even do that by heart .
+9 3 .396 , .406. Close enough .
+The two are in excellent agreement within the 2 uncertainty in each measurement .
+So , you see , that 's exactly how you can demonstrate the conservation of momentum .
+They picked up kinetic energy , but after the wire was burned , the momentum remained zero .
+==========
+Now I change the topic .
+It ... it appears that I change the topic , but you will see in a few weeks that it 's really related not even a few weeks you will see that it 's really related to the conservation of momentum .
+I 'm going to explain to you now what we physicists mean by center of mass of a system .
+The center of mass of a system is defined as follows : I have here some kind of an object not just a point mass , but it has a finite size .
+It could be a hammer .
+It could be something like this a squash racquet .
+And let the center of mass be , for instance , here .
+This is the center of mass .
+I pick any origin I want to .
+You 're totally free to choose this origin doesn 't matter where you take it .
+And this , now , is the position vector of the center of mass .
+And now I carve out a zillion little mass elements , m of i , covering the entire object , and then this is the position vector , r of i .
+And the center of mass is defined as follows : the total mass of this object times the position vector of the center of mass is the sum , summed over i over all these little elements , i times the position vectors of the individual little particles that make up this object .
+v center of mass I find that by taking the derivative of this equation equals one over the mass total .
+I bring this on this side , I take the derivative here , and so here I get the sum of m of i times the dri/dt .
+And so this is the sum of i ... of mi vi , simply taking the first derivative , which changes positions into velocities .
+Now , this is also 1 over m total times the total momentum , because I 've all these momenta of these individual particles .
+They have a ... together , a total momentum .
+And so now you come to another very important statement in physics , and that is that the total momentum of an object which could be a hammer , which could be a squash racquet is the total mass of that object times the velocity of the center of mass .
+And if I take the derivative of this , then dp/dt of the total momentum of which we learned that the total momentum , dp/dt , is the total external force , we already learned that earlier that now is the total mass of the system times the acceleration of the center of mass , because I take the derivative of this equation .
+That gives me dP/dt here , and the velocity changes to acceleration .
+And look at this !
+This is really an amazing statement .
+This says F ma .
+But if I have here this squash racquet and here is the center of mass , then if I throw this object up in 26.400 , as I will do later , then the center of mass behaves as if all the mass of the entire squash racquet was right at that center of mass .
+So the behavior of the center of mass is extremely predictable , whereas the behavior of the squash racquet is not .
+It may start tumbling .
+If the external force on the squash racquet were zero , then it would continue to go always with the same velocity , the center of mass .
+If I had here a hammer this is a hammer and there were no external forces I would be somewhere in outer space and it would have a certain velocity .
+Then the center of mass , but only the center of mass , would have a velocity that never changes , because if there 's no external force then there is only a constant velocity .
+There 's no acceleration .
+But the hammer itself may be tumbling .
+A little later in time , the hammer may have this position .
+A little earlier in time , the hammer may have had this position .
+But the center of mass is just one smooth motion .
+That is very mysterious that there is one and only one point in any one of us in you , in me , in any object that the center of mass behaves as if all the matter were together in one point .
+And so this is another quite important statement : For the center of mass , the total momentum is the total ( no audio ) ... the velocity of the center of mass .
+And you take the derivative of that equation and you get F ma .
+And that means if the external force is zero you can go back to the upper line again if the external total force is zero , then the momentum of the system is conserved , and so the center of mass will then keep its velocity unchanged .
+Let 's do one calculation to give you some experience on how you derive the center of mass .
+I 'll take a simple case .
+I won 't take a hammer .
+It 's a little bit complicated .
+I will take three masses which are held together by very unphysical ... by massless rods , say .
+Then I have three point masses and that makes my life a little easier .
+Let this be the Y axis and this the X axis , and here at zero I have a mass m .
+At a distance l , I have here a mass 2m .
+This is also l and this is also l , so this is equilateral triangle .
+These are massless rods , and here I have a mass m .
+And I 'm asking you , where is the center of mass ?
+So you have three point masses , and they are connected with massless rods .
+Well , for those of you who have a good feeling for symmetry , they would say certainly it has to lie somewhere on this line .
+And it 's probably slanted in the direction of the 2m , so it will probably be somewhere here .
+And so this will be the position vector r center of mass , and the individual position vectors from the origin here will be this , and this will be a position vector to this object , and the position vector to this object is zero .
+And so now we can calculate the position of the center of mass as follows .
+We know that the total mass , which is 4m times the position vector , r center of mass I go all the way up there on the blackboard ; there 's my definition for center of mass equals the sum of the individual masses times their position vectors .
+So it is the sum of i m of i times r i .
+And this i goes from one to three .
+Now , this is a vectorial equation , and whenever we have a vectorial equation , it sometimes pays off to split it into two components a y and to an x component .
+And so in the x direction ... of course , the same equation holds for the x component of these vectors .
+So now I have that 4m times the x component of the center of mass equals this mass times the x component of its position vector , which is zero , plus this mass , which is 2m times the x position , which is l so plus 2m times l plus this mass times the x component of this mass , which is one half l .
+So that gives me plus one half m times l .
+My m goes and so I get that x center of mass equals 2 divided by four .
+That is five eighths l .
+So we were not too far off where we put it .
+Now , in the y direction , you can do exactly the same .
+You can split it up into the position vector of this object , which is one half l square root three .
+This one has no y component and this one has no y component , so this is very easy .
+So you 're going to get that 4m times y of the center of mass equals this mass m times the y component of that position vector , and that is one half l square root of three .
+And so you lose your m , and so you see that y center of mass then becomes the square root of three divided by eight times l .
+And I think that 's about 0.22L , very roughly .
+Yes .
+And so you see that we didn 't put it in so badly .
+It 's about one fifth of this distance .
+It 's about one fifth higher than this distance .
+And so you can calculate the center of mass .
+That 's really not too hard , if you have discrete points .
+If you have a car or if you have an object like this , then it is , of course , much harder to calculate the center of mass .
+I will teach you in a few weeks a very easy way to determine experimentally where the center of mass is located experimentally , which is different from calculating it analytically , as we just did .
+So I mentioned to you that the motion of the center of mass is very uniform in the absence of external forces , and that I can demonstrate for you again with the air track .
+We have a system here of two cars which I connected by a spring .
+I will turn on the air shortly because the air makes a lot of noise .
+This is ... these are two cars connected by a spring , and I will give these cars a certain motion and they will go in this direction .
+And they will oscillate in a weird way because they are connected with a spring and I keep them connected .
+And it will be nearly impossible for us to evaluate the motion of these two cars individually .
+But if I give the whole system a certain velocity and then they go like this , and they keep going like this and making crazy things , momentum of the center of mass will not change only of the center of mass .
+Not of this car , not of that car .
+That 's the uniqueness of the center of mass .
+And so the center of mass will just laugh at us and ignore all these motions and will travel at a constant speed very nicely .
+So if you concentrate on that little object , you may be able to see that .
+You may need a lot of imagination to see that , because you 're going to be distracted by the weird motion of the other two objects .
+This is the center of mass .
+It 's right in the middle .
+The objects have the same mass .
+There we go .
+You see how complicated this motion is of the individual cars ?
+Can you see that the center of mass is moving very uniformly , or can you not see that ?
+Oh , you think you can see that ?
+You have a lot of imagination .
+But I will help you .
+I will turn on ... I will turn off all the lights and only turn on ultraviolet light .
+And ultraviolet light will interact with that little ball , the center of mass , and when I then make it dark , you will only see the motion of the center of mass .
+And then you can really see that the center of mass moves in a very civilized way .
+I 'll bring it out here again .
+Okay .
+So now I 'm going to help you to concentrate .
+Are the timers off ?
+Yes , timers are off ?
+Okay , dark .
+Let your eyes get used to the darkness .
+Okay , I 'm going to do the same thing , and now look at that center of mass .
+And we know that these cars are doing crazy things .
+Hard to predict but the center of mass behaves decently .
+Beautifully !
+Constant velocity .
+I can let it go backwards , so you can enjoy this once more .
+Center of mass motion , in the absence of external forces has a constant velocity .
+When I throw up a hammer , then the hammer will do very weird things .
+The hammer will start to tumble and rotate , but the center of mass will behave in a civilized way .
+If I throw up a hammer , then the center of mass and only the center of mass will just go along a perfect parabola as if it were just a tennis ball .
+Now at one point ... I will do it with a squash racquet at one point the squash racquet may be like this , and at another point , the squash racquet may be like this , and a little later , it may be like this , but the center of mass of the squash racquet will perfectly go along a parabola .
+And so we have here a squash racquet and we have here the center of mass .
+I have also here a regular ... well , it 's not quite a tennis ball , but close enough .
+This one , you would expect it to behave perfectly like a parabola .
+From this one , you would not expect it to behave like a parabola .
+Let me throw this one up in light , and you will see that it has very strange motion .
+If I show the whole thing in UV , then you will see the same kind of beautiful parabola as you would see with this ball something like this .
+Forget the fact that it lights up .
+You remember it was the last lecture that I wanted to remind you of .
+So now we 're going to turn off the lights and I want to show you the motion of the center of mass .
+You see the center of mass here ?
+Can you all see it ?
+Okay , there we go .
+You ready ?
+Concentrate only on the center of mass .
+Nice parabola or not ?
+I 'll do it again .
+You see the center of mass ?
+Can you see it ?
+You can still see it , right ?
+Wonderful parabola for me !
+All right .
+Enjoy the presence of your parents .
+Have a good weekend .
+See you Monday .
+==========

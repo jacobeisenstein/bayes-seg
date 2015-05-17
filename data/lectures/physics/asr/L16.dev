@@ -1,0 +1,645 @@
+==========
+all right last time we talk exclusively about
+implicit inelastic collisions
+today i will talk about emissions in more general from
+let s take a one dimensional case
+we have here m one and we have here and to and
+to make life a little easy to make the v two zero
+and this particle has velocity v one
+after the collision and two
+has a velocity v two prime and
+them one letter have a velocity v one prime
+i don t even know whether it s in this direction or this in that direction you will see it here one is possible
+to find the one prime and to find v two prime it s clear that you re now need to equations
+and if there is no net external force on the system as a whole
+during the collisions then momentum is conserved and so you can write down that and one
+v one must be m one v one prime
+plus m two v two prime
+now you may want to put arrows over that to indicate that these are vectors distance is the one dimensional case you can these the arrows off
+and the signs will then automatically take care of the direction if you call this plus
+than if you get a minus sign you know that the velocities in the opposite direction
+so now we
+need the second equation
+bind physics we do believe very strongly in the conservation of energy
+not necessarily in the conservation of kinetic energy actually have seen last time you can destroy kinetic energy
+but somehow we believe that if you re destroy energy it must come out in some other form
+and you cannot create energy out of nothing
+and in the case of the complete the inelastic emissions that we ve seen last time
+we lost kinetic energy which was converted to heat
+there was a internal friction with the car wreck plow into each other
+that was internal friction no external friction and that took out kinetic energy and so in
+it s most general form
+you can write down that the kinetic energy before the collision plus some number q equals
+the kinetic energy after the collision and if you know q then you have the second equation
+and then you can solve for v one prime and forty two prime
+if q is a larger than zero
+then you have okay gain kinetic energy that is possible we did that last time we had
+two cars which were connected by a spring and we weren t a wire
+and each went off in the opposite direction the was no kinetic energy before
+if you
+call the the collision but the what s kinetic energy afterwards
+that was the potential energy of the spring
+that was converted into kinetic energy
+so q can be larger than zero we call that a super elastic collision
+could be an explosion that s the super elastic collision and then there s a possibility that q
+equals zero very special case we will deal with that today and we call that
+elastic collision
+i will often call it a completely elastic collision which is really not necessary elastic
+itself or eighty means q is zero
+and then there is a case which we have seen
+several examples last time of the elastic collisions when you lose kinetic energy so this is in in
+elastic collision
+and so if you know q is then you
+can solve these equations whenever q is less than zero whenever you lose kinetic energy the loss in general goes into
+eat now i want to
+continue a case whereby i have a completely elastic collision
+so q is zero
+momenta this can surface because there was no net external force so now kinetic energy is also conserve
+and so i can write down now one hot and one
+v one screen that was the kinetic energy before the collision must be the kinetic energy after the collision
+one half m one v one prime squared plus one half and two v two
+prime squared this is my equation number one and this is my equation number two and
+they can be solved you can solve them the assault in your book
+i will simply give you the results because the result of very interesting to play what s that s what we ll be doing today
+t one prime
+will be n one minus m two
+divided by n one plus n two
+times v one
+and v two prime
+will be two n one divided by m one plus n two
+times d one
+the first thing that you already see right away
+is that
+v two prime is always in the same direction is v one that s completely obvious because
+the second object was standing still remember
+so if you plow something into the second object they re obviously continue in that direction that s clear
+so you see you can never have a sign reversal here
+key however you can have this sign reversal
+if you bounce a ping pong ball of a billiard ball the ping pong ball will come back and this one becomes negative
+whereas if you plow billiard ball onto a ping pong ball it will go forward
+and so this can both be negative and can be positive depending upon
+whether the upstairs is negative or positive so this is the result
+which holds under three conditions that
+the kinetic energy is concert so q is zero
+that momentum is conserved and that v two before the collision equals zero
+let s look at three interesting cases whereby we go to extremes
+and let s first take the case that n one is much much larger than n two
+and one is much much larger then them to another way of thinking about that is that that and to
+go to zero extreme case the limiting case
+so it s like having a bowling ball that you
+collide with the ping pong ball
+if you look at that equation
+when n two goes to zero
+this is zero this is zero notice that v one prime equals v one
+that is completely intuitive
+if a bowling ball collides with a ping pong ball the bowling ball and even see the ping pong ball it continues it s road is it nothing happened
+that s exactly what you see after the collision the bowling ball continues on wolpert
+what is v two prime
+that is not so intuitive if you substitute in there
+and two equals zero
+then you get plus two v one
+not obvious that all
+plus two v one
+it s not something you d want you to see i can see it meter i do a demonstration you can see that really happens so now you
+take a bowling ball
+and you call i to bowling ball with the ping pong ball and the ping pong ball
+we ll get the velocity to v one
+not more not less and boeing will continue with the same speed
+now let s say okay okay so by n one
+equals much much less than n two
+in other words in the limit and k is m one goes to zero
+and we substitute that in here
+so
+one goes to zero
+so this is zero and so you see v one prime equals minus v one
+v one prime equals minus v one come to the obvious
+the pink the ball bounces of the bowling ball and adjust bounces back and this is what you see
+and the bowling ball doesn t do anything because and one goes to zero two v two prime goes to zero
+so that s very intuitive
+and now we have a very cute case of m one equals n two
+and when you substitute that in here but m one equals n two
+v one prime becomes zero
+so the further so one starts but v two prime becomes v one
+if m one equals n two
+you have to downstairs here into up stairs and you see that v two prime equals t one
+and there s a remarkable case you ve all seen that you ll play with newton s cradle
+you have two billiard balls
+school in the other one bank thrown it
+the first one stops and the second one takes off with the speed of the first an amazing thing
+we ve all seen it i presume you have all seen it blows people do this
+with pendulums went about things poles against each other i will do it here
+with a model that you can see a little easier i have here billiard balls
+and if i bounce this one on this one and we have case number three then you see this one standstill and this one
+takes over the speed quite amazing
+every time i see is a lot of it is a wonderful thing to see
+nature just imagine you in nature
+and this ball comes on
+and in no time it ll have to solve these two equations very quickly there s only one solution
+a nation knows how to do that this one stops and this one goes it s an amazing result
+and i m sure that you have seen these pendulums that you can play with here we have
+not a bowling ball on two ping pong ball but we have a
+well you all the mass ratio is not infinity to one but this five hundred to one it s it s quite large
+and so what i will first do is very into it if i will first bounce the ping pong ball off the bowling ball the billiard ball
+the ping pong ball comes back almost with the same speed not quite
+because ratios not infinity to one but it is five hundred to one and
+the billiard ball will the practical and nothing is exactly what you see there in case to their ego
+you see the ping pong ball comes back almost as far
+as i let it go dell s unit the speed oh it the speech has not changed just bounces back
+and the bill little almost of nothing now comes case number one that s a non intuitive case
+it is intuitive that if the billiard ball hits the ping pong ball
+that it will continue as you will see v one prime is the one with the same speed
+it s not all intuitive that the ping pong ball will get twice the speed of the built a blend of course
+you cannot see that quantitative because we don t woe quantitative measurements of the speed of the
+pick them all but you will see
+that it bounces of quite high so there we go
+the billiard ball onto
+the ping pong ball
+look at the billiard ball alone forget the ping pong ball and try to see that the speed of the billiard ball
+is practically unaffected by the collision that s what you see there
+p one primus v one
+is she s practically unaffected
+now of course it is we harder to see that the ping pong ball
+cats twice the speed of the billiard ball
+abuse we don t do
+because we don t do a quantitative measurements all right
+so those were examples then of those three
+possibilities that you all seen on the blackboard there
+now i want to do more
+completely elastic collisions and i m going to do that with the air track
+i m going to try to make
+completely elastic collisions that s not so easy
+i i have one object standstill so always v two equals zero
+and they re completely
+the last of it
+kinetic energy is conserved is were completely is not necessary always edited in my mind
+i m going to have one object m one but
+which i ve and against object and to an object and two will be spending he will have no speed object them one comes in from the site
+and i ll try to make the collision
+they lasted and away and we ll do that is by using springs which i attach to each mass and springs are
+conservative forces solo there s almost no heat
+that is generated in the springs during the collision
+and so to a reasonable approximation you ll get
+but elastic collision but of course there s always end wreck i can ever take and rec out
+so there s always son external for an external force on the system
+so momentum is never exactly conserved and kinetic energy
+is never exactly conserved years so it s only an approximation
+so i have one mass
+of unit one i will tell you what that is
+and i then that into number two
+and the masses that i have one mass is two forty one
+was a minus one m and the other mass that i have is for eighty two
+was a minus one grams and i have
+two of these and my first experiment i will use these two
+so this is the ratio that you see one to one i will
+vivid is certain velocity which i can not tell you what that is
+that depends on how happy i feel if i push heart and the velocity will be high
+if i push soft lead the velocity will be low but it is something
+and then we re going to get here v one prime and there is a prediction
+that is velocity would be zero
+you call the way of the blackboard there
+you will see the masses i the same
+and as an elastic collision this one will stand still
+and this one v two prime will have a velocity v one but that s a prediction
+the second case i bounced one car on to another one which is twice the mass
+certain velocity which i don t know what it is
+and now what are we going to get so mass m one
+is hot the mass of n two
+so this is a one and this is a two and this is three
+one minus two is minus one divided by three is minus one third
+so number one comes back no surprise if you bounce
+allied oil checked off a more massive object no surprise that it bounces back so that s minus one third
+and when we look here we have two times one divided by one plus two which three that is plus two thirds
+so number one will come back with the speed
+one third which of course since is is sign sensitive we get one third v one
+and this one is plus two thirds v one that s the prediction and the way we re going to measure right
+this by measure the time for the objects to move over a distance of ten centimeters no matter how long
+you see these course to be there is here a piece of metal which is ten centimeters long
+it go through slot with and i don t we have one system here and one there
+and you and this ten centimeter movement we measure the time we began
+when this piece of metal enters the diet system and we stopped a time when it leaves the diver system and each one of those cars
+has this ten centimeter metal plate
+so the way we re going to do is is by measure time and of course this velocity
+will give me a certain time
+and this velocity will give me a certain time
+whatever comes out you will see that on this time and then
+t one crime
+this in this case
+it s standstill so must be zero
+and t two prime
+must be the same s t one so these two numbers you should be able to compare directly
+what kind of uncertainty is do we have is hard to tell
+but i would say as i ve argued last time that you should allow for at least about two and a half percent uncertainty in each time
+if it comes out better than you re lucky if it comes out worse than it is a bat they
+two and a half percent and argued last time how i reasons about the two and a half percent
+now when do this experiment we get a certain q one
+and so low this one goes back with
+one third of the speed
+so it will take three times longer to go ten centimeters so i m going to multiply this time
+by one thirds
+and whatever comes out should be the same as is so let me move this up a little
+v two prime
+the speed here
+a forward speed is two thirds so it will go slower
+so if i multiply this time by two thirds then
+i should be able to compare with t one
+and all that all these times i think will not be any better than roughly two and half percent
+except
+if we are little lucky
+okay
+system is up
+done is erupt
+i m is a this will be the time t one
+this will be the time t
+two prime
+and this is the one when the object bounces back so it is here one prime
+you won t see that it is negative
+it will go back to the saints lot
+and electronics is arrange in such a way that when it goes back to the same slot
+ago initiate this time
+i will zero m
+first you have to tell me
+but they re working i will just let it go through the slot this one working
+the meter this one is working
+if i send this one back
+this one working right
+okay well we go
+is the one that will have no speed and this is the one that we re going to
+give a boston
+you re ready i ll you know what you re
+see this one will come to a halt and this one will go on they have same as
+and we go
+it s one is indeed coming to a halt and this one to go over the speed what i d and numbers
+one ninety four and one ninety six only two milliseconds different
+that is an incredible result
+oh point one nine for
+and oh point one nine six so the one percent difference between
+way within my while this expectations
+because my expectations were that they could be off each by two and half percent
+now we go to the one to two so here
+is the car which has twice the mass
+important that i zero it
+and now this one
+is going to come back
+so you re going to see this one come in a few the time here
+this one go through here if you the time here this one will come back issue time
+i d is zero
+okay
+you ready
+now
+there we go
+okay now
+now comes the real acid test
+one two three one eight six
+one two three
+and what is the last one three seven five
+okay let me be lazy and let me use my calculator
+three seven five
+divided by three i could ve done that i want of course
+this is oh point one two find an amazing agree
+amazing only two percent off left and two percent now here oh point
+one eight six times two divided by three
+oh point one to four i can believe it
+less than a percent off
+so you see in front of the ice and we were able to create something
+that was in the x to be close to
+elastic collisions in spite of all the problems that we have ever had
+and that of course there is always some laws off
+kinetic energy but it s so little that it doesn t show up in these measurements
+==========
+now i want you to have a citizen i
+i want you to think about the following
+and if you can solve it before denied this over then
+i really think you should lightweight
+here s the wall
+here is a tennis ball that comes in with a certain mass and
+and it has a certain velocity v whatever that is
+it s in the yearly elastic collision and it bounces back from the wall
+and we all know that gives an inelastic collision
+that it comes back with the same velocity
+kinetic energy is conserved all the kinetic energy
+is in the tennis ball nothing is in the wall the wall has an infinite large mass about
+the momentum of this tennis ball has changed by an amount to m g
+that momenta must be in the wall it s not the notion will because momentum must be conserved
+so now here you see in front of your eyes a case that the wall has momentum but it has no kinetic energy can you
+understand that can you reconcile that can you show me mathematically that that is completely kosher that the wall
+has momentum two m v
+someone on the notion whole it must have momentum and yet it has no kinetic energy how is that possible
+think about it and if you can solve it call me a three a m and i ll tell you the solution okay now let s look
+==========
+at this from
+the center of mass frame of reference the center of mass is very special
+and this is is love to work
+in the center of mass for reasons that you will understand
+in the absence of any net external forces on a system as a whole as we discussed last time the center of mass
+we ll always have the same velocity we did a demonstration there
+with two vibrating object with the spring
+but yet the center of mass was moving with a constant velocity
+the d now is if you jump into the frame of the center of mass that means you move with the same velocity of the center of mass
+the center of mass standstill in your frame of reference
+and if the center of mass standstill the momentum
+of the particles in your frame of reference in the center of mass frame of reference is zero
+it is zero before to conditions
+that is zero after the collisions and this gives the center of mass some amazing properties that i will
+discuss with you know first we have a particle and one
+and we have a particle and two
+and let this one
+in the center of mass frame
+had a velocity you one
+and this in the center of mass from has a velocity you too
+i give it specifically use so that you can separate
+the use from the things the visa always indoor frame of reference the use i in
+the frame of reference of the center of mass and i take a case whereby i have a completely
+elastic collision that means q is zero the kind that we have just discussed
+momenta and is not only concern but it is also zero
+at all moments in time before and after the collision
+after the collision let s say them to goes back with velocity
+you to prime and that s a and one
+has a velocity
+you one crime
+that s the situation after the collision
+now i know that momentum is zero
+so can i can hear i i would he can write down for the situation after the collision that and one
+times mu one prime plus n two
+times you to prime must be zero
+i don t write them down as vectors that s not necessary because it to one dimensional collision
+and the signs will automatically take care
+of the directions
+i told you i chose the case of a completely
+elastic addition q is zero and so no kinetic energy must be conserved
+so i have before the collision i have one pop and one you one squared plus one half
+them to you too squared
+and after the collision i have one hot them one
+you one prime square it was one half and two
+you too i m scraped kinetic energy before kinetic energy afterwards equate one equation two
+nature can solve that quicker than we can and the result is amazing
+the results in the center of mass
+is that you one prime
+equals minus u one and you to crime
+equals minus u two
+and that is an amazing result when you think about it it means that in the center of mass
+all that happens if that the speed to reverse directions
+but the speed the velocity is weaver directions but the speeds remain the same and that is a remarkable
+the remarkable was so
+if you ever want to
+move yourself to the center of mass you have to know what the center of mass velocity is
+how to b calculate the velocity of the center of mass
+so we use in here with the center of mass frame
+and now i m going back to the board which
+and we know that and total
+times the position vector of the center of mass of the way to find the last time equals m one
+times the position vector of particle one plus n two
+time and position vector of particle two and so if you take the derivative of this equation
+then the positions become velocity is so the velocity of the center of mass equals one
+divided by n one plus n two
+because that s the and total which i bring under here in upstate as i get them one v one
+two plus m two v two
+and notice i left the arrows off because since it s a one dimensional problem signs will take care
+of the directions
+so this is the velocity of the center of mass
+i wrote also there on the blackboard because later on in this lecture i will need it
+and it is possible that by that time i have arrays it and so that s why i voted on there too
+so if now you want to know what you
+nice so we are
+now you want to know what the velocity is in the center of mass frame that of course
+equals v one minus
+the velocity of the center of mass and you two equals v two
+minus the velocity of the center will mine
+so this is a way that you can transfer if you want to
+into the center of mass frame
+and a son i m space off for reasons that i mentioned
+that the momentum in the center of mass frame is zero
+always zero before the collision and after the collision independent of whether it is an elastic collision but it s an inelastic collision
+or whether it s a super elastic collision
+now if you later wanted to transform back to your laboratory from
+then of course you ll have to add the velocity of the center of mass again to the you one prime
+and you have to at the velocities center of mass to the u two prime
+the velocity of the center of mass has not changed
+as seen from your frame of reference
+because of a lot of center of mass is always the same remember because momentum is conserved
+so to get into the center of mass frame you must subtract
+the velocity of the center of mass from the initial velocities to get out of it
+you must atom
+==========
+now the kinetic energy and the momentum depend on you re reference frame
+in general the total momentum as seen from your seat is not zero that s only in a very special case
+in case of the center of mass the total momentum is always zero
+the kinetic energy as seen from the lab frame is certainly in general not the same as the kinetic energy from
+the center of mass frame and now comes another unique property off the center of mass
+if i have a completely inelastic collision
+then all energy in the center of mass frame is lost
+that s obvious in the center of mass frame remember
+momentum is zero so you re in the center of mass one particle comes to you and the other comes to you
+you re not moving you in the center of mass they get stuck together
+because it s a completely an elastic collision if they get stuck together
+after the collision they stand still
+that means all kinetic energy that was there before is all the short and this kinetic energy
+as observed in the center of mass frame we call the aim turn all energy
+and there there is the maximum energy in the collision that can ever be converted into heat
+and i will show oh that to you
+partially i will do some of the work and i will that you do some of the work as well
+so i will first calculate
+in your frame of reference when you re sitting
+how much energy is lost
+when we have a completely inelastic collision
+i will then transfer to the center of mass frame
+and i will show you then this quite amazing property
+so now we are back in twenty six one hundred and we re going to make a completely
+inelastic
+collision that means they stick together remember and and to
+we will have again to make life a little simple know speed
+v two equals zero and and one
+has a velocity v one you ve seen is now resilient times they get together the stick together
+and so i have here a velocity which i call b prime
+and the masses m one plus m two
+just after the collision
+momentum is conserved if there s no external net external force on the system and so i can write down that m one v one
+must be and one plus n two times v prime and so v prime
+equals m one v one divided by m one plus two
+that s a very simple calculation
+this by the way it is not so obvious is also so all the velocity of the center of mass
+and how can i see that so quickly well
+what was the velocity of the center of mass
+here you had it this was in general
+this was not for the case that v two was zero it was more general make v two zero and you see exactly that
+you see here the same result so this must be the velocity
+of the center of mass
+now how we can calculate what the difference is
+between the potential energy the kinetic energy after the collision and kinetic energy before the collision
+that is of course something that is brought a trivial you know
+what the kinetic energies before the collision it s one half m one v one squared
+and you know what it is i after the collision i calculated v prime
+and so have to take off this mass multiply it by d is velocity is quit you can do that i m sure you can do that
+and you ll be able to see that this equals minus you have to recycle to buy little bit minus one half
+and one and two divided by n one plus n two
+times the e one squared that s what you will find the minus sign
+is predictable we loose kinetic energy when there isn t completely inelastic collision we ve done many last lecture
+you lose kinetic energy we solid and every single case that s what the minus sign beans
+this is q
+you lose kinetic energy and that goes into heat so you re on your homework now
+in the laboratory frame and you are home free very well
+now i m going to do the same calculation in the center of mass right
+and i will show you now that s the purpose that this amount of energy
+which is what is lost
+that that is all that lost to start with in the center of mass m and that s the unique property of the center of mass
+and so i m going to convert now
+transfer you to the center of mass from and then we will calculate how much energy
+there was in the center of mass frame
+before the collision because after the collision there is nothing is zero
+in case of a complete the inelastic collision
+there s no kinetic energy left in the center of mass for
+so we don t the center of mass frame
+so it first have to calculate what you bounce well you one
+equals v one minus the center of mass
+and we know the center of mass is is right there
+that s right it s
+and if you do to subtraction achieved by no means difficult you will find n two
+divided by m one plus n two times v one
+and you check that i hope and now we go to calculate you to you want to know what the
+velocity is the center of mass the other one that of course is v two
+minus the center of mass but this was zero is m one
+divided by m one plus n two
+times the one so the difference is only d m one upstairs and the end too
+now we re going to calculate the kinetic energy
+in the center of mass right
+well that equals one half
+of m one times
+you one squared plus one half and two
+times you two squared that s all we have before the collision will curse
+uh whether way this is not the mind is is a plus sign and this is a minus sign this one comes this way
+and this one goes in that way now i can i can calculate that for you you know you
+you know you too
+i suppose oh my that s i make a difference because they cancel anyhow what you going to find one half and one
+and two divided by m one plus n two times
+v one square
+and this was exactly the same that we had there and so what you see here
+if you allow me for having skip some steps and algebra
+you will have to do a little miss i she to get from here to here
+you see here this is the kinetic energy before the collision and all that kinetic energy east
+remove it went to p
+is the maximum you can ever lose and this is what we call the internal kinetic energy of this is
+so going to the center of mass system you can always immediately
+calculate what the maximum d t s but you can expect from a collision
+we can take a very special case
+and we can take them to
+going to infinity if like having a piece of funny and i slept on the wall you get stuck and was
+the maximum heat that you can
+produced that s all the energy there is if n two becomes infinitely high then
+and one can be ignored and to cancel than to you get one half and v
+m one v one squared and that s obvious
+that s completely trivial i have a piece of putty
+as slanted against the wall it has a certain amount of kinetic energy whether you see the you re reference frame
+or in the reference frame of the center of mass it s immediately obvious
+that all the kinetic energy is lost and that s exactly what you see
+comes out of these equations whether you go to the center of mass or whether you do it from twenty six one and
+i now would like to return to the air track and do
+several completely inelastic collisions with you began
+we have to assume that the momentum is conserved
+it never is completely but we can come close
+and we will
+i have two cars that
+no we re going to because now completely inelastic
+completely inelastic
+so they in each other and they get stuck
+i get a certain velocity which i put into the first car it s
+it s the second car and it gets stuck
+and i see there what my v prime is
+i see there on the blackboard
+and if the two are the same at one here
+i one and a one here is that the ratio so the outcome is and v prime this be one half v one
+so this must be one half v one
+now i have a mass which is half the other one
+i plug it into the other they get stuck together and now i get one
+divided by one plus two i get
+one third noticed in both cases i get a plus sign
+that s of course obvious if i go into something and they stick together they continue in the same direction
+and so no i will do the timing in exactly the same way that i did before except that now i
+haven t completely inelastic addition
+we ll have a time t one
+and i wasn t i mean the prime
+the cars have a slightly different mass to thirty seven
+the minus one brand and have one that is four hundred and seventy four
+plus minus one brain not too different from this i have
+two of these contests and i have one of these
+and first i m going to slam
+the stew on to each other
+and so when they collide i expect the speech to be hot so i get a certain amount of
+t one so t one the time will be
+twice as long because the speed goes down by a factor of two so when i multiply
+is number by one half
+i would like to get as you move back he i get the time for this car
+the first want to come in because me a certain time
+when they continue together speed is three times war
+so this time will be three times higher
+so i multiply this by one
+and i would like to get that i m back
+and those are the two experiments
+that i would like to do now so we have to getting always back on
+metric one
+right too
+he we have the two because they have a valve crowe
+so when they hit each other they get stuck sometimes would bounce actually i have a good experiment then
+this one goes here
+is one goes here i d is to time is on
+we don t eat this time anymore either ozone
+zero then
+zero then my the zero
+okay you ready this one is
+plow into this one the merge and they continue and then you see
+the time he prime here there we go then
+alright what is the
+one create to eight a
+one three eight to eight eight
+one the eight
+two eight eight divided by two oh point one four four
+that is the different is only six and that is only
+four percent on that completely within my prediction that each time could be off by two and a half percent
+now i will have a car
+which is twice the mass
+and this is one the mass
+i will set them again zero and now we get one on to double the mass
+ready
+we go
+ah you see the month
+they did in fact
+we ll have to start over
+they don t think of course that it s
+well and completely inelastic collision that window
+and made a slight bounds which i didn t like let s see would be get can always do it again
+one six eight five for five
+one six eight
+multiply this by three
+five a love for five for five
+eight percent difference is a little high
+but the things can happen i told you did bounced i d like that
+and then they got stuck again i will do it once more
+maybe have a little bit lucky
+and i bounced a little before they finally emerged
+six o three one eighty seven
+one eight seven
+six oh three if i divide this by three i get oh point two oh one and that is off again
+by about thirty units about seven percent different and so it s a little bit more than five percent but i ll
+==========
+to make it worse for you to night i would like you to think about something else
+not only about the tennis ball against the
+wall whereby the wall has momentum but no kinetic energy
+but now i would like you to think about this amazing thing i have eights billiard balls here in your
+newton s cradle probably also have eight balls hanging from pendulums this is easy you to demonstrate a twenty six one hum
+now i that to malls bang onto the other six
+antinode you predict what s going to happen in your prediction is correct
+if you slant two balls on to the six
+nature is going to calculate like mad to conserve momentum to conserve kinetic energy
+closely enough to completely elastic collision and outcomes at the only way that nature can do it is the following
+there all standstill and these to takeoff look again
+all standstill and these to take off that s not an easy calculation but now look at the following poland
+what happens if i take three
+and i days three on the others five
+what you predict this going to happen
+how many will take off
+three you think you sure
+you are right okay now five
+five on three there s a tough problem even for nature
+what you think will happen
+i go again and three will say you re good
+if anyone you can show me analytically that this is what has to happen i would love to see those results okay
+so you wednesday
+==========

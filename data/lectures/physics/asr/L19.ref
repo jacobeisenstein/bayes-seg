@@ -1,0 +1,564 @@
+==========
+we have
+here going back to
+rotating object
+i have an object here that has a certain velocity v
+and
+is going around with angular velocity omega and a little later
+the angle has increased by an amount theta and then the velocity is here
+we can remain now do something we haven t done before we could
+if this object in the circle and acceleration
+so we don t have to help keep the speed constants know v
+equals omega are
+so that equals theta of dot times r
+and i can take know how the first derivative of this then i get a tangential acceleration which would be
+omega dot times r
+which is theta double golf times r
+and we call theta of double dot we call this off iraq and all phi is the angular
+acceleration which is in radians per second squared
+do not confuse ever the tangential acceleration
+which is all along the circumference
+with a centripetal acceleration the two ooh
+are both there of course this is the one that makes the speech change along the circumference
+if we compare our knowledge of the past of a linear motion
+and we want to transfer it now to circular motion
+then you can use all your equations from the past if you convert x two theta v
+to omega and a two five
+and the well known equations that i m sure you remember can then all be used for instance the equation
+x equals x zero plus v zero t
+plus one half a t squared simply becomes for circular motion theta
+equals theta zero plus omega zero t plus one half
+i ll find t squared is that simple omega zero is then the
+angular velocity at time t equals zero and theta zero is the angle
+at time t equals zero relative to some reference point and the velocity
+was be zero plus eighty that now becomes that the velocity goes to angular
+velocity omega equals omega zero plus ah forty
+so there s really not much at it in terms offered
+remembering the equations
+if i have a rotating disk
+==========
+i can ask myself the question now which we have never done before
+what kind of kinetic energy how much kinetic energy is there in a rotating disk
+we only dealt with many emotions is one half m v squared which we never considered rotating objects
+and the energy that taken okay
+so let s work on that a little i have here a disk
+and the center of the discus see
+and this disk is rotating with angular velocity omega that could change in time
+and and the disk has a mass m
+and the disk has a radius r
+and i
+know at this moment how much kinetic energy of rotation is stored in that these
+i take a little mass element here them of i
+and this radius equals r of i
+and the kinetic energy of that element i alone equals one half m of i
+times v of i squared and v of i
+is this velocity is angle is ninety degrees is is v of i
+no equals omega are that always holds for these rotating object and so i prefer to write this
+that s one half m of i omega squared r of i squared
+the now i think about writing it this way is that
+omega on the angular velocity is the same for all points of the disk breast the velocities not
+because the velocity of a point very close to the center is very low the velocity here is very high and so by going to omega
+we don t have that problem anymore
+so what is now the kinetic energy of rotation of the disk
+the entire this okay so we have to make a summation
+and so that is omega squared over two times the sun
+of them of i r i square the overall these elements and nine which each have the individual radii r y
+and this now
+is what we call the moment of inertia i
+confuse that with in poles has nothing to do with in poles and this is moment of inertia
+to the moment of inertia is the sum of an i r i squared
+in
+so this can also be written as one heart off by
+i put is see there you will see shortly why because the moment of inertia depends on which axis of rotation i choose times
+omega spread and then you see that equation you say hey that looks quite similar to one half and v squared
+and so i have to this list now if you go from
+the knee emotions to
+rotational motions
+you should change the mass you in the motion the moment of inertia
+into rotational motion and then you get back to you one half m v squared you can see that
+so we now have a way of calculating the kinetic energy of rotation
+provided that we know how to calculate the moment of inertia
+what a moment of inertia i is a boring job it s no physics it your math
+and i m not going to do that for you it some integral and if the object is nicely symmetric in general you can do that
+in this case for the disk
+which is rotating about an axis through the center
+and the x is that s important is perpendicular to the disc that s essential in that case the moment of inertia
+equals one how and times r squared
+and i don t even want to to remember this that tables and books and you look these things up
+i don t remember that i may remember it for one day but then obviously you forget that
+very quickly again
+needless to say that the moment of inertia depends on what kind of all object you have where
+have the disco what you have a sphere
+or whether you have a lot makes all the difference
+and also makes a difference about width which axis you rotate the object
+if we had a sphere a solid sphere
+then so here you have a solid sphere and i rotate it about an axis through its center
+then the moment of inertia i happen to remember
+equals two fish m r squared if r is the radius and m is the mass of the sphere
+my research is in the store physics i do with stars and stars have rotational kinetic energy will get back to that in a minute
+not in a minute but today and this is the one moment of inertia that i do remember
+if you have a rod and hand
+you let is rod rotate about an x is sue the center
+and these x is is perpendicular to the wrought the latter is important perpendicular to the rod and it has length l
+and it has a mass m
+then the moment of inertia which i looked up this morning i would never remember that equals one twelve m l squared
+and all these moment of inertia you can find in tables in your book on page three oh now i
+so the moment of inertia for rotation about the this axes of a solid disk
+is one half m r squared but it s completely different the moment of inertia if you rotated it
+about the sexes
+so you take the plane of the disk instead a rotating it this way you rotate it now this weight get only different moment of inertia
+and most of those you can find in tables but not all of them
+tables only go so far
+and that is why i want to discuss with you too
+theorems which will help you
+to find the moment of inertia in most cases
+==========
+suppose we have a rotating disk now make you see the disk now
+with that throw this is a disk
+and we just discussed the rotation about the center of mass
+and i call this x is l
+and so was rotating like this
+and was perpendicular to the disc this is the moment of inertia but now
+i m going to drill a whole year
+and i have you and x is l prime
+which is parallel to that one and i m going to force this object to rotate about that x is i can always do that
+i can real a whole camp an axle nicely friction is bearing and i can foresee to rotate about that
+well now how is the moment of inertia
+if i know the moment of inertia than i know how much rotational kinetic energy this that s one have i omega squared and now there is a theorem
+which i will not prove this very easy to prove and that is called
+the parallel
+x is
+theorem
+and that says that the moment of inertia
+of rotation about l prime
+provided that l prime is parallel to l
+is the moment of inertia
+when the object rotates about an axis l
+through the center of mass plus
+the mass of the disk times the distance d squared so this is the mass
+and that s a very easy thing to apply and that allow you now
+in many cases to find the moment of inertia
+in situations which are not very symmetric
+imagine that you had to do this
+mathematically that you actually had to do an integration
+of all these elements m high from this and
+or non that would be a company had a to track i wouldn t even know how to do that so it s great
+once you have demonstrated one to have proven that despair like the fear of works then of course you can always use it to your advantage
+notice that the moment of inertia for rotation about the the sacks is which is not through the center of mass
+is always larger than the one through the center
+see you have this and b squared always larger
+there s a second theorem which
+sometimes comes in handy
+and that only works when you deal with very thin objects
+and that is called the perpendicular
+perpendicular
+x is
+theorem
+if you have some kind of a crazy object which of course we will never give you would always give you square or big if you would disk
+but it has a beef in plates otherwise the perpendicular axis theorem doesn t work
+and suppose i m rotating it about an axis perpendicular to the blackboard to that point
+i call that the z axis sticking out to you that s positive z axes
+i can draw on now any x y axes
+what i please at ninety degree angles anywhere in the plane of the blackboard so i pick one here i call this x
+and i pick one here and i call that y
+so z is pointing towards you remember i always choose a
+positive a right handed coordinate system my x cross y is always in the direction of z
+i ve always do that and so you see that here
+x cross y equals z
+now you can rotate this thing plate about this axis you can also rotate it about that x is
+and you can also rotate it about the z axes
+and then the perpendicular axis theorem which your book pros in o s just a few lines
+tell you that at the moment of inertia for rotation about this x is here is the same
+as the moment of wrote moment of inertia for rotation about x plus
+the moment of inertia for rotation about the x is y and this allows you to sometimes
+in combination with the parallel axis theorem to find moments of inertia
+in case that you have thin plates which rotate
+about axes
+perpendicular to the plates or sometimes not even perpendicular sometimes
+you can use if you know this and you know this and you can find that
+so both our use full and i in the simon seven i ll give you simple problem so that you can apply the
+there perpendicular axis theorem there are
+==========
+applications where energy is temporarily stored in in a rotating disk
+and we call those this flywheels and and rotational kinetic energy
+can be consumed and at a later time
+so it s very economical
+and this rotational kinetic energy can then be perhaps converted into electricity or in other forms of energy
+and there media remarkably inventive
+an intriguing i d years on how this can be down
+of course whether it is practical the pencil always on blows incense
+and to what extent is economically feasible
+but i have always even when i was a small board i remember when i was seven years into ready okra to me that
+all this heat that is produced when cars splendid weights
+or you doing is you produce heat you lose all that kinetic energy of your
+any emotion weather somehow that couldn t be
+use in a more effective way
+and this is what i want to discuss with you now
+and see where we stand this is actually be taken seriously by the department of energy
+so i want to work out with you a an example of a car
+which is in the mountains
+and which is going to go downhill
+and the mountains a very dangerous
+zigzag roads and so he can only go here she can only go very slowly
+and and the maximum speed that the person could
+use is at modest ten miles or without killing
+him or herself which is about four meters per second
+the show here s your car
+and let s assume you start out
+with zero speed and let s assume that the mass of the cart will give a nice numbers is just one thousand kilograms
+and so you sit down down this road
+that is assumed that the
+hi difference
+h that give it a number five hundred meters
+and you arrive here at point p
+and you later have to go back up again
+what is your kinetic energy when you reach a point p hell
+you have a speed of four meters per second and as you when down
+you be breaking all the time or one way of another you got rid of your speed
+and that s all burned up the heat to heat of the universe so when you reach point p
+you re kinetic energy at that point p
+you simply one half m v squared and is the mass of the car so that is five hundred
+times sixteen v squared so that is a thousand joules
+now compare this with the work that gravity did in brain this car down
+that work is m g h
+and n g h is a staggering number
+a thousand times ten times five hundred that is five million joules
+and all that was converted to heat
+using the brakes it actually even gives you also wear and tear on the brakes
+so won t eat it is there perhaps a way that you can sell it it oh maybe not all of it maybe part of it
+and the answer is yes there are weights
+but least in principle there are ways
+you can install a disk in your car which i would call then a flywheel and you can convert
+the gravitational potential energy
+you can convert that the kinetic energy of rotation in your flywheel
+and the show you this not completely absurd
+i will put actually in some numbers suppose you had a a disk in your car
+which had the radius of hot one meter
+that s not completely absurd that s not beyond my imagination that s that s a sizable disk
+and i even a modest mass so that the mass of the car is not going to be too high
+two hundred kilograms that s reasonable that would be a steel plate only five centimeters thick that s quite reasonable
+and the moment of inertia of this disk if i rotate it about an axis through the center perpendicular to the disk
+that moment of inertia we know now is one half m o we ve capital m r squared
+and that equals twenty five
+the units i kilograms if you re interested kilograms meters squared
+so we know to moment of inertia
+now what we would like to do is we would like to convert all this
+gravitational potential energy into kinetic energy all of that disk
+you think of a clever way you can couple that people have succeeded in that then you really would like one half
+i omega squared you d really like that to be five times ten to the six joules
+and so that immediately tell you
+what omega should be for that disk
+and you find then you put in your numbers which is trivial you find that omega is about six hundred and thirty two
+radians per second so the frequency of the disk
+this hundred hertz hundred revolutions per second
+i don t think that that is particularly extravagant
+so as you would come down the hill
+you would not be breaking by pushing on your break
+you would not be heating up your brakes
+but you would somehow converts this energy into the rotating disk and that would slow you down
+so the slow down the break in court and quote is now
+done because of a conversion from
+you re now linear speed which comes from gravitational potential energy two rotation of the disk
+and when you need to that energy utah at it
+so you should also be able to get the rotational kinetic energy out and convert that again into forward martian
+and if you could really do this then you could go back up he ll
+and you wouldn t have to use any fuel all you re
+five million joules can be consumed then in an ideal case
+and you would not have to use an e two will
+now you can ask yourself the question is this is the only use for in the mountains will quit you also use is in the city
+well of course you can use it in the city you wouldn t be breaking like this then but again you would slow down by taking out
+kinetic energy of the near forward motion done that into kinetic energy of rotation of you flywheel
+and that would slow you down
+and when the light use to traffic light rooms green you convert it back rotational kinetic energy
+into linear kinetic energy and you keep going again
+now of course this is all he s a set and um hum
+but it is not complete fantasy
+people have actually made some interesting studies
+and i would like to show you that least one case that i m aware that i found on the web
+that show you that the united states energy the parkland is
+taking this quite seriously
+this
+view route is also on the eight oh one home page
+and so you see here the idea of mounting such a
+flywheel under the car here
+it says the location of the flywheel energy management power plant wonderful word isn t it
+and here you see your clothes of of this
+flywheel
+i didn t get any numbers on it i don t know which fraction of the energy can be stored
+in your flywheel but it it is an attempted to people are seriously thinking about it and it may happen
+in the next decade that cars may come on the market whereby some of your
+energy of these can be
+scan the cell which instead of heating up the universe use it
+yourself it would be could be very economical
+i have here a
+bowie car i will show it on t v for if
+and the story car has a flywheel
+is it
+that the flywheel itself is the wheel of the car but the idea is there in this case
+i cannot converts
+linear motion into the flywheel i could do that but i m going to do it in reverse way i m going to give this flywheel
+a lot of kinetic energy of rotation
+and we ll see shortly how i do that
+and then i will show you that that can be converted back into forward motion
+in this case a very easy because the flywheel itself is the wheel
+so let me try to
+power this car
+and do that with this plastic okay
+so i m going to put some energy into this real into this flywheel
+and then we ll see whether the car can use that to start moving
+great that my lecture notes with their do you see it works
+and of course if you could
+reverse that i d hear
+that when the car before it stops
+get it back into the flywheel then you have the idea that
+i was trying to get across
+very economical and definitely that will happen sometime in the future
+==========
+flywheels i use it more often then you may think
+m i t
+at the magnet lab has to
+flywheels which are amazing
+and they have a radius
+i think of two point four meters that is correct
+and he s one of those flywheels
+has as hunting mass of eighty five pons eighty five thousand kilograms
+and they rotate
+at about six hertz
+you can calculate the moment of inertia they rotate about the center
+axis perpendicular to the plane
+you now now one half i omega square is and so you can
+calculate the kinetic energy of rotation
+and that kinetic energy of rotation
+is then oh walking two hundred million
+joules in each of those rotating flywheel is
+now they use is rotational kinetic energy to create very strong magnetic fields
+or times care they short as five seconds
+so they convert
+mechanical energy of rotation
+two magnetic energy which is not part of eight oh one so i will not go into
+how they do that is is part of eight oh two and i m sure all of you were looking for traded to and that s when you will see
+how you can convert mechanical energy into magnetic energy
+we have already seen a demonstration in class whereby we convert it
+mechanical energy and someone is rotating
+into electric energy if he did was was it and and we got these light bulbs all bow you can also converted into magnetic energy
+and then when they have created the strong magnetic fields that they do the research with
+and when they
+get rid of the
+they go the other way around and they dump that energy that magnetic energy back into the flywheels
+or then start spinning again
+at six hertz
+==========
+needless to say that a huge amount of
+rotational kinetic energy must be stored in planets and in stars
+and i would like to spend quite some time on that that s a very interesting
+subject
+i will first discuss with you the sun and the earth
+and see how much rotational kinetic energy
+is stored in the earth and in the sun
+this is also on the eight oh one home page
+so don t copy because
+let s first look at the sun we have the mass of the sun
+we have the radius of the sun
+so you can calculate the moment of an hour show of the sun
+i have use my to face m r squared which is really a crude approximation
+because it to fit m r square for was solid sphere only holds
+if the mass is uniformly distributed throughout that sphere with a star that s not the case
+not with the with the the earth either because the density is height at the center the disorder gives you could idea
+so we have there the moment of inertia
+which is easy to calculate with that to fit m r squared and i did the same for the earth
+this is the radius of the earth
+and you see the moment of inertia of the earth
+now i wanted a home with kinetic energy of rotation these objects have well the sun rotates about its axis in twenty six days
+you re in one day and so i finally convert everything two m k s units and i find these numbers for
+the rotational kinetic energy
+now look at the number of the sun one and a half times ten to the thirty six joules
+are great grandfathers must have been puzzled about where the solar energy came from
+the heat and light very painful
+and considerably it came from rotation baby
+the sun is spinning down is slowing down and maybe
+the energy that we get is nothing but
+rotational kinetic energy
+if that were to case however since the sun
+produce is four times ten to the twenty six watts
+four times twenty the six joules per second
+it would only last one hundred and twenty five years
+so you can completely forget the i d hear that the energy from the sun
+that we now know of course as nuclear but our great grandparents that know that that the energy would be caps
+from kinetic energy of rotation
+let s look at the earth
+to now half times ten to the twenty nine joules well
+try something
+some fantasy and use and crazy some ridiculous i d here and i m telling first and this ridiculous
+remember that the world consumption
+the six million people on earth consume about four times ten to the twenty joules every year
+so if somehow i thought if you could tapped the rotational energy of the earth by slow and the earth down
+maybe we could use it to satisfy the world energy consumption
+i wouldn t know how to do it and it is of course complete fantasy
+all you would have to do is slow the earth down
+by about
+oh two point four seconds after one year
+so you slowdown have to one here
+it would the day wouldn t last they and i wouldn t last twenty fourth but only two point four seconds longer
+but of course after a billion years then
+you would have consumed up all the rotational kinetic energy
+and then the earth s would no longer the rotating is of course a crazy idea
+but sometimes it s cute to speculate about crazy ideas
+there is an object
+which we call the crap pulsar it is a neutron star
+and it is located in the crab nebula
+the regret never is the result of a supernova explosion that one off in the year thousand fifty four
+and doing my next lecture i will talk a lot more about that
+for now i just
+concentrate
+on this neutron star alone
+and so here you have the data on the crap pulsar
+the mass of the crap pulsar is not too different from that of the sun it s about one and at times more
+the radius is ridiculous the smallest only ten kilometers so all that masses compact
+in a ten kilometer radius sphere
+has a room when this density of
+ten to the fourteen grams per cubic centimeter
+so of course the moment of inertia is extremely modest compare to the sun because the radius is so small
+and the moment of inertia goes with radius squared however
+if you look at rotational kinetic energy in the situation is very different because this neutron star rotates
+in thirty three milliseconds about its axis
+so it has a phenomenal angular velocity and so if now you calculate
+one half i omega squared you get a fantastic amount of rotational kinetic energy
+you get an amount which is war that a million times more then you have in the sun
+and this object this
+pulsar in the crab nebula is
+co peers amount of x rays of
+raise their jets coming out off
+ionized gas and we are certain
+that all that energy get this object is producing
+comes from rotational kinetic energy
+and i will be few convincing arguments by there is no doubt about that
+if you take the crap pulsar
+and you
+calculate how much energy comes out in x rays in dumb arrays and everything that you can observe in astronomy
+then you find that it has a power roughly
+of about six times ten to the thirty one watts
+it s a phenomenal amount if you compare that with the sun by the way the sun
+is only four times ten to two the twenty six watts so the crap also alone
+generates about hundred fifty thousand times more power
+then the sum
+we know the period of the pulsar to very high degree of accuracy
+the period of rotation of the neutron star
+is oh point oh ooh three three five
+zero two five zero to
+eight five eight three eight five eight three
+second that s what it is today i called my
+radio astronomy friends yesterday and i asked them
+what is the rotation period
+of the neutron star and a crab nebula and this was the answer to more however it is longer
+by thirty six point four now know seconds so to borrow
+you have to add this
+that means it slowing down
+the crap also is slowing down
+that means omega as going down that means one half i omega square is going down
+and when you do your homework which you should be able to do to compare
+the rotational kinetic energy today with the rotational kinetic energy to borrow
+you will see that and a lots of energy is six
+times ten to the thirty one joules per second which is exactly
+the power that we record in terms of x rays gum arrays in other forms of energy
+so there is no question that in the case of this rotating neutron star
+all the energy that it radiates is at the expense of rotational kinetic energy
+it s some mind boggling concept when you think of it
+and if the neutron star in the crab nebula were to continue to lose
+rotational kinetic energy and exactly this rate then
+it would come to a halt in about
+one thousand years
+==========
+now i would like to show you use white
+and i might as well cover this up so that we get
+and it very dark in this room
+i want to show you the crab nebula and i think i will also show you the
+the beautiful flywheels in magnet lab
+now i mean the flesh slide
+and my laser pointer the older stuff
+okay there we go some
+make it dark
+you ready for that okay if i can get the first slide
+what you see here
+i a s
+flywheels at the magnet lab
+these are the wheels that have a mass of eighty five poles and that have a radius of two point five
+meters an incredible in gene is the vice
+and you can store in there too
+hundred million joules and you can dump that into magnetic energy and in five seconds hunted back
+into kinetic energy of rotation is an amazing accomplishment by the way
+and here you see the crab nebula
+the crab nebula is at a distance from us of about five thousand light years
+it is the relevance of a
+supernova explosion in the year thousand fifty four in much more about that during my next lecture
+and what you see here is not stuff that
+is generated at this moment in time by the pulsar this by the way is a pulsar
+and the wrench element that you see here is material that was thrown off
+when the explosion occurred
+the the explosion
+the supernova explosion throw the outer layers of the start with a huge p s some ten thousand kilometers per second into space
+and that is what you re seeing from here to here is about seven light here s a give you an idea of the size of this object
+this pulsar alone however
+generates the six times thirty one
+what s and we do know that it is and this star
+that is the pulsar and we know that it is not that star
+and the way that that
+what s observed that that was measured is as follows
+and stroboscopic
+pictures stroboscopic exposure was made of the center portion of the crab nebula
+and the stroboscopic picture means that you are
+using a shot or
+which opens and closes
+in this case you have to open and closed it with exactly the same frequency as a rotation off the neutron star
+this neutron star for reasons that is not well understood is braking at us it brings at us
+at exactly the frequency of its rotation thirty three milliseconds that means thirty hertz
+roughly thirty times per second you see the star become bright and then go dim again
+if now you set your
+frequency of your shower of your
+in front of your photographic plate at exactly that frequency and you re exposed the
+photographic plate only when the star is bright
+then you will see very bright star when you develop you picture
+if now you take another picture expose it the same amount of time but dish other is open when the star is them
+and you the fat of that picture the stars dim but the d is that all other stars in the vicinity
+of course will show up on both photographic plates with exactly the same strength because they re not breaking at you
+since they don t blink at is was a period of thirty three milliseconds
+and that is what you will see on the next slide which is a stroboscopic
+exposure
+the stars clearly not the pulsar as it is about equally bright on both exposure is
+this is not a pulsar but this one is you see this one is missing here
+and so this is beyond any question that we know exactly which the pulsar it s
+oh
+very new observatory was launched only recently
+and that is called the
+x ray observatory
+and chore under i made a picture very recently of the
+crab nebula of the pulsar and that s what i want to show you now it s on the
+on the web
+and i show you a picture that many of you probably haven t seen yet
+which is the center part of the
+grand every that
+and the pulsar is located here
+and all this is x rays nothing to do with optical light is all x rays
+and you see there is a huge nebula here around is
+well star which is about to rely i t is across
+and all that energy in x rays
+is all at the expense of rotational kinetic energy
+of the pulsar which is quite amazing
+and when this picture was made with chunk the x ray observatory
+they discovered immediately
+that the pulsar also produces projects maybe you can see that from where you re sitting there is the jet coming out here
+and with a little bit of imagination you can see his get going out there and all that energy is at the expense of rotational
+kinetic energy m i t has a bit steak by the way in the
+observatory
+and not only m i t but cambridge as a whole
+the center for asked of physics and m i t are running the
+charter science center from which all radio command are given
+which is here just across the street a few blocks away
+and many m i t scientists i m dedicated them h apart
+of their careers in this
+endeavor
+and is r one of the wonderful results that have come out
+all right you now have for five minutes left you have a little more have seven minutes left
+i would appreciate and a lot if you fill out the questionnaire because that s the only way
+we can get you ve feedback and we can make changes if you think is changes are necessary
+so see you friday
+==========

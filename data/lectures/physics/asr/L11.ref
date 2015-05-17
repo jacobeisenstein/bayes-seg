@@ -1,0 +1,660 @@
+==========
+the day
+we will go exclusively about work and energy
+first let s do one dimensional case
+the work that the force is doing
+when that point and moving from point a two point b
+one dimensional this point a and here is point b
+and the force is a long that direction or either in this direction we re in this direction which completely one dimensional that work
+is the integral going from a to b that force
+the x and i call that e x x is the unit
+of work you can see is newton meters so work
+is newton meters for which we
+we call that do
+if there s more than one force
+in this direction you have to add these forces in this direction vectorially
+and then this is the work that the forces to to get a
+what is a scalar
+so this can be larger than zero it can be zero
+word can be smaller than zero if the force and the direction in which it moves in opposite direction
+that it is smaller than zero if there in the same direction eater this way or that way then the work
+is larger than zero
+n equals m a
+so therefore
+i can also write for this and d v d t
+and i can write down for d x i can write down v d t
+i substitute that in there so do work in going from a to b c integral
+from a to b times the force which is m
+d v d t
+the x which is v d t and look what i can do i can eliminate time
+and i can now go to a integral
+over velocity velocity eighty
+to the velocity be and i get and
+times v
+times d v that s a very easy integral that is one half and
+the square it which i have to evaluate between d a and e d
+and that is one half m
+t v squared minus one half and
+the a squared
+one out and v squared
+is what we call in physics
+kinetic energy
+sometimes and i just okay sure that it s the energy of motion
+and so the work
+it is now when dave force
+moves from a to b is kinetic energy in point b you see that here
+minus a kinetic energy and point a and this is called the work energy
+he run if the work is positive
+then the kinetic energy increases when you go from a to b if the work is
+smaller than zero then the work the the kinetic energy decreases if the work is zero then there is no change in kinetic
+energy does the with simple example
+applying this work
+and the sphere
+i have an object
+that i want to move from a to b
+i let gravity do that i give it a velocity is the velocity
+you ve a and let this separation be h
+and this could be
+my increasing y direction
+the object has a mass m
+and so there is a force gravitational force which is m g
+and if i want to give it a vector notation
+it s n g y roof
+this is my increasing value of y
+when when it reaches point b it comes to a halt
+and i m going to ask you know what is the value of h we ve done that in the past in the different way now we will do it purely based on
+the energy considerations so
+i can write down that work that gravity is doing in going from a to b
+that work is clearly negative if the force is in this direction and the motion is in this direction
+so the work that gravity is doing in going from a to b equals minus m g h
+that must be the kinetic energy at that point b so that is kinetic energy at point b
+minus the kinetic energy that formed a this is zero because it comes to a halt here
+and so you find that one half and v a squared equals m g h
+m cancels and so you find
+that the height that you reach the poles
+d a squared divided by two g
+and this is something we ve seen before
+is easy for us to the right it in the past but now we ve done it
+to to based on energy considerations i d like to do
+the second eggs um hum
+i lift an object from a to b
+i walter lou in
+i take it that way
+it has no speed here v a is zero it has no speed there
+and i bring it from here to here
+there s a gravitational force m g in this direction so
+the force the walls lou in must be in this direction
+so the motion
+and my force i in the same direction
+so the work that i m doing is clearly plus m g h
+so the work that walter lou is doing it s plus m g h
+when the object goes from a to b the work that gravity was doing
+is minus m g h we just all that
+so the network that is dumb is zero and you see this indeed no change in kinetic energy
+there was no kinetic energy here to start with and is no kinetic energy there
+if i take my briefcase
+and i bring it up here
+i ve done positive work you bring it down i ve done negative or your bring it up
+i do we get positive work when i do positive work gravity does negative work
+when i do negative work like i do now
+gravity there s positive work and i can do that a whole day
+and that amount of work at i ve done is zero positive work
+negative work positive work negative work i will get very tired
+don t confuse getting tired with doing work i would have done though work i would be very tight
+i think we would all agree that if i stand here twenty four hours like this that i would get very tight
+have and done any work of my to put it here and that the table just hold that
+briefcase from it so it s clear that you can get very tired
+without having done any work
+so this is the way we define work in physics
+==========
+now let s go from one dimensions two
+three dimensions is not very much difference is you will see i
+go in three dimensions from point a to point b
+and i now have a force which
+could be pointing not just along the x direction but in general in all directions now the
+work that the force is doing in going from a to b
+is f
+dot d r
+r is the position in three dimensional space where the force is at that moment and d r is a small
+the displacement so this is from a to b
+then d r here if you go in this direction is would be the little vector d r
+and here that would be a little vector p r and the force itself could be like this here
+and the force could be light is there
+the force can obviously change along this past
+so that the force be
+adult x x roof
+plus f of y y roof
+was f equals z
+z roof i ll move this a up a little with it here
+and let the d r
+in gentle notation for vector d r equals d x x roof
+plus the y y roof was the the world
+cannot be any more general
+so the work that this force is doing when
+it moves from a to b
+is the integral of
+this
+as the are let s first take
+is small displacement over the our then i get d w that is simply
+of x times d x is they re
+because this is a dot product
+plus f y u i was have see these um hum
+that is little bit amount of work if the
+force is this place over the distance d r
+now i have to do the integral
+over the entire
+past to get w
+from a to be
+so the integral going from a to be
+integral going from me to be
+i don t need this anymore
+the integral in going from a to be
+integral in going from a to be
+now we home free
+because we already did this is is a one and then journal problem
+in one dimension a problem we already know the outcome integral actually x we found
+it is one half and v b squared minus n d a squared which in this case is obviously
+the velocity in the x direction because this is a one dimensional problem
+and in one dimension of problem indicates that the velocities that i m dealing with is the component and this direction
+so we have that this is one half and v b squared
+and this in the x components minus v a e squared
+and that is the x component this is also one dimensional problem out
+except that now i deal with the components with the y component of the velocity
+so i get one half and
+times v d
+y squared minus v a
+y squared plus one half m v d
+the square root minus v d z squared and now we re home free
+because what you see here is you c v squared
+in the x direction the square of y component the squares the components and if you had oh three up
+you get exactly the square of the velocity you get the square of speak
+so if you had of the three turns
+you get up you get
+v b squared almost one and it would my them in there one half and
+times v b squared and here you see a x squared
+the why s create a z squared minus d v squared
+and you get exactly the same results that you had before namely that the work down
+is the difference in kinetic energy
+you know we think of these as
+speeds velocity squared is the speed is the magnitude squared of the velocity
+all right i d like to return to gravity
+and work on a three dimensional situation
+==========
+we have here
+that is the x the b y and this b z
+and there is here this is the increasing value y and s here point a
+in three dimensions
+like this and there is here point b
+so you get it rough idea about if three dimensions and while the
+minus y of the
+equals h this a given design difference between a and the trees in the
+there s a gravitational force the object moves from a to b
+suppose it moves in some crazy way or gravity alone could not do that has to be another force if it goes in a strange way
+but i m only calculated now the work is going to be done by gravity
+the other forces i ignore for now only want to know the work that gravity is to it
+the object has a mass m and so
+there is a force m g and i can write down
+the force in vector notation it in this direction
+so now i noticed that there is only a value for for fly
+but there is no value for of of x and there is no value for an x is zero
+and so have of y equals minus m g
+and so if i calculate now the work
+be going for me to be is is the integral
+in going through a to be
+f dot d r
+and the only term that i have is the one that deals with
+the y direction the other terms
+have nothing in it so it is the integral
+going to a to be
+of at y d y
+and that equals minus m g because we have the
+minus m g
+times y to be
+mine is my rates so that is minus m g times h and what you see here
+that it is completely independent of the path that i have chosen
+doesn t matter how i move
+the only thing that matters is the difference in high between point a and point b age could be
+larger than zero if b is about they could be smaller than zero
+if b is below way it could be equal to zero if b has the same height as a
+whenever the work that is done by a force is independent of the past is only determined by and
+starting point and endpoint that force is called a conservative force
+it s a very important concept in physics i repeated
+whenever the work that is down by a force in going from one point to another
+is independent of the past it s only determined by the starting point in the endpoint we call that e
+conservative force gravity is a conservative force it s very clear
+suppose that i
+do the work that i go from a to b
+in some very strange way that it is very clear that the work that i would have done
+would be plus
+and it because my force of course it s exactly the opposite direction as gravity
+do whatever gravity is doing
+positive work i would be doing negative work by all the the my hands when i m doing positive work gravity
+is doing negative work
+again i m
+concentrate now a case where we deal with gravity only
+but is only gravity then we have that
+minus m g h
+is the work done in going from a to b
+equals minus m g
+times y to be
+==========
+minus y of rain and that now is the kinetic energy at point b
+mine is the kinetic energy at point a is is the work energy theorem
+look closely here i can we raise this and i can bring the bees and one site i can be the a s one site
+i d and get and g
+times wider of b plus the kinetic energy at point b
+equals n g times y say plus the kinetic energy
+i d want a and this is truly an amazing result
+we call n d y
+we give that a name and we call that
+gravitational potential
+energy often we write for that he d eat all we write for that you
+and what you see here is that the sound off
+potential energy at point b a and the kinetic energy
+at point b is the same
+as the potential energy e and
+kinetic energy at point a
+one can be converted into the other hand can be converted back kinetic energy can be converted back to
+potential energy and potential energy can be converted back but
+the sum of the
+which we call mechanical energy is conserved
+and canada energy is only conserved
+if the force is a conservative force
+it s extremely useful we will use it many times but you have to be very careful
+to dangerous too because it s only true when the force is conservative
+spring forces are also conservative
+but for instance friction
+is not a conservative force if i move an object from here
+to here
+let s suppose i move this object
+and i go along a straight line
+and the friction is doing negative work i m doing positive work
+but now suppose i go from here to here through this routing
+you can see that the work i have to do is much more
+friction is not
+a conservative force the frictional force remains constant
+the pen it s on the fiction the kinetic friction coefficients is always the same the frictional force which i have to overcome as i move
+and so we ve i go all the way here and then all of a back to this point where i wanted to be
+then i have done a lot more work than if i go along the shortest distance friction is a classic example
+of the force that is not conservative
+if i look at this results
+==========
+the sum of gravitational potential energy and kinetic energy is conserved for gravitational force
+then it is immediately obvious where we put the zero of kinetic energy
+the zero of kinetic energy use when
+the object has no velocity because kinetic energy equals one half and
+d squared hit the object has no velocity then there is no kinetic energy how about
+potential energy well you will say sure potential energy must be zero when
+why is zero because that s the way that we defined it you see and gee why this gravitational potential energy
+so you would think that you is zero when why
+is zero not unreasonable thing to think
+beware is y is zero
+this y zero at the surface of the rest
+or is y zero at the four of twenty six one hundred
+where is y zero here is y zero to move well
+you completely free to choose where you put u equals zero it doesn t matter
+as long as point a and point b are close enough together
+that the gravitational acceleration g
+is very closely the same for both points
+the only thing what matters then
+is how far they are separate it vertically the only thing that matters is that you d be minus you a
+you ll be minus you a a would be than g h
+is only d h that matters
+and so you can then
+simply choose u zero anywhere you want to it s easy to see suppose
+i have here point a
+and i have here point b
+and suppose the separation is h well
+if you prefer to call zero potential energy it a
+i have no problem with that
+so we can call this u equals zero here
+then you would have to call this you you have to call it plus n g h
+if you say no and
+do that i
+call this zero that s fine then this becomes
+minus and g h
+if you prefer to call this zero that s fine too than this will have a positive
+gravitational potential energy and this will have one that is higher than this one by this amount
+if you say when the i like to call this zero of course the same holds what matters is what the difference between
+potential energy is that
+is what we need when we apply the conservation of mechanical energy
+that is what we need in order to evaluate
+how the object changes its kinetic energy so well you tuition zero is completely up to you
+as long as a in the i closed enough
+so that there s no noticeable difference in the gravitational acceleration g
+before the end of this our i will
+also evaluate the situation that g is changing when you go far away from the earth g is changing
+so let us first do
+look at a consequence of the conservation of mechanical energy
+very powerful concept and as long as we deal with gravity
+you can always use it
+==========
+you see here on the desk something that looks like a roller coaster
+and i m going to slide an object
+from this direction to fit a little bit better
+here is that roller coaster this is a circle
+and then it goes up again
+so that the circle of radius r
+this point a
+i release it with zero speed i assume that there is no friction for now
+this point b we
+and
+i define here
+y equals zero what is even more important i define that u equals zero
+and this is the direction positive direction of y
+a baby object has no
+velocity know speed and b of course it does
+it has converted some potential energy to kinetic energy at this point c
+is had reach a maximum
+velocity that it can ever have because all the potential energy is be converted to kinetic energy
+and at this point d it never reaches that point
+that will be the velocity say
+okay i start off point a is at a different at a distance h
+about this level
+and so i apply now the conservation of mechanical energy
+so i know that you and a plus the kinetic energy of a neat
+which is zero was be you would be plus kinetic energy and b must be you it s see
+plus kinetic energy it s he must be you would e plus kinetic energy and d
+if there is no friction if the no other forces only gravity so we lose no
+no energy goes lost in terms of friction
+we know that is hide if all is two r
+and so now i can write this in general terms of y eight points say take is
+this point the think of that the net e
+location why above this airline and i can write down now
+that you a which is m g h
+that was a given when i started that was all the energy i had that was what total mechanical energy
+if i call this u zero which is three chores i have
+equals u of b which is now and the y plus
+one half and you d squared at that position why the should hold what you see there should hold for every point
+that i have here two whole for eighty four b for c for the for any point
+i lose my and
+and so you find here that is summarized that v squared
+equals two g times h minus y
+so the should hold for all these points therefore should also hold for point p however
+at this point d there is
+something very important there is a requirement there is a requirement that there is a centripetal acceleration
+which is in this direction
+a centripetal
+and that s centripetal acceleration is a must
+for this object to reach that point d
+and that centripetal acceleration as we remember when we played with the bucket of water
+then it v squared divided by r
+and this must be larger
+or equal to the gravitational acceleration g if it is not larger
+the bucket of water would not of made it to that point d
+so this is my second
+equation that i m going to use so look very carefully so v squared must be larger we call then g r
+so i have here v squared which is two g e times age
+minus y a but why for that point d is two r
+so i put into two r
+bus be larger or equal to g r
+i lose my g
+so two h minus four r was be larger or equal to r
+so h was be larger were equal
+two two and a half r
+is a classic result
+that almost every person put a stake in physics will remember
+it is by no means intuitive
+it means that if i have this the ball and i ll show you that shortly
+and i let the ball go into this roller coaster that it will not make this point
+but lest i release it
+from a point that is at least two and a half times the radius of the circle
+above the zero level if i do in any lower it will not make it
+so think about this that is something that you could not have just easily predict it it s a very
+just wrong result but it is not something that
+you say intuitive for oh yes of course it follows immediately from the conservation of mechanical energy
+so if i release it that that two and a half radius point by the way so we re here
+so if i release this object way below that
+it will not make this point let s do that
+using it make it in a little higher
+didn t make it go a little higher make it go a little higher
+so that make it now i go to the two and half a mark
+and no it it
+to it half times a radius
+conservation of mechanical energy tells you that that is the minima takes to just go through that point
+of course if there were no loss of energy at all
+to know mechanical energy lost immediately when no friction then if i were to really sit at this point
+it would have to make it back to this point again
+with zero kinetic energy but that that won t that s not the case there s always a little bit of friction with the
+track for one thing and also of course with air
+so if i release it all the way here
+you weigh don t expect it that it too
+bunch of all the way to here will probably start somewhere there may not even make it to the advocate right
+oh minutes or to hear the little lower than that left
+because there is some friction that and affordable pole right
+this is a classic one and any exams with this problem is being given i won t give it to you this time but it s a classic one you see it on
+the general exams if for physics
+and it simply a matter of conservation off mechanical energy
+let s now look at a situation whereby a and b are so far apart
+that the gravitational acceleration is no longer constant
+==========
+and so you can no longer simply say
+that the difference in potential energy between point b and point a is simply m g h
+so now we re dealing with is
+a very important concept and that is the gravitational force
+you can think of the earth
+acting on the mass we can think of the sun acting
+on a planet whatever you prefer
+but that s what i want to do is when the distance is r now very large
+let me first give you the formal that addition of gravitational potential energy
+the formal definition is that the gravitational potential energy at a point p
+is the work that i will the will and have to do to bring that mass
+from infinity to that point p
+now you may say that s very strange that in physics they like definitions
+which were walter lou incomes in well we can change it a gravity because my force is always
+the same forces gravity with a minus sign
+so it s also minus the work that gravity does when the object moves from infinity to that point p
+i just like to think of it it s easier for me to think of it as the work that i do so if
+we apply that concept then
+we first have to know what is the gravitational force
+if this is an object capital n and you can think of this is being the earth if you want to and
+there is here an object little n
+that have to know what the forces are between the two
+and this now is the is newtons
+universal lowell gravity
+which he d oscillate it
+universal law of gravity
+he says the force that a little hand experiences this force
+equals i ll put a little them here in the capital m u so it is
+little them experiences that force due to the presence of capital m
+equals little n times capital n
+times a constant which newton in his basement know yet what that value was divided by r squared if our
+is the distance between the two
+this object since newton s third law holds
+action equals minus reaction this force which is
+i would indicated this capital have little am it is the force that this one experience is due to the presence of this one
+is exactly the same in magnitude but opposite in direction that is the universal
+of gravity
+gravity is always attractive
+gravity sucks that s the way to think of it always attract there is no such thing as repel them forces
+the gravitational constant g is an extremely
+low number six point six seven times ten to the minus eleven in our
+as i units which is newtons square meters per kilogram or something like that
+that s an extremely low number it means that if i have two objects
+we check each one kilogram
+which i
+about one meter apart which i have now here about one meter that the force
+which they attract each other
+is only six point six seven times ten to the minus eleven newtons
+that is an extremely small force
+is is or the earth
+and i on here and this is my last and i experienced
+a force which is given by this equation is would be than the mass of the
+the earth i have equals m a
+so if i m here i experienced a gravitational acceleration
+and gravitational acceleration and i experienced is therefore given
+right than g divided by r squared
+and so you see that the gravitational acceleration that i experienced a different distances from the earth
+or for that matter different distances from the sun is inversely proportional with r squared we discussed that earlier
+when we dealt with the planets and we dealt whiz
+uniform circular motion and we evaluate its centripetal acceleration
+we came exactly to that conclusion
+that the gravitational acceleration falls off as one over r squared
+ten times further away the gravitational acceleration is down by a factor of one hundred
+if you are standing here the surface of the earth
+then of course the force that i will experience is my mass times the mass of the earth
+times the gravitational constant divided by
+the radius of the earth s squared
+just like we here in twenty six one hundred and so this must be m g
+that s the gravitational acceleration if we drop an object here
+and so you see that this now is our famous d
+and that is the famous nine point eight you substitute in there the mass of the
+earth which is six times ten to the twenty four kilograms
+you put in here the gravitational constant
+and you put in the radius of the earth which is six thousand four hundred kilometers out pops are well no number of nine point eight
+meters per second squared
+okay my goal walls to evaluate for you the
+gravitational potential energy the way that it is defined in general
+not in the special case when we re near your
+so we now have to move an object from infinity to a point p
+and we calculate the work that i have to do so here
+is capital m
+and here is that point p and infinity is somewhere there
+the very very far away and i come in from infinity with that object with mass and
+and i finally went at point p
+since gravity
+it s a conservative force sentence my force it s all with the same in magnitude kept in opposite direction
+it doesn t matter how i move in
+it will always come up with the same answer so we might as well
+do it in civilized way and simply moves that object in from infinity along a straight line
+it would make no difference because gravity is a conservative force so infinity
+is somewhere that the force that i will experience
+but i will have to
+produce is this force
+force of gravity
+if this one the two identical except that mine is in this direction this is increasing value over r to mind would be
+plus m and g divided by
+r squared if i m here at location are
+and that this be at a distance capital r from this object
+you can already see that the gravitational potential energy when i come from infinity
+with a force in this direction
+and i move in words you can already see that gravitational potential energy will always be negative for all points
+anywhere doesn t matter where i am it will always be negative
+and you may say cheese that s sort of a strange thing negative potential energy
+well that is not a problem
+remember that depending upon how you define use zero level here
+you also end up with negative values for potential energy so there is nothing sacred about that
+what is important of course if we get the right answer for the gravitational potential energy that
+when we move away from this object that tick
+gravitational potential energy increases that all that matters
+but whether it is negative or positive is irrelevant
+so we already know what s going to be negative and so we can now evaluate the work that i have to do when i go from infinity
+to that position capital r two hickory comes the work
+that walter lou in has to do
+when we go from infinity
+to that point which is capital r radius from
+this object think of it as the sun or the earth either one is fine so that is the integral going from infinity
+two r of my force which is plus because it s an increasing value over r
+and and the e
+divided by r squared d r
+that s a very easy integral
+this is minus one over r
+so i get them than g
+over armed with a minus sign that has to be evaluated but we infinity and capital r
+but a substitute for infinity i get is zero and so the answer is minus m
+handy over capital r
+and this is the
+potential gravitational potential energy at any distance capital r would you please away
+from this object and infinity
+it s now always zero
+earlier you had a choice where you chose u zero
+when you re near earth them and she doesn t change you have a choice now you no longer have a choice now
+the gravitational potential energy at infinity is fixed at zero
+so let s look at this function and lettuce make a
+lot of this function
+as a function of distance
+the one over r relationship
+of the gravitational potential energy
+the force gravitational force falls off as one over r squared
+mu zero
+this is the gravitational potential energy
+all the values here negative and here
+i plot it as a function i use the symbol little r now instead of capital r
+and so the curve would be
+something like this this is proportional to one over r
+if you move but object
+from a to be
+and the separation is h
+and it s a a and b are very far apart
+the difference in potential energy is no longer n g h but the difference in potential energy is the difference between
+this value and this value and you have to use
+then equation to evaluate that but you can clearly see
+that if i go from here to here if i take an object and go from here to here
+that the potential energy will increase and that s all that matters
+so it increases when you go further away from
+the other thing if you look at your earth or from the sun if you look at the sun
+is there any disagreement between this result that we have here
+and the result that we found the air
+and the answer is no
+i invite you to go through the following exercise
+take the point a in space which is
+at a distance r of a from the center of your say and
+i do that i start at the
+surface of the earth itself so the radius is the radius of the earth
+and i go to point b
+which is a little bit further away from the center all you re only a distance h
+and h is way way way smaller than the radius of the earth
+so i can calculate now what the difference
+in potential energy is between point b and point a
+and i can use and i should use this equation
+and one i use that equation and you you see caters expansion the first order pillars expansion
+you
+be to be see that the result that you find collapse is into this result
+because the g that the two points so close that you will see did you find then that is approximately
+and she age even though it is the difference between these two robert columns in terms
+a real many many times in the future use the one over r relationship for gravitational potential energy
+oh we ll get very useful the idea that gravitational potential energy
+is negative everywhere the way it s defines
+and we will get used the ideal of that infinitely the gravitational potential energy is
+zero but whenever we deal with
+near earth situations like in twenty six one hundred
+then of course it is way more convenient to deal with the
+tim verification that the difference in
+gravitational potential energy is given by
+and g h uh i always remember that
+and g h restitution general hospital that s the best sway
+that you can remember the simple things now i want to
+return to the conservation of mechanical energy
+==========
+i have here a pendulum
+i have an object that waste fifty kilograms and i can lifted up
+one meter which i have done now that mean i ve done work
+and g h is to work i have done believe me i d increase the potential energy of this object
+fifteen times and so hundred fifty joules if i let it fall
+then that will be converted to kinetic energy
+if i were that it s rained
+from one liter height than you would be then it would get you you bet
+hundred fifty joules is enough to kill you
+they use these devices the call the racquet ball
+they use and to the mole as buildings
+you and lift up a very heavy object even have read it in this
+and then you let it go you swing it there by converting gravitational potential energy into
+kinetic energy and that way you can the motion of building
+you just let it it
+and it breaks the building and that s aligned here will reckon
+so you re using then
+the conversion of
+gravitational potential energy to kinetic energy now
+i am such a strong believer of the
+conservation of mechanical energy that i am willing to put my life
+on the line
+if i release that ball back from a certain height then
+that bob can never come back to a point
+where the height is any larger
+and if i release it from this height and it swings
+then when it reaches here could not be higher
+there is a conversion from gravitational potential energy to kinetic energy back to
+gravitational potential energy that will come to stop you and when it swings back
+is should not be able to reach and higher provide it
+that i do know give this object an initial speed where i stand here
+i trust the conservation of wood canada energy four hundred percent
+i m in all trust myself
+i m going to release this object and i hope i ll be able to do it at zero speed
+so the when it comes back it make touch my g in but it may not crush fortune
+i want you to be extremely quiet and kiss is is no joke
+if i don t succeed in giving it zero speed then this will be my last lecture
+i will close my eyes i don t
+see this to please the very quiet
+i wouldn t sleep on my three two one zero
+physics works and i ve you know i feel led to
+==========

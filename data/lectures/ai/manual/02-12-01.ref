@@ -1,0 +1,385 @@
+==========
+Last time we talked about different ways of constructing agents and why it is that you might want to do some sort of on-line thinking. 
+We have this idea that if you knew enough about the domain, that off-line you could do all this compilation and figure out what the program that should go in the agent and put it in the agent. 
+And that's right. 
+But, sometimes when the agent has a very rich and complicated environment, it seems easier to leave some of that not worked out, to let the agent work some of it out on-line. 
+We ended up talking about planning, about considering sequences of actions and deciding what to do based on the projected value of doing different sequences of actions. 
+Now, we're going to spend time doing something a good deal more mundane. 
+We're going to talk about search as an entree to a whole bunch of more complicated applications of search. 
+I'm guessing that all of you have seen basic search algorithms sometime so we'll go through the beginning part very quickly but then we'll do some more complicated ones in more detail. 
+We're going to talk about what I would call a simple form of planning but what the book calls "problem solving". 
+A problem-solving problem has these properties: the agent knows the dynamics of the world, that is, ot knows that if it takes a particular action in a particular situation, here's what's going to happen. 
+The world state is finite and not too big (there's a good technical term, say smaller than 1000 or 10000, small enough to enumerate in your computer). 
+The world dynamics are deterministic, the world is in some state and the agent does some action, there's only one thing that could happen in the world. 
+We'll back off of all these things eventually, but for the moment this is the setup. 
+The agent knows exactly what state it is in. 
+The utility for sequences of states is a sum over the path, what I mean by that is that if I travel some trajectory how good it is to have traveled that trajectory is going to be a sum of some function of the states that I'm in at each step and the actions that I took along the way. 
+That's a structure that makes a lot of things easy. 
+And it's one that's pretty hard to back out of. 
+Let's say that you want to think about some problems in the world as these problem-solving problems. 
+In fact, the hardest part is figuring out how you could take a real problem and abstract it like this. 
+No problems are actually like this, except for some from Games magazine. 
+Except for totally synthetic problems, nothing is really like this. 
+On the other hand, it can often be useful to think of a problem this way. 
+But, there's usually a lot of hard work that goes into going from the real, honest to goodness, messy problem into an abstraction like this. 
+==========
+The example problem that we'll use in looking at these methods is, for instance, route planning in a map. 
+If I give you a map, you know the world dynamics, becuase you know that you are in this place and you travel down that road, then you're going to end up at this other place. 
+The world state is finite, again as an abstraction. 
+If I give you a map that has dots on it, which are the towns that they thought were big enough to merit a dot, somebody decided that was a good level of abstraction to think about driving around this place. 
+The world is deterministic. 
+Again, in the view of a map, there aren't probabilities that tell you how likely it is that if you're trying to go here, you'll end up over there. 
+Now, we all know that there's an error model overlayed over this and if we're trying to go here, there's some probability that we'll end up over there. 
+But, we're going to work at the level of abstraction that does not take that into consideration. 
+Later on in this course we're actually going to think those other kinds of models. 
+Usually, if you're trying to work with a map the assumption is that you know where you are, although it is not always true. 
+And, usually the cost that you pay is something like how long it took, or how much gas you used or how pretty the scenery was integrated over time, or something like that. 
+But, your utility can be expressed as a sum. 
+Though, not always. 
+It depends on how you formulate the problem. 
+For example, assume you have enough gas to go 20 miles. 
+Then, you're going to have a setup where any path that's longer than 20 miles has really bad utility and a shorter path is ok. 
+And, that can be hard to express as a sum. 
+SO, there are things that you could want to express that you can't write down as a sum. 
+That's something that will keep coming back to bite us... 
+To look ahead: We are going to relax this assumption (agent knows world dynamics) at the very end when we talk about learning. 
+We're going to relax this assumption (world state is small) when we talk about logic, because logic gives us a way to do abstraction that lets us deal with very large or infinite state spaces. 
+We're going to relax this (world is deterministic) when we talk about uncertainty or probability. 
+And this (agent knows current state) can get relaxed in different ways but we will talk about relaxing that in the case of logic also, because if you live in a very large state space you can say that I can't know exactly what state I am in but I may know some aspects of the state and that may be enough to be able to do it. 
+And this one (utility is a sum) we're not going to relax at all because it breaks so much of what we do. 
+For today, we're going to stick with the basic setup. 
+==========
+So now, let's talk about the formal definition of a problem-solving problem. 
+We have a set of states (finite, not too big), we have an initial state (known to us), we have a set of what get called operators, which are another name for actions. 
+An operator is basically a mapping from states to states; we've said it's deterministic and we know what it is. 
+There's a set of operators and each operator moves forward or fills up the gas tank or colors in the square in front of me, etc. Each operator says, if I'm in one state, what's the next one. 
+We have a goal test. 
+The assumption in a problem solving problem is that you're trying to finish a job. 
+We're going to assume that this is an episodic task that we do some work and it gets over. 
+You can extend some of these techniques to living very long or potentially infinite lives but we're not going to think about this til the very end. 
+Let's assume that in the driving analogy you have an utility function that we add up as we take steps along the path but that there's a particular place that we're trying to get to. 
+So, there's a goal test that is a mapping from states into booleans. 
+SOme kind a function that says "is this state the goal?" 
+"is this the place I'm trying to get to?" 
+"is this considered the be a stopping point for this problem?" 
+And, we have path cost. 
+And, it's going to be some mapping from paths to real numbers. 
+WE can just write it as a mapping... 
+a step on the path is a state followed by an operator and we can consider strings of those and we could ask how much do they cost. 
+A state and observation[sic, operator] star, that means some sequence of them. 
+I could have written sequence od states into real numbers, why didn't I? Assume that there are two ways of getting home, one involves walking and the other involves driving another involves taking the train. 
+They may all get me home but it may matter which operator since they may each cost different amounts. 
+Typically, this is really going to be the sum of some cost of each particular state and operator combination. 
+??(18:20) 
+So that's the formal definition of a problem-solving problem. 
+When you think about solving such a problem you want to think about a couple of different things. 
+We're going to look for algorithms for solving this kind of problem, so you want to think about how well the algorithm does. 
+How can we think about that? 
+We're going to worry about computation time/space and we're also going to worry about solution quality and this is going to prefigure something that's going to come up over and over again, which is, that if you want good answers, you're going to have to think harder. 
+So, there's pretty much always a tradeoff between the quality of the answers and how much we have to think - we always have to keep that in mind, so we can look at different algorithms, some of which guarantee the optimal solution but take forever, some of which run pretty quickly but you never know how good the answer is going to be. 
+There is no right way to make the tradeoff between these two and an agent operating on-line might want to make this tradeoff different at different times or in different circumstances. 
+So, computing which way to dodge the oncoming truck, you want to have one kind of tradeoff, computing where to go to graduate school (that may not be based on enough information to really know), there are other decisions that merit a lot more thought. 
+It has to do with how much time pressure there is and the magnitude of the consequences. 
+==========
+We'll think about route-finding. 
+There's a map, we'll use that as our example (it's in the book). 
+We can really think of driving around in this map as a formal problem as defined over there. 
+We're in some start state, here's the start state, here's the goal state (Bucharest, this is Romania, in case you didn't recognize it). 
+==========
+This is part of the graph that's in the book and it has the property that it is a set of 26 cities beginning with unique letters. 
+We're going to try to find our way through Romania. 
+Obviously, this is an abstraction. 
+We've left out all kind of things. 
+In fact, we don't know the world dynamics, some of these bridges may be out. 
+In fact, the state of the world is really enormous, when you are driving around it is not just that you're in the city that matters, it is how much gas you have and whether you're hungry and what the traffic is but we're not going to worry about that right now. 
+The world is not really deterministic (as we said before), maybe you don't even know what city you're in, etc. But, it still seems to be useful to solve this little problem of "if I knew all this stuff, what would I do?" 
+And, if nothing else, we can use this as a subprocedure in a more complicated setup. 
+==========
+So, we're going to do searching; we'll do the first ones really fast. 
+But, first let's write the general structure of these algorithms. 
+We have something called an "agenda", this is AI people's term for it - a list of states that is waiting for us to expand. 
+We're going to start by putting the start state on the agenda. 
+Now a loop. 
+We're going to get a state from the agenda (for now), if it's the goal, then return it. 
+Otherwise, we expand the state and put the children on the agenda. 
+So, what does it mean to expand the state? 
+In this case, it means to take all the operators and apply them to the state to get a set of possible successors. 
+From any state, there's a set of things that you could do, each of those thngs yields a next state. 
+==========
+So, Depth-First Search (DFS). 
+There's a bunch of ways to do this and everything hinges on that (!box on a state!), the different ways of picking things to look at can have a huge impact on how effective an algorithm is. 
+So, in depth-first search what's the strategy? 
+You keep picking from one of the new children. 
+The basic idea is to think of the agenda as a stack. 
+You always put children at the top of the stack and pop when you need a new node. 
+That has the character of making a commitment and seeing what would happen after that and seeing what would happen after that and so on until it's not going to work out. 
+SO, let's just see what would happen if we did DFS on this graph. 
+We would start with A, as our start state. 
+What are the children of A? Z,S,T. 
+SO, forget A, we put in Z,S,T. 
+Now, we are going to pick Z to expand. 
+O? What else might we get? 
+A? WE have to watch out for that; we don't want to go back to A, so we assume that we've marked A somehow. 
+Children of O? S? I was a little bit glib before, let's be a little more careful. 
+Is there a good reason not to put A back in there? 
+When I said that one of the children of Z was A, can you prove to me that it would be a bad idea to put A back in. 
+We can get from A to A in a 150 but that's not a good idea. 
+On the other hand, it might not be so totally obvious that you shouldn't put S in, why is that? 
+SO, here's an S that comes from A, here's an O that comes from AZ, we can take that O out and out in a new S, because the successor of O is S and so there's another S that comes from AZO, should we put it in, or should we not? 
+If we're really going to take care of the cost, we could say that we would only put in a repeated state if it doesn't cost so much. 
+If you find a quicker way of getting to someplace we already know how to go, we would put it it, but otherwise no. 
+Depth-first search is sort of mute on some of these questions; it depends on how you want to define the term. 
+You could say that DFS is absolutely blind and if it gets in a loop, it gets in a loop. 
+But, you could also say that there's DFS with checking for loops and you could debate in certain circumstances whether it is worthwhile checking for loops. 
+In a graph, like this map, either DFS is stupid, or you want to use a version of DFS that does checking because you'll get so many redundancies. 
+So, because I've assumed that you've seen this stuff, I'm trying to give you an idea about the things that you have to worry about even though you think "Oh, I'm just going to use DFS on this graph." 
+You have to be careful about hitting states that you've see before, and the fact that there could be multiple paths to the same state. 
+So, we could put that one on again, but let's not. 
+You get the idea. 
+This graph does not have any dead ends, so we're not going to have to backtrack, we'll eventually find our way there. 
+But, will we find our way there the shortest way? 
+Not necessarily. 
+Because, for example, this turns out to be a long way around and if we started down this way, we'll just keep expanding children and expanding children and we would find ourselves in Bucharest and we would return that answer. 
+It won't necessarily find the shortest path. 
+The capsule summary for DFS is that: o you have to watch for loops o the running time - when people talk about the complexity of searches, they usually think of them in terms of trees, and in particular about the branching factor (b). 
+They use m to stand for the maximum depth of the tree. 
+In a graph what would the max depth be (if you're pruning repeated nodes), how deep could your search tree be? 
+As nmany nodes as the length of the longest cycle, which has to be less than the number of nodes. 
+And then d is the goal depth, if the city you're looking for is only two away from where you started. 
+So, DFS, how long is it going to take you, in big O terms? 
+Does it depend on how close the goal is to you? 
+In the worst case, no. 
+You could go all the way through the tree before you find the one path where it is next door, depending on the order that you look at nodes. 
+So, if it's a tree, we're talking order b^m time (really bad). 
+But, it does have a redeeming feature, what is it, why do people use it all the time? 
+Space! 
+How much space do you need? 
+m, or mb, you have to remember up to b different alternatives at up to m different depths. 
+SO, this is good. 
+People usually implement DFS recursively and the stack gets stored in the stack of the program. 
+==========
+Breadth-First Search (BFS). 
+How does it differ from DFS at the algorithmic level? 
+You expand all the nodes at one level of the tree, before you go to the next level. 
+If you think about it this way, you put children at the end of the queue and you would pop from the front. 
+SO, this has the effect of expanding cities going out by depth. 
+So, we would start at A, then we would do Z, S, T then O (maybe S, maybe not depending about what we're doing about repeated states) then L and so on and we would work our way out in leaps of steps. 
+How long does this take to run? 
+O(b^d). 
+We're having a branching factor of b an although it may be that it could go on forever, if we know that the goal is at depth d and we're expanding it out depth by depth we know that we will only expand the tree to depth d. 
+How much space? 
+What do we have to remember in order to go from one level to the next level? 
+O(b^d). 
+In order to make the list of nodes at level 4, you need to know all the level 3 nodes. 
+So, the drawback of BFS is that we need O(b^d) space. 
+Do you need to save all the nodes? 
+No, you only have to save the one layer, but exponential growth is such that there are as many nodes in the last layer as in the sum of all previous layers. 
+What about optimality? 
+In DFS, we said informally that DFS could find a really long path and giving that back to you. 
+So, DFS is suboptimal in terms of the answer that it gives you. 
+What about BFS, what can we say about the answer we get? 
+It's optimal in what terms? 
+Fewest steps! 
+Not necessarily shortest route, but fewest steps. 
+If there's a one-step answer it will give you that, if not it will look for a two step answer, etc. But, you pay this price in space. 
+Can you get the best of both worlds? 
+That's always nice if you can and you kind of can. 
+==========
+The way to get the best of both worlds is iterative deepening. 
+The idea here is that DFS is a real win in space but it might go forever down a really bad path. 
+BFS gets you a short answer if there is one but it is expensive in space. 
+So, you do a DFS with a cutoff of depth 1, so I'm just going to do DFS but if I ever get to a node at depth greater than 1, then I'm going to backtrack. 
+Depth 1 is really boring, that just means examine the root node. 
+Maybe the root node is the goal, otherwise, you do a DFS with the cutoff at depth 2 and so there's a solution at depth 2, then you will find it and then you do DFS with cutoff at depth tree and so on. 
+What does that mean, first we search the root node to see if the answer is there, then we do a search to see if the answer is at depth 2, if that works we find the answer, otherwise we search at depth 3 and so on. 
+It seems a little bit wasteful. 
+The crucial thing is that these steps are going to take time order: b, b^2, b^3, b^4, because a DFS that cuts off at depth d is going to take time b^d. 
+The space required is going to be the max of the space at each depth. 
+Space for DFS is mb, total space is the max. 
+Time is going to be the sum of the times at each depth. 
+The sum of b through b^4 is about b^5. 
+It's on the order b^(d+1) which is sort of like b^d. 
+So, we have the time from BFS (probably double (if b=2)) but the space from DFS. 
+So, this is standard practice. 
+These are worst case time. 
+So, chess playing computers usually do iterative deepening. 
+Is there a mate in one move? 
+Is there a mate in two? 
+Let me tell you something about how AI research usually goes. 
+Eventually there's a theoretical analysis of the problem that typically sheds some light on what's happening and there's actual empirical results, sometimes the empirical results are related to the theory but not always. 
+You try to shed some light theoretically and in the end you run expreriments. 
+But the experiments all you know is that it works this well in this particular set of examples. 
+We'd love to do average case analysis but we don't know what to take the average with respect to. 
+We do empirically with respect to the problems in the experiments [ Average case for iterative deepening with uniform distribution is pretty easy, you can see it in Ginsberg's book - TLP ] Both of these algorithms are finding the shortest numbers of steps (hops) but if the hops have uneven cost then that's not interesting. 
+You can go from cow town to cow town and it takes a lot of cow towns to get from here to Chicago but it's actually shorter than taking the freeway (probably not in time, but in distance). 
+==========
+Uniform cost search. 
+If you wanted to find the shortest path from Ahraj? 
+to Bucharest and you had thought about the options and you had made an agenda that said, I could start by going to Z for a cost of 75 or I could go to S for 140 or I could go to T for 118, what would your natural inclination be to think about next. 
+Z, clearly! 
+And, then you say, alright, let's think about Z. From Z I can go to O for 146. 
+I could go to A for 150. 
+So what do we want to think about next? 
+T! From T I could go to L for 229. 
+SO, uniform cost search says, we're going to store the agenda in a priority queue and when we get out a new node, we get out the shortest path so far. 
+What can we say about this? 
+Is this going to give us the shortest path to a goal? 
+Yes, because we're exploring cities in contours of real cost (as opposed to BFS where we explored them in order of hops) of how long it gets to get there from here. 
+==========
+What can we say about how long it takes? 
+The book says, it takes time on the order of b^d. 
+It seems to me that I can construct a map where I have a hop of length 200 and a hop of length 1 and there's my goal. 
+ALternatively, I have 200 hops of length 1 and then another hop of length 10. 
+So, I'm going to walk down all these little guys first until I take my 200th hop and then I'm going to find that nice shallow goal. 
+So, it should really be O(b^m). 
+Note that we examine a node to see if it's the goal only when we take it off the agenda, not when we put it in. 
+So, that means if I find a ridiculously long path to the goal, I chuck it in but I keep checking all the shorter paths until I'm sure that there's not better way. 
+It seems like an optimization to check right now to see if it's the goal, but if you're worrying about finding the shortest path, you should not do that. 
+There is a cautionary note. 
+The algorithm is optimal only in some circumstances. 
+What? 
+We have to disallow something; it doesn't come up in road networks. 
+Let's say that you're cost is money, not distance. 
+Distance has the property is that it keeps getting bigger, there's no way that you could contrive to have traveled less distance than you did yesterday. 
+But, money, you can earn money. 
+So, the condition is: no negative costs. 
+Because, otherwise you may have something over here that costs 400, which is so bad that you would never want to look at it but then it turns out that you have to drive 400 miles but you win 600 dollars. 
+If this is true, then this algorithm is not going to work. 
+If you know the range of costs, you can always shift the costs to make them all positive, since we're just adding them up as you go, you get the same optimum. 
+==========
+If you don't know anything else about your problem this is about the cleverest thing that you can do. 
+We call this search because we have to look around because you don't know the right answer. 
+But, sometimes you know some information that might be helpful. 
+A lot of times people characterize the methods we have been talking about as "uninformed" or "blind" search methods because there is no extra information that's brought to bear. 
+We'll talk now about "informed" search. 
+What if you knew the shortest line distance to Bucharest from everywhere. 
+So, the roads might be all contorted and twisty and there might be mountains in the way, but you could take your ruler out and measure the straight-line distance. 
+What does that give you? 
+It gives you some intuition about which places are closer to others. 
+It can heaad you kind of in the right direction. 
+There's some cases when you really have to go to the left, that there's nothing that you can do about it. 
+But, in general, it's at least good to know whether you're headed in the right direction. 
+We can use this information as a "heuristic". 
+Twenty years AI was sort of synonymous with heuristics (usually glossed as a "rule of thumb", it's related to the greek word eureka). 
+It's usually some information that helps you but does not directly contain the answer. 
+For us, a heuristic is going to be a function that gives us in some sense an estimate of how much it's going to cost from here to the goal. 
+Concretely, h(n) is an estimate of the remaining cost from n to least cost goal. 
+The book spends a lot of time (and importantly so) on this. 
+This graph is a graph of states, we're talking about state of the world that we can move between. 
+Any particular algorithm that we apply to that graph is going to result in a search tree. 
+And, the search tree has nodes and that search tree might visit the same state twice along different paths, so two ways to get to the same state will be considered as two different nodes in our search tree but really only one underlying state in the world. 
+So, in fact, h could apply to states just as well as nodes since it's not going to matter how we got to the state. 
+Recall that h is only an estimate, if we knew the actaul remaining cost to the goal, we could just use that to find the optimal path. 
+==========
+If we have this estimate of how much it would cost to get there from here. 
+Let's look at a made-up case, where it costs 200 to go there and then 1 to get to the goal. 
+And it costs 1 to go here and then 300 to get to the goal. 
+If we were doing uniform cost search, we'd look at these two nodes and we would say, it's only cost us 1 so far to get here, so let's expand that one out some more. 
+But, if we have an estimate of how far we are once we've gotten here, we could use that to decide where we should go next. 
+How would you like to use that estimate? 
+Add it to the path length so far! 
+How good would it be to consider going this way? 
+Well, I know it's cost me this much to get here and I can guess how long it's cost me to go to the goal, so the sum of these two is an estimate of how long it's likely to be on the best path that goes this way. 
+SO, let's define g(n) to be the cost so far (n is a node in the search tree) and we have an estimate of the remaining cost for the path. 
+And, so the suggestion is to prioritize the agenda according to g + h. 
+In fact, this is an algorithm called A*. 
+==========
+Let's think about when A* is going to be really good and when A* is going to be not so good. 
+What has to be true about h for A* to find the optimal path? 
+So, when h is an admissible heuristic. 
+h is admissible when it never overestimates. 
+Otherwise, here's the problem that you could get into. 
+Imagine that there's only one more to get to the goal, but you have an h of 100. 
+It costs 2 to get this far but you have an h of 100, here it costs 73 and you have an h of 1 and in fact it costs 1. 
+So, here's a goal of total cost 74 and here's a goal of total cost 3. 
+But, what would happen. 
+We would put this goal in with an estimated total cost of 102, we'd put this node in with an estimated total cost of 74. 
+So, we go this way, we expand it out and we find this goal node with an estimated total cost of 74 (h is 0 at the goal), which is shorter than 102 and you return it. 
+So, for h to be admissible it has to not overestimate. 
+If over there in our path planning example, if in fact this cost is distance, is shortest line distance admissible? 
+Yes! 
+SO, that makes it an extra good heuristic. 
+No matter how hard you try you can't find a path shorter than 150 between A and C (we assume that the triangle inequality holds). 
+So, if we have an admissible heuristic finds the optimal path if h is admissible. 
+Read the proof in the book. 
+==========
+Imagine that there are a lot of other roads radiating from A. We talked initially about breadth first search searched in contours of numbers of steps from the goal and uniform cost search searched in contours of distance from the goal, but uniform cost search would be just as happy searching out this way as it would be to search out that way. 
+SO, you can think of A* searching contours of distance so far + estimated distance. 
+So, the estimated distance term should skew the search in the direction of the goal, so you are searching contours that are warped out in the direction of the goal. 
+==========
+As long as you do that in the right order and the heuristic doesn't dah your hopes, your're ok. 
+==========
+Uniform cost search is an instance of A* then. 
+What's the heuristic? 
+h=0. 
+It's admissible. 
+If you say that everywhere I go, that's it, I'm going to be at the goal (being very optimistic) that's going to give you uniform cost search. 
+There's been some theoretical work on the efficiency of heuristics. 
+I want to have a heuristic that cuts down the search space. 
+It would be cool to prove a theorem that says that it your heuristic is like this, then you'll only have to search some much smaller fraction of the space. 
+There are such theorems, we won't go into them here, there are some pointers in the book, but you're heuristic has to be really, really good in order for it give you sub-exponential search time, unless your heuristic basically knows the answer with maybe a little bit of uncertainty. 
+How do you find a heuristic? 
+In this case, it seemed not too hard to think of the shortest-line distance. 
+In general, you can often find heuristic functions by relaxing your problem. 
+Sure, we have the problem of finding our way from A to B on the road map, which is the more constrained version of the problem. 
+You can relax the problem and say, let's find the way from A to B given that we can go any way we want to. 
+And, sometimes you can take a hard problem and find a relaxed problem that's really easy to solve such that the cost of any path in the relaxed problem is less than the corresponding path in the original problem and then you can use the solutions to the relaxed problem. 
+There's some examples in puzzle domains of doing this. 
+==========
+When we wrote the problem-solving problem definition, it really captured the notion of planning kinds of planning solving and you need to find some trajectory of things that you can do to get to a different state and what you're interested in is the trajectory. 
+SO, there are a bunch of other situations where search comes up where you are not really interested in the trajectory, all you're really interested in is the answer. 
+So, for example, the traveling salesman problem (TSP) is a paradigmatic example. 
+The question is not how do I get from A to B most efficiently but "is there a trajectory through this graph that satisfies certain properties, like that it visits all the cities." 
+So, another real class of search problems are ones where we don't care about the path. 
+Let's call this a search problem rather than a problem-solving problem. 
+In a search problem, we have a set of states, we typically still have a set of operators that lets us go from state to state and we now have an utility function that just maps states into some utility and now our goal is to find the best state in the space. 
+One view that you could take of a problem like this is to say "who needs the operators?" 
+It's not like you are trying to think about how to really walk around in this space, but now you can use similar thought processes and think about these operators not as things that you do in the world to move you from city to city but as things that you do in the information space to move you from potential solution to potential solution to the problem. 
+==========
+So, in TSP, we're not going to think about the space being the cities in the graph, instead we're going to think of the states as being possible tours (solutions) and our utility miht be tour length. 
+Now, we can think about solving TSP by taking a tour and think about changing it around in various ways and looking to see how good they are. 
+So, what are some operators that you may use on tours in TSP? 
+You could swap two cities. 
+A TSP solution is the order in which you visit the cities and you say, "I'm going to swap these two". 
+That gives you another tour and it has some cost. 
+You can think about finding the best thing in the space as a search, but not one that's related to acting in the world, it's a search that's informational. 
+==========
+Another example is any kind of gradient descent method. 
+Let's say that you'd like to find the square root of a number. 
+You can actually apply this in continuous spaces. 
+What are the states? 
+The states are real numbers. 
+The utility is going to be the distance between x squared and the answer that we want. 
+What's a typical operator in this space? 
+I'm trying to find the square root of 7, I think it's 3, I look at the difference between 3 squared and 7 and I can do what? 
+You could just guess higher or lower, if I'm too high, go down a little if I'm too low, go up a little. 
+So, you could just a plus or minus epsilon thing. 
+What's a more direct thing to do? 
+Step to the median. 
+Or, we can take a step along the gradient. 
+==========
+So, these are all search methods that search the space without regard to path, they're just trying to find a solution. 
+It turns out that in the square root case you can prove something about this search. 
+You can run a deterministic algorithm and prove that you're going to an optimal point in the space if you start out right. 
+A lot of times you can't. 
+I'll illustrate in a continuous space but it happens equally well in a discrete space. 
+Imagine that I'm trying to find the minimum of that space and I find myself right here and I decide that I'm going to take a step in the direction of the gradient, which seems well justified. 
+Well, I'm going to find myself down there and I'll stay there happily. 
+In more complicated spaces, sometimes deterministic algorithms don't work out very well. 
+So, what do people do? 
+Randomize! 
+You can say, going down the gradient seems to be a good thing most of the time but sometimes I just want to be wild and crazy because being wild and crazy might get me out of this bowl and put me in that bowl over there. 
+==========
+Probably many of you have been exposed to the idea of simulated annealing, which by analogy to cooling of a metal, says: I want to reach some minimum energy state, so I tend to take steps that decrease the energy but depending on a parameter that is called temperature (when the temperature is high) I am going to every now and then take really wild and crazy steps and as the temperature decreases, I am less and less likely to take such wild and crazy steps. 
+This has the characteristic that at the beginning I am going to be might be hopping around almost entirely at random but as I bring the temperature down, I hop less and less randomly and I do something more like gradient descent. 
+The intuition is that these big, long, random hops, hop you into the nice big basins (hop you into here) and as the temperature gets lower and lower you do something like gradient descent which helps get you to the bottom of the big bowl. 
+You can also do this in discrete spaces. 
+==========
+What we're going to do in the first homework assignment is explore the relationship between some systematic search methods and some randomized search methods for solving problems of this kind that are more like TSP. 
+We'll look at planning problems later on. 
+But, it's kind of fun to think about these optimization problems that don't relate to acting in the world. 
+Here are some exercises that you can do (from the book). 
+Ex. 
+3.3, 3.17a,b,f, 4.4 and 4.11a,b. 
+There'a a cool applet at UBC for playing around with search algorithms: www.cs.ubc.ca/labs/lci/CIspace 
+==========

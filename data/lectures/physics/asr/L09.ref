@@ -1,0 +1,663 @@
+==========
+the exam on wednesday
+will cover our first five elections
+and the first two homework assignments so i list here the topics
+the way we discussed um hum
+course it is not possible to
+this goes all of them today but i will
+make a selection
+i recall that we
+discussed skating
+and we use the interesting example of got a they ve got lazy animal
+and animal has lengths
+and we defined
+the overall size
+of the animal is a bake call that s
+and then we said well there s here
+the femur
+and the team or has lengths l
+and thickness d
+it was completely reasonable to say well
+that l will have to be proportional to s
+of an animal is ten times larger than another
+slacks will be typically ten times longer
+since the mass
+of the animal must be proportional
+to its eyes to the power three also v portion will
+to the lengths of the femur to the power three
+and and came in this key arguments namely you don t want the bones to be crushed
+which is called yielding in physics if i take a piece of concrete
+block of concrete and i put too much pressure one it s it s charge to crumble
+and that s what going legally they may have had in mind
+and in order to protect
+animals to get bigger and bigger and bigger
+against this question
+we argued and i will not go through that argument now anymore that the mass
+well have to be proportional to b squared which is the cross section of a few more and so oh
+you see immediately that the square has to be proportional to l two thirds so d must be proportional
+to the length of the femur to the power one half
+so this would mean that if you compare an elephant with a mouth elephant
+overall size is about hundred times larger than a month you would expect the fee more to be about hundred times larger which is true
+but you would end expect the fee more to be about thousand times thicker
+and that turns out to be not true as we have seen in fact the femur of the elephant it only a hundred times thicker
+so it s scales just as the size
+and then so lies in the fact that nature doesn t have to protect against crumbling
+of the bombs there is a much larger they sure which we called buckley and buckling
+is the phenomenon that the bones do this
+and if now you put too much pressure on it the both will break and that s the case you remember
+that in fact all you have to do is you have to scale d
+proportional to l which is not e two and if that s not so easy to be life but that s the case
+and so the danger then we ll nation nature
+protects animals against is this buckling am in the buckling becomes too much then
+i would imagine the bones at some point in time
+oh these are tough bone darned
+will break and that s what nature tries to leave and so that s was a scale and arguments
+==========
+and let s now talk about
+dot product if i look there i scan a little bit in a random way over my topics so let s now talk about
+dot product is
+i have a vector a a
+a x times x roof which is the unit vector in the x direction
+was a y y roof plus b z the world
+these are the three unit vectors
+in the x y and z directions of these are the x components y and the z component of the vector a
+i have another vector b
+v of x x roof
+be of y
+y roof
+the u c the room
+now the dot product a a
+dot b also called the scalar product is the same
+as b dot a
+and that is defined as a x b x was a
+why d y
+plus in e e c
+the museums so number
+it is a scalar this simple number and so this number can be larger than zero
+can be positive can be equal to zero it can also be smaller
+of just dumb numbers
+there is another way that you can define you can call this
+method of of one if you if you prefer that there s another way that you can
+find the dot product with give you exactly the same result
+if you have a vector the
+and you have the vector b
+and the angle between them is theta
+then you can project beyond lady
+or they ll me for that matter makes a difference
+and that projection
+the length of these projection is then of course be
+cosine theta
+and so a dot b
+and that is exactly the same you may want ago
+through a proof of that
+it is the length of a
+times the length of b times cosine
+of theta and that would give you precisely the same results
+what is interesting about this formulation which this wax that you can immediately see that
+if the two what are at ninety degree angles or two hundred seventy degrees for that matter then the dot product is zero
+so that s a an insight and you get through this one which you elect through that other method
+let us take a down to earth example
+of the dot product
+suppose a
+equals three x and b
+equals two x
+plus two y
+and i m asking you what is the dot product
+well you couldn t
+use them at the number one which in this case is
+before the fast as believe in a x is three
+and b x is tutor that gives me the six
+there is no a y
+there is no way easy to it s the answer is just six that s the proper
+you could ve done it that way
+it s a little bit more complicated but i certainly want to show you
+that it works
+if this is the x direction
+and this is the y direction we don t have to look into the z direction because this new z components then this would be
+vector a
+and this point would be at three
+being
+this would be two and this would be too and so this would be defect to be
+and it s immediately clear now that this angle
+forty five degrees that follows from the two and the two
+so if we now apply
+method number two
+a to b first the lengths of a way that s three
+times the length of b that is to
+times the square root of two
+this is to this is to this is to square root two times the cosine if forty five degrees which is one half
+squared to any and swiss six note is that
+the square root of two and the square root of two egypt it s too and you get it if the same answer of course
+but would be a dumb thing to do it it s it s it can be done so much easier
+on crust products
+==========
+i don t
+go through the formalism of cross products the way we did that with the determinant i just want to
+remind you that if you have a frost product two vectors
+that is minus
+the crust a e
+and that the
+the magnitude
+of t
+is the length of a
+times the length of b
+i m the sine of the angle between them
+the vector r c
+the dot product the cross product is always perpendicular to both eighty and perpendicular to b
+in other words it s perpendicular to the plane of the two vectors
+now if the perpendicular to the the that in that case it s perpendicular to
+the electron you have two choices into your coming at you perpendicular
+or coming strike straight into the blackboard and now
+everyone has always own way of doing it i told you what s called the right can cork screw rule
+you take the first one that is mentioned in this case a and you rotate it
+over the short this angle to be when you do that
+you rotate your court screw seen from where you sit in counterclockwise then the court true comes to you and so the direction of the vector is such that you will see the tip of the vector toes coming straight out of
+the blackboard so that gives you then the direction
+==========
+now i will give you the position x of an object as a function off
+time and then we re
+ask ourselves a lot of questions
+about velocities
+accelerations
+sort of everything you can
+think golf everything week of covered speeds that will cover here four seconds of time so this is the time axes
+in seconds
+and we will cover four seconds so let this be one
+two three four
+and that the object
+b at position plus six this is my
+x x is this is where the object is actually moving and
+this is three
+and here
+is minus three and this let s say is in meters
+let s make a little grades so that easier for me too
+put in the
+the curve
+all right so now comes x as a function of t
+that time t equals t seconds the object is here
+and it came from there
+and this part is a private
+and as prevalent here is horizontal
+importance have to know that so this is a parabola
+and this here is horizontal
+so the object goes from plus six to three then it goes to minus three
+and it stays there for one second
+and that and it goes back in one second
+two plus six and so one dimensional problem
+the motion is only in the x axis along the x direction
+let s analyze all these different second that occur
+let s first take the first second
+during
+the first second
+and this is a parabola you know that the acceleration is constant
+so i hope you will conclude immediately that a
+must be a cons the day is a constant
+the position x as a function of time
+should change as follows eggs zero
+plus v zero t plus one half a t squared
+i expect you to know this equation
+very often do i give you equations at the exam
+and that may well happened during the second and third exam but that will not the case this time e equations are all very fundamental
+and you have to make them part of your world so this in equation
+that you have to remember
+alright what is the the velocity here
+velocity starts out to be zero
+and the velocity here is not here anymore
+if i look at time t equals one
+then i have here eggs zero was six
+it starts out with velocity is zero that s a given
+and i get plus one how often
+times eighteen squared but this is only one second
+and so
+when it is at three
+i have six plus one how
+a times one squared and so you find that a
+equals minus six meters
+per second squared shouldn t this
+first second the acceleration is minus six meters per second squared
+and the velocity v
+as a function of time
+is the derivative of this one is v zero plus a t v zero was zero
+and so that is minus
+six times t so the velocities changing
+in in a a fashion
+what i know about the end
+of the first second well i can say that x is three
+what oh i know what the velocity well the velocity is minus six
+one way know about a
+i don t
+i don t know about a
+it s through the during this first second
+a is minus six meters per second squared what it changes abruptly at this point so until the pipe that that point i could actually
+non physical so i do and don t know exactly at the ends
+what the acceleration
+let s now go to the second second and let s see what happens there
+second second
+and first
+let s look during and then we ll look at a situation that the end
+during the second second it is clear to this is a straight line
+that the velocity remains constant
+and it remains minus six meters per second
+that this exactly what it was at this point at the ends
+you can see it goes six meters
+from plus three two minus three in one second so the velocity
+is minus six
+meters per second
+the acceleration is therefore zero
+you see that the acceleration changes abruptly for minus six meters per second squared to zero so
+i can tell you what it is exactly at this moment in time
+but that s the situation doing the
+second second and what is the situation at the end
+of the second section second sect couldn t
+at the end i know that x equals minus three
+what is the velocity i don t know
+because it changes abruptly here from minus six two zero so i don t know exactly would is at that point it s in nam physical things
+very bright change and
+the acceleration
+yeah that s also very tricky thing
+because if the velocity is minus sixty on the side of the two seconds
+and here becomes zero
+and if that happens at it in a split second term must be to you acceleration just at that point which is non physical
+so i would also put a question mark at the a i don t know what the aid is
+so ago to the third second is part
+let s first loop
+during the third second well the object isn t going anywhere just sitting there
+x remains minus three
+and the velocity is zero
+and a is zero we can agree with that
+what is the situation at the end
+of the third second that means that people three
+well i know with it x is minus three
+that s non ago shingle
+what the velocity is i know know because it s changing abruptly from zero
+to a positive value so that s you ll find
+and the same is true forty acceleration there is if southern change in velocity that means the must be a huge acceleration
+it s unknown ill defined
+because this curve is of course not very physical
+let s now look at the last second four seconds
+first during
+well it is going from minus three two plus six it is a straight line so the velocity is constant
+is the velocity is constant then you can immediately conclude that a is zero there s no acceleration
+and it goes nine meters into times panel one second
+but it s now plus
+plus nine meters per second
+so the object first went from
+positive values of x
+to zero it to negative values for x two all that time the velocity walls negative
+by or sign convention and now the velocity it goes back two plus six the velocity becomes plus nine
+meters per second what is a story at the end of the force second
+no i can say is at x equals plus six
+i don t know much more i don t know what the velocity is me to one oh with the acceleration is the plot stops there anyhow
+now i would
+think that it is reasonable to ask the following question
+what is the average velocity for instance between time zero and time for average velocity
+we define average velocity as the position
+that time for second minus the position at time zero divided by four that is our definition
+and to zero this that plus six
+at four is that plus six so the upstairs is zero
+so the average velocity
+doing this for second trip is zero you may not like that
+it may go again sure intuition of course
+i couldn t agree more issue but that s the way we define velocity
+just need is defined differently speedy
+is the magnitude of the velocity vector
+and the speed therefore always has a positive value and i will show you now what is the average speed
+between time is zero and four
+that is the distance that it has traveled in the fourth seconds
+let s first go through the first second it goes from plus e six two plus three so it already travels three meters
+then in the second second it goes from plus three two minus three so it travels another six meters
+and that in the third second it s lazy doesn t do anything so
+the distance traveled is zero and then in the last one second it gets very active and it travels nine meters
+no the huge all nice you plus signs here and a minus sign that would make no sense
+and this occurs in four seconds
+so that is four and a half
+meters per second so the average speed is four and a half meters per second but the average velocity
+is zero
+we could now
+make a plot although the velocity
+as a function of time
+let me put here here
+the four and half ago i just have enough room here
+to make the velocity plot
+as a function of time i ll make a new one
+this is my time axis
+and it s
+is the velocity
+is zero one second two seconds three seconds
+for second and this velocity is in meters per second
+i i go up here too
+plus ten and here
+minus five here is minus six
+so what i do now i know that the velocity doing the first second is minus sixty
+so it in there
+and so the doing the first second
+this is the velocity
+as a function of time it started zero you can see that
+and when it is here it has a velocity of minus six meters per second
+during the second
+second the two remains minus six meters per second
+so oh doing a second second
+the velocity is not changing
+stays there
+doing this it s second
+the velocity john s all the southern to zero you see how non physical that it s
+and so all of a soul and during the third seconds it becomes zero
+so there has to somehow connection of course between the two to make this physical
+so in in very small amount of time that we ll have to walker that s why get huge acceleration at that point
+where you also get an acceleration here at this point because there s also change in velocity
+and then during the four seconds
+the velocity is plus nine meters per second
+and so we jump up
+let s make this
+was nine
+and so we have here
+during the last second and again this is not physical so has to be somehow the transition
+and so here you see the velocity as a function of time now comes an interesting question
+is it possible
+if i gave you this so this is a given you can see that
+could you convert this back to that
+an answer is yes provided
+that i tell you what the position is at t zero at t equals zero x equals
+plus six and that is sufficient for you to use this information and to reconstruct right
+it s an interesting thing to do and if you feel like it s i would say given the shot
+==========
+alright so far about speeds and average velocity is
+and accelerations let s now go to
+trajectories
+three dimensional trajectories and trajectories thank goodness
+i almost never three dimensional
+they always two dimensional because the trajectory itself is in the vertical plane and so we normally
+when we throw up an object into gravitational field you have
+the trajectory in applied
+so we ll going to
+have one juror trajectory let this be
+x direction
+and that is v
+the y direction and increasing values like increasing values of x
+i take an object
+and and i throw what up
+with an initial velocity v zero what is the object going to do you re
+get a parabola
+and into front of gravity
+and it comes down here a can
+and where we have this kind of a problem
+we ll decompose it in
+to one dimensional motions one in the x direction and one in the y direction
+we already decompose right away
+the velocity
+at time t equals zero
+into a component which i call v zero x
+and that of course is v zero times the cosine of off of it the angle is all fine
+and the velocity in the y direction
+at time t equals zero
+i will call that v zero in the y direction and that is v zero
+times the sine of all time
+and now
+i have to know oh how oh the object moves in the x direction as a function of time and how it behaves as a function
+of time in the y direction so here come the equations
+forty x direction
+x as a function of time
+equals x zero
+plus v zero x times t that s all there is no acceleration
+the velocity in the x direction as a function of time
+is simply e zero x in never changes so that s
+the x direction
+now we take the y direction
+while i as a function of time equals y zero plus
+d zero y t plus one half a t squared why
+gee value get i m going to use is always positive
+either nine or dates meters per second squared or sometimes i make it easy to use a ten
+but mine is always positive
+and since in this case
+i have chosen this to be the increasing value all white if the only reason why i would now have to put in mind is one half
+d t square not as some of you think because the acceleration is down that s not other reason because i could have called
+this direction increasing y then it would ve been plus one how to square
+so the consequence of my choosing this the direction in which y increases therefore the plus one half
+eighties squared that you would normally see i m going to replace that now by minus
+and one half g t squared
+then the velocity in the y direction as a function of time would be because of its derivatives that is v zero y
+minus g e and the acceleration a equals minus two
+so these are the three equations that govern the motion in the
+y direction
+is only holds if there is no
+and rec no friction of any kind that is very unrealistic
+if when you re earth but when we re farther away from earth
+as we wear with the case he one thirty five
+which will flying at an altitude of about thirty thousand feet
+that of course is a little bit more realistic
+and therefore the example but i have picked to flow what an object is the one whereby the key c one thirty five
+at an altitude somewhere around twenty five thirty thousand feet comes in at a speed
+of four hundred and twenty five miles or
+turns the engine soft and then for the remaining whatever it was about thirty seconds
+everyone including the airplane has no wait that s the case that i now want to work out
+quantitatively with them in the case of the
+they see thirty five will take an angle for awful forty five degrees and we ll take e zero which was
+about four hundred and twenty five miles body may remember that from
+that lecture four hundred and twenty five
+must border translate
+into them about hundred and eighty nine meters per second
+and so that means that the
+velocity v zero y and v zero x i both the same
+because of the forty five degree angle
+and that is of course the hundred eighty nine
+divided by the square root of two and that is about one hundred thirty three
+meters per second both are positive
+do that in mind because this is what i call the increasing value for why
+and this and increasing the effect of both positive value signs to matter
+but this is a given huh uh now comes the first question that i could ask you on an exam
+when is the plane at its highest point all this trajectory
+and and how high is and above the point where it started when they turn the engines off when it went into free fall
+so when is it here and what is this is the
+well when is it there
+that s when the velocity in the y direction becomes zero role it is positive
+get smaller and smaller because of the gravitational acceleration comes to hold the becomes zero
+so i asked this equation when are you zero
+this is the one i take and so i see is zero
+equals plus one thirty three minus ten times t
+you may think that the gravitational acceleration at an altitude of thirty thousand feet could be substantially less
+then the canonical number of ten
+it is a little less because you little bit further away from the earth but it s only point three percent less and so we ll just accepted ten
+too easy to work with and so when is it at the highest point that is when t
+equals thirteen point three seconds
+so that s about how long it takes to get there
+when i give the lecture last time i said it s an almost fifteen seconds because i m it the numbers
+i m around come off to about thirty point three seconds and
+what is this this and h now ah ah now i have to go to this equation
+i c h
+equals zero because i m going to define the point where the plane start its trajectory i called that white zero zero i m treated do that h equals zero plus
+one hundred and thirty three that is the speed times
+thirteen point three seconds
+mine is one half times g e is five times thirteen point three
+squared that is what h must be and that turns out to be about
+eight hundred and eighty five meters
+they get told you last time is about nine hundred close enough
+so we know how long a takes to reach p and we know what the vertical distance is
+and the whole trip back to this starting point if we call is sort of starting point to starting altitude
+this whole trip will take twice the amount of time to get back to this point
+when the engines every started it is about twenty
+six and half twenty seven seconds
+how far has the plane travel then in horizontal direction
+well now i go back to
+this equation
+so now i say aha accent
+when it is back at this point
+bus be x zero which i conveniently choose zero
+plus hundred and thirty three meters per second which is the velocity in the x direction which now ever changes
+but the plane is here that velocity the x direction is the same hundred thirty three
+meters per second as it was here which by the way is about three hundred miles for that never changes if there is nowhere draped or air
+friction of any kind so we get plus hundred and thirty three
+times the time and a whole trip takes twenty six point six seconds and that
+if you convert that two kilometers is about three and half called is
+now you could ask yourself the question
+what is the velocity of that plane
+when it is at that point s
+and now
+you may want to abandon now these one dimensional idea of x and y you may say help book
+this is a parabola it s completely symmetric if
+the plane comes up here with four hundred and twenty five miles per hour at an angle of forty five degrees
+that obviously it comes down here at an angle of forty five degrees and the speed must again the four hundred and twenty five miles per hour
+and you score hundred percent of course clear i want you to
+appreciate however that
+i could continue to think of this as
+to one dimensional motions and i can therefore calculate
+what the velocity in the x direction is an s
+and what the velocity in the y direction is that x
+so what is the velocity in the x direction at point s
+i go to equation the second equation there that is b zero x
+that is plus hundred and thirty three meters per second
+what is the velocity in the y direction
+i have to go to this equation now
+the zero y mine is d t
+so i get plus hundred and thirty three
+minus ten times the twenty six point six seconds to reach that point s
+and what what i find
+minus one hundred and thirty three meters a second
+the velocity in the y direction started off
+thus hundred thirty three but now
+it is minus hundred thirty three you seen this is sign sensitive is wonderful with the great thing about treating it that way
+so you now know old that it comes in with the velocity of hundred and thirty three
+in the x direction
+positive hundred and thirty three
+in the minus y direction and so what is the net
+the sum of the two vectors that of course because this vector
+and no surprise is angle is forty five degrees and this one
+is the square root of two times hundred thirty three
+and that of course if you back you hundred eighty nine meters per second hundred eighty nine
+it s a ninety meters per second and that is four hundred and twenty five miles i ll
+i m not recommending that you would do this course is perfectly
+reasonable to immediately come to that conclusion because of the symmetry of the parabola
+==========
+let s now turn to uniform circular motion
+uniform circular motion
+will curse when an object
+goes around in a circle
+and when the speed never changes
+if this reach doesn t change then the velocity
+course the state because the direction
+changes all the time but
+the speed does not
+so here we have or circle
+that is the radius r and
+at this moment in time the object is here
+has a certain velocity
+is ninety degrees and it later in time the object is here the speed is the same
+but the direction has changed ninety degrees so these vectors
+did have the same length
+in a situation like this that we have uniform circular motion so a uniform
+circular motion
+we first identify what we call the period t
+in seconds that the time to go around
+then we identify what we call the frequency
+that is how many times it goes around per second
+i prefer the latter f but our book uses the greek letter new
+i find a new often very confusing with the v a velocity and that s why i prefer the f
+it is one over t
+and so the units i seconds minus one
+but most physicists would call that hurts
+ten hertz means to go ten times around per second
+and then we identify omega the angular
+and velocity
+omega which is in radians per second
+since it takes
+team seconds to go around two pi radians omega is two pi divided by t
+now then we have this speed which we can also think of as a the year velocity how many
+meters per second is linear as opposed to how many
+radians per second which is angular velocity to this is a linear velocity is in angular velocity
+and that little the velocity which in this case it s really the speed is of course
+the circumference of this circle divided by how many seconds a takes to go around
+and that is also amiga are and then is now in meters per second
+all this is only possible if there is on
+acceleration and the acceleration is called centripetal acceleration
+it is always pointed towards the center
+a centripetal
+they send to the
+and the centripetal acceleration
+the magnitude
+is v squared divided by r
+which is therefore also omega square r
+and then of course is in meters
+per second squared
+i want to work out a specific example
+and the example that i have chosen
+is the
+human centrifuge that this n used by nasa in houston
+four experiments
+on humans to see how they deal with stronger
+accelerations this is that
+sent if you
+the radius from the
+axis of rotation the axis of rotation is here
+and the distance from here to here though you made of thing so is about fifteen meters so the astronaut s going here
+and then the thing goes around so i would like to workout this with some
+some numbers
+the radius r i ll give you light back that maybe nicer for you
+the radius is fifteen meters
+and suppose a little bit on where the person is located in that sphere
+it goes around twenty four revolutions per minute
+and that translate into oh point four her roots
+so the period to go around
+but for one rotation is to a half seconds
+thing goes around once in to have sections
+so the angular velocity omega
+which is two pi divided by t
+if you take two pi divided by two and half inches comes out to be roughly two and half
+which it too early accident that for instance
+don t ever think that that has to be the same of course
+you just happens to come out that way from these dimensions so a is about to have radians per second and the
+screened the linear speed
+tangential speed if you
+call it is omega are
+that comes out to be about thirty five thirty seven point seven
+meters per second
+and that translate into about eighty five miles i ll so it s a slice a bowl speed
+what of course the goal is for now to
+what is the centripetal acceleration
+that is omega screen art or if you prefer to take
+v squared divided by r you find of course exactly the same answer if you have a mate slip
+and that is ninety five meters per second squared
+and that is about ten times the gravitational acceleration on earth which is really phenomenal
+if you add to the fact that the direction is changing all the time when you go around
+so you feel that and g
+in this direction and then you feel a different direction i can imagine how people can actually survived that
+i mean not faint
+most people like you and me if we were to be accelerated along a straight line
+not even a circle weather direction changes along a straight line most of us faint
+when we get close to sixty and there s a reason for that
+you get problems with your butt circulation and
+not of oxygen goes to your brains and that s why you can t
+how these as turnouts can do it at ten g and the direction changing all the time it beats me
+if you take a bone seven forty seven
+it takes thirty seconds from the moment that it starts on the runway
+until it takes off you should time that we get a chance it s a very close to thirty seconds and by that time
+the plane has reached the speed of about hundred fifty miles or
+and if you calculate if you assume that the acceleration is constant it s an easy calculation
+it turns out that the acceleration is only two meters per second squared
+there s only one fifth of the gravitational acceleration
+feel sort of goodbye to very comfortable when you start taking off it s only two meters per second squared
+these poor people men and women ninety five meters per second squared
+==========
+i would like to address something that is not part of the exam
+but that is something that i want you to think about something that is fun
+and it s always nice to do something that is far
+it has to do is my last like to i have to clean my hands first
+for it to work quite well
+i have a yard stick here
+and i m
+put the art stick on my hands oh my two fingers and hold in front of me
+it is
+this rest single my two fingers
+and i m going to move my two fingers towards each other
+one of the begins to slide first of course i can tell you which one
+something very strange will have
+if this one starts to slight first it comes to stop and then the other one starts to slide and it comes to stop
+and then this one starts to slide and so one
+and that is very strange
+this is something you should be able to explain
+certainly after the lecture we had last time look at is
+and you see the alternation now good a little faster
+left is going right it s going left is going right it s going back to score once more
+look at its left is going right it s going left is going like this one the alternate
+the system thought and you know pivot has an option it you can discuss
+problems with other students so make use of this discussion about them and see whether you can come to an explanation
+good luck on your exam see you next friday
+==========

@@ -1,0 +1,657 @@
+==========
+with our knowledge of torque on the
+what s our knowledge of torque and angular momentum
+we can now attack
+rolling objects which roll down it s well
+for instance the following
+i have here
+the cylinder or could be a sphere for that matter and
+this angle is beta
+i prefer not to use oh far because that angular acceleration
+and there is is friction coefficient with the surface you
+and this object going to roll down is
+get an acceleration in this direction a
+and i will evaluate the situation
+when we have q role that means the object is not skidding and is not slipping
+well that is q role
+if here
+in an object centered or sphere
+with radius r
+and i m going to rotate it like this
+and roll it in this direction the center score called point q
+once it has made a complete rotation
+is that and a point q
+has moved over a distance two pi r
+then we call that q or rope
+when we have to roll
+the velocity
+of this point q and the velocity of the circumference
+if you can read that i ll just put a c there by the same
+in other words the q
+is that exactly the same as v
+circumference and the circumference is always omega are this part always holds but for pure old
+this holds
+you can easily imagine that if there is no friction here that the object could be standing still
+rotating like crazy but q would not go anywhere
+so then we have skidding and we have slipping and then we don t have the pure all situation
+if the object is skinny or slipping then the friction must always be a maximum here
+if the object isn t you roll the friction could be substantially less than the maximum friction possible
+now i would like to calculate with you
+the acceleration this cell underwood of cain
+when it s a few rolls down that slope pig has mass and it has length l
+and it has radius r
+and i would like you to you sure intuition and only afraid if it s wrong
+i m going to all down this inclined two cylinders their boss all it
+they have the same mass
+they have the same length but they re very different and radii
+and i m
+ever race between these two
+which one will reach the bottom first
+so i repeat a problem two cylinders both so let s same length
+same mass of one has a
+radius and the other
+the
+be race and i do a rolled them down q role
+which one will will win wind will win push things that the one with the largest radius will win
+who thinks the large with the smallest radius will been
+who thinks that will be no wait ah know loser
+wow intuition is better to mind balls will see how it goes
+team in mind what you vote was and you will see it come out very shortly
+okay let s put all the forces on this object that we know this one is n g
+yeah and we re going to decompose that into one along the slope
+which is n g
+sine beta and one
+perpendicular to the slope we have done that the zoo zillion times now in this one equals n d
+cosine beta
+then there is right here in normal force
+and the magnitude of that normal force is n g cosine beta so that is no acceleration in this direction
+and then we have the frictional force here for which i will write f of f
+there is an angular velocity at any moment in time omega which will change its time no doubt
+and and this center point q
+which is the center of mass is going to
+get at velocity v and that s the will also change this time and the
+is v of the point q which change the swiss time is v
+of this circumference because that is the condition of pure role
+that equals omega are
+this is always through but this is only true when it is to roll i take the time derivative
+the derivative of the velocity of that point q
+is per definition its acceleration so i get a equals omega dot times r
+and they d equals all for all for being the angular acceleration
+so this is the condition for pure role
+now i m going to take the torque
+about point q
+when i think the talk about point q
+and has no effect because it goes through q
+m g has no effect because it goes through q so there s only one force that that s to the torque this radius is r
+the magnitude is r f and the direction
+is in the blackboard but i m only interested in the magnitude for now so i get r times the frictional force
+this must be i i ll find
+i being the moment of inertia for rotation about the sex is who point q times i ll find
+but i can replace off on by a divided by r
+so i get the moment of inertia about q times a divided by r and this is my first equation
+and i have as an unknown
+the frictional force and i have as in a new baby and so i can not solve for both i need another equation
+the next equation that i have is an obvious one that is newton s second law f equals m a put a center of mass
+i can can see it all the mass right here at q
+we must have f equals m a and so low and
+times the acceleration of that point q which is the integral by the way
+equals this component
+equals n g
+sine beta
+that is the components downhill and minus f f
+the frictional force which is the component of pill and this is my equation
+number two now i have two equations with two unknowns
+so i can solve now i can eliminate f f
+and i will substitute for f f in here this quantity divided by r
+and so i get them a
+equals m g
+sine beta my is moment of inertia
+about point q times a divided by r squared
+and now notice that i eliminated f of f and so now i can solve for a
+so i m going to get i bring the a s to one site
+so i get a times n
+plus moment of inertia
+divided by r squared
+the costs and g
+sine beta
+and a now we have
+i ll multiply both sides which r squared i get an r squared
+g sine beta upstairs and downstairs i get m r squared
+plus the moment of inertia about that point q and this is my result
+and all i have to put in now is the moment of inertia of rotation about that x is i
+remind you though
+it is only true if we have a situation
+of two row
+so we can now substitute in there the values that we have four
+a solid cylinder
+if we have is solid cylinder
+then the moment of inertia
+about this axis through the center of mass which i ve called q equals one half
+m r squared
+and if i substitute that in here
+notice that all my m s them are squares go away
+i get one plus one half which is one and half upside down becomes two thirds so a
+equals two thirds times g times the sine of beta there s no end
+there is no l and there is no are so if i have
+two cylinders solid cylinders
+with stone in different mass totally different radii toning different length and they have a race neither one wins
+they re very non intuitive every time they see it i find the kind of amazing
+noticed that everything dissipate years and
+are an o disappear so those of you
+course that that if i take two cylinders with the same mass
+different radii those of you is that that there is no wind is now loser they were correct but even or
+amazing is that even the mass you can change you can change anything as long as the two cylinders are solids that s what matters
+so if we take a hollow cylinder
+then the moment of inertia about these axes through the center of mass who q
+if this it s really most of the masses really at the surface that it s very close to m r squared
+and then the acceleration
+if i substitute in here an r squared i get a two there equals one half times d time sine beta
+so this acceleration is last and this one
+so the hollow cylinder will lose in any arrays against the solid cylinder
+regardless of mass regardless of radius regardless off length
+and i
+show that to you
+rather set up here
+and i ll try to
+show that to you also on
+the screen there but for those of you or sitting close a s probably much better
+that you just look at the demonstration right here
+i have here
+all just up at i have here
+start with a very heavy cylinder made of brass and this one is made of aluminum they have
+very different masses same radii same length should made no difference it should be no winter the should be no loose
+i m
+start off at the same time
+i hope you can see that there this is this if the starting point to lower the little
+i will count down to three two zero and then you can see that they
+reach the bottom almost that the same time
+so very different in mass of mass differences at least a factor of three
+all other dimensions are the saying three two one zero
+completely in unison
+not intuitive for me
+now i have one
+that has a very small radius
+compare to this one this is it s more small aluminum brought baby you can see it here
+television this is way more have he almost thirty times have you took may go different islamists insult
+tomato difference know whether know loser radii different masses are different to make no difference
+okay
+there we start to race three two one zero
+and they hit the bottom and the same time to the now out
+here i have a whole one you re
+believe it that it s whole
+so now all the mass is at the circumference
+and now it takes more time now the acceleration as you will as you will see
+is half times d sine beta
+in the other case it was two thirds and you may
+think about it tonight wide is one takes more it has to do of course
+with the moment of inertia
+but again it s independent of mass radius and length so was cute in metal to geometry this one
+is
+be a loser and this one regardless of mass or length is
+be the winner
+so you serum
+swallow what is not is is very light this is very having
+uh puts a hole one on your side
+three two one zero
+the the hollow almost and even so on the floor
+yeah i find the things always quite amazing that nature worse this way
+and i m impressed that most of you in many of you had the right intuition when they said it would make no difference
+for the to solve it s cylinders
+==========
+we now come into the most non intuitive part of all of eight oh one
+and argue bit perhaps the most difficult part and all of physics and that has to do is gyroscopes
+and i really is you to pay alot of attention
+and not even to miss ten seconds
+because you re going to see some mind boggling demonstrations
+which s only cover been non intuitive
+that unless you have followed the steps that we d up to it you are the many i d hear what you re looking at you will be fun it will be cute
+but it won t do anything for you imagine
+that you when i going
+space know gravity was summoned
+space
+now we have this bicycle wheel there and
+i m going to put the torque on this bicycle wheel in this direction
+so i m
+put my right hand towards you and my left hand away from you
+and i do that for short amount of time a lead go
+so all this was going to happen israel is going to spin like this for ever and ever and ever
+i ve given it a little torque
+that means if their store because the change of and gentlemen to um hum
+yeah you meant and chains must be torque times delta t
+and so i do this and let it go and it will rotate about this x is for ever and ever on have simple right okay
+now i m going to torque it s in this direction so we re now to space
+really standing still and all i do is do this and i let it go
+that it will rotate for ever and ever and ever and ever in this direction that s clear
+now comes the very non intuitive part
+now i m going to give it a spinning your direction
+and now again i m going to torque like this
+what will happen
+you will say well you might say them electricity you went and did you might say well
+you give this the real a spin so this and
+we ll we ll put probably continue to spin and you do this
+so maybe what you re
+see is that it will rotate like this
+as it did before and in the same time the bill would be spending but that cannot be
+because if the wheel would be spinning
+like this then the angular momentum of the spinning wheel is in this direction
+and if i would give it a twist
+and it would continue to spin and it would rotate like this then this
+been angular momentum would go around like this
+and that can not be because there s no torque on the system because once i that go there is no longer any torque so is not possible
+for the wheel to keep rotating and as a result of this truck that i give it that it s simply goes around that is not possible
+how is nature going to deal with that
+i ll show you that on the view graph
+it s very non intuitive what will happen
+and we will then also
+i will also demonstrate it to you
+so here is a situation precisely as i described to you
+you are has an observer
+in this direction with this is the direction of twenty six one hundred
+so your viewing the wheels like this there spinning towards you
+that s what i will do shortly and that s what i apply now
+this is my right hand and this and my left hand
+the separation between my height right and left them these little be
+so the torque that i apply is b f
+it s this arm so to speak times this force and the forces perpendicular to the r
+i apply a torque for certain amount of time delta t
+when i do that i apply i had angular momentum in this direction
+but to really was spinning in in in this direction you see it
+and so the angular momentum offs been of the wheel is in this direction
+i and angular momentum in this direction and you see that here
+so this was originally this pin angular momentum of the real i d torque
+ford time delta t and so i at angular momentum like this and then i stopped
+so only talk for a short amount of time and i stop that means
+after i have stopped the angular momentum of the system as a whole can no longer change because there s no torque on the system
+and the only way that nature now can solve that problem
+is to tell this we ll
+into a i indicated here and to make it spin in this direction and it will stand still
+in other words i hold it in my hand the wheel i will get it
+i read a spin
+old in my hand ice printed towards you
+and i m going to put my right hand towards you i m i left hand s the wave from you
+the spin angular momentum is now in this direction
+so i m
+give it but torque like so that means up and what we ll do we ll do you build will do this
+it s very non intuitive watch it
+is that strange and expect that i ll do again time going to torque by pushing my hand towards you
+and the real is something completely unexpected it simply tilts the fighter other way around then the torque of course
+we ll make it fit like this so give it a little bit more
+spin angular momentum
+so now i move my left hand towards me and my
+but towards you and my right hand towards me and then i expect that the b will do this
+and that s what it does
+extremely not intuitive the
+and torques apply to a spinning real always do something that you don t expect however there is one thing
+that s always helps me in terms of guiding me
+and that is you can always predict that the spin angular momentum
+go all is move
+in the direction
+of the torque
+which is is external torque that i applied let s go over that again
+we have here the spin angular momentum
+that you so with pointing in this direction and i applied a torque in this direction so vector
+and what is the spin angular momentum do it goes in the direction of the torque
+and then when i stopped was my to work
+and of course nothing chains anymore and so what happens is this real dillard s
+and notice that l the spin angular momentum has moved from here to here
+and i was talking in this direction so it moves towards the torque
+if you have digest it this there you can test yourself now
+now we have the same we ll i m
+rotate it in exactly the same direction
+but now i m not going to torque like this in the z direction
+or like this in the minus c direction now i m going to do this
+what i m going to do this
+try it out to really concentrate on whether just stops you
+and tried near an answer to the following question do real is rotated
+i hold my aunt and i m going to talk it like this so that the torque vector is in your direction
+angular momentum was like this torque is like this what will the angular momentum vector do
+move in the direction of
+of the torque monthly angular but will the spin angular momentum vector then do is a torque is in this direction
+it will do this it s
+move in the horizontal plane
+very non intuitive but that s what it will do and i will show that to you
+i m going to spin israel
+i m
+spend it with the high angular momentum high spin angular momentum
+and then i m
+sit on the stalled and i m
+trick exactly as you see on the picture on the right i m
+torque like this
+and as long as i talk it like this
+that s spin angular momenta and once you go around into a horizontal plane
+and when i talk to other way around
+it ll go back into horizontal plane
+but it taught exactly as you see the picture there you ready
+i stop the torque
+nothing happens i torque backwards i keep talking
+i keep talking that that them i had i would have to push a deep talking nice will working and it s bulbs the angular momentum vector
+this chasing so to speak the torque is and non intuitive
+very little with the blue
+also of dangerous sometimes it s it s
+we call this motion of the stew it in this case the motion of the spinning wheel we call that
+precession so you apply a torque to spending real
+then what you will change is
+a precession
+==========
+i can show you the precession is another way which is in fact very in freedom
+suppose i have here a string rope like we have there
+and i stick into that the rope fight x to the rope israel
+just like so
+at it go well we all know what happened clump clear
+all right but now i m
+spin it before i let it go
+so here at the bottom at this point p there is a loop and here is the
+the axis of rotation of the
+bicycle wheel which is so sore brass the solid piece
+and i give that a length a little are not to be confused with capital r
+which is the radius
+of the bicycle wheel
+so this arrow capital r
+and it can rotate about this here
+reasonably treated i call that center point q
+and let this be the part of the wheel that is on your side
+try to make you see it a little bit three dimensionally
+suppose now i given a spin
+in this direction omega s best enforced ping
+in what direction is now to spin angular momentum
+your your hands you phones spinning in this direction yeah
+it s spinning in this direction angular momentum is in this direction that s a spin angular momenta
+l spin
+well there is a force on the system at g
+and that force
+is in this direction it has a mass and the bicycle wheel
+and it has a radius capital r in this part is little r
+so what if two points p
+there is a torque
+and the torque is apart times n g this is ninety degrees
+so the cross product is nice the sine of that angle this one
+so the torque relative to point p is r times n times g
+in what direction is that torque
+are cross f in what direction is that word
+what s your hand storms whatever you want
+you think in this direction i disagree
+i disagree our cross f is
+thus the canning
+in the blackboard
+it s not
+the blackboards indirect would are cross f is in the blackboard
+there is a torque in this direction
+nature credit the pro fights that torque
+what will the spin angular momentum due
+is going to move
+in a direction of the torque is
+chase the torque so what would it do if the angle men them is here
+what would it do it ll do this and as it moves
+the torque will always be perpendicular
+to the plane through the string and are
+you can just see that for yourself why that is
+and this very moment and angular momentum is like this the torque is in the blackboards because it s are cross f but when i m here
+this r has change position and always remains perpendicular to the real
+so the torque will also change direction and so this angular momentum is
+been egg meant and we ll keep chasing the torque
+an starts to rotate freely
+that is exactly what i was doing when i was sitting on this to accept that i had to apply
+that torque in my hands like this it s exactly the same direction
+i have to apply it all the time and when i stopped
+the precession stopped he however the torque will never stop because is m g will always be there
+and i will show that to you shortly
+you may say
+you must be crazy because you re violating newton second small f equals m a
+this object
+fall
+there s only one force on that object
+and he was on a how can it not a center of mass must fall was acceleration g aha
+it s not as one force on that object what think is here
+the tension in this cable t
+will be exactly m g
+and so the net the sun in the wall force is on that object is zero
+there is no net force on that we ll but that is a net torque
+and that s why it s going to process is that be a net force then indeed it would also
+go down if this force were larger than this so nature is very clever
+the way that it deals with these water difficult problems the four will show you
+this demonstration by spinning this we won then hanging it there in that row
+i want to mention that the
+angular frequency of the precession which should never be confuse with the
+angular frequency offs building
+is the rights for you it s it s only you put a three o form in a job on pace three hundred and forty four in your
+book now i will not the right it here
+but what comes out of it that is the torque which is the one
+that we have here in this case
+divided by the spin angular momentum that gives you the frequency of
+the precession in our case for our bicycle real
+it is our entry
+and the spin angular momentum of this wheel
+if it is rotating with angular
+velocity omega of s would be i times omega remind l is i times omega over speeding wheel
+so i fear eye rotating about point q
+this is the axis of rotation times omega of the spin this is the spin and this is the precession
+and then the period of precession would be two pi divided by omega precession
+let s take a look at that equation and see whether that sort of intuitively make sense
+first of all if you increase the torque
+the up stairs
+then it says that the precession frequency will increase that make sense to me because
+dip torque is persuade in
+the angular momentum to follow it so the torque is purse waiting the spin angular momentum to change
+well if the torque is stronger than it is more powerful so you expect that the
+recession frequency will be higher
+however
+if the spin angular momentum is very powerful than the spring and when them s a sorry torque
+i m not
+go as fast as you want me to go
+so when you increase that spin angular momentum in the wheel is also intuitive that the precession frequency
+will go down s we ll spins it has spin angular momentum
+but as the processes around like this there will also be angular momentum in this direction
+but is rotating like this
+therefore there is a total angular momentum which is a vector will some of the two
+this equation will only a halt
+as long as the spin angular momentum is sweetie dominating the total angular momentum
+and you can see that immediately because suppose you make the spin angular momentum zero
+that is not spending at all
+do you really think that we session paper to be infinitely high of course not
+so this only holes in situations where the spin angular momentum is way way larger
+then the angular momentum that you get to to the precession put restrictions when
+this ben the real comes to a halt when it s no longer rotating you better believe it then the thing will go clung
+there s no longer the precession mote
+for bicycle wheel
+to get a feeling for how long the precession will take
+we can substitute
+the numbers in there are bicycle wheel the the the the the raw to brass rod little r
+has a length of seventy centimeters
+and the
+the radius of the bicycle wheel is about twenty nine centimeters
+and let me make the assumption that all the mass of the bicycle wheel
+is that the circumference which is not very accurate but this close to that sabine there are some spokes here
+but let s assume that everything is here so then the moment of inertia is m r squared
+well if now you
+take a frequency
+of five hurts spin frequency
+you can calculate now omega and of the spin frequency
+omega equals two pi
+i m the spin frequency and so i know now i can substitute that in there
+so i get an omega priest session
+now equals r and d times
+the moment of inertia i assume that all the mass is that the circumference
+an approximation so we get m r squared
+and then we get omega s which we have here
+reduce the end
+and so you get r g
+divided by omega as
+times r squared that is the angular
+frequency of the precession and the period of the precession is two pi
+divided by omega and you find then for that you wait period of the precession about ten seconds
+so if i give and a spin frequency of five hurts
+with the dimensions and with this approximation that all the mass is at the circumference you d expect that it would process around
+very generally in about ten seconds but i have very little control over that
+frequency so it is possible i given seven hertz it s possible like of three hertz
+but i will do what i can
+i i actually give it the maximum one that i can that this always
+guaranteed success
+where s the wheel the winds here
+so will spin it up and then we ll put it in here
+no it is the way i m spending it them haul it away from one out from our going to change it and do it differently next
+then goes about ten seconds
+isn t that amazing and it rotates seen from below clockwise
+now is going this way and i m going to redo we experiment changing the direction of rotation and then it will go the other way
+now the angular momentum said rotating like this is pointing here
+spin angular momentum is pointing like this torque is like this
+and so the spin angular momentum is changing that chasing that tour kind is an angle and in mind the torque is the torque it s chasing its
+alright so i had this in my right hand
+that s right and now
+i will
+so when i spin it up
+that s right
+so let me now change the direction turn it over
+and i m
+spin it up again
+a oh and this now
+resurrection
+this turning either running and landed in this direction torque is now towards me
+angular momentum is changing the torque
+i ve change the direction of the spin angular momenta
+i ve not change the direction of the torque and now it is rotating is seen from the low counterclockwise
+before it was rotating clockwise
+if i can increase the torque by putting some weight here on the axle
+yeah i have this is actually expense in our case
+and i can put some weight on here
+then i actually had to the torque
+and then you will see that it s
+it goes faster the precession frequency goes up so i ll put some weight on there
+oh
+oh that at first go around which was
+roughly ten seconds what we
+calculate it and now i m
+put two kilograms here at the ends
+now you see an instantaneous increasing the precession frequency
+it s ego it must fast now take it off
+and then it goes back to it s roughly ten seconds so what i ve done this i have increased this torque but not at the expense of them
+because a reason why the m cancels is because the moment of inertia has an n and it but if i just hang his object on it
+but as it is a moment of inertia of the spinning wheel
+now this is intuitive another this is intuitive
+you can do all of this
+with the five dollar
+oh a jar oh
+and i
+show this to this is my porch are avid in my office is great fun
+and the storage arrow
+is doing exactly the same thing that that s is doing show you that toy jar oh
+first
+forge room
+but uh
+is a toy joke and you see it
+they they should make it a little darker here
+a c might oh a joke
+yeah
+i m
+spit it
+and that i m
+hang it exactly the same way that that was hanging them
+spin it for those were sitting close
+and then putting a horizontal it and high it in the string you see exactly the same things happen
+and now to friction of course all this fun ultimately comes to hold
+==========
+i have something very special for you or i may have something very special for you
+the depends oh my help or who is here behind
+the scenes
+i hear in there
+great
+careful speed
+i m going to the airports be a little tired
+and as one of my friends to help me you please help me and
+just carry is served because for me around the get up
+walk around a little mex and turns
+put around this
+what l a half
+exactly or you doing and
+you behaving so strangely
+make some weird turns them and we re go to the what s
+get catch the plane
+but it doesn t quite do it you think it will be doing right so in here you ve guessed it
+the spinning wheel which is very real
+and when you do is put a torque on it
+and is exactly what you least expect it fits up is and that s fun
+yeah you may get arrested when you re going to logan airport with the sum is
+thank you very much this great
+==========
+spend objects have a state realizing effect if you
+take a bicycle wheel
+and we have one
+and i put it here
+and i do nothing
+it will fall know one a surprise a letter
+did i give it a little spin
+that it doesn t fall why because that angular momentum is the spin angular momentum
+and so doesn t fall and is not only a bicycle wheel look nicely stable
+not only with a bicycle you take you take a quarter
+and you put a quarter like this on the desk you that you like it it will fall
+roll it become stable you give a spin angular momentum it become stable
+take a top
+you put a top on the table
+falls over you twist it you give it spin and the top is stable
+so spin angular momentum has the
+property of stable i think things
+you will see that address the one you assignments when i want you to address that quantitatively
+this is the basic idea behind inertial guidance systems
+in inertial guidance systems you have a spinning wheel
+at least in the days that the guidance system that mechanical wheels
+yeah the spring real
+but this spreading real
+is now in in such a way
+that you cannot put a torque on the
+x is of rotation of the spinning wheel that s the weights mounted we call at three axles and and bolt
+so the home and if you put it or call it
+the housing see in this case the yellow and the
+black housing will start to rotate you never many to get that torque on the spinning
+we ll never get it on on this axis
+and therefore if now you
+put on your boat oh you put in a plane a missile for that matter
+if you can ever put a torque on the spinning you and if the angular momentum
+for spit is in this direction it will stay there forever never
+assuming that we have no frictional losses
+and then the plane turns
+the direction of the spin angular went will not change
+but what will happen of course is that is yellow frame will rotate
+or to back frame will rotate
+and in these bearings here are shaft and coat is
+and they sense that a rotation
+that the outer housing makes in order to keep this thing pointing it the same direction
+and that signal is being fed back to the automatic pilot and that keeps the plane flying in direction that you want to
+so you use as a reference all the time
+the spin angular momentum of you jar rope
+which is now mounted in such a way
+that you cannot put a torque on it s even when the plane changes direction and i want a show that to you
+okay this is the direction of the spin angular momentum
+ninety happen and i m
+fly
+well that that s been in the woman
+it has no respect for me it s stays and that is in direction no matter how i fly
+and there re signals that come from the the bearings
+of the yellow housing and the black housing
+those ever signals i fed back to the automatic pilots and so the plane will stay course
+now what i can do for you to come to a final test on your thinking
+this real
+is suspended in such a way that there is no gravitational talk on it s like there was here
+but i can put a torque on it by sin break put in some weights on the axes
+and what
+think will happen now if i put some weight here on the axis so this this really spinning
+but now i m
+put a torque on it here
+is spinning in this direction by momentum is pointing straight at me away from you
+i m
+put a torque or like this
+put them wait there torque of the in this direction what will the spin angular momentum due
+talk is in this direction spinning and and in this direction spin angular momentum
+will suck to change the torque
+what s it
+that goes
+the spin angular momentum is changed chasing the torque is see exactly the same thing that i showed you before
+if i make the torque higher
+then the precession frequency will go up to it starts now immediately what i take it off
+put it back on again continues
+put loan it s goes way fast
+but well and now i write put away on the site
+so i change the direction of the torque if i put on the site torque is now in this direction
+spin angular momentum is in this direction it s going to reverse direction there we go
+and you see the dust
+amazingly not intuitive
+if you have problems with this you another loan see you wednesday
+==========

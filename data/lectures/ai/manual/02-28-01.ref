@@ -1,0 +1,475 @@
+==========
+The plan is to talk about resolution, which is a proof strategy. 
+First look at it in the propositional case, and then look at it in the first- order case. 
+So that's kind of the agenda for the day is to talk about proof, and in particular the resolution and proof strategy. 
+That will very likely leak over into next time, which is next Monday, and then we'll talk about how to actually prove things in the domain that we talked about last time, which was the auctions. 
+And then at that point you'll be all set up to do problem set two. 
+So then we'll hand out problem set two. 
+So that's the plan. 
+So we talked in the propositional case, we talked a little bit about proof, what it was, with the idea that you write down some axioms and then you -- some given things, and then you try to derive something from them. 
+And we've all had practice doing that in high school geometry and we've talked a little bit about natural deduction. 
+So what we're going to talk about today is resolution. 
+Which is -- turns out to be the way that pretty much every modern automated theorem-prover has implemented. 
+It's just -- apparently the best way for computers to think about proving things. 
+==========
+So here's the Resolution Inference Rule, in the propositional case. 
+It says that if you know alpha or beta, then you know not beta or gamma, then you're allowed to conclude alpha or gamma. 
+OK. 
+So remember -- if you guys remember last time we were writing inference rules on the board, the idea is to see if these Greek letters are sort of schema variables. 
+They could stand for big chunks of propositional logic stuff, as long as things match up in the right way, right? 
+So if you have something of the form alpha or beta, you know that. 
+And you also know that not beta or gamma, then you can conclude alpha or gamma. 
+It turns out that that one rule is all you need to prove things. 
+At least, to prove that a set of sentences is not satisfiable. 
+So, let's see how this is going to work. 
+The idea for how you prove something using resolution is the following. 
+There's three steps. 
+There's a proof strategy called Resolution Refutation. 
+And it goes like this. 
+First -- and we'll talk about this after but I'll write them now -- you convert all of your sentences to conjunctive normal form. 
+We'll discuss conjunctive normal form later. 
+You negate the desired conclusion -- so you have to say what you're trying to prove, but what we're going to do is essentially a proof by contradiction. 
+So you've all seen the proof strategy. 
+When you assert that the thing that you're trying to prove is false, and then you try to derive the contradiction. 
+That's what we're going to do. 
+So you negate the desired conclusion and convert that to CNF. 
+And then we apply the Resolution Rule until either you can derive "false" -- which means that the conclusion did, in fact, follow from the things that you had assumed, right? 
+So if you assert that the negation of the thing that you're interested is true, and then you proove for a while and you manage to prove false, then you've succeeded in a proof by contradiction of the thing that you were trying to prove in the first place. 
+So you -- anyway, you run the resolution rule until you derive false or until you can't apply it anymore. 
+OK. 
+Yet, what if you can't apply the Resolution Rule anymore? 
+Is there anything in particular that you can conclude? 
+(Pause) In this case, you can conclude that it doesn't follow -- OK, the thing that you're trying to prove can't be proved. 
+So that -- so propositional -- well, I'll just say it here -- it's complete. 
+We talked about completeness last time. 
+And so if the thing that you're trying to prove does, in fact -- is entailed by the things that you've assumed, then you can prove it using resolution. 
+In the propositional case. 
+We'll talk about the first-order case later. 
+More complicated. 
+We'll do the propositional case now. 
+So that means if you go on and you've applied the Resolution Rule and you can't apply it anymore, then it can't be proved. 
+So, let's understand what the steps are. 
+Convert the sentences to conjunctive normal form. 
+We talked about this last time, right? 
+Not last time -- some previous time. 
+Conjunctive normal form looks like this. 
+And it looks like A or not B and C or D or E and not F and ... 
+that's what conjunctive normal form looks like. 
+So when you convert, you eliminate arrows -- you know how to do that? 
+You drive in negation. 
+You know how to do that. 
+And then you distribute and over or. 
+==========
+So let's just do a proof. 
+Let's say I'm given P or Q, P implies R and Q implies R. Let's say I would like to conclude R from these three axioms. 
+Now, I'll use the word "axiom" just to mean things that are given to me right at the moment. 
+OK. 
+So, let's convert this first sentence into conjunctive normal form. 
+What do we have to do? 
+__: (inaudible) Well, I would argue this is already in the conjunctive normal form. 
+Right? 
+It doesn't have any right arrows, or any negation, and there is no distribution of and over or. 
+So we'll just take that to be our first clause. 
+All right, let's convert this one. 
+So eliminating arrows, we get what? 
+(Pause) Not P or R. Do I have to do anything more? 
+(Pause) Same for this one, right? 
+Not Q or R. Now we want to add one more thing to our list of sentences that we're going to work on. 
+What's it going to be? 
+__: Not R. Not R. Right? 
+We're going to assert the negation of the thing we're trying to prove. 
+We'd like to prove that R follows from these things. 
+But what we're going to do instead is say not R, and now we're trying to prove false. 
+And if we manage to prove false, then we will have proof that R is true. 
+So now we look for some opportunities to apply the Resolution Rule. 
+What two of these clauses can we tape together and apply the Resolution Rule? 
+__: (inaudible) Yes, give me some numbers. 
+One and two? 
+OK, so we take one and two, and the P and the not P go away, and we know that either Q or R has to be true. 
+We derive that from one and two. 
+__: Two and four? 
+Two and four, OK, we can take not R and not P or R and conclude? 
+Not P. OK? 
+__: Three and four. 
+Three and four we can get not Q. __: Five and seven we can get R? Five and seven we can get R, oh that's looking good. 
+Between -- Ok, we can get R because -- five and seven -- oh! 
+And now, for the coup de grace? 
+__: Four and eight. 
+Four and eight. 
+And we get -- people conventionally draw a black box or something. 
+Now, what exactly is going on? 
+==========
+So let's look at this -- the Resolution Rule over here for a minute. 
+If I have P as one sentence and not P as the other sentence, it can always just -- just so it maps under here and you can see what's going on. 
+You can always think of P as being the same as saying P or false. 
+But it never hurts to add "or false" on. 
+You're not going to change anything. 
+If P is true, then P or false is true. 
+And somehow I think we can do not P or false, and then if you do resolution, you get false or false, which is false. 
+So that's how it is that we can see the R and the not R and say "false". 
+So we derive our contradiction. 
+__: (inaudible) Yes. 
+So, two and four, so I let R play the role of beta, and I let not P play the role of alpha, and then gamma you can take to be false. 
+__: (inaudible) Well, OK, so let's talk about that. 
+So, what if I start with, oh, say P and not P, and I'm interested in proving Z. Should I be able to prove Z from P and not P? No? Well, consider this sentence. 
+So we did decide that, if this is true, then I should be able to do that proof. 
+Now, is that true? 
+Valid? 
+Is that valid? 
+That's valid. 
+So, this is just the old thing. 
+From false, you can prove anything. 
+From true, you can prove nothing. 
+From false, you can prove everything. 
+Somehow that -- I don't know, doesn't seem right. 
+But that's how it works. 
+So is why in the end we're going to probably -- we're going to move to probabilistic representations. 
+Because of its very brittle properties. 
+It says once you let the littlest bit of contradiction in, the game is over, right? 
+As soon as you can prove P and not B, then it's all gone. 
+There's nothing left. 
+And that can be a problem. 
+==========
+First -- let's work on conversion to conjunctive normal form, right? 
+The first one, we have P implies Q implies Q. OK. 
+So what does that turn out to be? 
+Well, it's not this or that, so we get not -- maybe I'll do two steps of that -- not P or Q, or Q. All right, so now I can drive the negations in and I get P and not Q or Q, and then I distribute, so I get P or Q and not Q or Q. Not Q or Q -- what's that equivalent to? 
+It's always true, right? 
+So that becomes true. 
+And something and true is always just something. 
+So you could -- this whole set is sometimes called Boolean Algebra. 
+And there are identities for the operators. 
+So over there when I said you always "or false" onto something? 
+So "false" is the identity for the "or" operation, and "true" is the identity for "and." 
+You can always "and true" onto anything you want to and still get whatever you have. 
+So, that can just go. 
+So we get this one clause, P or Q. The next one -- all right, P implies P implies R, you can believe what we're going to get is P and not P or R. By analogy with the previous one. 
+I just kind of cut that step. 
+Now we distribute it, and so we get P or R and not P or R. So that's two more clauses. 
+You get this one and this one. 
+In a little while, we'll write them all down in a nice row. 
+All right, the next one, R implies S, but that whole thing is going to be negated. 
+We're going to get -- well that'll be in a couple steps. 
+Not (not R or S) or not (not S or Q). 
+All right, so that turns into (R and not S) or (S and not Q). 
+All right, and that was -- we've never explicitly done this distribution with this complicated an example, but you're going to get four clauses out of it. 
+Because you have to take them -- this one to this one, this one to that one, this one to this one, and this one to that one. 
+So you're going to get R or S, and R or not Q, and not S or S, and not S or not Q. 
+So this is a good one, this is a good one, that's true. 
+And then we insert the negation of the conclusion that's not R. OK, so here's where we're going to start out. 
+After this, it's not too hard. 
+So, who wants to take a stab at it? 
+Just tell me two numbers. 
+__: (inaudible) the first column P an not P or R? Is (inaudible) to use the negation of R and just get P and not P? Yes. 
+__: Yes? 
+It is. 
+The question though is, you're a clever human who could see that that was a useful step to do at this point. 
+The algorithm we've been thinking about is very easy to automate. 
+The steps are just very mechanical. 
+But yes, if you could see to do that, it would be fine. 
+But it might be hard to make your program see that that was a good step, where some other steps might not be so useful. 
+OK. 
+So what step would somebody like to take? 
+Two numbers, any two numbers. 
+__: One and six. 
+One and six. 
+All right, from one and six we get P or not S. We can even hint. 
+So we're going to codify those hints in a minute. 
+There are two rules of thumb that are really, really important. 
+One is that if you can involve a clause that has only one literal in it, that's usually a good idea. 
+Why do you think that's a good idea? 
+(Pause) What happens when you use a clause with one literal? 
+What kind of answer do you get back? 
+__: One literal? 
+Yes, in this case, one, or in general, one that's one shorter than the thing you had before. 
+When you're trying to get to false, short things are better. 
+Another one is, in general, you should involve the thing that you're trying to prove. 
+The negation, right? 
+It might be the you can derive -- derive conclusions all day long about the solutions to chess games and stuff from the axioms, but once you're trying to prove something about what the -- run, it doesn't matter. 
+So, another rule of thumb is, try to involve -- now, let me say what these rules of thumb are for. 
+They're to help you get to the proof sooner rather than later. 
+You're always going to get there -- and it's always possible to get there, but it could take a long time, because there could be lots and lots and lots of possible resolution that you could do. 
+So in terms of driving toward the conclusion, try to use unit clauses, and try to use the negation of the answer, or things that you have derived from the negation of the answer. 
+Because in general, they'll help you drive to a contradiction too. 
+__: One and three. 
+One and three. 
+OK, we can do that. 
+Q or R. Not following our principles, but -- __: Four and seven. 
+Four and seven gives us S. We like that one, OK? 
+How about ten and six? 
+Not Q. __: Five and nine. 
+Five and nine and we get R. OK. 
+Five and nine, we get R. Let's see. 
+__: (inaudible) OK, seven and twelve, good. 
+There we go. 
+All right. 
+==========
+So the book talks about -- talks more about strategies for controlling resolutions. 
+So one of the -- the thing I mentioned first was called Unit Resolution. 
+All right, that was -- in general try to use unit clauses. 
+You can't always just use unit clauses, but if you're casting around for a good idea of what to try next, try using unit clauses. 
+And then there's this idea of a set of support. 
+You can read about it in detail -- I don't want to kind of go over the details here -- but the basic idea is that your axioms might -- like I said, entail all kinds of things. 
+They might tell you how to play chess games and drive cars and stuff, but it may be that you're trying to make a particular decision, and so trying to involve the thing that you're trying to prove, plus a consequence that you've gotten from something that you've tried to prove, is a good way to go. 
+Yes? 
+__: (Inaudible) contradictory of something. 
+So, could you say something like in the example, use your assertion to say, and number nine, to say Q? And then say Q and eleven and not Q? Sure, yes. 
+Right, good. 
+See, you don't have to come up with a contradiction (with the goal)-- I mean, it just so happens that we managed to prove R and then it directly contradicted not R. But you're right. 
+Any contradiction will do. 
+We don't have to get to R. We can get to anything, as long as we get a contradiction, and then the game's up. 
+Yes, that's a good point. 
+__: Is part of the heuristic -- like number two -- it would never be very useful, would it? 
+To us? 
+It's not used anywhere else? 
+That's true. 
+__: So is there some way you could chop it off? 
+You could prune it out, yes, that would be a good thing. 
+And it may be that some theorem-provers know how to do that. 
+I suspect they do. 
+There are some that do a kind of fairly complicated graph theoretic analysis of the axioms in some sense and they might actually notice that that was never going to get us anywhere. 
+Of course, if it's a T or -- yes, probably any axiom -- any variable that gets mentioned only once and doesn't play a part in the conclusion, probably -- I can make rash statements like that, but I'm guessing that's right. 
+Yes? 
+__: (inaudible) our axioms imply our (inaudible)? 
+Yes. 
+__: So can we say that our axioms imply our conclusions. 
+We're going to ask you to play with an existing theorem-prover. 
+But you could imagine implementing a theorem-prover based on the Resolution Rule, right? 
+You have all these things sitting here, you go looking to see if you can find any that have a P and a not P, you roll them up together, you throw those out, you throw the new thing in, etc. So, you have a pretty straightforward thing to try to do. 
+Although controlling the search can be hard. 
+OK, now what if we have variables? 
+So now we're going to move to the first-order case. 
+==========
+And there's going to be a resolution in the first-order case, and it's essentially -- at the gross level it's the same inference rule, but the trick is what to do with the variables. 
+And what to do with the variables is pretty hard and pretty complicated. 
+So we're going to spend time talking about that. 
+So if you knew for instance, for all X, P of X or Q of X, let's say you knew that. 
+Or say you knew not P of X or Q of X. And let's say you also knew P of A. What would you be able to conclude? 
+What should you be able to conclude? 
+__: (inaudible) Q of A, right? 
+You ought to be able to conclude Q of A. This is like saying all cats are mammals or something, and Fuzzy is a cat, and you'd like to be able to conclude Fuzzy is a mammal. 
+So, now -- I mean, one way you could think about trying to make that happen in a formal way is to say well, I'll try plugging a bunch of different things in for X here, until I find one that matches this thing, and then when I do, it'll be OK and I can go ahead and do something like the resolution I knew about before. 
+But that -- the notion of trying to find something that you can plug in for X -- you'd like that not to have to be a search step. 
+You'd like not to have to say, Oh gosh, what is the universe of terms that I could possibly plug in for X? You'd like somehow to be able to compute the right thing to plug in for X. Or at least a useful thing to try to plug in for X. So that's what we're going to do. 
+We're going to try to cut down search steps. 
+Figuring out how to plug things in, how to compute what would be good to put in for X in a universally quantified statement. 
+Now, we're going to do this in a kind of a really roundabout way. 
+And it's just kind of complicated, I can't figure out a way to make it not complicated. 
+So we'll just have to do it. 
+==========
+So, what we need to do is talk about substitutions. 
+Something called substitutions. 
+I also find, by the way, that I don't -- Russell and Norvig's discussion of this stuff isn't very good. 
+So I guess what we'll do is xerox chapter from another book. 
+There's what we called an atomic sentence before, a predicate applied to some terms. 
+So, there are two variables in here, Now, we can think about different ways that we can substitute terms into this expression, right? 
+So we can talk about some substitution instances in that expression. 
+So here's one substitution instance. 
+P(z,F(w),B) ... 
+there's a substitution. 
+It's one that we find almost entirely uninteresting. 
+Ah -- let me say that I'm adopting a convention, which is also a convention of a thing that I'm going to hand out to you guys, which is that uppercase is a constant symbol, and lower is a variable. 
+So the uppercase things can't change; they're fixed. 
+They're the names of individuals, the names of functions, but the lowercase symbols are variables. 
+Now, we find this substitution -- this is a substitution of that, but it's not very interesting because it just changes the names of the variables, but it doesn't really feel like it says anything more or less. 
+This can get called an alphabetic variant of that. 
+But there are more interesting ones. 
+P(x,F(A), B), P(G(z), F(A), B) There's another. 
+We'll do one more -- P(C, F(A), B). 
+And that's sort of interesting, because that doesn't have any variables in it. 
+We'll call that a ground instance. 
+Ground means it doesn't have any variables. 
+OK. 
+So these things you can think about of as being more specific than that. 
+And they're sort of nailing down more parts of the things that they're talking about. 
+Q: ... 
+Well, yes, it's a term, though, now -- so, F of A is nailed down -- F of A. Right? 
+Because A is nailed down. 
+A is a particular thing. 
+And F is a function which is also nailed down. 
+And a function can only map a thing to one other thing. 
+So, F of A -- that's the name for one particular individual in the world. 
+Q: Can you have non-deterministic functions? 
+No. This is a function on the kind of ordinary, basic, set theoretic sense of a function. 
+We have relations -- but then we write them differently. 
+Right? 
+We will write them R of A B or something. 
+A different relation. 
+And you can think of a relation as another term. 
+But, when we write a function like this, then that name is one thing. 
+So now, let's talk about a substitution. 
+In general, a substitution looks like term 1, variable 1, etc., term and variable. 
+So, in a sense, put this into that properly. 
+And this in for that. 
+So, if we put A in for Y in this expression, we get this one. 
+OK? 
+The substitution here -- what is the substitution here? 
+What do we have to put in for X? Q: What's the name of this notation? 
+Oh, this is called a substitution. 
+But if we want to make this look like that -- what do we have to put in for X? Z. So we write -- we put Z in for X, and what do we have to put in for Y? Q: w. 
+7. 
+In order to make this expression look like that one, what do we have to put in for X? G(z). 
+And for Y? Q: A. A. Good. 
+And the last one -- what goes in for X? Q: C. Z. 
+And for Y? A Q: (inaudible) can we substitute functions G of Y for F of Y? No, you can only put - this must be a variable. 
+Functions are like constants. 
+Because you can change what's in them, but you can't change them. 
+Q: G is functions? 
+G. In this language, all the functions are constant. 
+I mean, you can't take them out. 
+And, in fact, that's what makes this first order logic. 
+And second order logic, you are allowed to change around the functions in a predicate. 
+You are allowed to quantify over the predicates. 
+You are allowed to say "for all P" and "all A". 
+P and A. But, we're not going to go there in this class. 
+So, I have to tell you about an operation that you can do on substitutions. 
+You can compose substitutions. 
+Right? 
+Well, if we're going to talk about -- well, we use this terminology, if we let omega be a sentence. 
+And s be a substitution. 
+So sentence substitution. 
+Then we can write things like -- P(x,F(y), B) -- with substitution -- A for Y, is equal to P(x, F(A), B). 
+So that's this. 
+And we'll talk about applying a substitution to a sentence or an expression. 
+In the process of doing resolution on first order expressions we're going to need to be able to chain substitutions. 
+We are going to make substitutions, and then more substitutions, and then more substitutions. 
+And so, they have to go until they compose substitutions -- put them together. 
+OK. 
+So, what does it mean to compose a substitution S-1, and S-2. 
+That's going to give it a new substitution. 
+And, how do we get the new substitution? 
+We do it in two steps. 
+We apply S-2 to all terms -- we'll do an example, in S-1. 
+And then, we add <t/v_i> pairs from S-2, to S-1, when v_i is not in S-1. 
+So, let's say we have substitution S-1 in G of XY that's put in for Z. And, S-2 is A, for X, B for Y, C for W, and D for Z. Now, I want to know what substitution will I get by composing S-1 and S-2? 
+So the first rule is that we apply S-2 to the terms in S-1. 
+So, this term in S-1, G of XY -- we apply S-2 to it, and what do we get? 
+When we apply S-2 to this expression? 
+Q: G of A, B. G of A, B. And then the Z. 
+Now, for every term that is mentioned in S-2, but not in S-1, we take its definition or its substitution. 
+==========
+So, we put in A for X. B for Y. And C for W. That's the definition, of composition for substitution. 
+We're going to need that later on. 
+There are some facts about substitutions that you can verify yourself, or read about in a book, or whatever -- one is that they associate. 
+So, that if you have a sentence W -- with S-1 substituted into it - and you apply substitution S-2 -- that's the same as W with the composed substitution applied to it. 
+That seems good and useful. 
+Yes? 
+Q: D substitutes for Z ? 
+No. The answer is no. 
+Like I said, we only add pairs that don't already have a definition in S-1. 
+So we only add -- see Z is already defined in S-1. 
+So, we don't take a definition for Z from S-2. 
+Yes. 
+Because why? 
+Well, intuitively, if you think about it, if you run a formula -- well, let's just take Z. What if we take Z -- (Z S-1) What's that going to be equal to? 
+Q: G of x,y. 
+OK. 
+G of x ,y. 
+OK. 
+What's Z of S-1 with S-2 applied to it? 
+Q: (inaudible) We'll, G of S-1 is this. 
+And then if we brought S-2, what do we get? 
+Q: G of AB. 
+G of AB. 
+Right. 
+Because for X, we look up X. We look up Y - until we get to AZ. 
+Now if we -- now you can see that if we take Z and apply S-1 and S-2 to it, we're in good shape. 
+We'll get the same thing. 
+Because if we look at Z in S-1, and 2, we're going to get G of A, B -- which is cool. 
+If we're just re-writing this re-definition of Z, this obliterates Z from the whole formula. 
+And Z's not around any more. 
+So there would never be an option even to put in D for Z. Q: (inaudible) So in fact, that was just a little example of what I was writing down. 
+Similarly, these things associate -- like S- 1, S-2, S-3 -- the same as S-1, S-2, S-3 -- but, this is - - but the order matters. 
+If you're interested, you can prove those things to yourself. 
+==========
+Here now, we will talk about unification. 
+So, Omega 1, and Omega 2 expressions are unifiable if there exists a substitution S such that -- so (Omega-1 S) will be equal to (Omega-2 S). 
+OK, so let's talk about unifiable expressions. 
+Are W-1 (x), and W-2 (y) unifiable? 
+Q: They're unifiable. 
+Yes. 
+What's the substitution? 
+Q: (inaudible) This is how you have them. 
+Good. 
+Right. 
+So we can put in X for Y, or we could put in Y for X. Or we could put in F of F of A for X. And F of F of A for Y. I'll tell you -- so there's lots of unifiers. 
+OK, so there's a sense that it would be sort of satisfying and that one is not, right? 
+It sort of -- it over-commits? 
+Right? 
+We don't even like -- there's another one with sort of put in A for X and A for Y. You don't like that one either -- right? 
+It's a unifier. 
+It's definitely a unifier. 
+But, it's not the thing that we want in life. 
+In fact, what we want in life is the MGU. 
+The most general unifier. 
+There may be more than one. 
+We do not want THE most general unifier; we want A most general unifier. 
+==========
+And what makes a unifier most general? 
+G is a most general unifier of W-1, and W-2 -- should say omega -- iff for all unifiers S, there exists an S-prime such that -- (W-1 S) equals (W-1 G S-prime), and (W-2 S) is (W-2 G S-prime). 
+So that's just kind of a very rigid way of saying something. 
+(inaudible) Well, so -- you can probably convince yourselves that there's an infinite set of unifiers here? 
+But a unifier is most general if every single one of the other unifiers can be expressed as an extra-substitution added onto the most general one. 
+So, all of these things -- right? 
+This unifier here is the composition of, for instance -- X for Y and A for Y. And every unifier that you can come up with for these two, can be written as a composition as X for Y, and then something more after that. 
+So, the most general unifiers, the substitutions that you can make that makes the fewest commitments, and can still make these two expressions equal. 
+So, let's do a few more examples together, and then we can do some apart - and then, we can talk about it. 
+Let's see, I might as just do this other page. 
+All right, so -- so, what's there to do with the unifier of those two expressions? 
+A for x. 
+It's also the only one I know of. 
+Well, there's just a bunch of unifiers -- you could have as many other kind of useless expressions that you wanted to. 
+So, what can we do to both of those things to make them the same? 
+Q: (inaudible) Substitute x for y -- or we could substitute y for x, that would be OK. 
+The F(x) are fine. 
+The y and the z we don't know about yet. 
+We see that we need for Y to be X? OK, it's not going to be OK to change X to Y. But, if we change this X to Y -- that X has to change to Y? And then, we mess up the fact that the F(x) were matching. 
+So it looks like we better change Y to X. So, we'll put X in for Y. Now, the consequence of that is going to be that Z too will have to be X. 
+So we have to put X and then everything becomes Y. We could have made everything a Y. That would have been all right too. 
+So, instead of writing the unifier down, let's now write down the expressions that you get by applying the most general unifier to both of these expressions. 
+Right? 
+So the most general unification of these guys. 
+What's that going to read? 
+Q: P(A, B, B) All right. 
+There's an item now. 
+Why are they supposed to be the same? 
+Stanley? 
+Q: Wouldn't NG be a Q? OK. 
+It looks like we can get something like -- well, if we have to match that, x has to be G of F of V. OK? 
+So, the substitution has to be that for X, we put in G of F of V. And what does u become? 
+Q: F of V. F of V. That's a good one. 
+We can make them match. 
+Q: (inaudible) Well we get into all kinds of trouble. 
+The temptation is to say x has to be F(x), but then the x has to be F(x), etc. The answer is that these are not unifiable. 
+It's tempting, but not. 
+Q: So you see a unifying it all this group? 
+No it won't. 
+No matter what S is. 
+Oh, oh I see. 
+So, what if F is the identity function, for instance? 
+If S is the identity function -- then, somehow, I'll just -- well, you feel like well this is actually OK. 
+You're right. 
+This is -- if these things they were doing they should be OK for any F. That's a good point. 
+Q: (inaudible) Yes. 
+Because we don't know the interpretation of that. 
+Right? 
+We weren't doing this kind of logical stuff on the board. 
+This proof-type stuff. 
+The steps that we take have to be OK, no matter what you think the symbols mean. 
+Right? 
+So, maybe you think that S means identity -- but maybe you think S means add four. 
+Yes? 
+Q: So what if (inaudible) What is it good for? 
+==========
+So the idea has got to be that when we do a resolution -- right? 
+When I have this example of -- let's see what was it -- for all X not P of X or Q of X. And I have Q of A. The ides is going to be that when we do resolution in the first order case -- when we look for a P and a not P to put together -- we are going to look for ones that don't match exactly. 
+But that are unifiable. 
+So we're going to look at these things and say - well, like I've got a P of X here, and a P of A -- we've got that's not P of X and P of A. I can unify the variables in those two things. 
+And when I'm going to take that unifier, that substitution -- I'm going to apply it to this, and so I'm going to be able to conclude Q of A. That's the enterprise. 
+Because there's a few more steps that we have to go before we can do that. 
+That's essentially what we're up to. 
+So the idea is -- so that you don't have to get possible X's to plug in there. 
+We can kind of compute the thing that you would have to put in there that makes the fewest commitments. 
+And that's going to have us to have this very general proof procedure. 
+END OF SESSION 
+==========

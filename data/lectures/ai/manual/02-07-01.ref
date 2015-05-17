@@ -1,0 +1,430 @@
+==========
+If you're going to teach an AI course, it's useful to ask: "What's AI?". 
+It's a lot of different things to a lot of different people. 
+Let's go through a few things that AI could be and that it usefully is and situate the ways we will look at AI and situate it within the broader picture of ways of thinking about AI One thing it could be is "Making computational models of human behavior". 
+Since you figure that humans are intelligent and therefore models of intelligent behavior must be AI. 
+There's a great paper by Turing who really set up this idea of AI as making models of human behavior (link). 
+In this way of thinking of AI, how would you proceed as an AI scientist? 
+One way, which would be a kind of cognitive science is to do experiments on humans, see how they behave in certain situations and see if you could make computers behave in that same way. 
+Imagine that you wanted to make a program that played poker, instead of making the best possible poker-playing program, you would make one that played poker like people do. 
+Another way is to make computational models of human thought processes. 
+This is a stronger and more constrained view of what the enterprise is. 
+It is not enough to make a program that seems to behave the way humans do; you want to make a program that does it the way humans do it. 
+A lot of people have worked on this in cognitive science and in an area called cognitive neuro-science. 
+The enterprise is to affiliate with someone who does experiments that reveal something about what goes on inside people's heads and then build computational models that mirror those kind of processes. 
+So here, it is an interesting and a hard question to decide at what level to mirror what goes on inside people's heads. 
+Someone might try to model it a very high-level, for example, saying that there's a memory and a vision module, and this kind of module or that kind of module and so they try to get the modularity to be accurate but they don't worry too much about the details. 
+Other people might pick, e.g. 
+a neuron, as a kind of computational unit that feels like it's justified in terms of neurophysiology and then they take that abstract neuron and they make computational mechanisms out of that neuron. 
+They feel "That's cool since brains as made up of neurons." 
+But, then if you talk to people that study neurons you find that they argue a lot about what neurons can and can't do computationally and whether they are a good abstraction or whether you might want to make your models at a lower level. 
+So, there's a tricky business here about how you might want to try to match up what we know about brains and how it is that you might make computational models. 
+This is not what we will be doing here. 
+Another thing that we could do is computational systems that behave intelligently. 
+What do we mean here? 
+When we talked about human behavior, we said that was intelligent because humans are intelligent (sort of by definition) so what humans do has to be intelligent. 
+In this view, we say that there might be other ways of being intelligent besides the way humans do it. 
+And so what we might want to do is make computational systems drawn from this larger class. 
+But then you get into terrible trouble because you have to say what it means to behave intelligently. 
+We might feel that although we can't define what is intelligent, we can recognize it when we see it. 
+We'll punt on trying to decide what intelligence is and spend our time thinking about rationality. 
+What might it mean to behave rationally? 
+We'll get into that in more detail later. 
+So, the perspective of this course is that we are going to build systems that behave rationally - that do a good job of doing what they're supposed to do in the world. 
+But, we're not going to feel particularly bound to respect what is known about how humans behave or function. 
+Although we're certainly quite happy to take inspiration from what we know. 
+There's another part of AI that's closer to what we will talk about in this class that's fundamentally about applications. 
+Some of these applications you might not want to call "intelligent" or "rational" but it is work that has traditionally been done in the field of AI. 
+And usually what they are are problems in computer science that don't feel well specified enough for the rest of the computer science community to want to work on. 
+For instance, compilers used to be considered AI, because you were writing down statements in a high-level language and how could a computer possibly understand that stuff. 
+Well, you had to do work to make a computer understand that stuff and that was taken to be AI. 
+Now that we understand compilers and there's a theory of how to build compilers and lots of compilers out there, well it's not AI any more. 
+So, AI people have a chip on their shoulders that when they finally get something working it gets co-opted by some other part of the field. 
+So, by definition, no AI ever works; if it works, it's not AI. 
+But, there are all kinds of applications of AI, many of these are applications of learning, which is my field of research and for which I have a soft spot in my heart. 
+For example, NASDAQ now monitors trades to see if insider trading is going on, Visa now runs some kind of neural network program to detect fraudulent transactions, people do cell-phone fraud detection through AI programs, scheduling is something that used to be AI and is now evolving out of AI (and so it doesn't really count) but things like scheduling operations in big manufacturing plants; NASA uses all kind of AI methods (similar to the ones we're going to explore in the first homework) to schedule payload bay operations, so getting the space shuttle ready to go is a big and complicated process and they have to figure out what order to do all the steps. 
+There's all kinds of applications in medicine. 
+For example, managing a ventilator, a machine that is breathing for a patient, there is all kinds of issues of how to adjust various levels of gases, monitor pressure, etc. Obviously, you could get that very badly wrong and so you want a system that's good and reliable. 
+Obviously, if they field these systems they must be ok. 
+There's no end of examples; AI applications are viable. 
+We're going to spend most of our times thinking, or at least feeling motivated, by computational systems that behave rationally. 
+But a lot of the techniques that we will be talking about will end up serving a wide variety of application goals as well. 
+That's my story about what we're up to. 
+==========
+We're going to be talking about agents. 
+This word used to mean something that acts. 
+Way back when I started working on AI, agent meant something that took actions in the world. 
+Now, people talk about Web agents that do things for you, there's publicity agent, etc. When I talk about agents, I mean something that acts. 
+So, it could be anything from a robot, to a piece of software that runs in the world and gathers information and takes action based on that information, to a factory, to all the airplanes belonging to United Airlines. 
+So, I will use that term very generically. 
+When I talk about computational agents that behave autonomously, I'll use agent as a shorthand for that. 
+So, how do we think about agents? 
+How can we begin to formalize the problem of building an agent? 
+Well, the first thing that we're going to do, which some people object to fairly violently, is to make a dichotomy between an agent and its environment. 
+There are people in AI that want to argue that that is exactly the wrong thing to do, that I shouldn't try to give an account of how I work by separating me from the world I work in, because the interface is so big and so complicated. 
+And that may be right. 
+That I can't get exactly right a description of how I need to operate in the world by separating me from the world. 
+But, it gives me a kind of leverage in designing the system that I need right now because I'm not smart enough to consider the system as a whole. 
+==========
+Here's a robot and the world it lives in. 
+The robot is going to take actions that affect the state of the environment and it's going to receive percepts somehow that tell it about what's going on in the environment. 
+So it ?? 
+loop where the agent does something that changes the state of the environment then it somehow perceives some new information about the state of the environment. 
+There's a whole question of how to draw the line between the agent and the environment. 
+In this class, we'll entirely spend our time thinking about the agent as a computational entity. 
+SO, I should really draw this cartoon differently. 
+Since we're going to be thinking about what is going on in the agents head and so the actions instead of going like this are going to be going from the agent's head to its wheels and the percepts are coming from the camera into its brain. 
+And, so, here's another view of the world. 
+We're going to be thinking about the agent as the software that runs some big hardware system. 
+That is not to make light of or say that it's easy to design the hardware part and depending on how the hardware part has been designed your problem could be made arbitrarily easier or harder. 
+An example of this is making a walking robot. 
+How hard that job is depends on the design of the hardware. 
+There are these great walking robots that are called "compass walkers" that are just two legs hinged together and when you set them on an inclined plane they will walk down the hill (if you get it balanced right); so you don't need any computation at all to do that walking. 
+So, the computation, the intelligence or whatever is in the design of the hardware. 
+On the other hand, you could imagine building a great big contraption (like one at CMU) with six or eight legs and is taller than this room and it runs a whole complicated planning algorithm to decide where to place each foot, so that's the opposite extreme of putting all the intelligence in the brain, instead of in the hardware. 
+We're going to try to be agnostic about the design of the hardware and work with people who do a good job of that and take as given computational problems. 
+How can we formalize a computational problem of building an agent? 
+Here's a formal model. 
+==========
+What do we need to write down when we talk about the problem of making an agent. 
+How can we specify it really carefully? 
+Well, we're going to need an action interface. 
+These all the things that my agent can do, it might be continuous, it might be very high dimensional but there's some space of possible actions that the agent can take in the world. 
+And there's a percept space, same sort of thing, what are all the things that the agent can perceive in the world. 
+These spaces can be continuous; you can imagine that the agent can perceive how high its arm is raised or the temperature in some reaction vessel or something. 
+But, we're going to assume discrete time, or at least discrete events. 
+I drew this picture of the interaction between the agent and its environment and I said that the agent takes an action and the environment updates its state and then the agent observes. 
+You could imagine modeling this as a set of coupled differential equations and there are people who do that for fairly simple and low-level systems; we're going to think of things rather more discretely and combinatorially and so we're going to model the interaction between the agent and the environment as a turn-taking thing that happens on some cycle. 
+In the discrete time view you say that every one second, or two seconds or ten seconds or ten minutes there is this kind of turn taking. 
+In the discrete event view, time marches on contibuously but there are events of I do this action sort of in an impulse and the world changes state some time later and then I do another action some time after that. 
+You can imagine continuous time with discrete events embedded in it. 
+(20:58) ??
+discrete-time case. 
+Time won't enter too much in the stuff we'll talk about but it will a bit and it's something that's really important to keep in the back of our minds. 
+So we have a set of actions and a set of percepts and the we need the environment. 
+We need, in order to say what the problem is for our agent, to describe the world that the agent lives in. 
+At the most detailed level, we can think of the environment as being a mapping of strings of actions into percepts. 
+You could say, what does the environment do? 
+Well, there's some history of actions that the agent has done to it and every time the agent does a new action, it generates a percept. 
+That's not a very helpful way of thinking about it. 
+Usually we'll think of the environment as having some internal state which may not be visible to the agent. 
+You could think of the envoronment something that instead includes a mapping from state to percepts, something that says when the world is in this state what the agent gets to see and another mapping from situations and actions into situations. 
+These things describe how the world works. 
+We'll call these the world dynamics and sometimes this get called the perception function. 
+Later on we'll talk about the fact that these things may not be deterministic and they may not really be known. 
+Suppose you wanted to make a robot that could vacuum the hallways or something in this building. 
+You'd like not to have to completely specify how this building is laid out and where the chairs are and who has a backpack on the floor today. 
+So, in fact, rather tahn giving a complete, perfectly nailed down description of how the environment works, in general when we specify the problem of designing an agent we'll give some constraints, some parts of an specification of how the environment works. 
+We'll leave a lot to be determined in a lot of cases. 
+One more thing. 
+This so far has no value judgements. 
+We're describing a set of worlds that the agent has to work in. 
+==========
+And we also have to say what we want the agent to do, what constitutes good or bad behavior of the agent in the environment. 
+We need an utility function. 
+That;s typically thought of a mapping from states in the world to real values, or maybe sequences of states into real values. 
+This is just to say, "Agent, these are the states of the world and this how valuable they are from your perspective." 
+SO that kind of tells the agent what you want it to do. 
+Now, our problem as people who want to design AI systems is to build the agent (the software) in such a way as to get a lot of utility. 
+SO, now is just an optimization problem - that doesn't seem so hard. 
+We'll it's going to turn it to be really quite hard. 
+But, at this level of abstraction, it's straightforward what we want to do. 
+We want to put the program in the head of the agent that does as well as it can subject to this specification of how the world works and what we want in the world. 
+==========
+Let's talk about rationality, since I said that what we wanted to do was to make rational agents. 
+So, what do I mean by that? 
+The standard definition of rationality is: A rational agent takes actions it believes to achieve its goals. 
+This is all in high-level pseudo-psychological talk that makes some people nervous. 
+We can cache it out into something more concrete in a minute but the idea is that you're rational if you do things that are consistent with what you are trying to do in the grand scheme of things. 
+Let's say that I don't like to be wet and so when I come out of my office in the morning, I bring an umbrella. 
+Is that rational? 
+Depends on the weather forecast and whether I've heard the weather forecast. 
+If I heard the weather forecast and I'm disposed to believe them and I think it's going to rain then it's rational to bring my umbrella. 
+Whether it's going to rain or not, whether you think it's dumb for me to want to stay dry or various things like that, given what I'm trying to do and given what I know we'll say an action is rational if it would lead to doing a good job of what I'm trying to do. 
+Rationality is not omniscient. 
+For example, some time ago I rode my bike in to work, not knowing that it was going to snow like crazy and I was going to run into a car on the way home. 
+You can still argue that it was rational for me to ride my bike, maybe at some grander level it was irrational not to have watched the weather forecast the night before. 
+But, given what I knew it was ok to ride my bike, even though it turned out be dumb at some level, because I didn't know what was happening. 
+Also, rationality is not the same as succesful. 
+Imagine that I take my umbrella, I know that it's nice and sunny out and I take the umbrella anyway, which was irrational of me. 
+But, then I use the umbrella to fend off a rabid dog attack. 
+You might say, well it was rational of her to take the unbrella because it saved her from the rabid dog, but that wouldn't be right beacuse it was done for the wrong reason. 
+Even though it was successful and useful; we would not have said that was rational. 
+So this limits the scope of what we want our agents to do. 
+They don't have to be succesful and they don't have to know everything, they just have to do a good job given what they know and what they want. 
+==========
+This is still not a good enough notion to decide what goes in the head of our agent or our robot. 
+DO you see any potential problem with this as a criterion for behavior in real systems? 
+You might not be able to compute the best thing to do. 
+There's a notion that the philosophers have pursued and so have AI people. 
+People talk instead of complete or perfect rationality, of limited rationality. 
+And that means exactly "acting in the best way you can subject to the computational constraint that you have." 
+SO, here we are with soft squishy brains that can't compute very well or very fast and so, for instance, humans are irrational because they're bad at doing task X or Y or Z; they just can't compute the optimal response in certain circumstances. 
+That we know; there's no question, but yet you might be able to argue that given their squishy brains that's the best they can do. 
+Or, maybe you want to argue that for this idea of limited rationality that you need to put a program in the agent's head that's going to last for the agent's whole range of things it has to do and life it has to live. 
+And it might be that brain could conceivably compute the optimal action in one circumstance, it may not in another. 
+So, we might be able to make a robot that's the end-all and be-all chess player but it might not be able to cross the street. 
+SO, that's probably not ok. 
+SO, when we think about rationality we may we want to think about it in a much broader context: given all the things that you have to do, given all the circumstances that you're likely to be faced with in the environment that you;ve been put in, how can you respond the best in the aggregate. 
+SO, any individual response may not be the best, the optimal response, even given your hardware, it may be that the program you're running is the best possible program when measured in an aggregate over all the things that yo have to do. 
+What we're need to make is an agent program. 
+An agent program is, given all that stuff, we want to find the best possible mapping from P* to A (sequences of percepts to actions) that subject to our computational constraints does the best job it can as measured by our utility function. 
+==========
+Let's imagine that someone was able to write down a specification of the environment that we want our agent to work in. 
+You could say: "Oh, but you can't do that. 
+This is all pretty silly because how is it that anyone could specify the domain that the agent is going to work in?" 
+AT some level I am sympathetic to that complaint, but at some other level I am entirely unsympathetic to that complaint because if you ask me to solve a problem then you have to tell me what problem you want me to solve. 
+So, you might imagine that this whole process is going to operate in a much larger context that's iterative. 
+You give me a specification of the environment you want the robot to work in; I work away to give you the maximally rational robot given your specification, we start running it and then you tell me "Darn, I forgot to tell you about not vacuuming the cat." 
+Then you would have to go back and recompute the robot. 
+In any real application you have this cycle at a high level. 
+But, I don't think you can get out of saying: "Here's what I want the system to do." 
+Given a specification for all this stuff, it seems like our problem is "just" one of coming up with a program that satisfies some specifications. 
+So, you could go study that in software engineering (maybe). 
+But, why not? 
+Why is this not just software engineering? 
+Any of us would be hard-pressed, given all the pieces of the space shuttle and constraints on how they go together, to sit in a chair and write the program that is optimal given all those constraints. 
+The problem is that, although information theoretically this is an specification for the correct program, it is not an effective specification. 
+It's not a specification that the computer can use. 
+There is a huge gap between the specification for what you want the thing to do and what you can write down in a program and actually have run. 
+How do we bridge this gap? 
+There is a part of AI that still goes on (in some places) but people don't talk about much, called "automatic programming". 
+In fact, quite a while ago there was a project going on here in the AI Lab called "The programmer's assistant" which was supposed to enable you to say "I need a linked list that would do whatever..." 
+or "Put these things in a hash table..." 
+You would give it instructions at that level and it was supposed to write the code to do that for you. 
+But, the idea in automatic programming was that you would go from some declarative specification of what you wanted the system to do to actual code to do it. 
+But, it's a really hard problem and most people have given up on it. 
+But it seems that's the problem we are faced with here. 
+But, we're not going to do this automatically. 
+So, what's the enterprise that we're going to be engaged in? 
+We're going to look at classes of environment specifications and utility functions and try to map from classes of environments to structures of programs. 
+To try to say that "if you need an agent to try to solve this class of problem in that kind of environment, then here is a good way to structure the computation." 
+==========
+This doesn't feel a lot like AI. 
+We have this idea that AI is about agents thinking in their heads figuring out what they're supposed to do. 
+This feels like it's off-line. 
+Someone (God?) 
+doing all the figuring and blasting the program into the head of the robot. 
+The question we want to ask ourselves is "Why is it ever useful to think?" 
+If all these thought processes could happen off-line and you could just be endowed with the optimal set of reflexes then who needs cogitation? 
+Why can't we (for you or a big complicated factory) compile a whole table of reactions? 
+Let's even imagine that the environment is not changing. 
+The problem is that the table is too big. 
+If P is any size at all or if you live for very long, the table is way too big. 
+Way, way too big. 
+There are too many ways the world could be, there are too many sequences of percepts that you could have of the world. 
+There is no way that you could off-line anticipate them. 
+Actually, for some domains you can. 
+It's interesting to know where this line gets drawn. 
+This is my version of what the direction that we're going to take in this class relate to the direction that Embodied AI takes. 
+There are two fundamental differences. 
+One is that the Embodied AI people actually take as one of their constraints that the mechanims that they develop are somewhat related to the mechanisms that go on in nature. 
+Another difference is that they entertain a different class of problems and the class of problems that they entertain are amenable to something like this approach. 
+It's not turned out quite so formally, but the way it works is that a human thinks about a problem, thinks hard about, figures out what the program ought to be structured like and writes the program. 
+But that program when it runs is pretty direct, it pretty much gets the percepts and computes an action. 
+It doesn't feel like it thinks (whatever that might mean to us); it doesn't entertain alternative realities. 
+There is certainly a class of problems for which it feels like you can't make a table but you can write a fairly compact program that would do the job of being the table. 
+But there are other domains in which you quite clearly can't do that and those are the domains that we are going to focus on. 
+The domains where you can't think of a compact way to write this program down, this mapping from strings of perceptions to actions. 
+So, we'll have to think of other ways to construct this program. 
+And the other ways of constructing this program are going to take advantage of the fact that the vast majority of the things that could happen - don't. 
+Think of all the ways the world could be, there are a lot of percept sequences that you could conceivably have and no matter how long you live you are going to have only the most minuscule fraction of all the percepts you could possibly have. 
+So, the work that Nature does for you is that there's no reason to have precomputed and stored reactions for what happens if an elephant flies through the window - we don't have to worry about that. 
+So, you probably don't have precompiled reactions for what happens if an elephant flew in through the window, on the other hand if one did you wouldn't be totally incapcitated (like you would be if you were under the elephant). 
+You'd say "oh, my gosh" and then your brain would kick in and you'd start figuring out what to do about it. 
+So, you could be very flexible to a very broad range of stimuli but there's some way that you could have canned your responses to those ?? 
+(44:10). 
+==========
+Let me talk a bit about learning; we're going to talk about learning towards the end of this class. 
+So, what happens when the environment changes? 
+When I talk to people about why it's important to build systems that learn. 
+I say "maybe you don't know very much about the environment when you start out or maybe the environment changes" and so you have to do learning. 
+And it seems that I haven't accounted for that in this framework, but I want to say that I have accounted for it because I've said so very little about what this kind of specification might be. 
+So, let's take a very simple case. 
+Imagine that we're sending a robot to Mars and we don't know the coefficient of friction of the dust it's going to land on; they don't know what it feels to drive around in that stuff. 
+I could still say: "Look, I know something about this place we're going to send the vehicle to. 
+It's going to have gravity, I know what the gravity is going to be like, I know what's going to go on there; I know a lot about the vehicle but I don't know the coefficient of friction of the dust. 
+Instead of giving the complete world dynamics; I'm going to have to leave a free parameter or some disjunction (the world is either going to be like this or like that and I don't know which). 
+And then part of my job as the agent is, based on the sequence of percepts that I have, to kind of estimate or to learn or to gather information about the dynamics of the world. 
+If this specification doesn't have to be full then I'm allowed to learn something about how the world works. 
+Similarly, I can build into this specification that there is a coefficient of friction that changes over time but I don't know how it changes. 
+So, learning can fit into this framework too. 
+This is a framework that in the end isn't really that informative in the sense that it isn't that constraining. 
+In some sense learning isn't very different from perception, they're both about learning something about the world by virtue of your experience. 
+And we tend to call "learning" things that happen on larger time-scale; things that seem more permanent. 
+And we tend to call perception, things that like noticing where I am with respect to a wall, things that are on a shorter time scale things that don't seem so built-in. 
+But there is no hard and fast distinction between learning and perceiving where I am relative to the wall. 
+==========
+Let's think about environments and the different kinds of environments that our agents might need to work in. 
+Now, there's a whole enterprise in this course that will be thinking about particular properties of the environment that we know hold and what consequences they might have on how it is that we would design an agent to perform well in that environment. 
+So this is a nice list that comes out of Russell & Norvig (textbook) - a nice way of thinking about environments. 
+One dimension along which it is useful to categorize environments is whether they are "accessible". 
+What they mean by accessible (vs inaccessible) is "Can you see the state of the world directly?". 
+Most real environments are inaccessible; I can see some aspects of the state of the world, but I don't know what's happening right out there or who's opening the door etc. So, my world is not accessible but some kinds of toy worlds are accessible and maybe some kinds of applications. 
+Imagine I am thinking of where to route all the airplanes for United Airlines. 
+I like to think that they know where all the airplanes are all the time, so maybe that's an accessible domain. 
+Another dimension is "deterministic" vs "non-deterministic". 
+Over here I talked about world dynamics, the mapping between a current state of the world an the action that an agent takes into another state of the world. 
+In some domains that's usefully thought of as being deterministic. 
+The only domains that are really deterministic are artificial ones, like games. 
+Even clicking on a link and going to a Web page, you know that doesn't always work. 
+Most things are not entirely deterministic, some things are reasonably modeled as being deterministic. 
+And, we'll spend about the second half of this class thinking about non-deterministic environments. 
+The first half we'll think about deterministic models really as an abstraction and in the second half we'll think about probabilistic models. 
+Another dimension for describing environments is static vs dynamic. 
+Again, one can argue that everything is dynamic but let's talk about it. 
+It has to do with whether the world can change while you're thinking. 
+If the world can't change while you're thinking, then the whole limited rationality thing does not matter as much, because you can think and think until you come up with the best possible thing to do. 
+But, usually the world is changing. 
+If you compute the optimal trajectory for avoiding the truck but you're a little late, it's no good. 
+You have to really worry about the dynamic property of the environment. 
+And then there's "discrete" vs "continuous". 
+Most of these are not really intrinsic properties of the environment but more properties of how we choose to model the environment. 
+So, you can think of your perceptions of the world in different cases as being discrete or continuous. 
+==========
+Let's talk about some environments. 
+Let's talk about playing backgammon. 
+==========
+For an agent playing backgammon, what's the action space? 
+The action space is the set of backgammon moves, e.g. 
+I put a white piece on that point. 
+But you're want to think of the moves in some fairly logical way. 
+You probably don't want to think of the move as the x-y location of the stone on the board. 
+You could. 
+But, that doesn't feel so useful. 
+If you were building the robot to move the pieces, you would have to think of the x-y location; you would have to think of the motor voltages that you send to the joints in order for the arm to move where it needs to go in order to put the stone where it goes on the point on the board. 
+So, this gets to what I said about not worrying about the very best way to frame a problem, the very best way to divide the pieces up - although when we talk about execution we'll talk about that a bit. 
+But, it's an interesting question "how are we going to define the action spaces" do you want to define it in terms of motor voltages, are you going to define it in terms of x-y locations or are you going to define it in terms of how many guys I have on the board point on my side of the board. 
+There's logical descriptions of the actions and similarly the percepts. 
+Your percepts might be images of the backgammon board, they might be x-y locations of the stones, they might be the facial expression of your oponent or they might be a logical description of where the stones are. 
+For any one of those levels of description of the environment and of the problem you're supposed to solve, you'd write the software differently. 
+Let's take for now the very abstracted view of playing backgammon, the view that backgammon books take. 
+Which is the moves are putting the stones somewhere, the percepts are where (again at a logical level) the stones are. 
+==========
+Backgammon is one of those few domains that is accessible; you can see everything there is to know about the state of a backgammon board. 
+Is it deterministic? 
+No. There are two issues about backgammon that make it non-deterministic. 
+One is the dice. 
+The other is your oponent. 
+Actually, games are not very well modeled in this mode. 
+There is a nice chapter in the book on games; but we're not going to do it - there's too much of it to cover. 
+Certainly, there is no way to predict what your oponent will do. 
+The typical game theory thing to do is to assume that your opponent is infinitely smart and predict what he's going to do on that basis. 
+But, there are problems with that. 
+He might not be. 
+Then you get into learning models where you say, ok my opponent is not infinitely smart but I am going to learn what my opponent is like so that I can predict what he might do and react but still you are not going to be able to make deterministic predictions. 
+Is backgammon static or dynamic? 
+Static unless you have a time limit. 
+Discrete vs continuous? 
+Depends on how you choose to model the percepts and the actions but it is usually thought of as a pretty continuous type game. 
+Why is not discrete "move by move"? 
+But, what if our percepts are images? 
+They are discrete (quantized) but so fine grained that it is useful to think of them as continuous and what if our actions are motor voltages? 
+But, if we are thinking about the stones and the points, then it is completely discrete. 
+The point is that it depends on how you choose the space of actions and percepts. 
+There are domains (like images) that are discrete, very big and ordered where it is useful to treat them as continuous because you can get certain kinds of compactness in the program by treating the image pixels as being related to each other in space as if there's a cntinuous axis. 
+Sometimes, computer scientists have this reflexive tendency to given a continuous problems to make it discrete because it's in a domain that they can cope with. 
+But sometimes it is useful to take a discrete problem and make it continuous; it gives you certain kinds of generalizations that you might not otherwise have. 
+This will come up again when we talk about learning. 
+==========
+Driving a taxi. 
+There's so many things to think about here it's hard to know where to begin. 
+Suppose you wanted to make a taxi driver, how would you even think about it? 
+What would you want the action space to be? 
+There are many levels that it could be. 
+It could be steering angle, accelerator and brake. 
+What other levels of description of the action space might you want to use? 
+Physical position. 
+Addresses. 
+As we go in this direction, it becomes harder and harder to map one of these commands into the lowest level of how to turn the steering wheel. 
+That's ok. 
+We might want to say that we really need to think about the problem as going from addresses to addresses and then I'll hire somebody else to figure out how to take the command to go to an address and cache that out into which way am I going to turn the steering wheel. 
+We'll have multiple dimensions - like speech (some taxi drivers speak and other listen). 
+In perception, there's going to be an analogous range of ways that we can think about the problem. 
+There's another way of thinking about driving, in terms of lane changes and passing etc. Earlier I made light of framing and specifying the domain but that's at least as hard (or harder) than solving the problem once it is written down. 
+And the key questions are: "How do you think about the action spaces?", 
+"How do you think about the percept spaces?" 
+I can think about the percepts being images; I can think of them as being "there's a red car to my left". 
+Another thing you have to control (and this is something that comes up often) is where you're looking. 
+For example, in a car you can look in your rear-view mirror and that tells you something of where people are around you that is useful to know, for example for lane changes. 
+But, of course, you can't look in the rear view mirror all the time becuase then you don't know what is happening in front of you. 
+So, you also have to think about when you should look in the rear-view mirror versus when you should look straight ahead. 
+So you also have in your action space things that will give you information about the world. 
+In an inaccessible environment, you may have to do things to find something out. 
+You have to stop to ask directions, or buy a map or call someone on the telephone to get directions. 
+So, there's an enormous range of actions that you may want to take. 
+==========
+Let me go through a couple of structures of agents. 
+We talked about a table-based agent. 
+We'll talk a bit more about what the book calls a simple-reflex agent (sometimes called "reactive"). 
+But, there's this huge amount of literature on things called reactive - reactive robots, reactive planning, and it's gotten to the point that this word means so many things to so many people that it does not mean anything. 
+The most coherent interpretation is that the structure of the agent is that it gets percepts in and it generates actions and it only ever maps a single percept to an action and so it has no memory. 
+So, the basic thing here is that there is no memory. 
+Remember that we've said that in general an agent maps strings of percepts into actions. 
+It could integrate information about time. 
+THere aren't a lot of problems that you can solve in this way. 
+Maybe you can solve backgammon in this way; maybe you can solve te problem of driving down the hallway and not running into the wall this way. 
+You look and you see that wall too close and you move away from it, etc. So, there are a bunch of things you can do reactively. 
+Clearly if the world is accessible (you can see everything there is to see in one shot) this means that you don't need any memory, you can just look a see where everything is. 
+Doesn't this depend on how complex the goals are? 
+The programming here has to be kind of complicated and so calling it a reflex agent might not be right anymore but certainly it doesn't need to have memory (in the sense of remembering previous percepts). 
+It needs to have memory in the traditional sense that computer programs need to have memory in the VonNeumann model. 
+If the environment is accessible, then everything is visible at once. 
+This is not usual except in domains like backgammon and perhaps some kinds of information retrieval problems. 
+If it matters how the environment got into the state it's in; then that has to be part of the state. 
+FOr example, let's imagine that you arrive somewhere with more or less gasoline. 
+Now, there's two way of knowing how much gas you have, one is to remember how much driving you've done and the other is to look at the gas gage. 
+If you have a gas gage then the state of the tank is accessible to you and you don't need to remember how long you've been driving. 
+Accessible and predictable are not the same. 
+You can read the gas gage but have no idea an hour from now what the gage will say. 
+In that case, we would still say that the environment is accessible. 
+You do have a problem if the world dynamics is much faster than your interaction with the world, e.g. 
+if you look at the gage only once an hour. 
+COnsider deciding where I should stop for gas. 
+It may only depend on the reading on the gas gauge and where the gas stations are. 
+But, it feels like it requires something other than reflex, that it requires looking into the future, which is something we'll get to in a minute, simulating possible trajectories about how the world works but it doesn't require remembering more stuff about the past. 
+This little distinction about whether an agent is reflexive (or reactive vs non-reactive) depends on whether you have to remember something about the past. 
+==========
+Here's an agent with memory. 
+Everybody who has taken theory of computation is familiar with this picture. 
+You can take any finite state machine that you want to and decompose it like this. 
+The idea is that you have some part that gas feedback and you grab all the feedback and put it together and that's how you get to remember stuff. 
+Then you have some part that says "given what I remember, what should I do?" 
+We'll often call this mapping from whatever I know to actions a "policy". 
+And so here we would call this part the policy and this part the memory. 
+But, another way to think about it is that it is an estimate of the state of the world, it is a distilled picture of what's going on outside. 
+It's what I've chosen to remember about the history of percepts that I've had in the world. 
+In some fields, such as control theory, this is called a state estimator. 
+Whatever it is, it takes the sequence of percepts you've had over time and the sequence of actions that you've had over time and somehow remembers something about it. 
+Another way of thinking about it is that it takes whatever you knew before, what you just saw and what you just did and maps that into whatever you know now. 
+SO, it is in charge of keeping your mental state updated. 
+Then you can say that the problem of behavior is "given my mental state (whatever I remember of what I've seen in the world) what action should I take". 
+==========
+Let's talk about planning for a minute. 
+So this exactly about the question: What about deciding when to stop for gas??. 
+Your choice of actions depend not just on what's going on right now but what's going to happen in the future. 
+Intuitively, "should I do this or should I not?" 
+Well, it depends on what downstream events it's going to cause. 
+I want to argue that this is completely consisten with this view. 
+There is still some mapping between what I see right now into what I'm supposed to do. 
+But, it's maybe that the justification you have to give for why this is a good thing to do depends on what is going to happen in the future. 
+But you don't have access to what's going to happen in the future; there's no input here from the oracle. 
+SO, you're still taking action based on what's happening right now but the way you justify them is in virtue of what they'll cause to happen. 
+Let's look at what I would call a planning agent. 
+You can imagine an agent which still has the state estimation part, there still the part that distills what we've seen into a picture of what's going on in the world, but now the policy (big box) involves a search (you've probably all seen a search tree). 
+That is, we take the state from the state estimator and imagine "what if we take action1, what if we take action2, etc. Then, after we take action1, what if we take action2, etc. I just had a flat tire, what if I call AAA - then wait 6 hours. 
+What if I fix it myself, probably get fixed in 1/2 hour but I'd get covered in mud. 
+So, there's different consequence that you can spin out of different ways of doing things. 
+And, how do you evaluate these consequences? 
+With U, you take your utility function and you apply it. 
+How good is it to be covered in mud but ready to go in 1/2 hour, but first how good is to be here for five hours but clean as can be. 
+Maybe one, maybe another. 
+But, given an utility function we can help pick which is the best. 
+So, you can imagine spinning out these consequences, picking which is the best and committing to one of these actions. 
+You pick the action the immediate action that's on the path that looks best. 
+This computation is really no different than that computation that I drew over there, it's just a particular way to organize a computation of choosing an action to take next. 
+But it's a way of organizing it in terms of what you think is going to happen downstream. 
+Karl Popper was a philosopher of science and he thought about falsification of theories and so on. 
+But, he says an advantage of being human (I would say of being a planning agent) is that you can let your hypotheses die in your stead. 
+Rather than jumping off the cliff you can think about what it would be like and not do it. 
+==========

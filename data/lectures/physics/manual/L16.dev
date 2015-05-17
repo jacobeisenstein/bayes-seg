@@ -1,0 +1,499 @@
+==========
+All right , last time we talked exclusively about completely inelastic collisions .
+Today I will talk about collisions in more general terms .
+Let 's take a one dimensional case .
+We have here m1 and we have here m2 , and to make life a little easy , we 'll make v2 zero and this particle has velocity v1 .
+After the collision , m2 has a velocity v2 prime , and m1 , let it have a velocity v1 prime .
+I don 't even know whether it 's in this direction or whether it is in that direction .
+You will see that either one is possible .
+To find v1 prime and to find v2 prime , it 's clear that you now need two equations .
+And if there is no net external force on the system as a whole during the collisions , then momentum is conserved .
+And so you can write down that m1 v1 must be m1 v1 prime plus m2 v2 prime .
+Now , you may want to put arrows over there to indicate that these are vectors , but since it 's a one dimensional case , you can leave the arrows off and the signs will then automatically take care of the direction .
+If you call this plus , then if you get a minus sign , you know that the velocity is in the opposite direction .
+So now we need a second equation .
+Now , in physics we do believe very strongly in the conservation of energy , not necessarily in the conservation of kinetic energy .
+As you have seen last time , you can destroy kinetic energy .
+But somehow we believe that if you destroy energy , it must come out in some other form , and you cannot create energy out of nothing .
+And in the case of the completely inelastic collisions that we have seen last time , we lost kinetic energy , which was converted to heat .
+There was internal friction .
+When the car wreck plowed into each other , there was internal friction no external friction and that took out kinetic energy .
+And so , in its most general form , you can write down that the kinetic energy before the collision plus some number Q equals the kinetic energy after the collision .
+And if you know Q , then you have a second equation , and then you can solve for v1 prime and for v2 prime .
+If Q is larger than zero , then you have gained kinetic energy .
+That is possible ; we did that last time .
+We had two cars which were connected by a spring , and we burned the wire and each went off in the opposite direction .
+There was no kinetic energy before ... if you want to call it the collision , but there was kinetic energy afterwards .
+That was the potential energy of the spring that was converted into kinetic energy .
+So Q can be larger than zero .
+We call that a superelastic collision .
+It could be an explosion .
+That 's a superelastic collision .
+And then there is the possibility that Q equals zero , a very special case .
+We will deal with that today , and we call that an elastic collision .
+I will often call it a completely elastic collision , which is really not necessary .
+Elastic itself already means Q is zero .
+And then there is a case of which we have seen several examples last time of inelastic collisions , when you lose kinetic energy , so this is an inelastic collision .
+And so , if you know what Q is , then you can solve these equations .
+Whenever Q is less than zero , whenever you lose kinetic energy , the loss , in general , goes into heat .
+Now I want to continue a case whereby I have a completely elastic collision .
+So Q is zero .
+Momentum is conserved , because there was no net external force , so now kinetic energy is also conserved .
+And so I can write down now one half m1 v1 squared that was the kinetic energy before the collision must be the kinetic energy after the collision one half m1 v1 prime squared plus one half m2 v2 prime squared .
+This is my equation number one , and this is my equation number two .
+And they can be solved ; you can solve them .
+They are solved in your book .
+I will simply give you the results , because the results are very interesting to play with .
+That 's what we will be doing today .
+v1 prime will be m1 minus m2 divided by m1 plus m2 times v1 and v2 prime will be 2 m1 divided by m1 plus m2 times v1 .
+The first thing that you already see right away is that v2 prime is always in the same direction as v1 .
+That 's completely obvious , because the second object was standing still , remember ?
+So if you plow something into the second object , they obviously continue in that direction .
+That 's clear .
+So you see you can never have a sign reversal here .
+Here , however , you can have a sign reversal .
+If you bounce a ping pong ball off a billiard ball , the ping pong ball will come back and this one becomes negative , whereas if you plow a billiard ball into a ping pong ball , it will go forward .
+And so this can both be negative and can be positive depending upon whether the upstairs is negative or positive .
+So this is the result which holds under three conditions : that the kinetic energy is conserved , so Q is zero ; that momentum is conserved ; and that v2 before the collision equals zero .
+Let 's look at three interesting cases whereby we go to extremes .
+And let 's first take the case that m1 is much , much larger than m2 .
+m1 is much , much larger than m2 .
+Another way of thinking about that is that let m2 go to zero .
+Extreme case , the limiting case .
+So it 's like having a bowling ball that you collide with a ping pong ball .
+If you look at that equation when m2 goes to zero this is zero , this is zero notice that v1 prime equals v1 .
+That is completely intuitive .
+If a bowling ball collides with a ping pong ball the bowling ball doesn 't even see the ping pong ball .
+It continues its route as if nothing happened .
+That 's exactly what you see .
+After the collision , the bowling ball continues unaltered .
+What is v2 prime ?
+That is not so intuitive .
+If you substitute in there m2 equals zero , then you get plus 2 v1 not obvious at all , plus 2 v1 .
+It 's not something I even want you to see ; I can 't see it either .
+I 'll do a demonstration .
+You can see that it really happens .
+So , now you take a bowling ball and you collide the bowling ball with the ping pong ball and the ping pong ball will get a velocity 2 v1 not more , not less and the bowling ball continues at the same speed .
+Now let 's take a case whereby m1 equals much , much less than m2 ; in other words , in the limiting case , m1 goes to zero .
+And we substitute that in here .
+So m1 goes to zero , so this is zero and so you see v1 prime equals minus v1 .
+v1 prime equals minus v1 , completely obvious .
+The ping pong ball bounces off the bowling ball and it just bounces back .
+And this is what you see .
+And the bowling ball doesn 't do anything , because m1 goes to zero , so v2 prime goes to zero .
+So that 's very intuitive .
+And now we have a very cute case that m1 equals m2 .
+And when you substitute that in here when m1 equals m2 v1 prime becomes zero .
+So the first one stops with v2 prime becomes v1 .
+If m1 equals m2 , you have two downstairs here and two upstairs and you see that v2 prime equals v1 .
+And that is a remarkable case you 've all seen that , you 've all played with Newton 's cradle .
+You have two billiard balls .
+One is still and the other one bangs on it .
+The first one stops and the second one takes off with the speed of the first .
+An amazing thing .
+We 've all seen it .
+I presume you have all seen it .
+Most people do this with pendulums where they bounce these balls against each other .
+I will do it here with a model that you can see a little easier .
+I have here billiard balls , and if I bounce this one on this one , then we have case number three .
+Then you see this one stands still and this one takes over the speed quite amazing .
+Every time I see this , I love it .
+It is a wonderful thing to see .
+Nature ... just imagine you are nature , and this ball comes on , and in no time at all you have to solve these two equations very quickly .
+There 's only one solution , and nature knows how to do that .
+This one stops and this one goes on .
+It 's an amazing result .
+And I 'm sure that you have seen these pendulums that you can play with .
+Here we have not a bowling ball onto a ping pong ball but we have a billiard ball .
+The mass ratio is not infinity to one but it 's 500 to one , which is quite large .
+And so what I will first do is very intuitive .
+I will first bounce the ping pong ball off the bowling ball ... the billiard ball .
+The ping pong ball comes back almost with the same speed not quite , because the ratio is not infinity to one but it is 500 to one , and the billiard ball will do practically nothing .
+It 's exactly what you see there in case two .
+So , there we go .
+You see , the ping pong ball comes back almost as far as I let it go .
+It tells you that the speed ... Oh !
+That the speed has not changed .
+It just bounces back and the billiard ball almost does nothing .
+Now comes case number one .
+That 's the nonintuitive case .
+It is intuitive that if the billiard ball hits the ping pong ball that it will continue .
+As you will see , v1 prime is v1 , with the same speed .
+It 's not at all intuitive that the ping pong will get twice the speed of the billiard ball , and , of course , you cannot see that quantitatively because we don 't do a quantitative measurement of the speed of the ping pong ball , but you will see that it bounces up quite high .
+So , there we go .
+The billiard ball onto the ping pong ball .
+Look at the billiard ball alone forget the ping pong ball and try to see that the speed of the billiard ball is practically unaffected by the collision .
+That 's what you see there v1 prime is v1 .
+You see , it 's practically unaffected .
+Now , of course , it is way harder to see that the ping pong ball gets twice the speed of the billiard ball , because we don 't do ... because we don 't do a quantitative measurement .
+All right .
+So , those were examples , then , of those three possibilities that you all see on the blackboard there .
+Now I want to do more completely elastic collisions , and I 'm going to do that with the air track .
+I 'm going to try to make completely elastic collisions .
+That 's not so easy .
+I will have one object stand still , so always v2 equals zero .
+And they are completely elastic .
+Kinetic energy is conserved .
+This word completely is not necessary .
+I always add it in my mind .
+I 'm going to have one object m1 which I bang against object m2 , and object m2 will be standing here , will have no speed .
+And object m1 comes in from this side and I 'll try to make the collision elastic .
+And the way I will do that is by using springs which are attached to each mass .
+And springs are conservative forces so there is almost no heat that is generated in the springs during the collision .
+And so to a reasonable approximation , you will get an elastic collision , but , of course , there 's always air drag .
+I can never take air drag out .
+So there 's always some external force on the system .
+So momentum is never exactly conserved , and kinetic energy is never exactly conserved either , so it 's only an approximation .
+So I have one mass of unit 1 I will tell you what that is and I bang that into number 2 .
+And the masses that I have ... One mass is 241 plus or minus one gram , and the other mass that I have is 482 plus or minus one gram .
+And I have two of these .
+And in my first experiment I will use these two , so this is the ratio that you see , one to one .
+I will give it a certain velocity , which I cannot tell you what that is .
+It depends upon how happy I feel .
+If I push hard , then the velocity will be high .
+If I push softly , the velocity will be low .
+But it is something .
+And then we are going to get here v1 prime , and there is a prediction that this velocity will be zero .
+Look all the way on the blackboard there .
+You will see if the masses are the same and there is an elastic collision , this one will stand still and this one , v2 prime , will have a velocity v1 .
+So that 's a prediction .
+The second case , I bounce one car onto another one which is twice the mass certain velocity which I don 't know what it is and now what are we going to get ?
+So mass m1 is half the mass of m2 .
+So this is a 1 and this is a 2 and this is 3 .
+1 minus 2 is minus 1 divided by 3 is minus 1/3 .
+So number one comes back no surprise .
+If you bounce a lighter object off a more massive object , no surprise that it bounces back .
+So that 's minus one third , and when we look here , we have 2 times 1 divided by 1 plus 2 is 3 .
+That is plus two thirds , so number one will come back with a speed one third which , of course , since this is sign sensitive , we get one third v1 and this one is plus two thirds v1 .
+That 's the prediction .
+And the way we 're going to measure it is by measuring the time for the objects to move over a distance of ten centimeters .
+No matter how long you see these cars to be , there is here a piece of metal which is ten centimeters long .
+It goes through a slot with a diode .
+We have one system here and one there .
+And during this ten centimeter movement , we measure the time .
+We begin when this piece of metal enters the diode system and we stop the time when it leaves the diode system .
+And each one of those cars has this ten centimeter metal plate .
+So , the way we 're going to do this is by measuring timing , of course .
+This velocity will give me a certain time , and this velocity will give me a certain time .
+Whatever comes out , you will see that on this timer .
+Then t1 prime ... is ... in this case ... it stands still , so it must be zero .
+And t2 prime must be the same as t1 .
+So these two numbers , you should be able to compare directly .
+What kind of uncertainties do we have ?
+It 's hard to tell .
+But I would say , as I argued last time , that you should allow for at least about 2 percent uncertainty in each time .
+If it comes out better , then you are lucky .
+If it comes out worse , then it is a bad day .
+2 percent , and I argued last time how I reasoned about the 2 percent .
+Now we do this experiment .
+We get a certain t1 .
+And so this one goes back with one third of the speed , so it will take three times longer to go ten centimeters .
+So I 'm going to multiply this time by one third , and whatever comes out should be the same as this .
+So , let me move this up a little ... t2 prime .
+The speed here , the forward speed , is two thirds , so it will go slower .
+So if I multiply this time by two thirds , then I should be able to compare it with t1 .
+And all of that , all these times , I think , will not be any better than roughly 2 percent , except if we are a little lucky .
+( system powers up ) Okay , the system is up .
+The timers are up , the timers are up .
+This will be the time t1 .
+This will be the time t2 prime , and this is the one when the object bounces back , so this is t1 prime .
+You won 't see that it is negative .
+It will go back through the same slot , and the electronics is arranged in such a way that when it goes back through the same slot that it will initiate this time .
+I will zero them .
+First you have to tell me whether they are working .
+I will just let it go through these slots .
+Is this one working ?
+Tell me that this one is working .
+If I send this one back , is this one working ?
+Okay .
+Okay , there we go .
+This is the one that will have no speed , and this is the one that we 're going to give a velocity .
+You are ready ?
+I hope you know what you are going to see .
+This one will come to a halt , and this will go on .
+They have the same mass .
+There we go .
+This one is indeed coming to a halt and this one took over the speed .
+What are the numbers ?
+194 and 196 only two milliseconds' difference .
+That is an incredible result .
+0.194 and 0.196. There 's only one percent difference between them way within my wildest expectations .
+Because my expectations were that they could be off each by 2 percent .
+Now we go to the one to two .
+So here is the car which has twice the mass .
+It 's important that I zero it .
+And now this one is going to come back .
+So you 're going to see this one come in , give you the time here .
+This one goes through here , it gives you the time here .
+This one will come back , it gives you the time here .
+Are they zero ?
+Okay ?
+You 're ready ?
+Yeah ?
+There we go .
+Okay .
+Now , now comes the real acid test .
+123 ... 186 .
+123 ... And what is the last one ?
+375 .
+Okay , let me be lazy and let me use my calculator .
+375 divided by three I could have done that by heart , of course this is 0.125 , an amazing agreement !
+Amazing !
+Only two percent off , less than two percent .
+Now here , 0.186 times 2 divided by 3 0.124. I can 't believe it less than a percent off .
+So , you see in front of your eyes that we were able to create something that was indeed extremely close to elastic collisions in spite of all the problems : that we have air drag , and that , of course there is always some loss of kinetic energy .
+But it 's so little that it doesn 't show up in these measurements .
+==========
+Now I want you to have a sleepless night .
+I want you to think about the following and if you can 't solve it before the night is over , then I really think you should lie awake .
+Here is the wall .
+Here is a tennis ball that comes in with a certain mass m , and it has a certain velocity v , whatever that is .
+It 's a nearly elastic collision and it bounces back from the wall .
+And we all know that if it is a nearly elastic collision that it comes back with the same velocity .
+Kinetic energy is conserved .
+All the kinetic energy is in the tennis ball ; nothing is in the wall .
+The wall has an infinitely large mass , but the momentum of this tennis ball has changed by an amount 2 mv .
+That momentum must be in the wall it 's nonnegotiable , because momentum must be conserved .
+So now here you see in front of your eyes a case that the wall has momentum , but it has no kinetic energy .
+Can you understand that ?
+Can you reconcile that ?
+Can you show me mathematically that that is completely kosher ?
+That the wall has momentum 2 mv , it 's nonnegotiable .
+It must have momentum , and yet it has no kinetic energy .
+How is that possible ?
+Think about it , and if you can 't solve it , call me at 3 : 00 a.m .
+and I 'll tell you the solution .
+==========
+Okay , now let 's look at this from the center of mass frame of reference .
+The center of mass is very special , and physicists love to work in the center of mass for reasons that you will understand .
+In the absence of any net external forces on a system as a whole as we discussed last time the center of mass will always have the same velocity .
+We did a demonstration there with two vibrating objects with a spring , but yet the center of mass was moving with a constant velocity .
+The beauty now is if you jump into the frame of the center of mass that means you move with the same velocity of the center of mass the center of mass stands still in your frame of reference .
+And if the center of mass stands still , the momentum of the particles in your frame of reference in the center of mass frame of reference is zero .
+It is zero before the collisions and it is zero after the collisions .
+And this gives the center of mass some amazing properties that I will discuss with you now .
+First , we have a particle m1 and we have a particle m2 .
+And let this one in the center of mass frame have a velocity u1 , and this in the center of mass frame has a velocity u2 .
+I give it specifically u 's so that you can separate the u 's from the v 's .
+The v 's are always in your frame of reference ; the u 's are in the frame of reference of the center of mass .
+And I take a case whereby I have a completely elastic collision that means Q is zero the kind that we have just discussed .
+Momentum is not only conserved but it is also zero at all moments in time before and after the collision .
+After the collision let 's say m2 goes back with velocity u2 prime , and let 's say m1 has a velocity u1 prime .
+That 's the situation after the collision .
+Now , I know that momentum is zero , so I only can write down for this situation after the collision that m1 times u1 prime plus m2 times u2 prime must be zero .
+I don 't write them down as vectors .
+That 's not necessary , because it 's a one dimensional collision and the signs will automatically take care of the directions .
+I told you I chose the case of a completely elastic collision Q is zero and so kinetic energy must be conserved .
+So I have ... before the collision , I have one half m1 u1 squared plus one half m2 u2 squared , and after the collision , I have one half m1 u1 prime squared plus one half m2 u2 prime squared .
+Kinetic energy before ; kinetic energy afterwards .
+Equation one ; equation two .
+Nature can solve that quicker than we can , and the result is amazing .
+The result in the center of mass is that u1 prime equals minus u1 and u2 prime equals minus u2 .
+And that is an amazing result when you think about it .
+It means that in the center of mass , all that happens is that the speeds reverse directions , but the speed ... The velocities reverse directions , but the speeds remain the same .
+And that is a remarkable , remarkable result .
+If you ever want to move yourself to the center of mass , you will have to know what the center of mass velocity is .
+How do we calculate the velocity of the center of mass ?
+So we 're dealing here with the center of mass frame , and now I 'm going back to the laboratory frame .
+And we know that M total times the position vector of the center of mass this is the way we defined it last time equals m1 times the position vector of particle 1 plus m2 times the position vector of particle 2 .
+And so if you take the derivative of this equation , then the positions become velocities , so the velocity of the center of mass equals l divided by m1 plus m2 , because that 's the M total which I bring under here , and upstairs I get m1 v1 plus m2 v2 .
+And notice I left the arrows off because , since it 's a one dimensional problem , signs will take care of the directions .
+So this is the velocity of the center of mass .
+I wrote it also there on the blackboard because later on in this lecture I will need it , and it is possible that by that time I have erased it , and so that 's why I wrote it down there , too .
+So if now you want to know what u1 is , so we are ... Now you want to know what the velocity is in the center of mass frame , that , of course , equals v1 minus the velocity of the center of mass and u2 equals v2 minus the velocity of the center of mass .
+So this is a way that you can transfer , if you want to , into the center of mass frame .
+And it sometimes pays off , for reasons that I mentioned , that the momentum in the center of mass frame is zero always zero before the collision and after the collision , independent of whether it is an elastic collision , whether it 's an inelastic collision or whether it 's a superelastic collision .
+Now , if you later wanted to transfer back to your laboratory frame , then , of course , you will have to add the velocity of the center of mass again to the u1 prime , and you have to add the velocity of the center of mass to the u2 prime .
+The velocity of the center of mass has not changed as seen from your frame of reference , because the velocity of center of mass is always the same , remember , because momentum is conserved .
+So to get into the center of mass frame , you must subtract the velocity of the center of mass from the initial velocities .
+To get out of it , you must add them .
+==========
+Now , the kinetic energy and the momentum depend on your reference frame .
+In general , the total momentum as seen from your seats is not zero .
+That 's only in a very special case .
+In the case of the center of mass , the total momentum is always zero .
+The kinetic energy as seen from the lab frame is certainly , in general , not the same as the kinetic energy from the center of mass frame .
+And now comes another unique property of the center of mass .
+If I have a completely inelastic collision , then all energy in the center of mass frame is lost .
+That 's obvious in the center of mass frame , remember , momentum is zero .
+So you 're in the center of mass .
+One particle comes to you and the other comes to you .
+You 're not moving , you 're in the center of mass .
+They get stuck together because it 's a completely inelastic collision .
+If they get stuck together after the collision they stand still .
+That means all kinetic energy that was there before is all destroyed , and this kinetic energy as observed in the center of mass frame we call the internal energy , and that is the maximum energy in a collision that can ever be converted into heat .
+And I will show that to you partially .
+I will do some of the work and I will let you do some of the work as well .
+So I will first calculate in your frame of reference , where you are sitting how much energy is lost when we have a completely inelastic collision .
+I will then transfer to the center of mass frame , and I will show you , then , this quite amazing property .
+So now we are back in 26.100 , and we 're going to make a completely inelastic collision .
+That means they stick together , remember ?
+And m2 , we will have again , to make life a little simple , no speed , v2 equals zero , and m1 has a velocity v1 .
+You 've seen this now a zillion times .
+They get together , they stick together , and so I have here a velocity which I call v prime , and the mass is m1 plus m2 .
+That 's after the collision .
+Momentum is conserved if there 's no external ... net external force on the system , and so I can write down that m1 v1 must be m1 plus m2 times v prime .
+And so v prime equals m1 v1 divided by m1 plus m2 .
+That 's a very simple calculation .
+This , by the way it 's not so obvious is also the velocity of the center of mass .
+And how can I see that so quickly ?
+Well , what was the velocity of the center of mass ?
+Here you have it .
+This was in general .
+This was not for the case that v2 was zero ; this was more general .
+Make v2 zero , and you see exactly that you see here the same result , so this must be the velocity of the center of mass .
+Now we can calculate what the difference is between the potential energy ... the kinetic energy after the collision and the kinetic energy before the collision .
+That is , of course , something that is rather trivial .
+You know what the kinetic energy is before the collision it 's one half m1 v1 squared and you know what it is after the collision .
+I calculated v prime , and so you have take half this mass , multiply it by this velocity squared .
+You can do that , I am sure you can do that .
+And you will be able to see that this equals minus ... and you have to massage the algebra a little bit minus one half m1 m2 divided by m1 plus m2 times v1 squared .
+That 's what you will find .
+The minus sign is predictable .
+We lose kinetic energy when there is a completely inelastic collision .
+We 've done many last lecture .
+You lose kinetic energy we saw it in every single case .
+That 's what the minus sign means .
+This is Q .
+You lose kinetic energy and that goes into heat .
+So you 've done your homework now in the laboratory frame and you are home free very well .
+Now I 'm going to do the same calculation in the center of mass frame .
+And I will show you , now that 's the purpose that this amount of energy , which is what is lost , that that is all there was to start with in the center of mass frame , and that 's a unique property of the center of mass .
+And so I 'm going to convert now , to transfer you to the center of mass frame and then we will calculate how much energy there was in the center of mass frame before the collision , because after the collision there is nothing .
+There is zero .
+In the case of a completely inelastic collision , there is no kinetic energy left in the center of mass frame .
+So we go to the center of mass frame .
+So we first have to calculate what u1 is .
+Well , u1 equals v1 minus v center of mass .
+And we know what v center of mass is it 's right there .
+That 's where it is .
+And if you do the subtraction , which is by no means difficult , you will find m2 divided by m1 plus m2 times v1 .
+And you checked that , I hope .
+And now we go to calculate u2 .
+We want to know what the velocity is of the center of mass of the other one .
+That , of course , is v2 minus v center of mass , but this was zero .
+This m1 divided by m1 plus m2 times v1 , so the difference is only the m1 upstairs and the m2 .
+Now we are going to calculate the kinetic energy in the center of mass frame .
+Well , that equals one half of m1 times u1 squared plus one half m2 times u2 squared .
+That 's all we have before the collision occurs .
+Oh , by the way , this is not a minus ... This is a plus sign and this is a minus sign .
+This one comes this way and this one goes in that way .
+Now , I can ... I can calculate that for you .
+You know u1 and you know u2 .
+If that 's a plus or a minus sign , it makes no difference because they cancel anyhow .
+What are you going to find ?
+One half m1 m2 divided by m1 plus m2 times v1 squared .
+And this is exactly the same that we had there .
+And so what you see here if you allow me for having skipped some steps in the algebra ; you will have to do a little massaging to get from here to here you see here this is the kinetic energy before the collision , and all that kinetic energy is removed , went to heat .
+This is the maximum you can ever lose , and this is what we call the internal kinetic energy of the system .
+And so going to the center of mass system , you can always immediately calculate what the maximum heat is that you can expect from a collision .
+We can take a very special case , and we can take m2 going to infinity .
+It 's like having a piece of putty I slam on the wall .
+It gets stuck , and what is the maximum heat that you can produce that 's all the energy there is ?
+If m2 becomes infinitely high , then m1 can be ignored .
+m2 cancels m2 , you get one half m1 v1 squared .
+And that 's obvious .
+That 's completely trivial .
+I have a piece of putty , I slam it against the wall .
+It has a certain amount of kinetic energy .
+Whether you stay in your reference frame or in the reference frame of the center of mass , it 's immediately obvious that all the kinetic energy is lost .
+And that 's exactly what you see comes out of these equations whether you go to the center of mass or whether you do it from 26.100. I now would like to return to the air track and do several completely inelastic collisions with you .
+Again , we have to assume that momentum is conserved .
+It never is completely , but we can come close .
+And we will have two cars that ... Now we 're going completely inelastic .
+Completely inelastic .
+So they hit each other and they get stuck .
+I get a certain velocity , which I put into the first car .
+It hits the second car and it gets stuck .
+And I see there what my v prime is .
+I see there on the blackboard .
+that if the two are the same , I have a one here , a one and a one here .
+If that 's the ratio , so the outcome is that v prime must be one half v1 .
+So this must be one half v1 .
+Now I have a mass which is half the other one .
+I plow it into the other , they get stuck together and now I get one divided by one plus two I get one third .
+Notice in both cases I get a plus sign .
+That 's , of course , obvious .
+If I plow into something and they stick together , they continue in the same direction .
+And so now I will do the timing in exactly the same way that I did before , except that now I have a completely inelastic collision .
+I will have a timing t1 and I will have a timing t prime .
+The cars have a slightly different mass : 237 plus or minus one gram and I have one that is 474 plus or minus one gram not too different from this .
+I have two of these cars and I have one of these .
+And first I 'm going to slam these two onto each other , and so when they collide , I expect the speed to be half .
+So I get a certain amount of t1 so t prime will be twice as long because the speed goes down by a factor of two so when I multiply this number by one half , I would like to get that number back .
+Here I get the time for this car .
+The first one to come in gives me a certain time .
+When they continue together , the speed is three times lower so this time will be three times higher .
+So I multiply this by one third and I would like to get that time back .
+And those are the two experiments that I would like to do now .
+So we have to get the noise back on .
+Air track one .
+( air track humming ) Air track two .
+Here we have the two cars .
+They have Velcro , so when they hit each other , they get stuck .
+Sometimes they bounce , actually .
+You have to do the experiment again .
+This one goes here ; this one goes here .
+Are these two timers on ?
+We don 't need this timer anymore .
+Are they both on ?
+Zero them .
+Zero them .
+Are they zero ?
+Okay , are you ready ?
+This one is going to plow into this one , they merge and they continue , and then you 'll see the time t prime here .
+There we go .
+Ready ... All right .
+What do we see ?
+138 , 288 .
+138 ... 288 ... 138 ... 288 , divide this by 2 is 0.144. That is ... the difference is only six , and that is only four percent off .
+That 's completely within my prediction that each time could be off by 2 percent .
+Now I will have a car which is twice the mass and this is once the mass .
+I will set them again to zero and now we get one onto double the mass .
+Ready ?
+There we go .
+Oh !
+You see ?
+They bounced .
+They didn 't stick , so we have to start all over .
+If they don 't stick , of course , then it 's ... it 's not a completely inelastic collision .
+There we go .
+They made a slight bounce , which I didn 't like .
+Let 's see what we get .
+We can always do it again .
+168 , 545 .
+168 ... Multiply this by three ... 504 , 545 eight percent difference is a little high .
+But these things can happen .
+I told you they bounced , and I didn 't like that , and then they got stuck again .
+I will do it once more .
+Maybe I 'm a little bit luckier .
+Again , they bounced a little before they finally merged .
+603 , 187 .
+187 ... 603 .
+If I divide this by three , I get 0.201 , and that is off , again , by about 13 units , about seven percent difference , so it 's a little bit more than the five percent that I allowed for .
+==========
+Now , to make it worse for you tonight , I would like you to think about something else , not only about the tennis ball against the wall whereby the wall has momentum but no kinetic energy but now I would like you to think about this amazing thing .
+I have eight billiard balls here , and your Newton cradles probably also have eight balls hanging from pendulums .
+This is easier to demonstrate in 26.100. Now I let two balls bang onto the other six .
+And I know that you predict what 's going to happen and your prediction is correct .
+If you slam two balls onto the six nature is going to calculate like mad to conserve momentum , to conserve kinetic energy closely enough to a completely elastic collision , and out comes that the only way that nature can do it is the following .
+They all stand still and these two take off .
+Look again .
+They all stand still and these two take off .
+That 's not an easy calculation .
+But now look at the following .
+Hold it what happens if I take three and I bang three on the other five ?
+What do you predict is going to happen ?
+How many will take off ?
+Three , you think .
+You sure ?
+You were right .
+Okay .
+Now , five .
+Five on three .
+This is a tough problem even for nature .
+What do you think will happen ?
+( students respond ) LEWIN : Five will go again and three will stay you 're good .
+If any one of you can show me analytically that this is what has to happen , I would love to see those results .
+Okay , see you Wednesday .
+==========

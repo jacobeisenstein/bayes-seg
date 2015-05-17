@@ -1,0 +1,687 @@
+==========
+okay you need some problems with the physical pendulums and i
+talk a little bit more about physical pendulums let s first
+look at the picture
+in very general terms i have here
+the solid object which is rotating about point p about an axis vertical to the blackboards
+and here at c is the center of mass
+the object has a mass m
+and so there is here force and d
+and let this separation here be
+i m going to offset it over an angle theta
+and i m going to oscillate it s clearly there has to be a force at the pin if there were no force that the pin
+this object would be accelerated down
+with the acceleration g and that s not what s going happen but i don t care about that force because i m going to take the torque about point p
+remember when we had the spring
+this one dimensional case
+we have f equals m a
+and that for the spring be k minus k x and the minus sign indicates that is a restoring force
+so we now get something very similar
+in rotation four becomes torque
+mass becomes moment of inertia and
+acceleration becomes angular acceleration
+so now we have minus park frost f
+and the minus sign indicates that it is restore and so if i take the torque
+relative to point p
+then i have this is the position vector a which has magnitude b
+the force is n g and i have to multiply by the sine of theta so i have the times and t
+times the sine of theta
+and that now equals
+my recycling a minus here minus
+the moment of inertia about point p times i ll find and i ll fly is the angular acceleration which is theta and noble dot
+i bring them together and i use the small angle approximation
+small angles then the sine of theta
+is approximately theta if theta is in radians
+and so i bring this all in one site so we get faded double dot plus b
+m g divided by the moment of inertia about that point p
+times fail on how this is by small angle approximation equals zero
+and this is a well known equation it is clearly
+the simple harmonic oscillations theta because this is a constant
+and so we re
+get at the solution that theta
+equals theta maximum you d call that the angular amplitude times cosine
+omega t plus phi
+this omega is the angular frequency is a constant
+omega here theta dots
+is the angular velocity which is not a constant the two are completely different that is the angular frequency
+so we know that the solution to this differential equation gives me omega
+is the square root of this constant
+but it is b m g
+divided by the moment of inertia about that point p and so the period of oscillation
+is two pi divided by omega and so that is two pi times the square root
+if i m relative to point b divided by d n c
+and less hang onto this poor large part
+of this lecture because i m going to apply this to
+the various geometry is make sure that i have a correct yes i do
+this is independent of the mass of the object even though you say there is an end here you will see that in all cases when we calculate the moment of inertia about point the that there s always a mass up here so the mass will disappear sure will see very shortly
+i have four objects here and they all have different moment of inertia bill
+going to rotate about
+an axis perpendicular to the blackboard so to speak
+and we re going to massage each one of them
+to predict their periods
+let s first go to the rod
+so we first do the rod
+we have the rod here
+this is point p
+and here is the center of the road
+the raw has mass m and it has length l
+so we have here and g
+i don t have to worry about it anymore i simply go to this equation
+and i want to know what the period is of this rocket is oscillating rod
+oh i have to know now is what is the moment of inertia about p and i know or eighty that
+be in that equation equals one half l
+so what is the moment of inertia of all summation about point p i have to apply now the parallel axis theorem
+which also have to do during the exam
+which says that is the moment of inertia
+of rotation about the center of mass which in our case is c
+the axes have to be parallel so this this axis perpendicular to the blackboard and this x is perpendicular to the blackboard
+plus the mass of the rod
+times the distance between p in c squared plus
+and times this distance squared so that is b squared
+and b squared is one quarter
+l squared
+what is the moment of inertia for rotation of a rod about this axis i look it up in table
+i happen to remember it now because them lecturing eight oh one
+two month from now i will have for gulf
+so i remember now that it is one tells them
+l squared plus one quarter
+and l squared that become one third of is m l squared
+and so the period t
+becomes two pi
+times the square root of this moment of inertia which is the one third m l squared
+divided by d and g n b is one half l for this geometry so one half
+l and
+gee and note is indeed is i anticipate it s always lose you and you also lose one l here
+and so you get two pi times the square root of two thirds
+l divided by c
+so that is the period that we predict for
+the rod so let s write that under here
+because we re going to comparative shortly
+so this is two pi times the square root of two thirds l
+divided by two
+the rocket we have here
+is designed in such a way that the period is very close to one second that was our goal
+the putty discloses we can get it
+to one point zero zero seconds and so if you substitute in this equation t equals one
+you will find that the length
+of this wrote it it s really pivot thing at the very end
+turn be about thirty seven point two centimeters
+so we did the best weekend when we make this rod
+there s always them uncertainty of course how you drill the holes and where you drill holes
+so i would say the value that we actually achieve
+is thirty seven point two problem with an uncertainty of about three millimeters so oh point three centimeters
+that s what we have
+there s
+in air of one part in three hundred seventy that s make that rounded off to one percent there
+in the length since the length is under the square root
+the one percent ever becomes half a percent there
+so the period that i then would predict
+is about one point zero zero zero plus half a percent
+so that is oh point oh oh five seconds
+so that then has a one half sense
+here so this is my predict it period
+and so we re going to make ten oscillations
+all of the observer oscillations we re
+get in number
+my reaction time is no more not much better than owed tech intensive the seconds so we re
+get a number there
+we divide this number by ten
+and so we can always calculate the period then and then we get a much improved error
+of hundreds of a second because we will divide this number by ten so this also going to be divided by ten and let s see how close
+we were able to get is
+to the one point zero seconds
+so here s the rod
+turn is on the time and
+we ll of set the rod and i will start it s when it stops somewhere now one
+two three four five
+six seven eight nine ten know that
+nine point nine two
+well within the prediction
+nine point nine two
+and so this becomes oh point
+nine nine two plus minus point oh one and you see that is well within
+the prediction that i made
+now all these four objects were designed in such a way
+that they have exactly the same period of one second and now comes the question
+how do the dimensions relate to each other in order
+to get them a period of one second
+so let s now calculate
+the period for the other three objects for the ring for the disk
+and for the pendulum let s start with the pendulum
+the panel and
+center of mass is here
+here is point p
+i give the pentium lengths the little l you see the on the right by put their so be
+equals l that s this separation be be in c
+the moment of inertia about point p is very easy now
+this has no mass the masses all here mass capital m so that must be m
+times l squared
+so i go this equation and so i ask what is the period of a pendulum
+and you know surprised that you find two pi
+times the square root of l o forty we ve seen that before
+but of course it also comes out
+if you do it in this more complicated way so here we get to pi
+times the square root of l o g
+that s now to the the rain
+this is the rain
+it is about point p here
+here is the center of mass right in the middle the middle of nowhere like here is the center of mass
+and so the distance d
+is the radius of the rain
+so we have to calculate the moment of inertia about point p
+again we use to have to use now a parallel axis theorem is the
+moment of inertia for rotation about this axis through point c s or a center of mass
+that is m r squared
+is are is the radius of the ring
+it s all mass is that the circumference
+all at a distance r from the center of mass
+and then we have to add to that
+according to the parallel axis theorem the mass times this distance squared and this distance is r
+so you get m r squared
+so it is two m r squared
+so what is the period
+of an oscillation
+i if p
+that is two m r squared
+divided by b n g d is r r m g
+i lose one r
+i lose and and and we ve seen this before i derive this lecture number twenty one
+i remember everything my lecture and dome a belief utah
+so the period now is the same as a pendulum with length two r
+this is the rain
+and so here we have two pi
+times the square root of two r
+divided by d i ll make it compare isn t very shortly i just want to finish them all
+and i now would like to do
+the disk last but not least
+put a disk
+all we have to do now is calculate the moment of inertia this was very close to your problem you had on the exam
+here you have the disk solid disk
+this is point p this is the center of mass but now it s solid
+so again be is r
+the separation between c and b
+and the moment of inertia for rotation about point p
+is now the moment of inertia for rotation about the center of mass
+which you look up in the table in the case if you attempt was given on the front cover one half and and
+r squared that s the moment of inertia for rotation about the center of mass now we have to add and
+b squared and b equals r so we have to add m r squared
+so we find three house m r squared
+so what is the period oscillation
+two pi times three house
+the m r squared
+divided by b m g b is r
+or m g
+and that equals two pi
+times the square root
+i lose my m is always a news and are
+i get here three hearts r divided by g
+and so let s write that down here
+so we have two pi
+times the square root
+of three dots are
+divided by g
+so we have the mall for there and so we can now make a meaningful comparison
+we want to period to be the same so we can hang onto those numbers so we don t need this anymore
+we wanted period to be the same
+we already have this tell is that the period of the raw place close to the one second
+so when all going to measure the many more we just want to
+compare the weather in deep they have the same
+period of oscillation by making them oscillate in unison
+but one to know what the relative ratios are of these dimensions the way we designed it
+so let s first go to the
+brought that make a comparison between the rod and the pendulum
+so if you look at the rod and we use the pendulum as our standard with length little l
+then you see the period will be the same if one on a half r
+is little l oaks showing the rod if two thirds capital l is little
+so for the road
+two thirds
+hello equals little l two capital l is one and a half l
+has to be exactly one in half
+times the length of
+the pendulum so this length
+has to be exactly one on a half times this length to the center of mass which is the center of that bill you will
+and that s what we try to the best we could
+let s now go the great
+for rain to have the same period
+one seconds to our has to be the same as the lengths of the pendulum to to our
+equals l
+so we can put in here
+for l
+is has to be
+one and a half times l and here
+this now
+which is two r a
+has to be l
+very non intuitive that this length here is the same as the diameter of the ring not evolving is
+and so now we go for the disk
+so now we require that three hass r one and a half or
+we want to be l so we want our
+to be two l divided by three
+so you want the diameter of two r two beef for l divided by three and when you look at the disk
+it s hard to see that it is exactly four thirds but you can see that
+it is longer than the pendulum to be
+one third longer but it is not as long as the rod this the law draw this one and a half times the length of and
+and so we can now complete that picture and we have now
+but the diameter here
+two r is now for thirty eight times l
+and so what we can do now we can play with them we can
+oscillating simultaneously and just see how well they trek each other
+there is no sense in giving you the dimensions the rod
+what thirty seven point two
+centimeters let me write that down
+because we calculated that
+so this will thirty seven
+point two centimeters and i think that translate into for the pendulum
+twenty four point eight centimeters the for the others
+i leave it up to you to calculate
+the dimensions yes twenty five twenty four point eight is correct so
+dining is not to use for anymore let s just see how these to go to get uh
+a set of saturn the let them go
+and they go pretty much in unison if you wait long enough of course you will see there is a difference you can ever make them exactly the same
+but the trick each other and my swing
+we can now also use the rod and the disk
+attract each other beautiful they re both very close to
+one point zero zero seconds
+and we can have the the disk
+person s the pendulum
+and you see the track each other very nice you
+but wait long enough and you will see that of course the periods will be different
+so this is my last word them physical pendulums but you may see it again on the final
+not maybe you can on with count that telling you
+okay i want to discuss now some honor
+==========
+interesting oscillation again simple harmonic and that is they quit
+in a u to you see there
+if i have here but tube
+which has everywhere it s open on both side and everywhere the same cross section
+and i would a liquid in here
+a nickel we re just like that and it d the lick which has mass and
+it had density row
+the area of the tube is a
+and the lengths of the lick weight
+is l
+so this is
+l
+i m
+to offset it but they quit and i wanted
+to see oscillate i
+see working calculate the period of the oscillation
+the total mass of the liquid that i have
+total mass
+is the volume which is the area times the length times row
+i m going to offset it s so that this is higher
+over a distance
+why so this then is lower over a distance y
+so this distance is also why
+same as that dilemma quit now is here and then i release it s and it will start to oscillate
+well when is starts to oscillate
+there comes a time that s a lick weight
+the holy quit this going to slosh back and forth and so everywhere in the tube
+the velocity at any moment in time will be the same because the
+cross section is not changing it s the same everywhere
+there there is a certain velocity here v
+and it s the same as the velocity here as the velocity there as the velocity there
+and that of course is why dot that s the first derivative of that
+position here i m going to
+right down the conservation of total energy mechanical energy
+i assume that there is no energy lost although
+there probably is some fraction inside the
+liquid will probably generate some eats and that we ll call sum damping you will see that when we do the experiment
+for now i will assume that that s not the case so what now
+is then the total energy of the system
+that is this sum of the kinetic energy
+plus the potential energy and
+if we assume that that s constant we will be able to find the period of oscillation very shortly as you ll see
+the kinetic energy
+of the liquid is easy that is one half m and
+times the velocity squared and the velocity we agree is white dots
+query now the potential energy
+i call the potential energy here
+i call that u equals zero
+when the lick quits is standing here and a liquid is standing here i call that potential energy is zero
+the mass that is now about this level here i call that delta i and
+and l time
+b c area a times y times row
+this how much master s here was taken away from here and put here
+how much work do you have to do to take this the quit and put it there
+what is the same when you take the slick went and put it here
+and when you bring is liquid which was there here then you have move it up over a distance
+why
+and so the gravitational potential energy increases by delta i am the is the amount of mass here
+times g times a h n h is y n g h remember that s the increase in potential energy
+and so i move when amount of mass which is delta and
+i move it over the distance y
+i ve raised here but that makes no difference of course and so this is
+the total energy and this is now a constant
+so i m going to substitute in there
+the a l and roast so i get one half
+they l row
+velocity squared plus eighty
+row g n i get a y squared
+equals a constant because i have a y here and have a y there
+we ve done this before this is the conservation of energy
+and in order to find a period
+of the simple harmonic oscillation
+we take the time derivative
+by the way before we do that is in
+this was delta n and this is in a variety of a row yeah that s it so we lose a
+but we lose row
+and we continue would what we have and so we re going to take the the relative versus time of this equation
+the history one half
+well the two pops out and the two becomes a one
+so i get to why dot then i apply the chain will so i get y double dot
+do i get plus d the two popped out becomes to y
+and then i get the chain rule
+why got and that the equals zero
+i lose my why not because they have wide open bows terms
+this to each of this too
+and so i find that why double got
+plus two d divided by l times why i
+equals zero and that was my goal
+so this is clearly assemble them
+go oscillation because this is a constant
+and it will oscillate in the following way
+y equals y and x times the cosine
+of omega t was fire this is the angular frequency which is directly related to the periods omega
+angular frequency equals the square root of two g over l and so the period
+will be two pi times the square root of l over two gee so this is the period
+for a oscillating the correct noticed that
+is the period that you would have had for would ve obtained from a pendulum
+if the length of the engine with l l over to not at all years
+not at all intuitive
+you see our set up here
+i have to know what alice and that is not so easy
+because of this
+radius here
+if i measure l on the outside
+is substantially large them on the inside
+you rain all think it s a big difference but it uterus and nine centimeter difference
+we outside than the insight
+if i take the average value between the two
+if i take the average i find seventy two centimeters
+and i could be ah by one
+if i use this number
+for l and i substitute in this equation that i ve finds my predicted periods
+which is one point two zero for or
+and because of this era that i have one that would give me an uncertainty of about uh
+oh point oh one second
+however before we start measuring it and i will do can oscillations
+to get a reasonable accurate results i
+warn you
+i make a prediction
+that the period we will measurable probably be larger than this
+and i can think of two reasons first is
+that the damping of this with liquid will be you which you will see how quickly it them s
+in the past we ve never taken damping into account and we won t do that in eight oh one
+but the den thing has the effect on making the period longer we always ignore that and in most of the demonstrations that we get like just now
+that was acceptable mail be acceptable for the liquid
+but now there is a second point that i want you to think about
+is it correct that i take the ever its length
+namely the average value between the outer length and he in known length
+i don t think it is
+i want you to think about why that is not correct
+look carefully where that oil comes into my differential equation and you will probably come up with the right answer
+and i claim that the actual well that we should have taken is a little bit larger
+i don t know how much larger but it s a little bit larger and so that ll also make the observed periods become larger
+that the predicted one so i m not too optimistic that will go and it is
+the way we want to hit it but that s good because that s where the physics lies that you see that
+their other factors that have to be taken into account i ll turn this one on is it all now
+to zero and will make it completely dark in the classroom
+because you re going to see otherwise you can see that i quit
+so you see to to quit now
+boy see these equations to
+okay is zero
+so let me try to give this a this ring
+a large swing a den so enormously that i really
+get a very large swing
+that s nice now one two three four
+five six seven eight nine ten
+are not bet
+twelve point one eight not that
+the little bit of light
+twelve point one eight
+so observe of it
+ten t observe
+is twelve point one eight
+okay my reaction time is oh point one
+so the tee observed
+is one point two
+let s make it to puzzle minus oh point oh one second oh that s not bad
+it actually there is an overlap if you add is one here you get one to one
+and if you subtract it humid also one to one
+so it s not bad i expected it to be a little higher but pose enough to be happy
+think about by l should ve been taking little larger
+==========
+now one more very interesting oscillation but torsional pendulum
+is a wire there to have meters you wire
+and is hanging something on the bottom which we going to offset and that is going to oscillate back and force is called a torsional pendulum
+and we re going to calculate the period of oscillation for random and they have wonderful properties
+they re in a way like a spring
+like one dimensional spring remember the one dimensional spring that we had
+of hear it which was independence off the
+amplitude well within reason of course
+to make the amplitude to large
+get permanent deformation of the spring
+you re never had to make any small angle approximation with the spring as we had to do with the pendulum
+here is the pendulum
+the torsional pendulum
+is a bar
+and there is a weight here and there s a weight here of tell you more about that later
+it s hanging here from the ceiling has a certain length l this is point p
+and we re going to twist it
+and then we ll oh going to let it oscillate this bar in horizontal plane
+so when you look from above
+you will see the board here
+t point p here and then
+we can offset it over an angle theta
+and then it will oscillate back and force
+the
+the torque
+relative to point p
+is no very similar to what we had with the string
+we have a minus sign
+again that illustrates that it is restoring instead of a
+okay now we have capital
+which is what we call the torsional spring constant and now we have an angle which we call theta
+so we generate the torque which is proportional
+to the angle very similar to the linear spring whereby we generate a force
+which proportional to the linear displacement now you generate a torque which is
+linearly proportional to the angle
+and this is the moment of inertia about point p times i ll find an off why theta double dot
+so we re going to get that theta noble dot
+plus capital
+time theta divided by a height of the
+equals zero the cap on by the weight is the torsional
+constant
+so we have a differential equation it s clear that you re going to see a simple harmonic oscillation
+this is a constant
+and so you re
+get theta
+you will theta maximum
+times the cosine omega t plus phi is getting boring this is the angular frequency
+angular frequency and angular frequency as the square root of cap a divided by
+the moment of inertia about point p and therefore the periods
+which is two pi divided by omega equals two pi times the square root
+the moment of inertia about point p
+divided by camp
+well
+how oh tampa
+cap i is a function of the cross sectional area here a
+and the length l
+and it s also function of what kind of material you have already have steel one i ll makes a big difference that s very intuitive of course
+remember that in there a lecture
+when we stress the wire to the point that it was breaking
+we dealt with your own small the list we had a wire
+and where mass hanging a t and of the wire
+and we discussed be
+vertical oscillation be could stress it and it d go
+and then we would get an oscillation like a spring
+and that spring constant that we found then was amongst young s modulus times the cross sectional area here
+divided by the length and that was kind of freezing the thick in a bar
+the stiffer in is the longer the wire the less of it is
+well others something very similar here
+but i don t want to go into the details of exactly how you drive here cap are so little bit more complicated but indeed
+the same is true if you make the wire thicker then cap a will go up
+and if you make the wire while longer capital go down
+that s immediately obvious if you had a very short wrought
+and you try to twist that wrought it s clamp at the top you tested and it s very short you would need a tremendous torque
+for ten degrees if you make wire a hundred meters long and you
+twist it ten degrees takes nothing to you can immediately see that of course
+the value for cap on the torsional constant
+is a function of the lengths will go down when the lengths goes up
+we have a wire here which is to have meters long
+and the thickness of the wire the diameter according to the manufacturers the piano
+string
+the thickest is twenty five thousand of an inch and if i
+calculate cap right to the best of my ability though i find that cap a to be very close
+four times ten to the minus four
+newton meters
+four radian
+and so all we have to do now is to calculate the moment of inertia
+of the system and then we can
+predict what the period of this pendulum is going to be which is not might go you ll see my goal is going to be different one
+look at a bar
+and look at a wire the wire is so thin that the moment of inertia relative to point p
+of the wire is very close to zero remember
+it is proportional to r square you can forget about that
+almost all the moment of inertia is in the six
+uh blow up that system for you here it is
+you see it there has on both sides it has two hundred grams
+it is oh point two kilograms
+and it has here oh point two kilograms
+and this mass is almost inevitable
+and this distance here
+is thirty centimeters
+and this distance
+the thirty centimeters
+go to very good approximation the moment of inertia
+for rotation about that point p this rotation
+well read is mass times radius squared plus this mass times radius squared
+so that will be twice because i have two masses times the mass times the radius
+squared and that is about oh point oh three six
+kilogram
+meters squared
+and so when i use that into our equation so i know now would cap i is at least i have a reasonable idea what cap i is
+and i know what i er of pieces really look almost exclusively determined by that cross part i will find then
+using that equation that the period
+is very close to sixty seconds
+my goal is not to prove to you that it is close to sixty seconds
+my goal is to show you that for this dimension which is very thin and very long that
+we can make that angle theta maximum this angle
+amazingly large you re not talking about ten degrees or thirty degrees we can go much further
+and what i want to test issue is
+how far we can go
+this was the great things in life
+for you and for me you challenge
+oh four okay you re going get away with it there comes a time
+that if we make the angle too large
+that week permanently before on the wire
+it will not come back to its original position the same happens with a spring if you take a spring
+it is true that the period of oscillation is independent of the amplitude
+but only up to a point if you go too far to do tall no longer holes that you re deform it permanently then of course
+the period will become a function
+off the extension and the same is true here
+so if we d twisted to watch up then of course
+we will permanently the form it and then the period will not the independent of theta maximum
+having said that i would like to start
+asking you for advice what kind of angle
+in this direction so we start with what think is reasonable without total torture for the wire
+and then will write down the times
+so we re not really interested in testing the sixty seconds of the world war
+like you compare the various angles that we give it so what is the first one we will we ll try and died here
+thirty degrees what
+the first try york well
+and the first one on six pi
+you are if you might
+by wendy i really do go one row a rotation okay you think that s nothing is p that s for your right
+guy would like to go theta maximum
+oh three hundred sixty degrees so two pi
+and measure the period in fact
+to measure the period takes a minute
+and it s not necessary we can measure half a period mainly we wait until the enya um hum stops
+and we measure time into it stops again that s tough period
+like with the spring it it stops here
+and stopped there that s how the period
+so measure half a period
+hmm i don t know what my reaction time is going to be you d maybe not intensive the second because the moment that it stops is not so we ll find you will see
+i m just guessing bob little larger than one tenth of the second let s give it a shot
+let s try first three hundred sixty degrees
+you see this is black and this is a little red so we ll rotate it
+one rotation is back you it was
+yeah have you seen that tree to sixty degrees
+okay and i will first that it
+wait until it stops i always do that and then i started i m never in it stops again
+i ll stop the time and then we have profit to it
+so let s first do its own thing
+very slowly very gentle e
+to root a roughly thirty seconds for however rotation
+so you will see now that it
+now it a clearing again because we
+the one rotation and so
+back to equilibrium and now it s going to
+stop very shortly
+and when it stops
+i want to start the time now
+okay sort of goes back
+and wait until it stops again of years is hotter period
+okay
+now twenty eight point seven five
+twenty eight point eight what are you now
+three rotations five rotations three we favor of three
+course responsible for permanent damage to the wire you accept responsibility life three is a locked
+three is six pine and
+six i can start it in because will take awhile before it stops
+three rotation first we have to be sure that it is more or less back
+but equilibrium which is always difficult thing because it s so slow
+yeah close enough
+okay three each other go clockwise counterclockwise should make no difference
+i went this way for cell to go back that is sleep with that okay okay
+one
+to
+three
+six i
+the light
+okay let s go
+i ll start at i and when it stops we have some time
+six by
+we rotate it six three times that it will rotate six times back before stop soap you realize that
+was i too late
+thank you for that out
+so if you rotated three times and then let it go it goes first three times back that it s a caribbean
+and then one three times up again for stops
+know lotus is going much faster now but the time that s the whole thing
+should be very close to that number again
+twenty eight point five who will bet
+joey now go all the way
+where you
+do it how break the y or
+then rotations
+you d love to see that right
+go like mad ten rotations
+the amazing how much faster ago she just still thirty seconds
+respect should have i korean
+this was not equilibrium
+i know it s somewhere here
+no that wasn t equilibrium
+of it this is it okay
+then right ready one too
+three four five
+say x
+seven
+a
+now i
+ten four wire
+well that ago will see what happens but it stops
+i ll start the time
+does make
+thank you thank you for pointing that out
+look how fast is going the is really going whack oh has and all that in thirty seconds
+now
+so now has to go back to it stopping it has a make twenty rotations now
+twenty rotations in thirty seconds and vector equilibrium and then
+tend to come to a halt
+there s a
+be your thanksgiving for well demonstration
+how
+twenty nine point two fantastic okay have a good thanksgiving
+==========

@@ -1,0 +1,701 @@
+==========
+were now entering the part of eight oh one which is the most difficult for student in faculty like
+we re going to enter the domain of angular momentum and torques is extremely non intuitive
+the good news however is that we ll stay if we face concept for these four five lectures
+today i will introduce both torque
+and angular momenta
+was angular momentum of an object has a mass m
+and it has a velocity v
+then clearly it has a momentum
+v that s very well defined you reference frame the product of m and v
+then the momentum
+i can take relative to any point i choose i d choose this point q arbitrary this now
+is the position vector which i call r q
+but this angle theta
+and angular momentum will relative to that point q it s a vector
+is the position vector relative to that point q cross b
+so it is our was cute
+cross v and then times m
+now in magnitude so often the angular momentum relative to point q
+is of course are m v that then i have to take the sine of the angle theta
+so let s say it is m v r sine of theta
+and this i often call short and notation are perpendicular that s
+are perpendicular is this distance
+relative to point c
+but you just saw may have confuse u n for good reason because i changed by index q to see
+and there is no see the index the should all be q of course
+so is our is the length of this vector that is the magnitude of this vector so they should have the q
+and our cues sine theta
+which i call are perpendicular
+must have an index q
+and that is this part here
+this angle is ninety degrees and this here is r of q
+perpendicular know season all
+only cues i m sorry for that
+the the direction of the angular momentum is easy you know how to do we ll cross product so in this case
+arc cross v would be
+perpendicular to the blackboards
+and the magnitude is also easy to calculate
+now comes the difficult problem with angular momentum
+if i chose any point on this line say point c
+then the angular momentum relative to point c is zero
+very obvious because
+the position vector r
+and the velocity vector in this case and the same direction so theta is zero so the sine of theta is zero
+so you immediately see that angular momentum is not an intrinsic property of them moving object like momentum
+which is an intrinsic property
+if you sit there in twenty six one hundred you see an object moving with a certain velocity it has a certain mass you know it s momentum
+what s the angular momentum is depends on the point that you choose all your point of origin if you have chosen this point d
+then the angular momentum would even be this way
+because when your point here the position vector then they see are cross v is now coming
+the blackboard
+and this is why angular momentum
+in such a difficult concept but we re on the side it in a way that it will be very useful
+suppose i d throw up an object
+twenty six one hundred
+and at time t equals zero the object is here and at time t the object is there
+so this then is the position vector at time t the object
+starts off with a certain velocity v
+and a little later here say the velocity is like so
+and there is of course the force on it and j which makes these curve
+what is the angular momentum relative two points see at time zero the angular momentum
+it s clearly zero because the point it s self the mast itself is at points see
+so the position vector has no length so it s clear that is zero
+what is the angular momentum at time t when the object is here well what angular momentum
+is clearly not zero because you see here
+position vector and you see the velocity so clearly the angular momentum lost changing
+now you will say of course it was changing big deal
+because angular momentum has a velocity vector read it and here the velocity vector is changing all the time
+so obviously you would say the angular momentum is changing well
+yes that is not a bad argument but i will now show you a case where the velocity is changing all the time
+okay but where angular momentum is not changing
+i choose
+we re is going around the sun
+here s the earth s with mass m at point see here is the sun
+this it the position vector r of see
+and and the earth has a certain tangential velocity
+and the speed
+never change it s about the velocity dust changed so this is the position vector at a later point in time
+what now is the angular momentum off the light going around the sun
+relative to point c i pick see now
+well that angular momentum if i take the
+the magnitude of the angular momentum
+because the direction is immediately obvious if the object is going around like this this is the position vector then he
+direction will be pointing out of the blackboard that s easy
+so i only work now about the
+the magnitude so the magnitude is the mass of the earth s times the magnitude
+often the cross product
+between these two vectors
+and notice the angle is ninety degrees
+so i can forget about across the sine of theta is one and so i simply get them are
+the the v now being the speed
+this case when the object is here but when the objects here the situation has not changed again
+are cross v the magnitude is exactly the same because the sine of the angle hasn t changed
+and so you see here okay so by the velocity is changing all the time
+but the angular momentum relative to point c is not changing
+suppose i chosen point q
+is a romance do changing relative to point q you better believe it
+there is a time that the object will go through point q build any and you re magnum it can be zero because the position vector is zero
+if the object is here and gentlemen the relative to point q for sure or yeah momentum is not zero
+you have a position vector and you have a velocity
+so in
+right if if two points see is a very special case now
+is angular momentum not changing so angular momentum
+is conserved in this special case but only about points see
+then i want to address that s it a little bit more general way
+==========
+i take the angular momentum and i choose a point q
+and i notice the definition is position vector relative to point q
+cross p
+i take the derivative if time derivative d l d t
+relative to that point cues always important
+that you stayed which point to have chosen
+relative to which you take n and momentum that is going to be
+the are
+the t i
+to say cross p
+plus r
+of q costs the p d t is is the way that you take the
+time derivative of the cross product
+we calculate the angular momentum relative to point q
+so the index has to be cute for out the equation the position vector relative to point q
+and in this equation use see the correct index q here use to do correct index q here
+but i slipped up here and i put a c there
+there is no see this problem
+so this is also r of q
+sorry for that this here
+is the velocity of the object
+the velocity vector which is always in the same direction as the
+so this is zero
+d p the t v
+that is the force on the object
+we see that before in eight oh one and so now we have that
+d l the t
+but if to a point q the calls
+the position vector r
+from that point across f
+and this now is what we call torque
+and we write for that the symbols tall is a vector
+and i put in that q we get
+and this is one of the most important equations that will stay with its for at least
+fight lectures what is is telling you it is that if there is a torque
+on an object the angular momentum must be changing in time if there is no torque on the object angular momentum
+will be conserved and now you get some insight into this situation that we just discussed
+the force the attractive force
+gravitational force
+exerted on the earth
+is in this direction the
+position vector is in this direction so are cross f is zero
+there is no torque relative to this point c
+but the angle between the two vectors is hundred eighty degrees and so the sine of the angle is zero
+therefore no matter where you lie on the circle
+always are cross f will be zero there is no torque relative to point c
+but if you take point q or you take here s some point they clearly
+but is going to be the pork
+the changing forty for and so there
+you will have a change of angular momenta
+so something very special about that point c out will come back to get of course
+now i want to expand the idea of angular momentum from
+==========
+one point objects that moves in space too
+but objects like a sphere or like a disk which is rotating about its center of mass
+and i will start with the disk
+here we have a disk the disk has mass and
+and the disk has radius r
+and at this point c is the center of mass of this disk
+it s rotating this angular velocity omega
+and i want to know what the angular momentum is of these rotating disk
+the direction of the angle mentally going to be trivial
+it it s a rotating like this if you take here a little mass element
+mass m of i this is the
+position vector r of i relative to that point c
+and here you have
+the velocity v of i
+and you see immediately that are crawls v is coming out of the blackboard so that s easy
+by momentum will be in this direction and what is the magnitudes of the disk as a whole well
+let s first calculate what the angular momentum is of this little mass elements about this point so l c
+for mass element by
+you call so let s just only worry about magnitude because already know the direction so that is them of i i
+and then the crust what it would be r of i envy of i
+but this angle is ninety degrees so i can forget about the
+sine of theta so i simply get r of i d of our
+car if i relative to that point c
+times v of i this is the magnitude
+no i hate to see if you ve i know rotating this because the velocity
+will depend or how far you are away from the center the velocity here is zero
+however they all have mean guy in common every single element that you choose it s the same omega
+so i m always going to replace in the case like this v by omega r and so this then becomes
+am a vine
+r of i will see i get a square here
+and i get omega
+so i wrote down v equals omega or which of course wholesome general
+it would have been better perhaps if i had written down you ve i
+equals omega
+times r of i
+because each element little i i
+which has a position vector r of i
+has a velocity which is given by p u of i you could make
+i ll find
+but i condense that s
+thing one equation vehicles omega are
+but this is the connection that ll make it perhaps easy for you to understand what follows
+for that is the angular momentum for this little mass elements
+but now i want to know what the entire again momentum is
+about that point season axes going through the center of mass of the center of the disk perpendicular to the blackboard
+and now of course i have to do the
+summation of all these elements i i can bring the omega outside
+and i would have then the summation of them of i
+r of i relative to that point c squared
+and you see immediately i hope for to see immediately
+that this is the moment of inertia for
+the spin around the center of mass for that point c
+and so i can write for this i will see
+times omega
+now comes the question to this is the magnitude now comes the question is this angular momentum
+different for instance for this point a
+and your first reaction will be yeah of course because it depends on the point you choose
+well the remarkable thing is that if you have a rotation
+about the center of mass which i have chosen here
+then even if you calculate the angular momentum relative to this point or any other point even this point in space
+you always find the same answer
+but only in case that there is a rotation about the center of mass
+and we call that this in angular momentum the spin angular momentum is an intrinsic property
+of an object regardless of which point you choose relative to which you calculate the angular momentum
+so in the case that
+but object is spinning about its center of mass
+you no longer have to specify the point that you have chosen your point of origin you can really talk now about the
+angular momenta
+the other is spinning about its center of mass
+so the left has an intrinsic
+spin angular momentum in addition
+it has the orbital angular momentum
+if you
+talk about the orbital angular momentum of the u s however
+you better do it relative to that point otherwise
+it would be changing in time it s only uniquely defined
+if you take this special point
+because only about that point which is the location of the sun
+if the angular momentum the orbital angular momentum
+of the earth not changing
+==========
+i m learning good their level experiment with you and that is called i skaters the light
+you will see that it is not a light at all
+but in any case it is definitely a pond experiments
+i have here turntable
+very little friction
+and i m going to rotate the turntable about the center
+and i m going to stand on that current able
+and i will hold in my hands
+to weights
+these two
+there it s about one point eight kilograms
+so these weights and
+one point eight kilograms
+my entire mass including the turntable my body but say is about seventy five kilograms
+and i m
+ask someone to give me a little twist to rotate the about
+this axis of symmetry
+rotate me say if you look from below let s say i wrote i mean rotate clockwise
+so we have here a situation of a rotation about the center of mass we can talk about
+dean intrinsic angular momentum of this rotating system and he
+angular momentum vector will obviously be pointing up words that s clear
+if you rotate clockwise from the low
+a member here you will rotate in counterclockwise is coming out of the blackboard here you rotate clockwise the the going up
+so far so good
+there s a force on the router brevity and g
+no concern there isn t the call the strong force normal force up in the two cancel each other around
+one i haven t been given a certain rotation is certain angular velocity
+pull my arms in and pull my arms out it ll them arms in
+and when i do that then does not because in net torque on the system
+i can keep doing that all the time and there s no network
+and so angular momentum
+as we have specified for spitting object must be
+surface cannot chains out equals i omega
+what does like all my arms in
+my moment of inertia will go die
+and of them i moment of inertia goes down that any of this product has to remain constant
+my angular velocity must go up
+and vice versa of the wide boom arms in i will go faster and when i do this i will go slower
+and i
+be a little bit called it a beef with you i
+simplify my own body
+y and you re metric object for which i can calculate the moment of inertia which is a cylinder
+i made of look like a cylinder but
+close enough all practical purposes
+and the seven there has a radius
+of about twenty centimeters not too bad even
+fits me
+and i m going to rotate this similar about this axis
+and i can calculate now what the mom and and attaches the circle has a mass seventy five kilograms
+has a radius of twenty centimeters
+and so the moment of inertia
+in a situation that for instance i have these two objects next to my body here
+why have them like here so this is my short and notation
+equals simple one half m r squared remember that was the
+moment of inertia we discussed that last time
+of the rotating disk which rotates about the
+line symmetry
+and so if i put in the numbers here
+the seventy five kilograms
+and i take a radius of twenty centimeters then i found that this is about one point five
+in our m k s units but now
+i m going to put my arms like this
+and now the moment of inertia will go up
+and i ll make a very crude calculation how much it goes up
+the my arm length is about ninety setting it is
+the weight hear our one point eight kilograms
+so i just assumed that
+i got my arms that the weights for simplicity that all the weight is in these two objects
+it s this and verification but you ll see a dramatic change and that s all wanted to see
+so now the moment of inertia
+when my arms i like this of course is my body which is the one point five
+that still there but now there s an additional components
+what i m from this mass
+which is m r squared
+and one for this mass which is m r squared with this is now that radius r
+and so i get twice that mass
+and then i have to take r squared
+which is oh point nine squared
+and i have to take the one point eight
+but that s the moment of inertia of this object
+about this point that is an r squared i assume that my arm is no man s and when you add this up
+you find four and half
+in m k s units kilograms meters squared
+and now you see if i go from this situation to this
+my moment of inertia goes down by a factor of three
+and by moment of inertia goes down by a factor of three i angular velocity must go up by fax referred and vice versa
+i
+do this experiment with this experiment is not without danger
+the problem is is experiment is that the moment that you pull your arms in
+you get immediate extremely busy i you can lose your balance
+and you can four flat out on the floor and i ve just talk this morning because some students here would be that in high school and
+he told me that in the one of the teachers went flat down and i d try not to do that today
+so i need really assistant from someone
+horrible i can trust you think i can trust you not you
+that s enormous answer your strong man you can that can i trust you
+the first thing i want you to do
+is to help me get on here because even getting on here is not easy if i just
+i ll probably fall
+okay so a stand there for your arm around my neck support this strongly now
+okay
+know ride their ego bust a ways it for awhile it s okay to stay there
+all right
+now you give me a reasonable
+angular velocity where everything gives reasonable i ll tell you of it completely unreasonable
+if we push
+that s fine allowed it is it s fine now you walk a little bit away if i fall try to catch me
+okay my arms go in now my arms go out
+my article in
+my arms go out
+okay now i m completely dizzy nowadays no joke to stop me not just hold it
+the this whole the whole me
+working in my hands okay okay you pass the course
+sacrificed for the sake of science or
+i
+alright i ve done worse
+==========
+we have a a collection of many points
+like we re only discussed with
+momentum
+or that interact with each other
+there could be stars
+gravitation interact with the object which i connected with springs
+they have internal interaction switch go all all the time they bounce of each other they collide
+they break up in pieces
+internal friction anything
+then if i take two of these objects if this one for instance is attracted
+towards this one then action equals minus reaction and these two force is identical in magnitude
+so if i take any point q here no matter where you choose it that will never put a torque on that system
+because the two force is cancel each other out
+and so now we get the final
+conservation of angular momentum it s all its glory if only we end here one
+little words external
+the angular momentum of the system this was angular momentum of just one object
+yeah yeah momentum of a system of many particles they could be connected with springs
+there could be chemical explosions going on they couldn t fall into each other they could way each other out
+the angular momentum will not change
+if there is no net external torque on that system
+because all the internal fox torques cancel out because action
+equals minus reaction
+so if we now compare conservation of angular momentum with conservation of momentum that in the case
+if the conservation of momentum remember
+when we had a system of objects
+in the absence of an external force on the system as a whole net external force momentum was concerned
+now we have with a system of particles in the absence or the net external torque
+and you momentum is conserved
+in a case off the ice skaters the lights when you pull your arms in
+the moment of inertia goes down and so your frequency goes up
+when a star streams
+this radius goes down
+if
+know in a shack goes down and therefore
+its angular velocity must go up
+moment of inertia goes with r squared
+what determines the size of a star
+if this is a star
+then inside the star is the furnace nuclear furnace new career fusion is going on
+that produce is heat and pressure
+which wants to expand the star
+on the other hand there is gravity which says sorry you can do that i want to
+hold you together in fact gravity would like to collapse the star
+and nature find a balance between the gravity and this pressure do too
+the nuclear furnace another comes a time
+that the nuclear furnace has been completely consumed
+force on that takes an additional five billion years the sun has already being burning
+nuclear fuel for five billion years has no finite billion to go
+and once the nuclear fuel has be consumed
+there are three and products off the
+gadgets bar that is left over
+and these three end products are the following number one
+it s called white dwarf
+it has a radius approximately the same as the earth sun and thousand kilometers
+and a mass of a white dwarf is a whole range of dumb quit a typical number say is half the mass of the sum
+but that s one possible and products
+this will be the fate of our son by the way
+the density of such an object is quite high some ten to the rope
+will be roughly ten to this six grams per cubic centimeter
+uh another possibility is that you end up with a neutron star
+a neutron star has a radius of about ten kilometers
+kilometers
+and it has a mass of roughly
+one point five times the mass of the sun and its density
+is about ten to the fourteen grams per cubic centimeter which even higher than the density of nuclei
+and and there is a possibility which is even more bizarre that you end up with a black hole
+i will not talk about black holes to david i would ve back to that later in eight oh one and a black hole
+for all practical purposes has no size it all
+the mass of the black hole must be larger than we think three solar masses and so the density
+is infinitely high
+whether you add up to be wide were for neutron star or black hole depend only
+mass all the to the of the pole jet after all the star that collapse when if you will in the new q two was got
+and in order to form a neutron star you would have to start off
+with a spiral of probably at least and solar mass is maybe even more so our sun will not become a neutron star
+but our sun will ultimately become a white dwarf
+now only reasonable question to ask why the land of only with these three possibilities why is there nothing in between
+looked it is which different from ten thousand kilometers
+to ten kilometer is done nothing in between
+and the answer to that lies in quantum mechanics which is not part of this course but you will see that in eight oh five white only these two
+and then if you get into general relativity then you ll understand why there is then this for it s
+very bizarre possibility
+when the star collapse is two things happen
+first of all there is a huge amount of gravitational potential energy that is released in the form of kinetic energy
+the stuff all then we call a gravitational collapse and that gravitational potential energy converts the kinetic energy and that ultimately
+converts to heat and to radiation if i take an object here a piece of shock
+and i draw that
+that you can call gravitational collapse
+gravitational potential energy is converted to kinetic energy and ultimately it goes to his
+here we talking about the star
+which is in coding collapsing and the amount off
+gravitational potential energy that become available are enormous
+in addition to this huge amount of energy released the star must pay now
+because its moment of inertia goes down
+and therefore the angular velocity must go up
+i want to do a little bit of quantitative work on this
+and i
+take an object like our sun
+and i would like to collapse that object
+from its present radius of the sun which is about seven hundred thousand kilometers
+i want to collapse that two neutron star
+was a radius of ten kilometers even though i know when i told you that the sun will not become a
+neutron star it just to get some feeling for the numbers
+so we take an object like the sun
+which has a radius of about
+seven hundred thousand kilometers
+and we re going to collapse that two neutron star which has a radius of about
+ten kilometers
+the mass of the sun is
+two times ten to the thirty kilograms
+and for those of you or good at math they can calculate
+when you collapsed this object without losing any match you keep all the mass what you sure a kid to ten kilometers
+how much gravitational potential energy is released
+and that is this bag or a number
+and i call that delta i you
+is a lots of gravitational potential energy which is about
+ten to the forty six in joules
+and this number is truly
+mind boggling
+this is converted to kinetic energy
+and then it is converted to heat and all forms of radiation
+to give you feeling for how it s certainly large this number is if you take the sun
+and you take all the energy that the sun produces in it s ten billion years that it will have
+the total energy output of the sun is hundred times less than this number and this comes out in in matter of seconds
+so it is mind boggling i d hear
+that the sun is producing and ten million years the lifetime of the sun is producing or less energy
+then what happens during a stellar collapse two neutron star
+hundred times less
+so indeed in follow occurs in this huge amount of energy is released
+the outer layer bounces off the end of core and is expelled
+and that s what we call a supernova explosion the outer layers are for off
+with speed typically some ten thousand kilometers
+per second our sun will not become a neutron star but it will become a white for
+we talk about the crab nebula next time last time in the crab nebula is a remnant of a supernova explosion which occurred
+believe it or not on the fourth of july
+in the year thousand fifty four talking about fireworks
+the supernova explosion
+was noticed by chinese and so by astronomers
+they called is a guest star
+chinese astronomers were very prestige is
+the reason for that was that these chinese astronomers and vice the emperor they re look at the sky
+and they to right
+from the sky information that was t for the emperor be you how to interpret the occurrence of comets
+or for instance shooting stars or a particular line of of planets and certainly the appearance of a guest star
+and a wooden know that for instance a comet in a certain part of the sky
+might mean that there would be hunger or that would be diseases that would be fat in
+or would be a good time for a battle of the bat time for battle and that s what s
+these people were doing it with slicing the emperor
+and therefore they were keeping a very close i on the sky no
+but in flight
+this star are
+was visible four weeks during the day when it exploded
+and it was the brightest star in the sky for
+here s to come
+it is a complete huh so
+white isn t a single reports by any european astronomer on your current of this supernova of thousand fifty four
+is very puzzling
+now you can argued that in the netherlands end it england always cloud it s always raining so you can see the sky okay i granted that
+but then we of italy and we have sprayed and we have france
+and it is very strange it must be a cultural think somehow in the eleventh century somehow
+you re up was not interested in looking at the sky this is something they could not have missed
+but they didn t write it down
+i now want to pursue the spin out of the star
+when it collapse is from seven hundred thousand kilometers to ten kilometers
+if we won t know what s off a little bit
+then the reduction in radius is about hundred thousand
+it really only seventy thousand the batches make that
+a hundred thousand dent to the fixed
+that means r square goes down
+by factor ten billion
+and if r square goes down by a factor of ten million
+than the moment of inertia goes down by a factor of ten billion
+and so omega must go up
+by a factor of ten billion if you re started off with the star
+that rotate it about its own axes in hundred days it ends up rotating around
+in one milliseconds when it has become a neutron star
+and if on stark ten kilometers
+that has about the same now has of the sun a little more and it s bins around
+in one milliseconds at the equator all of the neutron star you reach about twenty percent of the speed of light
+we know how and so neutron stars in the sky
+to ozone have in fact rotational period of one and have
+milliseconds many of them much slower and we discussed last time why that is because remember in the case of the crap pulsar
+the pulsar slowdown nature
+it s happening on the rotational kinetic energy of these pulsars and is converting it s into other forms of energy
+in the case of the crap pulsar radio emission optical emission gum race x rays and even
+jets the crap also was slowing down every day
+thirty six point four not a seconds
+whistle that was staggering power output i still remember the number i think six times ten to thirty one wants
+in seventy five years the pulsar slows down by one many seconds so this thirty
+three milliseconds would become thirty four milliseconds in seventy five years
+there s the star has a know original
+there s no start it was a disk right
+if the star has an original magnetic field which most stars do
+oh i lost my star but that s okay
+that and in the collapse the magnetic field will become stronger
+and this is something you will learn about an eight oh two why it becomes strongest so most of these neutron stars has strong magnetic fields
+and most rotate very fast
+and for reasons that we don t quite understand many of them blink at us they bring out us
+in radio emission real reason there too
+the initial radio mission like a lighthouse going out for me
+two magnetic poles of the neutron star and as a neutron star rotates you wonders of it sweeps over you
+you see radio emission radio mission you see nothing to radio emission use your radio emission so many pulsars
+or beam doesn t sleep over the earth we would never be able to see of course
+and in the case of the pulsar and the crap it s even more special because that pulsar
+also blinks at us in the optical in the x rays and in the gum rains
+and so now i would like to
+sure you
+some slides
+and discussing little bit more detail the supernova
+explosions and and the
+fabulous light output
+==========
+and the spin out of
+so i have to make it quite dark
+make it completely dark
+there we go
+and so the first slide
+is simply a artist conception though take this too seriously all of these
+beams of radio emission
+this is that a rotating neutron star
+and if the axis of rotation doesn t coincide with the magnetic dipole axis and if you have these
+radio beams which we do not understand how they are forms they you can see
+but they rotate how they can sweet oh from
+now you may say well that s a little bit artificial
+because why would the axis of rotation
+the different from the magnetic dipole axis well that is not an exceptional all in astronomy your worst itself
+as a magnetic dipole axis with does not coincide with the axis of rotation
+is that almost all the planets in our planetary system have a magnetic dipole axis with makes a large angle
+with the axis of rotation for that s the will in astronomy water then the exception
+even though it may not be easy to understand that
+and these blue line then represent the magnetic field lines we ll see more than that you like when you take
+eight oh two
+and here is jocelyn bell
+jocelyn bell was a graduate students under antony hewish e k which england and she discovered
+pulsars she found in the radio data which four okay
+using and new telescope that antony hewish had bills she found in there
+periodic signals
+ball sits if you want to call them
+you see some of them here at the bottom
+and there were one point three seconds apart
+actually reported that to anthony
+and antony said well that
+be nonsense of course mean there s not an object in the sky to is going to
+give as pulses with the separation of one point three seconds so they just assumed that it was caused by an elevator by be be
+milk and call machines or things of that nature motorcycles and so they d it every conceivable thing
+to check whether india to this was a man made phenomenal but
+they could not find anything and it was g oscillating
+through rain credible billions
+course able to convinced antony that in the base is an object
+that is in the sky and that the radiation doesn t come from the earth
+and when they realize that they realize that this would be the discovery off
+not only the sensory but of all of mankind because they set
+well who would possibly sends radio beans at us and model ate them
+with a period of one point three seconds only intelligent life can do that
+and so they call this first object little green man the just before they published
+they discovered is in nineteen sixty seven by the way they found a seconds
+pulsar which had a slightly different frequency
+then the one point three second period and so then they realize that
+it was probably not intelligent life
+but that it was an astronomical object
+so they gave that second object and a little green man true with a band that that idea very quickly
+now comes the sad part of the story
+in nineteen seventy four entity you which was awarded the nobel prize for this discovery and jocelyn
+well you are then deserved it or lost a discoverer was the person
+well true that this was astronomical it not share in the nobel prize it is of setting
+it is said i discussed it with jocelyn several times i know we re quite well
+and she takes it actually very likely to lightly i think
+oh still people feel unhappy about it and still after so many years the nobel prize was awarded in nineteen seventy four
+every time that i think about this magnificent discovery
+and i think about also in i think about these grows in just this
+here we see the crab nebula again we ve seen it before
+the rat elements that you see here are the result of matter that was blown off
+when the implosion occurred and when the outer layers bounce off the unit for
+and or easily it they had a speed of about ten thousand kilometers per second
+and by now it is about thousand years later these speeds have redo as being reduce somewhat
+it here at the center you see the
+pulsar and last time i sure you convincing evidence
+that this is the pulsar because it s breaking at us it has a diameter of about seven like years
+and the distance from us of about five thousand light years in terms of angular size in the sky
+it s about five arc minute in size which is about one six of the
+angular diameter of the moon
+this is a drawing cave drawing made by novel instance and some people have speculate it to what extent
+the novel indians may have seen the supernova in thousand fifty four it s on clear but it s a possibility
+the most certainly gets very close to the supernova but also get very close to venus and so
+this is something that is not well established but it is a possibility
+here you see a galaxy
+in which a supernova oh current
+and when a supernova occurs at its wide this
+it can the brighter that all hundred billion stars in the galaxy that s how much energy is released in optical light
+we see that it is at least as bright as the entire galaxy
+on this picture to this picture is about one year this occurred in nineteen seventy two
+and over the period of one here
+you can still see this star quite clearly but has an interesting strengths
+quite a bit
+and then a great thing happens
+in february nineteen eighty seven
+on the twenty third oh february
+the supernova went off in the large magellanic clouds which is a
+satellite galaxy to our own galaxy
+to distance of about a hundred fifty thousand light years
+and there was an astronomer
+was observing in south america has name is even shell and
+and he collected own to look at the stars and he decided that to take a p outside
+and as he was taking the the bees wasn t own words
+you looked at a large bag in the clouds and he said hey
+that is funny that star is not supposed to be there
+and he was a discoverer of what is now known as nineteen eighty seven a
+an enormous supernova going off so close to where we live
+and the next slide shows you just a portion of the large magnetic out and you can clearly see
+that there is a very bright star he could see this was a snake and i
+this is a picture
+made by the hubble space telescope
+off supernova nineteen eighty seven a
+the in a ring that you see
+is the result
+all of matter that was thrown off by
+this r before it went into supernova explosion some twenty five thousand years earlier
+it expelled gas it equator is is reading a circle know used
+it looks like about it because of the rejection of fact
+and this real of matter moved out with a speed of about eight kilometers per second
+and this has a radius of about eight like months
+and so eight months after the supernova explosion
+the ultra violet light in the x rays from the supernova called up with this ring of matter
+and they excited it s and it became visible before a supernova explosion is wearing walls knots
+visible we expecting in a few years that the matter itself
+that was thrown off with a much more mellow speed of about ten thousand kilometers per second
+that that matter will also plow into this ring and then we expect some we ll
+fireworks again
+there s no explanation that people agree upon
+for these to call our glass rings they re quite mysterious
+and there have papers rent them and it s and people disagree on their origin
+super now the explosions in our galaxy and in the
+large my
+clouds are quite aware
+we expect no more than about one
+ins hundred years
+the previous one that could be seen with make and i i
+whereas in the year six you know for school camper supernova
+in nineteen eighty seven a was really do first that could be studied with modern equipment radio
+observatory x ray observatory is in orbit around the earth
+with some like you may see a supernova explosion naked eye in your life the chances no better than ten percent
+so maybe it will help it occasionally you take a p outside
+and you become is famous as even showed and it s who is now very famous man
+see you monday
+==========

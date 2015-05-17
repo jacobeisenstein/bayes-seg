@@ -1,0 +1,639 @@
+==========
+So we were trying to decide whether it would be worth our while to pay nine dollars to have our potential new, used car inspected. 
+That's what we're up to. 
+So what we did last time was, I left you with the problem of calculating these probabilities as in Bayes' rule. 
+And so now we're ready to make the decision to do that. 
+OK. 
+So the idea is that, sort of the order of events is -- What we have to do right now is decide whether or not to have the car tested. 
+If we do have the car tested, then, in some sense, the next thing that will happen is that Nature will decide whether the mechanic says the car passes or fails the test. 
+Then based on that, we'll decide whether or not to buy the car and then, in some sense, then we'll take the car to really be repaired. 
+And then it will be revealed to us whether, in fact, it was a peach or a lemon and we'll see how much it's going to cost and whether we're going to make money. 
+So we'll make a tree that has that structure. 
+So we start out, we have three options: One is to test, one is to just buy the car directly, and one is to not buy. 
+We already know that not buying the car has value 0 and that just buying the car directly without testing has value (inaudible) [fadeout]. 
+We computed that (inaudible). 
+So now, we say, if we test the car, what's the next event that happens in that chain of events that I just talked about? 
+We decided to test the car, we take it to the mechanic, and the mechanic says -- __: A random event. 
+A random event. 
+Pass or fail? 
+So either pass or -- [writing on board] If it passes, we get to make a choice of whether to buy or not and if it fails, we get to make a choice of whether to buy or not. 
+OK. 
+And if we buy it, then it's going to either turn out to be 11 (inaudible) [pause] [writing on board]. 
+What do you think of the structure of the problem? 
+Now that we can put utilities on the (inaudible). 
+So, remember, the test costs $9.00. 
+[writing on board] So, if we do the test and we buy the car and it turns out to be a lemon, well, we actually, we figured out that if you had a lemon that was going to cost a hundred dollars, but now, this is a lemon plus we paid $9.00 to do the testing. 
+So that if we end up on this branch of the tree, it's going to be minus a hundred and nine. 
+OK (inaudible)? 
+And a peach was going to be plus 40, right? 
+So now it's going to -- No, plus 60, so this'll be 51. 
+[writing on board] OK? 
+What's the utility created by this branch? 
+Minus nine. 
+We had the car tested. 
+It happened to pass but, for whatever reason, we decided not to buy it. 
+So, anyway, we're out nine dollars. 
+OK. 
+Let's say, it fails. 
+Well, it doesn't matter. 
+I mean, the cost is still the same. 
+So if we buy the lemon and we paid for the test, then this is still minus $109 and this is 51, and this is still minus nine. 
+Now we need to add one more set of numbers for this graph before we can evaluate it and decide what to do. 
+__: What are those numbers? 
+Probabilities. 
+We need probabilities. 
+So let's start with the probabilities here. 
+So, here we are, asking what's the probability that the car passes the test? 
+Point eight, probability. 
+Probability of a fail, point two. 
+OK. 
+Now, we're considering the case when the car has passed the test, and then we want to know what's the probability that it's a lemon. 
+So the probability that goes on this arc is going to be the probability that it's a lemon, given that it passed the test. 
+So what's that? 
+Point one. 
+Point one, point nine. 
+OK. 
+And what's the probability it's a lemon, given that it fails, point 6, point 4. OK. 
+And so, I did these numbers for you, and so I will spare you the arithmetic. 
+This turns out to be 35. 
+OK. 
+So if the car passes the test, should we buy it? 
+Yes. 
+So we buy the car if it passes the test. 
+So this number (?) is worth 35. 
+That one is minus 45. 
+If it fails the test, should we buy it? 
+Better to just go with our loss there. 
+So that's (inaudible). 
+So now we know that if it passes the test, our expected return is $35. 
+And if it fails the test, our expected return is minus nine. 
+Now we take that expectation because we're not sure in advance whether or not it's going to pass or fail the test. 
+We get 56.2. 
+[writing on board] So what should we do? 
+Just buy the car. 
+Shut up and buy the car. 
+Yes? 
+__: (inaudible) unconditional since the square box is very important (inaudible). 
+No, you wonder why is it the probability that I'm putting here, is the probability of a lemon, given pass (?) 
+__: I'm confirming (inaudible) because of the square box (inaudible). 
+It's not really that it's the square box. 
+It's the sequentiality. 
+So you could say, "Here, I'm considering, right, nature got to pick whether we pass or fail the test." 
+And now on this branch, we're only considering cases where nature has already picked pass. 
+So that nature gets another pick but only subject to the fact that it already picked that we passed the test. 
+So I could have made a tree that said -- I could make a tree that says this. 
+Supposedly it passed, [writing on board], and then peach. 
+I could make a tree like that. 
+We don't strictly have to alternate down the box, but the point is that once we go here, we are already limiting the case of other considerations the (inaudible) passes. 
+All right. 
+So we should just buy the car. 
+So one thing that's interesting about this example is, I mean, this is a case where if we did the test we would do a different action depending on the results of the test, and, in this case, we would not buy the car. 
+Some cars, you do a decision analysis and you come up with the fact that no matter which answer you get on the test, you would do the same thing. 
+That's a clear sign that you should not do the test. 
+(inaudible) to your right, right? 
+At least, on a kind of very (inaudible) level, there's no point in gathering information that won't change your decision. 
+It makes you happier, more comfortable in greater (inaudible) but fundamentally, if you're not going to act differently based on the information, then you shouldn't pay anything for it. 
+All right. 
+I haven't decided whether to give this as an exercise. 
+Yes, I think I'll give this to you as an exercise. 
+Maybe, we'll actually talk about it next time. 
+I'll give you a little handout at the outset. 
+So here's a question for you all. 
+So we talked about the guarantee last time. 
+And then we talked about an inspection. 
+We decided that there was no reason to buy the guarantee last time, and we also decided that -- Was that right? 
+I think so. 
+And we also just decided that there's no reason to buy the inspection. 
+I will give you a hint and say, though, that the combination is actually worth doing, in some sense. 
+So think about how a guarantee and the inspection would interact and if you could make a decision tree that shows that it's worth actually doing both. 
+OK? 
+So please do this problem for next time. 
+All right. 
+So what I'm going to do for the rest of today and (inaudible) part of next time is talk about sequential decision-making when you have -- So planning, when you're not sure about what the effects of your actions are going to be. 
+And we'll actually talk about it in a fairly restricted case because the general case is really, really hard, but there are certain cases that are still kind of interesting. 
+So the idea, so we're going to look at a model of planning, so "Markov Decision Process." 
+==========
+And "Markov decision process" thinks of the world as being made up of some set of states, right? 
+So this is the view that's kind of like the problem-solving view that we had at the very beginning. 
+We're not going to have big variables or problem (inaudible) or anything like that that describe the state. 
+We're just going to have some set of states (inaudible), for now. 
+And we're going to have some finite set of actions and we're going to have a probability distribution that describes the effects of our actions. 
+Before, an action was just state to another state, but now we're not sure what the effects of our actions are going to be. 
+So, now, an action is going to map a state into a probability distribution over next states. 
+So we're going to write that there's some probability of some new state, S', all right, S at p + 1, given the (inaudible) times p and the action (inaudible). 
+Those are called "transition probabilities." 
+[writing on board]. 
+OK. 
+So this is our model of how the world works (inaudible) how the world works, and then we're going to have a model of what we're trying to do (inaudible) and we can make that a bit more general than we did in the planning case -- in the sort of determinative planning case -- and we're going to have the general function called "a reward function." 
+We can do it on states. 
+Let's just do it on states and that's a (inaudible) value [writing on board]. 
+OK. 
+So the idea here is that every state has some immediate value for being in it. 
+Some are good; some are bad and so on. 
+And what we're going to do is think about a way, try to come up with a way of behaving, so that we get as much reward as possible over some kind of measure of the long- term future. 
+That's going to be the plan, the idea. 
+Now, let's talk about the reward function, just for a minute. 
+There are different -- So a reward function might be, you know, I mean, I use models like this for talking about, say, a little bug going down the hallway to somebody's room, right? 
+So you might give it a big reward for getting to the state that you're trying to get to and, maybe, negatives for running into the walls as it goes along and zero as it goes down the middle of the hallway. 
+Or you might make a model of foraging or something where it gets rewarded for getting food and gets a big punishment for being eaten by the bad guy. 
+So, for various kinds of problems, you can cook up a reward function that tells you, for each state, how much immediate value it has for the [fadeout]. 
+OK. 
+So, then, what we're going to try to do, what we want to do, is find the policy. 
+[writing on board] OK. 
+So the idea is in this primitivistic (?) 
+planning, we wanted to find a plan, that is, a sequence of actions that we could execute starting in the initial states that would take us to the goal state. 
+And it was fine to just have a sequence because you knew that, you know, that if you were in the state, you took this action, you were sure to end up in some particular next state. 
+But now that there's substantial uncertainty about what's going to happen to us in the world, we choose an action, we don't know where we're going to end up and so we need to be prepared for all the things that could happen to us. 
+Well, so, in MDPs (sp?) 
+we take a very, very serious kind of view of being prepared and what we're going to do is actually come up with a policy which is a mapping [writing on board] from state to action. 
+So instead of saying, "I'm going to do this, followed by this, followed by this," you say, "No matter what state I find myself in, I'm going to know what to do." 
+You come up with an action to take in every possible situation. 
+There are some kinds of domains in which it's reasonable to take such a kind of nervous view, right?, to say, "Oh, gosh, anything could happen. 
+Let me be prepared." 
+In other kinds of domains, this is kind of a crazy thing to do. 
+But it's useful to think about what it would be like to do that. 
+OK. 
+So we're going to come up with a potential action to take in every possible situation. 
+So, why, why is it OK for a policy to have this form? 
+Or why do we want a policy to have this form? 
+Let's look, for a minute, at the forms (?) of probability, of the state- transition probability. 
+The way I've written them here, I say that the probability of a new state depends on the previous state and the action. 
+In fact, this probability is going to be equal to the probability of being in state t + 1, conditioned on all the states that ever happened. 
+[writing on board] Let me write, S0 through SC and all the actions that ever happened. 
+And this fact is known a the "Markov property." 
+All right. 
+What does this mean? 
+It means that what's going to happen to you as a result of being in this state and taking the action that you take is completely summarized in the state, that if you were to look back at your history, that's not going to have any effect on the transition probabilities that's governing now. 
+So that all that matters is the state that you're in and the action that you pick to govern the next state. 
+So that means that it's sufficient to base your choice of an action on the state that you're in right now, that if you were to base your choice of action on the whole history of previous states, it wouldn't help you, it wouldn't give you any information, more information, you couldn't do any of that. 
+So we're just going, we're going to think about trying to find a policy that maps the kind of thing (inaudible). 
+So now what's going to be our criterion? 
+What's going to make one policy better than another? 
+We need to have some measure of the goodness of a model, where we're trying to find the best policy. 
+Well, what criterion is -- But we could be very shortsighted, right? 
+We could try to find the policy to maximize [writing on board] the expected value of the reward at time t. 
+We could just say, "I don't care about the future." 
+You probably know people who operate like this. 
+"I don't care about the future. 
+I'm going to do right now whatever is going to be the most fun." 
+(inaudible) That's risky. 
+So I would be saying, "I (inaudible) actions that just match my (inaudible) reward, the reward I get tomorrow. 
+That's it." 
+All right, well, maybe you want to be a little bit more focused on the future than that, in which case you could say, "Well, I'm going to actually look out for some finite horizons." 
+[writing on board] as though you had any control theories. 
+Sometimes, people talk about finite horizon control. 
+(inaudible) aversion of control theories. 
+So in the finite-horizon case, then, maybe (inaudible) the expected value of the sum of rewards that you get from [writing on board] looking out ahead (inaudible) case steps; that was a policy that you're implicating (?). 
+So you might say, "I can have a 10-step horizon. 
+I'm going to try to act in such a way as to maximize the rewards, if I get it, over the first ten seconds. 
+Now one thing that's interesting about the finite-horizon view is that, it means that you behave differently potentially on every temporal step, that is to say, that the policy, in the case of the finite- horizon criterion, you need another stationary policy. 
+[writing on board] That is to say, it depends on (inaudible). 
+So to get a feeling for this, consider the way you behave now versus the way you'd behave if you knew you were going to die next week. 
+So if you only have one-step less to go, you're going to be more short-term oriented, right? 
+No sense planting trees. 
+On the other hand, if you have a very long-term view, then you might take some actions that are not going to pay off for a while. 
+So that means that if you have a concrete horizon and you can see it coming, your policy is going to change as you get closer to the (inaudible). 
+So, you know, maybe, that's appropriate under certain kinds of decision problems, that's the right criterion to have. 
+In other kinds, it's not particularly, and it's hard to choose what the appropriate case would be. 
+So in some cases, it's hard to pick the K and it's kind of a pain because you don't need to find just one policy; you need to find one policy for every possible number of steps that you have remaining. 
+And so that's an [fadeout]. 
+So, another thing that people do, instead of the finite horizon, is (inaudible) horizons, and this is the case that we're going to actually concentrate on. 
+[writing on board] We're going to try to optimize something that looks like this: The expected value of the sum. 
+When t goes from zero to infinity, the reward is time t, given [fadeout]. 
+OK. 
+If I were to just leave it like this and say, "I want to, I don't (inaudible) to die, I want to (inaudible) my reward over the infinite future," well, that wouldn't be really very well-defined because the r's are all kind of positive, and it's a big issue. 
+And when you add them all together, then, you're going to have an infinite reward over an infinite life time and it'll be really hard to compare -- Well, and, besides that, you're probably not going to -- So, we typically add [writing on board] this gamma -- this is called the discount factor -- and it's usually strictly between zero and 1. 
+It's strictly. 
+Actually, if it's zero, the (inaudible) nearer, you get the myopic case. 
+So, incredibly, what's going on? 
+So, in this sense, I'm going to consider the rewards out into the infinite future. 
+Think of gamma as being .9. 
+It's a .9-ish 
+kind of value. 
+So I'm going to think about my rewards out into the infinite future, but I'm going to take (inaudible) rewards completely at face value. 
+Whatever reward I get at the next stage will be worth somewhat less to me because it's in the future, and what I get the day after that will be worth even less to me and so on. 
+And so the things that happen way out in the distant future will have a pretty steeply decreasing effect on my decisions that I make now. 
+As gamma goes closer to 1, your effective horizon -- the distance that you're looking out -- gets longer and longer. 
+As gamma gets closer to 0, you're more and more short-term oriented. 
+There's a couple of other ways to think about gamma. 
+I mean, the (inaudible) effect has come up in finance and it's a way to think about interest rates or due-capping (sp?), right? 
+A dollar in your hand today is really worth more to you than a dollar in your hand ten years from now. 
+And this is the way to model that. 
+Another way to model it is that, sure enough, you're going to die some day but you don't know what day that is and the model of when you die is that somebody is rolling dice every day. 
+They're hoping to (inaudible). 
+(inaudible) And with probability, one minus gamma, you lose, on any given day. 
+But if not, then you live to flip again, so to speak. 
+And so, this is a model of how much reward you're going to expect. 
+And independent of that, there (inaudible) single data to decide what you're going to receive (inaudible). 
+So this turns out to be a pretty useful model and also it makes various pieces of the (inaudible) beautifully and so we (inaudible). 
+OK. 
+The other important thing about this infinite-horizon discounted model is that the (inaudible) old policies, the best way of behaving -- [writing on board] Despite the name (?), it's not obvious. 
+It's something that you have to work through but the (inaudible) policy is stationary. 
+In some sense, once you've lived another day, your expected life line is as long today as it was yesterday. 
+And so the way you behave every day is the same because once you've made it another day, then you have the same kind of claim for the future [fadeout]. 
+So you never have this counting down department either. 
+(inaudible). 
+So (inaudible) amplify the one policy, one (inaudible), (inaudible) actions, we're going to try to find one that's going to map my (inaudible). 
+I think I'm going to make a small digression and talk about Markov (inaudible) because I think it's going to make us understand (inaudible). 
+I wound up taking the thing that's simpler than a Markov decision process, but if we can understand the problems using the Markov chain, then we'll know how to solve Markov decision processing (inaudible). 
+==========
+Let me talk about a Markov chain just for a minute. 
+[writing on board] (inaudible) as an amplitude. 
+The Markov chain has -- it just has states -- is on that axis. 
+And the states' transition probabilities [writing on board] and rewards. 
+So here's an example -- at least in our case it has rewards -- here's an example of a Markov chain. 
+It's got three things: Date line, State 2 and State 3. 
+And the reward for State 1 is zero. 
+The reward for State 2 is +10 and the reward for State 3 (inaudible) broken down, in my example. 
+Then you have these transition probabilities, so that we'll say the probability that we go from State 1 to State 2 is .5 and from State 1 to State 1 is .5. 
+The probability that we go from 2 to 2, 1. 
+And here it's .7. 
+And this one goes to (inaudible) probability .1 and goes back here (inaudible). 
+So that's an example of a Markov. 
+(inaudible) set of states, each state has a probability that's reasoned over which state it's going to go to next, including back(inaudible), and each state has some reward associated with it. 
+So now we can, for instance, ask the question: So imagine that this was a description of how the world works and that you don't have any access to (inaudible). 
+You're just who you are. 
+The world's going to evolve in some way. 
+And you might ask the question: What's the value of being in State 1? 
+(inaudible) value we're going to mean the infinite horizon discounted expected value of being in State 1. 
+So let's talk about that. 
+So what's the value of being in the state? 
+The value of being in some state -- [writing on board]. 
+So how good is it to be in a particular State S? Well, I get some particular immediate reward for being in State S, who is at least that good, but then I'm also going to get some value from the future because we're summing out into the infinite future. 
+So I get rewarded in the future, but the reward in the future is not worth as much to me as the rewards that I just got, right? 
+So it's discounted (inaudible). 
+Then, I'm not exactly sure what's going to happen to me in the future. 
+I know that I'm going to end up at some state, but I don't know which one, but I do know a probability distribution over the next state. 
+So I can sum over next state, and I can say, "What's the probability that I end up in this state, given that I was in this other state?" 
+And, then, there's going to be some value associated with being in that state. 
+Does this equation make sense? 
+We're going to do a bunch of other equations that look sort of like that, so this one's sort of important. 
+I'm tempted to make you all stand up and do five jumping jacks. 
+This is a droopy looking class today. 
+I know why, but ... 
+__: Why do you want to consider the (inaudible)? 
+Why do you want to consider the next stage? 
+Right. 
+Because you're saying we have to (inaudible) consider the infinite future. 
+Well, so here's a thing that we could do that would be wrong. 
+What if we put R here instead of S'? 
+If we put R -- R instead of V -- if we put R of S' here, then this would be exactly the expected rewards for two steps. 
+But this V has in it the whole future, so we get this recursive view. 
+Right. 
+That's a good question. 
+So does everybody -- I'll do an example for this problem. 
+And the other thing to see is that we're operating under the assumption that we know the rewards and we know the transition probabilities, and we're interested in finding the values, and so this gives us a system of equations, one for each state, and a set of unknowns as the value for each state, and they're linear equations and so we can solve them. 
+So if somebody gives you a Markov chain -- if they tell you the rewards and the transition probabilities, it's not too hard to solve states of these values. 
+So, in our case, we would get a set of equations that look like this: [writes on board] the value of State 1 is 0 plus, say, .9, 
+let that be the gamma, times .5 of the value of 1 plus .5 of the value of 2. And we get another one that says ... 
+[writes on board] the value of being in State 2 -- well, that's a good one; you get 10 right off the bat, plus .9 times .1 of the value of being in 1 -- uh, excuse me -- .2 of the value of being in 1, plus .1 of the value of being in 2, plus .7 of the value of being in 3. 
+And you get another equation for the value of being in (inaudible). 
+And so all I'm doing is instantiating this equation for each of the states (inaudible). 
+And then you could solve these equations, and if you solve these equations you get the value of State 1 ... 
+[writes on board] is 40.5, 
+and the value of State 2 is 49.5, 
+approximately, and the value of this state is 49.1, 
+approximately. 
+And then after you look at it for a while that seems sort of right. 
+Like, you know, it's worth about 10 more to be in 2 than in 1 because if you're in 2, you get that nice, big, tasty plus 10 right away. 
+Whatever happens, if you're in 1 you know that you're going to get there in not too long, so it's not so bad. 
+You know, so these numbers are the solutions to these equations. 
+As you turn gamma down, these values will get smaller and smaller. 
+If you make gamma 0, then the value of this is 0, that's 10, and that is 0. 
+As you make gamma get closer and closer to 1, the values of these states get closer and closer to each other and bigger and bigger. 
+OK. 
+So, if you have a Markov decision process -- here's a little fact -- if you have an MDP, ... 
+[writes on board] one of those things with actions that says how the transitions depend on the action, and a policy, something that says for every state what action you're supposed to take -- if you couple those together, the world, so this is the way the world works, and think of this as the way the agent works -- then you get a Markov chain, which just describes the evolution of the whole system. 
+Yep? 
+__: I almost have to (inaudible) this (inaudible) to be different or difference equations because at one step you needed -- to make your next move you needed to know all the -- no, (inaudible). 
+The thing is, (inaudible), you only need to know the previous state. 
+That's what makes it Markov. 
+I mean, there are versions of this sort of theory that apply in continuous space and time, with kind of differential equations, and it gets really hairy really fast. 
+So we're working in a kind of very discretized version of that, but it's very popularly used. 
+You've seen it in some other contexts, a much more continuous version of this. 
+Any other questions about what we're up to? 
+So, the next thing we're going to try to do is figure out. 
+So we think -- if you have a Markov decision process and a policy, it gives you a Markov chain. 
+And what we're going to try to do now is find -- and if we have a Markov chain we understand how to compute a value function on the states. 
+We understand how to induce this, a long-term value on the states. 
+==========
+What we're going to try to do is figure out a way, given the description of the world, to find the policy that gives us the best possible reward in the world. 
+So now we're going to try to do the planning. 
+So this is essentially the planning process: given a description of the world, find the best possible behavior for the agent that you can. 
+OK. 
+Oh, I find it very dispiriting. 
+All right, stand up. 
+Everybody stand up. 
+Just stand up. 
+Do jumping jacks or run around a little. 
+You know, I had a friend who went for a job interview at the Coast Guard Academy. 
+Right? 
+It was a job interview to be a professor at the Coast Guard Academy. 
+And they told her, first of all, that if anybody was late they had to ask for permission to come aboard -- the classroom -- and, furthermore, that if they fell asleep they were like in really big trouble and to not be distracted if they would just get up and stand -- because standing was preferable to falling asleep. 
+So, I don't actually -- __: (inaudible) You learned how to fall asleep in class? 
+__: (inaudible) We had to stand and salute (inaudible). 
+Really? 
+Yes, I actually had someone who (inaudible) -- who was snoring really loudly. 
+OK. 
+Move around just a little more. 
+[More chat, omitted.] 
+OK. 
+So, here we are. 
+We have a description of how the world works, we want to try to find the best policy we can, and our understanding of what it is to be the best policy is that it's something that gives high values to states, that gets us as much reward as we can at every state. 
+So I'm going to write a version of this equation for finding the best policy, and it's going to look like this. 
+I'm just going to write it out and then we'll talk about it. 
+So, V* of S -- * here, we put * by things that are optimal. 
+So the best possible value for S, the way to get the most reward that you can is beta(?). 
+How do you get the most reward you can with beta? 
+Well, you get whatever immediate -- you get the most long-term reward in State S by getting whatever reward you get in State S ... 
+[writes] plus picking the best action. 
+So you're going to pick the best action that you can -- and by picking the best action what we mean is picking the action that's going to pay off the most in the future. 
+So we say, all right, if I were to pick Action A, what would the future be like? 
+Well, there's R gamma -- I could have put the gamma out there, (inaudible) -- and then I think about what the next state's going to be like ... 
+[writes] ... 
+but now we condition the next state on the state that we started in and the action that we took -- right? 
+-- because we say now if we're in the Markov decision process world the idea is that we have the latitude to pick actions however we want to. 
+So having picked an action, the next state's going to depend on the action. 
+And then how good is it to be in State S'? 
+Well, it's going to be the best we can make it, and the best we can make it is by recursive definition of V* plus that(?). 
+So this equation is pretty much analogous to this one except that now we get to influence the evolution of the state and we're going to try to pick the actions in the way that we can pick them so that we maximize these values(?). 
+So this is cool, and it's a system of equations and unknowns, and so that seems good, too, except that it has that unfortunate (inaudible) in it, which makes it not linear and not directly solvable by any way that we really know, direct. 
+But there's an important theorem about that, and then we're going to figure out a way to solve it. 
+There's a good way to solve it anyway. 
+So, here's an important theorem ... 
+[writes] ... 
+there is a unique V* satisfying the equation. 
+So that means if you know the transition probabilities and you know the rewards -- that is to say, if you know the definition of a Markov decision process, then there is a unique value function that satisfies the equation. 
+So that's good. 
+It means there's a well defined answer and there's only one, so that gives us comfort in trying to find it. 
+And furthermore it's useful to know the value function. 
+So, now, if we knew the value function what would we do with it? 
+Our goal here was to try to find a policy for the agent. 
+So let's say you knew a value function on state. 
+Can you see -- can you think about -- how you would use that in order to behave? 
+Sort of intuitively, what if you knew a long-term utility for every state in the world? 
+(pause) Well, how would you pick actions if you just knew the reward function and you were a short-term kind of person and you just wanted to get the most reward you could tomorrow? 
+You'd just pick ahead one and you'd pick the action that took you to the best reward state. 
+Well, the same thing is going to be true here for values that if your goal is to optimize this infinite horizon, this (inaudible) reward, then what you want to do is take the action that takes you to the state with the highest value. 
+So the optimal policy, the highest R, the best way of behaving in State S, is to choose the action -- so there's this weird way of writing this; this means that the action that maximizes some expression -- and the expression is going to be exactly ... 
+[writes] ... 
+that(?). 
+You would say I'm going to pick the action that maximizes my value of the next state. 
+Of course, you don't know exactly what your next state is going to be, but you can compute the expected value of the next state given that you take that action. 
+So this is cool. 
+It says: given P and R, there's a unique V* function -- we still don't know how to find it, but there is one -- and if we do it we could compute the optimal policy. 
+We would know the best action to take in every possible state in order to get us the most reward in the infinite [fadeout]. 
+OK. 
+There actually may be more than one highest R, but it doesn't really matter. 
+That is, it might be that there are some states in which two or three actions are all as good as each other. 
+That's fine. 
+So there's a unique value function. 
+There isn't necessarily a unique R. All right. 
+==========
+So, now, the question for us is going to be how do we compute V*? 
+So, [writes] ... 
+computing V*, there's three ways to do it. 
+There's value iteration, [writes] ... 
+there's policy iteration, ... 
+[writes] and there's linear programming. 
+What's interesting is that linear programming is the only one of these methods that's known to run in polynomial time, and yet it is also known empirically to be slower than the other two pretty much always. 
+Now, obviously not always, always; but in effect it is never worth doing, even though I guess there's, you know, you can drag out some worst case where it's really better. 
+It just never happens. 
+So there's your asymptotic(?) analysis for you. 
+OK. 
+So, these two are pretty much always more efficient, and this one is easiest to implement, to talk about, so we'll talk about that one. 
+And we may -- So, these two are pretty much always more efficient, and this one is easiest to implement, to talk about, so we'll talk about that one, and we may talk about policy iteration depending on how we go for time. 
+And it turns out that the value iteration is going to have a connection to some learning stuff that we talk about in just about the next to the last lecture. 
+Here I am going to be (inaudible) by that clock again. 
+OK, so let's talk about value iteration. 
+So value iteration has a cool algorithm. 
+It goes like this. 
+You start out [writes] ... 
+initialized ... 
+initialized. 
+So the V's are having a crisis of what continent to live on. 
+OK. 
+Initialized V of S. [writes] ... 
+In fact, it could be anything you want, but 0 is convenient. 
+[writes] ... 
+That's it. 
+I'll let you finish writing --. 
+__: Is there one (inaudible)? 
+There is one -- oh, you mean what if there's a (inaudible)? 
+__: (inaudible) Well, so this algorithm has all sorts of related, very nice properties. 
+So we'll start talking about it, and we'll just be sure we understand the algorithm and then I'll talk about the properties. 
+OK. 
+So, if you look at it, so you write an iterative algorithm, and really all it is -- and I could have just put a colon there, right? 
+-- all we did was take this definition, this kind of recursive definition that's sometimes called a fixed-point equation. 
+And V* is a fixed point of this equation. 
+If you get the right V* then it sort of balances out both sides of the equation, and it turns out that by iterating this assignment statement you're going to get closer and closer to that fixed point. 
+So this is just the definition iterated. 
+You can initialize the values to be anything you want to. 
+It doesn't matter. 
+This thing is guaranteed to converge to V*. 
+So, here's some important properties ... 
+[writes]. 
+There's one thing. 
+Here's another thing. 
+OK. 
+So, one thing that's interesting and those of you who've implemented (inaudible) feel a little bit nervous, normally, if you're doing something like this, usually, you have (inaudible) sort of two copies of V or something. 
+You have the old one, right, this is V sub-old (inaudible) [writing on board] and this is V sub-new and then somewhere up here you say, "V old gets V new," right? 
+You go around again, so that you have one version of it and then you use that to compute the new version and then you use that to compute the (inaudible). 
+But it turns out that this algorithm is really forgiving in a bunch of ways: One is that you don't have to do that and, in fact, it almost always works better if you don't because, incredibly, the fresher your Vs, the more accurate they are, the closer they are to the right answer. 
+And so if you just use one array full of Vs, then you're using the most recent values of the Vs that you can and so it works better. 
+But it's cooler than that. 
+You can actually run it asynchronously, meaning, you don't have to do this loop actually in any kind of an orderly way. 
+you could do it in any order you want to, and, furthermore, you can do updates at random. 
+You can pick a state at random and do an update to it. 
+So pick another state at random and do an update and pick another state at random and do an update to that. 
+And as long as your way of choosing states doesn't starve anybody, so that every state gets updated fairly often -- there are technical ways of saying "fairly often" -- within the single (inaudible). 
+And so that's a really nice and important property, and we're going to make use of that, again, later on, when we talk about some learning (inaudible). 
+So that's great. 
+It's very forgiving. 
+So let's talk about what (inaudible) will allow me. 
+Well, let's say that you wanted your value function to be within epsilon of the true value function, right? 
+So you might have a convergence criterion that says -- So I'll write it this way and then I'll explain it. 
+The value function times t be less than [writes on board]. 
+And what do I mean by saying one value function, the difference between one value function and another value function? 
+We're using the max norm here, so this means that the maximum value over all the states or the absolute difference between BG (sp?) and prime S, and (inaudible) R. I'm sorry (inaudible). 
+So let's say you had a bad requirement, that is to say, that for every state, the difference between the value function that you've computed and the real, honest-to-goodness optimal value function is what's in epsilon. 
+That just means "everywhere." 
+If that were your criterion, there's a test here that you can apply, and the test is that you have to do it until the difference between the value function at one-time set and the next-time set is less than epsilon times 1- (inaudible). 
+It doesn't really matter to you what that is but what it tells you is there's an effective test, right? 
+You can, if you know how close you want to be, you can stop your iteration whenever you get back (inaudible). 
+__: Less than one? 
+Oh, yes, excuse me. 
+Right. 
+And it turns out the way this works is what you might expect. 
+The longer, the closer gamma is to 1, the longer this algorithm's going to run. 
+So it takes time (inaudible) it's about polynomial in whatever 1 - gamma is, and if you think about it, the closer gamma gets to 1, the longer your horizon is. 
+So it makes sense that the farther you're looking out into the world -- if I were looking out in the future, the harder it is to plan because you have to take all these things in the future into account. 
+So, OK. 
+So let me talk about sort of how this gets used and what am I to get for it. 
+OK. 
+==========
+So the things that this sort of method gets applied to -- So there's a big weakness in this model of planning, and it was the thing that moved us. 
+So naturally there are (inaudible). 
+Well, I'll talk about it more in a bit. 
+One big weakness is that we have atomic states [writes on board]. 
+The thing that moved us from sort of thinking about deterministic problem-solving where we thought of state as atoms is the planning where we really thought about having a propositional characterization of the states was that it's really limiting to have to enumerate the states of your world. 
+And, here, not only do we have to enumerate the states of the world, we have to actually talk about the probability transition, right, the transition probabilities, which is a matrix really of index (inaudible) the states in each direction. 
+So that can get to be pretty good. 
+Now, using something like value iteration, if you're transition matrix isn't, if it's pretty sparse, which it usually is, you might be able to solve problems with, say, 100,000 states, or something, but 100,000 states isn't really all that (inaudible) states. 
+So there's some kinds of things that might be interestingly modelled like that. 
+But the sorts of things that people would like to model in Bi's decision processes like, oh, people have used it for kind of cell phones, channel allocations, start-ups and solving (inaudible) and a bunch of other things like that. 
+The state spaces are always really big and you can't handle them with atomic states. 
+So we can talk a little bit about how you might deal with that, deal with the problem of non- atomic states. 
+The other problem is that it assumes complete observability. 
+[writes on board] So I'm making sort of a funny assumption here int he model that we have. 
+The model is the world is truly random and it can do all kinds of crazy things to us, and we have to be completely prepared, so that whatever outcome happens to us, we'll know what action to take in that situation. 
+But no matter what crazy thing happens to us, we'll know where we are. 
+So that's like saying that you could arbitrarily teleported anywhere in the world but wherever it is, you'll know where it is when you get there. 
+So, in general, that's not going to be the case. 
+If you think about it, it's hard to imagine any situations that really are like that except for maybe like (inaudible). 
+So the assumption of complete observability is sort of hard to take. 
+In the deterministic planning world, we also kind of had a notion of complete observability but we were assuming that the world was completely deterministic. 
+We were making so many assumptions (inaudible) so unpalatable. 
+Now in the context of having relaxed the assumption of the determinism of the world, it's really hard to buy the complete observability thing. 
+The example that we were doing with the used car was exactly -- a big part of that was thinking about, you know, "should we have it tested?" 
+and so on -- having to do with having some fundamental uncertainty about not just the way the world would change as a result of the actions that we took, but in having fundamental uncertainty also about the way the world (inaudible). 
+So we're going to address these two concerns in fairly different ways. 
+Because of the time, I'm going to put this one on. 
+Paradoxically enough, it turns out that it's easiest to scale these methods to very large state spaces, if we think of them as learning problems rather than panic problems. 
+And so I'm going to come back and hit this point again when we do learning. 
+So I'm just going to say that we're going to deal with this during learning. 
+[writes on board] In particular, reinforcement learning. 
+So we're not even going to talk about that right now. 
+And so I will talk a bit right now about the problem of complete observability. 
+So what happens if we can't observe the whole state of the world? 
+If you can't observe the whole state of the world, then, as you go along, what happens is -- So a Markov decision-process model, the model of interacting with the world, is that you take an action, then you see what state you ended up in, then you take another action, then you see what state you ended up in and so on. 
+So what happens if you can't see what state you end up in? 
+Well, if you can't see anything at all, that's not such an interesting problem, right? 
+There's not much you can do. 
+So that's not interesting. 
+So what do you think of a case where you get to see something -- usually, at intersect (?), you get to see something -- and what you see reveals something about the state of the world, but it doesn't tell you everything? 
+So that's called a condition of partial observability. 
+And so we have [writes on board] a set of models called "PONDVs (sp?) which is a partially observable [writes on board] NDV and it's just like the Markov decision process that we had before. 
+It's just states in actions and transition probabilities and rewards. 
+But it also has an observation function [writes on board] which is it's a probability distribution that gives you a probability of making a certain observation, given that you're in some state and take an action. 
+So now there's a set of observations. 
+They can be anything, right? 
+It could be -- I mean, an example that I use all the time when I was thinking about (inaudible) is a robot driving around the hallways. 
+Many of the robots -- and it just has some kind of limited spatial sensors, so it can tell, "Oh, I'm in the court," or "I'm in a t junction," and so on. 
+So it gets an observation of, "I'm in a t junction." 
+Well, it just is related to the state (inaudible) but it's weak in two senses. 
+It's weak because there are lots and lots and lots of places they'll (inaudible) on t junctions. 
+So it's just, it's a projection of the state. 
+So lots of places (inaudible). 
+But, furthermore, there's noise added on to that. 
+So sometimes in a t junction and it doesn't look like one to me and sometimes I'm in something that isn't a t junction and it looks like a t junction. 
+So the (inaudible) are quite typically, you know, are much smaller (inaudible) set of states but they're also not deterministically-generated. 
+So there's noise (inaudible). 
+So now the agent's interaction with the world is that it takes an action and instead of getting a confused state of the world, it gets to make an observation. 
+So the agent's history of interactions with the world goes: observation, action, observation, action, (inaudible). 
+[writes on board] And its policy -- now what it has to do, the way it has to behave in the world is to map now potentially its whole history of actions and observations into the next action because now the Markov property doesn't hold. 
+It doesn't apply, at least, to the agent's view of the world. 
+It's not true anymore that the most recent observation gives you all the available information about the state of the world. 
+You say, "Hmm, it's look like a t junction." 
+Well, that tells you something about the state of the world but it might also help you to know that you just came from a place that also looks like a t junction or that the last reactions you did were to go straight or something like that. 
+So now potentially your whole history has information that could help you in choosing your actions. 
+So that makes things get a lot trickier, but interesting and (inaudible). 
+All right. 
+So let's see what the structure of a solution to this problem might be. 
+OK. 
+So it seems clear that our agent is going to have to have memory and (inaudible) the agent in a Markov decision process didn't have to have any memory. 
+It just has to look at the state, pick an action. 
+Look at the state, pick an action. 
+But this guy had to get out there and remember what it's seen in the past and the actions that it's taken in the past. 
+Well, it's going to have to remember something. 
+So we can draw a kind of block diagram of what this agent's going to do. 
+It's going to have something that's in charge of memory updates, and it's going to have (inaudible). 
+See, the policy is a function of the memory, and the policy is going to (inaudible) it. 
+What's going to go into the memory update is the alteration [writes on board] old memory. 
+OK. 
+So here's a block diagram, and I don't know, in some versions of, like, theoretical computer science, you learn about finite-state machines, so that any finite state machine, you can take it apart into these two pieces or circuit device, right? 
+The fact that we have a loop here is what gives us memory, right? 
+So this thing is just a pure function, and this is a pure function, and the fact that we loop this around is how we manage to remember some things about what's going on in the world. 
+So the job of updating your memory now says, "Well, given what we just saw and what we just did and what we were remembering before, let's decide what to remember now." 
+So that just kind of updates the internal mental state of the agent. 
+(inaudible) agent with mental state. 
+And then we have a policy -- Again, now it's a state-free thing but its job, instead of mapping states of the world into actions, since we don't have access to the state of the world, its job is to map memories into actions or mental states. 
+What is it that we know about the world? 
+Let me choose an action based on that. 
+So let's say that you decide that you want to come up with one of these things. 
+You know that you're an agent in a partially-observable environment and you want to come up with a controller that has this structure for behaving in the world. 
+So actually there's one very interesting impacts example of this which, those of you who have had some kind of signal processing or control theory or something, if you've ever, ever, ever studied Coleman (sp?) 
+filtering anyway, it's a version of doing this memory update, right? 
+It's the idea that, say, you're trying to estimate your position in the world, so maybe the state of this agent as it's positioned in the world, and every time it moves, it tries to make a motion but it has some uncertainty about its motions. 
+But still it knows a model of what happens when it moves and it gets observations that tell it something about where it is and it (inaudible) the observation information and its own motion information to compute an updated estimate of where it thinks it might be in the world. 
+So that's the kind of memory update processing. 
+And that memory -- So they've made a particular choice of what this memory should be. 
+It turns out that if you want to solve these things optimally that there's a known way to pick what the form of your mental state should be. 
+Now it takes you down the road that leads pretty quickly into fairly severe intractability, but it's interesting to, at least, understand what would be the best possible thing to do, if only you could fit it in your head. 
+So the best possible thing to do, if you could fit it in your head, would be to store as your memory a probability distribution on states of the world. 
+And so you could say, "Well, I'm not sure exactly what's going on, but I've had these observations and I've made these actions and because of all these things that I've seen and done, this is probably how the world is, right? 
+So my little robot that's driving around the hallway and it sees a t junction, well, its probability distribution on the way the world is is going to be a probability distribution on its location in the world. 
+And it's going to think, "Yes, you know, it's pretty likely I'm here" and then "It's pretty likely I'm over there" because that's a t junction, too, "but it's really unlikely that I'm in these other states" and so on. 
+And as it moves, it'll update its own mental probability distribution of where it thinks it might be in the world. 
+If it goes down a long future-less corridor, because of the uncertainty in its motion, its belief about where it is will kind of "shmear" out, "Gosh, I'm not sure where I am in this corridor anymore." 
+If you drive down the freeway for a long time and haven't seen any signs, you kind of know you're on the freeway but you're not sure where. 
+But, then, maybe it sees something. 
+Maybe it sees a particular kind of corridor that only exists in one place in this world. 
+Then, suddenly, the uncertainty goes "Swooosh" and it says, "Ah, I know. 
+I'm here." 
+And, then, it takes some more actions and maybe it gets confused again and then it sees something and it becomes less confused and so on. 
+So as it goes around, this probability distribution over what it thinks about the world varies. 
+And it's actually, it's not too hard, give the description of a Markov decision process and this observation function, it's not too hard to actually build a thing that will do this, that will compute a new probability distribution over how the world, over the way the world is, given our old probability distribution, our old belief about how the world was, parse an observation in action. 
+That's fairly easy to do. 
+What becomes really tricky is that, but it's really interesting to think about. 
+So now before a policy used to map the state of the world into an action. 
+Now a policy is going to map a probability distribution over states of the world into an action. 
+What does that mean? 
+Why would you want to do that? 
+Well, because I'm going to take different actions depending on my degree of certainty or knowledge about the world. 
+So, for instance, you could decide, "I have no idea where I am. 
+I'm going to go and buy a map," or "I'm going to ask for directions." 
+Or you could decide, "Oh, I really know very well where I am. 
+I'm just going to try to take the shortest path to where I'm going." 
+So it gives you a lot of really interesting opportunities to take actions based on your degree of uncertainty, just as in the used-car buying example -- right? 
+You could imagine that depending on the amount of uncertainty that you had about the state of the car -- right? 
+-- its lemonness or its peachness that would drive you to making different choices, different choices about buying it or different choices about buying the guarantees or having it inspected and so on. 
+And so that general idea can be applied in this kind of sequential framework, but it gets much more complicated. 
+So we're not going to go into the details of how you would do that, although I would be delighted to talk to you about it, (inaudible) papers, and I think the book talks about it a little bit also. 
+All right. 
+It is just time to go. 
+Do try to do the problem that I mentioned at the beginning, that is to say, consider inspection plus guarantees in the used-car example and we'll start talking about (inaudible) next time and please hand your assignments into Mike. 
+Q: I have two questions. 
+(inaudible) it's a transcendental sort of thing; you can't solve it; it's just there and you just trust. 
+But it seems like -- A: Well, but it converges (?). 
+Q: Oh, yes. 
+I'm not convinced (inaudible) a local (inaudible) (multiple conversations; inaudible) but will you talk about it or -- A: I'm not going to -- Q: Over here, that's your injector V* which is absolutely (inaudible) values and all the things forever, forever -- A: Right. 
+Q: -- you've got your V*s (inaudible) the next thing. 
+How do you avoid having everything (inaudible) into this (inaudible)? 
+You've got something that is valued forever -- A: Yes, well, these (inaudible) is really valued forever. 
+It's just discounted values, right? 
+Q: So how are you going to (inaudible) going off just forever? 
+A: So why is it not infinite? 
+Q: Yes. 
+Where -- A: It's not infinite because of that -- Well, it's not infinite because of the gamma. 
+It gets attenuated, it gets exponentially (multiple conversations; inaudible). 
+So that's why it's not in here. 
+Q: Right. 
+So the question really is, well, why isn't it value infinite or why (multiple conversations; inaudible). 
+A: Because, because, because the contributions of (inaudible) this model. 
+But if you want to get within (multiple conversations; inaudible) Q: Oh, there's an (inaudible) in here? 
+A: No, this is the definition. 
+This is, you know, Plato's definition of these (inaudible). 
+You can't really calculate that, but you can get a (inaudible). 
+Q: OK. 
+OK. 
+I buy that. 
+I buy that. 
+(multiple conversations; inaudible) some and unless you put your functions carefully, it may or may not converge (multiple conversations; inaudible) . 
+A: But you just know that the gammas, as exponents, if the gamma gets (inaudible) you can just see it fall very quickly. 
+It turns out that it has a way to compute this (inaudible). 
+There's this other algorithm: Policy duration. 
+So remember how I said that if you fix the policy and you added that (inaudible), then you get a Markov. 
+And we saw that once you have a Markov chain, you an actually compute the actual value from (inaudible). 
+END OF TAPE
+==========

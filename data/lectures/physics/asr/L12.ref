@@ -1,0 +1,690 @@
+==========
+we re
+discuss today resist the force is in direct forces
+when you move in object through a medium whether it s a gas a weather through the critic experience is a direct force
+and as jack force depends on the shape of the object the size of the object the medium through which you move it and
+the speed of the object
+the medium is immediately obvious
+if it s air you move through air you feel the interview a and that s the direct force
+if you sweat and water you field is direct force
+into all real big rec force would be evil are this drag force
+this resistive force is very very different
+from the friction that we discussed earlier when two surfaces
+move relative to each other there
+the kinetic friction coefficients remains constant
+independent of the speed with
+the iraq forces and the resistive forces
+they are not at all independent off the speed
+in very general terms the
+resistive force
+can be written as c came on
+times the velocity plus k two
+times the velocity squared
+and always in the opposite direction
+of the velocity vector this v here is the need
+so all the signs okay one v and k two and obviously fifty squared they all are positive values
+and the k values depend on the shape and the size
+of the object and the kind of medium that i have
+today and restrict myself exclusively two spheres
+and when we deal with spheres
+we re
+get that the
+the force the magnitude of the force so that this part equals c one
+times r times the speed was see two times r squared
+times v squared and again is always opposing the velocity vector
+see one in our
+units is kilograms per meters per second and c two
+has a dime engine of density
+kilogram per cubic meters
+we call this the viscous term
+and we call this the pressure term
+the viscous term has to do with this picking as of the medium
+if you take for instance neck quits water
+and all and tar and there is a huge difference in sticky this this is is also refer to that has viscosity
+if you have a high viscosity it s very sticky than this
+number see one will be very high
+so this we call the viscous turn
+and this we call
+the pressure too
+the sea water is a strong function of temperature we all know that if you take part in you heat it
+that the viscosity goes down is way more sticky when it is cold
+c two is not very dependent on the temperature
+is not so easy to see why this pressure term
+here has a d square later in the course when we deal with transfer of momentum
+we will understand why the the city square term there
+but the r square is very easy to see
+because if you have a sphere
+and there is some flew it s
+gas or liquid stream them on to it then
+this has a cross sectional area
+which is proportional to r squared and so it easy to see that the force
+that this object experience we called it
+the pressure term is proportional to r squared so that s easy to see two lick it s
+with the very same density would have
+they could have very different values for c one
+they could differ by ten artist not ten by four five orders of magnitude
+but if they have the same density been liquids then the c two is very much the same c two
+is almost the density role of the liquid not quite but almost but there is a very strong correlation between the c two
+and the density
+if i drop an object
+and i just let it go i take an object and i let it fall we only dealing with spheres today
+then what you will see i haven t mass and
+and so there is a
+force m g it is gravity
+and as it picks up speed the resistive force will grow
+and it will grow and it will grow
+and comes a time because its speed increases so the
+resistive force will grow and there comes a time that the two are equal and when the two are equal
+then there is no longer acceleration
+so the object has a constant speed and we call that the terminal velocity
+and that ll be the case when n g
+equals c one r v
+plus c two r squared d squared
+and then we have here
+terminal
+velocity
+if you know then this the mass of an object the radius
+and you know the values for c one c two of that medium in which you move it then you can calculate what the terminal
+velocity is it is the quadratic equation so you get two solutions or which one of the
+is non physical
+so you can reject that one
+==========
+very often
+well we work the domain into re she wear bite this discus
+term is dominating i call that regime one
+but it also happens and i will show you examples today that we working in a regime where really this force
+is dominating i call that regime to
+where one and two
+i the same where the force due to the discus force and the pressure force on the same
+we can make these terms the same
+so you get c one r v equals c two
+r square v squared and that velocity we call the critical velocity
+even though there is nothing critical about it it s not critical oh it s simply the speed at which the two terms
+are equal that s all that means and then of course then equals c one divided by c two divided by r
+now we going to make it clear distinction between the domains one end to the regimes one into
+regime one
+this when the speed is much much less
+then the critical velocity
+so we then have that n g
+equals c one are the terminal
+and therefore the terminal velocity
+equals m g divided by c one are
+if you take objects
+of the same material
+that means they have the same density the density of the object that you drop
+in the creek would that you drop in the gas so that them
+equals four thirds pi row park you
+this is now the road the density of the object it s not the density of the medium
+then you can immediately see so you get an arc you up here
+that this is proportional
+to the square of the radius if you drop objects in there with
+the same density regime to
+is the case when v is much larger than the critical
+so than n g
+equals c two r squared d squared
+if this is the terminal velocity
+soda terminal velocity is then
+the square root of n g
+divided by c two r squared and v
+divided by c two r squared
+and if you take objects with the same density you compare they re eighty i
+and is proportional to r cubed so this is now proportional
+to the square root of r
+so the separate these two regimes
+and we will see examples of that that sometimes you really work exclusively in one with sometimes you work
+in the other
+i have for you of view graph that is on that
+on the web so you do not have to
+copy it it summarize is what i have
+just told you has all the key equations you see there on top
+the resistive force the magnitude of the resistive force you see then the
+critical velocity is nothing critical about it it s just the
+speed at which the star and at the same
+magnitude is this term
+then you see the condition here which i called equation one
+for terminal speed and then
+we have regime one whereby this speed is way less than the critical speed and then you get the
+terminal velocity as you see on the blackboard
+which then is proportional to r squared
+if you only look at object which have a particular given density
+and if the velocity of the speed is way larger than the critical speed your eye and regime two and then
+you have the dependence with the square root of r
+i m going to do
+==========
+but demonstration and some measurements with
+ball bearings which have very precise radii and very unknown which i m going to drop into
+serum and we have chosen for that arrow light
+corn serum
+it may interest you that two tablespoons
+is hundred and eighty calories i needed to know more
+for this demonstration
+and so i have to do my own homework on it
+that least you see here
+what these care stoop can do for you
+two hundred eighty calories to cables tablespoon so per tablespoon very low fat and arrest may interests you
+before you use it i had to know see one
+which i calculated i measured it s fact
+what do you kind of demonstration i will be doing today you can derive it but it s very strongly temperature dependent
+could be different yesterday from today
+i measured see to to reasonable accuracy
+notice that the density of the search
+in terms of kilograms per cubic meter is very close to see too i mentioned that earlier
+you re very close not exactly but very close the steel ball bearings have a density of about seventy eight hundred
+kilograms the cubic meter and i m going to drop in that terrorist era for ball bearings
+and they have diameter sullivan h of an inch
+five thirty seconds three sixties and a quarter of an inch
+and what i calculated it walls the
+terminal velocity as a function of radius
+of the ball bearings
+all of this is on the web
+and so what you see here the slaughter it leaked plot this is the lock scale and this is a walk scary you see the speed
+and here you see the radius in meters of the ball bearings and this
+is my solution to the equation number one
+when i substitute various values of r in there i get a terminal
+speed like these
+and this is the critical
+speak which is as a one over r relationship
+if you look at this black dot here then
+the terminal speed is ten times larger here
+then the critical speed
+and so notice that when you i and speech about that that you wear
+exclusively in the main two and you terminal
+speed is proportional to the square root of the radius of the ball bearings
+this black dot is a factor of ten below the critical speed
+and so you see wind you i had lower speech when you work here again
+you see that you fall into exclusively in the main one
+and you see that the terminal speed is proportional to r square the slope here is plus two
+in this diagram in the slope here is plus one hop
+or ball bearings are all here
+and so we i exclusively operating in with seem one where the viscous term dominates
+now you could say well what is the meaning of this critical
+speed here is they never reach that speed anyhow well
+this critical speed for small ball bearing
+would be some hundred meters per second that s about two hundred miles or or
+there s nothing wrong with reject thing
+the ball bearing with four hundred miles for into this era in which case
+if you injected it with four hundred miles per hour you would be above the critical
+speak and so for short while would emotion be controlled by
+the pressure term but of course when gravity takes over that you ultimately end up in with you one
+but that s the meaning of the critical velocity if you can give the ball bearing such a high speed
+then the two terms are
+equal that s all it means
+there are out now we re going to look at the various
+ball bearings the various ice is and i ll show you how we do the experiment you will shortly see
+a on a screen there
+seven marks
+which one centimeter apart
+there in the lick quit one two three four five six seven here is the liquid
+and the ball bearings are dropped from above
+when it reaches this line i ll start my time and
+and when it crosses one two three four when it crosses this line i will stop my time
+and he s mark is about one centimeter part so this is a dirty of about four centimeters
+and we ll measure the time that it takes to go from here
+to here and the terminal velocity
+is going up clearly regime one so you see the terminal velocity right there
+now the time that it will take
+is of course this distance let me call it h that the wall there and travel
+divided by the terminal velocity
+and that is proportional seemed you in with seem one
+by one over r squared
+and now i will give you the
+not the radii of a doubt give you the diameter is of these ball bearings that s the way they come
+so we re going to get on this here
+of the diameter is
+of the ball bearings and that yeah matters is in inches
+my smallest one has a diameter of a native and age then i have
+five thirty seconds
+i have three six teams
+all the things come intentions that s one of the things and i have one quarter inch diameter
+if i plot here a plot if i give you hit diameter in terms off
+one thirty seconds of an inch than this is for five
+six and eight easy numbers clearly
+if the time that it takes is proportional to one over r squared it will also be proportional
+to one over the square course that s the same
+what i m going to plot is not
+one over d squared the two gets them nice numbers i m going to plot for you one hundred
+over d squared whereby d is then in these units one thirty seconds of an inch and that gives me some nice numbers
+then i get a six point two five here i get a four point
+zero is zero here you can see hundred divided by twenty five is exactly for
+i get two point seven inch here and my last month for is one point five six
+and now i m going to time it and my timing uncertainty
+is of course dictated by my reaction time
+that should be at least oh point one second
+however you will see when i reach the quarter inch
+ball bearing that it go so fast that my era could well be to tens of the second it goes in a flash
+so
+i would allow you to tens of the second and he i really don t know maybe one tenths maybe two tenths of a second
+you may ask me why did you give is the air in the
+diameter it s ultimately of course translate into the air in the mass
+the reason is that these are so pre size the way you buy them
+that the uncertainty is completely negligible
+compared to the timing error that i make so i won t even
+take that into account
+alright so now we can start the demonstration
+and i ll have to switch
+two this unit here
+here is this
+container with the arrows circle
+it is very sticky indeed
+you see that a seven marks and just for my own convenience i have put there
+to black mark so that i can easily see
+the moment that i have to start my timer and the moment that i stop it there so many lines i may get confused if i don t do that
+and we re going to time this together and
+and we ll see how these objects
+how long it takes for them to go through i will start with my one h of in in diameter
+i have one here trees are
+i release it adds zero
+three oh we can see that you should see that three two one zero
+i look of bit of woodworking its way through you see is building up see this you see that nice air bubble to the top
+going very slowly but just wait when it has broken through this surface there it goes now
+one centimeter two centimeter three centimeter now
+okay what is that
+nothing what happens
+i d in see and i
+do another one
+what did i did i cleaned in every seat
+how much was it
+right point nine three
+keep that in mind is nice to see whether they reproduce actually
+okay there it goes now
+one centimeter two centimeter three centimeter now
+five point six six units shows you be uncertainty in my time and so we had a five point nine three
+and we have now five point six six this not so best five point nine five point seven
+fighting era tens of the second my timing yeah could be a little bit larger than the tenth of a second you don t have very much time
+so now we go to the
+five thirty seconds
+okay five thirty seconds
+it takes some time to break through this surface and that fund it because the thin still mess formal hmm the surface of this era
+due to its exposure to a error
+it s wonderful and let s is weight patient lee but now it goes there it goes now one too
+three now
+three point eight zero
+that what you have
+we
+be tougher and tougher for me three sixteen so an inch
+it s actually good thing that it stays for what the surface so that i can get ready
+we that really helps doesn t it
+if you do is in water go to go even see it
+come on there we go down
+now so you see that s very hard for me and so i could easily have a substantial era two point six nine
+and now we have the quarter inch real big one
+yeah
+i have to do that again i don t trust is it all when it went through this surface too fast
+i i can do it very actively what was the first number by the way one point
+six eight and this is one point four zero
+one point six eight
+and one point four zero so you see i wasn t kidding when i sat that my uncertainty could easily be point two now
+comes the acid test
+and the acid test this that if i m
+if the measurement was done correctly and if we really work and that s regime that if i plot
+one hundred divided by d squared versus t only your paper then it should be the straight line
+oh rights
+here i have a plot which i prepared
+and i m
+put these numbers in there so first we going to get six point
+five point let s put in five point eight seconds for the smallest
+ball bearing this is the smallest one
+only misled because this is one hundred divided by d squared so is is the smallest one
+five point eight
+so we are here on this line
+and we are at five points a somewhere here
+that s it
+no that s the point is lower than where i expected it
+and the reason is the temperature one up and if the temperature when up
+then the viscosity goes down and they go faster that s okay a dozen worry be
+the next one three point eight oh
+for three point eight oh ah you see that
+i predict that that straight line
+in there is straight line
+and us when
+but row
+okay we ll put in the third point two point six nine
+the two point
+this is two point seven two point six nine
+i can hardly put in the air of that writing because it is not much larger then the size of my dots
+and now we have the last one one point let s take the average one point five five
+one point five five
+with an error of about two tenths of a second to this is a narrow for about two tenths of a second
+sure i did we go now
+is is a straight line there is it not
+the border straight line and so you see you re really working here in the regime off
+one over the new regime where the terminal velocity
+is proportional to the radius squared
+okay and if you lights back
+now comes the question which is relevant would this experiment
+and that is how long does it take for the
+terminal speed to be reached
+well
+==========
+the object has certain mass so is a gravitational force on it
+and the gravitational force equals and g
+and then there is a resist force
+which in the case because we re operating in regime one exclusively
+that resist a force equals c one r v in terms of magnitude
+see one party because we deal with regime one
+and so if i call this
+the increasing value of y the second
+newton s second law would give me an a
+equals n g minus c one are times v
+induced equals n b v d t
+so i have here a differential equation in v
+and that can be sold and you re going to solve it on your simon them for
+what you re going to see is that the
+speed as a function of time is going to build up
+to a maximum value
+this is it to a maximum value which is the terminal
+the velocity of you may
+call a terminal speed and is going to build up in some fashion
+and then it going patient on likely approach the terminal speed
+and this is what i m asking you owned or third
+on your forces simon to calculate that if there were no and rec force and all i hope you realize that
+the velocity would increase little eight
+so you would get something like this
+so there s no drank
+so they ve year is extremely difference you to the dredge
+and i calculated already something that is part of your assignment how long does it take
+for the quarter inch ball bearing
+how long is a taking time to reach this speed which is about ninety nine percent
+of the terminal speed and i calculate that at the you will go through that calculation for yourself that is only nine milliseconds
+but others once it has broken through the surface that takes a while because of this and still
+then in ninety seconds without really be a ninety nine percent of the terminal speed and so there was no problem at all
+when i waited for the object to cross the first mark it was a rarity
+clearly going at the terminal speed
+the devil s time
+now i want to turn to air
+arrow course behaves in an extremely different way
+the principle is the same but the values for c one and c two are fast the difference if we take air
+at one atmospheres
+and we take it at room temperature
+then see one
+is about three point one times ten to the minus four in our units and c two
+is about oh point eight five
+this is very close to the density of air it s about one kilogram per cubic meter it s i told you earlier see too and row
+a very strong relate it and so the critical
+speed
+which is c one divided by c two why are
+is about three point seven times ten to the minus four
+divided by r meters per second
+and that is about four hundred times you wore
+then the critical speed
+in syria in the cairo sit up for the same value of r so if i compare the
+quarter inch ball bearing and i drop it
+in the
+soup then
+the terminal velocity in the cairo soup is way below the critical velocity of the car was europe
+a critical velocity of the cat was chip would be a hundred miles or four quarters in boulder so is way below
+here in air the critical velocity is something like eleven centimeters per second this is eleven centimeters in one second
+and we know when you drop a one quarter inch ball bearing in air that the speed is way larger and therefore
+in the case of air
+but for is ball bearing would have a speedway above the critical speed and so you i now exclusively in
+regime to that s the regime to
+==========
+almost all spheres that you drop in air
+operate exclusively in regime to
+whether it is a raindrop
+or whether it is a baseball that you hit or golf ball or even a beach pole
+or you throw a pebble of a high building or
+whether you jump out of an airplane with know without a pair should makes no difference you always
+dominated by the pressure term
+by the the v square term
+and you always are in arrange whereby
+the terminal speed is proportional to the square root of the radius for a given
+density of the object
+if you take a pebble with the radius of about one centimeter and you throw would ve i build in
+it will reach a speed which will not exceed
+seventy five miles per hour because of the air break
+if your job out of the plane
+and you have no parachute
+and i make the assumption that u mass
+is about seventy kilograms
+i want rough numbers if i can approximate you buy a sphere
+with a radius of about forty centimeters that s also approximation you re not really like a sphere but i
+get some some rough numbers
+then the terminal velocity is hundred fifty
+mile spark
+so if you drew
+jump out of a plane and and you have no parachute
+you will not go much faster than hundred fifty miles i ll
+i just went article yes they about sky diapers wooden about of planes and they
+open parachute at the very last possible
+and a reads terminal velocity is of hundred twenty miles per hour doesn t surprise we
+it s very close to this rough number that i calculated
+because then they open the parachute and then the fabric
+increases enormously and then this load on
+even further
+i told you a raindrop
+almost all raindrops
+operate in regime to when they fall for the terminal velocity is dictated by the the square to
+however if you make the dolls x and the small
+there comes a time that
+you really enter regime one
+and on assignment number for i ve ask you to calculate where that
+happens and i can do it for water because
+the radius of that water drop will be so small
+had it would evaporate immediately so i chose or for that so masking your this i i m in for taken or drop
+make it smaller and smaller and smaller and smaller and there comes a time that you begin to enter regime one
+and i want you to calculate where that cross over it s between these two domains
+i have here
+a a ball
+you make all the balloon but i called the ball because is no yearly minute
+and this ball or mace approximately thirty four grams
+so we ll let the array some here because i want yeah
+so we know the mass
+and we know the radius the maps
+is about thirty for grants
+and the radius is about thirty five centimeters about seventy centimeters across
+i can calculate what the terminal velocity is
+and there and they would be terminal speed
+i know i m definitely going to be in this regime so i know the mass
+i know c two which and aries oh point eight five i know the radius and nano g and so i find
+that i find about one point eight meters per second
+so if i drop it from a height of three meters which i m going to do
+that you would thing that the time that it takes to hit the floor
+would be about my three meters divided by one point eight meters per second which is about one point seven
+second that s not bad
+that s not a bad approximation
+however it will of course take longer
+and the reason why will take longer is that
+the terminal velocity the terminal speed is not achieved instantaneously
+with the ball bearings it was was in ninety seconds i can assure you it heated will take a lot longer
+now if you want to
+calculate the time that it takes
+to get close to the terminal speed that is not an easy task because
+you re going to end up with a nasty differential equation you re going to get m g
+you re
+get the acceleration which is result off
+let s go which decoration we have you see we have and they
+equals n d and then we get minus
+the resistive force
+and the resistive force has a term in v and has a term in v squared
+you see v and v squared
+and so this cannot be sold analytically
+what i ve as my graduate students they ve pulley who is one of your in structures to solve this for me
+numerically and now i m show going to show you the results
+that he prepared is a nice view graph and you can see the fact of time on the
+ball if you drop it from
+three meters
+it is
+all the numbers that that is is on the web so don t copy anything
+you have the values for c one in see to our given that the top you will be able to see them from you see but they re there
+and what you see here is
+the height above the ground as a function of time this is one second this is one and has second is is the three year mark
+if there were no and rec remember we dropped an apple in the home from three meters it will hit the floor at
+about seven hundred eighty milliseconds however with the end red it will be about one second
+later more like one point eight seconds
+so to one point seven wasn t bad as you see but if you look here at how the speed
+bills up as a function of time
+you see it takes about three four ten to the second to build up to that
+terminal speed which is the one point eight meters per second that you have there
+and needless to say of course that the acceleration
+the two gravity does not remain constant but goes down very quickly and when the acceleration reaches approaches zero
+then you have terminal speed
+and then there is no longer any change in the velocity
+so let s try this
+would give more light and
+we ll going to throw that object then
+i don t think you re going to get one point eight seconds you may
+get something that is larger than one point in seconds
+and the reasons are the following number one
+this is not a perfect sphere
+and only for spheres to these calculations hold that s number one number two this thing is very spring a
+so the one of the edited go it probably goes in some kind of oscillation that doesn t help either that ll probably also slow it down
+because what causes of course the slowdown
+in regime two ways really turbulence targets extremely hard to understand and predict
+and almost anything i do
+i will only ed turbulence
+and therefore i p d that the time that it will take from three meters will be
+probably larger than one point eight seconds but it
+will be substantially larger than the seven hundred eighty milliseconds which is what you would seen if you drop an apple
+so let s see how close we are
+to turn on this time and make sure is zero it i did and
+it s not so easy to really sit by the way and started time of this a moment
+and not even so easy for me to see when it hits the ground
+so there s a huge uncertainty in this
+experiment
+okay
+three two one zero
+what we see
+and i see something two point zero and all that
+the prediction was one point eight you get two point zero this not battle with it s the end ready to count
+and it is not even an approximation it uses the entire
+term the near envious well s t v square but it s almost exclusively
+dominated by the d squared sure
+==========
+i also last they ve
+to show me what happens when i throw or paddle off the empire state building and the pebble
+that we chose was at a radius one centimeter it s a kind of hard wood it all of us could find
+no or flea the density of apples
+and we ve sort of the empire state building we reach a terminal speed of about seventy five miles per hour
+without had red we would ve reach two hundred and twenty five miles all
+so i want to show you that too
+so now you steve empire state building which has a height of four hundred seventy five meters
+so that s where you start to t zero this is one second five seconds then second five seconds fifteen seconds
+and if there had been know at work it would get the ground
+little less than ten seconds but now you do it the ground more like sixteen seventeen seconds and you see that the
+terminal speed built up
+in about five six seconds it s very close to the final value
+and if they have be know and red than the speed at which it will hit the ground um hum of course grow radially
+and when it hits the ground would be somewhere here which is two hundred and twenty five miles per hour
+so you see that is either a pebble
+you wouldn t expect to be to have or large effect and and rec you be huge provided that you throw it from a
+hi building now you may remember that we dropped an apple
+from three meters
+and that we calculated
+the gravitational acceleration given that time that it takes to fall was one of your one of the things you do to your assignment
+we had several hundred eighty one billion second fact it
+and out of that you can calculate g
+right because you know the three meters is one half g t squared
+so i give you two three with uncertainty i give you the time seven hundred eighty one the second
+with an uncertainty of two milliseconds which we ll out out hopes g
+so as they ve what is the effect of and rec on these apple
+is it was it responsible thing for us to even aware that
+the apple has a mass
+of hundred thirty four grants easy to way of course so this was our apple during our first lecture
+and is hundred and thirty four grams
+is almost a sphere really not quite that almost a sphere and the radius is about three centimeters
+and that leads to a terminal
+velocity which you can calculate if you want to using the
+these quarter but i would not interested in that i wanted to know
+how many many seconds
+if the touchdown delayed because of the address
+and dave make the calculations and he found
+that that is too many seconds form three meters from one have meat is it s almost nothing
+and the reason i d almost nothing for one and a half meters you see
+when you throw an apple in air is really in with e two
+so you really dominated by the speech square
+and the first one inhabited doesn t data very high speed yet the speed grows linearly and so this the last portion
+where we can get hit by the air direct by the the square true too many seconds from three meters
+so we ve a is three this is it to the second
+let s call it the way
+so we re on a hairy to be lucky and on lucky
+if you want to b calculate the gravitational acceleration using our data you should be subtracted to milliseconds
+from the time on the other hand since we
+allowed into stew milliseconds uncertainty we really weren t too far off
+==========
+now comes my last part and that is how to set ready
+influence trajectories
+and there s also part of your assignment but i m going to help you a little bit with that
+in your is time and number four
+i m asking you to evaluate quantitatively the
+the motion often an object into liquid
+but i did that object but initial speed in the x direction
+and then there s the liquid be low and gravity is there and there is that initial speed if there were no trek
+then is of course would be a poor outlet
+and the horizontal velocity would always be the same they would never be any change
+but it s not the case now because of the
+resistive forces because of the direct by the quit
+the object is going to get a velocity in this direction so there s going to be the component of the resistive course
+proposing it and has a speed in this direction so that also going to be
+a component of the resistive force in this direction
+and that will decrease the speed is component in the x direction and so you can already see that the
+curve that you re going to see is very different one
+is going to look something like this
+and then ultimately there s nothing left
+of this component and ultimately when you go vertical it down you have the terminal speed
+that you can find from dropping an object just
+into the liquid vertical it
+so that s something you re going to do with in your
+this i m in a before and this is exclusively down into regime one because we have an object with
+they quit and really quit you almost always work is
+regime one
+suppose i take it and is wall and i throw up a tennis ball in twenty six one hundred
+there is any rate on the tennis ball
+in the absence of any have direct i would get a nice parabola
+with would be completely symmetric
+i ve thrown up with a certain initial speed
+the call it e zero i don t care and
+the horizontal component would never change
+this would be zero x would always be the same the now is n drag you re going to see
+that there s going to be a force
+and at rec force in the
+y direction if the object goes up in this direction then there will be
+a resistive force
+component in the y direction and since it has a speed in this direction there will also be a
+resistive force in the x direction so the speed is
+be eaten up
+in this same way that this component was
+be eaten up
+this component is going to suffer
+will not state constant throughout and as a result of that you re
+get a trajectory
+that looks more like this
+it s a symmetric clearly you don t reach
+the highest point it you would have reached without out
+and rec put a reason that this resist the force in the y direction
+will not allow it to go is high that s obvious
+you don t go as far as you would without an indirect for obvious reason that this resistive force is going to
+kill the speed but you also will get asymmetry in the curvature and i want
+you to see that i call this point oh
+is point p and let s call this point s so what i will do is i will throw up a tennis ball
+and then i will throw up a styrofoam all and the styrofoam ball
+has very closely the same radius as the tennis ball
+that means the resistive force is the same on both
+because the resistive force is only dictated by
+r squared and by v
+r squared p squared remember
+however this has a way larger mass than this one
+and even though to resist the forces will be closely the same if i throw them up with the same initial speed
+it has them way larger effect on a small math and although larger mass
+at equals m a right so on a very large mass
+the resistive force but a much lower fact then on
+the small mass even though the resistive forces are about the same
+so try to see that the tennis ball is very close to an ideal
+bread and you will not even see any effective asymmetry
+and will not be the case for this are from though
+so we look at the tennis ball first
+i should really do it here did look more or less symmetric okay now try this one
+it d look asymmetric what you see it
+i just say yeah so you really sort
+let me do it once more i can throw it back
+so now it should curve like this and sort of come down like that ready
+you see a symmetry
+okay now comes my last question
+i m going that s you following and there is unique answer to that i want you to think about it
+and want you to be able to do that answer this poll hundred percent confidence
+when this object goes from o two d that takes a certain amount of time
+when it goes from p to s back to the ground that takes also certain amount of time
+is this time the same as this time
+or if this time longer than this time or is this time sure think about it
+so you friday
+==========
