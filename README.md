@@ -123,3 +123,12 @@ the distribution, where the file "build.xml" is located, and enter the
 command "ant build", optionally followed by target name (build, clean, save or docs)
 
 This code is copyright 2008 by the Massachusetts Instute of Technology
+
+Hierarchical Segmentation
+=====================
+
+The hierarchical segmenter from the paper 
+J. Eisenstein. Hierarchical text segmentation from multi-scale lexical cohesion. In Proceedings of the North American Chapter of the Association for Computational Linguistics (NAACL), Boulder, CO, 2009. 
+
+is available as a release
+https://github.com/jacobeisenstein/bayes-seg/releases/tag/v1.0
